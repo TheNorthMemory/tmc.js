@@ -20,9 +20,18 @@ declare class Message {
 }
 
 declare interface MessageContent {
-  __kind?: number;
+  __kind?: MessageKind.None | MessageKind.PullRequest | MessageKind.Confirm | MessageKind.Data | MessageKind.Failed;
   id?: number | bigint;
-  content?: string;
+  nick?: string;
+  retried?: number;
+  dataid?: number | bigint;
+  outtime?: string | Date;
+  topic?: string;
+  publisher?: string;
+  time?: string | Date;
+  userid?: number | bigint;
+  notify?: string;
+  content?: string | object;
 }
 
 declare namespace Message {

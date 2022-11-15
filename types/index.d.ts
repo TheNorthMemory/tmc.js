@@ -57,827 +57,827 @@ declare type TaoMessageConsumer = TaoMessageConstractor & TaoMessageSubscriber &
 
 declare interface TaoTopicsDescriptor {
   /** {@link IncomingMessage.AlibabaAdlabIotDevice 自动驾驶API > 自动驾驶iot设备消息} */
-  alibaba_adlab_IotDevice(fn: (message: IncomingMessage.AlibabaAdlabIotDevice) => void): TaoMessageConsumer;
+  alibaba_adlab_IotDevice(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAdlabIotDevice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAdlabOrderItemEtaUpdate 自动驾驶API > 包裹eta更新} */
-  alibaba_adlab_OrderItemEtaUpdate(fn: (message: IncomingMessage.AlibabaAdlabOrderItemEtaUpdate) => void): TaoMessageConsumer;
+  alibaba_adlab_OrderItemEtaUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAdlabOrderItemEtaUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAdlabOrderItemStatus 自动驾驶API > 包裹配送状态更新} */
-  alibaba_adlab_OrderItemStatus(fn: (message: IncomingMessage.AlibabaAdlabOrderItemStatus) => void): TaoMessageConsumer;
+  alibaba_adlab_OrderItemStatus(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAdlabOrderItemStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAlicomFlowGiftSendNotify 阿里通信 > 阿里通信流量统一营销赠品发放通知} */
-  alibaba_alicom_FlowGiftSendNotify(fn: (message: IncomingMessage.AlibabaAlicomFlowGiftSendNotify) => void): TaoMessageConsumer;
+  alibaba_alicom_FlowGiftSendNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlicomFlowGiftSendNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAlihealthBillProcessStatusNotify 阿里健康-疫苗 > 单据处理状态通知} */
-  alibaba_alihealth_BillProcessStatusNotify(fn: (message: IncomingMessage.AlibabaAlihealthBillProcessStatusNotify) => void): TaoMessageConsumer;
+  alibaba_alihealth_BillProcessStatusNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthBillProcessStatusNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAlihealthDoctorMessage 阿里健康-疫苗 > 医生、服务相关消息} */
-  alibaba_alihealth_DoctorMessage(fn: (message: IncomingMessage.AlibabaAlihealthDoctorMessage) => void): TaoMessageConsumer;
+  alibaba_alihealth_DoctorMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthDoctorMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAlihealthNrmopOrderStatusChange 阿里健康-疫苗 > 中台订单状态变化推送} */
-  alibaba_alihealth_NrmopOrderStatusChange(fn: (message: IncomingMessage.AlibabaAlihealthNrmopOrderStatusChange) => void): TaoMessageConsumer;
+  alibaba_alihealth_NrmopOrderStatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthNrmopOrderStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAlihealthOrderStatusChange 阿里健康-疫苗 > 平台通知三方机构"订单状态变更"} */
-  alibaba_alihealth_OrderStatusChange(fn: (message: IncomingMessage.AlibabaAlihealthOrderStatusChange) => void): TaoMessageConsumer;
+  alibaba_alihealth_OrderStatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthOrderStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAlihealthTradeOrderStatusChange 阿里健康-疫苗 > O2O订单状态变更通知} */
-  alibaba_alihealth_TradeOrderStatusChange(fn: (message: IncomingMessage.AlibabaAlihealthTradeOrderStatusChange) => void): TaoMessageConsumer;
+  alibaba_alihealth_TradeOrderStatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthTradeOrderStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAlihealthTradeVaccineSubscribeChange 阿里健康-疫苗 > 疫苗交易预约信息变动} */
-  alibaba_alihealth_TradeVaccineSubscribeChange(fn: (message: IncomingMessage.AlibabaAlihealthTradeVaccineSubscribeChange) => void): TaoMessageConsumer;
+  alibaba_alihealth_TradeVaccineSubscribeChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthTradeVaccineSubscribeChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAlinkDeviceDataPush 阿里物联 > 设备数据推送} */
-  alibaba_alink_DeviceDataPush(fn: (message: IncomingMessage.AlibabaAlinkDeviceDataPush) => void): TaoMessageConsumer;
+  alibaba_alink_DeviceDataPush(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlinkDeviceDataPush) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAlinkDeviceMessage 阿里物联 > 设备报警消息} */
-  alibaba_alink_DeviceMessage(fn: (message: IncomingMessage.AlibabaAlinkDeviceMessage) => void): TaoMessageConsumer;
+  alibaba_alink_DeviceMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlinkDeviceMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAliqinDigitalSmsTemplateDR 阿里通信 > 数字短信模板审批回执} */
-  alibaba_aliqin_DigitalSmsTemplateDR(fn: (message: IncomingMessage.AlibabaAliqinDigitalSmsTemplateDR) => void): TaoMessageConsumer;
+  alibaba_aliqin_DigitalSmsTemplateDR(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAliqinDigitalSmsTemplateDR) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAliqinFcActiveIotcard 阿里通信 > 物联网卡激活通知} */
-  alibaba_aliqin_FcActiveIotcard(fn: (message: IncomingMessage.AlibabaAliqinFcActiveIotcard) => void): TaoMessageConsumer;
+  alibaba_aliqin_FcActiveIotcard(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAliqinFcActiveIotcard) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAliqinFcCallCdr 阿里通信 > 语音呼叫结果推送} */
-  alibaba_aliqin_FcCallCdr(fn: (message: IncomingMessage.AlibabaAliqinFcCallCdr) => void): TaoMessageConsumer;
+  alibaba_aliqin_FcCallCdr(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAliqinFcCallCdr) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAliqinFcCallRecord 阿里通信 > 录音回执} */
-  alibaba_aliqin_FcCallRecord(fn: (message: IncomingMessage.AlibabaAliqinFcCallRecord) => void): TaoMessageConsumer;
+  alibaba_aliqin_FcCallRecord(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAliqinFcCallRecord) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAliqinFcFlowUp 阿里通信 > 流量直充状态报告} */
-  alibaba_aliqin_FcFlowUp(fn: (message: IncomingMessage.AlibabaAliqinFcFlowUp) => void): TaoMessageConsumer;
+  alibaba_aliqin_FcFlowUp(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAliqinFcFlowUp) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAliqinFcSmsDR 阿里通信 > 短消息发送结果报告} */
-  alibaba_aliqin_FcSmsDR(fn: (message: IncomingMessage.AlibabaAliqinFcSmsDR) => void): TaoMessageConsumer;
+  alibaba_aliqin_FcSmsDR(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAliqinFcSmsDR) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAliqinFcSmsUp 阿里通信 > 短信上行} */
-  alibaba_aliqin_FcSmsUp(fn: (message: IncomingMessage.AlibabaAliqinFcSmsUp) => void): TaoMessageConsumer;
+  alibaba_aliqin_FcSmsUp(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAliqinFcSmsUp) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAliqinFcTmpStatus 阿里通信 > 语音呼叫中间状态消息} */
-  alibaba_aliqin_FcTmpStatus(fn: (message: IncomingMessage.AlibabaAliqinFcTmpStatus) => void): TaoMessageConsumer;
+  alibaba_aliqin_FcTmpStatus(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAliqinFcTmpStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAliqinFlowDirectCharge 阿里通信 > 流量直充} */
-  alibaba_aliqin_FlowDirectCharge(fn: (message: IncomingMessage.AlibabaAliqinFlowDirectCharge) => void): TaoMessageConsumer;
+  alibaba_aliqin_FlowDirectCharge(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAliqinFlowDirectCharge) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAliqinIotPersonalConfirmNotice 阿里通信 > 实名认证结果通知} */
-  alibaba_aliqin_IotPersonalConfirmNotice(fn: (message: IncomingMessage.AlibabaAliqinIotPersonalConfirmNotice) => void): TaoMessageConsumer;
+  alibaba_aliqin_IotPersonalConfirmNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAliqinIotPersonalConfirmNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAliqinIotStatusNotice 阿里通信 > 物联网停机消息通知} */
-  alibaba_aliqin_IotStatusNotice(fn: (message: IncomingMessage.AlibabaAliqinIotStatusNotice) => void): TaoMessageConsumer;
+  alibaba_aliqin_IotStatusNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAliqinIotStatusNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAliqinTaFcSmsDR 阿里通信 > 聚石塔短消息发送结果报告} */
-  alibaba_aliqin_TaFcSmsDR(fn: (message: IncomingMessage.AlibabaAliqinTaFcSmsDR) => void): TaoMessageConsumer;
+  alibaba_aliqin_TaFcSmsDR(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAliqinTaFcSmsDR) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaEinvoiceApplyUpdate 电子发票 > 发票申请单状态变更通知} */
-  alibaba_einvoice_ApplyUpdate(fn: (message: IncomingMessage.AlibabaEinvoiceApplyUpdate) => void): TaoMessageConsumer;
+  alibaba_einvoice_ApplyUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaEinvoiceApplyUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaEinvoiceCompanyDoAction 电子发票 > 商户事件触发消息} */
-  alibaba_einvoice_CompanyDoAction(fn: (message: IncomingMessage.AlibabaEinvoiceCompanyDoAction) => void): TaoMessageConsumer;
+  alibaba_einvoice_CompanyDoAction(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaEinvoiceCompanyDoAction) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaEinvoiceOrderRefundResult 电子发票 > 订购单退款审核结果通知} */
-  alibaba_einvoice_OrderRefundResult(fn: (message: IncomingMessage.AlibabaEinvoiceOrderRefundResult) => void): TaoMessageConsumer;
+  alibaba_einvoice_OrderRefundResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaEinvoiceOrderRefundResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaEinvoiceRegisterFlowChange 电子发票 > 入驻工单状态变更消息} */
-  alibaba_einvoice_RegisterFlowChange(fn: (message: IncomingMessage.AlibabaEinvoiceRegisterFlowChange) => void): TaoMessageConsumer;
+  alibaba_einvoice_RegisterFlowChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaEinvoiceRegisterFlowChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaEinvoiceRegisterFlowCreate 电子发票 > 入驻工单创建消息} */
-  alibaba_einvoice_RegisterFlowCreate(fn: (message: IncomingMessage.AlibabaEinvoiceRegisterFlowCreate) => void): TaoMessageConsumer;
+  alibaba_einvoice_RegisterFlowCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaEinvoiceRegisterFlowCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaEinvoiceTaxDeviceOrder 电子发票 > 增购税控设备触发消息} */
-  alibaba_einvoice_TaxDeviceOrder(fn: (message: IncomingMessage.AlibabaEinvoiceTaxDeviceOrder) => void): TaoMessageConsumer;
+  alibaba_einvoice_TaxDeviceOrder(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaEinvoiceTaxDeviceOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaFuwuOrderPaid 1688服务市场 > 订单支付消息} */
-  alibaba_fuwu_OrderPaid(fn: (message: IncomingMessage.AlibabaFuwuOrderPaid) => void): TaoMessageConsumer;
+  alibaba_fuwu_OrderPaid(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaFuwuOrderPaid) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaHappytripOrderNotify 欢行开放平台 > 欢行统一订单模型变更通知消息} */
-  alibaba_happytrip_OrderNotify(fn: (message: IncomingMessage.AlibabaHappytripOrderNotify) => void): TaoMessageConsumer;
+  alibaba_happytrip_OrderNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHappytripOrderNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInvoiceApply 阿里发票 > 开票申请} */
-  alibaba_invoice_Apply(fn: (message: IncomingMessage.AlibabaInvoiceApply) => void): TaoMessageConsumer;
+  alibaba_invoice_Apply(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaInvoiceApply) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInvoiceApplyResult 阿里发票 > 开票申请审核结果} */
-  alibaba_invoice_ApplyResult(fn: (message: IncomingMessage.AlibabaInvoiceApplyResult) => void): TaoMessageConsumer;
+  alibaba_invoice_ApplyResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaInvoiceApplyResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInvoiceDiskOffline 阿里发票 > 税盘下架单新增和更新通知} */
-  alibaba_invoice_DiskOffline(fn: (message: IncomingMessage.AlibabaInvoiceDiskOffline) => void): TaoMessageConsumer;
+  alibaba_invoice_DiskOffline(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaInvoiceDiskOffline) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInvoiceFlowBuket 阿里发票 > 资源包开通/订购记录同步} */
-  alibaba_invoice_FlowBuket(fn: (message: IncomingMessage.AlibabaInvoiceFlowBuket) => void): TaoMessageConsumer;
+  alibaba_invoice_FlowBuket(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaInvoiceFlowBuket) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInvoiceInvoiceApply 阿里发票 > 税控服务开票申请} */
-  alibaba_invoice_InvoiceApply(fn: (message: IncomingMessage.AlibabaInvoiceInvoiceApply) => void): TaoMessageConsumer;
+  alibaba_invoice_InvoiceApply(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaInvoiceInvoiceApply) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInvoiceLogistics 阿里发票 > 发票对外通知物流信息} */
-  alibaba_invoice_Logistics(fn: (message: IncomingMessage.AlibabaInvoiceLogistics) => void): TaoMessageConsumer;
+  alibaba_invoice_Logistics(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaInvoiceLogistics) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInvoicePaperOpsReturn 阿里发票 > 纸票操作结果回传（打印、作废等）} */
-  alibaba_invoice_PaperOpsReturn(fn: (message: IncomingMessage.AlibabaInvoicePaperOpsReturn) => void): TaoMessageConsumer;
+  alibaba_invoice_PaperOpsReturn(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaInvoicePaperOpsReturn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInvoicePreConsulting 阿里发票 > 电子发票售前咨询} */
-  alibaba_invoice_PreConsulting(fn: (message: IncomingMessage.AlibabaInvoicePreConsulting) => void): TaoMessageConsumer;
+  alibaba_invoice_PreConsulting(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaInvoicePreConsulting) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInvoiceQuery 阿里发票 > 数据查询请求} */
-  alibaba_invoice_Query(fn: (message: IncomingMessage.AlibabaInvoiceQuery) => void): TaoMessageConsumer;
+  alibaba_invoice_Query(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaInvoiceQuery) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInvoiceQueryInvoice 阿里发票 > 查询发票信息} */
-  alibaba_invoice_QueryInvoice(fn: (message: IncomingMessage.AlibabaInvoiceQueryInvoice) => void): TaoMessageConsumer;
+  alibaba_invoice_QueryInvoice(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaInvoiceQueryInvoice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInvoiceRegist 阿里发票 > 入驻阿里发票平台} */
-  alibaba_invoice_Regist(fn: (message: IncomingMessage.AlibabaInvoiceRegist) => void): TaoMessageConsumer;
+  alibaba_invoice_Regist(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaInvoiceRegist) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInvoiceResultReturn 阿里发票 > 开票请求结果} */
-  alibaba_invoice_ResultReturn(fn: (message: IncomingMessage.AlibabaInvoiceResultReturn) => void): TaoMessageConsumer;
+  alibaba_invoice_ResultReturn(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaInvoiceResultReturn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInvoiceStatusChange 阿里发票 > 发票状态变更消息} */
-  alibaba_invoice_StatusChange(fn: (message: IncomingMessage.AlibabaInvoiceStatusChange) => void): TaoMessageConsumer;
+  alibaba_invoice_StatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaInvoiceStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInvoiceTaxChange 阿里发票 > 商家税号变更} */
-  alibaba_invoice_TaxChange(fn: (message: IncomingMessage.AlibabaInvoiceTaxChange) => void): TaoMessageConsumer;
+  alibaba_invoice_TaxChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaInvoiceTaxChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInvoiceUnissue 阿里发票 > 创建未开具发票通知} */
-  alibaba_invoice_Unissue(fn: (message: IncomingMessage.AlibabaInvoiceUnissue) => void): TaoMessageConsumer;
+  alibaba_invoice_Unissue(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaInvoiceUnissue) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaLstBmOrderLogisticsChange 零售通_公共 > 品牌商-订单物流状态变化} */
-  alibaba_lst_BmOrderLogisticsChange(fn: (message: IncomingMessage.AlibabaLstBmOrderLogisticsChange) => void): TaoMessageConsumer;
+  alibaba_lst_BmOrderLogisticsChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaLstBmOrderLogisticsChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaLstBroadcastSelfOrderShipChange 零售通_公共 > 线下自有订单发货状态变更消息} */
-  alibaba_lst_BroadcastSelfOrderShipChange(fn: (message: IncomingMessage.AlibabaLstBroadcastSelfOrderShipChange) => void): TaoMessageConsumer;
+  alibaba_lst_BroadcastSelfOrderShipChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaLstBroadcastSelfOrderShipChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaLstCashierSync 零售通_公共 > 收银快照同步消息} */
-  alibaba_lst_CashierSync(fn: (message: IncomingMessage.AlibabaLstCashierSync) => void): TaoMessageConsumer;
+  alibaba_lst_CashierSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaLstCashierSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaLstGoodsSync 零售通_公共 > 商品同步消息} */
-  alibaba_lst_GoodsSync(fn: (message: IncomingMessage.AlibabaLstGoodsSync) => void): TaoMessageConsumer;
+  alibaba_lst_GoodsSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaLstGoodsSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaLstInventorySync 零售通_公共 > 商品库存修改同步消息} */
-  alibaba_lst_InventorySync(fn: (message: IncomingMessage.AlibabaLstInventorySync) => void): TaoMessageConsumer;
+  alibaba_lst_InventorySync(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaLstInventorySync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaLstMsgTest 零售通_公共 > 消息测试} */
-  alibaba_lst_MsgTest(fn: (message: IncomingMessage.AlibabaLstMsgTest) => void): TaoMessageConsumer;
+  alibaba_lst_MsgTest(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaLstMsgTest) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaLstOrderChange 零售通_公共 > 零售通交易订单变更消息} */
-  alibaba_lst_OrderChange(fn: (message: IncomingMessage.AlibabaLstOrderChange) => void): TaoMessageConsumer;
+  alibaba_lst_OrderChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaLstOrderChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaLstRefundChange 零售通_公共 > 订单退单} */
-  alibaba_lst_RefundChange(fn: (message: IncomingMessage.AlibabaLstRefundChange) => void): TaoMessageConsumer;
+  alibaba_lst_RefundChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaLstRefundChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaLstSpeakerAdvertPlayRecord 零售通_公共 > 如意音箱播放日志} */
-  alibaba_lst_SpeakerAdvertPlayRecord(fn: (message: IncomingMessage.AlibabaLstSpeakerAdvertPlayRecord) => void): TaoMessageConsumer;
+  alibaba_lst_SpeakerAdvertPlayRecord(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaLstSpeakerAdvertPlayRecord) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaLstSupplierOrderChange 零售通_公共 > 零售通供应商交易订单变更消息} */
-  alibaba_lst_SupplierOrderChange(fn: (message: IncomingMessage.AlibabaLstSupplierOrderChange) => void): TaoMessageConsumer;
+  alibaba_lst_SupplierOrderChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaLstSupplierOrderChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaMmcOpenStockAlterNotify MMC五盘货项目 > MMC五盘货盘招投域盘货变更消息} */
-  alibaba_mmc_OpenStockAlterNotify(fn: (message: IncomingMessage.AlibabaMmcOpenStockAlterNotify) => void): TaoMessageConsumer;
+  alibaba_mmc_OpenStockAlterNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMmcOpenStockAlterNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaMmcOpenStockItemAlter MMC五盘货项目 > MMC盘招投商品变更消息} */
-  alibaba_mmc_OpenStockItemAlter(fn: (message: IncomingMessage.AlibabaMmcOpenStockItemAlter) => void): TaoMessageConsumer;
+  alibaba_mmc_OpenStockItemAlter(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMmcOpenStockItemAlter) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaMmcOrderNotify MMC五盘货项目 > MMC五盘货对接大润发正向订单消息} */
-  alibaba_mmc_OrderNotify(fn: (message: IncomingMessage.AlibabaMmcOrderNotify) => void): TaoMessageConsumer;
+  alibaba_mmc_OrderNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMmcOrderNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaMmcPriceUpdate MMC五盘货项目 > MMC五盘货对接大润发价格修改消息} */
-  alibaba_mmc_PriceUpdate(fn: (message: IncomingMessage.AlibabaMmcPriceUpdate) => void): TaoMessageConsumer;
+  alibaba_mmc_PriceUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMmcPriceUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaMmcRefundOrderNotify MMC五盘货项目 > MMC五盘货对接大润发逆向交易消息} */
-  alibaba_mmc_RefundOrderNotify(fn: (message: IncomingMessage.AlibabaMmcRefundOrderNotify) => void): TaoMessageConsumer;
+  alibaba_mmc_RefundOrderNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMmcRefundOrderNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaMonitorEventSendMessage 聚石塔监控告警 > 聚石塔监控告警消息投递} */
-  alibaba_monitor_EventSendMessage(fn: (message: IncomingMessage.AlibabaMonitorEventSendMessage) => void): TaoMessageConsumer;
+  alibaba_monitor_EventSendMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMonitorEventSendMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaMonitorMessageSend 聚石塔监控告警 > 聚石塔监控告警消息投递} */
-  alibaba_monitor_MessageSend(fn: (message: IncomingMessage.AlibabaMonitorMessageSend) => void): TaoMessageConsumer;
+  alibaba_monitor_MessageSend(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMonitorMessageSend) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaMosSaleOrder 银泰开放平台消息 > 销售单状态变更} */
-  alibaba_mos_SaleOrder(fn: (message: IncomingMessage.AlibabaMosSaleOrder) => void): TaoMessageConsumer;
+  alibaba_mos_SaleOrder(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMosSaleOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaMosSaleOrderRefund 银泰开放平台消息 > 销售单退款消息} */
-  alibaba_mos_SaleOrderRefund(fn: (message: IncomingMessage.AlibabaMosSaleOrderRefund) => void): TaoMessageConsumer;
+  alibaba_mos_SaleOrderRefund(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMosSaleOrderRefund) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaNazcaAbandonCert 网上法庭 > 作废存证消息接口} */
-  alibaba_nazca_AbandonCert(fn: (message: IncomingMessage.AlibabaNazcaAbandonCert) => void): TaoMessageConsumer;
+  alibaba_nazca_AbandonCert(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaNazcaAbandonCert) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaNazcaQueryChargeNum 网上法庭 > 查询收费数量} */
-  alibaba_nazca_QueryChargeNum(fn: (message: IncomingMessage.AlibabaNazcaQueryChargeNum) => void): TaoMessageConsumer;
+  alibaba_nazca_QueryChargeNum(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaNazcaQueryChargeNum) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaNazcaSaveCert 网上法庭 > 发起存证消息接口} */
-  alibaba_nazca_SaveCert(fn: (message: IncomingMessage.AlibabaNazcaSaveCert) => void): TaoMessageConsumer;
+  alibaba_nazca_SaveCert(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaNazcaSaveCert) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaNazcaUpdateChargeNum 网上法庭 > 更新收费数量} */
-  alibaba_nazca_UpdateChargeNum(fn: (message: IncomingMessage.AlibabaNazcaUpdateChargeNum) => void): TaoMessageConsumer;
+  alibaba_nazca_UpdateChargeNum(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaNazcaUpdateChargeNum) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaNlifeBToBTradeStatusNotify 零售plus > 采购单状态变化通知} */
-  alibaba_nlife_BToBTradeStatusNotify(fn: (message: IncomingMessage.AlibabaNlifeBToBTradeStatusNotify) => void): TaoMessageConsumer;
+  alibaba_nlife_BToBTradeStatusNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaNlifeBToBTradeStatusNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaNlifeBToCTradeOrderSync 零售plus > 零售+订单同步消息} */
-  alibaba_nlife_BToCTradeOrderSync(fn: (message: IncomingMessage.AlibabaNlifeBToCTradeOrderSync) => void): TaoMessageConsumer;
+  alibaba_nlife_BToCTradeOrderSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaNlifeBToCTradeOrderSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaNlifeBtoBTradeDeliverNotify 零售plus > 采购单发货通知消息} */
-  alibaba_nlife_BtoBTradeDeliverNotify(fn: (message: IncomingMessage.AlibabaNlifeBtoBTradeDeliverNotify) => void): TaoMessageConsumer;
+  alibaba_nlife_BtoBTradeDeliverNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaNlifeBtoBTradeDeliverNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaNlifeBtoBTradeEffectiveNotify 零售plus > 采购单生效通知消息} */
-  alibaba_nlife_BtoBTradeEffectiveNotify(fn: (message: IncomingMessage.AlibabaNlifeBtoBTradeEffectiveNotify) => void): TaoMessageConsumer;
+  alibaba_nlife_BtoBTradeEffectiveNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaNlifeBtoBTradeEffectiveNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaNlifeBtobTradeRefundConfirmMsgNotify 零售plus > 采购单退货单确认消息} */
-  alibaba_nlife_BtobTradeRefundConfirmMsgNotify(fn: (message: IncomingMessage.AlibabaNlifeBtobTradeRefundConfirmMsgNotify) => void): TaoMessageConsumer;
+  alibaba_nlife_BtobTradeRefundConfirmMsgNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaNlifeBtobTradeRefundConfirmMsgNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaNlifeBtobTradeRefundNotify 零售plus > 采购单退货通知消息} */
-  alibaba_nlife_BtobTradeRefundNotify(fn: (message: IncomingMessage.AlibabaNlifeBtobTradeRefundNotify) => void): TaoMessageConsumer;
+  alibaba_nlife_BtobTradeRefundNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaNlifeBtobTradeRefundNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaNlifeInstorageDiffAuditNotify 零售plus > 供应商审核差异单的通知消息} */
-  alibaba_nlife_InstorageDiffAuditNotify(fn: (message: IncomingMessage.AlibabaNlifeInstorageDiffAuditNotify) => void): TaoMessageConsumer;
+  alibaba_nlife_InstorageDiffAuditNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaNlifeInstorageDiffAuditNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaNlifeItemUpdate 零售plus > 零售+商品变动消息} */
-  alibaba_nlife_ItemUpdate(fn: (message: IncomingMessage.AlibabaNlifeItemUpdate) => void): TaoMessageConsumer;
+  alibaba_nlife_ItemUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaNlifeItemUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaServiceplatformFulfilTask 天猫服务 > 服务供应链核销单消息} */
-  alibaba_serviceplatform_FulfilTask(fn: (message: IncomingMessage.AlibabaServiceplatformFulfilTask) => void): TaoMessageConsumer;
+  alibaba_serviceplatform_FulfilTask(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaServiceplatformFulfilTask) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaServiceplatformServiceOrder 天猫服务 > 服务供应链服务单消息} */
-  alibaba_serviceplatform_ServiceOrder(fn: (message: IncomingMessage.AlibabaServiceplatformServiceOrder) => void): TaoMessageConsumer;
+  alibaba_serviceplatform_ServiceOrder(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaServiceplatformServiceOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaSpNotifyPaymentResult 阿里智付 > 通知付款结果} */
-  alibaba_sp_NotifyPaymentResult(fn: (message: IncomingMessage.AlibabaSpNotifyPaymentResult) => void): TaoMessageConsumer;
+  alibaba_sp_NotifyPaymentResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaSpNotifyPaymentResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaTaxEmployeeSignResult 阿里发票 > 税优雇员签约结果消息} */
-  alibaba_tax_EmployeeSignResult(fn: (message: IncomingMessage.AlibabaTaxEmployeeSignResult) => void): TaoMessageConsumer;
+  alibaba_tax_EmployeeSignResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaTaxEmployeeSignResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaTaxSalaryPayResult 阿里发票 > 税优发薪结果通知} */
-  alibaba_tax_SalaryPayResult(fn: (message: IncomingMessage.AlibabaTaxSalaryPayResult) => void): TaoMessageConsumer;
+  alibaba_tax_SalaryPayResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaTaxSalaryPayResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaTianjiContractOrder 阿里通信 > 天机平台合约机供应商订单消息} */
-  alibaba_tianji_ContractOrder(fn: (message: IncomingMessage.AlibabaTianjiContractOrder) => void): TaoMessageConsumer;
+  alibaba_tianji_ContractOrder(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaTianjiContractOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaTianjiOrderCreate 阿里通信 > 天机平台订单生成通知消息} */
-  alibaba_tianji_OrderCreate(fn: (message: IncomingMessage.AlibabaTianjiOrderCreate) => void): TaoMessageConsumer;
+  alibaba_tianji_OrderCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaTianjiOrderCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaWdkChannelCommentAudit 五道口商品 > 差评回评} */
-  alibaba_wdk_ChannelCommentAudit(fn: (message: IncomingMessage.AlibabaWdkChannelCommentAudit) => void): TaoMessageConsumer;
+  alibaba_wdk_ChannelCommentAudit(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkChannelCommentAudit) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaWdkChannelOrderCancel 五道口商品 > 五道口售中取消外部订单消息} */
-  alibaba_wdk_ChannelOrderCancel(fn: (message: IncomingMessage.AlibabaWdkChannelOrderCancel) => void): TaoMessageConsumer;
+  alibaba_wdk_ChannelOrderCancel(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkChannelOrderCancel) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaWdkChannelOrderCsRefundAudit 五道口商品 > 客服审核退款结果} */
-  alibaba_wdk_ChannelOrderCsRefundAudit(fn: (message: IncomingMessage.AlibabaWdkChannelOrderCsRefundAudit) => void): TaoMessageConsumer;
+  alibaba_wdk_ChannelOrderCsRefundAudit(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkChannelOrderCsRefundAudit) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaWdkChannelOrderCsUserrefund 五道口商品 > 客服代客发起售后退款(整单/部分)} */
-  alibaba_wdk_ChannelOrderCsUserrefund(fn: (message: IncomingMessage.AlibabaWdkChannelOrderCsUserrefund) => void): TaoMessageConsumer;
+  alibaba_wdk_ChannelOrderCsUserrefund(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkChannelOrderCsUserrefund) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaWdkChannelOrderStatusChange 五道口商品 > 订单状态变更消息} */
-  alibaba_wdk_ChannelOrderStatusChange(fn: (message: IncomingMessage.AlibabaWdkChannelOrderStatusChange) => void): TaoMessageConsumer;
+  alibaba_wdk_ChannelOrderStatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkChannelOrderStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaWdkChannelStockSync 五道口商品 > 库存同步} */
-  alibaba_wdk_ChannelStockSync(fn: (message: IncomingMessage.AlibabaWdkChannelStockSync) => void): TaoMessageConsumer;
+  alibaba_wdk_ChannelStockSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkChannelStockSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaWdkFulfillOrderChange 五道口商品 > 售中履约变更消息} */
-  alibaba_wdk_FulfillOrderChange(fn: (message: IncomingMessage.AlibabaWdkFulfillOrderChange) => void): TaoMessageConsumer;
+  alibaba_wdk_FulfillOrderChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkFulfillOrderChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaWdkStoreItemUpdate 五道口商品 > 商家渠道商品变动消息} */
-  alibaba_wdk_StoreItemUpdate(fn: (message: IncomingMessage.AlibabaWdkStoreItemUpdate) => void): TaoMessageConsumer;
+  alibaba_wdk_StoreItemUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkStoreItemUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaWdkitemWarehouseSkuModify 五道口商品 > 五道口仓商品变更消息} */
-  alibaba_wdkitem_WarehouseSkuModify(fn: (message: IncomingMessage.AlibabaWdkitemWarehouseSkuModify) => void): TaoMessageConsumer;
+  alibaba_wdkitem_WarehouseSkuModify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkitemWarehouseSkuModify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaWdkopRexAccountChange 五道口订单 > Rex用户信息变更消息} */
-  alibaba_wdkop_RexAccountChange(fn: (message: IncomingMessage.AlibabaWdkopRexAccountChange) => void): TaoMessageConsumer;
+  alibaba_wdkop_RexAccountChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkopRexAccountChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaWdkopenOrderMessage 五道口订单 > 五道口交易状态变更消息通知} */
-  alibaba_wdkopen_OrderMessage(fn: (message: IncomingMessage.AlibabaWdkopenOrderMessage) => void): TaoMessageConsumer;
+  alibaba_wdkopen_OrderMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkopenOrderMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaWdkopenPriceAdjust 五道口订单 > 采购价变更消息} */
-  alibaba_wdkopen_PriceAdjust(fn: (message: IncomingMessage.AlibabaWdkopenPriceAdjust) => void): TaoMessageConsumer;
+  alibaba_wdkopen_PriceAdjust(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkopenPriceAdjust) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaWdkopenRefundMessage 五道口订单 > 同城零售逆向交易消息} */
-  alibaba_wdkopen_RefundMessage(fn: (message: IncomingMessage.AlibabaWdkopenRefundMessage) => void): TaoMessageConsumer;
+  alibaba_wdkopen_RefundMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkopenRefundMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaWdkorderFulfillStatusChange 五道口订单 > 五道口订单履约状态变更消息} */
-  alibaba_wdkorder_FulfillStatusChange(fn: (message: IncomingMessage.AlibabaWdkorderFulfillStatusChange) => void): TaoMessageConsumer;
+  alibaba_wdkorder_FulfillStatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkorderFulfillStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaWdkorderInsuranceOrder 五道口订单 > 共享库存保险正向投保消息} */
-  alibaba_wdkorder_InsuranceOrder(fn: (message: IncomingMessage.AlibabaWdkorderInsuranceOrder) => void): TaoMessageConsumer;
+  alibaba_wdkorder_InsuranceOrder(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkorderInsuranceOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaWdkorderInsuranceRefund 五道口订单 > 共享库存保险逆向理赔消息} */
-  alibaba_wdkorder_InsuranceRefund(fn: (message: IncomingMessage.AlibabaWdkorderInsuranceRefund) => void): TaoMessageConsumer;
+  alibaba_wdkorder_InsuranceRefund(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkorderInsuranceRefund) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaWdkorderOrderFulfillPush 五道口订单 > 订单履约状态变更消息} */
-  alibaba_wdkorder_OrderFulfillPush(fn: (message: IncomingMessage.AlibabaWdkorderOrderFulfillPush) => void): TaoMessageConsumer;
+  alibaba_wdkorder_OrderFulfillPush(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkorderOrderFulfillPush) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaWdkorderOrderFulfillTokenPush 五道口订单 > 履约状态变更消息} */
-  alibaba_wdkorder_OrderFulfillTokenPush(fn: (message: IncomingMessage.AlibabaWdkorderOrderFulfillTokenPush) => void): TaoMessageConsumer;
+  alibaba_wdkorder_OrderFulfillTokenPush(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkorderOrderFulfillTokenPush) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaWdkorderOrderStatusPush 五道口订单 > 猫超订单数据变更消息通知} */
-  alibaba_wdkorder_OrderStatusPush(fn: (message: IncomingMessage.AlibabaWdkorderOrderStatusPush) => void): TaoMessageConsumer;
+  alibaba_wdkorder_OrderStatusPush(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkorderOrderStatusPush) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaWdkorderRefundOrgPoint 五道口订单 > 逆向单企业积分消息发送} */
-  alibaba_wdkorder_RefundOrgPoint(fn: (message: IncomingMessage.AlibabaWdkorderRefundOrgPoint) => void): TaoMessageConsumer;
+  alibaba_wdkorder_RefundOrgPoint(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkorderRefundOrgPoint) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaWdkorderRefundSuccess 五道口订单 > 五道口淘鲜达逆向订单消息} */
-  alibaba_wdkorder_RefundSuccess(fn: (message: IncomingMessage.AlibabaWdkorderRefundSuccess) => void): TaoMessageConsumer;
+  alibaba_wdkorder_RefundSuccess(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkorderRefundSuccess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaWdkorderSoPo 五道口订单 > 共享库存SOPO} */
-  alibaba_wdkorder_SoPo(fn: (message: IncomingMessage.AlibabaWdkorderSoPo) => void): TaoMessageConsumer;
+  alibaba_wdkorder_SoPo(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkorderSoPo) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaWdkorderStatusChange 五道口订单 > 五道口订单状态变更消息} */
-  alibaba_wdkorder_StatusChange(fn: (message: IncomingMessage.AlibabaWdkorderStatusChange) => void): TaoMessageConsumer;
+  alibaba_wdkorder_StatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkorderStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaWdkorderVoucherStatus 五道口订单 > 淘鲜达订单优惠券状态变更} */
-  alibaba_wdkorder_VoucherStatus(fn: (message: IncomingMessage.AlibabaWdkorderVoucherStatus) => void): TaoMessageConsumer;
+  alibaba_wdkorder_VoucherStatus(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkorderVoucherStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaWdktradeCouponInstance 五道口营销 > 营销券实例消息} */
-  alibaba_wdktrade_CouponInstance(fn: (message: IncomingMessage.AlibabaWdktradeCouponInstance) => void): TaoMessageConsumer;
+  alibaba_wdktrade_CouponInstance(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdktradeCouponInstance) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaYunioDataTransfer 平台消息 > YunIO数据流转} */
-  alibaba_yunio_DataTransfer(fn: (message: IncomingMessage.AlibabaYunioDataTransfer) => void): TaoMessageConsumer;
+  alibaba_yunio_DataTransfer(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaYunioDataTransfer) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlicomAxbSubsEventSync 阿里通信 > 绑定事件同步} */
-  alicom_axb_SubsEventSync(fn: (message: IncomingMessage.AlicomAxbSubsEventSync) => void): TaoMessageConsumer;
+  alicom_axb_SubsEventSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlicomAxbSubsEventSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AliexpressAeiaTaskplatformInterestNotice AE-任务平台消息 > AE任务平台权益发放通知} */
-  aliexpress_aeia_TaskplatformInterestNotice(fn: (message: IncomingMessage.AliexpressAeiaTaskplatformInterestNotice) => void): TaoMessageConsumer;
+  aliexpress_aeia_TaskplatformInterestNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.AliexpressAeiaTaskplatformInterestNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AliexpressOrderFinish AE-交易 > 交易成功} */
-  aliexpress_order_Finish(fn: (message: IncomingMessage.AliexpressOrderFinish) => void): TaoMessageConsumer;
+  aliexpress_order_Finish(fn: (this: TaoMessageConsumer, message: IncomingMessage.AliexpressOrderFinish) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AliexpressOrderFundProcessing AE-交易 > 资金处理中} */
-  aliexpress_order_FundProcessing(fn: (message: IncomingMessage.AliexpressOrderFundProcessing) => void): TaoMessageConsumer;
+  aliexpress_order_FundProcessing(fn: (this: TaoMessageConsumer, message: IncomingMessage.AliexpressOrderFundProcessing) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AliexpressOrderInCancel AE-交易 > 取消订单中} */
-  aliexpress_order_InCancel(fn: (message: IncomingMessage.AliexpressOrderInCancel) => void): TaoMessageConsumer;
+  aliexpress_order_InCancel(fn: (this: TaoMessageConsumer, message: IncomingMessage.AliexpressOrderInCancel) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AliexpressOrderPlaceOrderSuccess AE-交易 > 下单成功} */
-  aliexpress_order_PlaceOrderSuccess(fn: (message: IncomingMessage.AliexpressOrderPlaceOrderSuccess) => void): TaoMessageConsumer;
+  aliexpress_order_PlaceOrderSuccess(fn: (this: TaoMessageConsumer, message: IncomingMessage.AliexpressOrderPlaceOrderSuccess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AliexpressOrderRiskControl AE-交易 > 风控24小时} */
-  aliexpress_order_RiskControl(fn: (message: IncomingMessage.AliexpressOrderRiskControl) => void): TaoMessageConsumer;
+  aliexpress_order_RiskControl(fn: (this: TaoMessageConsumer, message: IncomingMessage.AliexpressOrderRiskControl) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AliexpressOrderSellerPartSendGoods AE-交易 > 等待部分发货} */
-  aliexpress_order_SellerPartSendGoods(fn: (message: IncomingMessage.AliexpressOrderSellerPartSendGoods) => void): TaoMessageConsumer;
+  aliexpress_order_SellerPartSendGoods(fn: (this: TaoMessageConsumer, message: IncomingMessage.AliexpressOrderSellerPartSendGoods) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AliexpressOrderWaitBuyerAcceptGoods AE-交易 > 等待买家收货} */
-  aliexpress_order_WaitBuyerAcceptGoods(fn: (message: IncomingMessage.AliexpressOrderWaitBuyerAcceptGoods) => void): TaoMessageConsumer;
+  aliexpress_order_WaitBuyerAcceptGoods(fn: (this: TaoMessageConsumer, message: IncomingMessage.AliexpressOrderWaitBuyerAcceptGoods) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AliexpressOrderWaitGroupSuccess AE-交易 > 等待成团} */
-  aliexpress_order_WaitGroupSuccess(fn: (message: IncomingMessage.AliexpressOrderWaitGroupSuccess) => void): TaoMessageConsumer;
+  aliexpress_order_WaitGroupSuccess(fn: (this: TaoMessageConsumer, message: IncomingMessage.AliexpressOrderWaitGroupSuccess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AliexpressOrderWaitSellerExamineMoney AE-交易 > 待卖家验款} */
-  aliexpress_order_WaitSellerExamineMoney(fn: (message: IncomingMessage.AliexpressOrderWaitSellerExamineMoney) => void): TaoMessageConsumer;
+  aliexpress_order_WaitSellerExamineMoney(fn: (this: TaoMessageConsumer, message: IncomingMessage.AliexpressOrderWaitSellerExamineMoney) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AliexpressOrderWaitSellerSendGoods AE-交易 > 等待卖家发货} */
-  aliexpress_order_WaitSellerSendGoods(fn: (message: IncomingMessage.AliexpressOrderWaitSellerSendGoods) => void): TaoMessageConsumer;
+  aliexpress_order_WaitSellerSendGoods(fn: (this: TaoMessageConsumer, message: IncomingMessage.AliexpressOrderWaitSellerSendGoods) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlihealthCepOrderStatusChange 平台消息 > 孔雀翎订单消息通知} */
-  alihealth_cep_OrderStatusChange(fn: (message: IncomingMessage.AlihealthCepOrderStatusChange) => void): TaoMessageConsumer;
+  alihealth_cep_OrderStatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlihealthCepOrderStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlihealthYsOrderMemConsume 阿里健康&一树-电商中台对接 > 订单支付成功推送} */
-  alihealth_ys_OrderMemConsume(fn: (message: IncomingMessage.AlihealthYsOrderMemConsume) => void): TaoMessageConsumer;
+  alihealth_ys_OrderMemConsume(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlihealthYsOrderMemConsume) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlihealthYsOrderPushConsume 阿里健康&一树-电商中台对接 > 一树孔雀翎订单付款通知} */
-  alihealth_ys_OrderPushConsume(fn: (message: IncomingMessage.AlihealthYsOrderPushConsume) => void): TaoMessageConsumer;
+  alihealth_ys_OrderPushConsume(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlihealthYsOrderPushConsume) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlitripAgentNotify 淘宝机票 > 商家机票业务通知} */
-  alitrip_agent_Notify(fn: (message: IncomingMessage.AlitripAgentNotify) => void): TaoMessageConsumer;
+  alitrip_agent_Notify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlitripAgentNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlitripBtripCorpSignCallback 商旅API > 阿里商旅企业签约结果回调} */
-  alitrip_btrip_CorpSignCallback(fn: (message: IncomingMessage.AlitripBtripCorpSignCallback) => void): TaoMessageConsumer;
+  alitrip_btrip_CorpSignCallback(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlitripBtripCorpSignCallback) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlitripBtripExceedApplySubmit 商旅API > 阿里商旅企业超标审批单提交消息} */
-  alitrip_btrip_ExceedApplySubmit(fn: (message: IncomingMessage.AlitripBtripExceedApplySubmit) => void): TaoMessageConsumer;
+  alitrip_btrip_ExceedApplySubmit(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlitripBtripExceedApplySubmit) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlitripFlightChange 淘宝机票 > 航变消息} */
-  alitrip_flight_Change(fn: (message: IncomingMessage.AlitripFlightChange) => void): TaoMessageConsumer;
+  alitrip_flight_Change(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlitripFlightChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlitripIesrFlightChange 淘宝机票 > 航变数据推送} */
-  alitrip_iesr_FlightChange(fn: (message: IncomingMessage.AlitripIesrFlightChange) => void): TaoMessageConsumer;
+  alitrip_iesr_FlightChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlitripIesrFlightChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlitripIesrTicketMessage 淘宝机票 > 国际运价采购票消息} */
-  alitrip_iesr_TicketMessage(fn: (message: IncomingMessage.AlitripIesrTicketMessage) => void): TaoMessageConsumer;
+  alitrip_iesr_TicketMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlitripIesrTicketMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlitripIetradeChangeMsg 淘宝机票 > 国际机票改签订单状态消息} */
-  alitrip_ietrade_ChangeMsg(fn: (message: IncomingMessage.AlitripIetradeChangeMsg) => void): TaoMessageConsumer;
+  alitrip_ietrade_ChangeMsg(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlitripIetradeChangeMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlitripIetradeOrderMsg 淘宝机票 > 国际机票订单消息} */
-  alitrip_ietrade_OrderMsg(fn: (message: IncomingMessage.AlitripIetradeOrderMsg) => void): TaoMessageConsumer;
+  alitrip_ietrade_OrderMsg(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlitripIetradeOrderMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlitripIetradeRefundMsg 淘宝机票 > 国际机票退票订单状态消息} */
-  alitrip_ietrade_RefundMsg(fn: (message: IncomingMessage.AlitripIetradeRefundMsg) => void): TaoMessageConsumer;
+  alitrip_ietrade_RefundMsg(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlitripIetradeRefundMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlitripTrainAgentStopQuery 淘宝火车票 > 火车票车次状态变更消息} */
-  alitrip_train_AgentStopQuery(fn: (message: IncomingMessage.AlitripTrainAgentStopQuery) => void): TaoMessageConsumer;
+  alitrip_train_AgentStopQuery(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlitripTrainAgentStopQuery) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlitripTravelOrderChanged 航旅度假交易 > 飞猪度假交易订单状态变更消息} */
-  alitrip_travel_OrderChanged(fn: (message: IncomingMessage.AlitripTravelOrderChanged) => void): TaoMessageConsumer;
+  alitrip_travel_OrderChanged(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlitripTravelOrderChanged) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlitripTravelPersonChanged 航旅度假交易 > 出行人信息变更消息} */
-  alitrip_travel_PersonChanged(fn: (message: IncomingMessage.AlitripTravelPersonChanged) => void): TaoMessageConsumer;
+  alitrip_travel_PersonChanged(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlitripTravelPersonChanged) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlitripTravelVisaService 航旅度假交易 > 签证消息服务} */
-  alitrip_travel_VisaService(fn: (message: IncomingMessage.AlitripTravelVisaService) => void): TaoMessageConsumer;
+  alitrip_travel_VisaService(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlitripTravelVisaService) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlitripTripticketTravellerCreate 航旅度假交易 > 旅行机票交易创建} */
-  alitrip_tripticket_TravellerCreate(fn: (message: IncomingMessage.AlitripTripticketTravellerCreate) => void): TaoMessageConsumer;
+  alitrip_tripticket_TravellerCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlitripTripticketTravellerCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlitripVisaTradeDone 航旅度假交易 > 在线签证交易完成消息} */
-  alitrip_visa_TradeDone(fn: (message: IncomingMessage.AlitripVisaTradeDone) => void): TaoMessageConsumer;
+  alitrip_visa_TradeDone(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlitripVisaTradeDone) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AliyunIotOrderSync IOT-智能制造 > 天天工厂采购单同步} */
-  aliyun_iot_OrderSync(fn: (message: IncomingMessage.AliyunIotOrderSync) => void): TaoMessageConsumer;
+  aliyun_iot_OrderSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.AliyunIotOrderSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.BanmaRightTradeCreate 平台消息 > 斑马权益平台权益变更通知} */
-  banma_right_TradeCreate(fn: (message: IncomingMessage.BanmaRightTradeCreate) => void): TaoMessageConsumer;
+  banma_right_TradeCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.BanmaRightTradeCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.CainiaoConsignplatformLogisiticsDetail 菜鸟发货工作台 > 发货工作台下发物流详情消息} */
-  cainiao_consignplatform_LogisiticsDetail(fn: (message: IncomingMessage.CainiaoConsignplatformLogisiticsDetail) => void): TaoMessageConsumer;
+  cainiao_consignplatform_LogisiticsDetail(fn: (this: TaoMessageConsumer, message: IncomingMessage.CainiaoConsignplatformLogisiticsDetail) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.CainiaoIotAftersalesTicket IoT售后解决方案 > IoT售后工单信息消息} */
-  cainiao_iot_AftersalesTicket(fn: (message: IncomingMessage.CainiaoIotAftersalesTicket) => void): TaoMessageConsumer;
+  cainiao_iot_AftersalesTicket(fn: (this: TaoMessageConsumer, message: IncomingMessage.CainiaoIotAftersalesTicket) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionPerformCancel 大麦第三方票务供应商接入 > 场次取消消息推送} */
-  damai_distribution_PerformCancel(fn: (message: IncomingMessage.DamaiDistributionPerformCancel) => void): TaoMessageConsumer;
+  damai_distribution_PerformCancel(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionPerformCancel) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionPerformStatus 大麦第三方票务供应商接入 > 场次状态变更推送} */
-  damai_distribution_PerformStatus(fn: (message: IncomingMessage.DamaiDistributionPerformStatus) => void): TaoMessageConsumer;
+  damai_distribution_PerformStatus(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionPerformStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionPreSaleToNow 大麦第三方票务供应商接入 > 预售改开票} */
-  damai_distribution_PreSaleToNow(fn: (message: IncomingMessage.DamaiDistributionPreSaleToNow) => void): TaoMessageConsumer;
+  damai_distribution_PreSaleToNow(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionPreSaleToNow) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionProjectStatus 大麦第三方票务供应商接入 > 项目状态推送} */
-  damai_distribution_ProjectStatus(fn: (message: IncomingMessage.DamaiDistributionProjectStatus) => void): TaoMessageConsumer;
+  damai_distribution_ProjectStatus(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionProjectStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionTicketItemStatus 大麦第三方票务供应商接入 > 票品状态变更} */
-  damai_distribution_TicketItemStatus(fn: (message: IncomingMessage.DamaiDistributionTicketItemStatus) => void): TaoMessageConsumer;
+  damai_distribution_TicketItemStatus(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionTicketItemStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiTradeTicketStatusPush 大麦票单状态 > 大麦票单状态推送} */
-  damai_trade_TicketStatusPush(fn: (message: IncomingMessage.DamaiTradeTicketStatusPush) => void): TaoMessageConsumer;
+  damai_trade_TicketStatusPush(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiTradeTicketStatusPush) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyBtripHotelDistributionOrderChange 商旅API > 订单状态变化} */
-  fliggy_btrip_HotelDistributionOrderChange(fn: (message: IncomingMessage.FliggyBtripHotelDistributionOrderChange) => void): TaoMessageConsumer;
+  fliggy_btrip_HotelDistributionOrderChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyBtripHotelDistributionOrderChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyJipiaoFlightChange 淘宝机票 > 航变消息服务} */
-  fliggy_jipiao_FlightChange(fn: (message: IncomingMessage.FliggyJipiaoFlightChange) => void): TaoMessageConsumer;
+  fliggy_jipiao_FlightChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyJipiaoFlightChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyTicketOrderRefund 航旅度假交易 > 域外分销订单退款消息} */
-  fliggy_ticket_OrderRefund(fn: (message: IncomingMessage.FliggyTicketOrderRefund) => void): TaoMessageConsumer;
+  fliggy_ticket_OrderRefund(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTicketOrderRefund) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyTicketOrderStatusChange 航旅度假交易 > 域外分销订单状态变更消息} */
-  fliggy_ticket_OrderStatusChange(fn: (message: IncomingMessage.FliggyTicketOrderStatusChange) => void): TaoMessageConsumer;
+  fliggy_ticket_OrderStatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTicketOrderStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyTicketVerifyNotify 航旅度假交易 > 域外分销订单码核销消息} */
-  fliggy_ticket_VerifyNotify(fn: (message: IncomingMessage.FliggyTicketVerifyNotify) => void): TaoMessageConsumer;
+  fliggy_ticket_VerifyNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTicketVerifyNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FuwuConfirmFail 服务市场 > 收入确认失败} */
-  fuwu_confirm_Fail(fn: (message: IncomingMessage.FuwuConfirmFail) => void): TaoMessageConsumer;
+  fuwu_confirm_Fail(fn: (this: TaoMessageConsumer, message: IncomingMessage.FuwuConfirmFail) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FuwuConfirmSuccess 服务市场 > 收入确认成功} */
-  fuwu_confirm_Success(fn: (message: IncomingMessage.FuwuConfirmSuccess) => void): TaoMessageConsumer;
+  fuwu_confirm_Success(fn: (this: TaoMessageConsumer, message: IncomingMessage.FuwuConfirmSuccess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.GovAuctionPushVehicleDataToBM 大资产拍卖Top端拍品消息 > 推送机动车数据到斑马} */
-  gov_auction_PushVehicleDataToBM(fn: (message: IncomingMessage.GovAuctionPushVehicleDataToBM) => void): TaoMessageConsumer;
+  gov_auction_PushVehicleDataToBM(fn: (this: TaoMessageConsumer, message: IncomingMessage.GovAuctionPushVehicleDataToBM) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.GovAuctionVehicleDataPush 大资产拍卖Top端拍品消息 > 斑马-机动车数据推送} */
-  gov_auction_VehicleDataPush(fn: (message: IncomingMessage.GovAuctionVehicleDataPush) => void): TaoMessageConsumer;
+  gov_auction_VehicleDataPush(fn: (this: TaoMessageConsumer, message: IncomingMessage.GovAuctionVehicleDataPush) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleAgreementStatusChange 闲鱼 > 闲鱼代扣消息通知} */
-  idle_agreement_StatusChange(fn: (message: IncomingMessage.IdleAgreementStatusChange) => void): TaoMessageConsumer;
+  idle_agreement_StatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleAgreementStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleAppraiseisvItemSyn 闲鱼已验货 > 已验货商品消息} */
-  idle_appraiseisv_ItemSyn(fn: (message: IncomingMessage.IdleAppraiseisvItemSyn) => void): TaoMessageConsumer;
+  idle_appraiseisv_ItemSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleAppraiseisvItemSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleAppraiseisvOrderSyn 闲鱼已验货 > 闲鱼已验货交易事件} */
-  idle_appraiseisv_OrderSyn(fn: (message: IncomingMessage.IdleAppraiseisvOrderSyn) => void): TaoMessageConsumer;
+  idle_appraiseisv_OrderSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleAppraiseisvOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleAppraiseisvRefundSyn 闲鱼已验货 > 闲鱼已验货退货/退款事件} */
-  idle_appraiseisv_RefundSyn(fn: (message: IncomingMessage.IdleAppraiseisvRefundSyn) => void): TaoMessageConsumer;
+  idle_appraiseisv_RefundSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleAppraiseisvRefundSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleConsignmentOrderSyn 闲鱼回收商消息 > 闲鱼帮卖订单履约状态同步} */
-  idle_consignment_OrderSyn(fn: (message: IncomingMessage.IdleConsignmentOrderSyn) => void): TaoMessageConsumer;
+  idle_consignment_OrderSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleConsignmentOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleConsignmentiiOrderSyn 闲鱼回收商消息 > 闲鱼寄卖V2订单履约状态同步} */
-  idle_consignmentii_OrderSyn(fn: (message: IncomingMessage.IdleConsignmentiiOrderSyn) => void): TaoMessageConsumer;
+  idle_consignmentii_OrderSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleConsignmentiiOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleRecycleOrderSyn 闲鱼回收商消息 > 回收订单交易消息} */
-  idle_recycle_OrderSyn(fn: (message: IncomingMessage.IdleRecycleOrderSyn) => void): TaoMessageConsumer;
+  idle_recycle_OrderSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleRecycleOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleRecycleRefundStatusModify 闲鱼回收商消息 > 退款消息} */
-  idle_recycle_RefundStatusModify(fn: (message: IncomingMessage.IdleRecycleRefundStatusModify) => void): TaoMessageConsumer;
+  idle_recycle_RefundStatusModify(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleRecycleRefundStatusModify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleTopisvGlobalProductNotice 闲鱼已验货 > 闲鱼开放平台-国际货品变更消息通知} */
-  idle_topisv_GlobalProductNotice(fn: (message: IncomingMessage.IdleTopisvGlobalProductNotice) => void): TaoMessageConsumer;
+  idle_topisv_GlobalProductNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleTopisvGlobalProductNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleTopisvItemNotice 闲鱼已验货 > 闲鱼开放平台-商品变更消息通知} */
-  idle_topisv_ItemNotice(fn: (message: IncomingMessage.IdleTopisvItemNotice) => void): TaoMessageConsumer;
+  idle_topisv_ItemNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleTopisvItemNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleTopisvRefundNotice 闲鱼已验货 > 闲鱼开放平台-订单逆向变更消息通知} */
-  idle_topisv_RefundNotice(fn: (message: IncomingMessage.IdleTopisvRefundNotice) => void): TaoMessageConsumer;
+  idle_topisv_RefundNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleTopisvRefundNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleTopisvTradeNotice 闲鱼已验货 > 闲鱼开放平台-订单变更消息通知} */
-  idle_topisv_TradeNotice(fn: (message: IncomingMessage.IdleTopisvTradeNotice) => void): TaoMessageConsumer;
+  idle_topisv_TradeNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleTopisvTradeNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleTranferpayOrderChange 闲鱼 > 直接转账交易消息} */
-  idle_tranferpay_OrderChange(fn: (message: IncomingMessage.IdleTranferpayOrderChange) => void): TaoMessageConsumer;
+  idle_tranferpay_OrderChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleTranferpayOrderChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.JaeTradePaidSuccessed 导购平台 > JAE导购平台成交记录消息} */
-  jae_trade_PaidSuccessed(fn: (message: IncomingMessage.JaeTradePaidSuccessed) => void): TaoMessageConsumer;
+  jae_trade_PaidSuccessed(fn: (this: TaoMessageConsumer, message: IncomingMessage.JaeTradePaidSuccessed) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LstSupplierBroadcastFastRefundMessage 零售通_公共 > 零售通广播极速退款消息} */
-  lst_supplier_BroadcastFastRefundMessage(fn: (message: IncomingMessage.LstSupplierBroadcastFastRefundMessage) => void): TaoMessageConsumer;
+  lst_supplier_BroadcastFastRefundMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.LstSupplierBroadcastFastRefundMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LstSupplierFastRefundMessageCreate 零售通_公共 > 品牌商极速退款消息创建} */
-  lst_supplier_FastRefundMessageCreate(fn: (message: IncomingMessage.LstSupplierFastRefundMessageCreate) => void): TaoMessageConsumer;
+  lst_supplier_FastRefundMessageCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.LstSupplierFastRefundMessageCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAgRefundSignInfo AliGenius > 商家在AG的签收信息} */
-  taobao_ag_RefundSignInfo(fn: (message: IncomingMessage.TaobaoAgRefundSignInfo) => void): TaoMessageConsumer;
+  taobao_ag_RefundSignInfo(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAgRefundSignInfo) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoApsCommentAdd 平台消息 > 百川反馈-开发者/客服回复} */
-  taobao_aps_CommentAdd(fn: (message: IncomingMessage.TaobaoApsCommentAdd) => void): TaoMessageConsumer;
+  taobao_aps_CommentAdd(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoApsCommentAdd) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoApsNewFeedback 平台消息 > 收到舆情} */
-  taobao_aps_NewFeedback(fn: (message: IncomingMessage.TaobaoApsNewFeedback) => void): TaoMessageConsumer;
+  taobao_aps_NewFeedback(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoApsNewFeedback) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAxinRefundCallBack 阿信消息通知前台类目 > 阿信退款回调消息} */
-  taobao_axin_RefundCallBack(fn: (message: IncomingMessage.TaobaoAxinRefundCallBack) => void): TaoMessageConsumer;
+  taobao_axin_RefundCallBack(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAxinRefundCallBack) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoBaichuanASODeviceActivate 百川 > 设备APP激活} */
-  taobao_baichuan_ASODeviceActivate(fn: (message: IncomingMessage.TaobaoBaichuanASODeviceActivate) => void): TaoMessageConsumer;
+  taobao_baichuan_ASODeviceActivate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoBaichuanASODeviceActivate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoBaichuanPasswordRuleChange 百川 > 口令规则变化消息} */
-  taobao_baichuan_PasswordRuleChange(fn: (message: IncomingMessage.TaobaoBaichuanPasswordRuleChange) => void): TaoMessageConsumer;
+  taobao_baichuan_PasswordRuleChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoBaichuanPasswordRuleChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoBmcShortMessageStatus 导购平台 > 短信状态} */
-  taobao_bmc_ShortMessageStatus(fn: (message: IncomingMessage.TaobaoBmcShortMessageStatus) => void): TaoMessageConsumer;
+  taobao_bmc_ShortMessageStatus(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoBmcShortMessageStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoBusTVMTradePay 淘宝汽车票 > 自助机付款成功结果} */
-  taobao_bus_TVMTradePay(fn: (message: IncomingMessage.TaobaoBusTVMTradePay) => void): TaoMessageConsumer;
+  taobao_bus_TVMTradePay(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoBusTVMTradePay) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoBusTVMTradePayStatusNotice 淘宝汽车票 > 交易支付状态节点通知} */
-  taobao_bus_TVMTradePayStatusNotice(fn: (message: IncomingMessage.TaobaoBusTVMTradePayStatusNotice) => void): TaoMessageConsumer;
+  taobao_bus_TVMTradePayStatusNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoBusTVMTradePayStatusNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoBusTVMTradePaySuccess 淘宝汽车票 > 支付成功回调消息} */
-  taobao_bus_TVMTradePaySuccess(fn: (message: IncomingMessage.TaobaoBusTVMTradePaySuccess) => void): TaoMessageConsumer;
+  taobao_bus_TVMTradePaySuccess(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoBusTVMTradePaySuccess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoBusTradePayStatus 淘宝汽车票 > 交易支付状态节点} */
-  taobao_bus_TradePayStatus(fn: (message: IncomingMessage.TaobaoBusTradePayStatus) => void): TaoMessageConsumer;
+  taobao_bus_TradePayStatus(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoBusTradePayStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoCarleaseFreeDpOrderMsgSend 天猫服务 > 天猫汽车直租免首付订单消息} */
-  taobao_carlease_FreeDpOrderMsgSend(fn: (message: IncomingMessage.TaobaoCarleaseFreeDpOrderMsgSend) => void): TaoMessageConsumer;
+  taobao_carlease_FreeDpOrderMsgSend(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoCarleaseFreeDpOrderMsgSend) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDaifaDistributorOrderStatusChange 代发管理 > 代发管理_分销商侧订单状态变更消息} */
-  taobao_daifa_DistributorOrderStatusChange(fn: (message: IncomingMessage.TaobaoDaifaDistributorOrderStatusChange) => void): TaoMessageConsumer;
+  taobao_daifa_DistributorOrderStatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDaifaDistributorOrderStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDaifaSupplierOrderStatusChange 代发管理 > 代发管理_供货商侧订单状态变更消息} */
-  taobao_daifa_SupplierOrderStatusChange(fn: (message: IncomingMessage.TaobaoDaifaSupplierOrderStatusChange) => void): TaoMessageConsumer;
+  taobao_daifa_SupplierOrderStatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDaifaSupplierOrderStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDdPush 淘宝点点 > 淘点点消息推送} */
-  taobao_dd_Push(fn: (message: IncomingMessage.TaobaoDdPush) => void): TaoMessageConsumer;
+  taobao_dd_Push(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDdPush) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDiandianServeOrder 淘宝点点 > 淘宝点点服务订单下单消息} */
-  taobao_diandian_ServeOrder(fn: (message: IncomingMessage.TaobaoDiandianServeOrder) => void): TaoMessageConsumer;
+  taobao_diandian_ServeOrder(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDiandianServeOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDpaasAuthTokenCreate DPAAS > dpaas三方服务token} */
-  taobao_dpaas_AuthTokenCreate(fn: (message: IncomingMessage.TaobaoDpaasAuthTokenCreate) => void): TaoMessageConsumer;
+  taobao_dpaas_AuthTokenCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDpaasAuthTokenCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDpaasCustomerFlow DPAAS > 客流新增及会员到店消息} */
-  taobao_dpaas_CustomerFlow(fn: (message: IncomingMessage.TaobaoDpaasCustomerFlow) => void): TaoMessageConsumer;
+  taobao_dpaas_CustomerFlow(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDpaasCustomerFlow) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDpaasCustomerUpload DPAAS > 客户上传图片} */
-  taobao_dpaas_CustomerUpload(fn: (message: IncomingMessage.TaobaoDpaasCustomerUpload) => void): TaoMessageConsumer;
+  taobao_dpaas_CustomerUpload(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDpaasCustomerUpload) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDpaasCustomerUploadAck DPAAS > 会员人脸信息更新} */
-  taobao_dpaas_CustomerUploadAck(fn: (message: IncomingMessage.TaobaoDpaasCustomerUploadAck) => void): TaoMessageConsumer;
+  taobao_dpaas_CustomerUploadAck(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDpaasCustomerUploadAck) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDpaasEquipmentCreate DPAAS > 创建设备} */
-  taobao_dpaas_EquipmentCreate(fn: (message: IncomingMessage.TaobaoDpaasEquipmentCreate) => void): TaoMessageConsumer;
+  taobao_dpaas_EquipmentCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDpaasEquipmentCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDpaasFaceToCustomerAck DPAAS > 会员标示消息推送} */
-  taobao_dpaas_FaceToCustomerAck(fn: (message: IncomingMessage.TaobaoDpaasFaceToCustomerAck) => void): TaoMessageConsumer;
+  taobao_dpaas_FaceToCustomerAck(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDpaasFaceToCustomerAck) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoEinvoiceBuyerConfirmSend 电子发票 > 买家确认发送到报销系统} */
-  taobao_einvoice_BuyerConfirmSend(fn: (message: IncomingMessage.TaobaoEinvoiceBuyerConfirmSend) => void): TaoMessageConsumer;
+  taobao_einvoice_BuyerConfirmSend(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoEinvoiceBuyerConfirmSend) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoEinvoiceInvoiceResultReturn 电子发票 > 电子发票开票回流} */
-  taobao_einvoice_InvoiceResultReturn(fn: (message: IncomingMessage.TaobaoEinvoiceInvoiceResultReturn) => void): TaoMessageConsumer;
+  taobao_einvoice_InvoiceResultReturn(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoEinvoiceInvoiceResultReturn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFenxiaoDealerAgree 淘宝分销 > 经销采购单审核通过} */
-  taobao_fenxiao_DealerAgree(fn: (message: IncomingMessage.TaobaoFenxiaoDealerAgree) => void): TaoMessageConsumer;
+  taobao_fenxiao_DealerAgree(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFenxiaoDealerAgree) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFenxiaoDealerClose 淘宝分销 > 经销采购单关闭} */
-  taobao_fenxiao_DealerClose(fn: (message: IncomingMessage.TaobaoFenxiaoDealerClose) => void): TaoMessageConsumer;
+  taobao_fenxiao_DealerClose(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFenxiaoDealerClose) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFenxiaoDealerConfirm 淘宝分销 > 经销采购单采购成功} */
-  taobao_fenxiao_DealerConfirm(fn: (message: IncomingMessage.TaobaoFenxiaoDealerConfirm) => void): TaoMessageConsumer;
+  taobao_fenxiao_DealerConfirm(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFenxiaoDealerConfirm) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFenxiaoDealerCreate 淘宝分销 > 经销采购单创建} */
-  taobao_fenxiao_DealerCreate(fn: (message: IncomingMessage.TaobaoFenxiaoDealerCreate) => void): TaoMessageConsumer;
+  taobao_fenxiao_DealerCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFenxiaoDealerCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFenxiaoDealerInstock 淘宝分销 > 经销采购单入库} */
-  taobao_fenxiao_DealerInstock(fn: (message: IncomingMessage.TaobaoFenxiaoDealerInstock) => void): TaoMessageConsumer;
+  taobao_fenxiao_DealerInstock(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFenxiaoDealerInstock) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFenxiaoDealerModify 淘宝分销 > 经销采购单修改} */
-  taobao_fenxiao_DealerModify(fn: (message: IncomingMessage.TaobaoFenxiaoDealerModify) => void): TaoMessageConsumer;
+  taobao_fenxiao_DealerModify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFenxiaoDealerModify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFenxiaoDealerPay 淘宝分销 > 经销采购单付款} */
-  taobao_fenxiao_DealerPay(fn: (message: IncomingMessage.TaobaoFenxiaoDealerPay) => void): TaoMessageConsumer;
+  taobao_fenxiao_DealerPay(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFenxiaoDealerPay) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFenxiaoDealerRefuse 淘宝分销 > 经销采购单拒绝通过} */
-  taobao_fenxiao_DealerRefuse(fn: (message: IncomingMessage.TaobaoFenxiaoDealerRefuse) => void): TaoMessageConsumer;
+  taobao_fenxiao_DealerRefuse(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFenxiaoDealerRefuse) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFenxiaoDealerShipped 淘宝分销 > 经销采购单已发货} */
-  taobao_fenxiao_DealerShipped(fn: (message: IncomingMessage.TaobaoFenxiaoDealerShipped) => void): TaoMessageConsumer;
+  taobao_fenxiao_DealerShipped(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFenxiaoDealerShipped) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFenxiaoFxOrderClosed 淘宝分销 > 采购单关闭消息消息} */
-  taobao_fenxiao_FxOrderClosed(fn: (message: IncomingMessage.TaobaoFenxiaoFxOrderClosed) => void): TaoMessageConsumer;
+  taobao_fenxiao_FxOrderClosed(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFenxiaoFxOrderClosed) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFenxiaoFxOrderCreate 淘宝分销 > 采购单创建消息} */
-  taobao_fenxiao_FxOrderCreate(fn: (message: IncomingMessage.TaobaoFenxiaoFxOrderCreate) => void): TaoMessageConsumer;
+  taobao_fenxiao_FxOrderCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFenxiaoFxOrderCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFenxiaoFxOrderModifyConsign 淘宝分销 > 分销属性变更} */
-  taobao_fenxiao_FxOrderModifyConsign(fn: (message: IncomingMessage.TaobaoFenxiaoFxOrderModifyConsign) => void): TaoMessageConsumer;
+  taobao_fenxiao_FxOrderModifyConsign(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFenxiaoFxOrderModifyConsign) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFenxiaoFxOrderModifyPrice 淘宝分销 > 修改采购单价格消息} */
-  taobao_fenxiao_FxOrderModifyPrice(fn: (message: IncomingMessage.TaobaoFenxiaoFxOrderModifyPrice) => void): TaoMessageConsumer;
+  taobao_fenxiao_FxOrderModifyPrice(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFenxiaoFxOrderModifyPrice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFenxiaoFxOrderPaid 淘宝分销 > 采购单付款消息} */
-  taobao_fenxiao_FxOrderPaid(fn: (message: IncomingMessage.TaobaoFenxiaoFxOrderPaid) => void): TaoMessageConsumer;
+  taobao_fenxiao_FxOrderPaid(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFenxiaoFxOrderPaid) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFenxiaoFxOrderShipped 淘宝分销 > 采购单发货消息} */
-  taobao_fenxiao_FxOrderShipped(fn: (message: IncomingMessage.TaobaoFenxiaoFxOrderShipped) => void): TaoMessageConsumer;
+  taobao_fenxiao_FxOrderShipped(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFenxiaoFxOrderShipped) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFenxiaoFxOrderSuccess 淘宝分销 > 采购单确认收货消息} */
-  taobao_fenxiao_FxOrderSuccess(fn: (message: IncomingMessage.TaobaoFenxiaoFxOrderSuccess) => void): TaoMessageConsumer;
+  taobao_fenxiao_FxOrderSuccess(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFenxiaoFxOrderSuccess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFenxiaoFxRefundAgree 淘宝分销 > 供应商同意退款消息} */
-  taobao_fenxiao_FxRefundAgree(fn: (message: IncomingMessage.TaobaoFenxiaoFxRefundAgree) => void): TaoMessageConsumer;
+  taobao_fenxiao_FxRefundAgree(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFenxiaoFxRefundAgree) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFenxiaoFxRefundClose 淘宝分销 > 关闭采购单退款消息} */
-  taobao_fenxiao_FxRefundClose(fn: (message: IncomingMessage.TaobaoFenxiaoFxRefundClose) => void): TaoMessageConsumer;
+  taobao_fenxiao_FxRefundClose(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFenxiaoFxRefundClose) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFenxiaoFxRefundCreate 淘宝分销 > 创建采购单退款消息} */
-  taobao_fenxiao_FxRefundCreate(fn: (message: IncomingMessage.TaobaoFenxiaoFxRefundCreate) => void): TaoMessageConsumer;
+  taobao_fenxiao_FxRefundCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFenxiaoFxRefundCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFenxiaoFxRefundRefuseGoods 淘宝分销 > 供应商拒绝确认收货消息} */
-  taobao_fenxiao_FxRefundRefuseGoods(fn: (message: IncomingMessage.TaobaoFenxiaoFxRefundRefuseGoods) => void): TaoMessageConsumer;
+  taobao_fenxiao_FxRefundRefuseGoods(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFenxiaoFxRefundRefuseGoods) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFenxiaoFxRefundSuccess 淘宝分销 > 采购单退款成功消息} */
-  taobao_fenxiao_FxRefundSuccess(fn: (message: IncomingMessage.TaobaoFenxiaoFxRefundSuccess) => void): TaoMessageConsumer;
+  taobao_fenxiao_FxRefundSuccess(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFenxiaoFxRefundSuccess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFenxiaoFxTradeRefundCreate 淘宝分销 > 下游订单创建退款消息} */
-  taobao_fenxiao_FxTradeRefundCreate(fn: (message: IncomingMessage.TaobaoFenxiaoFxTradeRefundCreate) => void): TaoMessageConsumer;
+  taobao_fenxiao_FxTradeRefundCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFenxiaoFxTradeRefundCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFenxiaoFxTradeRefundSuccess 淘宝分销 > 下游订单退款完成消息} */
-  taobao_fenxiao_FxTradeRefundSuccess(fn: (message: IncomingMessage.TaobaoFenxiaoFxTradeRefundSuccess) => void): TaoMessageConsumer;
+  taobao_fenxiao_FxTradeRefundSuccess(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFenxiaoFxTradeRefundSuccess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFliggyCommonContractSign 酒店标准库基础信息变更消息 > 飞猪通用合同签约消息} */
-  taobao_fliggy_CommonContractSign(fn: (message: IncomingMessage.TaobaoFliggyCommonContractSign) => void): TaoMessageConsumer;
+  taobao_fliggy_CommonContractSign(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFliggyCommonContractSign) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFliggyHspHicItemChange 酒店标准库基础信息变更消息 > Hsp转发卖家库聚合shid维度库价变更消息} */
-  taobao_fliggy_HspHicItemChange(fn: (message: IncomingMessage.TaobaoFliggyHspHicItemChange) => void): TaoMessageConsumer;
+  taobao_fliggy_HspHicItemChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFliggyHspHicItemChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFliggySignStatus 酒店标准库基础信息变更消息 > 飞猪签约状态消息} */
-  taobao_fliggy_SignStatus(fn: (message: IncomingMessage.TaobaoFliggySignStatus) => void): TaoMessageConsumer;
+  taobao_fliggy_SignStatus(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFliggySignStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFliggyStdHotelModify 酒店标准库基础信息变更消息 > 标准酒店实体变更消息} */
-  taobao_fliggy_StdHotelModify(fn: (message: IncomingMessage.TaobaoFliggyStdHotelModify) => void): TaoMessageConsumer;
+  taobao_fliggy_StdHotelModify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFliggyStdHotelModify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFliggyStdRoomTypeModify 酒店标准库基础信息变更消息 > 标准房型领域模型实体变更消息} */
-  taobao_fliggy_StdRoomTypeModify(fn: (message: IncomingMessage.TaobaoFliggyStdRoomTypeModify) => void): TaoMessageConsumer;
+  taobao_fliggy_StdRoomTypeModify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFliggyStdRoomTypeModify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFuwuOrderClosed 服务市场 > 订单关闭消息} */
-  taobao_fuwu_OrderClosed(fn: (message: IncomingMessage.TaobaoFuwuOrderClosed) => void): TaoMessageConsumer;
+  taobao_fuwu_OrderClosed(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFuwuOrderClosed) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFuwuOrderCreated 服务市场 > 订单创建消息} */
-  taobao_fuwu_OrderCreated(fn: (message: IncomingMessage.TaobaoFuwuOrderCreated) => void): TaoMessageConsumer;
+  taobao_fuwu_OrderCreated(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFuwuOrderCreated) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFuwuOrderPaid 服务市场 > 订单支付消息} */
-  taobao_fuwu_OrderPaid(fn: (message: IncomingMessage.TaobaoFuwuOrderPaid) => void): TaoMessageConsumer;
+  taobao_fuwu_OrderPaid(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFuwuOrderPaid) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFuwuServiceOpen 服务市场 > 服务开通消息} */
-  taobao_fuwu_ServiceOpen(fn: (message: IncomingMessage.TaobaoFuwuServiceOpen) => void): TaoMessageConsumer;
+  taobao_fuwu_ServiceOpen(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFuwuServiceOpen) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFuwuWitkeySyncModeling 服务市场 > 威客同步建模数据} */
-  taobao_fuwu_WitkeySyncModeling(fn: (message: IncomingMessage.TaobaoFuwuWitkeySyncModeling) => void): TaoMessageConsumer;
+  taobao_fuwu_WitkeySyncModeling(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFuwuWitkeySyncModeling) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoGlobalbuysSeamailOrderNotify 全球购跨境物流 > 跨境服务平台推送物流订单消息} */
-  taobao_globalbuys_SeamailOrderNotify(fn: (message: IncomingMessage.TaobaoGlobalbuysSeamailOrderNotify) => void): TaoMessageConsumer;
+  taobao_globalbuys_SeamailOrderNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoGlobalbuysSeamailOrderNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoHomeaiCaseSyncResult HOMEAI消息对接 > 方案消息同步callback} */
-  taobao_homeai_CaseSyncResult(fn: (message: IncomingMessage.TaobaoHomeaiCaseSyncResult) => void): TaoMessageConsumer;
+  taobao_homeai_CaseSyncResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoHomeaiCaseSyncResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoHomeaiLayoutTransferResult HOMEAI消息对接 > 居然之家接受迁移结果} */
-  taobao_homeai_LayoutTransferResult(fn: (message: IncomingMessage.TaobaoHomeaiLayoutTransferResult) => void): TaoMessageConsumer;
+  taobao_homeai_LayoutTransferResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoHomeaiLayoutTransferResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoHomeaiRenderRequest HOMEAI消息对接 > HS渲染消息} */
-  taobao_homeai_RenderRequest(fn: (message: IncomingMessage.TaobaoHomeaiRenderRequest) => void): TaoMessageConsumer;
+  taobao_homeai_RenderRequest(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoHomeaiRenderRequest) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoHotelCreditToPreHotelStatus 酒店签约中心消息 > 信用住转预付酒店签约状态消息} */
-  taobao_hotel_CreditToPreHotelStatus(fn: (message: IncomingMessage.TaobaoHotelCreditToPreHotelStatus) => void): TaoMessageConsumer;
+  taobao_hotel_CreditToPreHotelStatus(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoHotelCreditToPreHotelStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoHotelSearchMonitor 酒店签约中心消息 > 酒店搜索触发商品更新消息} */
-  taobao_hotel_SearchMonitor(fn: (message: IncomingMessage.TaobaoHotelSearchMonitor) => void): TaoMessageConsumer;
+  taobao_hotel_SearchMonitor(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoHotelSearchMonitor) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoHotelSearchTrigger 酒店签约中心消息 > 热搜酒店消息} */
-  taobao_hotel_SearchTrigger(fn: (message: IncomingMessage.TaobaoHotelSearchTrigger) => void): TaoMessageConsumer;
+  taobao_hotel_SearchTrigger(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoHotelSearchTrigger) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoIstoreGiftingMsg Gifting送礼 > istoreGifing消息} */
-  taobao_istore_GiftingMsg(fn: (message: IncomingMessage.TaobaoIstoreGiftingMsg) => void): TaoMessageConsumer;
+  taobao_istore_GiftingMsg(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoIstoreGiftingMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoItemItemAdd 淘宝商品 > 商品新增消息} */
-  taobao_item_ItemAdd(fn: (message: IncomingMessage.TaobaoItemItemAdd) => void): TaoMessageConsumer;
+  taobao_item_ItemAdd(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItemItemAdd) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoItemItemDelete 淘宝商品 > 商品删除消息} */
-  taobao_item_ItemDelete(fn: (message: IncomingMessage.TaobaoItemItemDelete) => void): TaoMessageConsumer;
+  taobao_item_ItemDelete(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItemItemDelete) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoItemItemDownshelf 淘宝商品 > 商品下架消息} */
-  taobao_item_ItemDownshelf(fn: (message: IncomingMessage.TaobaoItemItemDownshelf) => void): TaoMessageConsumer;
+  taobao_item_ItemDownshelf(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItemItemDownshelf) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoItemItemPunishCc 淘宝商品 > 小二CC商品消息} */
-  taobao_item_ItemPunishCc(fn: (message: IncomingMessage.TaobaoItemItemPunishCc) => void): TaoMessageConsumer;
+  taobao_item_ItemPunishCc(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItemItemPunishCc) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoItemItemPunishDelete 淘宝商品 > 小二删除商品消息} */
-  taobao_item_ItemPunishDelete(fn: (message: IncomingMessage.TaobaoItemItemPunishDelete) => void): TaoMessageConsumer;
+  taobao_item_ItemPunishDelete(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItemItemPunishDelete) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoItemItemPunishDownshelf 淘宝商品 > 小二下架商品消息} */
-  taobao_item_ItemPunishDownshelf(fn: (message: IncomingMessage.TaobaoItemItemPunishDownshelf) => void): TaoMessageConsumer;
+  taobao_item_ItemPunishDownshelf(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItemItemPunishDownshelf) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoItemItemRecommendAdd 淘宝商品 > 橱窗推荐商品消息} */
-  taobao_item_ItemRecommendAdd(fn: (message: IncomingMessage.TaobaoItemItemRecommendAdd) => void): TaoMessageConsumer;
+  taobao_item_ItemRecommendAdd(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItemItemRecommendAdd) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoItemItemRecommendDelete 淘宝商品 > 取消橱窗推荐商品消息} */
-  taobao_item_ItemRecommendDelete(fn: (message: IncomingMessage.TaobaoItemItemRecommendDelete) => void): TaoMessageConsumer;
+  taobao_item_ItemRecommendDelete(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItemItemRecommendDelete) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoItemItemSkuZeroStock 淘宝商品 > 商品SKU卖空消息} */
-  taobao_item_ItemSkuZeroStock(fn: (message: IncomingMessage.TaobaoItemItemSkuZeroStock) => void): TaoMessageConsumer;
+  taobao_item_ItemSkuZeroStock(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItemItemSkuZeroStock) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoItemItemStockChanged 淘宝商品 > 修改商品库存消息} */
-  taobao_item_ItemStockChanged(fn: (message: IncomingMessage.TaobaoItemItemStockChanged) => void): TaoMessageConsumer;
+  taobao_item_ItemStockChanged(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItemItemStockChanged) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoItemItemUpdate 淘宝商品 > 商品更新消息} */
-  taobao_item_ItemUpdate(fn: (message: IncomingMessage.TaobaoItemItemUpdate) => void): TaoMessageConsumer;
+  taobao_item_ItemUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItemItemUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoItemItemUpshelf 淘宝商品 > 商品上架消息} */
-  taobao_item_ItemUpshelf(fn: (message: IncomingMessage.TaobaoItemItemUpshelf) => void): TaoMessageConsumer;
+  taobao_item_ItemUpshelf(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItemItemUpshelf) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoItemItemZeroStock 淘宝商品 > 商品卖空消息} */
-  taobao_item_ItemZeroStock(fn: (message: IncomingMessage.TaobaoItemItemZeroStock) => void): TaoMessageConsumer;
+  taobao_item_ItemZeroStock(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItemItemZeroStock) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoJipiaoAncillaryOrderPaid 淘宝机票 > 飞猪辅营订单支付通知接口} */
-  taobao_jipiao_AncillaryOrderPaid(fn: (message: IncomingMessage.TaobaoJipiaoAncillaryOrderPaid) => void): TaoMessageConsumer;
+  taobao_jipiao_AncillaryOrderPaid(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJipiaoAncillaryOrderPaid) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoJipiaoJipiaoModifyOrderNotify 淘宝机票 > 【机票代理商】改签订单通知} */
-  taobao_jipiao_JipiaoModifyOrderNotify(fn: (message: IncomingMessage.TaobaoJipiaoJipiaoModifyOrderNotify) => void): TaoMessageConsumer;
+  taobao_jipiao_JipiaoModifyOrderNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJipiaoJipiaoModifyOrderNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoJipiaoJipiaoOrderStatusNotify 淘宝机票 > 机票订单状态推送} */
-  taobao_jipiao_JipiaoOrderStatusNotify(fn: (message: IncomingMessage.TaobaoJipiaoJipiaoOrderStatusNotify) => void): TaoMessageConsumer;
+  taobao_jipiao_JipiaoOrderStatusNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJipiaoJipiaoOrderStatusNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoJipiaoJipiaoRefundOrderNotify 淘宝机票 > 机票退票订单状态推送} */
-  taobao_jipiao_JipiaoRefundOrderNotify(fn: (message: IncomingMessage.TaobaoJipiaoJipiaoRefundOrderNotify) => void): TaoMessageConsumer;
+  taobao_jipiao_JipiaoRefundOrderNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJipiaoJipiaoRefundOrderNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoJipiaoSellerOrderNotify 淘宝机票 > 【机票代理商】订单通知} */
-  taobao_jipiao_SellerOrderNotify(fn: (message: IncomingMessage.TaobaoJipiaoSellerOrderNotify) => void): TaoMessageConsumer;
+  taobao_jipiao_SellerOrderNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJipiaoSellerOrderNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoJipiaoSellerRefundOrderNotify 淘宝机票 > 【机票代理商】退票订单通知} */
-  taobao_jipiao_SellerRefundOrderNotify(fn: (message: IncomingMessage.TaobaoJipiaoSellerRefundOrderNotify) => void): TaoMessageConsumer;
+  taobao_jipiao_SellerRefundOrderNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJipiaoSellerRefundOrderNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLogisticsLogsticDetailTrace 淘宝物流 > 物流详情跟踪消息} */
-  taobao_logistics_LogsticDetailTrace(fn: (message: IncomingMessage.TaobaoLogisticsLogsticDetailTrace) => void): TaoMessageConsumer;
+  taobao_logistics_LogsticDetailTrace(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLogisticsLogsticDetailTrace) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoModifyaddressResultNotify 聚石塔 > 自助改地址结果消息通知} */
-  taobao_modifyaddress_ResultNotify(fn: (message: IncomingMessage.TaobaoModifyaddressResultNotify) => void): TaoMessageConsumer;
+  taobao_modifyaddress_ResultNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoModifyaddressResultNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoModifyorderConsistencyResult 聚石塔 > 订单一致性校验消息} */
-  taobao_modifyorder_ConsistencyResult(fn: (message: IncomingMessage.TaobaoModifyorderConsistencyResult) => void): TaoMessageConsumer;
+  taobao_modifyorder_ConsistencyResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoModifyorderConsistencyResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoModifyskuResultNotify 聚石塔 > 修改商品信息结果消息} */
-  taobao_modifysku_ResultNotify(fn: (message: IncomingMessage.TaobaoModifyskuResultNotify) => void): TaoMessageConsumer;
+  taobao_modifysku_ResultNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoModifyskuResultNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOcTradeTagChanged 交易全链路 > oc订单标签变更} */
-  taobao_oc_TradeTagChanged(fn: (message: IncomingMessage.TaobaoOcTradeTagChanged) => void): TaoMessageConsumer;
+  taobao_oc_TradeTagChanged(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOcTradeTagChanged) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpenaccountDataSync 导购平台 > openaccount数据同步} */
-  taobao_openaccount_DataSync(fn: (message: IncomingMessage.TaobaoOpenaccountDataSync) => void): TaoMessageConsumer;
+  taobao_openaccount_DataSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpenaccountDataSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmAuthTouchMessage 客户运营平台API > 营销短信授权消息} */
-  taobao_opencrm_AuthTouchMessage(fn: (message: IncomingMessage.TaobaoOpencrmAuthTouchMessage) => void): TaoMessageConsumer;
+  taobao_opencrm_AuthTouchMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmAuthTouchMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmCardEstTask 客户运营平台API > 卡片短信发送预估消息} */
-  taobao_opencrm_CardEstTask(fn: (message: IncomingMessage.TaobaoOpencrmCardEstTask) => void): TaoMessageConsumer;
+  taobao_opencrm_CardEstTask(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmCardEstTask) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmCardTplExamine 客户运营平台API > 卡片短信模板审核消息} */
-  taobao_opencrm_CardTplExamine(fn: (message: IncomingMessage.TaobaoOpencrmCardTplExamine) => void): TaoMessageConsumer;
+  taobao_opencrm_CardTplExamine(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmCardTplExamine) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmCrowdInstResult 客户运营平台API > 人群快照生成结果} */
-  taobao_opencrm_CrowdInstResult(fn: (message: IncomingMessage.TaobaoOpencrmCrowdInstResult) => void): TaoMessageConsumer;
+  taobao_opencrm_CrowdInstResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmCrowdInstResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmCrowdInstSaveResult 客户运营平台API > 人群快照另存为人群结果} */
-  taobao_opencrm_CrowdInstSaveResult(fn: (message: IncomingMessage.TaobaoOpencrmCrowdInstSaveResult) => void): TaoMessageConsumer;
+  taobao_opencrm_CrowdInstSaveResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmCrowdInstSaveResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmFeedback 客户运营平台API > 反馈tmc} */
-  taobao_opencrm_Feedback(fn: (message: IncomingMessage.TaobaoOpencrmFeedback) => void): TaoMessageConsumer;
+  taobao_opencrm_Feedback(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmFeedback) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmMemberGradeChange 客户运营平台API > 会员等级变更} */
-  taobao_opencrm_MemberGradeChange(fn: (message: IncomingMessage.TaobaoOpencrmMemberGradeChange) => void): TaoMessageConsumer;
+  taobao_opencrm_MemberGradeChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmMemberGradeChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmNodeExecuteFinished 客户运营平台API > 节点执行完成消息} */
-  taobao_opencrm_NodeExecuteFinished(fn: (message: IncomingMessage.TaobaoOpencrmNodeExecuteFinished) => void): TaoMessageConsumer;
+  taobao_opencrm_NodeExecuteFinished(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmNodeExecuteFinished) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmOpenStrategyEvent 客户运营平台API > 开放策略事件类单发短信TMC消息} */
-  taobao_opencrm_OpenStrategyEvent(fn: (message: IncomingMessage.TaobaoOpencrmOpenStrategyEvent) => void): TaoMessageConsumer;
+  taobao_opencrm_OpenStrategyEvent(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmOpenStrategyEvent) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmSellerDimensionCharge 客户运营平台API > CRM商业化计费商家维度账单} */
-  taobao_opencrm_SellerDimensionCharge(fn: (message: IncomingMessage.TaobaoOpencrmSellerDimensionCharge) => void): TaoMessageConsumer;
+  taobao_opencrm_SellerDimensionCharge(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmSellerDimensionCharge) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmShortMessageBill 客户运营平台API > 短信账单} */
-  taobao_opencrm_ShortMessageBill(fn: (message: IncomingMessage.TaobaoOpencrmShortMessageBill) => void): TaoMessageConsumer;
+  taobao_opencrm_ShortMessageBill(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmShortMessageBill) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmUtouch 客户运营平台API > 智能外呼回执} */
-  taobao_opencrm_Utouch(fn: (message: IncomingMessage.TaobaoOpencrmUtouch) => void): TaoMessageConsumer;
+  taobao_opencrm_Utouch(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmUtouch) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpenimOffMsgPush OpenIM消息 > openim 离线消息推送} */
-  taobao_openim_OffMsgPush(fn: (message: IncomingMessage.TaobaoOpenimOffMsgPush) => void): TaoMessageConsumer;
+  taobao_openim_OffMsgPush(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpenimOffMsgPush) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpenmallAlarmMsg OpenMall-API > Openmall告警消息通知} */
-  taobao_openmall_AlarmMsg(fn: (message: IncomingMessage.TaobaoOpenmallAlarmMsg) => void): TaoMessageConsumer;
+  taobao_openmall_AlarmMsg(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpenmallAlarmMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpenmallItemChanged OpenMall-API > Openmall商品变更消息} */
-  taobao_openmall_ItemChanged(fn: (message: IncomingMessage.TaobaoOpenmallItemChanged) => void): TaoMessageConsumer;
+  taobao_openmall_ItemChanged(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpenmallItemChanged) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpenmallItemStockChanged OpenMall-API > openmall商品库存变更消息通知} */
-  taobao_openmall_ItemStockChanged(fn: (message: IncomingMessage.TaobaoOpenmallItemStockChanged) => void): TaoMessageConsumer;
+  taobao_openmall_ItemStockChanged(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpenmallItemStockChanged) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpenmallRefundChanged OpenMall-API > OpenMall退款单变更} */
-  taobao_openmall_RefundChanged(fn: (message: IncomingMessage.TaobaoOpenmallRefundChanged) => void): TaoMessageConsumer;
+  taobao_openmall_RefundChanged(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpenmallRefundChanged) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpenmallTradeChanged OpenMall-API > 订单消息通知} */
-  taobao_openmall_TradeChanged(fn: (message: IncomingMessage.TaobaoOpenmallTradeChanged) => void): TaoMessageConsumer;
+  taobao_openmall_TradeChanged(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpenmallTradeChanged) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRdcaligeniusOrderMsgSend 淘宝交易 > 订单消息} */
-  taobao_rdcaligenius_OrderMsgSend(fn: (message: IncomingMessage.TaobaoRdcaligeniusOrderMsgSend) => void): TaoMessageConsumer;
+  taobao_rdcaligenius_OrderMsgSend(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRdcaligeniusOrderMsgSend) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRecycleOfnPreRedPacketSync 淘宝交易 > 同步前置补贴红包的最新数据} */
-  taobao_recycle_OfnPreRedPacketSync(fn: (message: IncomingMessage.TaobaoRecycleOfnPreRedPacketSync) => void): TaoMessageConsumer;
+  taobao_recycle_OfnPreRedPacketSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRecycleOfnPreRedPacketSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRefundRefundBlockMessage 淘宝退款 > 屏蔽退款留言消息-无此消息} */
-  taobao_refund_RefundBlockMessage(fn: (message: IncomingMessage.TaobaoRefundRefundBlockMessage) => void): TaoMessageConsumer;
+  taobao_refund_RefundBlockMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRefundRefundBlockMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRefundRefundBuyerModifyAgreement 淘宝退款 > 买家修改退款协议消息} */
-  taobao_refund_RefundBuyerModifyAgreement(fn: (message: IncomingMessage.TaobaoRefundRefundBuyerModifyAgreement) => void): TaoMessageConsumer;
+  taobao_refund_RefundBuyerModifyAgreement(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRefundRefundBuyerModifyAgreement) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRefundRefundBuyerReturnGoods 淘宝退款 > 买家退货给卖家消息} */
-  taobao_refund_RefundBuyerReturnGoods(fn: (message: IncomingMessage.TaobaoRefundRefundBuyerReturnGoods) => void): TaoMessageConsumer;
+  taobao_refund_RefundBuyerReturnGoods(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRefundRefundBuyerReturnGoods) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRefundRefundClosed 淘宝退款 > 退款关闭消息} */
-  taobao_refund_RefundClosed(fn: (message: IncomingMessage.TaobaoRefundRefundClosed) => void): TaoMessageConsumer;
+  taobao_refund_RefundClosed(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRefundRefundClosed) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRefundRefundCreateMessage 淘宝退款 > 发表退款留言消息} */
-  taobao_refund_RefundCreateMessage(fn: (message: IncomingMessage.TaobaoRefundRefundCreateMessage) => void): TaoMessageConsumer;
+  taobao_refund_RefundCreateMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRefundRefundCreateMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRefundRefundCreated 淘宝退款 > 退款创建消息} */
-  taobao_refund_RefundCreated(fn: (message: IncomingMessage.TaobaoRefundRefundCreated) => void): TaoMessageConsumer;
+  taobao_refund_RefundCreated(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRefundRefundCreated) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRefundRefundSellerAgreeAgreement 淘宝退款 > 卖家同意退款协议消息} */
-  taobao_refund_RefundSellerAgreeAgreement(fn: (message: IncomingMessage.TaobaoRefundRefundSellerAgreeAgreement) => void): TaoMessageConsumer;
+  taobao_refund_RefundSellerAgreeAgreement(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRefundRefundSellerAgreeAgreement) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRefundRefundSellerRefuseAgreement 淘宝退款 > 卖家拒绝退款协议消息} */
-  taobao_refund_RefundSellerRefuseAgreement(fn: (message: IncomingMessage.TaobaoRefundRefundSellerRefuseAgreement) => void): TaoMessageConsumer;
+  taobao_refund_RefundSellerRefuseAgreement(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRefundRefundSellerRefuseAgreement) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRefundRefundSuccess 淘宝退款 > 退款成功消息} */
-  taobao_refund_RefundSuccess(fn: (message: IncomingMessage.TaobaoRefundRefundSuccess) => void): TaoMessageConsumer;
+  taobao_refund_RefundSuccess(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRefundRefundSuccess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRefundRefundableCanceled 淘宝退款 > 退款标记取消消息} */
-  taobao_refund_RefundableCanceled(fn: (message: IncomingMessage.TaobaoRefundRefundableCanceled) => void): TaoMessageConsumer;
+  taobao_refund_RefundableCanceled(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRefundRefundableCanceled) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRefundRefundableMarked 淘宝退款 > 退款标记创建消息} */
-  taobao_refund_RefundableMarked(fn: (message: IncomingMessage.TaobaoRefundRefundableMarked) => void): TaoMessageConsumer;
+  taobao_refund_RefundableMarked(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRefundRefundableMarked) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRefundTaobaoInterApplied 淘宝退款 > 申请淘宝介入消息} */
-  taobao_refund_TaobaoInterApplied(fn: (message: IncomingMessage.TaobaoRefundTaobaoInterApplied) => void): TaoMessageConsumer;
+  taobao_refund_TaobaoInterApplied(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRefundTaobaoInterApplied) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRefundTaobaoIntervened 淘宝退款 > 淘宝介入退款消息} */
-  taobao_refund_TaobaoIntervened(fn: (message: IncomingMessage.TaobaoRefundTaobaoIntervened) => void): TaoMessageConsumer;
+  taobao_refund_TaobaoIntervened(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRefundTaobaoIntervened) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRhinoDeviceStatus 智能制造API > 智能制造-设备状态变更} */
-  taobao_rhino_DeviceStatus(fn: (message: IncomingMessage.TaobaoRhinoDeviceStatus) => void): TaoMessageConsumer;
+  taobao_rhino_DeviceStatus(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRhinoDeviceStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTaeBaichuanAuctionChange 导购平台 > 商品信息变更} */
-  taobao_tae_BaichuanAuctionChange(fn: (message: IncomingMessage.TaobaoTaeBaichuanAuctionChange) => void): TaoMessageConsumer;
+  taobao_tae_BaichuanAuctionChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTaeBaichuanAuctionChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTaeBaichuanTradeClosed 导购平台 > 交易关闭} */
-  taobao_tae_BaichuanTradeClosed(fn: (message: IncomingMessage.TaobaoTaeBaichuanTradeClosed) => void): TaoMessageConsumer;
+  taobao_tae_BaichuanTradeClosed(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTaeBaichuanTradeClosed) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTaeBaichuanTradeCreated 导购平台 > 创建订单} */
-  taobao_tae_BaichuanTradeCreated(fn: (message: IncomingMessage.TaobaoTaeBaichuanTradeCreated) => void): TaoMessageConsumer;
+  taobao_tae_BaichuanTradeCreated(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTaeBaichuanTradeCreated) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTaeBaichuanTradePaidDone 导购平台 > 付款成功} */
-  taobao_tae_BaichuanTradePaidDone(fn: (message: IncomingMessage.TaobaoTaeBaichuanTradePaidDone) => void): TaoMessageConsumer;
+  taobao_tae_BaichuanTradePaidDone(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTaeBaichuanTradePaidDone) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTaeBaichuanTradeRefundCreated 导购平台 > 创建退款消息} */
-  taobao_tae_BaichuanTradeRefundCreated(fn: (message: IncomingMessage.TaobaoTaeBaichuanTradeRefundCreated) => void): TaoMessageConsumer;
+  taobao_tae_BaichuanTradeRefundCreated(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTaeBaichuanTradeRefundCreated) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTaeBaichuanTradeRefundSuccess 导购平台 > 退款成功} */
-  taobao_tae_BaichuanTradeRefundSuccess(fn: (message: IncomingMessage.TaobaoTaeBaichuanTradeRefundSuccess) => void): TaoMessageConsumer;
+  taobao_tae_BaichuanTradeRefundSuccess(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTaeBaichuanTradeRefundSuccess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTaeBaichuanTradeSuccess 导购平台 > 交易成功} */
-  taobao_tae_BaichuanTradeSuccess(fn: (message: IncomingMessage.TaobaoTaeBaichuanTradeSuccess) => void): TaoMessageConsumer;
+  taobao_tae_BaichuanTradeSuccess(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTaeBaichuanTradeSuccess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTaeItemDownShelf 导购平台 > 商品下架} */
-  taobao_tae_ItemDownShelf(fn: (message: IncomingMessage.TaobaoTaeItemDownShelf) => void): TaoMessageConsumer;
+  taobao_tae_ItemDownShelf(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTaeItemDownShelf) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTaeItemImageChange 导购平台 > 商品主图变更} */
-  taobao_tae_ItemImageChange(fn: (message: IncomingMessage.TaobaoTaeItemImageChange) => void): TaoMessageConsumer;
+  taobao_tae_ItemImageChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTaeItemImageChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTaeItemPriceChange 导购平台 > 订阅的商品变更消息} */
-  taobao_tae_ItemPriceChange(fn: (message: IncomingMessage.TaobaoTaeItemPriceChange) => void): TaoMessageConsumer;
+  taobao_tae_ItemPriceChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTaeItemPriceChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTaeItemSkuDelete 导购平台 > sku删除} */
-  taobao_tae_ItemSkuDelete(fn: (message: IncomingMessage.TaobaoTaeItemSkuDelete) => void): TaoMessageConsumer;
+  taobao_tae_ItemSkuDelete(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTaeItemSkuDelete) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTaeItemSkuPublish 导购平台 > sku发布} */
-  taobao_tae_ItemSkuPublish(fn: (message: IncomingMessage.TaobaoTaeItemSkuPublish) => void): TaoMessageConsumer;
+  taobao_tae_ItemSkuPublish(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTaeItemSkuPublish) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTaeItemSkuSoldOut 导购平台 > 商品sku售空} */
-  taobao_tae_ItemSkuSoldOut(fn: (message: IncomingMessage.TaobaoTaeItemSkuSoldOut) => void): TaoMessageConsumer;
+  taobao_tae_ItemSkuSoldOut(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTaeItemSkuSoldOut) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTaeItemSoldOut 导购平台 > 商品售空} */
-  taobao_tae_ItemSoldOut(fn: (message: IncomingMessage.TaobaoTaeItemSoldOut) => void): TaoMessageConsumer;
+  taobao_tae_ItemSoldOut(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTaeItemSoldOut) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTaeItemSubscribe 导购平台 > 商品订阅成功} */
-  taobao_tae_ItemSubscribe(fn: (message: IncomingMessage.TaobaoTaeItemSubscribe) => void): TaoMessageConsumer;
+  taobao_tae_ItemSubscribe(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTaeItemSubscribe) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTaeItemTitleChange 导购平台 > 商品标题变更} */
-  taobao_tae_ItemTitleChange(fn: (message: IncomingMessage.TaobaoTaeItemTitleChange) => void): TaoMessageConsumer;
+  taobao_tae_ItemTitleChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTaeItemTitleChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTaeItemUnSubscribe 导购平台 > 取消商品订阅} */
-  taobao_tae_ItemUnSubscribe(fn: (message: IncomingMessage.TaobaoTaeItemUnSubscribe) => void): TaoMessageConsumer;
+  taobao_tae_ItemUnSubscribe(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTaeItemUnSubscribe) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTaeItemUpShelf 导购平台 > 商品上架} */
-  taobao_tae_ItemUpShelf(fn: (message: IncomingMessage.TaobaoTaeItemUpShelf) => void): TaoMessageConsumer;
+  taobao_tae_ItemUpShelf(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTaeItemUpShelf) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTopAuthCancel 平台消息 > 取消授权消息通知} */
-  taobao_top_AuthCancel(fn: (message: IncomingMessage.TaobaoTopAuthCancel) => void): TaoMessageConsumer;
+  taobao_top_AuthCancel(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTopAuthCancel) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTopatsTaskComplete 平台消息 > 异步任务执行完成} */
-  taobao_topats_TaskComplete(fn: (message: IncomingMessage.TaobaoTopatsTaskComplete) => void): TaoMessageConsumer;
+  taobao_topats_TaskComplete(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTopatsTaskComplete) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTradeTradeAlipayCreate 淘宝交易 > 创建支付宝订单消息} */
-  taobao_trade_TradeAlipayCreate(fn: (message: IncomingMessage.TaobaoTradeTradeAlipayCreate) => void): TaoMessageConsumer;
+  taobao_trade_TradeAlipayCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTradeTradeAlipayCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTradeTradeBuyerPay 淘宝交易 > 买家付完款，或万人团买家付完尾款} */
-  taobao_trade_TradeBuyerPay(fn: (message: IncomingMessage.TaobaoTradeTradeBuyerPay) => void): TaoMessageConsumer;
+  taobao_trade_TradeBuyerPay(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTradeTradeBuyerPay) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTradeTradeBuyerStepPay 淘宝交易 > 分阶段订单付定金} */
-  taobao_trade_TradeBuyerStepPay(fn: (message: IncomingMessage.TaobaoTradeTradeBuyerStepPay) => void): TaoMessageConsumer;
+  taobao_trade_TradeBuyerStepPay(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTradeTradeBuyerStepPay) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTradeTradeChanged 淘宝交易 > 订单信息变更消息} */
-  taobao_trade_TradeChanged(fn: (message: IncomingMessage.TaobaoTradeTradeChanged) => void): TaoMessageConsumer;
+  taobao_trade_TradeChanged(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTradeTradeChanged) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTradeTradeClose 淘宝交易 > 关闭交易消息} */
-  taobao_trade_TradeClose(fn: (message: IncomingMessage.TaobaoTradeTradeClose) => void): TaoMessageConsumer;
+  taobao_trade_TradeClose(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTradeTradeClose) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTradeTradeCloseAndModifyDetailOrder 淘宝交易 > 关闭或修改子订单消息} */
-  taobao_trade_TradeCloseAndModifyDetailOrder(fn: (message: IncomingMessage.TaobaoTradeTradeCloseAndModifyDetailOrder) => void): TaoMessageConsumer;
+  taobao_trade_TradeCloseAndModifyDetailOrder(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTradeTradeCloseAndModifyDetailOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTradeTradeCreate 淘宝交易 > 创建淘宝交易消息} */
-  taobao_trade_TradeCreate(fn: (message: IncomingMessage.TaobaoTradeTradeCreate) => void): TaoMessageConsumer;
+  taobao_trade_TradeCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTradeTradeCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTradeTradeDelayConfirmPay 淘宝交易 > 延长收货时间消息} */
-  taobao_trade_TradeDelayConfirmPay(fn: (message: IncomingMessage.TaobaoTradeTradeDelayConfirmPay) => void): TaoMessageConsumer;
+  taobao_trade_TradeDelayConfirmPay(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTradeTradeDelayConfirmPay) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTradeTradeLogisticsAddressChanged 淘宝交易 > 修改交易收货地址消息} */
-  taobao_trade_TradeLogisticsAddressChanged(fn: (message: IncomingMessage.TaobaoTradeTradeLogisticsAddressChanged) => void): TaoMessageConsumer;
+  taobao_trade_TradeLogisticsAddressChanged(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTradeTradeLogisticsAddressChanged) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTradeTradeMemoModified 淘宝交易 > 交易备注修改消息} */
-  taobao_trade_TradeMemoModified(fn: (message: IncomingMessage.TaobaoTradeTradeMemoModified) => void): TaoMessageConsumer;
+  taobao_trade_TradeMemoModified(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTradeTradeMemoModified) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTradeTradeModifyFee 淘宝交易 > 修改交易费用消息} */
-  taobao_trade_TradeModifyFee(fn: (message: IncomingMessage.TaobaoTradeTradeModifyFee) => void): TaoMessageConsumer;
+  taobao_trade_TradeModifyFee(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTradeTradeModifyFee) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTradeTradePartlyConfirmPay 淘宝交易 > 子订单打款成功消息} */
-  taobao_trade_TradePartlyConfirmPay(fn: (message: IncomingMessage.TaobaoTradeTradePartlyConfirmPay) => void): TaoMessageConsumer;
+  taobao_trade_TradePartlyConfirmPay(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTradeTradePartlyConfirmPay) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTradeTradePartlyRefund 淘宝交易 > 子订单退款成功消息} */
-  taobao_trade_TradePartlyRefund(fn: (message: IncomingMessage.TaobaoTradeTradePartlyRefund) => void): TaoMessageConsumer;
+  taobao_trade_TradePartlyRefund(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTradeTradePartlyRefund) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTradeTradePartlySellerShip 淘宝交易 > 交易的部分子订单发货消息} */
-  taobao_trade_TradePartlySellerShip(fn: (message: IncomingMessage.TaobaoTradeTradePartlySellerShip) => void): TaoMessageConsumer;
+  taobao_trade_TradePartlySellerShip(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTradeTradePartlySellerShip) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTradeTradeRated 淘宝交易 > 交易评价变更消息} */
-  taobao_trade_TradeRated(fn: (message: IncomingMessage.TaobaoTradeTradeRated) => void): TaoMessageConsumer;
+  taobao_trade_TradeRated(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTradeTradeRated) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTradeTradeSellerShip 淘宝交易 > 卖家发货消息} */
-  taobao_trade_TradeSellerShip(fn: (message: IncomingMessage.TaobaoTradeTradeSellerShip) => void): TaoMessageConsumer;
+  taobao_trade_TradeSellerShip(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTradeTradeSellerShip) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTradeTradeSuccess 淘宝交易 > 交易成功消息} */
-  taobao_trade_TradeSuccess(fn: (message: IncomingMessage.TaobaoTradeTradeSuccess) => void): TaoMessageConsumer;
+  taobao_trade_TradeSuccess(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTradeTradeSuccess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTradeTradeTimeoutRemind 淘宝交易 > 交易超时提醒消息} */
-  taobao_trade_TradeTimeoutRemind(fn: (message: IncomingMessage.TaobaoTradeTradeTimeoutRemind) => void): TaoMessageConsumer;
+  taobao_trade_TradeTimeoutRemind(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTradeTradeTimeoutRemind) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTrainAgentQueryInfoNotify 淘宝火车票 > 代理商查询信息消息} */
-  taobao_train_AgentQueryInfoNotify(fn: (message: IncomingMessage.TaobaoTrainAgentQueryInfoNotify) => void): TaoMessageConsumer;
+  taobao_train_AgentQueryInfoNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTrainAgentQueryInfoNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTrainOrderNotify 淘宝火车票 > 火车线下票代理商通知} */
-  taobao_train_OrderNotify(fn: (message: IncomingMessage.TaobaoTrainOrderNotify) => void): TaoMessageConsumer;
+  taobao_train_OrderNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTrainOrderNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTrainThirdPartyTradeNotify 淘宝火车票 > 火车票订单发给带三方接入消息} */
-  taobao_train_ThirdPartyTradeNotify(fn: (message: IncomingMessage.TaobaoTrainThirdPartyTradeNotify) => void): TaoMessageConsumer;
+  taobao_train_ThirdPartyTradeNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTrainThirdPartyTradeNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTrainTradeNotify 淘宝火车票 > 火车票订单消息} */
-  taobao_train_TradeNotify(fn: (message: IncomingMessage.TaobaoTrainTradeNotify) => void): TaoMessageConsumer;
+  taobao_train_TradeNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTrainTradeNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoUsceslAlarmCreate 业务平台新零售-消息上行 > 设备报警消息接口} */
-  taobao_uscesl_AlarmCreate(fn: (message: IncomingMessage.TaobaoUsceslAlarmCreate) => void): TaoMessageConsumer;
+  taobao_uscesl_AlarmCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoUsceslAlarmCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoUsceslBindResult 业务平台新零售-消息上行 > 电子价签绑定执行结果消息} */
-  taobao_uscesl_BindResult(fn: (message: IncomingMessage.TaobaoUsceslBindResult) => void): TaoMessageConsumer;
+  taobao_uscesl_BindResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoUsceslBindResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoWaimaiGrabOrderResult 淘宝点点 > 点点送抢单结果通知消息} */
-  taobao_waimai_GrabOrderResult(fn: (message: IncomingMessage.TaobaoWaimaiGrabOrderResult) => void): TaoMessageConsumer;
+  taobao_waimai_GrabOrderResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWaimaiGrabOrderResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoWaimaiOrderClose 淘宝点点 > 淘点点外卖订单关闭消息通知} */
-  taobao_waimai_OrderClose(fn: (message: IncomingMessage.TaobaoWaimaiOrderClose) => void): TaoMessageConsumer;
+  taobao_waimai_OrderClose(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWaimaiOrderClose) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoWaimaiOrderComplain 淘宝点点 > 点点送订单投诉} */
-  taobao_waimai_OrderComplain(fn: (message: IncomingMessage.TaobaoWaimaiOrderComplain) => void): TaoMessageConsumer;
+  taobao_waimai_OrderComplain(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWaimaiOrderComplain) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoWaimaiOrderComplainCancel 淘宝点点 > 点点送订单撤诉} */
-  taobao_waimai_OrderComplainCancel(fn: (message: IncomingMessage.TaobaoWaimaiOrderComplainCancel) => void): TaoMessageConsumer;
+  taobao_waimai_OrderComplainCancel(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWaimaiOrderComplainCancel) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoWaimaiOrderComplainResult 淘宝点点 > 点点送订单投诉结果} */
-  taobao_waimai_OrderComplainResult(fn: (message: IncomingMessage.TaobaoWaimaiOrderComplainResult) => void): TaoMessageConsumer;
+  taobao_waimai_OrderComplainResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWaimaiOrderComplainResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoWaimaiOrderDispatch 淘宝点点 > 点点送订单通知消息} */
-  taobao_waimai_OrderDispatch(fn: (message: IncomingMessage.TaobaoWaimaiOrderDispatch) => void): TaoMessageConsumer;
+  taobao_waimai_OrderDispatch(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWaimaiOrderDispatch) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoWaimaiOrderDispatchSimple 淘宝点点 > 点点送派单通知} */
-  taobao_waimai_OrderDispatchSimple(fn: (message: IncomingMessage.TaobaoWaimaiOrderDispatchSimple) => void): TaoMessageConsumer;
+  taobao_waimai_OrderDispatchSimple(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWaimaiOrderDispatchSimple) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoWaimaiOrderPush 淘宝点点 > 点点送接单广播通知消息} */
-  taobao_waimai_OrderPush(fn: (message: IncomingMessage.TaobaoWaimaiOrderPush) => void): TaoMessageConsumer;
+  taobao_waimai_OrderPush(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWaimaiOrderPush) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoWaimaiOrderRemind 淘宝点点 > 点点送催单消息通知} */
-  taobao_waimai_OrderRemind(fn: (message: IncomingMessage.TaobaoWaimaiOrderRemind) => void): TaoMessageConsumer;
+  taobao_waimai_OrderRemind(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWaimaiOrderRemind) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoWaimaiOuterOrderDispatch 淘宝点点 > 点点送外部订单通知消息} */
-  taobao_waimai_OuterOrderDispatch(fn: (message: IncomingMessage.TaobaoWaimaiOuterOrderDispatch) => void): TaoMessageConsumer;
+  taobao_waimai_OuterOrderDispatch(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWaimaiOuterOrderDispatch) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoWisdomstoreRecognitionNotice 智慧门店下行消息 > 人脸抓拍识别消息} */
-  taobao_wisdomstore_RecognitionNotice(fn: (message: IncomingMessage.TaobaoWisdomstoreRecognitionNotice) => void): TaoMessageConsumer;
+  taobao_wisdomstore_RecognitionNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWisdomstoreRecognitionNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoWisdomstoreRecognitionPush 智慧门店下行消息 > 人脸识别结果回传ISV} */
-  taobao_wisdomstore_RecognitionPush(fn: (message: IncomingMessage.TaobaoWisdomstoreRecognitionPush) => void): TaoMessageConsumer;
+  taobao_wisdomstore_RecognitionPush(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWisdomstoreRecognitionPush) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoXianyuRentalItemReturnCanceled 闲鱼 > 买家取消预约归还} */
-  taobao_xianyu_RentalItemReturnCanceled(fn: (message: IncomingMessage.TaobaoXianyuRentalItemReturnCanceled) => void): TaoMessageConsumer;
+  taobao_xianyu_RentalItemReturnCanceled(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoXianyuRentalItemReturnCanceled) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoXianyuRentalItemReturnReserved 闲鱼 > 买家预约上门取件} */
-  taobao_xianyu_RentalItemReturnReserved(fn: (message: IncomingMessage.TaobaoXianyuRentalItemReturnReserved) => void): TaoMessageConsumer;
+  taobao_xianyu_RentalItemReturnReserved(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoXianyuRentalItemReturnReserved) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoXianyuRentalOrderCanceled 闲鱼 > 租赁订单取消} */
-  taobao_xianyu_RentalOrderCanceled(fn: (message: IncomingMessage.TaobaoXianyuRentalOrderCanceled) => void): TaoMessageConsumer;
+  taobao_xianyu_RentalOrderCanceled(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoXianyuRentalOrderCanceled) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoXianyuRentalOrderCreated 闲鱼 > 租赁订单创建} */
-  taobao_xianyu_RentalOrderCreated(fn: (message: IncomingMessage.TaobaoXianyuRentalOrderCreated) => void): TaoMessageConsumer;
+  taobao_xianyu_RentalOrderCreated(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoXianyuRentalOrderCreated) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoXiaoweiMessage IOT-智能制造 > 获取推送消息} */
-  taobao_xiaowei_Message(fn: (message: IncomingMessage.TaobaoXiaoweiMessage) => void): TaoMessageConsumer;
+  taobao_xiaowei_Message(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoXiaoweiMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallAliautoStepOrderPartConfirmed 天猫汽车 > 分阶段交易确认消息} */
-  tmall_aliauto_StepOrderPartConfirmed(fn: (message: IncomingMessage.TmallAliautoStepOrderPartConfirmed) => void): TaoMessageConsumer;
+  tmall_aliauto_StepOrderPartConfirmed(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallAliautoStepOrderPartConfirmed) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallAutoTradeModify 天猫汽车 > 天猫汽车交易订单开放} */
-  tmall_auto_TradeModify(fn: (message: IncomingMessage.TmallAutoTradeModify) => void): TaoMessageConsumer;
+  tmall_auto_TradeModify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallAutoTradeModify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallAutoTwoWheelsReceiptCreate 天猫汽车 > 天猫二轮车服务工单创建开放} */
-  tmall_auto_TwoWheelsReceiptCreate(fn: (message: IncomingMessage.TmallAutoTwoWheelsReceiptCreate) => void): TaoMessageConsumer;
+  tmall_auto_TwoWheelsReceiptCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallAutoTwoWheelsReceiptCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallChannelApplyOrderChange 渠道中心API > 申请单变更消息} */
-  tmall_channel_ApplyOrderChange(fn: (message: IncomingMessage.TmallChannelApplyOrderChange) => void): TaoMessageConsumer;
+  tmall_channel_ApplyOrderChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallChannelApplyOrderChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallChannelDeliverOrderChange 渠道中心API > 发货单消息变更} */
-  tmall_channel_DeliverOrderChange(fn: (message: IncomingMessage.TmallChannelDeliverOrderChange) => void): TaoMessageConsumer;
+  tmall_channel_DeliverOrderChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallChannelDeliverOrderChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallChannelPurchaseOrderChange 渠道中心API > 采购单变更消息} */
-  tmall_channel_PurchaseOrderChange(fn: (message: IncomingMessage.TmallChannelPurchaseOrderChange) => void): TaoMessageConsumer;
+  tmall_channel_PurchaseOrderChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallChannelPurchaseOrderChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallChannelStopOrderChange 渠道中心API > 停止发货单变更消息} */
-  tmall_channel_StopOrderChange(fn: (message: IncomingMessage.TmallChannelStopOrderChange) => void): TaoMessageConsumer;
+  tmall_channel_StopOrderChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallChannelStopOrderChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuAnomalyRecourse 天猫服务 > 天猫服务平台一键求助单消息队列} */
-  tmall_fuwu_AnomalyRecourse(fn: (message: IncomingMessage.TmallFuwuAnomalyRecourse) => void): TaoMessageConsumer;
+  tmall_fuwu_AnomalyRecourse(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuAnomalyRecourse) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuAnomalyRecourseStatusUpdate 天猫服务 > 一键求助状态变更消息} */
-  tmall_fuwu_AnomalyRecourseStatusUpdate(fn: (message: IncomingMessage.TmallFuwuAnomalyRecourseStatusUpdate) => void): TaoMessageConsumer;
+  tmall_fuwu_AnomalyRecourseStatusUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuAnomalyRecourseStatusUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuLogisticsInfoMessage 天猫服务 > 服务供应链物流业务消息} */
-  tmall_fuwu_LogisticsInfoMessage(fn: (message: IncomingMessage.TmallFuwuLogisticsInfoMessage) => void): TaoMessageConsumer;
+  tmall_fuwu_LogisticsInfoMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuLogisticsInfoMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuServiceItemUpdate 天猫服务 > 服务商品信息变更消息} */
-  tmall_fuwu_ServiceItemUpdate(fn: (message: IncomingMessage.TmallFuwuServiceItemUpdate) => void): TaoMessageConsumer;
+  tmall_fuwu_ServiceItemUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuServiceItemUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuServiceMonitorMessage 天猫服务 > 服务预警消息} */
-  tmall_fuwu_ServiceMonitorMessage(fn: (message: IncomingMessage.TmallFuwuServiceMonitorMessage) => void): TaoMessageConsumer;
+  tmall_fuwu_ServiceMonitorMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuServiceMonitorMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuServiceStoreRegister 天猫服务 > 服务网点注册消息} */
-  tmall_fuwu_ServiceStoreRegister(fn: (message: IncomingMessage.TmallFuwuServiceStoreRegister) => void): TaoMessageConsumer;
+  tmall_fuwu_ServiceStoreRegister(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuServiceStoreRegister) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuSettleAdjustmentStatusUpdate 天猫服务 > 单个结算调整单数据推送} */
-  tmall_fuwu_SettleAdjustmentStatusUpdate(fn: (message: IncomingMessage.TmallFuwuSettleAdjustmentStatusUpdate) => void): TaoMessageConsumer;
+  tmall_fuwu_SettleAdjustmentStatusUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuSettleAdjustmentStatusUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuWorkcardContract 天猫服务 > 天猫服务履约合同单} */
-  tmall_fuwu_WorkcardContract(fn: (message: IncomingMessage.TmallFuwuWorkcardContract) => void): TaoMessageConsumer;
+  tmall_fuwu_WorkcardContract(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuWorkcardContract) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuWorkcardInfo 天猫服务 > 天猫服务任务工单} */
-  tmall_fuwu_WorkcardInfo(fn: (message: IncomingMessage.TmallFuwuWorkcardInfo) => void): TaoMessageConsumer;
+  tmall_fuwu_WorkcardInfo(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuWorkcardInfo) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuWorkcardStatusUpdate 天猫服务 > 天猫服务任务工单状态变更} */
-  tmall_fuwu_WorkcardStatusUpdate(fn: (message: IncomingMessage.TmallFuwuWorkcardStatusUpdate) => void): TaoMessageConsumer;
+  tmall_fuwu_WorkcardStatusUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuWorkcardStatusUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallMeiMemberRegister 天猫美妆 > 飞行入会消息} */
-  tmall_mei_MemberRegister(fn: (message: IncomingMessage.TmallMeiMemberRegister) => void): TaoMessageConsumer;
+  tmall_mei_MemberRegister(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallMeiMemberRegister) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallMeiPointChange 天猫美妆 > 品牌积分变更通知} */
-  tmall_mei_PointChange(fn: (message: IncomingMessage.TmallMeiPointChange) => void): TaoMessageConsumer;
+  tmall_mei_PointChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallMeiPointChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallNrtItemsToEasyHome 新零售终端上行消息 > 商品信息同步} */
-  tmall_nrt_ItemsToEasyHome(fn: (message: IncomingMessage.TmallNrtItemsToEasyHome) => void): TaoMessageConsumer;
+  tmall_nrt_ItemsToEasyHome(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallNrtItemsToEasyHome) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallOmnichannelInventoryChange 聚石塔 > 商品库存变化} */
-  tmall_omnichannel_InventoryChange(fn: (message: IncomingMessage.TmallOmnichannelInventoryChange) => void): TaoMessageConsumer;
+  tmall_omnichannel_InventoryChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallOmnichannelInventoryChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallOmnichannelInventoryZero 聚石塔 > 商品库存归零} */
-  tmall_omnichannel_InventoryZero(fn: (message: IncomingMessage.TmallOmnichannelInventoryZero) => void): TaoMessageConsumer;
+  tmall_omnichannel_InventoryZero(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallOmnichannelInventoryZero) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallOmnichannelItemDescChange 聚石塔 > 商品描述变化} */
-  tmall_omnichannel_ItemDescChange(fn: (message: IncomingMessage.TmallOmnichannelItemDescChange) => void): TaoMessageConsumer;
+  tmall_omnichannel_ItemDescChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallOmnichannelItemDescChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallOmnichannelItemDownShelf 聚石塔 > 商品下架} */
-  tmall_omnichannel_ItemDownShelf(fn: (message: IncomingMessage.TmallOmnichannelItemDownShelf) => void): TaoMessageConsumer;
+  tmall_omnichannel_ItemDownShelf(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallOmnichannelItemDownShelf) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallOmnichannelItemImageChange 聚石塔 > 商品图片变化} */
-  tmall_omnichannel_ItemImageChange(fn: (message: IncomingMessage.TmallOmnichannelItemImageChange) => void): TaoMessageConsumer;
+  tmall_omnichannel_ItemImageChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallOmnichannelItemImageChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallOmnichannelItemPriceChange 聚石塔 > 商品价格变更} */
-  tmall_omnichannel_ItemPriceChange(fn: (message: IncomingMessage.TmallOmnichannelItemPriceChange) => void): TaoMessageConsumer;
+  tmall_omnichannel_ItemPriceChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallOmnichannelItemPriceChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallServicecenterTaskUpdate 天猫服务 > 天猫服务平台工单更新} */
-  tmall_servicecenter_TaskUpdate(fn: (message: IncomingMessage.TmallServicecenterTaskUpdate) => void): TaoMessageConsumer;
+  tmall_servicecenter_TaskUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallServicecenterTaskUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallServiceplatformSignCreate 天猫服务 > 签到消息} */
-  tmall_serviceplatform_SignCreate(fn: (message: IncomingMessage.TmallServiceplatformSignCreate) => void): TaoMessageConsumer;
+  tmall_serviceplatform_SignCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallServiceplatformSignCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallServiceplatformWorkerLeave 天猫服务 > 工人请假发送消息} */
-  tmall_serviceplatform_WorkerLeave(fn: (message: IncomingMessage.TmallServiceplatformWorkerLeave) => void): TaoMessageConsumer;
+  tmall_serviceplatform_WorkerLeave(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallServiceplatformWorkerLeave) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TripHotelBottomPriceRuleChange 酒店商品消息api > 酒店商品底价加价商品加价规则消息通知} */
-  trip_hotel_BottomPriceRuleChange(fn: (message: IncomingMessage.TripHotelBottomPriceRuleChange) => void): TaoMessageConsumer;
+  trip_hotel_BottomPriceRuleChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TripHotelBottomPriceRuleChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TripHotelHotelChange 酒店商品消息api > 飞猪卖家酒店实体变更消息同步} */
-  trip_hotel_HotelChange(fn: (message: IncomingMessage.TripHotelHotelChange) => void): TaoMessageConsumer;
+  trip_hotel_HotelChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TripHotelHotelChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TripHotelRateChange 酒店商品消息api > 酒店rate信息变更} */
-  trip_hotel_RateChange(fn: (message: IncomingMessage.TripHotelRateChange) => void): TaoMessageConsumer;
+  trip_hotel_RateChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TripHotelRateChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TripHotelRatePlanChange 酒店商品消息api > 酒店价格计划消息} */
-  trip_hotel_RatePlanChange(fn: (message: IncomingMessage.TripHotelRatePlanChange) => void): TaoMessageConsumer;
+  trip_hotel_RatePlanChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TripHotelRatePlanChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TripHotelRoomChange 酒店商品消息api > room变更消息} */
-  trip_hotel_RoomChange(fn: (message: IncomingMessage.TripHotelRoomChange) => void): TaoMessageConsumer;
+  trip_hotel_RoomChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TripHotelRoomChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TripHotelRoomTypeChange 酒店商品消息api > 酒店房型消息} */
-  trip_hotel_RoomTypeChange(fn: (message: IncomingMessage.TripHotelRoomTypeChange) => void): TaoMessageConsumer;
+  trip_hotel_RoomTypeChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TripHotelRoomTypeChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.WdkMarketOperateSkuError 五道口营销 > 营销操作错误消息} */
-  wdk_market_OperateSkuError(fn: (message: IncomingMessage.WdkMarketOperateSkuError) => void): TaoMessageConsumer;
+  wdk_market_OperateSkuError(fn: (this: TaoMessageConsumer, message: IncomingMessage.WdkMarketOperateSkuError) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.WdkMarketOperateSkuErrror 五道口营销 > 营销发布商品错误} */
-  wdk_market_OperateSkuErrror(fn: (message: IncomingMessage.WdkMarketOperateSkuErrror) => void): TaoMessageConsumer;
+  wdk_market_OperateSkuErrror(fn: (this: TaoMessageConsumer, message: IncomingMessage.WdkMarketOperateSkuErrror) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.WdkOpenDataPublishError 五道口营销 > 五道口开放数据发布错误} */
-  wdk_open_DataPublishError(fn: (message: IncomingMessage.WdkOpenDataPublishError) => void): TaoMessageConsumer;
+  wdk_open_DataPublishError(fn: (this: TaoMessageConsumer, message: IncomingMessage.WdkOpenDataPublishError) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.WdkOpenDataRelation 五道口营销 > 五道口开放数据关联通知} */
-  wdk_open_DataRelation(fn: (message: IncomingMessage.WdkOpenDataRelation) => void): TaoMessageConsumer;
+  wdk_open_DataRelation(fn: (this: TaoMessageConsumer, message: IncomingMessage.WdkOpenDataRelation) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuAftersaleOrderSyn 闲鱼 > 闲鱼售后订单状态变更消息} */
-  xianyu_aftersale_OrderSyn(fn: (message: IncomingMessage.XianyuAftersaleOrderSyn) => void): TaoMessageConsumer;
+  xianyu_aftersale_OrderSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuAftersaleOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuAppraiseOrderSyn 闲鱼 > 验货担保订单状态同步回收商} */
-  xianyu_appraise_OrderSyn(fn: (message: IncomingMessage.XianyuAppraiseOrderSyn) => void): TaoMessageConsumer;
+  xianyu_appraise_OrderSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuAppraiseOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuCarOrderStatusSync 闲鱼回收商消息 > 闲鱼二手车寄卖订单状态同步} */
-  xianyu_car_OrderStatusSync(fn: (message: IncomingMessage.XianyuCarOrderStatusSync) => void): TaoMessageConsumer;
+  xianyu_car_OrderStatusSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCarOrderStatusSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuRecycleOrderStatusSync 闲鱼 > 订单状态同步给回收商} */
-  xianyu_recycle_OrderStatusSync(fn: (message: IncomingMessage.XianyuRecycleOrderStatusSync) => void): TaoMessageConsumer;
+  xianyu_recycle_OrderStatusSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuRecycleOrderStatusSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuRecycleSpuModifySync 闲鱼 > 闲鱼回收SPU变更消息} */
-  xianyu_recycle_SpuModifySync(fn: (message: IncomingMessage.XianyuRecycleSpuModifySync) => void): TaoMessageConsumer;
+  xianyu_recycle_SpuModifySync(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuRecycleSpuModifySync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuTemplateQuesChange 闲鱼 > 闲鱼问卷变更} */
-  xianyu_template_QuesChange(fn: (message: IncomingMessage.XianyuTemplateQuesChange) => void): TaoMessageConsumer;
+  xianyu_template_QuesChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuTemplateQuesChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuTemplateStatusChange 闲鱼 > 闲鱼问卷状态变更消息} */
-  xianyu_template_StatusChange(fn: (message: IncomingMessage.XianyuTemplateStatusChange) => void): TaoMessageConsumer;
+  xianyu_template_StatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuTemplateStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuTenderOrderSyn 闲鱼 > 省心卖-暗拍项目订单消息} */
-  xianyu_tender_OrderSyn(fn: (message: IncomingMessage.XianyuTenderOrderSyn) => void): TaoMessageConsumer;
+  xianyu_tender_OrderSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuTenderOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.YoukuTvosappstoreAppStatusChange TVOS应用审核平台 > TVOS审核平台应用状态变更通知消息} */
-  youku_tvosappstore_AppStatusChange(fn: (message: IncomingMessage.YoukuTvosappstoreAppStatusChange) => void): TaoMessageConsumer;
+  youku_tvosappstore_AppStatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.YoukuTvosappstoreAppStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.YunosYocDatapoolSandbox YunOS YoC > YunOS YoC datapool 沙箱环境} */
-  yunos_yoc_DatapoolSandbox(fn: (message: IncomingMessage.YunosYocDatapoolSandbox) => void): TaoMessageConsumer;
+  yunos_yoc_DatapoolSandbox(fn: (this: TaoMessageConsumer, message: IncomingMessage.YunosYocDatapoolSandbox) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.YunosYocMessageService YunOS YoC > yoc消息服务} */
-  yunos_yoc_MessageService(fn: (message: IncomingMessage.YunosYocMessageService) => void): TaoMessageConsumer;
+  yunos_yoc_MessageService(fn: (this: TaoMessageConsumer, message: IncomingMessage.YunosYocMessageService) => void): TaoMessageConsumer;
 }
 
 declare interface TaoEventsListener {
