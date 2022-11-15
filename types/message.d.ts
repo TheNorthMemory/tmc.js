@@ -14,7 +14,7 @@ declare interface MessageContent {
     content?: string;
 }
 
-namespace Message {
-    export class Encoder {}
-    export class Decoder {}
+declare namespace Message {
+    class Encoder {}
+    class Decoder {}
 }
