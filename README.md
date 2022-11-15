@@ -1,4 +1,4 @@
-# Taobao Message Channel (tmc.js)
+# tmc.js
 
 Events driven and chained Taobao Message Channel(TMC) for NodeJS
 
@@ -30,6 +30,10 @@ new TMC('your_app_key', 'your_app_secret')
 | options.onCloseReconnection | `number` | 当消费端断开连接，重试连接间隔(默认`3000`毫秒) |
 | options.autoParseContentJson | `boolean` | 自动解析推送消息`$.content.content`字段为对象(默认`true`) |
 | options.autoReplyConfirmation | `boolean` | 以推送的`$.content.id`字段自动`Confirm`消息(默认`true`) |
+
+## 链接
+
+- [淘宝开放平台-消息服务使用介绍](https://open.taobao.com/doc.htm?docId=101663&docType=1)
 
 ## License
 

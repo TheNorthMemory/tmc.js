@@ -1,37 +1,56 @@
 /// <reference types="node" />
+/// <reference path="header-type.d.ts" />
+/// <reference path="message-fields.d.ts" />
+/// <reference path="message-kind.d.ts" />
+/// <reference path="message-type.d.ts" />
 /// <reference path="message.d.ts" />
 /// <reference path="message.in.d.ts" />
+/// <reference path="value-format.d.ts" />
 
 import { BinaryLike } from "crypto";
-import EventEmitter from "events";
+import { EventEmitter } from "events";
 
 declare interface ConsumerOptions {
-    /** @default 5000 */
-    pullRequestInterval?: number;
-    /** @default 15000 */
-    onErrorReconnection?: number;
-    /** @default 3000 */
-    onCloseReconnection?: number;
-    /** @default true */
-    autoParseContentJson?: boolean;
-    /** @default true */
-    autoReplyConfirmation?: boolean;
+  /** @default 5000 */
+  pullRequestInterval?: number;
+  /** @default 15000 */
+  onErrorReconnection?: number;
+  /** @default 3000 */
+  onCloseReconnection?: number;
+  /** @default true */
+  autoParseContentJson?: boolean;
+  /** @default true */
+  autoReplyConfirmation?: boolean;
 }
 
 declare interface TaoMessageConstractor extends EventEmitter {
-    new (appKey: string, appSecret: BinaryLike, groupName?: string | ConsumerOptions, options?: ConsumerOptions): TaoMessageConsumer;
+  new (appKey: string, appSecret: BinaryLike, groupName?: string | ConsumerOptions, options?: ConsumerOptions): TaoMessageConsumer;
+  sign(timestamp: string): string;
+  onopen(): void;
+  onpull(): void;
+  onping(data: Buffer): void;
+  onerror(err: Error): void;
+  onclose(): void;
+  onmessage(data: Buffer, isBinary: boolean): void;
+  process0(): void;
+  process1(msg: Message): void;
+  process2(msg: Message): void;
+  process3(): void;
+  processundefined(): void;
+  reconnect(ms: number): TaoMessageConsumer;
+  connect(address?: string): TaoMessageConsumer;
 }
 
 declare interface TaoMessageSubscriber {
-    [K: string]: TopicSubscriber;
+  [K: string]: TopicSubscriber;
 }
 
 declare interface TopicSubscriber {
-    (fn: TaoMessageProcessor): TaoMessageConsumer;
+  (fn: TaoMessageProcessor): TaoMessageConsumer;
 }
 
 declare interface TaoMessageProcessor {
-    (this: TaoMessageConsumer, message: Message): void;
+  (this: TaoMessageConsumer, message: Message): void;
 }
 
 declare type TaoMessageConsumer = TaoMessageConstractor & TaoMessageSubscriber & TaoTopicsDescriptor & TaoEventsListener;
