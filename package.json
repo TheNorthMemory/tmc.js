@@ -1,0 +1,48 @@
+{
+  "name": "tmc.js",
+  "version": "0.3.0",
+  "description": "Events driven and chained Taobao Message Channel(TMC) for NodeJS",
+  "author": "James ZHANG",
+  "license": "MIT",
+  "types": "types/index.d.ts",
+  "main": "index.js",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "bugs": {
+    "url": "https://github.com/TheNorthMemory/tmc.js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheNorthMemory/tmc.js.git"
+  },
+  "files": [
+    "lib/",
+    "types/",
+    "index.js",
+    "index.mjs",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "json-bigint": "^1.0.0",
+    "ws": "^8.11.0"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.19.1",
+    "@types/node": "^18.8.3",
+    "eslint": "^8.25.0",
+    "eslint-config-airbnb-base": "^15.0.0"
+  },
+  "keywords": [
+    "tmc.js",
+    "taobao message channel"
+  ],
+  "engines": {
+    "node": ">=14.5"
+  }
+}
