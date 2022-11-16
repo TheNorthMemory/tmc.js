@@ -7,9 +7,9 @@ Events driven and chained Taobao Message Channel(TMC) for NodeJS
 `npm i tmc.js`
 
 ```js
-import TMC from 'tmc.js';
+import Tmc from 'tmc.js';
 
-new TMC('your_app_key', 'your_app_secret')
+new Tmc('your_app_key', 'your_app_secret')
 .on('taobao_trade_TradeChanged', msg => console.info(msg))
 .taobao_trade_TradeClose(msg => console.info(msg))
 .connect();
@@ -17,7 +17,7 @@ new TMC('your_app_key', 'your_app_secret')
 
 ## API
 
-**`new TMC(appKey: string, appSecret: BinaryLike, groupName?: string | object, options?: object)`**
+**`new Tmc(appKey: string, appSecret: BinaryLike, groupName?: string | object, options?: object)`**
 
 | 参数 | 类型 | 说明 |
 | --- | --- | --- |
@@ -31,7 +31,23 @@ new TMC('your_app_key', 'your_app_secret')
 | options.autoParseContentJson | `boolean` | 自动解析推送消息`$.content.content`字段为对象(默认`true`) |
 | options.autoReplyConfirmation | `boolean` | 以推送的`$.content.id`字段自动`Confirm`消息(默认`true`) |
 
-**NODE_DEBUG=`<label>` 环境变量**
+**`tmc.on(topic: string, listener: (this: Tmc, message: Message) => void) => Tmc`**
+
+注册 `topic` 消息通知处理函数，默认已内置 [消息](./types/message.in.d.ts) 说明。
+
+**`tmc[<topic>](fn: (this: Tmc, message: Message) => void) => Tmc`**
+
+直接以 `topic` 为键值，注册消息通知处理函数。
+
+**`tmc.reconnect(ms: number) => Tmc`**
+
+当消费端 `onerror`/`onclose` 事件发生时，延迟 `ms` 毫秒自动重新建立连接。
+
+**`tmc.connect(address?: string) => Tmc`**
+
+消费端发起建立连接 `onopen` 事件，`address` 默认为 `ws://mc.api.taobao.com/`。
+
+<details><summary>可选设置的 NODE_DEBUG=< label > 环境变量</summary>
 
 | label | 说明 |
 | --- | --- |
@@ -44,9 +60,11 @@ new TMC('your_app_key', 'your_app_secret')
 | `tmc:onmessage` | 开启全部 `onmessage` 时的日志(即`From`淘宝消息)
 | `tmc:onmessage:connect` | 开启消费端发起连接 `connect` 时的日志
 | `tmc:onmessage:connectack` | 开启消费端回复连接 `connectack` 时的日志
-| `tmc:onmessage:send` | 开启消费端接收到(即`From`淘宝)消息 `send` 时的日志
+| `tmc:onmessage:send` | 开启消费端接收到(即`From`淘宝) `send` 的消息时的日志
 | `tmc:onmessage:sendack` | (暂未明确场景)
-| `tmc:onmessage:send:confirm` | 开启消费端回复接收到的(即`From`淘宝消息) `send:confirm` 时的日志
+| `tmc:onmessage:send:confirm` | 开启消费端回复接收到的(即`From`淘宝消息)，发送自动确认 `send:confirm` 时的日志
+
+</details>
 
 ## 支持的TOPICS
 
