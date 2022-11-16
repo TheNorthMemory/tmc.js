@@ -42,10 +42,10 @@ declare interface TaoMessageConstractor extends EventEmitter {
 }
 
 declare interface TaoMessageSubscriber {
-  [K: string]: TopicSubscriber;
+  [K: string]: TaoTopicSubscriber;
 }
 
-declare interface TopicSubscriber {
+declare interface TaoTopicSubscriber {
   (fn: TaoMessageProcessor): TaoMessageConsumer;
 }
 
@@ -1706,5 +1706,22 @@ declare interface TaoEventsListener {
 }
 
 declare const TMC: TaoMessageConsumer;
+
+type internalMessage = Message;
+type internalMessageFields = MessageFields;
+type internalMessageKind = MessageKind;
+type internalMessageType = MessageType;
+type internalHeaderType = HeaderType;
+type internalValueFormat = ValueFormat;
+declare namespace TMC {
+  export {
+    internalMessage as Message,
+    internalMessageFields as MessageFields,
+    internalMessageKind as MessageKind,
+    internalMessageType as MessageType,
+    internalHeaderType as HeaderType,
+    internalValueFormat as ValueFormat,
+  };
+}
 
 export = TMC;
