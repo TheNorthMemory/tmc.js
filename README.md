@@ -58,7 +58,6 @@ new Tmc('your_app_key', 'your_app_secret')
 
 | label | 说明 |
 | --- | --- |
-| `tmc` | 开启全部`DEBUG`日志模式
 | `tmc:onping` | 开启 `onping` 时的日志
 | `tmc:onopen` | 开启 `onopen` 时的日志
 | `tmc:onpull` | 开启 `onpull` 时的日志
@@ -68,7 +67,7 @@ new Tmc('your_app_key', 'your_app_secret')
 | `tmc:onmessage:connect` | 开启消费端发起连接 `connect` 时的日志
 | `tmc:onmessage:connectack` | 开启消费端回复连接 `connectack` 时的日志
 | `tmc:onmessage:send` | 开启消费端接收到(即`From`淘宝) `send` 的消息时的日志
-| `tmc:onmessage:sendack` | (暂未明确场景)
+| `tmc:onmessage:sendack` | 当消费端收到(`From`淘宝)消息，消费端消息处理失败，需要服务端重发，须回复`SENDACK(3)`及`FLAG`字典值时的日志
 | `tmc:onmessage:send:confirm` | 开启消费端回复接收到的(即`From`淘宝消息)，发送自动确认 `send:confirm` 时的日志
 
 </details>
