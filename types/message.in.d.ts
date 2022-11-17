@@ -751,6 +751,10 @@ declare namespace IncomingMessage {
   type TmallAutoTradeModify = Message & { content?: MessageContent & { content?: string | Tmall.Auto.TradeModify } };
   /** {@link Tmall.Auto.TwoWheelsReceiptCreate 天猫汽车 > 天猫二轮车服务工单创建开放} */
   type TmallAutoTwoWheelsReceiptCreate = Message & { content?: MessageContent & { content?: string | Tmall.Auto.TwoWheelsReceiptCreate } };
+  /** {@link Tmall.Car.ContractSign 天猫汽车 > 合同签署消息} */
+  type TmallCarContractSign = Message & { content?: MessageContent & { content?: string | Tmall.Car.ContractSign } };
+  /** {@link Tmall.Car.FinanceMsg 天猫汽车 > 汽车金融消息} */
+  type TmallCarFinanceMsg = Message & { content?: MessageContent & { content?: string | Tmall.Car.FinanceMsg } };
   /** {@link Tmall.Channel.ApplyOrderChange 渠道中心API > 申请单变更消息} */
   type TmallChannelApplyOrderChange = Message & { content?: MessageContent & { content?: string | Tmall.Channel.ApplyOrderChange } };
   /** {@link Tmall.Channel.DeliverOrderChange 渠道中心API > 发货单消息变更} */

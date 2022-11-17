@@ -784,6 +784,10 @@ declare interface TaoTopicsDescriptor {
   tmall_auto_TradeModify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallAutoTradeModify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallAutoTwoWheelsReceiptCreate 天猫汽车 > 天猫二轮车服务工单创建开放} */
   tmall_auto_TwoWheelsReceiptCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallAutoTwoWheelsReceiptCreate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallCarContractSign 天猫汽车 > 合同签署消息} */
+  tmall_car_ContractSign(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallCarContractSign) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallCarFinanceMsg 天猫汽车 > 汽车金融消息} */
+  tmall_car_FinanceMsg(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallCarFinanceMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallChannelApplyOrderChange 渠道中心API > 申请单变更消息} */
   tmall_channel_ApplyOrderChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallChannelApplyOrderChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallChannelDeliverOrderChange 渠道中心API > 发货单消息变更} */
@@ -1609,6 +1613,10 @@ declare interface TaoEventsListener {
   on(topic: 'tmall_auto_TradeModify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallAutoTradeModify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallAutoTwoWheelsReceiptCreate 天猫汽车 > 天猫二轮车服务工单创建开放} */
   on(topic: 'tmall_auto_TwoWheelsReceiptCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallAutoTwoWheelsReceiptCreate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallCarContractSign 天猫汽车 > 合同签署消息} */
+  on(topic: 'tmall_car_ContractSign', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallCarContractSign) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallCarFinanceMsg 天猫汽车 > 汽车金融消息} */
+  on(topic: 'tmall_car_FinanceMsg', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallCarFinanceMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallChannelApplyOrderChange 渠道中心API > 申请单变更消息} */
   on(topic: 'tmall_channel_ApplyOrderChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallChannelApplyOrderChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallChannelDeliverOrderChange 渠道中心API > 发货单消息变更} */

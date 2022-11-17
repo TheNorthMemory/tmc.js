@@ -13,6 +13,11 @@ declare namespace MessageFields {
   type INTRANET_IP = 'intranet_ip';
   type ID = 'id';
   type TOPIC = 'topic';
+  type MSG = 'msg';
+  type DATAID = 'dataid';
+  type USERID = 'userid';
+  type OUTTIME = 'outtime';
+  type PUBLISHER = 'publisher';
 }
 
 declare class MessageFields {
@@ -30,4 +35,9 @@ declare class MessageFields {
   static INTRANET_IP: MessageFields.INTRANET_IP;
   static ID: MessageFields.ID;
   static TOPIC: MessageFields.TOPIC;
+  static MSG: MSG;
+  static DATAID: DATAID;
+  static USERID: USERID;
+  static OUTTIME: OUTTIME;
+  static PUBLISHER: PUBLISHER;
 }

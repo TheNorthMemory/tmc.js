@@ -28,6 +28,25 @@ declare namespace Tmall.Auto {
   }
 }
 
+/** 天猫汽车 */
+declare namespace Tmall.Car {
+  /** 合同签署消息 */
+  interface ContractSign {
+    /** 合同下载地址，有效期10分钟 */
+    contract_url: string;
+    /** 订单id */
+    order_id: number;
+  }
+
+  /** 汽车金融消息 */
+  interface FinanceMsg {
+    /** 订单id */
+    order_id: number;
+    /** 消息类型： FULL_PURCHASE_FINANCE_CANCEL_MSG_TYPE?，因全款购车导致金融取消 REFUND_FINANCE_CANCEL，因退款导致的金融单关闭 */
+    type: string;
+  }
+}
+
 /** 渠道中心API */
 declare namespace Tmall.Channel {
   /** 申请单变更消息 */
