@@ -35,9 +35,9 @@ declare class MessageFields {
   static INTRANET_IP: MessageFields.INTRANET_IP;
   static ID: MessageFields.ID;
   static TOPIC: MessageFields.TOPIC;
-  static MSG: MSG;
-  static DATAID: DATAID;
-  static USERID: USERID;
-  static OUTTIME: OUTTIME;
-  static PUBLISHER: PUBLISHER;
+  static MSG: MessageFields.MSG;
+  static DATAID: MessageFields.DATAID;
+  static USERID: MessageFields.USERID;
+  static OUTTIME: MessageFields.OUTTIME;
+  static PUBLISHER: MessageFields.PUBLISHER;
 }
