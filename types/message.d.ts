@@ -1,5 +1,5 @@
 /// <reference types="node" />
-/// <reference path="header-type.d.ts" />
+/// <reference path="message-type.d.ts" />
 /// <reference path="message-kind.d.ts" />
 
 declare class Message {
