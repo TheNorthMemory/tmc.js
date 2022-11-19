@@ -9,6 +9,12 @@ Events driven and chained Taobao Message Channel(TMC) for NodeJS
 [![downloads](https://img.shields.io/npm/dm/tmc.js)](https://www.npmjs.com/package/tmc.js)
 [![license](https://img.shields.io/npm/l/tmc.js)](https://www.npmjs.com/package/tmc.js)
 
+## 设计
+
+核心包以事件作为驱动，通过注册`TOPIC`回调处理函数，实现了TMC产品服务的消息消费处理能力，同时通过`Proxy`代理，以`TOPIC`作为键值，平序注册消息消费处理函数，序图如下：
+
+[![SDK Sequence](./.github/sdk-sequence.svg)](./.github/sdk-sequence.mmd)
+
 ## 使用
 
 `npm i tmc.js`

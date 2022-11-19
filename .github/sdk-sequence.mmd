@@ -1,0 +1,56 @@
+sequenceDiagram
+    autonumber
+    Consumer->>+WebSocket: new WebSocket(address)
+    WebSocket->>-Publisher: CONNECTING
+    opt open event
+        Publisher-->>WebSocket: OPEN frame
+        WebSocket-->>WebSocket: emit(open)
+        WebSocket-->>Consumer: onopen(Message.from(incoming))
+        Consumer-->>WebSocket: send(new Message(CONNECT).with(SIGN))
+        WebSocket-->>Publisher: 
+        Publisher-->>+WebSocket: new Message(CONNECTACK).with(TOKEN) frame
+        WebSocket-->> WebSocket: emit(message)
+        WebSocket-->>-Consumer: onmessage(Message.from(incoming))
+        Note right of Consumer: store msg[TOKEN]
+        Consumer-->>Consumer: process1(msg)
+        loop every 5 seconds
+            Consumer-->>WebSocket: send(new Message(SEND, PullRequest)).with(TOKEN)
+            WebSocket-->>Publisher: 
+        end
+    end
+    opt ping event
+        Publisher-->>+WebSocket: PING frame
+        WebSocket-->> WebSocket: emit(ping)
+        WebSocket-->>-Consumer: onping()
+        Consumer -->> WebSocket: pong()
+        WebSocket-->> Publisher: 
+    end
+    opt error event
+        Publisher-->>WebSocket: ERROR frame
+        WebSocket-->>WebSocket: emit(error)
+        WebSocket-->>Consumer: onerror(code, reason)
+        Consumer-->>Consumer: delay 15 seconds
+        Consumer-->>WebSocket: send(new Message(CONNECT).with(SIGN))
+        WebSocket-->>Publisher: 
+    end
+    opt close event
+        Publisher-->>+WebSocket: CLOSE frame
+        WebSocket-->> WebSocket: emit(close)
+        WebSocket-->>-Consumer: onclose(err)
+        Consumer -->> Consumer: delay 3 seconds
+        Consumer -->> WebSocket: send(new Message(CONNECT).with(SIGN))
+        WebSocket-->> Publisher: 
+    end
+    opt message event
+        Publisher-->>+WebSocket: new Message(SEND).with(TOPIC) frame
+        WebSocket-->> WebSocket: emit(message)
+        WebSocket-->>-Consumer: onmessage(Message.from(incoming))
+        Note right of Consumer: process by Message.from(incoming)[TYPE]
+        Consumer-->> Consumer: emit(TOPIC)
+        Consumer-->> WebSocket: send(new Message(SEND, Confirm).with(TOKEN).with(ID))
+        WebSocket-->>Publisher: 
+        Consumer-->> WebSocket: send(new Message(SENDACK, Failed).with(TOKEN).with(ID))
+        WebSocket-->>Publisher: 
+    end
+%% npx -p @mermaid-js/mermaid-cli mmdc -i sdk-sequence.mmd -o sdk-sequence.svg
+%% sed -i '' 's/-16[0-9]\{11\}/-div/g;s/max-width: 1162px; //' sdk-sequence.svg
