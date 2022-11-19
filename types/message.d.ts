@@ -7,14 +7,14 @@ declare class Message {
     type?: MessageType.CONNECT | MessageType.CONNECTACK | MessageType.SEND | MessageType.SENDACK,
     kind?: MessageKind.None | MessageKind.PullRequest | MessageKind.Confirm | MessageKind.Data | MessageKind.Failed
   );
-  protocolVersion: number;
-  messageType: number;
+  protocolVersion: 2;
+  messageType: MessageType.CONNECT | MessageType.CONNECTACK | MessageType.SEND | MessageType.SENDACK;
   statusCode?: number;
   statusPhrase?: string;
   flag?: number;
   token?: string;
   content?: MessageContent;
-  with(key: string, value?: number | bigint | string | Buffer | Date): this;
+  with(key: string | MessageKind, value?: number | bigint | string | Buffer | Date): this;
   get buffer(): Buffer;
   static from(buf: Buffer): Message;
 }
