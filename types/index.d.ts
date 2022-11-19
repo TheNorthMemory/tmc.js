@@ -26,6 +26,10 @@ declare interface ConsumerOptions {
 declare interface TaoMessageConstractor extends EventEmitter {
   new (appKey: string, appSecret: BinaryLike, groupName?: string | ConsumerOptions, options?: ConsumerOptions): TaoMessageConsumer;
   sign(timestamp: string): string;
+  /** @since v0.3.4 */
+  send(data: Message, cb?: (err?: Error) => void): void;
+  /** @since v0.3.4 */
+  send(data: Message, options?: { mask?: true, binary?: true, compress?: boolean, fin?: boolean }, cb?: (err: Error) => void): void;
   onopen(): void;
   onpull(): void;
   onping(data: Buffer): void;
