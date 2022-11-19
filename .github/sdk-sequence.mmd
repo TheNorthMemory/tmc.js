@@ -3,9 +3,9 @@ sequenceDiagram
     Consumer->>+WebSocket: new WebSocket(address)
     WebSocket->>-Publisher: CONNECTING
     opt open event
-        Publisher-->>WebSocket: OPEN frame
-        WebSocket-->>WebSocket: emit(open)
-        WebSocket-->>Consumer: onopen(Message.from(incoming))
+        Publisher-->>+WebSocket: OPEN frame
+        WebSocket-->> WebSocket: emit(open)
+        WebSocket-->>-Consumer: onopen(Message.from(incoming))
         Consumer-->>WebSocket: send(new Message(CONNECT).with(SIGN))
         WebSocket-->>Publisher: 
         Publisher-->>+WebSocket: new Message(CONNECTACK).with(TOKEN) frame
@@ -26,9 +26,9 @@ sequenceDiagram
         WebSocket-->> Publisher: 
     end
     opt error event
-        Publisher-->>WebSocket: ERROR frame
-        WebSocket-->>WebSocket: emit(error)
-        WebSocket-->>Consumer: onerror(code, reason)
+        Publisher-->>+WebSocket: ERROR frame
+        WebSocket-->> WebSocket: emit(error)
+        WebSocket-->>-Consumer: onerror(code, reason)
         Consumer-->>Consumer: delay 15 seconds
         Consumer-->>WebSocket: send(new Message(CONNECT).with(SIGN))
         WebSocket-->>Publisher: 
