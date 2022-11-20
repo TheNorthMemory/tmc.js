@@ -60,6 +60,24 @@ new Tmc('your_app_key', 'your_app_secret')
 
 消费端发起建立连接 `onopen` 事件，`address` 默认为 `ws://mc.api.taobao.com/`。
 
+**`tmc.send(msg: Message, options?: { mask?: true, binary?: true }, cb?: (err: Error) => void) => void`**
+
+实例化后，当自动应答确认消息无法满足需求的时候，比如消息处理失败，需要`Publisher`再次重推消息，在实例初始化时置`options.autoReplyConfirmation=false`，则在消息处理函数内，可以通过 `this.send()` 函数回复`确认`或者`失败`消息。例如：
+
+```js
+new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
+.taobao_trade_TradeDelayConfirmPay(function needDoubleReriesThenConfirm(msg) {
+  if (msg instanceof Message && msg.content?.reried === 0) {
+    this.send(
+      new Message(MessageType.SENDACK, MessageKind.Failed)
+      .with(MessageFields.ID, msg.content?.id)
+      .with(MessageFields.MSG, 'Something went wrong, please retries this ID.')
+    );
+  }
+})
+.connect();
+```
+
 <details><summary>可选设置的 NODE_DEBUG=< label > 环境变量</summary>
 
 | label | 说明 |
@@ -69,7 +87,7 @@ new Tmc('your_app_key', 'your_app_secret')
 | `tmc:onpull` | 开启 `onpull` 时的日志
 | `tmc:onerror` | 开启 `onerror` 时的日志
 | `tmc:onclose` | 开启 `onclose` 时的日志
-| `tmc:onmessage` | 开启全部 `onmessage` 时的日志(即`From`淘宝消息)
+| `tmc:onmessage*` | 开启全部 `onmessage` 时的日志(即`From`淘宝消息)
 | `tmc:onmessage:connect` | 开启消费端发起连接 `connect` 时的日志
 | `tmc:onmessage:connectack` | 开启消费端回复连接 `connectack` 时的日志
 | `tmc:onmessage:send` | 开启消费端接收到(即`From`淘宝) `send` 的消息时的日志
