@@ -67,7 +67,7 @@ new Tmc('your_app_key', 'your_app_secret')
 ```js
 new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 .taobao_trade_TradeDelayConfirmPay(function needDoubleReriesThenConfirm(msg) {
-  if (msg instanceof Message && msg.content?.reried === 0) {
+  if (msg instanceof Message && msg.content?.retried === 0) {
     this.send(
       new Message(MessageType.SENDACK, MessageKind.Failed)
       .with(MessageFields.ID, msg.content?.id)
