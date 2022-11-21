@@ -43,14 +43,27 @@ new Tmc('your_app_key', 'your_app_secret')
 | options.onCloseReconnection | `number` | 当消费端断开连接，重试连接间隔(默认`3000`毫秒) |
 | options.autoParseContentJson | `boolean` | 自动解析推送消息`$.content.content`字段为对象(默认`true`) |
 | options.autoReplyConfirmation | `boolean` | 以推送的`$.content.id`字段自动`Confirm`消息(默认`true`) |
+| options.autoGroupedEmitting | `boolean` | 以`/^(([^_]+)_[^_]+)_.+/`规则切分`$.content.topic`主题，开关消费端组播功能(默认`true`) |
 
 **`tmc.on(topic: string, listener: (this: Tmc, message: Message) => void) => Tmc`**
 
 注册 `topic` 消息通知处理函数，默认已内置 [消息](./types/message.in.d.ts) 说明。
+自`v0.3.6`起，默认开启消费端组播功能，`topic`字符串可以是`BU`及`BU_G`单位，例如：
+
+```js
+.on('taobao', console.info)
+.on('alibaba_einvoice', console.info)
+```
 
 **`tmc[<topic>](fn: (this: Tmc, message: Message) => void) => Tmc`**
 
 直接以 `topic` 为键值，注册消息通知处理函数。
+自`v0.3.6`起，默认开启消费端组播功能，`topic`字符串可以是`BU`及`BU_G`单位，例如：
+
+```js
+.taobao(console.info)
+.alibaba_einvoice(console.info)
+```
 
 **`tmc.reconnect(ms: number) => Tmc`**
 
