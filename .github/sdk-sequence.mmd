@@ -46,11 +46,15 @@ sequenceDiagram
         WebSocket-->> WebSocket: emit(message)
         WebSocket-->>-Consumer: onmessage(Message.from(incoming))
         Note right of Consumer: process by Message.from(incoming)[TYPE]
-        Consumer-->> Consumer: emit(TOPIC)
-        Consumer-->> WebSocket: send(new Message(SEND, Confirm).with(TOKEN).with(ID))
-        WebSocket-->>Publisher: 
-        Consumer-->> WebSocket: send(new Message(SENDACK, Failed).with(TOKEN).with(ID))
-        WebSocket-->>Publisher: 
+        Consumer-->> Consumer: emit(TOPIC) <br/> emit(BU_G) <br/> emit(BU)
+        opt 
+            Consumer-->> WebSocket: send(new Message(SEND, Confirm).with(TOKEN).with(ID))
+            WebSocket-->>Publisher: 
+        end
+        opt 
+            Consumer-->> WebSocket: send(new Message(SENDACK, Failed).with(TOKEN).with(ID))
+            WebSocket-->>Publisher: 
+        end
     end
 %% npx -p @mermaid-js/mermaid-cli mmdc -i sdk-sequence.mmd -o sdk-sequence.svg
-%% sed -i '' 's/-16[0-9]\{11\}/-div/g;s/max-width: 1162px; //' sdk-sequence.svg
+%% sed -i '' 's/-16[0-9]\{11\}/-div/g;s/max-width: 1172px; //' sdk-sequence.svg

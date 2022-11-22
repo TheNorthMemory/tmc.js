@@ -849,4 +849,1374 @@ declare namespace IncomingMessage {
   type YunosYocDatapoolSandbox = Message & { content?: MessageContent & { content?: string | Yunos.Yoc.DatapoolSandbox } };
   /** {@link Yunos.Yoc.MessageService YunOS YoC > yoc消息服务} */
   type YunosYocMessageService = Message & { content?: MessageContent & { content?: string | Yunos.Yoc.MessageService } };
+  /**
+   * - {@link AlibabaAdlabIotDevice 自动驾驶API > 自动驾驶iot设备消息}
+   * - {@link AlibabaAdlabOrderItemEtaUpdate 自动驾驶API > 包裹eta更新}
+   * - {@link AlibabaAdlabOrderItemStatus 自动驾驶API > 包裹配送状态更新}
+   */
+  type AlibabaAdlab = AlibabaAdlabIotDevice
+    | AlibabaAdlabOrderItemEtaUpdate
+    | AlibabaAdlabOrderItemStatus;
+  /**
+   * - {@link AlibabaAlicomFlowGiftSendNotify 阿里通信 > 阿里通信流量统一营销赠品发放通知}
+   */
+  type AlibabaAlicom = AlibabaAlicomFlowGiftSendNotify;
+  /**
+   * - {@link AlibabaAlihealthBillProcessStatusNotify 阿里健康-疫苗 > 单据处理状态通知}
+   * - {@link AlibabaAlihealthDoctorMessage 阿里健康-疫苗 > 医生、服务相关消息}
+   * - {@link AlibabaAlihealthNrmopOrderStatusChange 阿里健康-疫苗 > 中台订单状态变化推送}
+   * - {@link AlibabaAlihealthOrderStatusChange 阿里健康-疫苗 > 平台通知三方机构"订单状态变更"}
+   * - {@link AlibabaAlihealthTradeOrderStatusChange 阿里健康-疫苗 > O2O订单状态变更通知}
+   * - {@link AlibabaAlihealthTradeVaccineSubscribeChange 阿里健康-疫苗 > 疫苗交易预约信息变动}
+   */
+  type AlibabaAlihealth = AlibabaAlihealthBillProcessStatusNotify
+    | AlibabaAlihealthDoctorMessage
+    | AlibabaAlihealthNrmopOrderStatusChange
+    | AlibabaAlihealthOrderStatusChange
+    | AlibabaAlihealthTradeOrderStatusChange
+    | AlibabaAlihealthTradeVaccineSubscribeChange;
+  /**
+   * - {@link AlibabaAlinkDeviceDataPush 阿里物联 > 设备数据推送}
+   * - {@link AlibabaAlinkDeviceMessage 阿里物联 > 设备报警消息}
+   */
+  type AlibabaAlink = AlibabaAlinkDeviceDataPush
+    | AlibabaAlinkDeviceMessage;
+  /**
+   * - {@link AlibabaAliqinDigitalSmsTemplateDR 阿里通信 > 数字短信模板审批回执}
+   * - {@link AlibabaAliqinFcActiveIotcard 阿里通信 > 物联网卡激活通知}
+   * - {@link AlibabaAliqinFcCallCdr 阿里通信 > 语音呼叫结果推送}
+   * - {@link AlibabaAliqinFcCallRecord 阿里通信 > 录音回执}
+   * - {@link AlibabaAliqinFcFlowUp 阿里通信 > 流量直充状态报告}
+   * - {@link AlibabaAliqinFcSmsDR 阿里通信 > 短消息发送结果报告}
+   * - {@link AlibabaAliqinFcSmsUp 阿里通信 > 短信上行}
+   * - {@link AlibabaAliqinFcTmpStatus 阿里通信 > 语音呼叫中间状态消息}
+   * - {@link AlibabaAliqinFlowDirectCharge 阿里通信 > 流量直充}
+   * - {@link AlibabaAliqinIotPersonalConfirmNotice 阿里通信 > 实名认证结果通知}
+   * - {@link AlibabaAliqinIotStatusNotice 阿里通信 > 物联网停机消息通知}
+   * - {@link AlibabaAliqinTaFcSmsDR 阿里通信 > 聚石塔短消息发送结果报告}
+   */
+  type AlibabaAliqin = AlibabaAliqinDigitalSmsTemplateDR
+    | AlibabaAliqinFcActiveIotcard
+    | AlibabaAliqinFcCallCdr
+    | AlibabaAliqinFcCallRecord
+    | AlibabaAliqinFcFlowUp
+    | AlibabaAliqinFcSmsDR
+    | AlibabaAliqinFcSmsUp
+    | AlibabaAliqinFcTmpStatus
+    | AlibabaAliqinFlowDirectCharge
+    | AlibabaAliqinIotPersonalConfirmNotice
+    | AlibabaAliqinIotStatusNotice
+    | AlibabaAliqinTaFcSmsDR;
+  /**
+   * - {@link AlibabaEinvoiceApplyUpdate 电子发票 > 发票申请单状态变更通知}
+   * - {@link AlibabaEinvoiceCompanyDoAction 电子发票 > 商户事件触发消息}
+   * - {@link AlibabaEinvoiceOrderRefundResult 电子发票 > 订购单退款审核结果通知}
+   * - {@link AlibabaEinvoiceRegisterFlowChange 电子发票 > 入驻工单状态变更消息}
+   * - {@link AlibabaEinvoiceRegisterFlowCreate 电子发票 > 入驻工单创建消息}
+   * - {@link AlibabaEinvoiceTaxDeviceOrder 电子发票 > 增购税控设备触发消息}
+   */
+  type AlibabaEinvoice = AlibabaEinvoiceApplyUpdate
+    | AlibabaEinvoiceCompanyDoAction
+    | AlibabaEinvoiceOrderRefundResult
+    | AlibabaEinvoiceRegisterFlowChange
+    | AlibabaEinvoiceRegisterFlowCreate
+    | AlibabaEinvoiceTaxDeviceOrder;
+  /**
+   * - {@link AlibabaFuwuOrderPaid 1688服务市场 > 订单支付消息}
+   */
+  type AlibabaFuwu = AlibabaFuwuOrderPaid;
+  /**
+   * - {@link AlibabaHappytripOrderNotify 欢行开放平台 > 欢行统一订单模型变更通知消息}
+   */
+  type AlibabaHappytrip = AlibabaHappytripOrderNotify;
+  /**
+   * - {@link AlibabaInvoiceApply 阿里发票 > 开票申请}
+   * - {@link AlibabaInvoiceApplyResult 阿里发票 > 开票申请审核结果}
+   * - {@link AlibabaInvoiceDiskOffline 阿里发票 > 税盘下架单新增和更新通知}
+   * - {@link AlibabaInvoiceFlowBuket 阿里发票 > 资源包开通/订购记录同步}
+   * - {@link AlibabaInvoiceInvoiceApply 阿里发票 > 税控服务开票申请}
+   * - {@link AlibabaInvoiceLogistics 阿里发票 > 发票对外通知物流信息}
+   * - {@link AlibabaInvoicePaperOpsReturn 阿里发票 > 纸票操作结果回传（打印、作废等）}
+   * - {@link AlibabaInvoicePreConsulting 阿里发票 > 电子发票售前咨询}
+   * - {@link AlibabaInvoiceQuery 阿里发票 > 数据查询请求}
+   * - {@link AlibabaInvoiceQueryInvoice 阿里发票 > 查询发票信息}
+   * - {@link AlibabaInvoiceRegist 阿里发票 > 入驻阿里发票平台}
+   * - {@link AlibabaInvoiceResultReturn 阿里发票 > 开票请求结果}
+   * - {@link AlibabaInvoiceStatusChange 阿里发票 > 发票状态变更消息}
+   * - {@link AlibabaInvoiceTaxChange 阿里发票 > 商家税号变更}
+   * - {@link AlibabaInvoiceUnissue 阿里发票 > 创建未开具发票通知}
+   */
+  type AlibabaInvoice = AlibabaInvoiceApply
+    | AlibabaInvoiceApplyResult
+    | AlibabaInvoiceDiskOffline
+    | AlibabaInvoiceFlowBuket
+    | AlibabaInvoiceInvoiceApply
+    | AlibabaInvoiceLogistics
+    | AlibabaInvoicePaperOpsReturn
+    | AlibabaInvoicePreConsulting
+    | AlibabaInvoiceQuery
+    | AlibabaInvoiceQueryInvoice
+    | AlibabaInvoiceRegist
+    | AlibabaInvoiceResultReturn
+    | AlibabaInvoiceStatusChange
+    | AlibabaInvoiceTaxChange
+    | AlibabaInvoiceUnissue;
+  /**
+   * - {@link AlibabaLstBmOrderLogisticsChange 零售通_公共 > 品牌商-订单物流状态变化}
+   * - {@link AlibabaLstBroadcastSelfOrderShipChange 零售通_公共 > 线下自有订单发货状态变更消息}
+   * - {@link AlibabaLstCashierSync 零售通_公共 > 收银快照同步消息}
+   * - {@link AlibabaLstGoodsSync 零售通_公共 > 商品同步消息}
+   * - {@link AlibabaLstInventorySync 零售通_公共 > 商品库存修改同步消息}
+   * - {@link AlibabaLstMsgTest 零售通_公共 > 消息测试}
+   * - {@link AlibabaLstOrderChange 零售通_公共 > 零售通交易订单变更消息}
+   * - {@link AlibabaLstRefundChange 零售通_公共 > 订单退单}
+   * - {@link AlibabaLstSpeakerAdvertPlayRecord 零售通_公共 > 如意音箱播放日志}
+   * - {@link AlibabaLstSupplierOrderChange 零售通_公共 > 零售通供应商交易订单变更消息}
+   */
+  type AlibabaLst = AlibabaLstBmOrderLogisticsChange
+    | AlibabaLstBroadcastSelfOrderShipChange
+    | AlibabaLstCashierSync
+    | AlibabaLstGoodsSync
+    | AlibabaLstInventorySync
+    | AlibabaLstMsgTest
+    | AlibabaLstOrderChange
+    | AlibabaLstRefundChange
+    | AlibabaLstSpeakerAdvertPlayRecord
+    | AlibabaLstSupplierOrderChange;
+  /**
+   * - {@link AlibabaMmcOpenStockAlterNotify MMC五盘货项目 > MMC五盘货盘招投域盘货变更消息}
+   * - {@link AlibabaMmcOpenStockItemAlter MMC五盘货项目 > MMC盘招投商品变更消息}
+   * - {@link AlibabaMmcOrderNotify MMC五盘货项目 > MMC五盘货对接大润发正向订单消息}
+   * - {@link AlibabaMmcPriceUpdate MMC五盘货项目 > MMC五盘货对接大润发价格修改消息}
+   * - {@link AlibabaMmcRefundOrderNotify MMC五盘货项目 > MMC五盘货对接大润发逆向交易消息}
+   */
+  type AlibabaMmc = AlibabaMmcOpenStockAlterNotify
+    | AlibabaMmcOpenStockItemAlter
+    | AlibabaMmcOrderNotify
+    | AlibabaMmcPriceUpdate
+    | AlibabaMmcRefundOrderNotify;
+  /**
+   * - {@link AlibabaMonitorEventSendMessage 聚石塔监控告警 > 聚石塔监控告警消息投递}
+   * - {@link AlibabaMonitorMessageSend 聚石塔监控告警 > 聚石塔监控告警消息投递}
+   */
+  type AlibabaMonitor = AlibabaMonitorEventSendMessage
+    | AlibabaMonitorMessageSend;
+  /**
+   * - {@link AlibabaMosSaleOrder 银泰开放平台消息 > 销售单状态变更}
+   * - {@link AlibabaMosSaleOrderRefund 银泰开放平台消息 > 销售单退款消息}
+   */
+  type AlibabaMos = AlibabaMosSaleOrder
+    | AlibabaMosSaleOrderRefund;
+  /**
+   * - {@link AlibabaNazcaAbandonCert 网上法庭 > 作废存证消息接口}
+   * - {@link AlibabaNazcaQueryChargeNum 网上法庭 > 查询收费数量}
+   * - {@link AlibabaNazcaSaveCert 网上法庭 > 发起存证消息接口}
+   * - {@link AlibabaNazcaUpdateChargeNum 网上法庭 > 更新收费数量}
+   */
+  type AlibabaNazca = AlibabaNazcaAbandonCert
+    | AlibabaNazcaQueryChargeNum
+    | AlibabaNazcaSaveCert
+    | AlibabaNazcaUpdateChargeNum;
+  /**
+   * - {@link AlibabaNlifeBToBTradeStatusNotify 零售plus > 采购单状态变化通知}
+   * - {@link AlibabaNlifeBToCTradeOrderSync 零售plus > 零售+订单同步消息}
+   * - {@link AlibabaNlifeBtoBTradeDeliverNotify 零售plus > 采购单发货通知消息}
+   * - {@link AlibabaNlifeBtoBTradeEffectiveNotify 零售plus > 采购单生效通知消息}
+   * - {@link AlibabaNlifeBtobTradeRefundConfirmMsgNotify 零售plus > 采购单退货单确认消息}
+   * - {@link AlibabaNlifeBtobTradeRefundNotify 零售plus > 采购单退货通知消息}
+   * - {@link AlibabaNlifeInstorageDiffAuditNotify 零售plus > 供应商审核差异单的通知消息}
+   * - {@link AlibabaNlifeItemUpdate 零售plus > 零售+商品变动消息}
+   */
+  type AlibabaNlife = AlibabaNlifeBToBTradeStatusNotify
+    | AlibabaNlifeBToCTradeOrderSync
+    | AlibabaNlifeBtoBTradeDeliverNotify
+    | AlibabaNlifeBtoBTradeEffectiveNotify
+    | AlibabaNlifeBtobTradeRefundConfirmMsgNotify
+    | AlibabaNlifeBtobTradeRefundNotify
+    | AlibabaNlifeInstorageDiffAuditNotify
+    | AlibabaNlifeItemUpdate;
+  /**
+   * - {@link AlibabaServiceplatformFulfilTask 天猫服务 > 服务供应链核销单消息}
+   * - {@link AlibabaServiceplatformServiceOrder 天猫服务 > 服务供应链服务单消息}
+   */
+  type AlibabaServiceplatform = AlibabaServiceplatformFulfilTask
+    | AlibabaServiceplatformServiceOrder;
+  /**
+   * - {@link AlibabaSpNotifyPaymentResult 阿里智付 > 通知付款结果}
+   */
+  type AlibabaSp = AlibabaSpNotifyPaymentResult;
+  /**
+   * - {@link AlibabaTaxEmployeeSignResult 阿里发票 > 税优雇员签约结果消息}
+   * - {@link AlibabaTaxSalaryPayResult 阿里发票 > 税优发薪结果通知}
+   */
+  type AlibabaTax = AlibabaTaxEmployeeSignResult
+    | AlibabaTaxSalaryPayResult;
+  /**
+   * - {@link AlibabaTianjiContractOrder 阿里通信 > 天机平台合约机供应商订单消息}
+   * - {@link AlibabaTianjiOrderCreate 阿里通信 > 天机平台订单生成通知消息}
+   */
+  type AlibabaTianji = AlibabaTianjiContractOrder
+    | AlibabaTianjiOrderCreate;
+  /**
+   * - {@link AlibabaWdkChannelCommentAudit 五道口商品 > 差评回评}
+   * - {@link AlibabaWdkChannelOrderCancel 五道口商品 > 五道口售中取消外部订单消息}
+   * - {@link AlibabaWdkChannelOrderCsRefundAudit 五道口商品 > 客服审核退款结果}
+   * - {@link AlibabaWdkChannelOrderCsUserrefund 五道口商品 > 客服代客发起售后退款(整单/部分)}
+   * - {@link AlibabaWdkChannelOrderStatusChange 五道口商品 > 订单状态变更消息}
+   * - {@link AlibabaWdkChannelStockSync 五道口商品 > 库存同步}
+   * - {@link AlibabaWdkFulfillOrderChange 五道口商品 > 售中履约变更消息}
+   * - {@link AlibabaWdkStoreItemUpdate 五道口商品 > 商家渠道商品变动消息}
+   */
+  type AlibabaWdk = AlibabaWdkChannelCommentAudit
+    | AlibabaWdkChannelOrderCancel
+    | AlibabaWdkChannelOrderCsRefundAudit
+    | AlibabaWdkChannelOrderCsUserrefund
+    | AlibabaWdkChannelOrderStatusChange
+    | AlibabaWdkChannelStockSync
+    | AlibabaWdkFulfillOrderChange
+    | AlibabaWdkStoreItemUpdate;
+  /**
+   * - {@link AlibabaWdkitemWarehouseSkuModify 五道口商品 > 五道口仓商品变更消息}
+   */
+  type AlibabaWdkitem = AlibabaWdkitemWarehouseSkuModify;
+  /**
+   * - {@link AlibabaWdkopRexAccountChange 五道口订单 > Rex用户信息变更消息}
+   */
+  type AlibabaWdkop = AlibabaWdkopRexAccountChange;
+  /**
+   * - {@link AlibabaWdkopenOrderMessage 五道口订单 > 五道口交易状态变更消息通知}
+   * - {@link AlibabaWdkopenPriceAdjust 五道口订单 > 采购价变更消息}
+   * - {@link AlibabaWdkopenRefundMessage 五道口订单 > 同城零售逆向交易消息}
+   */
+  type AlibabaWdkopen = AlibabaWdkopenOrderMessage
+    | AlibabaWdkopenPriceAdjust
+    | AlibabaWdkopenRefundMessage;
+  /**
+   * - {@link AlibabaWdkorderFulfillStatusChange 五道口订单 > 五道口订单履约状态变更消息}
+   * - {@link AlibabaWdkorderInsuranceOrder 五道口订单 > 共享库存保险正向投保消息}
+   * - {@link AlibabaWdkorderInsuranceRefund 五道口订单 > 共享库存保险逆向理赔消息}
+   * - {@link AlibabaWdkorderOrderFulfillPush 五道口订单 > 订单履约状态变更消息}
+   * - {@link AlibabaWdkorderOrderFulfillTokenPush 五道口订单 > 履约状态变更消息}
+   * - {@link AlibabaWdkorderOrderStatusPush 五道口订单 > 猫超订单数据变更消息通知}
+   * - {@link AlibabaWdkorderRefundOrgPoint 五道口订单 > 逆向单企业积分消息发送}
+   * - {@link AlibabaWdkorderRefundSuccess 五道口订单 > 五道口淘鲜达逆向订单消息}
+   * - {@link AlibabaWdkorderSoPo 五道口订单 > 共享库存SOPO}
+   * - {@link AlibabaWdkorderStatusChange 五道口订单 > 五道口订单状态变更消息}
+   * - {@link AlibabaWdkorderVoucherStatus 五道口订单 > 淘鲜达订单优惠券状态变更}
+   */
+  type AlibabaWdkorder = AlibabaWdkorderFulfillStatusChange
+    | AlibabaWdkorderInsuranceOrder
+    | AlibabaWdkorderInsuranceRefund
+    | AlibabaWdkorderOrderFulfillPush
+    | AlibabaWdkorderOrderFulfillTokenPush
+    | AlibabaWdkorderOrderStatusPush
+    | AlibabaWdkorderRefundOrgPoint
+    | AlibabaWdkorderRefundSuccess
+    | AlibabaWdkorderSoPo
+    | AlibabaWdkorderStatusChange
+    | AlibabaWdkorderVoucherStatus;
+  /**
+   * - {@link AlibabaWdktradeCouponInstance 五道口营销 > 营销券实例消息}
+   */
+  type AlibabaWdktrade = AlibabaWdktradeCouponInstance;
+  /**
+   * - {@link AlibabaYunioDataTransfer 平台消息 > YunIO数据流转}
+   */
+  type AlibabaYunio = AlibabaYunioDataTransfer;
+  /**
+   * - {@link AlicomAxbSubsEventSync 阿里通信 > 绑定事件同步}
+   */
+  type AlicomAxb = AlicomAxbSubsEventSync;
+  /**
+   * - {@link AliexpressAeiaTaskplatformInterestNotice AE-任务平台消息 > AE任务平台权益发放通知}
+   */
+  type AliexpressAeia = AliexpressAeiaTaskplatformInterestNotice;
+  /**
+   * - {@link AliexpressOrderFinish AE-交易 > 交易成功}
+   * - {@link AliexpressOrderFundProcessing AE-交易 > 资金处理中}
+   * - {@link AliexpressOrderInCancel AE-交易 > 取消订单中}
+   * - {@link AliexpressOrderPlaceOrderSuccess AE-交易 > 下单成功}
+   * - {@link AliexpressOrderRiskControl AE-交易 > 风控24小时}
+   * - {@link AliexpressOrderSellerPartSendGoods AE-交易 > 等待部分发货}
+   * - {@link AliexpressOrderWaitBuyerAcceptGoods AE-交易 > 等待买家收货}
+   * - {@link AliexpressOrderWaitGroupSuccess AE-交易 > 等待成团}
+   * - {@link AliexpressOrderWaitSellerExamineMoney AE-交易 > 待卖家验款}
+   * - {@link AliexpressOrderWaitSellerSendGoods AE-交易 > 等待卖家发货}
+   */
+  type AliexpressOrder = AliexpressOrderFinish
+    | AliexpressOrderFundProcessing
+    | AliexpressOrderInCancel
+    | AliexpressOrderPlaceOrderSuccess
+    | AliexpressOrderRiskControl
+    | AliexpressOrderSellerPartSendGoods
+    | AliexpressOrderWaitBuyerAcceptGoods
+    | AliexpressOrderWaitGroupSuccess
+    | AliexpressOrderWaitSellerExamineMoney
+    | AliexpressOrderWaitSellerSendGoods;
+  /**
+   * - {@link AlihealthCepOrderStatusChange 平台消息 > 孔雀翎订单消息通知}
+   */
+  type AlihealthCep = AlihealthCepOrderStatusChange;
+  /**
+   * - {@link AlihealthYsOrderMemConsume 阿里健康&一树-电商中台对接 > 订单支付成功推送}
+   * - {@link AlihealthYsOrderPushConsume 阿里健康&一树-电商中台对接 > 一树孔雀翎订单付款通知}
+   */
+  type AlihealthYs = AlihealthYsOrderMemConsume
+    | AlihealthYsOrderPushConsume;
+  /**
+   * - {@link AlitripAgentNotify 淘宝机票 > 商家机票业务通知}
+   */
+  type AlitripAgent = AlitripAgentNotify;
+  /**
+   * - {@link AlitripBtripCorpSignCallback 商旅API > 阿里商旅企业签约结果回调}
+   * - {@link AlitripBtripExceedApplySubmit 商旅API > 阿里商旅企业超标审批单提交消息}
+   */
+  type AlitripBtrip = AlitripBtripCorpSignCallback
+    | AlitripBtripExceedApplySubmit;
+  /**
+   * - {@link AlitripFlightChange 淘宝机票 > 航变消息}
+   */
+  type AlitripFlight = AlitripFlightChange;
+  /**
+   * - {@link AlitripIesrFlightChange 淘宝机票 > 航变数据推送}
+   * - {@link AlitripIesrTicketMessage 淘宝机票 > 国际运价采购票消息}
+   */
+  type AlitripIesr = AlitripIesrFlightChange
+    | AlitripIesrTicketMessage;
+  /**
+   * - {@link AlitripIetradeChangeMsg 淘宝机票 > 国际机票改签订单状态消息}
+   * - {@link AlitripIetradeOrderMsg 淘宝机票 > 国际机票订单消息}
+   * - {@link AlitripIetradeRefundMsg 淘宝机票 > 国际机票退票订单状态消息}
+   */
+  type AlitripIetrade = AlitripIetradeChangeMsg
+    | AlitripIetradeOrderMsg
+    | AlitripIetradeRefundMsg;
+  /**
+   * - {@link AlitripTrainAgentStopQuery 淘宝火车票 > 火车票车次状态变更消息}
+   */
+  type AlitripTrain = AlitripTrainAgentStopQuery;
+  /**
+   * - {@link AlitripTravelOrderChanged 航旅度假交易 > 飞猪度假交易订单状态变更消息}
+   * - {@link AlitripTravelPersonChanged 航旅度假交易 > 出行人信息变更消息}
+   * - {@link AlitripTravelVisaService 航旅度假交易 > 签证消息服务}
+   */
+  type AlitripTravel = AlitripTravelOrderChanged
+    | AlitripTravelPersonChanged
+    | AlitripTravelVisaService;
+  /**
+   * - {@link AlitripTripticketTravellerCreate 航旅度假交易 > 旅行机票交易创建}
+   */
+  type AlitripTripticket = AlitripTripticketTravellerCreate;
+  /**
+   * - {@link AlitripVisaTradeDone 航旅度假交易 > 在线签证交易完成消息}
+   */
+  type AlitripVisa = AlitripVisaTradeDone;
+  /**
+   * - {@link AliyunIotOrderSync IOT-智能制造 > 天天工厂采购单同步}
+   */
+  type AliyunIot = AliyunIotOrderSync;
+  /**
+   * - {@link BanmaRightTradeCreate 平台消息 > 斑马权益平台权益变更通知}
+   */
+  type BanmaRight = BanmaRightTradeCreate;
+  /**
+   * - {@link CainiaoConsignplatformLogisiticsDetail 菜鸟发货工作台 > 发货工作台下发物流详情消息}
+   */
+  type CainiaoConsignplatform = CainiaoConsignplatformLogisiticsDetail;
+  /**
+   * - {@link CainiaoIotAftersalesTicket IoT售后解决方案 > IoT售后工单信息消息}
+   */
+  type CainiaoIot = CainiaoIotAftersalesTicket;
+  /**
+   * - {@link DamaiDistributionPerformCancel 大麦第三方票务供应商接入 > 场次取消消息推送}
+   * - {@link DamaiDistributionPerformStatus 大麦第三方票务供应商接入 > 场次状态变更推送}
+   * - {@link DamaiDistributionPreSaleToNow 大麦第三方票务供应商接入 > 预售改开票}
+   * - {@link DamaiDistributionProjectStatus 大麦第三方票务供应商接入 > 项目状态推送}
+   * - {@link DamaiDistributionTicketItemStatus 大麦第三方票务供应商接入 > 票品状态变更}
+   */
+  type DamaiDistribution = DamaiDistributionPerformCancel
+    | DamaiDistributionPerformStatus
+    | DamaiDistributionPreSaleToNow
+    | DamaiDistributionProjectStatus
+    | DamaiDistributionTicketItemStatus;
+  /**
+   * - {@link DamaiTradeTicketStatusPush 大麦票单状态 > 大麦票单状态推送}
+   */
+  type DamaiTrade = DamaiTradeTicketStatusPush;
+  /**
+   * - {@link FliggyBtripHotelDistributionOrderChange 商旅API > 订单状态变化}
+   */
+  type FliggyBtrip = FliggyBtripHotelDistributionOrderChange;
+  /**
+   * - {@link FliggyJipiaoFlightChange 淘宝机票 > 航变消息服务}
+   */
+  type FliggyJipiao = FliggyJipiaoFlightChange;
+  /**
+   * - {@link FliggyTicketOrderRefund 航旅度假交易 > 域外分销订单退款消息}
+   * - {@link FliggyTicketOrderStatusChange 航旅度假交易 > 域外分销订单状态变更消息}
+   * - {@link FliggyTicketVerifyNotify 航旅度假交易 > 域外分销订单码核销消息}
+   */
+  type FliggyTicket = FliggyTicketOrderRefund
+    | FliggyTicketOrderStatusChange
+    | FliggyTicketVerifyNotify;
+  /**
+   * - {@link FuwuConfirmFail 服务市场 > 收入确认失败}
+   * - {@link FuwuConfirmSuccess 服务市场 > 收入确认成功}
+   */
+  type FuwuConfirm = FuwuConfirmFail
+    | FuwuConfirmSuccess;
+  /**
+   * - {@link GovAuctionPushVehicleDataToBM 大资产拍卖Top端拍品消息 > 推送机动车数据到斑马}
+   * - {@link GovAuctionVehicleDataPush 大资产拍卖Top端拍品消息 > 斑马-机动车数据推送}
+   */
+  type GovAuction = GovAuctionPushVehicleDataToBM
+    | GovAuctionVehicleDataPush;
+  /**
+   * - {@link IdleAgreementStatusChange 闲鱼 > 闲鱼代扣消息通知}
+   */
+  type IdleAgreement = IdleAgreementStatusChange;
+  /**
+   * - {@link IdleAppraiseisvItemSyn 闲鱼已验货 > 已验货商品消息}
+   * - {@link IdleAppraiseisvOrderSyn 闲鱼已验货 > 闲鱼已验货交易事件}
+   * - {@link IdleAppraiseisvRefundSyn 闲鱼已验货 > 闲鱼已验货退货/退款事件}
+   */
+  type IdleAppraiseisv = IdleAppraiseisvItemSyn
+    | IdleAppraiseisvOrderSyn
+    | IdleAppraiseisvRefundSyn;
+  /**
+   * - {@link IdleConsignmentOrderSyn 闲鱼回收商消息 > 闲鱼帮卖订单履约状态同步}
+   */
+  type IdleConsignment = IdleConsignmentOrderSyn;
+  /**
+   * - {@link IdleConsignmentiiOrderSyn 闲鱼回收商消息 > 闲鱼寄卖V2订单履约状态同步}
+   */
+  type IdleConsignmentii = IdleConsignmentiiOrderSyn;
+  /**
+   * - {@link IdleRecycleOrderSyn 闲鱼回收商消息 > 回收订单交易消息}
+   * - {@link IdleRecycleRefundStatusModify 闲鱼回收商消息 > 退款消息}
+   */
+  type IdleRecycle = IdleRecycleOrderSyn
+    | IdleRecycleRefundStatusModify;
+  /**
+   * - {@link IdleTopisvGlobalProductNotice 闲鱼已验货 > 闲鱼开放平台-国际货品变更消息通知}
+   * - {@link IdleTopisvItemNotice 闲鱼已验货 > 闲鱼开放平台-商品变更消息通知}
+   * - {@link IdleTopisvRefundNotice 闲鱼已验货 > 闲鱼开放平台-订单逆向变更消息通知}
+   * - {@link IdleTopisvTradeNotice 闲鱼已验货 > 闲鱼开放平台-订单变更消息通知}
+   */
+  type IdleTopisv = IdleTopisvGlobalProductNotice
+    | IdleTopisvItemNotice
+    | IdleTopisvRefundNotice
+    | IdleTopisvTradeNotice;
+  /**
+   * - {@link IdleTranferpayOrderChange 闲鱼 > 直接转账交易消息}
+   */
+  type IdleTranferpay = IdleTranferpayOrderChange;
+  /**
+   * - {@link JaeTradePaidSuccessed 导购平台 > JAE导购平台成交记录消息}
+   */
+  type JaeTrade = JaeTradePaidSuccessed;
+  /**
+   * - {@link LstSupplierBroadcastFastRefundMessage 零售通_公共 > 零售通广播极速退款消息}
+   * - {@link LstSupplierFastRefundMessageCreate 零售通_公共 > 品牌商极速退款消息创建}
+   */
+  type LstSupplier = LstSupplierBroadcastFastRefundMessage
+    | LstSupplierFastRefundMessageCreate;
+  /**
+   * - {@link TaobaoAgRefundSignInfo AliGenius > 商家在AG的签收信息}
+   */
+  type TaobaoAg = TaobaoAgRefundSignInfo;
+  /**
+   * - {@link TaobaoApsCommentAdd 平台消息 > 百川反馈-开发者/客服回复}
+   * - {@link TaobaoApsNewFeedback 平台消息 > 收到舆情}
+   */
+  type TaobaoAps = TaobaoApsCommentAdd
+    | TaobaoApsNewFeedback;
+  /**
+   * - {@link TaobaoAxinRefundCallBack 阿信消息通知前台类目 > 阿信退款回调消息}
+   */
+  type TaobaoAxin = TaobaoAxinRefundCallBack;
+  /**
+   * - {@link TaobaoBaichuanASODeviceActivate 百川 > 设备APP激活}
+   * - {@link TaobaoBaichuanPasswordRuleChange 百川 > 口令规则变化消息}
+   */
+  type TaobaoBaichuan = TaobaoBaichuanASODeviceActivate
+    | TaobaoBaichuanPasswordRuleChange;
+  /**
+   * - {@link TaobaoBmcShortMessageStatus 导购平台 > 短信状态}
+   */
+  type TaobaoBmc = TaobaoBmcShortMessageStatus;
+  /**
+   * - {@link TaobaoBusTVMTradePay 淘宝汽车票 > 自助机付款成功结果}
+   * - {@link TaobaoBusTVMTradePayStatusNotice 淘宝汽车票 > 交易支付状态节点通知}
+   * - {@link TaobaoBusTVMTradePaySuccess 淘宝汽车票 > 支付成功回调消息}
+   * - {@link TaobaoBusTradePayStatus 淘宝汽车票 > 交易支付状态节点}
+   */
+  type TaobaoBus = TaobaoBusTVMTradePay
+    | TaobaoBusTVMTradePayStatusNotice
+    | TaobaoBusTVMTradePaySuccess
+    | TaobaoBusTradePayStatus;
+  /**
+   * - {@link TaobaoCarleaseFreeDpOrderMsgSend 天猫服务 > 天猫汽车直租免首付订单消息}
+   */
+  type TaobaoCarlease = TaobaoCarleaseFreeDpOrderMsgSend;
+  /**
+   * - {@link TaobaoDaifaDistributorOrderStatusChange 代发管理 > 代发管理_分销商侧订单状态变更消息}
+   * - {@link TaobaoDaifaSupplierOrderStatusChange 代发管理 > 代发管理_供货商侧订单状态变更消息}
+   */
+  type TaobaoDaifa = TaobaoDaifaDistributorOrderStatusChange
+    | TaobaoDaifaSupplierOrderStatusChange;
+  /**
+   * - {@link TaobaoDdPush 淘宝点点 > 淘点点消息推送}
+   */
+  type TaobaoDd = TaobaoDdPush;
+  /**
+   * - {@link TaobaoDiandianServeOrder 淘宝点点 > 淘宝点点服务订单下单消息}
+   */
+  type TaobaoDiandian = TaobaoDiandianServeOrder;
+  /**
+   * - {@link TaobaoDpaasAuthTokenCreate DPAAS > dpaas三方服务token}
+   * - {@link TaobaoDpaasCustomerFlow DPAAS > 客流新增及会员到店消息}
+   * - {@link TaobaoDpaasCustomerUpload DPAAS > 客户上传图片}
+   * - {@link TaobaoDpaasCustomerUploadAck DPAAS > 会员人脸信息更新}
+   * - {@link TaobaoDpaasEquipmentCreate DPAAS > 创建设备}
+   * - {@link TaobaoDpaasFaceToCustomerAck DPAAS > 会员标示消息推送}
+   */
+  type TaobaoDpaas = TaobaoDpaasAuthTokenCreate
+    | TaobaoDpaasCustomerFlow
+    | TaobaoDpaasCustomerUpload
+    | TaobaoDpaasCustomerUploadAck
+    | TaobaoDpaasEquipmentCreate
+    | TaobaoDpaasFaceToCustomerAck;
+  /**
+   * - {@link TaobaoEinvoiceBuyerConfirmSend 电子发票 > 买家确认发送到报销系统}
+   * - {@link TaobaoEinvoiceInvoiceResultReturn 电子发票 > 电子发票开票回流}
+   */
+  type TaobaoEinvoice = TaobaoEinvoiceBuyerConfirmSend
+    | TaobaoEinvoiceInvoiceResultReturn;
+  /**
+   * - {@link TaobaoFenxiaoDealerAgree 淘宝分销 > 经销采购单审核通过}
+   * - {@link TaobaoFenxiaoDealerClose 淘宝分销 > 经销采购单关闭}
+   * - {@link TaobaoFenxiaoDealerConfirm 淘宝分销 > 经销采购单采购成功}
+   * - {@link TaobaoFenxiaoDealerCreate 淘宝分销 > 经销采购单创建}
+   * - {@link TaobaoFenxiaoDealerInstock 淘宝分销 > 经销采购单入库}
+   * - {@link TaobaoFenxiaoDealerModify 淘宝分销 > 经销采购单修改}
+   * - {@link TaobaoFenxiaoDealerPay 淘宝分销 > 经销采购单付款}
+   * - {@link TaobaoFenxiaoDealerRefuse 淘宝分销 > 经销采购单拒绝通过}
+   * - {@link TaobaoFenxiaoDealerShipped 淘宝分销 > 经销采购单已发货}
+   * - {@link TaobaoFenxiaoFxOrderClosed 淘宝分销 > 采购单关闭消息消息}
+   * - {@link TaobaoFenxiaoFxOrderCreate 淘宝分销 > 采购单创建消息}
+   * - {@link TaobaoFenxiaoFxOrderModifyConsign 淘宝分销 > 分销属性变更}
+   * - {@link TaobaoFenxiaoFxOrderModifyPrice 淘宝分销 > 修改采购单价格消息}
+   * - {@link TaobaoFenxiaoFxOrderPaid 淘宝分销 > 采购单付款消息}
+   * - {@link TaobaoFenxiaoFxOrderShipped 淘宝分销 > 采购单发货消息}
+   * - {@link TaobaoFenxiaoFxOrderSuccess 淘宝分销 > 采购单确认收货消息}
+   * - {@link TaobaoFenxiaoFxRefundAgree 淘宝分销 > 供应商同意退款消息}
+   * - {@link TaobaoFenxiaoFxRefundClose 淘宝分销 > 关闭采购单退款消息}
+   * - {@link TaobaoFenxiaoFxRefundCreate 淘宝分销 > 创建采购单退款消息}
+   * - {@link TaobaoFenxiaoFxRefundRefuseGoods 淘宝分销 > 供应商拒绝确认收货消息}
+   * - {@link TaobaoFenxiaoFxRefundSuccess 淘宝分销 > 采购单退款成功消息}
+   * - {@link TaobaoFenxiaoFxTradeRefundCreate 淘宝分销 > 下游订单创建退款消息}
+   * - {@link TaobaoFenxiaoFxTradeRefundSuccess 淘宝分销 > 下游订单退款完成消息}
+   */
+  type TaobaoFenxiao = TaobaoFenxiaoDealerAgree
+    | TaobaoFenxiaoDealerClose
+    | TaobaoFenxiaoDealerConfirm
+    | TaobaoFenxiaoDealerCreate
+    | TaobaoFenxiaoDealerInstock
+    | TaobaoFenxiaoDealerModify
+    | TaobaoFenxiaoDealerPay
+    | TaobaoFenxiaoDealerRefuse
+    | TaobaoFenxiaoDealerShipped
+    | TaobaoFenxiaoFxOrderClosed
+    | TaobaoFenxiaoFxOrderCreate
+    | TaobaoFenxiaoFxOrderModifyConsign
+    | TaobaoFenxiaoFxOrderModifyPrice
+    | TaobaoFenxiaoFxOrderPaid
+    | TaobaoFenxiaoFxOrderShipped
+    | TaobaoFenxiaoFxOrderSuccess
+    | TaobaoFenxiaoFxRefundAgree
+    | TaobaoFenxiaoFxRefundClose
+    | TaobaoFenxiaoFxRefundCreate
+    | TaobaoFenxiaoFxRefundRefuseGoods
+    | TaobaoFenxiaoFxRefundSuccess
+    | TaobaoFenxiaoFxTradeRefundCreate
+    | TaobaoFenxiaoFxTradeRefundSuccess;
+  /**
+   * - {@link TaobaoFliggyCommonContractSign 酒店标准库基础信息变更消息 > 飞猪通用合同签约消息}
+   * - {@link TaobaoFliggyHspHicItemChange 酒店标准库基础信息变更消息 > Hsp转发卖家库聚合shid维度库价变更消息}
+   * - {@link TaobaoFliggySignStatus 酒店标准库基础信息变更消息 > 飞猪签约状态消息}
+   * - {@link TaobaoFliggyStdHotelModify 酒店标准库基础信息变更消息 > 标准酒店实体变更消息}
+   * - {@link TaobaoFliggyStdRoomTypeModify 酒店标准库基础信息变更消息 > 标准房型领域模型实体变更消息}
+   */
+  type TaobaoFliggy = TaobaoFliggyCommonContractSign
+    | TaobaoFliggyHspHicItemChange
+    | TaobaoFliggySignStatus
+    | TaobaoFliggyStdHotelModify
+    | TaobaoFliggyStdRoomTypeModify;
+  /**
+   * - {@link TaobaoFuwuOrderClosed 服务市场 > 订单关闭消息}
+   * - {@link TaobaoFuwuOrderCreated 服务市场 > 订单创建消息}
+   * - {@link TaobaoFuwuOrderPaid 服务市场 > 订单支付消息}
+   * - {@link TaobaoFuwuServiceOpen 服务市场 > 服务开通消息}
+   * - {@link TaobaoFuwuWitkeySyncModeling 服务市场 > 威客同步建模数据}
+   */
+  type TaobaoFuwu = TaobaoFuwuOrderClosed
+    | TaobaoFuwuOrderCreated
+    | TaobaoFuwuOrderPaid
+    | TaobaoFuwuServiceOpen
+    | TaobaoFuwuWitkeySyncModeling;
+  /**
+   * - {@link TaobaoGlobalbuysSeamailOrderNotify 全球购跨境物流 > 跨境服务平台推送物流订单消息}
+   */
+  type TaobaoGlobalbuys = TaobaoGlobalbuysSeamailOrderNotify;
+  /**
+   * - {@link TaobaoHomeaiCaseSyncResult HOMEAI消息对接 > 方案消息同步callback}
+   * - {@link TaobaoHomeaiLayoutTransferResult HOMEAI消息对接 > 居然之家接受迁移结果}
+   * - {@link TaobaoHomeaiRenderRequest HOMEAI消息对接 > HS渲染消息}
+   */
+  type TaobaoHomeai = TaobaoHomeaiCaseSyncResult
+    | TaobaoHomeaiLayoutTransferResult
+    | TaobaoHomeaiRenderRequest;
+  /**
+   * - {@link TaobaoHotelCreditToPreHotelStatus 酒店签约中心消息 > 信用住转预付酒店签约状态消息}
+   * - {@link TaobaoHotelSearchMonitor 酒店签约中心消息 > 酒店搜索触发商品更新消息}
+   * - {@link TaobaoHotelSearchTrigger 酒店签约中心消息 > 热搜酒店消息}
+   */
+  type TaobaoHotel = TaobaoHotelCreditToPreHotelStatus
+    | TaobaoHotelSearchMonitor
+    | TaobaoHotelSearchTrigger;
+  /**
+   * - {@link TaobaoIstoreGiftingMsg Gifting送礼 > istoreGifing消息}
+   */
+  type TaobaoIstore = TaobaoIstoreGiftingMsg;
+  /**
+   * - {@link TaobaoItemItemAdd 淘宝商品 > 商品新增消息}
+   * - {@link TaobaoItemItemDelete 淘宝商品 > 商品删除消息}
+   * - {@link TaobaoItemItemDownshelf 淘宝商品 > 商品下架消息}
+   * - {@link TaobaoItemItemPunishCc 淘宝商品 > 小二CC商品消息}
+   * - {@link TaobaoItemItemPunishDelete 淘宝商品 > 小二删除商品消息}
+   * - {@link TaobaoItemItemPunishDownshelf 淘宝商品 > 小二下架商品消息}
+   * - {@link TaobaoItemItemRecommendAdd 淘宝商品 > 橱窗推荐商品消息}
+   * - {@link TaobaoItemItemRecommendDelete 淘宝商品 > 取消橱窗推荐商品消息}
+   * - {@link TaobaoItemItemSkuZeroStock 淘宝商品 > 商品SKU卖空消息}
+   * - {@link TaobaoItemItemStockChanged 淘宝商品 > 修改商品库存消息}
+   * - {@link TaobaoItemItemUpdate 淘宝商品 > 商品更新消息}
+   * - {@link TaobaoItemItemUpshelf 淘宝商品 > 商品上架消息}
+   * - {@link TaobaoItemItemZeroStock 淘宝商品 > 商品卖空消息}
+   */
+  type TaobaoItem = TaobaoItemItemAdd
+    | TaobaoItemItemDelete
+    | TaobaoItemItemDownshelf
+    | TaobaoItemItemPunishCc
+    | TaobaoItemItemPunishDelete
+    | TaobaoItemItemPunishDownshelf
+    | TaobaoItemItemRecommendAdd
+    | TaobaoItemItemRecommendDelete
+    | TaobaoItemItemSkuZeroStock
+    | TaobaoItemItemStockChanged
+    | TaobaoItemItemUpdate
+    | TaobaoItemItemUpshelf
+    | TaobaoItemItemZeroStock;
+  /**
+   * - {@link TaobaoJipiaoAncillaryOrderPaid 淘宝机票 > 飞猪辅营订单支付通知接口}
+   * - {@link TaobaoJipiaoJipiaoModifyOrderNotify 淘宝机票 > 【机票代理商】改签订单通知}
+   * - {@link TaobaoJipiaoJipiaoOrderStatusNotify 淘宝机票 > 机票订单状态推送}
+   * - {@link TaobaoJipiaoJipiaoRefundOrderNotify 淘宝机票 > 机票退票订单状态推送}
+   * - {@link TaobaoJipiaoSellerOrderNotify 淘宝机票 > 【机票代理商】订单通知}
+   * - {@link TaobaoJipiaoSellerRefundOrderNotify 淘宝机票 > 【机票代理商】退票订单通知}
+   */
+  type TaobaoJipiao = TaobaoJipiaoAncillaryOrderPaid
+    | TaobaoJipiaoJipiaoModifyOrderNotify
+    | TaobaoJipiaoJipiaoOrderStatusNotify
+    | TaobaoJipiaoJipiaoRefundOrderNotify
+    | TaobaoJipiaoSellerOrderNotify
+    | TaobaoJipiaoSellerRefundOrderNotify;
+  /**
+   * - {@link TaobaoLogisticsLogsticDetailTrace 淘宝物流 > 物流详情跟踪消息}
+   */
+  type TaobaoLogistics = TaobaoLogisticsLogsticDetailTrace;
+  /**
+   * - {@link TaobaoModifyaddressResultNotify 聚石塔 > 自助改地址结果消息通知}
+   */
+  type TaobaoModifyaddress = TaobaoModifyaddressResultNotify;
+  /**
+   * - {@link TaobaoModifyorderConsistencyResult 聚石塔 > 订单一致性校验消息}
+   */
+  type TaobaoModifyorder = TaobaoModifyorderConsistencyResult;
+  /**
+   * - {@link TaobaoModifyskuResultNotify 聚石塔 > 修改商品信息结果消息}
+   */
+  type TaobaoModifysku = TaobaoModifyskuResultNotify;
+  /**
+   * - {@link TaobaoOcTradeTagChanged 交易全链路 > oc订单标签变更}
+   */
+  type TaobaoOc = TaobaoOcTradeTagChanged;
+  /**
+   * - {@link TaobaoOpenaccountDataSync 导购平台 > openaccount数据同步}
+   */
+  type TaobaoOpenaccount = TaobaoOpenaccountDataSync;
+  /**
+   * - {@link TaobaoOpencrmAuthTouchMessage 客户运营平台API > 营销短信授权消息}
+   * - {@link TaobaoOpencrmCardEstTask 客户运营平台API > 卡片短信发送预估消息}
+   * - {@link TaobaoOpencrmCardTplExamine 客户运营平台API > 卡片短信模板审核消息}
+   * - {@link TaobaoOpencrmCrowdInstResult 客户运营平台API > 人群快照生成结果}
+   * - {@link TaobaoOpencrmCrowdInstSaveResult 客户运营平台API > 人群快照另存为人群结果}
+   * - {@link TaobaoOpencrmFeedback 客户运营平台API > 反馈tmc}
+   * - {@link TaobaoOpencrmMemberGradeChange 客户运营平台API > 会员等级变更}
+   * - {@link TaobaoOpencrmNodeExecuteFinished 客户运营平台API > 节点执行完成消息}
+   * - {@link TaobaoOpencrmOpenStrategyEvent 客户运营平台API > 开放策略事件类单发短信TMC消息}
+   * - {@link TaobaoOpencrmSellerDimensionCharge 客户运营平台API > CRM商业化计费商家维度账单}
+   * - {@link TaobaoOpencrmShortMessageBill 客户运营平台API > 短信账单}
+   * - {@link TaobaoOpencrmUtouch 客户运营平台API > 智能外呼回执}
+   */
+  type TaobaoOpencrm = TaobaoOpencrmAuthTouchMessage
+    | TaobaoOpencrmCardEstTask
+    | TaobaoOpencrmCardTplExamine
+    | TaobaoOpencrmCrowdInstResult
+    | TaobaoOpencrmCrowdInstSaveResult
+    | TaobaoOpencrmFeedback
+    | TaobaoOpencrmMemberGradeChange
+    | TaobaoOpencrmNodeExecuteFinished
+    | TaobaoOpencrmOpenStrategyEvent
+    | TaobaoOpencrmSellerDimensionCharge
+    | TaobaoOpencrmShortMessageBill
+    | TaobaoOpencrmUtouch;
+  /**
+   * - {@link TaobaoOpenimOffMsgPush OpenIM消息 > openim 离线消息推送}
+   */
+  type TaobaoOpenim = TaobaoOpenimOffMsgPush;
+  /**
+   * - {@link TaobaoOpenmallAlarmMsg OpenMall-API > Openmall告警消息通知}
+   * - {@link TaobaoOpenmallItemChanged OpenMall-API > Openmall商品变更消息}
+   * - {@link TaobaoOpenmallItemStockChanged OpenMall-API > openmall商品库存变更消息通知}
+   * - {@link TaobaoOpenmallRefundChanged OpenMall-API > OpenMall退款单变更}
+   * - {@link TaobaoOpenmallTradeChanged OpenMall-API > 订单消息通知}
+   */
+  type TaobaoOpenmall = TaobaoOpenmallAlarmMsg
+    | TaobaoOpenmallItemChanged
+    | TaobaoOpenmallItemStockChanged
+    | TaobaoOpenmallRefundChanged
+    | TaobaoOpenmallTradeChanged;
+  /**
+   * - {@link TaobaoRdcaligeniusOrderMsgSend 淘宝交易 > 订单消息}
+   */
+  type TaobaoRdcaligenius = TaobaoRdcaligeniusOrderMsgSend;
+  /**
+   * - {@link TaobaoRecycleOfnPreRedPacketSync 淘宝交易 > 同步前置补贴红包的最新数据}
+   */
+  type TaobaoRecycle = TaobaoRecycleOfnPreRedPacketSync;
+  /**
+   * - {@link TaobaoRefundRefundBlockMessage 淘宝退款 > 屏蔽退款留言消息-无此消息}
+   * - {@link TaobaoRefundRefundBuyerModifyAgreement 淘宝退款 > 买家修改退款协议消息}
+   * - {@link TaobaoRefundRefundBuyerReturnGoods 淘宝退款 > 买家退货给卖家消息}
+   * - {@link TaobaoRefundRefundClosed 淘宝退款 > 退款关闭消息}
+   * - {@link TaobaoRefundRefundCreateMessage 淘宝退款 > 发表退款留言消息}
+   * - {@link TaobaoRefundRefundCreated 淘宝退款 > 退款创建消息}
+   * - {@link TaobaoRefundRefundSellerAgreeAgreement 淘宝退款 > 卖家同意退款协议消息}
+   * - {@link TaobaoRefundRefundSellerRefuseAgreement 淘宝退款 > 卖家拒绝退款协议消息}
+   * - {@link TaobaoRefundRefundSuccess 淘宝退款 > 退款成功消息}
+   * - {@link TaobaoRefundRefundableCanceled 淘宝退款 > 退款标记取消消息}
+   * - {@link TaobaoRefundRefundableMarked 淘宝退款 > 退款标记创建消息}
+   * - {@link TaobaoRefundTaobaoInterApplied 淘宝退款 > 申请淘宝介入消息}
+   * - {@link TaobaoRefundTaobaoIntervened 淘宝退款 > 淘宝介入退款消息}
+   */
+  type TaobaoRefund = TaobaoRefundRefundBlockMessage
+    | TaobaoRefundRefundBuyerModifyAgreement
+    | TaobaoRefundRefundBuyerReturnGoods
+    | TaobaoRefundRefundClosed
+    | TaobaoRefundRefundCreateMessage
+    | TaobaoRefundRefundCreated
+    | TaobaoRefundRefundSellerAgreeAgreement
+    | TaobaoRefundRefundSellerRefuseAgreement
+    | TaobaoRefundRefundSuccess
+    | TaobaoRefundRefundableCanceled
+    | TaobaoRefundRefundableMarked
+    | TaobaoRefundTaobaoInterApplied
+    | TaobaoRefundTaobaoIntervened;
+  /**
+   * - {@link TaobaoRhinoDeviceStatus 智能制造API > 智能制造-设备状态变更}
+   */
+  type TaobaoRhino = TaobaoRhinoDeviceStatus;
+  /**
+   * - {@link TaobaoTaeBaichuanAuctionChange 导购平台 > 商品信息变更}
+   * - {@link TaobaoTaeBaichuanTradeClosed 导购平台 > 交易关闭}
+   * - {@link TaobaoTaeBaichuanTradeCreated 导购平台 > 创建订单}
+   * - {@link TaobaoTaeBaichuanTradePaidDone 导购平台 > 付款成功}
+   * - {@link TaobaoTaeBaichuanTradeRefundCreated 导购平台 > 创建退款消息}
+   * - {@link TaobaoTaeBaichuanTradeRefundSuccess 导购平台 > 退款成功}
+   * - {@link TaobaoTaeBaichuanTradeSuccess 导购平台 > 交易成功}
+   * - {@link TaobaoTaeItemDownShelf 导购平台 > 商品下架}
+   * - {@link TaobaoTaeItemImageChange 导购平台 > 商品主图变更}
+   * - {@link TaobaoTaeItemPriceChange 导购平台 > 订阅的商品变更消息}
+   * - {@link TaobaoTaeItemSkuDelete 导购平台 > sku删除}
+   * - {@link TaobaoTaeItemSkuPublish 导购平台 > sku发布}
+   * - {@link TaobaoTaeItemSkuSoldOut 导购平台 > 商品sku售空}
+   * - {@link TaobaoTaeItemSoldOut 导购平台 > 商品售空}
+   * - {@link TaobaoTaeItemSubscribe 导购平台 > 商品订阅成功}
+   * - {@link TaobaoTaeItemTitleChange 导购平台 > 商品标题变更}
+   * - {@link TaobaoTaeItemUnSubscribe 导购平台 > 取消商品订阅}
+   * - {@link TaobaoTaeItemUpShelf 导购平台 > 商品上架}
+   */
+  type TaobaoTae = TaobaoTaeBaichuanAuctionChange
+    | TaobaoTaeBaichuanTradeClosed
+    | TaobaoTaeBaichuanTradeCreated
+    | TaobaoTaeBaichuanTradePaidDone
+    | TaobaoTaeBaichuanTradeRefundCreated
+    | TaobaoTaeBaichuanTradeRefundSuccess
+    | TaobaoTaeBaichuanTradeSuccess
+    | TaobaoTaeItemDownShelf
+    | TaobaoTaeItemImageChange
+    | TaobaoTaeItemPriceChange
+    | TaobaoTaeItemSkuDelete
+    | TaobaoTaeItemSkuPublish
+    | TaobaoTaeItemSkuSoldOut
+    | TaobaoTaeItemSoldOut
+    | TaobaoTaeItemSubscribe
+    | TaobaoTaeItemTitleChange
+    | TaobaoTaeItemUnSubscribe
+    | TaobaoTaeItemUpShelf;
+  /**
+   * - {@link TaobaoTopAuthCancel 平台消息 > 取消授权消息通知}
+   */
+  type TaobaoTop = TaobaoTopAuthCancel;
+  /**
+   * - {@link TaobaoTopatsTaskComplete 平台消息 > 异步任务执行完成}
+   */
+  type TaobaoTopats = TaobaoTopatsTaskComplete;
+  /**
+   * - {@link TaobaoTradeTradeAlipayCreate 淘宝交易 > 创建支付宝订单消息}
+   * - {@link TaobaoTradeTradeBuyerPay 淘宝交易 > 买家付完款，或万人团买家付完尾款}
+   * - {@link TaobaoTradeTradeBuyerStepPay 淘宝交易 > 分阶段订单付定金}
+   * - {@link TaobaoTradeTradeChanged 淘宝交易 > 订单信息变更消息}
+   * - {@link TaobaoTradeTradeClose 淘宝交易 > 关闭交易消息}
+   * - {@link TaobaoTradeTradeCloseAndModifyDetailOrder 淘宝交易 > 关闭或修改子订单消息}
+   * - {@link TaobaoTradeTradeCreate 淘宝交易 > 创建淘宝交易消息}
+   * - {@link TaobaoTradeTradeDelayConfirmPay 淘宝交易 > 延长收货时间消息}
+   * - {@link TaobaoTradeTradeLogisticsAddressChanged 淘宝交易 > 修改交易收货地址消息}
+   * - {@link TaobaoTradeTradeMemoModified 淘宝交易 > 交易备注修改消息}
+   * - {@link TaobaoTradeTradeModifyFee 淘宝交易 > 修改交易费用消息}
+   * - {@link TaobaoTradeTradePartlyConfirmPay 淘宝交易 > 子订单打款成功消息}
+   * - {@link TaobaoTradeTradePartlyRefund 淘宝交易 > 子订单退款成功消息}
+   * - {@link TaobaoTradeTradePartlySellerShip 淘宝交易 > 交易的部分子订单发货消息}
+   * - {@link TaobaoTradeTradeRated 淘宝交易 > 交易评价变更消息}
+   * - {@link TaobaoTradeTradeSellerShip 淘宝交易 > 卖家发货消息}
+   * - {@link TaobaoTradeTradeSuccess 淘宝交易 > 交易成功消息}
+   * - {@link TaobaoTradeTradeTimeoutRemind 淘宝交易 > 交易超时提醒消息}
+   */
+  type TaobaoTrade = TaobaoTradeTradeAlipayCreate
+    | TaobaoTradeTradeBuyerPay
+    | TaobaoTradeTradeBuyerStepPay
+    | TaobaoTradeTradeChanged
+    | TaobaoTradeTradeClose
+    | TaobaoTradeTradeCloseAndModifyDetailOrder
+    | TaobaoTradeTradeCreate
+    | TaobaoTradeTradeDelayConfirmPay
+    | TaobaoTradeTradeLogisticsAddressChanged
+    | TaobaoTradeTradeMemoModified
+    | TaobaoTradeTradeModifyFee
+    | TaobaoTradeTradePartlyConfirmPay
+    | TaobaoTradeTradePartlyRefund
+    | TaobaoTradeTradePartlySellerShip
+    | TaobaoTradeTradeRated
+    | TaobaoTradeTradeSellerShip
+    | TaobaoTradeTradeSuccess
+    | TaobaoTradeTradeTimeoutRemind;
+  /**
+   * - {@link TaobaoTrainAgentQueryInfoNotify 淘宝火车票 > 代理商查询信息消息}
+   * - {@link TaobaoTrainOrderNotify 淘宝火车票 > 火车线下票代理商通知}
+   * - {@link TaobaoTrainThirdPartyTradeNotify 淘宝火车票 > 火车票订单发给带三方接入消息}
+   * - {@link TaobaoTrainTradeNotify 淘宝火车票 > 火车票订单消息}
+   */
+  type TaobaoTrain = TaobaoTrainAgentQueryInfoNotify
+    | TaobaoTrainOrderNotify
+    | TaobaoTrainThirdPartyTradeNotify
+    | TaobaoTrainTradeNotify;
+  /**
+   * - {@link TaobaoUsceslAlarmCreate 业务平台新零售-消息上行 > 设备报警消息接口}
+   * - {@link TaobaoUsceslBindResult 业务平台新零售-消息上行 > 电子价签绑定执行结果消息}
+   */
+  type TaobaoUscesl = TaobaoUsceslAlarmCreate
+    | TaobaoUsceslBindResult;
+  /**
+   * - {@link TaobaoWaimaiGrabOrderResult 淘宝点点 > 点点送抢单结果通知消息}
+   * - {@link TaobaoWaimaiOrderClose 淘宝点点 > 淘点点外卖订单关闭消息通知}
+   * - {@link TaobaoWaimaiOrderComplain 淘宝点点 > 点点送订单投诉}
+   * - {@link TaobaoWaimaiOrderComplainCancel 淘宝点点 > 点点送订单撤诉}
+   * - {@link TaobaoWaimaiOrderComplainResult 淘宝点点 > 点点送订单投诉结果}
+   * - {@link TaobaoWaimaiOrderDispatch 淘宝点点 > 点点送订单通知消息}
+   * - {@link TaobaoWaimaiOrderDispatchSimple 淘宝点点 > 点点送派单通知}
+   * - {@link TaobaoWaimaiOrderPush 淘宝点点 > 点点送接单广播通知消息}
+   * - {@link TaobaoWaimaiOrderRemind 淘宝点点 > 点点送催单消息通知}
+   * - {@link TaobaoWaimaiOuterOrderDispatch 淘宝点点 > 点点送外部订单通知消息}
+   */
+  type TaobaoWaimai = TaobaoWaimaiGrabOrderResult
+    | TaobaoWaimaiOrderClose
+    | TaobaoWaimaiOrderComplain
+    | TaobaoWaimaiOrderComplainCancel
+    | TaobaoWaimaiOrderComplainResult
+    | TaobaoWaimaiOrderDispatch
+    | TaobaoWaimaiOrderDispatchSimple
+    | TaobaoWaimaiOrderPush
+    | TaobaoWaimaiOrderRemind
+    | TaobaoWaimaiOuterOrderDispatch;
+  /**
+   * - {@link TaobaoWisdomstoreRecognitionNotice 智慧门店下行消息 > 人脸抓拍识别消息}
+   * - {@link TaobaoWisdomstoreRecognitionPush 智慧门店下行消息 > 人脸识别结果回传ISV}
+   */
+  type TaobaoWisdomstore = TaobaoWisdomstoreRecognitionNotice
+    | TaobaoWisdomstoreRecognitionPush;
+  /**
+   * - {@link TaobaoXianyuRentalItemReturnCanceled 闲鱼 > 买家取消预约归还}
+   * - {@link TaobaoXianyuRentalItemReturnReserved 闲鱼 > 买家预约上门取件}
+   * - {@link TaobaoXianyuRentalOrderCanceled 闲鱼 > 租赁订单取消}
+   * - {@link TaobaoXianyuRentalOrderCreated 闲鱼 > 租赁订单创建}
+   */
+  type TaobaoXianyu = TaobaoXianyuRentalItemReturnCanceled
+    | TaobaoXianyuRentalItemReturnReserved
+    | TaobaoXianyuRentalOrderCanceled
+    | TaobaoXianyuRentalOrderCreated;
+  /**
+   * - {@link TaobaoXiaoweiMessage IOT-智能制造 > 获取推送消息}
+   */
+  type TaobaoXiaowei = TaobaoXiaoweiMessage;
+  /**
+   * - {@link TmallAliautoStepOrderPartConfirmed 天猫汽车 > 分阶段交易确认消息}
+   */
+  type TmallAliauto = TmallAliautoStepOrderPartConfirmed;
+  /**
+   * - {@link TmallAutoTradeModify 天猫汽车 > 天猫汽车交易订单开放}
+   * - {@link TmallAutoTwoWheelsReceiptCreate 天猫汽车 > 天猫二轮车服务工单创建开放}
+   */
+  type TmallAuto = TmallAutoTradeModify
+    | TmallAutoTwoWheelsReceiptCreate;
+  /**
+   * - {@link TmallCarContractSign 天猫汽车 > 合同签署消息}
+   * - {@link TmallCarFinanceMsg 天猫汽车 > 汽车金融消息}
+   */
+  type TmallCar = TmallCarContractSign
+    | TmallCarFinanceMsg;
+  /**
+   * - {@link TmallChannelApplyOrderChange 渠道中心API > 申请单变更消息}
+   * - {@link TmallChannelDeliverOrderChange 渠道中心API > 发货单消息变更}
+   * - {@link TmallChannelPurchaseOrderChange 渠道中心API > 采购单变更消息}
+   * - {@link TmallChannelStopOrderChange 渠道中心API > 停止发货单变更消息}
+   */
+  type TmallChannel = TmallChannelApplyOrderChange
+    | TmallChannelDeliverOrderChange
+    | TmallChannelPurchaseOrderChange
+    | TmallChannelStopOrderChange;
+  /**
+   * - {@link TmallFuwuAnomalyRecourse 天猫服务 > 天猫服务平台一键求助单消息队列}
+   * - {@link TmallFuwuAnomalyRecourseStatusUpdate 天猫服务 > 一键求助状态变更消息}
+   * - {@link TmallFuwuLogisticsInfoMessage 天猫服务 > 服务供应链物流业务消息}
+   * - {@link TmallFuwuServiceItemUpdate 天猫服务 > 服务商品信息变更消息}
+   * - {@link TmallFuwuServiceMonitorMessage 天猫服务 > 服务预警消息}
+   * - {@link TmallFuwuServiceStoreRegister 天猫服务 > 服务网点注册消息}
+   * - {@link TmallFuwuSettleAdjustmentStatusUpdate 天猫服务 > 单个结算调整单数据推送}
+   * - {@link TmallFuwuWorkcardContract 天猫服务 > 天猫服务履约合同单}
+   * - {@link TmallFuwuWorkcardInfo 天猫服务 > 天猫服务任务工单}
+   * - {@link TmallFuwuWorkcardStatusUpdate 天猫服务 > 天猫服务任务工单状态变更}
+   */
+  type TmallFuwu = TmallFuwuAnomalyRecourse
+    | TmallFuwuAnomalyRecourseStatusUpdate
+    | TmallFuwuLogisticsInfoMessage
+    | TmallFuwuServiceItemUpdate
+    | TmallFuwuServiceMonitorMessage
+    | TmallFuwuServiceStoreRegister
+    | TmallFuwuSettleAdjustmentStatusUpdate
+    | TmallFuwuWorkcardContract
+    | TmallFuwuWorkcardInfo
+    | TmallFuwuWorkcardStatusUpdate;
+  /**
+   * - {@link TmallMeiMemberRegister 天猫美妆 > 飞行入会消息}
+   * - {@link TmallMeiPointChange 天猫美妆 > 品牌积分变更通知}
+   */
+  type TmallMei = TmallMeiMemberRegister
+    | TmallMeiPointChange;
+  /**
+   * - {@link TmallNrtItemsToEasyHome 新零售终端上行消息 > 商品信息同步}
+   */
+  type TmallNrt = TmallNrtItemsToEasyHome;
+  /**
+   * - {@link TmallOmnichannelInventoryChange 聚石塔 > 商品库存变化}
+   * - {@link TmallOmnichannelInventoryZero 聚石塔 > 商品库存归零}
+   * - {@link TmallOmnichannelItemDescChange 聚石塔 > 商品描述变化}
+   * - {@link TmallOmnichannelItemDownShelf 聚石塔 > 商品下架}
+   * - {@link TmallOmnichannelItemImageChange 聚石塔 > 商品图片变化}
+   * - {@link TmallOmnichannelItemPriceChange 聚石塔 > 商品价格变更}
+   */
+  type TmallOmnichannel = TmallOmnichannelInventoryChange
+    | TmallOmnichannelInventoryZero
+    | TmallOmnichannelItemDescChange
+    | TmallOmnichannelItemDownShelf
+    | TmallOmnichannelItemImageChange
+    | TmallOmnichannelItemPriceChange;
+  /**
+   * - {@link TmallServicecenterTaskUpdate 天猫服务 > 天猫服务平台工单更新}
+   */
+  type TmallServicecenter = TmallServicecenterTaskUpdate;
+  /**
+   * - {@link TmallServiceplatformSignCreate 天猫服务 > 签到消息}
+   * - {@link TmallServiceplatformWorkerLeave 天猫服务 > 工人请假发送消息}
+   */
+  type TmallServiceplatform = TmallServiceplatformSignCreate
+    | TmallServiceplatformWorkerLeave;
+  /**
+   * - {@link TripHotelBottomPriceRuleChange 酒店商品消息api > 酒店商品底价加价商品加价规则消息通知}
+   * - {@link TripHotelHotelChange 酒店商品消息api > 飞猪卖家酒店实体变更消息同步}
+   * - {@link TripHotelRateChange 酒店商品消息api > 酒店rate信息变更}
+   * - {@link TripHotelRatePlanChange 酒店商品消息api > 酒店价格计划消息}
+   * - {@link TripHotelRoomChange 酒店商品消息api > room变更消息}
+   * - {@link TripHotelRoomTypeChange 酒店商品消息api > 酒店房型消息}
+   */
+  type TripHotel = TripHotelBottomPriceRuleChange
+    | TripHotelHotelChange
+    | TripHotelRateChange
+    | TripHotelRatePlanChange
+    | TripHotelRoomChange
+    | TripHotelRoomTypeChange;
+  /**
+   * - {@link WdkMarketOperateSkuError 五道口营销 > 营销操作错误消息}
+   * - {@link WdkMarketOperateSkuErrror 五道口营销 > 营销发布商品错误}
+   */
+  type WdkMarket = WdkMarketOperateSkuError
+    | WdkMarketOperateSkuErrror;
+  /**
+   * - {@link WdkOpenDataPublishError 五道口营销 > 五道口开放数据发布错误}
+   * - {@link WdkOpenDataRelation 五道口营销 > 五道口开放数据关联通知}
+   */
+  type WdkOpen = WdkOpenDataPublishError
+    | WdkOpenDataRelation;
+  /**
+   * - {@link XianyuAftersaleOrderSyn 闲鱼 > 闲鱼售后订单状态变更消息}
+   */
+  type XianyuAftersale = XianyuAftersaleOrderSyn;
+  /**
+   * - {@link XianyuAppraiseOrderSyn 闲鱼 > 验货担保订单状态同步回收商}
+   */
+  type XianyuAppraise = XianyuAppraiseOrderSyn;
+  /**
+   * - {@link XianyuCarOrderStatusSync 闲鱼回收商消息 > 闲鱼二手车寄卖订单状态同步}
+   */
+  type XianyuCar = XianyuCarOrderStatusSync;
+  /**
+   * - {@link XianyuRecycleOrderStatusSync 闲鱼 > 订单状态同步给回收商}
+   * - {@link XianyuRecycleSpuModifySync 闲鱼 > 闲鱼回收SPU变更消息}
+   */
+  type XianyuRecycle = XianyuRecycleOrderStatusSync
+    | XianyuRecycleSpuModifySync;
+  /**
+   * - {@link XianyuTemplateQuesChange 闲鱼 > 闲鱼问卷变更}
+   * - {@link XianyuTemplateStatusChange 闲鱼 > 闲鱼问卷状态变更消息}
+   */
+  type XianyuTemplate = XianyuTemplateQuesChange
+    | XianyuTemplateStatusChange;
+  /**
+   * - {@link XianyuTenderOrderSyn 闲鱼 > 省心卖-暗拍项目订单消息}
+   */
+  type XianyuTender = XianyuTenderOrderSyn;
+  /**
+   * - {@link YoukuTvosappstoreAppStatusChange TVOS应用审核平台 > TVOS审核平台应用状态变更通知消息}
+   */
+  type YoukuTvosappstore = YoukuTvosappstoreAppStatusChange;
+  /**
+   * - {@link YunosYocDatapoolSandbox YunOS YoC > YunOS YoC datapool 沙箱环境}
+   * - {@link YunosYocMessageService YunOS YoC > yoc消息服务}
+   */
+  type YunosYoc = YunosYocDatapoolSandbox
+    | YunosYocMessageService;
+  /**
+   * - {@link AlibabaAdlab}
+   * - {@link AlibabaAlicom}
+   * - {@link AlibabaAlihealth}
+   * - {@link AlibabaAlink}
+   * - {@link AlibabaAliqin}
+   * - {@link AlibabaEinvoice}
+   * - {@link AlibabaFuwu}
+   * - {@link AlibabaHappytrip}
+   * - {@link AlibabaInvoice}
+   * - {@link AlibabaLst}
+   * - {@link AlibabaMmc}
+   * - {@link AlibabaMonitor}
+   * - {@link AlibabaMos}
+   * - {@link AlibabaNazca}
+   * - {@link AlibabaNlife}
+   * - {@link AlibabaServiceplatform}
+   * - {@link AlibabaSp}
+   * - {@link AlibabaTax}
+   * - {@link AlibabaTianji}
+   * - {@link AlibabaWdk}
+   * - {@link AlibabaWdkitem}
+   * - {@link AlibabaWdkop}
+   * - {@link AlibabaWdkopen}
+   * - {@link AlibabaWdkorder}
+   * - {@link AlibabaWdktrade}
+   * - {@link AlibabaYunio}
+   */
+  type Alibaba = AlibabaAdlab
+    | AlibabaAlicom
+    | AlibabaAlihealth
+    | AlibabaAlink
+    | AlibabaAliqin
+    | AlibabaEinvoice
+    | AlibabaFuwu
+    | AlibabaHappytrip
+    | AlibabaInvoice
+    | AlibabaLst
+    | AlibabaMmc
+    | AlibabaMonitor
+    | AlibabaMos
+    | AlibabaNazca
+    | AlibabaNlife
+    | AlibabaServiceplatform
+    | AlibabaSp
+    | AlibabaTax
+    | AlibabaTianji
+    | AlibabaWdk
+    | AlibabaWdkitem
+    | AlibabaWdkop
+    | AlibabaWdkopen
+    | AlibabaWdkorder
+    | AlibabaWdktrade
+    | AlibabaYunio;
+  /**
+   * - {@link AlicomAxb}
+   */
+  type Alicom = AlicomAxb;
+  /**
+   * - {@link AliexpressAeia}
+   * - {@link AliexpressOrder}
+   */
+  type Aliexpress = AliexpressAeia
+    | AliexpressOrder;
+  /**
+   * - {@link AlihealthCep}
+   * - {@link AlihealthYs}
+   */
+  type Alihealth = AlihealthCep
+    | AlihealthYs;
+  /**
+   * - {@link AlitripAgent}
+   * - {@link AlitripBtrip}
+   * - {@link AlitripFlight}
+   * - {@link AlitripIesr}
+   * - {@link AlitripIetrade}
+   * - {@link AlitripTrain}
+   * - {@link AlitripTravel}
+   * - {@link AlitripTripticket}
+   * - {@link AlitripVisa}
+   */
+  type Alitrip = AlitripAgent
+    | AlitripBtrip
+    | AlitripFlight
+    | AlitripIesr
+    | AlitripIetrade
+    | AlitripTrain
+    | AlitripTravel
+    | AlitripTripticket
+    | AlitripVisa;
+  /**
+   * - {@link AliyunIot}
+   */
+  type Aliyun = AliyunIot;
+  /**
+   * - {@link BanmaRight}
+   */
+  type Banma = BanmaRight;
+  /**
+   * - {@link CainiaoConsignplatform}
+   * - {@link CainiaoIot}
+   */
+  type Cainiao = CainiaoConsignplatform
+    | CainiaoIot;
+  /**
+   * - {@link DamaiDistribution}
+   * - {@link DamaiTrade}
+   */
+  type Damai = DamaiDistribution
+    | DamaiTrade;
+  /**
+   * - {@link FliggyBtrip}
+   * - {@link FliggyJipiao}
+   * - {@link FliggyTicket}
+   */
+  type Fliggy = FliggyBtrip
+    | FliggyJipiao
+    | FliggyTicket;
+  /**
+   * - {@link FuwuConfirm}
+   */
+  type Fuwu = FuwuConfirm;
+  /**
+   * - {@link GovAuction}
+   */
+  type Gov = GovAuction;
+  /**
+   * - {@link IdleAgreement}
+   * - {@link IdleAppraiseisv}
+   * - {@link IdleConsignment}
+   * - {@link IdleConsignmentii}
+   * - {@link IdleRecycle}
+   * - {@link IdleTopisv}
+   * - {@link IdleTranferpay}
+   */
+  type Idle = IdleAgreement
+    | IdleAppraiseisv
+    | IdleConsignment
+    | IdleConsignmentii
+    | IdleRecycle
+    | IdleTopisv
+    | IdleTranferpay;
+  /**
+   * - {@link JaeTrade}
+   */
+  type Jae = JaeTrade;
+  /**
+   * - {@link LstSupplier}
+   */
+  type Lst = LstSupplier;
+  /**
+   * - {@link TaobaoAg}
+   * - {@link TaobaoAps}
+   * - {@link TaobaoAxin}
+   * - {@link TaobaoBaichuan}
+   * - {@link TaobaoBmc}
+   * - {@link TaobaoBus}
+   * - {@link TaobaoCarlease}
+   * - {@link TaobaoDaifa}
+   * - {@link TaobaoDd}
+   * - {@link TaobaoDiandian}
+   * - {@link TaobaoDpaas}
+   * - {@link TaobaoEinvoice}
+   * - {@link TaobaoFenxiao}
+   * - {@link TaobaoFliggy}
+   * - {@link TaobaoFuwu}
+   * - {@link TaobaoGlobalbuys}
+   * - {@link TaobaoHomeai}
+   * - {@link TaobaoHotel}
+   * - {@link TaobaoIstore}
+   * - {@link TaobaoItem}
+   * - {@link TaobaoJipiao}
+   * - {@link TaobaoLogistics}
+   * - {@link TaobaoModifyaddress}
+   * - {@link TaobaoModifyorder}
+   * - {@link TaobaoModifysku}
+   * - {@link TaobaoOc}
+   * - {@link TaobaoOpenaccount}
+   * - {@link TaobaoOpencrm}
+   * - {@link TaobaoOpenim}
+   * - {@link TaobaoOpenmall}
+   * - {@link TaobaoRdcaligenius}
+   * - {@link TaobaoRecycle}
+   * - {@link TaobaoRefund}
+   * - {@link TaobaoRhino}
+   * - {@link TaobaoTae}
+   * - {@link TaobaoTop}
+   * - {@link TaobaoTopats}
+   * - {@link TaobaoTrade}
+   * - {@link TaobaoTrain}
+   * - {@link TaobaoUscesl}
+   * - {@link TaobaoWaimai}
+   * - {@link TaobaoWisdomstore}
+   * - {@link TaobaoXianyu}
+   * - {@link TaobaoXiaowei}
+   */
+  type Taobao = TaobaoAg
+    | TaobaoAps
+    | TaobaoAxin
+    | TaobaoBaichuan
+    | TaobaoBmc
+    | TaobaoBus
+    | TaobaoCarlease
+    | TaobaoDaifa
+    | TaobaoDd
+    | TaobaoDiandian
+    | TaobaoDpaas
+    | TaobaoEinvoice
+    | TaobaoFenxiao
+    | TaobaoFliggy
+    | TaobaoFuwu
+    | TaobaoGlobalbuys
+    | TaobaoHomeai
+    | TaobaoHotel
+    | TaobaoIstore
+    | TaobaoItem
+    | TaobaoJipiao
+    | TaobaoLogistics
+    | TaobaoModifyaddress
+    | TaobaoModifyorder
+    | TaobaoModifysku
+    | TaobaoOc
+    | TaobaoOpenaccount
+    | TaobaoOpencrm
+    | TaobaoOpenim
+    | TaobaoOpenmall
+    | TaobaoRdcaligenius
+    | TaobaoRecycle
+    | TaobaoRefund
+    | TaobaoRhino
+    | TaobaoTae
+    | TaobaoTop
+    | TaobaoTopats
+    | TaobaoTrade
+    | TaobaoTrain
+    | TaobaoUscesl
+    | TaobaoWaimai
+    | TaobaoWisdomstore
+    | TaobaoXianyu
+    | TaobaoXiaowei;
+  /**
+   * - {@link TmallAliauto}
+   * - {@link TmallAuto}
+   * - {@link TmallCar}
+   * - {@link TmallChannel}
+   * - {@link TmallFuwu}
+   * - {@link TmallMei}
+   * - {@link TmallNrt}
+   * - {@link TmallOmnichannel}
+   * - {@link TmallServicecenter}
+   * - {@link TmallServiceplatform}
+   */
+  type Tmall = TmallAliauto
+    | TmallAuto
+    | TmallCar
+    | TmallChannel
+    | TmallFuwu
+    | TmallMei
+    | TmallNrt
+    | TmallOmnichannel
+    | TmallServicecenter
+    | TmallServiceplatform;
+  /**
+   * - {@link TripHotel}
+   */
+  type Trip = TripHotel;
+  /**
+   * - {@link WdkMarket}
+   * - {@link WdkOpen}
+   */
+  type Wdk = WdkMarket
+    | WdkOpen;
+  /**
+   * - {@link XianyuAftersale}
+   * - {@link XianyuAppraise}
+   * - {@link XianyuCar}
+   * - {@link XianyuRecycle}
+   * - {@link XianyuTemplate}
+   * - {@link XianyuTender}
+   */
+  type Xianyu = XianyuAftersale
+    | XianyuAppraise
+    | XianyuCar
+    | XianyuRecycle
+    | XianyuTemplate
+    | XianyuTender;
+  /**
+   * - {@link YoukuTvosappstore}
+   */
+  type Youku = YoukuTvosappstore;
+  /**
+   * - {@link YunosYoc}
+   */
+  type Yunos = YunosYoc;
 }

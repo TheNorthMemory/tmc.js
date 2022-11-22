@@ -21,6 +21,8 @@ declare interface ConsumerOptions {
   autoParseContentJson?: boolean;
   /** @default true */
   autoReplyConfirmation?: boolean;
+  /** @default true @since v0.3.6 */
+  autoGroupedEmitting?: boolean;
 }
 
 declare interface TaoMessageConstractor extends EventEmitter {
@@ -34,7 +36,7 @@ declare interface TaoMessageConstractor extends EventEmitter {
   onpull(): void;
   onping(data: Buffer): void;
   onerror(err: Error): void;
-  onclose(): void;
+  onclose(code: number, reason: Buffer): void;
   onmessage(data: Buffer, isBinary: boolean): void;
   process0(): void;
   process1(msg: Message): void;
@@ -886,6 +888,300 @@ declare interface TaoTopicsDescriptor {
   yunos_yoc_DatapoolSandbox(fn: (this: TaoMessageConsumer, message: IncomingMessage.YunosYocDatapoolSandbox) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.YunosYocMessageService YunOS YoC > yoc消息服务} */
   yunos_yoc_MessageService(fn: (this: TaoMessageConsumer, message: IncomingMessage.YunosYocMessageService) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaAdlab} */
+  alibaba_adlab(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAdlab) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaAlicom} */
+  alibaba_alicom(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlicom) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaAlihealth} */
+  alibaba_alihealth(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealth) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaAlink} */
+  alibaba_alink(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlink) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaAliqin} */
+  alibaba_aliqin(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAliqin) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaEinvoice} */
+  alibaba_einvoice(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaEinvoice) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaFuwu} */
+  alibaba_fuwu(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaFuwu) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaHappytrip} */
+  alibaba_happytrip(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHappytrip) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaInvoice} */
+  alibaba_invoice(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaInvoice) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaLst} */
+  alibaba_lst(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaLst) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaMmc} */
+  alibaba_mmc(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMmc) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaMonitor} */
+  alibaba_monitor(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMonitor) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaMos} */
+  alibaba_mos(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMos) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaNazca} */
+  alibaba_nazca(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaNazca) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaNlife} */
+  alibaba_nlife(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaNlife) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaServiceplatform} */
+  alibaba_serviceplatform(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaServiceplatform) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaSp} */
+  alibaba_sp(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaSp) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaTax} */
+  alibaba_tax(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaTax) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaTianji} */
+  alibaba_tianji(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaTianji) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaWdk} */
+  alibaba_wdk(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdk) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaWdkitem} */
+  alibaba_wdkitem(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkitem) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaWdkop} */
+  alibaba_wdkop(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkop) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaWdkopen} */
+  alibaba_wdkopen(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkopen) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaWdkorder} */
+  alibaba_wdkorder(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkorder) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaWdktrade} */
+  alibaba_wdktrade(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdktrade) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaYunio} */
+  alibaba_yunio(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaYunio) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlicomAxb} */
+  alicom_axb(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlicomAxb) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AliexpressAeia} */
+  aliexpress_aeia(fn: (this: TaoMessageConsumer, message: IncomingMessage.AliexpressAeia) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AliexpressOrder} */
+  aliexpress_order(fn: (this: TaoMessageConsumer, message: IncomingMessage.AliexpressOrder) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlihealthCep} */
+  alihealth_cep(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlihealthCep) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlihealthYs} */
+  alihealth_ys(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlihealthYs) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlitripAgent} */
+  alitrip_agent(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlitripAgent) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlitripBtrip} */
+  alitrip_btrip(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlitripBtrip) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlitripFlight} */
+  alitrip_flight(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlitripFlight) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlitripIesr} */
+  alitrip_iesr(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlitripIesr) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlitripIetrade} */
+  alitrip_ietrade(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlitripIetrade) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlitripTrain} */
+  alitrip_train(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlitripTrain) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlitripTravel} */
+  alitrip_travel(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlitripTravel) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlitripTripticket} */
+  alitrip_tripticket(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlitripTripticket) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlitripVisa} */
+  alitrip_visa(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlitripVisa) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AliyunIot} */
+  aliyun_iot(fn: (this: TaoMessageConsumer, message: IncomingMessage.AliyunIot) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.BanmaRight} */
+  banma_right(fn: (this: TaoMessageConsumer, message: IncomingMessage.BanmaRight) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.CainiaoConsignplatform} */
+  cainiao_consignplatform(fn: (this: TaoMessageConsumer, message: IncomingMessage.CainiaoConsignplatform) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.CainiaoIot} */
+  cainiao_iot(fn: (this: TaoMessageConsumer, message: IncomingMessage.CainiaoIot) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.DamaiDistribution} */
+  damai_distribution(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistribution) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.DamaiTrade} */
+  damai_trade(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiTrade) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FliggyBtrip} */
+  fliggy_btrip(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyBtrip) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FliggyJipiao} */
+  fliggy_jipiao(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyJipiao) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FliggyTicket} */
+  fliggy_ticket(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTicket) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FuwuConfirm} */
+  fuwu_confirm(fn: (this: TaoMessageConsumer, message: IncomingMessage.FuwuConfirm) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.GovAuction} */
+  gov_auction(fn: (this: TaoMessageConsumer, message: IncomingMessage.GovAuction) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleAgreement} */
+  idle_agreement(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleAgreement) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleAppraiseisv} */
+  idle_appraiseisv(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleAppraiseisv) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleConsignment} */
+  idle_consignment(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleConsignment) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleConsignmentii} */
+  idle_consignmentii(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleConsignmentii) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleRecycle} */
+  idle_recycle(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleRecycle) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleTopisv} */
+  idle_topisv(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleTopisv) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleTranferpay} */
+  idle_tranferpay(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleTranferpay) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.JaeTrade} */
+  jae_trade(fn: (this: TaoMessageConsumer, message: IncomingMessage.JaeTrade) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.LstSupplier} */
+  lst_supplier(fn: (this: TaoMessageConsumer, message: IncomingMessage.LstSupplier) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoAg} */
+  taobao_ag(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAg) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoAps} */
+  taobao_aps(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAps) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoAxin} */
+  taobao_axin(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAxin) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoBaichuan} */
+  taobao_baichuan(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoBaichuan) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoBmc} */
+  taobao_bmc(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoBmc) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoBus} */
+  taobao_bus(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoBus) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoCarlease} */
+  taobao_carlease(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoCarlease) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDaifa} */
+  taobao_daifa(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDaifa) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDd} */
+  taobao_dd(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDd) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDiandian} */
+  taobao_diandian(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDiandian) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDpaas} */
+  taobao_dpaas(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDpaas) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoEinvoice} */
+  taobao_einvoice(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoEinvoice) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoFenxiao} */
+  taobao_fenxiao(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFenxiao) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoFliggy} */
+  taobao_fliggy(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFliggy) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoFuwu} */
+  taobao_fuwu(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFuwu) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoGlobalbuys} */
+  taobao_globalbuys(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoGlobalbuys) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoHomeai} */
+  taobao_homeai(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoHomeai) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoHotel} */
+  taobao_hotel(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoHotel) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoIstore} */
+  taobao_istore(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoIstore) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoItem} */
+  taobao_item(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItem) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoJipiao} */
+  taobao_jipiao(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJipiao) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoLogistics} */
+  taobao_logistics(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLogistics) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoModifyaddress} */
+  taobao_modifyaddress(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoModifyaddress) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoModifyorder} */
+  taobao_modifyorder(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoModifyorder) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoModifysku} */
+  taobao_modifysku(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoModifysku) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOc} */
+  taobao_oc(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOc) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOpenaccount} */
+  taobao_openaccount(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpenaccount) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOpencrm} */
+  taobao_opencrm(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrm) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOpenim} */
+  taobao_openim(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpenim) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOpenmall} */
+  taobao_openmall(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpenmall) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoRdcaligenius} */
+  taobao_rdcaligenius(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRdcaligenius) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoRecycle} */
+  taobao_recycle(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRecycle) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoRefund} */
+  taobao_refund(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRefund) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoRhino} */
+  taobao_rhino(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRhino) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoTae} */
+  taobao_tae(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTae) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoTop} */
+  taobao_top(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTop) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoTopats} */
+  taobao_topats(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTopats) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoTrade} */
+  taobao_trade(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTrade) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoTrain} */
+  taobao_train(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTrain) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoUscesl} */
+  taobao_uscesl(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoUscesl) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoWaimai} */
+  taobao_waimai(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWaimai) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoWisdomstore} */
+  taobao_wisdomstore(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWisdomstore) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoXianyu} */
+  taobao_xianyu(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoXianyu) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoXiaowei} */
+  taobao_xiaowei(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoXiaowei) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallAliauto} */
+  tmall_aliauto(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallAliauto) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallAuto} */
+  tmall_auto(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallAuto) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallCar} */
+  tmall_car(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallCar) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallChannel} */
+  tmall_channel(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallChannel) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallFuwu} */
+  tmall_fuwu(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwu) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallMei} */
+  tmall_mei(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallMei) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallNrt} */
+  tmall_nrt(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallNrt) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallOmnichannel} */
+  tmall_omnichannel(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallOmnichannel) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallServicecenter} */
+  tmall_servicecenter(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallServicecenter) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallServiceplatform} */
+  tmall_serviceplatform(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallServiceplatform) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TripHotel} */
+  trip_hotel(fn: (this: TaoMessageConsumer, message: IncomingMessage.TripHotel) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.WdkMarket} */
+  wdk_market(fn: (this: TaoMessageConsumer, message: IncomingMessage.WdkMarket) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.WdkOpen} */
+  wdk_open(fn: (this: TaoMessageConsumer, message: IncomingMessage.WdkOpen) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.XianyuAftersale} */
+  xianyu_aftersale(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuAftersale) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.XianyuAppraise} */
+  xianyu_appraise(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuAppraise) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.XianyuCar} */
+  xianyu_car(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCar) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.XianyuRecycle} */
+  xianyu_recycle(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuRecycle) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.XianyuTemplate} */
+  xianyu_template(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuTemplate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.XianyuTender} */
+  xianyu_tender(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuTender) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.YoukuTvosappstore} */
+  youku_tvosappstore(fn: (this: TaoMessageConsumer, message: IncomingMessage.YoukuTvosappstore) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.YunosYoc} */
+  yunos_yoc(fn: (this: TaoMessageConsumer, message: IncomingMessage.YunosYoc) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Alibaba} */
+  alibaba(fn: (this: TaoMessageConsumer, message: IncomingMessage.Alibaba) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Alicom} */
+  alicom(fn: (this: TaoMessageConsumer, message: IncomingMessage.Alicom) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Aliexpress} */
+  aliexpress(fn: (this: TaoMessageConsumer, message: IncomingMessage.Aliexpress) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Alihealth} */
+  alihealth(fn: (this: TaoMessageConsumer, message: IncomingMessage.Alihealth) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Alitrip} */
+  alitrip(fn: (this: TaoMessageConsumer, message: IncomingMessage.Alitrip) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Aliyun} */
+  aliyun(fn: (this: TaoMessageConsumer, message: IncomingMessage.Aliyun) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Banma} */
+  banma(fn: (this: TaoMessageConsumer, message: IncomingMessage.Banma) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Cainiao} */
+  cainiao(fn: (this: TaoMessageConsumer, message: IncomingMessage.Cainiao) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Damai} */
+  damai(fn: (this: TaoMessageConsumer, message: IncomingMessage.Damai) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Fliggy} */
+  fliggy(fn: (this: TaoMessageConsumer, message: IncomingMessage.Fliggy) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Fuwu} */
+  fuwu(fn: (this: TaoMessageConsumer, message: IncomingMessage.Fuwu) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Gov} */
+  gov(fn: (this: TaoMessageConsumer, message: IncomingMessage.Gov) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Idle} */
+  idle(fn: (this: TaoMessageConsumer, message: IncomingMessage.Idle) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Jae} */
+  jae(fn: (this: TaoMessageConsumer, message: IncomingMessage.Jae) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Lst} */
+  lst(fn: (this: TaoMessageConsumer, message: IncomingMessage.Lst) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Taobao} */
+  taobao(fn: (this: TaoMessageConsumer, message: IncomingMessage.Taobao) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Tmall} */
+  tmall(fn: (this: TaoMessageConsumer, message: IncomingMessage.Tmall) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Trip} */
+  trip(fn: (this: TaoMessageConsumer, message: IncomingMessage.Trip) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Wdk} */
+  wdk(fn: (this: TaoMessageConsumer, message: IncomingMessage.Wdk) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Xianyu} */
+  xianyu(fn: (this: TaoMessageConsumer, message: IncomingMessage.Xianyu) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Youku} */
+  youku(fn: (this: TaoMessageConsumer, message: IncomingMessage.Youku) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Yunos} */
+  yunos(fn: (this: TaoMessageConsumer, message: IncomingMessage.Yunos) => void): TaoMessageConsumer;
 }
 
 declare interface TaoEventsListener {
@@ -1715,6 +2011,300 @@ declare interface TaoEventsListener {
   on(topic: 'yunos_yoc_DatapoolSandbox', listener: (this: TaoMessageConsumer, message: IncomingMessage.YunosYocDatapoolSandbox) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.YunosYocMessageService YunOS YoC > yoc消息服务} */
   on(topic: 'yunos_yoc_MessageService', listener: (this: TaoMessageConsumer, message: IncomingMessage.YunosYocMessageService) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaAdlab} */
+  on(topic: 'alibaba_adlab', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAdlab) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaAlicom} */
+  on(topic: 'alibaba_alicom', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlicom) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaAlihealth} */
+  on(topic: 'alibaba_alihealth', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealth) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaAlink} */
+  on(topic: 'alibaba_alink', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlink) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaAliqin} */
+  on(topic: 'alibaba_aliqin', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAliqin) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaEinvoice} */
+  on(topic: 'alibaba_einvoice', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaEinvoice) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaFuwu} */
+  on(topic: 'alibaba_fuwu', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaFuwu) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaHappytrip} */
+  on(topic: 'alibaba_happytrip', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHappytrip) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaInvoice} */
+  on(topic: 'alibaba_invoice', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaInvoice) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaLst} */
+  on(topic: 'alibaba_lst', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaLst) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaMmc} */
+  on(topic: 'alibaba_mmc', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMmc) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaMonitor} */
+  on(topic: 'alibaba_monitor', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMonitor) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaMos} */
+  on(topic: 'alibaba_mos', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMos) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaNazca} */
+  on(topic: 'alibaba_nazca', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaNazca) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaNlife} */
+  on(topic: 'alibaba_nlife', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaNlife) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaServiceplatform} */
+  on(topic: 'alibaba_serviceplatform', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaServiceplatform) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaSp} */
+  on(topic: 'alibaba_sp', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaSp) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaTax} */
+  on(topic: 'alibaba_tax', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaTax) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaTianji} */
+  on(topic: 'alibaba_tianji', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaTianji) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaWdk} */
+  on(topic: 'alibaba_wdk', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdk) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaWdkitem} */
+  on(topic: 'alibaba_wdkitem', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkitem) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaWdkop} */
+  on(topic: 'alibaba_wdkop', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkop) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaWdkopen} */
+  on(topic: 'alibaba_wdkopen', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkopen) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaWdkorder} */
+  on(topic: 'alibaba_wdkorder', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkorder) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaWdktrade} */
+  on(topic: 'alibaba_wdktrade', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdktrade) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaYunio} */
+  on(topic: 'alibaba_yunio', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaYunio) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlicomAxb} */
+  on(topic: 'alicom_axb', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlicomAxb) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AliexpressAeia} */
+  on(topic: 'aliexpress_aeia', listener: (this: TaoMessageConsumer, message: IncomingMessage.AliexpressAeia) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AliexpressOrder} */
+  on(topic: 'aliexpress_order', listener: (this: TaoMessageConsumer, message: IncomingMessage.AliexpressOrder) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlihealthCep} */
+  on(topic: 'alihealth_cep', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlihealthCep) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlihealthYs} */
+  on(topic: 'alihealth_ys', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlihealthYs) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlitripAgent} */
+  on(topic: 'alitrip_agent', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlitripAgent) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlitripBtrip} */
+  on(topic: 'alitrip_btrip', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlitripBtrip) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlitripFlight} */
+  on(topic: 'alitrip_flight', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlitripFlight) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlitripIesr} */
+  on(topic: 'alitrip_iesr', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlitripIesr) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlitripIetrade} */
+  on(topic: 'alitrip_ietrade', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlitripIetrade) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlitripTrain} */
+  on(topic: 'alitrip_train', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlitripTrain) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlitripTravel} */
+  on(topic: 'alitrip_travel', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlitripTravel) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlitripTripticket} */
+  on(topic: 'alitrip_tripticket', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlitripTripticket) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlitripVisa} */
+  on(topic: 'alitrip_visa', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlitripVisa) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AliyunIot} */
+  on(topic: 'aliyun_iot', listener: (this: TaoMessageConsumer, message: IncomingMessage.AliyunIot) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.BanmaRight} */
+  on(topic: 'banma_right', listener: (this: TaoMessageConsumer, message: IncomingMessage.BanmaRight) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.CainiaoConsignplatform} */
+  on(topic: 'cainiao_consignplatform', listener: (this: TaoMessageConsumer, message: IncomingMessage.CainiaoConsignplatform) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.CainiaoIot} */
+  on(topic: 'cainiao_iot', listener: (this: TaoMessageConsumer, message: IncomingMessage.CainiaoIot) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.DamaiDistribution} */
+  on(topic: 'damai_distribution', listener: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistribution) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.DamaiTrade} */
+  on(topic: 'damai_trade', listener: (this: TaoMessageConsumer, message: IncomingMessage.DamaiTrade) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FliggyBtrip} */
+  on(topic: 'fliggy_btrip', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyBtrip) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FliggyJipiao} */
+  on(topic: 'fliggy_jipiao', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyJipiao) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FliggyTicket} */
+  on(topic: 'fliggy_ticket', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTicket) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FuwuConfirm} */
+  on(topic: 'fuwu_confirm', listener: (this: TaoMessageConsumer, message: IncomingMessage.FuwuConfirm) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.GovAuction} */
+  on(topic: 'gov_auction', listener: (this: TaoMessageConsumer, message: IncomingMessage.GovAuction) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleAgreement} */
+  on(topic: 'idle_agreement', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleAgreement) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleAppraiseisv} */
+  on(topic: 'idle_appraiseisv', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleAppraiseisv) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleConsignment} */
+  on(topic: 'idle_consignment', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleConsignment) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleConsignmentii} */
+  on(topic: 'idle_consignmentii', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleConsignmentii) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleRecycle} */
+  on(topic: 'idle_recycle', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleRecycle) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleTopisv} */
+  on(topic: 'idle_topisv', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleTopisv) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleTranferpay} */
+  on(topic: 'idle_tranferpay', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleTranferpay) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.JaeTrade} */
+  on(topic: 'jae_trade', listener: (this: TaoMessageConsumer, message: IncomingMessage.JaeTrade) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.LstSupplier} */
+  on(topic: 'lst_supplier', listener: (this: TaoMessageConsumer, message: IncomingMessage.LstSupplier) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoAg} */
+  on(topic: 'taobao_ag', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAg) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoAps} */
+  on(topic: 'taobao_aps', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAps) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoAxin} */
+  on(topic: 'taobao_axin', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAxin) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoBaichuan} */
+  on(topic: 'taobao_baichuan', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoBaichuan) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoBmc} */
+  on(topic: 'taobao_bmc', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoBmc) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoBus} */
+  on(topic: 'taobao_bus', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoBus) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoCarlease} */
+  on(topic: 'taobao_carlease', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoCarlease) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDaifa} */
+  on(topic: 'taobao_daifa', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDaifa) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDd} */
+  on(topic: 'taobao_dd', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDd) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDiandian} */
+  on(topic: 'taobao_diandian', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDiandian) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDpaas} */
+  on(topic: 'taobao_dpaas', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDpaas) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoEinvoice} */
+  on(topic: 'taobao_einvoice', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoEinvoice) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoFenxiao} */
+  on(topic: 'taobao_fenxiao', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFenxiao) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoFliggy} */
+  on(topic: 'taobao_fliggy', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFliggy) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoFuwu} */
+  on(topic: 'taobao_fuwu', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFuwu) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoGlobalbuys} */
+  on(topic: 'taobao_globalbuys', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoGlobalbuys) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoHomeai} */
+  on(topic: 'taobao_homeai', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoHomeai) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoHotel} */
+  on(topic: 'taobao_hotel', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoHotel) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoIstore} */
+  on(topic: 'taobao_istore', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoIstore) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoItem} */
+  on(topic: 'taobao_item', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItem) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoJipiao} */
+  on(topic: 'taobao_jipiao', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJipiao) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoLogistics} */
+  on(topic: 'taobao_logistics', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLogistics) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoModifyaddress} */
+  on(topic: 'taobao_modifyaddress', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoModifyaddress) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoModifyorder} */
+  on(topic: 'taobao_modifyorder', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoModifyorder) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoModifysku} */
+  on(topic: 'taobao_modifysku', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoModifysku) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOc} */
+  on(topic: 'taobao_oc', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOc) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOpenaccount} */
+  on(topic: 'taobao_openaccount', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpenaccount) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOpencrm} */
+  on(topic: 'taobao_opencrm', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrm) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOpenim} */
+  on(topic: 'taobao_openim', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpenim) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOpenmall} */
+  on(topic: 'taobao_openmall', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpenmall) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoRdcaligenius} */
+  on(topic: 'taobao_rdcaligenius', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRdcaligenius) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoRecycle} */
+  on(topic: 'taobao_recycle', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRecycle) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoRefund} */
+  on(topic: 'taobao_refund', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRefund) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoRhino} */
+  on(topic: 'taobao_rhino', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRhino) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoTae} */
+  on(topic: 'taobao_tae', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTae) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoTop} */
+  on(topic: 'taobao_top', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTop) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoTopats} */
+  on(topic: 'taobao_topats', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTopats) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoTrade} */
+  on(topic: 'taobao_trade', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTrade) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoTrain} */
+  on(topic: 'taobao_train', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTrain) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoUscesl} */
+  on(topic: 'taobao_uscesl', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoUscesl) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoWaimai} */
+  on(topic: 'taobao_waimai', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWaimai) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoWisdomstore} */
+  on(topic: 'taobao_wisdomstore', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWisdomstore) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoXianyu} */
+  on(topic: 'taobao_xianyu', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoXianyu) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoXiaowei} */
+  on(topic: 'taobao_xiaowei', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoXiaowei) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallAliauto} */
+  on(topic: 'tmall_aliauto', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallAliauto) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallAuto} */
+  on(topic: 'tmall_auto', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallAuto) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallCar} */
+  on(topic: 'tmall_car', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallCar) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallChannel} */
+  on(topic: 'tmall_channel', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallChannel) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallFuwu} */
+  on(topic: 'tmall_fuwu', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwu) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallMei} */
+  on(topic: 'tmall_mei', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallMei) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallNrt} */
+  on(topic: 'tmall_nrt', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallNrt) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallOmnichannel} */
+  on(topic: 'tmall_omnichannel', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallOmnichannel) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallServicecenter} */
+  on(topic: 'tmall_servicecenter', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallServicecenter) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallServiceplatform} */
+  on(topic: 'tmall_serviceplatform', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallServiceplatform) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TripHotel} */
+  on(topic: 'trip_hotel', listener: (this: TaoMessageConsumer, message: IncomingMessage.TripHotel) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.WdkMarket} */
+  on(topic: 'wdk_market', listener: (this: TaoMessageConsumer, message: IncomingMessage.WdkMarket) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.WdkOpen} */
+  on(topic: 'wdk_open', listener: (this: TaoMessageConsumer, message: IncomingMessage.WdkOpen) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.XianyuAftersale} */
+  on(topic: 'xianyu_aftersale', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuAftersale) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.XianyuAppraise} */
+  on(topic: 'xianyu_appraise', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuAppraise) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.XianyuCar} */
+  on(topic: 'xianyu_car', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCar) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.XianyuRecycle} */
+  on(topic: 'xianyu_recycle', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuRecycle) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.XianyuTemplate} */
+  on(topic: 'xianyu_template', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuTemplate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.XianyuTender} */
+  on(topic: 'xianyu_tender', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuTender) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.YoukuTvosappstore} */
+  on(topic: 'youku_tvosappstore', listener: (this: TaoMessageConsumer, message: IncomingMessage.YoukuTvosappstore) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.YunosYoc} */
+  on(topic: 'yunos_yoc', listener: (this: TaoMessageConsumer, message: IncomingMessage.YunosYoc) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Alibaba} */
+  on(topic: 'alibaba', listener: (this: TaoMessageConsumer, message: IncomingMessage.Alibaba) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Alicom} */
+  on(topic: 'alicom', listener: (this: TaoMessageConsumer, message: IncomingMessage.Alicom) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Aliexpress} */
+  on(topic: 'aliexpress', listener: (this: TaoMessageConsumer, message: IncomingMessage.Aliexpress) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Alihealth} */
+  on(topic: 'alihealth', listener: (this: TaoMessageConsumer, message: IncomingMessage.Alihealth) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Alitrip} */
+  on(topic: 'alitrip', listener: (this: TaoMessageConsumer, message: IncomingMessage.Alitrip) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Aliyun} */
+  on(topic: 'aliyun', listener: (this: TaoMessageConsumer, message: IncomingMessage.Aliyun) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Banma} */
+  on(topic: 'banma', listener: (this: TaoMessageConsumer, message: IncomingMessage.Banma) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Cainiao} */
+  on(topic: 'cainiao', listener: (this: TaoMessageConsumer, message: IncomingMessage.Cainiao) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Damai} */
+  on(topic: 'damai', listener: (this: TaoMessageConsumer, message: IncomingMessage.Damai) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Fliggy} */
+  on(topic: 'fliggy', listener: (this: TaoMessageConsumer, message: IncomingMessage.Fliggy) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Fuwu} */
+  on(topic: 'fuwu', listener: (this: TaoMessageConsumer, message: IncomingMessage.Fuwu) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Gov} */
+  on(topic: 'gov', listener: (this: TaoMessageConsumer, message: IncomingMessage.Gov) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Idle} */
+  on(topic: 'idle', listener: (this: TaoMessageConsumer, message: IncomingMessage.Idle) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Jae} */
+  on(topic: 'jae', listener: (this: TaoMessageConsumer, message: IncomingMessage.Jae) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Lst} */
+  on(topic: 'lst', listener: (this: TaoMessageConsumer, message: IncomingMessage.Lst) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Taobao} */
+  on(topic: 'taobao', listener: (this: TaoMessageConsumer, message: IncomingMessage.Taobao) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Tmall} */
+  on(topic: 'tmall', listener: (this: TaoMessageConsumer, message: IncomingMessage.Tmall) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Trip} */
+  on(topic: 'trip', listener: (this: TaoMessageConsumer, message: IncomingMessage.Trip) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Wdk} */
+  on(topic: 'wdk', listener: (this: TaoMessageConsumer, message: IncomingMessage.Wdk) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Xianyu} */
+  on(topic: 'xianyu', listener: (this: TaoMessageConsumer, message: IncomingMessage.Xianyu) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Youku} */
+  on(topic: 'youku', listener: (this: TaoMessageConsumer, message: IncomingMessage.Youku) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Yunos} */
+  on(topic: 'yunos', listener: (this: TaoMessageConsumer, message: IncomingMessage.Yunos) => void): TaoMessageConsumer;
 }
 
 declare const TMC: TaoMessageConsumer;
