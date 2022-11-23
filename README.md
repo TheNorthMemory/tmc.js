@@ -30,14 +30,14 @@ new Tmc('your_app_key', 'your_app_secret')
 
 ## API
 
-**`new Tmc(appKey: string, appSecret: BinaryLike, groupName?: string | object, options?: object)`**
+**`new Tmc(appKey: string, appSecret: BinaryLike, groupName?: string | ConsumerOptions, options?: ConsumerOptions)`**
 
 | 参数 | 类型 | 说明 |
 | --- | --- | --- |
 | appKey | `string` | 应用ID |
 | appSecret | `BinaryLike` | 应用密钥 |
 | groupName | `string` | 消息分组(可选，默认`default`) |
-| options | `object` | 消费端配置参数(可选) |
+| options | `ConsumerOptions` | 消费端配置参数(可选) |
 | options.pullRequestInterval | `number` | 定时发送`pullRequest`请求时间间隔(默认`5000`毫秒) |
 | options.onErrorReconnection | `number` | 当消费端出现错误，重试连接间隔(默认`15000`毫秒) |
 | options.onCloseReconnection | `number` | 当消费端断开连接，重试连接间隔(默认`3000`毫秒) |
@@ -79,7 +79,7 @@ new Tmc('your_app_key', 'your_app_secret')
 
 ```js
 new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
-.taobao_trade_TradeDelayConfirmPay(function needDoubleReriesThenConfirm(msg) {
+.taobao_trade_TradeDelayConfirmPay(function needDoubleRetriesThenConfirm(msg) {
   if (msg instanceof Message && msg.content?.retried === 0) {
     this.send(
       new Message(MessageType.SENDACK, MessageKind.Failed)
@@ -91,12 +91,12 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 .connect();
 ```
 
-也可以使用此方法发送`To淘宝`消息，`>=v0.3.4 && <v0.3.7`版本，需要自主对`$.content.content`数据做`JSON`字符串化(**特别注意：**原生`JSON`对`BigInt`类型无法处理)。自`v0.3.7`起，可直接对`$.content.content`以原生数据类型描述。例如：
+也可以使用此方法发送`To淘宝`消息。在`>=v0.3.4 && <v0.3.7`版本期间，需要自主对`$.content.content`数据做`JSON`字符串化(**特别注意：** 原生`JSON`对`BigInt`类型无法处理)。自`v0.3.7`起，可直接对`$.content.content`以原生`object`类型描述，`SDK`会将此对象转化成`JSON`字符串。例如：
 
 ```js
 /** @see https://open.taobao.com/tmc.htm?docId=732&docType=9 */
 .send(
-  new Mesage(MessageType.SEND, MessageKind.Data)
+  new Message(MessageType.SEND, MessageKind.Data)
   .with(MessageFields.TOPIC, 'taobao_fuwu_ElectronicInvoice')
   .with(MessageFields.CONTENT, {
     id: 12345678901234567n, // 支持 BigInt 类型
@@ -110,7 +110,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
     amount: '100.00',
   })
   // >=v0.3.4 && <v0.3.7 写法
-  // .with(MessageFields.CONTENT, '{"id":12345678901234567,"tid":12345678901234567,"amount":"100.00"}')
+  // .with(MessageFields.CONTENT, '{"tid":12345678901234567,"amount":"100.00"}')
 )
 ```
 
