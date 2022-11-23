@@ -75,7 +75,7 @@ new Tmc('your_app_key', 'your_app_secret')
 
 **`tmc.send(msg: Message, options?: { mask?: true, binary?: true }, cb?: (err: Error) => void) => void`**
 
-实例化后，当自动应答确认消息无法满足需求的时候，比如消息处理失败，需要`Publisher`再次重推消息，在实例初始化时置`options.autoReplyConfirmation=false`，则在消息处理函数内，可以通过 `this.send()` 函数回复`确认`或者`失败`消息。例如：
+自`v0.3.4`起，当自动应答确认消息无法满足需求的时候，比如消息处理失败，需要`Publisher`再次重推消息，在实例初始化时置`options.autoReplyConfirmation=false`，则在消息处理函数内，可以通过 `this.send()` 函数回复`确认`或者`失败`消息。例如：
 
 ```js
 new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
@@ -89,6 +89,29 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
   }
 })
 .connect();
+```
+
+也可以使用此方法发送`To淘宝`消息，`>=v0.3.4 && <v0.3.7`版本，需要自主对`$.content.content`数据做`JSON`字符串化(**特别注意：**原生`JSON`对`BigInt`类型无法处理)。自`v0.3.7`起，可直接对`$.content.content`以原生数据类型描述。例如：
+
+```js
+/** @see https://open.taobao.com/tmc.htm?docId=732&docType=9 */
+.send(
+  new Mesage(MessageType.SEND, MessageKind.Data)
+  .with(MessageFields.TOPIC, 'taobao_fuwu_ElectronicInvoice')
+  .with(MessageFields.CONTENT, {
+    id: 12345678901234567n, // 支持 BigInt 类型
+    tid: 12345678901234567n,
+    oid: 12345678901234567n,
+    invoice_file: 12345678901234567n,
+    e_invoice_no: '12342243435466',
+    invoice_time: '2015-04-10 10:33:49', // 时区 +08:00
+    invoice_no: '123456',
+    invoice_code: '123456',
+    amount: '100.00',
+  })
+  // >=v0.3.4 && <v0.3.7 写法
+  // .with(MessageFields.CONTENT, '{"id":12345678901234567,"tid":12345678901234567,"amount":"100.00"}')
+)
 ```
 
 <details><summary>可选设置的 NODE_DEBUG=< label > 环境变量</summary>
