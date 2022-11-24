@@ -36,7 +36,7 @@ new Tmc('your_app_key', 'your_app_secret')
 | --- | --- | --- |
 | appKey | `string` | 应用ID |
 | appSecret | `BinaryLike` | 应用密钥 |
-| groupName | `string | ConsumerOptions` | 消息分组(可选，默认`default`) |
+| groupName | `string \| ConsumerOptions` | 消息分组(可选，默认`default`) |
 | options | `ConsumerOptions` | 消费端配置参数(可选) |
 | options.pullRequestInterval | `number` | 定时发送`pullRequest`请求时间间隔(默认`5000`毫秒) |
 | options.onErrorReconnection | `number` | 当消费端出现错误，重试连接间隔(默认`15000`毫秒) |
