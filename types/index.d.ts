@@ -582,6 +582,10 @@ declare interface TaoTopicsDescriptor {
   taobao_jipiao_SellerOrderNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJipiaoSellerOrderNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoJipiaoSellerRefundOrderNotify 淘宝机票 > 【机票代理商】退票订单通知} */
   taobao_jipiao_SellerRefundOrderNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJipiaoSellerRefundOrderNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoLiveFeedRelated 淘宝直播API > 淘宝直播上下播消息} */
+  taobao_live_FeedRelated(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLiveFeedRelated) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoLiveTcpOrder 淘宝直播API > 淘宝直播订单消息} */
+  taobao_live_TcpOrder(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLiveTcpOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLogisticsLogsticDetailTrace 淘宝物流 > 物流详情跟踪消息} */
   taobao_logistics_LogsticDetailTrace(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLogisticsLogsticDetailTrace) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoModifyaddressResultNotify 聚石塔 > 自助改地址结果消息通知} */
@@ -1050,6 +1054,8 @@ declare interface TaoTopicsDescriptor {
   taobao_item(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItem) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoJipiao} */
   taobao_jipiao(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJipiao) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoLive} */
+  taobao_live(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLive) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLogistics} */
   taobao_logistics(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLogistics) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoModifyaddress} */
@@ -1705,6 +1711,10 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_jipiao_SellerOrderNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJipiaoSellerOrderNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoJipiaoSellerRefundOrderNotify 淘宝机票 > 【机票代理商】退票订单通知} */
   on(topic: 'taobao_jipiao_SellerRefundOrderNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJipiaoSellerRefundOrderNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoLiveFeedRelated 淘宝直播API > 淘宝直播上下播消息} */
+  on(topic: 'taobao_live_FeedRelated', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLiveFeedRelated) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoLiveTcpOrder 淘宝直播API > 淘宝直播订单消息} */
+  on(topic: 'taobao_live_TcpOrder', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLiveTcpOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLogisticsLogsticDetailTrace 淘宝物流 > 物流详情跟踪消息} */
   on(topic: 'taobao_logistics_LogsticDetailTrace', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLogisticsLogsticDetailTrace) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoModifyaddressResultNotify 聚石塔 > 自助改地址结果消息通知} */
@@ -2173,6 +2183,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_item', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItem) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoJipiao} */
   on(topic: 'taobao_jipiao', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJipiao) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoLive} */
+  on(topic: 'taobao_live', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLive) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLogistics} */
   on(topic: 'taobao_logistics', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLogistics) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoModifyaddress} */

@@ -543,6 +543,10 @@ declare namespace IncomingMessage {
   type TaobaoJipiaoSellerOrderNotify = Message & { content?: MessageContent & { content?: string | Taobao.Jipiao.SellerOrderNotify } };
   /** {@link Taobao.Jipiao.SellerRefundOrderNotify 淘宝机票 > 【机票代理商】退票订单通知} */
   type TaobaoJipiaoSellerRefundOrderNotify = Message & { content?: MessageContent & { content?: string | Taobao.Jipiao.SellerRefundOrderNotify } };
+  /** {@link Taobao.Live.FeedRelated 淘宝直播API > 淘宝直播上下播消息} */
+  type TaobaoLiveFeedRelated = Message & { content?: MessageContent & { content?: string | Taobao.Live.FeedRelated } };
+  /** {@link Taobao.Live.TcpOrder 淘宝直播API > 淘宝直播订单消息} */
+  type TaobaoLiveTcpOrder = Message & { content?: MessageContent & { content?: string | Taobao.Live.TcpOrder } };
   /** {@link Taobao.Logistics.LogsticDetailTrace 淘宝物流 > 物流详情跟踪消息} */
   type TaobaoLogisticsLogsticDetailTrace = Message & { content?: MessageContent & { content?: string | Taobao.Logistics.LogsticDetailTrace } };
   /** {@link Taobao.Modifyaddress.ResultNotify 聚石塔 > 自助改地址结果消息通知} */
@@ -1532,6 +1536,12 @@ declare namespace IncomingMessage {
     | TaobaoJipiaoSellerOrderNotify
     | TaobaoJipiaoSellerRefundOrderNotify;
   /**
+   * - {@link TaobaoLiveFeedRelated 淘宝直播API > 淘宝直播上下播消息}
+   * - {@link TaobaoLiveTcpOrder 淘宝直播API > 淘宝直播订单消息}
+   */
+  type TaobaoLive = TaobaoLiveFeedRelated
+    | TaobaoLiveTcpOrder;
+  /**
    * - {@link TaobaoLogisticsLogsticDetailTrace 淘宝物流 > 物流详情跟踪消息}
    */
   type TaobaoLogistics = TaobaoLogisticsLogsticDetailTrace;
@@ -2097,6 +2107,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoIstore}
    * - {@link TaobaoItem}
    * - {@link TaobaoJipiao}
+   * - {@link TaobaoLive}
    * - {@link TaobaoLogistics}
    * - {@link TaobaoModifyaddress}
    * - {@link TaobaoModifyorder}
@@ -2142,6 +2153,7 @@ declare namespace IncomingMessage {
     | TaobaoIstore
     | TaobaoItem
     | TaobaoJipiao
+    | TaobaoLive
     | TaobaoLogistics
     | TaobaoModifyaddress
     | TaobaoModifyorder

@@ -1309,6 +1309,27 @@ declare namespace Taobao.Jipiao {
   }
 }
 
+/** 淘宝直播API */
+declare namespace Taobao.Live {
+  /** 淘宝直播上下播消息 */
+  interface FeedRelated {
+    /** 主播openId */
+    anchor_open_id: string;
+    /** 事件类型 PUBLISH_LIVE上播,STOP_LIVE下播,等 */
+    event: string;
+    /** 场次id */
+    live_id: number;
+  }
+
+  /** 淘宝直播订单消息 */
+  interface TcpOrder {
+    /** 主播openId */
+    anchor_open_id: string;
+    /** 订单号 */
+    tid: number;
+  }
+}
+
 /** 淘宝物流 */
 declare namespace Taobao.Logistics {
   /** 物流详情跟踪消息 */
