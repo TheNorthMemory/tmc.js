@@ -5,6 +5,7 @@
 /// <reference path="message-type.d.ts" />
 /// <reference path="message.d.ts" />
 /// <reference path="message.in.d.ts" />
+/// <reference path="message.out.d.ts" />
 /// <reference path="value-format.d.ts" />
 
 import { BinaryLike } from "crypto";
