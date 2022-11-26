@@ -83,7 +83,7 @@ declare namespace Fliggy.Ticket {
     /** 产品价格 */
     product_price: number;
     /** skuId */
-    sku_id: number;
+    sku_id: number | bigint;
   }
 
   /** 域外分销订单码核销消息 */

@@ -2,57 +2,57 @@
 
 declare namespace OutgoingMessage {
   /** {@link Alibaba.Nazca.AbandonCertResponse 网上法庭 > 作废存证返回消息接口} */
-  type AlibabaNazcaAbandonCertResponse = Message & { content: MessageContent & { content: string | Alibaba.Nazca.AbandonCertResponse } };
+  type AlibabaNazcaAbandonCertResponse = Message & { content: MessageContent & { topic: 'alibaba_nazca_AbandonCertResponse', content: string | Alibaba.Nazca.AbandonCertResponse } };
   /** {@link Alibaba.Nazca.QueryChargeNumResponse 网上法庭 > 查询收费数量返回消息} */
-  type AlibabaNazcaQueryChargeNumResponse = Message & { content: MessageContent & { content: string | Alibaba.Nazca.QueryChargeNumResponse } };
+  type AlibabaNazcaQueryChargeNumResponse = Message & { content: MessageContent & { topic: 'alibaba_nazca_QueryChargeNumResponse', content: string | Alibaba.Nazca.QueryChargeNumResponse } };
   /** {@link Alibaba.Nazca.SaveCertResponse 网上法庭 > 存证返回消息接口} */
-  type AlibabaNazcaSaveCertResponse = Message & { content: MessageContent & { content: string | Alibaba.Nazca.SaveCertResponse } };
+  type AlibabaNazcaSaveCertResponse = Message & { content: MessageContent & { topic: 'alibaba_nazca_SaveCertResponse', content: string | Alibaba.Nazca.SaveCertResponse } };
   /** {@link Alibaba.Nazca.UpdateChargeNumResponse 网上法庭 > 更新收费数量返回消息} */
-  type AlibabaNazcaUpdateChargeNumResponse = Message & { content: MessageContent & { content: string | Alibaba.Nazca.UpdateChargeNumResponse } };
+  type AlibabaNazcaUpdateChargeNumResponse = Message & { content: MessageContent & { topic: 'alibaba_nazca_UpdateChargeNumResponse', content: string | Alibaba.Nazca.UpdateChargeNumResponse } };
   /** {@link Alibaba.Pur.NotifyProduct 信息平台-采购 > 同步商品通知} */
-  type AlibabaPurNotifyProduct = Message & { content: MessageContent & { content: string | Alibaba.Pur.NotifyProduct } };
+  type AlibabaPurNotifyProduct = Message & { content: MessageContent & { topic: 'alibaba_pur_NotifyProduct', content: string | Alibaba.Pur.NotifyProduct } };
   /** {@link Alicom.Secret.VendorMonitor 阿里通信 > 供应商监控消息} */
-  type AlicomSecretVendorMonitor = Message & { content: MessageContent & { content: string | Alicom.Secret.VendorMonitor } };
+  type AlicomSecretVendorMonitor = Message & { content: MessageContent & { topic: 'alicom_secret_VendorMonitor', content: string | Alicom.Secret.VendorMonitor } };
   /** {@link Ant.Pur.NotifyProduct 蚂蚁采购 > 蚂蚁采购同步商品通知} */
-  type AntPurNotifyProduct = Message & { content: MessageContent & { content: string | Ant.Pur.NotifyProduct } };
+  type AntPurNotifyProduct = Message & { content: MessageContent & { topic: 'ant_pur_NotifyProduct', content: string | Ant.Pur.NotifyProduct } };
   /** {@link Ele.Fengniao.ChainstoreAbility 蜂鸟物流 > 门店开关店能力通知} */
-  type EleFengniaoChainstoreAbility = Message & { content: MessageContent & { content: string | Ele.Fengniao.ChainstoreAbility } };
+  type EleFengniaoChainstoreAbility = Message & { content: MessageContent & { topic: 'ele_fengniao_ChainstoreAbility', content: string | Ele.Fengniao.ChainstoreAbility } };
   /** {@link Ele.Fengniao.ChainstoreRange 蜂鸟物流 > 门店配送范围变更消息} */
-  type EleFengniaoChainstoreRange = Message & { content: MessageContent & { content: string | Ele.Fengniao.ChainstoreRange } };
+  type EleFengniaoChainstoreRange = Message & { content: MessageContent & { topic: 'ele_fengniao_ChainstoreRange', content: string | Ele.Fengniao.ChainstoreRange } };
   /** {@link Ele.Fengniao.ChainstoreSign 蜂鸟物流 > 门店签约结果通知} */
-  type EleFengniaoChainstoreSign = Message & { content: MessageContent & { content: string | Ele.Fengniao.ChainstoreSign } };
+  type EleFengniaoChainstoreSign = Message & { content: MessageContent & { topic: 'ele_fengniao_ChainstoreSign', content: string | Ele.Fengniao.ChainstoreSign } };
   /** {@link Ele.Fengniao.MerchantSign 蜂鸟物流 > 商家签约结果通知} */
-  type EleFengniaoMerchantSign = Message & { content: MessageContent & { content: string | Ele.Fengniao.MerchantSign } };
+  type EleFengniaoMerchantSign = Message & { content: MessageContent & { topic: 'ele_fengniao_MerchantSign', content: string | Ele.Fengniao.MerchantSign } };
   /** {@link Ele.Fengniao.ReportAbnormal 蜂鸟物流 > 异常报备消息通知} */
-  type EleFengniaoReportAbnormal = Message & { content: MessageContent & { content: string | Ele.Fengniao.ReportAbnormal } };
+  type EleFengniaoReportAbnormal = Message & { content: MessageContent & { topic: 'ele_fengniao_ReportAbnormal', content: string | Ele.Fengniao.ReportAbnormal } };
   /** {@link Ele.Fengniao.StatusSync 蜂鸟物流 > 物流状态信息同步} */
-  type EleFengniaoStatusSync = Message & { content: MessageContent & { content: string | Ele.Fengniao.StatusSync } };
+  type EleFengniaoStatusSync = Message & { content: MessageContent & { topic: 'ele_fengniao_StatusSync', content: string | Ele.Fengniao.StatusSync } };
   /** {@link Taobao.Fuwu.CustomerServicePerformance 服务市场 > 客服绩效统计表} */
-  type TaobaoFuwuCustomerServicePerformance = Message & { content: MessageContent & { content: string | Taobao.Fuwu.CustomerServicePerformance } };
+  type TaobaoFuwuCustomerServicePerformance = Message & { content: MessageContent & { topic: 'taobao_fuwu_CustomerServicePerformance', content: string | Taobao.Fuwu.CustomerServicePerformance } };
   /** {@link Taobao.Fuwu.ElectronicInvoice 服务市场 > 电子发票信息} */
-  type TaobaoFuwuElectronicInvoice = Message & { content: MessageContent & { content: string | Taobao.Fuwu.ElectronicInvoice } };
+  type TaobaoFuwuElectronicInvoice = Message & { content: MessageContent & { topic: 'taobao_fuwu_ElectronicInvoice', content: string | Taobao.Fuwu.ElectronicInvoice } };
   /** {@link Taobao.Homeai.LayoutTransfer HOMEAI消息对接 > 一键迁移算法接口} */
-  type TaobaoHomeaiLayoutTransfer = Message & { content: MessageContent & { content: string | Taobao.Homeai.LayoutTransfer } };
+  type TaobaoHomeaiLayoutTransfer = Message & { content: MessageContent & { topic: 'taobao_homeai_LayoutTransfer', content: string | Taobao.Homeai.LayoutTransfer } };
   /** {@link Taobao.Homeai.RenderResult HOMEAI消息对接 > HomeStyler渲染结果消息} */
-  type TaobaoHomeaiRenderResult = Message & { content: MessageContent & { content: string | Taobao.Homeai.RenderResult } };
+  type TaobaoHomeaiRenderResult = Message & { content: MessageContent & { topic: 'taobao_homeai_RenderResult', content: string | Taobao.Homeai.RenderResult } };
   /** {@link Taobao.Ihomesvj.SyncSvjCrmData HOMEAI > 同步svj的crm数据} */
-  type TaobaoIhomesvjSyncSvjCrmData = Message & { content: MessageContent & { content: string | Taobao.Ihomesvj.SyncSvjCrmData } };
+  type TaobaoIhomesvjSyncSvjCrmData = Message & { content: MessageContent & { topic: 'taobao_ihomesvj_SyncSvjCrmData', content: string | Taobao.Ihomesvj.SyncSvjCrmData } };
   /** {@link Taobao.Jds.RefundTrace 交易全链路 > 退款单状态跟踪} */
-  type TaobaoJdsRefundTrace = Message & { content: MessageContent & { content: string | Taobao.Jds.RefundTrace } };
+  type TaobaoJdsRefundTrace = Message & { content: MessageContent & { topic: 'taobao_jds_RefundTrace', content: string | Taobao.Jds.RefundTrace } };
   /** {@link Taobao.Jds.TradeTrace 交易全链路 > 交易订单状态跟踪} */
-  type TaobaoJdsTradeTrace = Message & { content: MessageContent & { content: string | Taobao.Jds.TradeTrace } };
+  type TaobaoJdsTradeTrace = Message & { content: MessageContent & { topic: 'taobao_jds_TradeTrace', content: string | Taobao.Jds.TradeTrace } };
   /** {@link Tmall.Mh.MacAddress 天猫魔盒 > 天猫魔盒线下Mac地址回传} */
-  type TmallMhMacAddress = Message & { content: MessageContent & { content: string | Tmall.Mh.MacAddress } };
+  type TmallMhMacAddress = Message & { content: MessageContent & { topic: 'tmall_mh_MacAddress', content: string | Tmall.Mh.MacAddress } };
   /** {@link Tmall.Mh.SerialNumber 天猫魔盒 > 天猫魔盒扫码SN号回传} */
-  type TmallMhSerialNumber = Message & { content: MessageContent & { content: string | Tmall.Mh.SerialNumber } };
+  type TmallMhSerialNumber = Message & { content: MessageContent & { topic: 'tmall_mh_SerialNumber', content: string | Tmall.Mh.SerialNumber } };
   /** {@link Tmall.Nrt.DealerToTmall 新零售终端上行消息 > 商户信息回流} */
-  type TmallNrtDealerToTmall = Message & { content: MessageContent & { content: string | Tmall.Nrt.DealerToTmall } };
+  type TmallNrtDealerToTmall = Message & { content: MessageContent & { topic: 'tmall_nrt_DealerToTmall', content: string | Tmall.Nrt.DealerToTmall } };
   /** {@link Tmall.Nrt.StallContractToTmall 新零售终端上行消息 > 摊位合同数据回流} */
-  type TmallNrtStallContractToTmall = Message & { content: MessageContent & { content: string | Tmall.Nrt.StallContractToTmall } };
+  type TmallNrtStallContractToTmall = Message & { content: MessageContent & { topic: 'tmall_nrt_StallContractToTmall', content: string | Tmall.Nrt.StallContractToTmall } };
   /** {@link Tmall.Nrt.StallInfoToTmall 新零售终端上行消息 > 摊位信息数据回流} */
-  type TmallNrtStallInfoToTmall = Message & { content: MessageContent & { content: string | Tmall.Nrt.StallInfoToTmall } };
+  type TmallNrtStallInfoToTmall = Message & { content: MessageContent & { topic: 'tmall_nrt_StallInfoToTmall', content: string | Tmall.Nrt.StallInfoToTmall } };
   /** {@link Tmall.Nrt.StoreInfoToTmall 新零售终端上行消息 > 门店信息回流} */
-  type TmallNrtStoreInfoToTmall = Message & { content: MessageContent & { content: string | Tmall.Nrt.StoreInfoToTmall } };
+  type TmallNrtStoreInfoToTmall = Message & { content: MessageContent & { topic: 'tmall_nrt_StoreInfoToTmall', content: string | Tmall.Nrt.StoreInfoToTmall } };
 }
 
 /** 网上法庭 */
@@ -391,9 +391,9 @@ declare namespace Taobao.Fuwu {
     /** 开票日期 */
     invoice_time: Date;
     /** 淘宝子订单号 */
-    oid: number;
+    oid: number | bigint;
     /** 交易编号 (父订单的交易编号) */
-    tid: number;
+    tid: number | bigint;
   }
 }
 
@@ -450,7 +450,7 @@ declare namespace Taobao.Jds {
     /** 订单状态。T_WAIT_BUYER_PAY(等待买家付款),T_WAIT_SELLER_SEND_GOODS(等待卖家发货),X_DOWNLOADED(订单已推送),X_TO_SYSTEM(系统已接单),X_SERVICE_AUDITED(已客审),X_FINANCE_AUDITED(已财审),X_ALLOCATION_NOTIFIED(已通知配货),X_WAIT_ALLOCATION(待配货),X_SORT_PRINTED(已打拣货单),X_SEND_PRINTED(已打发货单),X_LOGISTICS_PRINTED(已打物流单),X_SORTED(已拣货),X_EXAMINED(已验货),X_PACKAGED(已打包),X_WEIGHED(已称重),X_OUT_WAREHOUSE(已出库),T_WAIT_BUYER_CONFIRM_GOODS(已发货),T_TRADE_FINISHED(已完成),T_TRADE_CLOSED(已结束) */
     status: string;
     /** 交易ID */
-    tid: number;
+    tid: number | bigint;
   }
 }
 
@@ -493,7 +493,7 @@ declare namespace Tmall.Mh {
     /** 规格编码 */
     sku_num: string;
     /** 订单id */
-    tid: number;
+    tid: number | bigint;
     /** 总价 */
     total: string;
     /** 单位 */
@@ -521,7 +521,7 @@ declare namespace Tmall.Mh {
     /** 销售渠道 */
     sales_channels: string;
     /** 订单ID */
-    tid: number;
+    tid: number | bigint;
   }
 }
 

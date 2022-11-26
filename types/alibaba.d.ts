@@ -340,6 +340,26 @@ declare namespace Alibaba.Aliqin {
     oper_type: string;
   }
 
+  /** 语音呼叫结果推送 */
+  interface TaFcCallCdr {
+    /** 任务主键 */
+    biz_id: string;
+    /** DTMF */
+    dtmf: string;
+    /** 通话时长，未接通为0 */
+    duration: string;
+    /** 通话结束时间，未接通则为空 */
+    end_time: string;
+    /** 扩展字段回传，将调用api时传入的字段返回 */
+    extend: string;
+    /** 通话开始时间，未接通则为空 */
+    start_time: string;
+    /** 呼叫结果状态码 */
+    status_code: string;
+    /** 结果描述 */
+    status_msg: string;
+  }
+
   /** 聚石塔短消息发送结果报告 */
   interface TaFcSmsDR {
     /** 任务主键 */
@@ -1233,7 +1253,7 @@ declare namespace Alibaba.Nlife {
     /** 商品的商家编码 */
     outer_id: string;
     /** 商品的skuId */
-    sku_id: number;
+    sku_id: number | bigint;
     /** 门店id */
     store_id: string;
     /** 商品的变动类型:PRICE_CHANGE-价格变化; INVENTORY_CHANGE-库存变化; ONSALE_CHANGE-上架变化; OFFSALE_CHANGE-下架变化; NEWSKU_CHANGE-新增sku变化; DELSKU_CHANGE-删除sku变化 */

@@ -213,9 +213,9 @@ declare namespace Taobao.Carlease {
     /** 事件类型：1：免首付订单金额计算完成触发；2：逆向退款触发；3：逆向退款完成 */
     event_type: number;
     /** 子订单ID */
-    oid: number;
+    oid: number | bigint;
     /** 主订单ID */
-    tid: number;
+    tid: number | bigint;
   }
 }
 
@@ -844,6 +844,22 @@ declare namespace Taobao.Homeai {
     out_param: string;
   }
 
+  /** 推送模型与商品关系 */
+  interface ModelSkuRelation {
+    /** 淘宝的商品ID */
+    item_id: string;
+    /** 居然模型ID */
+    jid: string;
+    /** 阿里模型ID */
+    model_id: string;
+    /** 描述绑定或者解绑操作。绑定对应BIND,解绑对应UNBIND */
+    operation: string;
+    /** 经销商ID */
+    seller_id: string;
+    /** SKU_ID */
+    sku_id: string;
+  }
+
   /** HS渲染消息 */
   interface RenderRequest {
     /** homeai_fsadfakjlf-f1234j */
@@ -928,11 +944,11 @@ declare namespace Taobao.Item {
     /** 商品数量 */
     num: number;
     /** 商品数字ID */
-    num_iid: number;
+    num_iid: number | bigint;
     /** 商品价格 */
     price: string;
     /** 商品SKU ID */
-    sku_id: number;
+    sku_id: number | bigint;
     /** 商品SKU数量 */
     sku_num: number;
     /** 商品状态 */
@@ -946,11 +962,11 @@ declare namespace Taobao.Item {
     /** 卖家昵称 */
     nick: string;
     /** 商品数字ID */
-    num_iid: number;
+    num_iid: number | bigint;
     /** 商品价格 */
     price: string;
     /** 商品SKU ID */
-    sku_id: number;
+    sku_id: number | bigint;
     /** 商品SKU数量 */
     sku_num: number;
     /** 商品状态 */
@@ -962,11 +978,11 @@ declare namespace Taobao.Item {
     /** 卖家昵称 */
     nick: string;
     /** 商品数字ID */
-    num_iid: number;
+    num_iid: number | bigint;
     /** 商品价格 */
     price: string;
     /** 商品SKU ID */
-    sku_id: number;
+    sku_id: number | bigint;
     /** 商品SKU数量 */
     sku_num: number;
     /** 商品状态 */
@@ -978,11 +994,11 @@ declare namespace Taobao.Item {
     /** 卖家昵称 */
     nick: string;
     /** 商品数字ID */
-    num_iid: number;
+    num_iid: number | bigint;
     /** 商品价格 */
     price: string;
     /** 商品SKU ID */
-    sku_id: number;
+    sku_id: number | bigint;
     /** 商品SKU数量 */
     sku_num: number;
     /** 商品状态 */
@@ -994,11 +1010,11 @@ declare namespace Taobao.Item {
     /** 卖家昵称 */
     nick: string;
     /** 商品数字ID */
-    num_iid: number;
+    num_iid: number | bigint;
     /** 商品价格 */
     price: string;
     /** 商品SKU ID */
-    sku_id: number;
+    sku_id: number | bigint;
     /** 商品SKU数量 */
     sku_num: number;
     /** 商品状态 */
@@ -1010,11 +1026,11 @@ declare namespace Taobao.Item {
     /** 卖家昵称 */
     nick: string;
     /** 商品数字ID */
-    num_iid: number;
+    num_iid: number | bigint;
     /** 商品价格 */
     price: string;
     /** 商品SKU ID */
-    sku_id: number;
+    sku_id: number | bigint;
     /** 商品SKU数量 */
     sku_num: number;
     /** 商品状态 */
@@ -1028,11 +1044,11 @@ declare namespace Taobao.Item {
     /** 商品数量 */
     num: number;
     /** 商品数字ID */
-    num_iid: number;
+    num_iid: number | bigint;
     /** 商品价格 */
     price: string;
     /** 商品SKU ID */
-    sku_id: number;
+    sku_id: number | bigint;
     /** 商品SKU数量 */
     sku_num: number;
     /** 商品状态 */
@@ -1074,11 +1090,11 @@ declare namespace Taobao.Item {
     /** 商品数量 */
     num: number;
     /** 商品数字ID */
-    num_iid: number;
+    num_iid: number | bigint;
     /** 商品价格 */
     price: string;
     /** 商品SKU ID */
-    sku_id: number;
+    sku_id: number | bigint;
     /** 商品SKU数量 */
     sku_num: number;
     /** 商品状态 */
@@ -1116,11 +1132,11 @@ declare namespace Taobao.Item {
     /** 商品数量 */
     num: number;
     /** 商品数字ID */
-    num_iid: number;
+    num_iid: number | bigint;
     /** 商品价格 */
     price: string;
     /** 商品SKU ID */
-    sku_id: number;
+    sku_id: number | bigint;
     /** 商品SKU数量 */
     sku_num: number;
     /** 商品状态 */
@@ -1138,11 +1154,11 @@ declare namespace Taobao.Item {
     /** 商品数量 */
     num: number;
     /** 商品数字ID */
-    num_iid: number;
+    num_iid: number | bigint;
     /** 商品价格 */
     price: string;
     /** 商品SKU ID */
-    sku_id: number;
+    sku_id: number | bigint;
     /** 商品SKU数量 */
     sku_num: number;
     /** 商品状态 */
@@ -1160,11 +1176,11 @@ declare namespace Taobao.Item {
     /** 商品数量 */
     num: number;
     /** 商品数字ID */
-    num_iid: number;
+    num_iid: number | bigint;
     /** 商品价格 */
     price: string;
     /** 商品SKU ID */
-    sku_id: number;
+    sku_id: number | bigint;
     /** 商品SKU数量 */
     sku_num: number;
     /** 商品状态 */
@@ -1178,11 +1194,11 @@ declare namespace Taobao.Item {
     /** 卖家昵称 */
     nick: string;
     /** 商品数字ID */
-    num_iid: number;
+    num_iid: number | bigint;
     /** 商品价格 */
     price: string;
     /** 商品SKU ID */
-    sku_id: number;
+    sku_id: number | bigint;
     /** 商品SKU数量 */
     sku_num: number;
     /** 商品状态 */
@@ -1196,11 +1212,11 @@ declare namespace Taobao.Item {
     /** 商品数量 */
     num: number;
     /** 商品数字ID */
-    num_iid: number;
+    num_iid: number | bigint;
     /** 商品价格 */
     price: string;
     /** 商品SKU ID */
-    sku_id: number;
+    sku_id: number | bigint;
     /** 商品SKU数量 */
     sku_num: number;
     /** 商品状态 */
@@ -1326,7 +1342,7 @@ declare namespace Taobao.Live {
     /** 主播openId */
     anchor_open_id: string;
     /** 订单号 */
-    tid: number;
+    tid: number | bigint;
   }
 }
 
@@ -1427,7 +1443,7 @@ declare namespace Taobao.Oc {
     /** 标签类型，1:官方标签，2:自定义标签 */
     tag_type: number;
     /** 订单编号 */
-    tid: number;
+    tid: number | bigint;
   }
 }
 
@@ -1703,7 +1719,7 @@ declare namespace Taobao.Openmall {
     /** 退款单状态 */
     status: string;
     /** 订单ID */
-    tid: number;
+    tid: number | bigint;
   }
 
   /** 订单消息通知 */
@@ -1726,11 +1742,11 @@ declare namespace Taobao.Rdcaligenius {
     /** 1=hold单，目前只有1 */
     action_type: number;
     /** 子订单 */
-    oid: number;
+    oid: number | bigint;
     /** 卖家昵称 */
     seller_nick: string;
     /** 主订单 */
-    tid: number;
+    tid: number | bigint;
   }
 }
 
@@ -1930,7 +1946,7 @@ declare namespace Taobao.Refund {
     /** 更新时间。格式:yyyy-MM-dd HH:mm:ss */
     modified: Date;
     /** 子订单ID */
-    oid: number;
+    oid: number | bigint;
     /** 退款金额 */
     refund_fee: string;
     /** 退款ID */
@@ -1940,7 +1956,7 @@ declare namespace Taobao.Refund {
     /** 卖家昵称 */
     seller_nick: string;
     /** 主订单ID */
-    tid: number;
+    tid: number | bigint;
   }
 
   /** 退款标记取消消息 */
@@ -1966,7 +1982,7 @@ declare namespace Taobao.Refund {
     /** 更新时间。格式:yyyy-MM-dd HH:mm:ss */
     modified: Date;
     /** 子订单退款交易编号 */
-    oid: number;
+    oid: number | bigint;
     /** 退款金额,"100.00"的格式 */
     refund_fee: string;
     /** 退款编号 */
@@ -1976,7 +1992,7 @@ declare namespace Taobao.Refund {
     /** 卖家昵称 */
     seller_nick: string;
     /** 父订单退款交易编号 */
-    tid: number;
+    tid: number | bigint;
   }
 
   /** 淘宝介入退款消息 */
@@ -1990,7 +2006,7 @@ declare namespace Taobao.Refund {
     /** 更新时间。格式:yyyy-MM-dd HH:mm:ss */
     modified: Date;
     /** 子订单退款交易编号 */
-    oid: number;
+    oid: number | bigint;
     /** 退款金额,用"100.00"的格式 */
     refund_fee: string;
     /** 退款编号 */
@@ -2000,7 +2016,7 @@ declare namespace Taobao.Refund {
     /** 卖家昵称 */
     seller_nick: string;
     /** 父订单退款交易编号 */
-    tid: number;
+    tid: number | bigint;
   }
 }
 
@@ -2298,6 +2314,26 @@ declare namespace Taobao.Topats {
 
 /** 淘宝交易 */
 declare namespace Taobao.Trade {
+  /** 订单极速放款成功消息 */
+  interface AdvanceDisburse {
+    /** 买家昵称 */
+    buyer_nick: string;
+    /** 由buyer_id加密, 可对外开放, 用来替换buyer_nick作为唯一标识 */
+    buyer_open_uid: string;
+    /** 子订单ID */
+    oid: number | bigint;
+    /** 金额 */
+    payment: string;
+    /** 卖家昵称 */
+    seller_nick: string;
+    /** 订单状态（请关注此状态，如果为TRADE_CLOSED_BY_TAOBAO状态，则不要对此订单进行发货，切记啊！）。可选值: TRADE_NO_CREATE_PAY(没有创建支付宝交易) WAIT_BUYER_PAY(等待买家付款) WAIT_SELLER_SEND_GOODS(等待卖家发货,即:买家已付款) WAIT_BUYER_CONFIRM_GOODS(等待买家确认收货,即:卖家已发货) TRADE_BUYER_SIGNED(买家已签收,货到付款专用) TRADE_FINISHED(交易成功) TRADE_CLOSED(付款以后用户退款成功，交易自动关闭) TRADE_CLOSED_BY_TAOBAO(付款以前，卖家或买家主动关闭交易)PAY_PENDING(国际信用卡支付付款确认中) */
+    status: string;
+    /** 主订单ID */
+    tid: number | bigint;
+    /** 交易类型列表，同时查询多种交易类型可用逗号分隔。默认同时查询guarantee_trade, auto_delivery, ec, cod的4种交易类型的数据 可选值 fixed(一口价) auction(拍卖) guarantee_trade(一口价、拍卖) auto_delivery(自动发货) independent_simple_trade(旺店入门版交易) independent_shop_trade(旺店标准版交易) ec(直冲) cod(货到付款) fenxiao(分销) game_equipment(游戏装备) shopex_trade(ShopEX交易) netcn_trade(万网交易) external_trade(统一外部交易)o2o_offlinetrade（O2O交易）step (万人团)nopaid(无付款订单)pre_auth_type(预授权0元购机交易) */
+    type: string;
+  }
+
   /** 创建支付宝订单消息 */
   interface TradeAlipayCreate {
     /** 买家昵称 */
@@ -2305,7 +2341,7 @@ declare namespace Taobao.Trade {
     /** 由buyer_id加密, 可对外开放, 用来替换buyer_nick作为唯一标识 */
     buyer_open_uid: string;
     /** 子订单ID */
-    oid: number;
+    oid: number | bigint;
     /** 订单实付金额 */
     payment: string;
     /** 卖家昵称 */
@@ -2313,7 +2349,7 @@ declare namespace Taobao.Trade {
     /** 交易状态 */
     status: string;
     /** 主订单ID */
-    tid: number;
+    tid: number | bigint;
     /** 交易类型 */
     type: string;
   }
@@ -2337,7 +2373,7 @@ declare namespace Taobao.Trade {
     /** 物流运单号 */
     logistics_id: string;
     /** 子订单ID */
-    oid: number;
+    oid: number | bigint;
     /** 订单实付金额 */
     payment: string;
     /** 物流邮费 */
@@ -2351,7 +2387,7 @@ declare namespace Taobao.Trade {
     /** 供应商账号 */
     supplier_username: string;
     /** 主订单ID */
-    tid: number;
+    tid: number | bigint;
     /** 分销订单类型 */
     trade_type: string;
     /** 交易类型列表，同时查询多种交易类型可用逗号分隔。默认同时查询guarantee_trade, auto_delivery, ec, cod的4种交易类型的数据 可选值 fixed(一口价) auction(拍卖) guarantee_trade(一口价、拍卖) auto_delivery(自动发货) independent_simple_trade(旺店入门版交易) independent_shop_trade(旺店标准版交易) ec(直冲) cod(货到付款) fenxiao(分销) game_equipment(游戏装备) shopex_trade(ShopEX交易) netcn_trade(万网交易) external_trade(统一外部交易)o2o_offlinetrade（O2O交易）step (万人团)nopaid(无付款订单)pre_auth_type(预授权0元购机交易) */
@@ -2365,13 +2401,13 @@ declare namespace Taobao.Trade {
     /** 由buyer_id加密, 可对外开放, 用来替换buyer_nick作为唯一标识 */
     buyer_open_uid: string;
     /** 子订单ID */
-    oid: number;
+    oid: number | bigint;
     /** 订单实付金额 */
     payment: string;
     /** 卖家昵称 */
     seller_nick: string;
     /** 主订单ID */
-    tid: number;
+    tid: number | bigint;
     /** 交易类型 */
     type: string;
   }
@@ -2409,9 +2445,9 @@ declare namespace Taobao.Trade {
     /** 商品数量 */
     num: number;
     /** 商品数字ID */
-    num_iid: number;
+    num_iid: number | bigint;
     /** 子订单ID */
-    oid: number;
+    oid: number | bigint;
     /** 订单实付金额 */
     payment: string;
     /** 商品价格 */
@@ -2419,13 +2455,13 @@ declare namespace Taobao.Trade {
     /** 卖家昵称 */
     seller_nick: string;
     /** 商品SKU ID */
-    sku_id: number;
+    sku_id: number | bigint;
     /** 商品SKU数量 */
     sku_num: number;
     /** 交易状态。可选值: * TRADE_NO_CREATE_PAY(没有创建支付宝交易) * WAIT_BUYER_PAY(等待买家付款) * SELLER_CONSIGNED_PART(卖家部分发货) * WAIT_SELLER_SEND_GOODS(等待卖家发货,即:买家已付款) * WAIT_BUYER_CONFIRM_GOODS(等待买家确认收货,即:卖家已发货) * TRADE_BUYER_SIGNED(买家已签收,货到付款专用) * TRADE_FINISHED(交易成功) * TRADE_CLOSED(付款以后用户退款成功，交易自动关闭) * TRADE_CLOSED_BY_TAOBAO(付款以前，卖家或买家主动关闭交易) * PAY_PENDING(国际信用卡支付付款确认中) * WAIT_PRE_AUTH_CONFIRM(0元购合约中) */
     status: string;
     /** 主订单ID */
-    tid: number;
+    tid: number | bigint;
     /** 商品标题 */
     title: string;
     /** 交易类型列表，同时查询多种交易类型可用逗号分隔。默认同时查询guarantee_trade, auto_delivery, ec, cod的4种交易类型的数据 可选值 fixed(一口价) auction(拍卖) guarantee_trade(一口价、拍卖) auto_delivery(自动发货) independent_simple_trade(旺店入门版交易) independent_shop_trade(旺店标准版交易) ec(直冲) cod(货到付款) fenxiao(分销) game_equipment(游戏装备) shopex_trade(ShopEX交易) netcn_trade(万网交易) external_trade(统一外部交易)o2o_offlinetrade（O2O交易）step (万人团)nopaid(无付款订单)pre_auth_type(预授权0元购机交易) */
@@ -2463,7 +2499,7 @@ declare namespace Taobao.Trade {
     /** 由buyer_id加密, 可对外开放, 用来替换buyer_nick作为唯一标识 */
     buyer_open_uid: string;
     /** 子订单ID */
-    oid: number;
+    oid: number | bigint;
     /** 订单实付金额 */
     payment: string;
     /** 卖家昵称 */
@@ -2471,7 +2507,7 @@ declare namespace Taobao.Trade {
     /** 交易状态 */
     status: string;
     /** 主订单ID */
-    tid: number;
+    tid: number | bigint;
     /** 交易类型 */
     type: string;
   }
@@ -2483,7 +2519,7 @@ declare namespace Taobao.Trade {
     /** 由buyer_id加密, 可对外开放, 用来替换buyer_nick作为唯一标识 */
     buyer_open_uid: string;
     /** 子订单ID */
-    oid: number;
+    oid: number | bigint;
     /** 订单实付金额 */
     payment: string;
     /** 卖家昵称 */
@@ -2491,7 +2527,7 @@ declare namespace Taobao.Trade {
     /** 订单状态（请关注此状态，如果为TRADE_CLOSED_BY_TAOBAO状态，则不要对此订单进行发货，切记啊！）。可选值: TRADE_NO_CREATE_PAY(没有创建支付宝交易) WAIT_BUYER_PAY(等待买家付款) WAIT_SELLER_SEND_GOODS(等待卖家发货,即:买家已付款) WAIT_BUYER_CONFIRM_GOODS(等待买家确认收货,即:卖家已发货) TRADE_BUYER_SIGNED(买家已签收,货到付款专用) TRADE_FINISHED(交易成功) TRADE_CLOSED(付款以后用户退款成功，交易自动关闭) TRADE_CLOSED_BY_TAOBAO(付款以前，卖家或买家主动关闭交易)PAY_PENDING(国际信用卡支付付款确认中) */
     status: string;
     /** 主订单ID */
-    tid: number;
+    tid: number | bigint;
     /** 交易类型列表，同时查询多种交易类型可用逗号分隔。默认同时查询guarantee_trade, auto_delivery, ec, cod的4种交易类型的数据 可选值 fixed(一口价) auction(拍卖) guarantee_trade(一口价、拍卖) auto_delivery(自动发货) independent_simple_trade(旺店入门版交易) independent_shop_trade(旺店标准版交易) ec(直冲) cod(货到付款) fenxiao(分销) game_equipment(游戏装备) shopex_trade(ShopEX交易) netcn_trade(万网交易) external_trade(统一外部交易)o2o_offlinetrade（O2O交易）step (万人团)nopaid(无付款订单)pre_auth_type(预授权0元购机交易) */
     type: string;
   }
@@ -2503,7 +2539,7 @@ declare namespace Taobao.Trade {
     /** 由buyer_id加密, 可对外开放, 用来替换buyer_nick作为唯一标识 */
     buyer_open_uid: string;
     /** 主订单ID */
-    tid: number;
+    tid: number | bigint;
   }
 
   /** 交易备注修改消息 */

@@ -60,7 +60,7 @@ declare namespace Message {
     getShort(): number;
     getInt(): number;
     getLong(): bigint;
-    readBuffer(): Buffer;
+    readBuffer(): null | Buffer;
     readCountedString(): null | string;
     readCustomValue(): null | number | bigint | string | Buffer | Date;
     parse0(): null;

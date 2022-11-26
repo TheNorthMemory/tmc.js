@@ -109,6 +109,8 @@ declare interface TaoTopicsDescriptor {
   alibaba_aliqin_IotPersonalConfirmNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAliqinIotPersonalConfirmNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAliqinIotStatusNotice 阿里通信 > 物联网停机消息通知} */
   alibaba_aliqin_IotStatusNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAliqinIotStatusNotice) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaAliqinTaFcCallCdr 阿里通信 > 语音呼叫结果推送} */
+  alibaba_aliqin_TaFcCallCdr(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAliqinTaFcCallCdr) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAliqinTaFcSmsDR 阿里通信 > 聚石塔短消息发送结果报告} */
   alibaba_aliqin_TaFcSmsDR(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAliqinTaFcSmsDR) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaEinvoiceApplyUpdate 电子发票 > 发票申请单状态变更通知} */
@@ -535,6 +537,8 @@ declare interface TaoTopicsDescriptor {
   taobao_homeai_CaseSyncResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoHomeaiCaseSyncResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoHomeaiLayoutTransferResult HOMEAI消息对接 > 居然之家接受迁移结果} */
   taobao_homeai_LayoutTransferResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoHomeaiLayoutTransferResult) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoHomeaiModelSkuRelation HOMEAI消息对接 > 推送模型与商品关系} */
+  taobao_homeai_ModelSkuRelation(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoHomeaiModelSkuRelation) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoHomeaiRenderRequest HOMEAI消息对接 > HS渲染消息} */
   taobao_homeai_RenderRequest(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoHomeaiRenderRequest) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoHotelCreditToPreHotelStatus 酒店签约中心消息 > 信用住转预付酒店签约状态消息} */
@@ -707,6 +711,8 @@ declare interface TaoTopicsDescriptor {
   taobao_top_AuthCancel(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTopAuthCancel) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTopatsTaskComplete 平台消息 > 异步任务执行完成} */
   taobao_topats_TaskComplete(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTopatsTaskComplete) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoTradeAdvanceDisburse 淘宝交易 > 订单极速放款成功消息} */
+  taobao_trade_AdvanceDisburse(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTradeAdvanceDisburse) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTradeTradeAlipayCreate 淘宝交易 > 创建支付宝订单消息} */
   taobao_trade_TradeAlipayCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTradeTradeAlipayCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTradeTradeBuyerPay 淘宝交易 > 买家付完款，或万人团买家付完尾款} */
@@ -1238,6 +1244,8 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_aliqin_IotPersonalConfirmNotice', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAliqinIotPersonalConfirmNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAliqinIotStatusNotice 阿里通信 > 物联网停机消息通知} */
   on(topic: 'alibaba_aliqin_IotStatusNotice', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAliqinIotStatusNotice) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaAliqinTaFcCallCdr 阿里通信 > 语音呼叫结果推送} */
+  on(topic: 'alibaba_aliqin_TaFcCallCdr', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAliqinTaFcCallCdr) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAliqinTaFcSmsDR 阿里通信 > 聚石塔短消息发送结果报告} */
   on(topic: 'alibaba_aliqin_TaFcSmsDR', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAliqinTaFcSmsDR) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaEinvoiceApplyUpdate 电子发票 > 发票申请单状态变更通知} */
@@ -1664,6 +1672,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_homeai_CaseSyncResult', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoHomeaiCaseSyncResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoHomeaiLayoutTransferResult HOMEAI消息对接 > 居然之家接受迁移结果} */
   on(topic: 'taobao_homeai_LayoutTransferResult', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoHomeaiLayoutTransferResult) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoHomeaiModelSkuRelation HOMEAI消息对接 > 推送模型与商品关系} */
+  on(topic: 'taobao_homeai_ModelSkuRelation', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoHomeaiModelSkuRelation) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoHomeaiRenderRequest HOMEAI消息对接 > HS渲染消息} */
   on(topic: 'taobao_homeai_RenderRequest', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoHomeaiRenderRequest) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoHotelCreditToPreHotelStatus 酒店签约中心消息 > 信用住转预付酒店签约状态消息} */
@@ -1836,6 +1846,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_top_AuthCancel', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTopAuthCancel) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTopatsTaskComplete 平台消息 > 异步任务执行完成} */
   on(topic: 'taobao_topats_TaskComplete', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTopatsTaskComplete) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoTradeAdvanceDisburse 淘宝交易 > 订单极速放款成功消息} */
+  on(topic: 'taobao_trade_AdvanceDisburse', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTradeAdvanceDisburse) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTradeTradeAlipayCreate 淘宝交易 > 创建支付宝订单消息} */
   on(topic: 'taobao_trade_TradeAlipayCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTradeTradeAlipayCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTradeTradeBuyerPay 淘宝交易 > 买家付完款，或万人团买家付完尾款} */

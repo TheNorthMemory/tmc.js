@@ -336,7 +336,7 @@ declare namespace Tmall.Omnichannel {
     /** 全渠道ID */
     omni_id: string;
     /** Sku ID */
-    sku_id: number;
+    sku_id: number | bigint;
     /** 事件类型 */
     type: string;
   }
