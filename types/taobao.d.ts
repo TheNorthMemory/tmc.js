@@ -567,7 +567,7 @@ declare namespace Taobao.Fenxiao {
   }
 }
 
-/** 酒店标准库基础信息变更消息 */
+/** 酒店签约中心消息 */
 declare namespace Taobao.Fliggy {
   /** 飞猪通用合同签约消息 */
   interface CommonContractSign {
@@ -1732,6 +1732,19 @@ declare namespace Taobao.Openmall {
     status: string;
     /** 淘宝交易号 */
     tid: string;
+  }
+}
+
+/** 营销平台 */
+declare namespace Taobao.Os {
+  /** 前N有礼活动开奖消息 */
+  interface ActivityCompleted {
+    /** 活动id */
+    activity_id: number;
+    /** 活动开奖标识，0表示未开奖，1表示已开奖 */
+    complete_tag: number;
+    /** 测试商家 */
+    seller_nick: string;
   }
 }
 

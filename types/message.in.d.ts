@@ -31,17 +31,17 @@ declare namespace IncomingMessage {
   type AlibabaAdlabOrderItemStatus = Message & { content?: MessageContent & { topic?: 'alibaba_adlab_OrderItemStatus', content?: string | Alibaba.Adlab.OrderItemStatus } };
   /** {@link Alibaba.Alicom.FlowGiftSendNotify 阿里通信 > 阿里通信流量统一营销赠品发放通知} */
   type AlibabaAlicomFlowGiftSendNotify = Message & { content?: MessageContent & { topic?: 'alibaba_alicom_FlowGiftSendNotify', content?: string | Alibaba.Alicom.FlowGiftSendNotify } };
-  /** {@link Alibaba.Alihealth.BillProcessStatusNotify 阿里健康-疫苗 > 单据处理状态通知} */
+  /** {@link Alibaba.Alihealth.BillProcessStatusNotify 阿里健康追溯码 > 单据处理状态通知} */
   type AlibabaAlihealthBillProcessStatusNotify = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_BillProcessStatusNotify', content?: string | Alibaba.Alihealth.BillProcessStatusNotify } };
-  /** {@link Alibaba.Alihealth.DoctorMessage 阿里健康-疫苗 > 医生、服务相关消息} */
+  /** {@link Alibaba.Alihealth.DoctorMessage 阿里健康追溯码 > 医生、服务相关消息} */
   type AlibabaAlihealthDoctorMessage = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_DoctorMessage', content?: string | Alibaba.Alihealth.DoctorMessage } };
-  /** {@link Alibaba.Alihealth.NrmopOrderStatusChange 阿里健康-疫苗 > 中台订单状态变化推送} */
+  /** {@link Alibaba.Alihealth.NrmopOrderStatusChange 阿里健康追溯码 > 中台订单状态变化推送} */
   type AlibabaAlihealthNrmopOrderStatusChange = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_NrmopOrderStatusChange', content?: string | Alibaba.Alihealth.NrmopOrderStatusChange } };
-  /** {@link Alibaba.Alihealth.OrderStatusChange 阿里健康-疫苗 > 平台通知三方机构"订单状态变更"} */
+  /** {@link Alibaba.Alihealth.OrderStatusChange 阿里健康追溯码 > 平台通知三方机构"订单状态变更"} */
   type AlibabaAlihealthOrderStatusChange = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_OrderStatusChange', content?: string | Alibaba.Alihealth.OrderStatusChange } };
-  /** {@link Alibaba.Alihealth.TradeOrderStatusChange 阿里健康-疫苗 > O2O订单状态变更通知} */
+  /** {@link Alibaba.Alihealth.TradeOrderStatusChange 阿里健康追溯码 > O2O订单状态变更通知} */
   type AlibabaAlihealthTradeOrderStatusChange = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_TradeOrderStatusChange', content?: string | Alibaba.Alihealth.TradeOrderStatusChange } };
-  /** {@link Alibaba.Alihealth.TradeVaccineSubscribeChange 阿里健康-疫苗 > 疫苗交易预约信息变动} */
+  /** {@link Alibaba.Alihealth.TradeVaccineSubscribeChange 阿里健康追溯码 > 疫苗交易预约信息变动} */
   type AlibabaAlihealthTradeVaccineSubscribeChange = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_TradeVaccineSubscribeChange', content?: string | Alibaba.Alihealth.TradeVaccineSubscribeChange } };
   /** {@link Alibaba.Alink.DeviceDataPush 阿里物联 > 设备数据推送} */
   type AlibabaAlinkDeviceDataPush = Message & { content?: MessageContent & { topic?: 'alibaba_alink_DeviceDataPush', content?: string | Alibaba.Alink.DeviceDataPush } };
@@ -89,35 +89,35 @@ declare namespace IncomingMessage {
   type AlibabaFuwuOrderPaid = Message & { content?: MessageContent & { topic?: 'alibaba_fuwu_OrderPaid', content?: string | Alibaba.Fuwu.OrderPaid } };
   /** {@link Alibaba.Happytrip.OrderNotify 欢行开放平台 > 欢行统一订单模型变更通知消息} */
   type AlibabaHappytripOrderNotify = Message & { content?: MessageContent & { topic?: 'alibaba_happytrip_OrderNotify', content?: string | Alibaba.Happytrip.OrderNotify } };
-  /** {@link Alibaba.Invoice.Apply 阿里发票 > 开票申请} */
+  /** {@link Alibaba.Invoice.Apply 电子发票 > 开票申请} */
   type AlibabaInvoiceApply = Message & { content?: MessageContent & { topic?: 'alibaba_invoice_Apply', content?: string | Alibaba.Invoice.Apply } };
-  /** {@link Alibaba.Invoice.ApplyResult 阿里发票 > 开票申请审核结果} */
+  /** {@link Alibaba.Invoice.ApplyResult 电子发票 > 开票申请审核结果} */
   type AlibabaInvoiceApplyResult = Message & { content?: MessageContent & { topic?: 'alibaba_invoice_ApplyResult', content?: string | Alibaba.Invoice.ApplyResult } };
-  /** {@link Alibaba.Invoice.DiskOffline 阿里发票 > 税盘下架单新增和更新通知} */
+  /** {@link Alibaba.Invoice.DiskOffline 电子发票 > 税盘下架单新增和更新通知} */
   type AlibabaInvoiceDiskOffline = Message & { content?: MessageContent & { topic?: 'alibaba_invoice_DiskOffline', content?: string | Alibaba.Invoice.DiskOffline } };
-  /** {@link Alibaba.Invoice.FlowBuket 阿里发票 > 资源包开通/订购记录同步} */
+  /** {@link Alibaba.Invoice.FlowBuket 电子发票 > 资源包开通/订购记录同步} */
   type AlibabaInvoiceFlowBuket = Message & { content?: MessageContent & { topic?: 'alibaba_invoice_FlowBuket', content?: string | Alibaba.Invoice.FlowBuket } };
-  /** {@link Alibaba.Invoice.InvoiceApply 阿里发票 > 税控服务开票申请} */
+  /** {@link Alibaba.Invoice.InvoiceApply 电子发票 > 税控服务开票申请} */
   type AlibabaInvoiceInvoiceApply = Message & { content?: MessageContent & { topic?: 'alibaba_invoice_InvoiceApply', content?: string | Alibaba.Invoice.InvoiceApply } };
-  /** {@link Alibaba.Invoice.Logistics 阿里发票 > 发票对外通知物流信息} */
+  /** {@link Alibaba.Invoice.Logistics 电子发票 > 发票对外通知物流信息} */
   type AlibabaInvoiceLogistics = Message & { content?: MessageContent & { topic?: 'alibaba_invoice_Logistics', content?: string | Alibaba.Invoice.Logistics } };
-  /** {@link Alibaba.Invoice.PaperOpsReturn 阿里发票 > 纸票操作结果回传（打印、作废等）} */
+  /** {@link Alibaba.Invoice.PaperOpsReturn 电子发票 > 纸票操作结果回传（打印、作废等）} */
   type AlibabaInvoicePaperOpsReturn = Message & { content?: MessageContent & { topic?: 'alibaba_invoice_PaperOpsReturn', content?: string | Alibaba.Invoice.PaperOpsReturn } };
-  /** {@link Alibaba.Invoice.PreConsulting 阿里发票 > 电子发票售前咨询} */
+  /** {@link Alibaba.Invoice.PreConsulting 电子发票 > 电子发票售前咨询} */
   type AlibabaInvoicePreConsulting = Message & { content?: MessageContent & { topic?: 'alibaba_invoice_PreConsulting', content?: string | Alibaba.Invoice.PreConsulting } };
-  /** {@link Alibaba.Invoice.Query 阿里发票 > 数据查询请求} */
+  /** {@link Alibaba.Invoice.Query 电子发票 > 数据查询请求} */
   type AlibabaInvoiceQuery = Message & { content?: MessageContent & { topic?: 'alibaba_invoice_Query', content?: string | Alibaba.Invoice.Query } };
-  /** {@link Alibaba.Invoice.QueryInvoice 阿里发票 > 查询发票信息} */
+  /** {@link Alibaba.Invoice.QueryInvoice 电子发票 > 查询发票信息} */
   type AlibabaInvoiceQueryInvoice = Message & { content?: MessageContent & { topic?: 'alibaba_invoice_QueryInvoice', content?: string | Alibaba.Invoice.QueryInvoice } };
-  /** {@link Alibaba.Invoice.Regist 阿里发票 > 入驻阿里发票平台} */
+  /** {@link Alibaba.Invoice.Regist 电子发票 > 入驻阿里发票平台} */
   type AlibabaInvoiceRegist = Message & { content?: MessageContent & { topic?: 'alibaba_invoice_Regist', content?: string | Alibaba.Invoice.Regist } };
-  /** {@link Alibaba.Invoice.ResultReturn 阿里发票 > 开票请求结果} */
+  /** {@link Alibaba.Invoice.ResultReturn 电子发票 > 开票请求结果} */
   type AlibabaInvoiceResultReturn = Message & { content?: MessageContent & { topic?: 'alibaba_invoice_ResultReturn', content?: string | Alibaba.Invoice.ResultReturn } };
-  /** {@link Alibaba.Invoice.StatusChange 阿里发票 > 发票状态变更消息} */
+  /** {@link Alibaba.Invoice.StatusChange 电子发票 > 发票状态变更消息} */
   type AlibabaInvoiceStatusChange = Message & { content?: MessageContent & { topic?: 'alibaba_invoice_StatusChange', content?: string | Alibaba.Invoice.StatusChange } };
-  /** {@link Alibaba.Invoice.TaxChange 阿里发票 > 商家税号变更} */
+  /** {@link Alibaba.Invoice.TaxChange 电子发票 > 商家税号变更} */
   type AlibabaInvoiceTaxChange = Message & { content?: MessageContent & { topic?: 'alibaba_invoice_TaxChange', content?: string | Alibaba.Invoice.TaxChange } };
-  /** {@link Alibaba.Invoice.Unissue 阿里发票 > 创建未开具发票通知} */
+  /** {@link Alibaba.Invoice.Unissue 电子发票 > 创建未开具发票通知} */
   type AlibabaInvoiceUnissue = Message & { content?: MessageContent & { topic?: 'alibaba_invoice_Unissue', content?: string | Alibaba.Invoice.Unissue } };
   /** {@link Alibaba.Lst.BmOrderLogisticsChange 零售通_公共 > 品牌商-订单物流状态变化} */
   type AlibabaLstBmOrderLogisticsChange = Message & { content?: MessageContent & { topic?: 'alibaba_lst_BmOrderLogisticsChange', content?: string | Alibaba.Lst.BmOrderLogisticsChange } };
@@ -195,21 +195,21 @@ declare namespace IncomingMessage {
   type AlibabaTianjiContractOrder = Message & { content?: MessageContent & { topic?: 'alibaba_tianji_ContractOrder', content?: string | Alibaba.Tianji.ContractOrder } };
   /** {@link Alibaba.Tianji.OrderCreate 阿里通信 > 天机平台订单生成通知消息} */
   type AlibabaTianjiOrderCreate = Message & { content?: MessageContent & { topic?: 'alibaba_tianji_OrderCreate', content?: string | Alibaba.Tianji.OrderCreate } };
-  /** {@link Alibaba.Wdk.ChannelCommentAudit 五道口商品 > 差评回评} */
+  /** {@link Alibaba.Wdk.ChannelCommentAudit 五道口订单 > 差评回评} */
   type AlibabaWdkChannelCommentAudit = Message & { content?: MessageContent & { topic?: 'alibaba_wdk_ChannelCommentAudit', content?: string | Alibaba.Wdk.ChannelCommentAudit } };
-  /** {@link Alibaba.Wdk.ChannelOrderCancel 五道口商品 > 五道口售中取消外部订单消息} */
+  /** {@link Alibaba.Wdk.ChannelOrderCancel 五道口订单 > 五道口售中取消外部订单消息} */
   type AlibabaWdkChannelOrderCancel = Message & { content?: MessageContent & { topic?: 'alibaba_wdk_ChannelOrderCancel', content?: string | Alibaba.Wdk.ChannelOrderCancel } };
-  /** {@link Alibaba.Wdk.ChannelOrderCsRefundAudit 五道口商品 > 客服审核退款结果} */
+  /** {@link Alibaba.Wdk.ChannelOrderCsRefundAudit 五道口订单 > 客服审核退款结果} */
   type AlibabaWdkChannelOrderCsRefundAudit = Message & { content?: MessageContent & { topic?: 'alibaba_wdk_ChannelOrderCsRefundAudit', content?: string | Alibaba.Wdk.ChannelOrderCsRefundAudit } };
-  /** {@link Alibaba.Wdk.ChannelOrderCsUserrefund 五道口商品 > 客服代客发起售后退款(整单/部分)} */
+  /** {@link Alibaba.Wdk.ChannelOrderCsUserrefund 五道口订单 > 客服代客发起售后退款(整单/部分)} */
   type AlibabaWdkChannelOrderCsUserrefund = Message & { content?: MessageContent & { topic?: 'alibaba_wdk_ChannelOrderCsUserrefund', content?: string | Alibaba.Wdk.ChannelOrderCsUserrefund } };
-  /** {@link Alibaba.Wdk.ChannelOrderStatusChange 五道口商品 > 订单状态变更消息} */
+  /** {@link Alibaba.Wdk.ChannelOrderStatusChange 五道口订单 > 订单状态变更消息} */
   type AlibabaWdkChannelOrderStatusChange = Message & { content?: MessageContent & { topic?: 'alibaba_wdk_ChannelOrderStatusChange', content?: string | Alibaba.Wdk.ChannelOrderStatusChange } };
-  /** {@link Alibaba.Wdk.ChannelStockSync 五道口商品 > 库存同步} */
+  /** {@link Alibaba.Wdk.ChannelStockSync 五道口订单 > 库存同步} */
   type AlibabaWdkChannelStockSync = Message & { content?: MessageContent & { topic?: 'alibaba_wdk_ChannelStockSync', content?: string | Alibaba.Wdk.ChannelStockSync } };
-  /** {@link Alibaba.Wdk.FulfillOrderChange 五道口商品 > 售中履约变更消息} */
+  /** {@link Alibaba.Wdk.FulfillOrderChange 五道口订单 > 售中履约变更消息} */
   type AlibabaWdkFulfillOrderChange = Message & { content?: MessageContent & { topic?: 'alibaba_wdk_FulfillOrderChange', content?: string | Alibaba.Wdk.FulfillOrderChange } };
-  /** {@link Alibaba.Wdk.StoreItemUpdate 五道口商品 > 商家渠道商品变动消息} */
+  /** {@link Alibaba.Wdk.StoreItemUpdate 五道口订单 > 商家渠道商品变动消息} */
   type AlibabaWdkStoreItemUpdate = Message & { content?: MessageContent & { topic?: 'alibaba_wdk_StoreItemUpdate', content?: string | Alibaba.Wdk.StoreItemUpdate } };
   /** {@link Alibaba.Wdkitem.WarehouseSkuModify 五道口商品 > 五道口仓商品变更消息} */
   type AlibabaWdkitemWarehouseSkuModify = Message & { content?: MessageContent & { topic?: 'alibaba_wdkitem_WarehouseSkuModify', content?: string | Alibaba.Wdkitem.WarehouseSkuModify } };
@@ -471,15 +471,15 @@ declare namespace IncomingMessage {
   type TaobaoFenxiaoFxTradeRefundCreate = Message & { content?: MessageContent & { topic?: 'taobao_fenxiao_FxTradeRefundCreate', content?: string | Taobao.Fenxiao.FxTradeRefundCreate } };
   /** {@link Taobao.Fenxiao.FxTradeRefundSuccess 淘宝分销 > 下游订单退款完成消息} */
   type TaobaoFenxiaoFxTradeRefundSuccess = Message & { content?: MessageContent & { topic?: 'taobao_fenxiao_FxTradeRefundSuccess', content?: string | Taobao.Fenxiao.FxTradeRefundSuccess } };
-  /** {@link Taobao.Fliggy.CommonContractSign 酒店标准库基础信息变更消息 > 飞猪通用合同签约消息} */
+  /** {@link Taobao.Fliggy.CommonContractSign 酒店签约中心消息 > 飞猪通用合同签约消息} */
   type TaobaoFliggyCommonContractSign = Message & { content?: MessageContent & { topic?: 'taobao_fliggy_CommonContractSign', content?: string | Taobao.Fliggy.CommonContractSign } };
-  /** {@link Taobao.Fliggy.HspHicItemChange 酒店标准库基础信息变更消息 > Hsp转发卖家库聚合shid维度库价变更消息} */
+  /** {@link Taobao.Fliggy.HspHicItemChange 酒店签约中心消息 > Hsp转发卖家库聚合shid维度库价变更消息} */
   type TaobaoFliggyHspHicItemChange = Message & { content?: MessageContent & { topic?: 'taobao_fliggy_HspHicItemChange', content?: string | Taobao.Fliggy.HspHicItemChange } };
-  /** {@link Taobao.Fliggy.SignStatus 酒店标准库基础信息变更消息 > 飞猪签约状态消息} */
+  /** {@link Taobao.Fliggy.SignStatus 酒店签约中心消息 > 飞猪签约状态消息} */
   type TaobaoFliggySignStatus = Message & { content?: MessageContent & { topic?: 'taobao_fliggy_SignStatus', content?: string | Taobao.Fliggy.SignStatus } };
-  /** {@link Taobao.Fliggy.StdHotelModify 酒店标准库基础信息变更消息 > 标准酒店实体变更消息} */
+  /** {@link Taobao.Fliggy.StdHotelModify 酒店签约中心消息 > 标准酒店实体变更消息} */
   type TaobaoFliggyStdHotelModify = Message & { content?: MessageContent & { topic?: 'taobao_fliggy_StdHotelModify', content?: string | Taobao.Fliggy.StdHotelModify } };
-  /** {@link Taobao.Fliggy.StdRoomTypeModify 酒店标准库基础信息变更消息 > 标准房型领域模型实体变更消息} */
+  /** {@link Taobao.Fliggy.StdRoomTypeModify 酒店签约中心消息 > 标准房型领域模型实体变更消息} */
   type TaobaoFliggyStdRoomTypeModify = Message & { content?: MessageContent & { topic?: 'taobao_fliggy_StdRoomTypeModify', content?: string | Taobao.Fliggy.StdRoomTypeModify } };
   /** {@link Taobao.Fuwu.OrderClosed 服务市场 > 订单关闭消息} */
   type TaobaoFuwuOrderClosed = Message & { content?: MessageContent & { topic?: 'taobao_fuwu_OrderClosed', content?: string | Taobao.Fuwu.OrderClosed } };
@@ -599,6 +599,8 @@ declare namespace IncomingMessage {
   type TaobaoOpenmallRefundChanged = Message & { content?: MessageContent & { topic?: 'taobao_openmall_RefundChanged', content?: string | Taobao.Openmall.RefundChanged } };
   /** {@link Taobao.Openmall.TradeChanged OpenMall-API > 订单消息通知} */
   type TaobaoOpenmallTradeChanged = Message & { content?: MessageContent & { topic?: 'taobao_openmall_TradeChanged', content?: string | Taobao.Openmall.TradeChanged } };
+  /** {@link Taobao.Os.ActivityCompleted 营销平台 > 前N有礼活动开奖消息} */
+  type TaobaoOsActivityCompleted = Message & { content?: MessageContent & { topic?: 'taobao_os_ActivityCompleted', content?: string | Taobao.Os.ActivityCompleted } };
   /** {@link Taobao.Rdcaligenius.OrderMsgSend 淘宝交易 > 订单消息} */
   type TaobaoRdcaligeniusOrderMsgSend = Message & { content?: MessageContent & { topic?: 'taobao_rdcaligenius_OrderMsgSend', content?: string | Taobao.Rdcaligenius.OrderMsgSend } };
   /** {@link Taobao.Recycle.OfnPreRedPacketSync 淘宝交易 > 同步前置补贴红包的最新数据} */
@@ -797,7 +799,7 @@ declare namespace IncomingMessage {
   type TmallMeiMemberRegister = Message & { content?: MessageContent & { topic?: 'tmall_mei_MemberRegister', content?: string | Tmall.Mei.MemberRegister } };
   /** {@link Tmall.Mei.PointChange 天猫美妆 > 品牌积分变更通知} */
   type TmallMeiPointChange = Message & { content?: MessageContent & { topic?: 'tmall_mei_PointChange', content?: string | Tmall.Mei.PointChange } };
-  /** {@link Tmall.Nrt.ItemsToEasyHome 新零售终端上行消息 > 商品信息同步} */
+  /** {@link Tmall.Nrt.ItemsToEasyHome 新零售终端下行消息 > 商品信息同步} */
   type TmallNrtItemsToEasyHome = Message & { content?: MessageContent & { topic?: 'tmall_nrt_ItemsToEasyHome', content?: string | Tmall.Nrt.ItemsToEasyHome } };
   /** {@link Tmall.Omnichannel.InventoryChange 聚石塔 > 商品库存变化} */
   type TmallOmnichannelInventoryChange = Message & { content?: MessageContent & { topic?: 'tmall_omnichannel_InventoryChange', content?: string | Tmall.Omnichannel.InventoryChange } };
@@ -872,12 +874,12 @@ declare namespace IncomingMessage {
    */
   type AlibabaAlicom = AlibabaAlicomFlowGiftSendNotify;
   /**
-   * - {@link AlibabaAlihealthBillProcessStatusNotify 阿里健康-疫苗 > 单据处理状态通知}
-   * - {@link AlibabaAlihealthDoctorMessage 阿里健康-疫苗 > 医生、服务相关消息}
-   * - {@link AlibabaAlihealthNrmopOrderStatusChange 阿里健康-疫苗 > 中台订单状态变化推送}
-   * - {@link AlibabaAlihealthOrderStatusChange 阿里健康-疫苗 > 平台通知三方机构"订单状态变更"}
-   * - {@link AlibabaAlihealthTradeOrderStatusChange 阿里健康-疫苗 > O2O订单状态变更通知}
-   * - {@link AlibabaAlihealthTradeVaccineSubscribeChange 阿里健康-疫苗 > 疫苗交易预约信息变动}
+   * - {@link AlibabaAlihealthBillProcessStatusNotify 阿里健康追溯码 > 单据处理状态通知}
+   * - {@link AlibabaAlihealthDoctorMessage 阿里健康追溯码 > 医生、服务相关消息}
+   * - {@link AlibabaAlihealthNrmopOrderStatusChange 阿里健康追溯码 > 中台订单状态变化推送}
+   * - {@link AlibabaAlihealthOrderStatusChange 阿里健康追溯码 > 平台通知三方机构"订单状态变更"}
+   * - {@link AlibabaAlihealthTradeOrderStatusChange 阿里健康追溯码 > O2O订单状态变更通知}
+   * - {@link AlibabaAlihealthTradeVaccineSubscribeChange 阿里健康追溯码 > 疫苗交易预约信息变动}
    */
   type AlibabaAlihealth = AlibabaAlihealthBillProcessStatusNotify
     | AlibabaAlihealthDoctorMessage
@@ -942,21 +944,21 @@ declare namespace IncomingMessage {
    */
   type AlibabaHappytrip = AlibabaHappytripOrderNotify;
   /**
-   * - {@link AlibabaInvoiceApply 阿里发票 > 开票申请}
-   * - {@link AlibabaInvoiceApplyResult 阿里发票 > 开票申请审核结果}
-   * - {@link AlibabaInvoiceDiskOffline 阿里发票 > 税盘下架单新增和更新通知}
-   * - {@link AlibabaInvoiceFlowBuket 阿里发票 > 资源包开通/订购记录同步}
-   * - {@link AlibabaInvoiceInvoiceApply 阿里发票 > 税控服务开票申请}
-   * - {@link AlibabaInvoiceLogistics 阿里发票 > 发票对外通知物流信息}
-   * - {@link AlibabaInvoicePaperOpsReturn 阿里发票 > 纸票操作结果回传（打印、作废等）}
-   * - {@link AlibabaInvoicePreConsulting 阿里发票 > 电子发票售前咨询}
-   * - {@link AlibabaInvoiceQuery 阿里发票 > 数据查询请求}
-   * - {@link AlibabaInvoiceQueryInvoice 阿里发票 > 查询发票信息}
-   * - {@link AlibabaInvoiceRegist 阿里发票 > 入驻阿里发票平台}
-   * - {@link AlibabaInvoiceResultReturn 阿里发票 > 开票请求结果}
-   * - {@link AlibabaInvoiceStatusChange 阿里发票 > 发票状态变更消息}
-   * - {@link AlibabaInvoiceTaxChange 阿里发票 > 商家税号变更}
-   * - {@link AlibabaInvoiceUnissue 阿里发票 > 创建未开具发票通知}
+   * - {@link AlibabaInvoiceApply 电子发票 > 开票申请}
+   * - {@link AlibabaInvoiceApplyResult 电子发票 > 开票申请审核结果}
+   * - {@link AlibabaInvoiceDiskOffline 电子发票 > 税盘下架单新增和更新通知}
+   * - {@link AlibabaInvoiceFlowBuket 电子发票 > 资源包开通/订购记录同步}
+   * - {@link AlibabaInvoiceInvoiceApply 电子发票 > 税控服务开票申请}
+   * - {@link AlibabaInvoiceLogistics 电子发票 > 发票对外通知物流信息}
+   * - {@link AlibabaInvoicePaperOpsReturn 电子发票 > 纸票操作结果回传（打印、作废等）}
+   * - {@link AlibabaInvoicePreConsulting 电子发票 > 电子发票售前咨询}
+   * - {@link AlibabaInvoiceQuery 电子发票 > 数据查询请求}
+   * - {@link AlibabaInvoiceQueryInvoice 电子发票 > 查询发票信息}
+   * - {@link AlibabaInvoiceRegist 电子发票 > 入驻阿里发票平台}
+   * - {@link AlibabaInvoiceResultReturn 电子发票 > 开票请求结果}
+   * - {@link AlibabaInvoiceStatusChange 电子发票 > 发票状态变更消息}
+   * - {@link AlibabaInvoiceTaxChange 电子发票 > 商家税号变更}
+   * - {@link AlibabaInvoiceUnissue 电子发票 > 创建未开具发票通知}
    */
   type AlibabaInvoice = AlibabaInvoiceApply
     | AlibabaInvoiceApplyResult
@@ -1070,14 +1072,14 @@ declare namespace IncomingMessage {
   type AlibabaTianji = AlibabaTianjiContractOrder
     | AlibabaTianjiOrderCreate;
   /**
-   * - {@link AlibabaWdkChannelCommentAudit 五道口商品 > 差评回评}
-   * - {@link AlibabaWdkChannelOrderCancel 五道口商品 > 五道口售中取消外部订单消息}
-   * - {@link AlibabaWdkChannelOrderCsRefundAudit 五道口商品 > 客服审核退款结果}
-   * - {@link AlibabaWdkChannelOrderCsUserrefund 五道口商品 > 客服代客发起售后退款(整单/部分)}
-   * - {@link AlibabaWdkChannelOrderStatusChange 五道口商品 > 订单状态变更消息}
-   * - {@link AlibabaWdkChannelStockSync 五道口商品 > 库存同步}
-   * - {@link AlibabaWdkFulfillOrderChange 五道口商品 > 售中履约变更消息}
-   * - {@link AlibabaWdkStoreItemUpdate 五道口商品 > 商家渠道商品变动消息}
+   * - {@link AlibabaWdkChannelCommentAudit 五道口订单 > 差评回评}
+   * - {@link AlibabaWdkChannelOrderCancel 五道口订单 > 五道口售中取消外部订单消息}
+   * - {@link AlibabaWdkChannelOrderCsRefundAudit 五道口订单 > 客服审核退款结果}
+   * - {@link AlibabaWdkChannelOrderCsUserrefund 五道口订单 > 客服代客发起售后退款(整单/部分)}
+   * - {@link AlibabaWdkChannelOrderStatusChange 五道口订单 > 订单状态变更消息}
+   * - {@link AlibabaWdkChannelStockSync 五道口订单 > 库存同步}
+   * - {@link AlibabaWdkFulfillOrderChange 五道口订单 > 售中履约变更消息}
+   * - {@link AlibabaWdkStoreItemUpdate 五道口订单 > 商家渠道商品变动消息}
    */
   type AlibabaWdk = AlibabaWdkChannelCommentAudit
     | AlibabaWdkChannelOrderCancel
@@ -1454,11 +1456,11 @@ declare namespace IncomingMessage {
     | TaobaoFenxiaoFxTradeRefundCreate
     | TaobaoFenxiaoFxTradeRefundSuccess;
   /**
-   * - {@link TaobaoFliggyCommonContractSign 酒店标准库基础信息变更消息 > 飞猪通用合同签约消息}
-   * - {@link TaobaoFliggyHspHicItemChange 酒店标准库基础信息变更消息 > Hsp转发卖家库聚合shid维度库价变更消息}
-   * - {@link TaobaoFliggySignStatus 酒店标准库基础信息变更消息 > 飞猪签约状态消息}
-   * - {@link TaobaoFliggyStdHotelModify 酒店标准库基础信息变更消息 > 标准酒店实体变更消息}
-   * - {@link TaobaoFliggyStdRoomTypeModify 酒店标准库基础信息变更消息 > 标准房型领域模型实体变更消息}
+   * - {@link TaobaoFliggyCommonContractSign 酒店签约中心消息 > 飞猪通用合同签约消息}
+   * - {@link TaobaoFliggyHspHicItemChange 酒店签约中心消息 > Hsp转发卖家库聚合shid维度库价变更消息}
+   * - {@link TaobaoFliggySignStatus 酒店签约中心消息 > 飞猪签约状态消息}
+   * - {@link TaobaoFliggyStdHotelModify 酒店签约中心消息 > 标准酒店实体变更消息}
+   * - {@link TaobaoFliggyStdRoomTypeModify 酒店签约中心消息 > 标准房型领域模型实体变更消息}
    */
   type TaobaoFliggy = TaobaoFliggyCommonContractSign
     | TaobaoFliggyHspHicItemChange
@@ -1617,6 +1619,10 @@ declare namespace IncomingMessage {
     | TaobaoOpenmallItemStockChanged
     | TaobaoOpenmallRefundChanged
     | TaobaoOpenmallTradeChanged;
+  /**
+   * - {@link TaobaoOsActivityCompleted 营销平台 > 前N有礼活动开奖消息}
+   */
+  type TaobaoOs = TaobaoOsActivityCompleted;
   /**
    * - {@link TaobaoRdcaligeniusOrderMsgSend 淘宝交易 > 订单消息}
    */
@@ -1856,7 +1862,7 @@ declare namespace IncomingMessage {
   type TmallMei = TmallMeiMemberRegister
     | TmallMeiPointChange;
   /**
-   * - {@link TmallNrtItemsToEasyHome 新零售终端上行消息 > 商品信息同步}
+   * - {@link TmallNrtItemsToEasyHome 新零售终端下行消息 > 商品信息同步}
    */
   type TmallNrt = TmallNrtItemsToEasyHome;
   /**
@@ -2129,6 +2135,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoOpencrm}
    * - {@link TaobaoOpenim}
    * - {@link TaobaoOpenmall}
+   * - {@link TaobaoOs}
    * - {@link TaobaoRdcaligenius}
    * - {@link TaobaoRecycle}
    * - {@link TaobaoRefund}
@@ -2175,6 +2182,7 @@ declare namespace IncomingMessage {
     | TaobaoOpencrm
     | TaobaoOpenim
     | TaobaoOpenmall
+    | TaobaoOs
     | TaobaoRdcaligenius
     | TaobaoRecycle
     | TaobaoRefund

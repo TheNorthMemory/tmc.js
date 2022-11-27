@@ -134,11 +134,11 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 
 ## 支持的TOPICS
 
-<details><summary>共计 82+ 类别，441+ 消息数</summary>
+<details><summary>共计 83+ 类别，445+ 消息数</summary>
 
 | 类别 | 消息数 |
 | --- | --- |
-| 淘宝交易 | 20 |
+| 淘宝交易 | 21 |
 | 淘宝退款 | 13 |
 | 淘宝商品 | 13 |
 | 淘宝分销 | 23 |
@@ -154,8 +154,9 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | 天猫美妆 | 2 |
 | 聚石塔 | 9 |
 | 淘宝物流 | 1 |
-| 阿里通信 | 17 |
+| 阿里通信 | 18 |
 | 天猫魔盒 | 2 |
+| 营销平台 | 1 |
 | OpenIM消息 | 1 |
 | 网上法庭 | 8 |
 | 电子发票 | 20 |
@@ -195,7 +196,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | TVOS应用审核平台 | 1 |
 | Gifting送礼 | 1 |
 | 五道口商品 | 2 |
-| HOMEAI | 1 |
+| HOMEAI | 2 |
 | HOMEAI消息对接 | 5 |
 | 零售通_公共 | 8 |
 | 酒店标准库基础信息变更消息 | 2 |

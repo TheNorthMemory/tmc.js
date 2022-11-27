@@ -48,7 +48,7 @@ declare namespace Alibaba.Alicom {
   }
 }
 
-/** 阿里健康-疫苗 */
+/** 阿里健康追溯码 */
 declare namespace Alibaba.Alihealth {
   /** 单据处理状态通知 */
   interface BillProcessStatusNotify {
@@ -504,7 +504,7 @@ declare namespace Alibaba.Happytrip {
   }
 }
 
-/** 阿里发票 */
+/** 电子发票 */
 declare namespace Alibaba.Invoice {
   /** 开票申请 */
   interface Apply {
@@ -1425,7 +1425,7 @@ declare namespace Alibaba.Tianji {
   }
 }
 
-/** 五道口商品 */
+/** 五道口订单 */
 declare namespace Alibaba.Wdk {
   /** 差评回评 */
   interface ChannelCommentAudit {

@@ -270,7 +270,7 @@ declare namespace Tmall.Mei {
   }
 }
 
-/** 新零售终端上行消息 */
+/** 新零售终端下行消息 */
 declare namespace Tmall.Nrt {
   /** 商品信息同步 */
   interface ItemsToEasyHome {
