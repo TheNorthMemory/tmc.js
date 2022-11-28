@@ -13,7 +13,7 @@ declare namespace Alitrip.Agent {
     /** 事件 */
     event: string;
     /** 消息发送时间 */
-    msg_time: Date;
+    msg_time: Date | number | string;
     /** 业务类型 */
     type: string;
   }
@@ -28,7 +28,7 @@ declare namespace Alitrip.Btrip {
     /** 签约结果：成功/失败 */
     sign_result: boolean;
     /** 签约结果提示：成功/失败提示 */
-    sign_tips: string;
+    sign_tips?: string;
   }
 
   /** 阿里商旅企业超标审批单提交消息 */
@@ -51,27 +51,27 @@ declare namespace Alitrip.Flight {
   /** 航变消息 */
   interface Change {
     /** 航变时间 */
-    flight_change_time: Date;
+    flight_change_time: Date | number | string;
     /** 航变类型，1为取消，2为变更，3为保护 */
     flight_change_type: number;
     /** 新到达机场 */
     new_arr_airport: string;
     /** 新到达时间 */
-    new_arr_time: Date;
+    new_arr_time?: Date | number | string;
     /** 新出发机场 */
     new_dep_airport: string;
     /** 新出发时间 */
-    new_dep_time: Date;
+    new_dep_time?: Date | number | string;
     /** 新航班号 */
     new_flight_num: string;
     /** 原到达机场 */
     old_arr_airport: string;
     /** 原到达时间 */
-    old_arr_time: Date;
+    old_arr_time: Date | number | string;
     /** 原出发机场 */
     old_dep_airport: string;
     /** 原出发时间 */
-    old_dep_time: Date;
+    old_dep_time: Date | number | string;
     /** 原航班号 */
     old_flight_num: string;
     /** 订单id */
@@ -86,27 +86,27 @@ declare namespace Alitrip.Iesr {
     /** 发生航班请及时通知乘客 */
     desc: string;
     /** 航变时间 */
-    flight_change_time: Date;
+    flight_change_time: Date | number | string;
     /** 航变类型（1-航班取消, 2-航班变更） */
     flight_change_type: number;
     /** 航变后到达机场 */
     new_arr_airport: string;
     /** 航变后到达时间 */
-    new_arr_time: Date;
+    new_arr_time: Date | number | string;
     /** 航变后出发机场 */
     new_dep_airport: string;
     /** 航变后出发时间 */
-    new_dep_time: Date;
+    new_dep_time: Date | number | string;
     /** 航变后航班号 */
     new_flight_num: string;
     /** 航变前到达机场 */
     old_arr_airport: string;
     /** 航变前到达时间 */
-    old_arr_time: Date;
+    old_arr_time: Date | number | string;
     /** 航变前出发机场 */
     old_dep_airport: string;
     /** 航变前出发时间 */
-    old_dep_time: Date;
+    old_dep_time: Date | number | string;
     /** 航变前航班号 */
     old_flight_num: string;
     /** 订单ID */
@@ -116,7 +116,7 @@ declare namespace Alitrip.Iesr {
   /** 国际运价采购票消息 */
   interface TicketMessage {
     /** 消息描述 */
-    description: string;
+    description?: string;
     /** 消息类型 */
     messagetype: string;
     /** 订单ID */
@@ -187,17 +187,17 @@ declare namespace Alitrip.Travel {
   /** 飞猪度假交易订单状态变更消息 */
   interface OrderChanged {
     /** 可选字段，跨店铺数据访问情况下，已被授权允许访问该笔订单数据的appkey列表 */
-    auth_appkeys: string;
+    auth_appkeys?: string;
     /** 垂直业务相关扩展信息，json格式字符串，支持的key列表详见：https://open.alitrip.com/docs/doc.htm?spm=0.0.0.0.wOSWfy&docType=1&articleId=108054&previewCode=99F3B6F3E954A7979A6F2135174EC898 */
-    biz_exts: string;
+    biz_exts?: string;
     /** 可选字段，垂直业务类型。1-度假（自由行，跟团游），2-普通签证，3-门票，4-wifi，7-当地玩乐，9-邮轮，10-用车（包车，租车），12-电话卡，17-流量充值，18-港澳签注，19-在线签证，0-其他 */
-    biz_type: number;
+    biz_type?: number;
     /** 买家昵称 */
     buyer_nick: string;
     /** 订单创建时间 */
-    gmt_created: Date;
+    gmt_created: Date | number | string;
     /** 订单上一次修改时间 */
-    gmt_modified: Date;
+    gmt_modified: Date | number | string;
     /** 该主订单下子订单列表所对应的商品信息列表，多个以英文逗号分隔。商品信息格式为：类目id:商品id:商品级别商家编码:sku级别商家编码 */
     item_infos: string;
     /** 主订单id */
@@ -219,31 +219,31 @@ declare namespace Alitrip.Travel {
   /** 签证消息服务 */
   interface VisaService {
     /** 申请人id */
-    apply_id: string;
+    apply_id?: string;
     /** 是否是线下准备 true表示下线 false表示非下线 */
-    face_offline: boolean;
+    face_offline?: boolean;
     /** 申请表PDF链接 */
-    form_url: string;
+    form_url?: string;
     /** 实人认证身份证号码 */
-    id_number: string;
+    id_number?: string;
     /** 物流单号 */
-    logistics_numer: string;
+    logistics_numer?: string;
     /** 消息类型 */
     message_type: string;
     /** 订单id */
     order_id: number;
     /** 证件照url */
-    photo_url: string;
+    photo_url?: string;
     /** 物流公司code */
-    post_company_code: string;
+    post_company_code?: string;
     /** 商家昵称 */
     seller_nick: string;
     /** 实人认证失败原因 */
-    verify_fail_msg: string;
+    verify_fail_msg?: string;
     /** 实人认证姓名 */
-    verify_name: string;
+    verify_name?: string;
     /** 实人认证状态 -1未认证 0认证中 1通过 2不通过 10失效 */
-    verify_status: number;
+    verify_status?: number;
   }
 }
 
@@ -258,11 +258,11 @@ declare namespace Alitrip.Tripticket {
     /** 订单id */
     oid: string;
     /** 订单创建时间 */
-    order_create_time: Date;
+    order_create_time: Date | number | string;
     /** 卖家昵称 */
     seller_nick: string;
     /** 提交出行人时间 */
-    traveler_input_time: Date;
+    traveler_input_time: Date | number | string;
   }
 }
 
@@ -293,6 +293,6 @@ declare namespace Alitrip.Visa {
     /** 用户ID */
     user_id: number;
     /** 签证类型 */
-    visa_mode: string;
+    visa_mode?: string;
   }
 }

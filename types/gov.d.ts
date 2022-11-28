@@ -11,7 +11,7 @@ declare namespace Gov.Auction {
     /** 拍品链接 */
     item_url: string;
     /** 车辆vin码 */
-    vin: string;
+    vin?: string;
   }
 
   /** 斑马-机动车数据推送 */
@@ -25,6 +25,6 @@ declare namespace Gov.Auction {
     /** 拍品链接 */
     item_url: string;
     /** 机动车vin码 */
-    vin: string;
+    vin?: string;
   }
 }

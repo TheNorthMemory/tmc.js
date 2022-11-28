@@ -15,7 +15,7 @@ declare namespace Idle.Agreement {
     /** 状态 */
     status: string;
     /** 状态描述 */
-    status_desc: string;
+    status_desc?: string;
   }
 }
 
@@ -112,9 +112,9 @@ declare namespace Idle.Topisv {
   /** 闲鱼开放平台-国际货品变更消息通知 */
   interface GlobalProductNotice {
     /** 对应的货品库存等级，当供货价变更时才会有，即 product_change_type 为 0 时 */
-    inv_grade: string;
+    inv_grade?: string;
     /** 商品 id，商货绑定关系变更时才会有，即product_change_type 为 1或者2时 */
-    item_id: number;
+    item_id?: number;
     /** 货品变更类型 0：供货价变更 1：商货绑定关系解除 */
     product_change_type: number;
     /** 货品id */

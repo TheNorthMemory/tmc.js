@@ -57,13 +57,13 @@ declare namespace Alibaba.Alihealth {
     /** 单据时间 */
     bill_time: string;
     /** 单据类型 */
-    bill_type: string;
+    bill_type?: string;
     /** 单据上传人 */
-    ic_code: string;
+    ic_code?: string;
     /** 单据处理时间 */
     process_date: string;
     /** 处理信息 */
-    process_info: string;
+    process_info?: string;
     /** 单据企业ID */
     ref_user_id: string;
     /** 处理状态 0，处理中 1, 上传成功 3, 处理成功 4, 处理失败 */
@@ -75,7 +75,7 @@ declare namespace Alibaba.Alihealth {
   /** 医生、服务相关消息 */
   interface DoctorMessage {
     /** 医生id */
-    doctor_id: string;
+    doctor_id?: string;
     /** 通知消息ID */
     message_id: string;
     /** 枚举：AUDIT_PASS=审核通过，AUDIT_FAILED=审核未通过 */
@@ -83,7 +83,7 @@ declare namespace Alibaba.Alihealth {
     /** 操作时间 */
     operate_time: string;
     /** 原因 */
-    reason: string;
+    reason?: string;
   }
 
   /** 中台订单状态变化推送 */
@@ -93,7 +93,7 @@ declare namespace Alibaba.Alihealth {
     /** 渠道订单号 */
     channel_order_id: string;
     /** 物流单号(目前只支持手淘订单) */
-    delivery_no: string;
+    delivery_no?: string;
     /** 物流状态：0未呼物流，默认值；1已呼叫物流，2配送员已接单，3配送中，4已完成，5已取消 */
     delivery_status: string;
     /** 中台订单号 */
@@ -107,23 +107,23 @@ declare namespace Alibaba.Alihealth {
   /** 平台通知三方机构"订单状态变更" */
   interface OrderStatusChange {
     /** 问诊对话结束原因 */
-    dialog_close_reason: string;
+    dialog_close_reason?: string;
     /** 医生UUID */
-    doctor_id: string;
+    doctor_id?: string;
     /** 三方互联网医院编码 */
-    hospital_id: string;
+    hospital_id?: string;
     /** 通知消息ID */
     message_id: string;
     /** 通知消息类型：ORDER（订单状态变更，具体的订单状态需查看order_status字段）或者REVIEW（患者完成服务评价） */
-    message_type: string;
+    message_type?: string;
     /** 订单ID */
-    order_id: string;
+    order_id?: string;
     /** 新订单通知：WAIT_DIAGNOSE；医生接诊：DIAGNOSING ； 问诊结束：DIAGNOSED ； 退款成功：REFUNDED ； 已结算：THIRD_SELLER_PAID ； */
-    order_status: string;
+    order_status?: string;
     /** 会话ID */
-    session_id: string;
+    session_id?: string;
     /** 通知时间，精确到秒 */
-    time: Date;
+    time?: Date | number | string;
   }
 
   /** O2O订单状态变更通知 */
@@ -154,17 +154,17 @@ declare namespace Alibaba.Alink {
   /** 设备数据推送 */
   interface DeviceDataPush {
     /** 设备数据 */
-    device_data: string;
+    device_data?: string;
     /** 设备MAC */
-    mac: string;
+    mac?: string;
     /** 设备型号 */
-    model: string;
+    model?: string;
     /** 设备数据上报时间（毫秒格式） */
-    msg_time: string;
+    msg_time?: string;
     /** 通知Id */
-    notify_id: string;
+    notify_id?: string;
     /** 设备SN */
-    sn: string;
+    sn?: string;
   }
 
   /** 设备报警消息 */
@@ -201,11 +201,11 @@ declare namespace Alibaba.Aliqin {
     /** ICCID(SIM卡卡号) */
     iccid: string;
     /** 实名认证的用户身份证号(个人认证) */
-    ident_number: string;
+    ident_number?: string;
     /** 终端ID 终端IMEI */
-    imei: string;
+    imei?: string;
     /** 身份证名字(个人认证) */
-    name: string;
+    name?: string;
     /** 手机号码 */
     phone: string;
   }
@@ -215,19 +215,19 @@ declare namespace Alibaba.Aliqin {
     /** 任务主键 */
     biz_id: string;
     /** DTMF */
-    dtmf: string;
+    dtmf?: string;
     /** 通话时长，未接通为0 */
-    duration: string;
+    duration?: string;
     /** 通话结束时间，未接通则为空 */
-    end_time: string;
+    end_time?: string;
     /** 扩展字段回传，将调用api时传入的字段返回 */
-    extend: string;
+    extend?: string;
     /** 通话开始时间，未接通则为空 */
-    start_time: string;
+    start_time?: string;
     /** 呼叫结果状态码 */
     status_code: string;
     /** 结果描述 */
-    status_msg: string;
+    status_msg?: string;
   }
 
   /** 录音回执 */
@@ -251,7 +251,7 @@ declare namespace Alibaba.Aliqin {
     /** 明细id */
     data_id: string;
     /** 错误描述 */
-    error_msg: string;
+    error_msg?: string;
     /** 外部流水号 */
     out_id: string;
     /** 手机号 */
@@ -267,15 +267,15 @@ declare namespace Alibaba.Aliqin {
     /** 任务主键 */
     biz_id: string;
     /** 返回原因code */
-    err_code: string;
+    err_code?: string;
     /** 扩展字段回传，调用api时传入，消息通知原样返回 */
-    extend: string;
+    extend?: string;
     /** 短信接收号码 */
-    receiver: string;
+    receiver?: string;
     /** 报告时间 */
-    rept_time: string;
+    rept_time?: string;
     /** 发送时间 */
-    send_time: string;
+    send_time?: string;
     /** 状态 1：成功，2：失败 */
     state: string;
   }
@@ -283,7 +283,7 @@ declare namespace Alibaba.Aliqin {
   /** 短信上行 */
   interface FcSmsUp {
     /** 短信内容 */
-    content: string;
+    content?: string;
     /** 扩展码 */
     dest_code: string;
     /** 手机号码 */
@@ -291,7 +291,7 @@ declare namespace Alibaba.Aliqin {
     /** 时间 */
     sender_time: string;
     /** 上行对应的签名 */
-    sign_name: string;
+    sign_name?: string;
     /** 唯一ID */
     sms_seq: string;
   }
@@ -345,19 +345,19 @@ declare namespace Alibaba.Aliqin {
     /** 任务主键 */
     biz_id: string;
     /** DTMF */
-    dtmf: string;
+    dtmf?: string;
     /** 通话时长，未接通为0 */
-    duration: string;
+    duration?: string;
     /** 通话结束时间，未接通则为空 */
-    end_time: string;
+    end_time?: string;
     /** 扩展字段回传，将调用api时传入的字段返回 */
-    extend: string;
+    extend?: string;
     /** 通话开始时间，未接通则为空 */
-    start_time: string;
+    start_time?: string;
     /** 呼叫结果状态码 */
     status_code: string;
     /** 结果描述 */
-    status_msg: string;
+    status_msg?: string;
   }
 
   /** 聚石塔短消息发送结果报告 */
@@ -365,15 +365,15 @@ declare namespace Alibaba.Aliqin {
     /** 任务主键 */
     biz_id: string;
     /** 返回原因code */
-    err_code: string;
+    err_code?: string;
     /** 扩展字段回传，调用api时传入，消息通知原样返回 */
-    extend: string;
+    extend?: string;
     /** 短信接收号码 */
-    receiver: string;
+    receiver?: string;
     /** 报告时间 */
-    rept_time: string;
+    rept_time?: string;
     /** 发送时间 */
-    send_time: string;
+    send_time?: string;
     /** 状态 1：成功，2：失败 */
     state: string;
   }
@@ -390,7 +390,7 @@ declare namespace Alibaba.Einvoice {
     /** 当前申请单中累计已开票失败的金额（含税）。 主要用于拆单场景：拆单的情况下一笔申请可能会拆分成多张发票 */
     fail_amount: string;
     /** 当前申请是否为已终结状态。true: 是，false: 否。 主要用于区分inv_part_success状态下是终态还是中间态 */
-    is_finally: string;
+    is_finally?: string;
     /** 外部业务方发起开票申请的唯一幂等ID, 由调用平台生成。 只能由字母和数字组成。 */
     outer_id: string;
     /** 业务平台code, 由发票中台分配 */
@@ -404,7 +404,7 @@ declare namespace Alibaba.Einvoice {
     /** 事件，可选值： device_launch_query：虚拟设备发行查询； */
     action: string;
     /** 拓展字段，json格式 */
-    ext_json: string;
+    ext_json?: string;
     /** 纳税人识别号 */
     payee_register_no: string;
   }
@@ -420,21 +420,21 @@ declare namespace Alibaba.Einvoice {
     /** 业务平台Code */
     platform_code: string;
     /** 退款审核结果备注信息 */
-    remark: string;
+    remark?: string;
   }
 
   /** 入驻工单状态变更消息 */
   interface RegisterFlowChange {
     /** 事件，可选值：isv_agree: 服务商接单,isv_reject: 服务商驳回工单, device_deploy: 税控设备上架部署完成,confirm_qualification: 商户确认获取电子发票资质, fill_delivery_address: 商家填写税控设备收获地址, confirm_published: 服务商回传发行完毕,user_send_device: 商家确认已发出税控设备, machine_room_received: 服务商确认已收到税控设备, refund_start: 发起退款, refund_agree: 服务商同意退款, refund_reject: 服务商拒绝退单, inv_test_start: 开始测试开票, inv_test_success: 开票结果回传：开票成功,inv_test_fail: 开票结果回传：开票失败,confirm_test_success: 确认测试开票成功proxy_sync_ca: ISV同步CA与签章信息至税控应用proxy_sync_company: ISV触发税控应用进行企业信息同步 */
-    action: string;
+    action?: string;
     /** 附加消息，拓展字段，json格式。 当 action = inv_test_fail, 拓展字段必填, 必须包含message（失败原因）。 当 action = confirm_test_success, 拓展字段必填, 必须包含serv_start_time（服务起始时间）和serv_end_time（服务截止时间）。 当 action = isv_reject 或者 action = refund_reject, 拓展字段必填, 必须包含message（拒绝原因）。 */
-    ext_json: string;
+    ext_json?: string;
     /** 入驻开通工单ID，入驻开通工单流程中为必选字段 */
-    flow_id: string;
+    flow_id?: string;
     /** 入驻工单ID */
     register_id: string;
     /** 消息接收目标，业务平台对应为platformCode, 税控服务商对应为productCode */
-    target_code: string;
+    target_code?: string;
   }
 
   /** 入驻工单创建消息 */
@@ -442,7 +442,7 @@ declare namespace Alibaba.Einvoice {
     /** 企业名称 */
     company_name: string;
     /** 附加消息, json格式 */
-    ext_json: string;
+    ext_json?: string;
     /** 纳税人识别号 */
     payee_register_no: string;
     /** 入驻工单ID */
@@ -454,15 +454,15 @@ declare namespace Alibaba.Einvoice {
     /** 订购商品ID */
     article_id: string;
     /** 订购时间，格式yyyy-MM-dd HH:mm:ss */
-    buy_date: Date;
+    buy_date: Date | number | string;
     /** 拓展字段，json格式 */
-    ext_json: string;
+    ext_json?: string;
     /** 实付总金额，单位元，最多2位小数 */
     fact_total_fee: string;
     /** 税控设备订购单ID */
     flow_id: string;
     /** 商品规格ID */
-    item_id: string;
+    item_id?: string;
     /** 服务市场订单号 */
     order_id: string;
     /** 纳税人识别号 */
@@ -477,9 +477,9 @@ declare namespace Alibaba.Fuwu {
   /** 订单支付消息 */
   interface OrderPaid {
     /** app唯一标识 */
-    app_key: string;
+    app_key?: string;
     /** 订单服务状态（B: 服务前； S: 服务中； E: 服务结束； P: 服务暂停； C: 作废；） */
-    biz_status: string;
+    biz_status?: string;
     /** 订单行号 */
     order_item_no: string;
     /** 支付金额 */
@@ -517,9 +517,9 @@ declare namespace Alibaba.Invoice {
     /** 电商平台对应的订单号 */
     platform_tid: string;
     /** 卖家Nick */
-    seller_nick: string;
+    seller_nick?: string;
     /** 开票申请的触发类型，buyer_payed=卖家已付款，sent_goods=卖家已发货，buyer_confirm=买家确认收货，refund_seller_confirm=卖家同意退款，invoice_supply=买家申请补开发票，invoice_change=买家申请改抬头，change_paper=电换纸 */
-    trigger_status: string;
+    trigger_status?: string;
   }
 
   /** 开票申请审核结果 */
@@ -527,7 +527,7 @@ declare namespace Alibaba.Invoice {
     /** 发票申请ID */
     apply_id: string;
     /** 审核备注 */
-    message: string;
+    message?: string;
     /** 电商平台代码,TB,TM,ALIPAY,JD */
     platform_code: string;
     /** 电商平台对应的订单号 */
@@ -551,13 +551,13 @@ declare namespace Alibaba.Invoice {
   /** 资源包开通/订购记录同步 */
   interface FlowBuket {
     /** 开票业务类型，0 电票，1 纸票 */
-    biz_type: number;
+    biz_type?: number;
     /** 订购时间 */
-    buy_date: Date;
+    buy_date: Date | number | string;
     /** 资源包到期时间 */
-    end_time: Date;
+    end_time: Date | number | string;
     /** 产品特性，0 默认值、普通电纸票，1 魔盒版，2 移动版开票 */
-    feature: number;
+    feature?: number;
     /** 资源包ID */
     flow_buket_id: string;
     /** 资源包类型：0 基础流量包，1 付费套餐包 */
@@ -585,39 +585,39 @@ declare namespace Alibaba.Invoice {
   /** 发票对外通知物流信息 */
   interface Logistics {
     /** 客户id */
-    customer_id: string;
+    customer_id?: string;
     /** 客户站点（必填） */
-    customer_site: string;
+    customer_site?: string;
     /** 具体的客户系统 */
-    customer_system: string;
+    customer_system?: string;
     /** 寄送时间 */
-    gmt_send: Date;
+    gmt_send?: Date | number | string;
     /** 发票代码 */
     invoice_code: string;
     /** 开票日期 */
-    invoice_date: Date;
+    invoice_date?: Date | number | string;
     /** 税务平台发票ID */
     invoice_id: string;
     /** 发票号码 */
     invoice_no: string;
     /** 物流公司 目前只有EMS */
-    logistics_companies: string;
+    logistics_companies?: string;
     /** 外围系统发票ID，即申请开票时的requestNo */
-    related_id: string;
+    related_id?: string;
     /** sender */
-    sender: string;
+    sender?: string;
     /** 消息时间戳 */
-    timestamp: Date;
+    timestamp?: Date | number | string;
     /** 运单号 */
-    tracking_number: string;
+    tracking_number?: string;
   }
 
   /** 纸票操作结果回传（打印、作废等） */
   interface PaperOpsReturn {
     /** 错误码，create_result=fail时有值 */
-    biz_error_code: string;
+    biz_error_code?: string;
     /** 错误消息，create_result=fail时有值 */
-    biz_error_msg: string;
+    biz_error_msg?: string;
     /** 操作结果，success=成功，fail=失败 */
     create_result: string;
     /** 操作类型，print=打印，invalid=作废 */
@@ -625,7 +625,7 @@ declare namespace Alibaba.Invoice {
     /** 税号 */
     payee_register_no: string;
     /** 打印标记，ops_type=print时有值，0=打印发票，1=打印清单 */
-    print_flag: number;
+    print_flag?: number;
     /** 已开具纸票的流水号 */
     serial_no: string;
   }
@@ -633,19 +633,19 @@ declare namespace Alibaba.Invoice {
   /** 电子发票售前咨询 */
   interface PreConsulting {
     /** 企业名称 */
-    company_name: string;
+    company_name?: string;
     /** 联系人邮箱 */
-    contact_mail: string;
+    contact_mail?: string;
     /** 联系人名称 */
-    contact_name: string;
+    contact_name?: string;
     /** 联系人电话 */
-    contact_phone: string;
+    contact_phone?: string;
     /** 联系人旺旺 */
-    contact_wangwang: string;
+    contact_wangwang?: string;
     /** 信息提交时间 */
-    create_time: Date;
+    create_time: Date | number | string;
     /** 问题类型 */
-    issue_type: string;
+    issue_type?: string;
   }
 
   /** 数据查询请求 */
@@ -659,9 +659,9 @@ declare namespace Alibaba.Invoice {
   /** 查询发票信息 */
   interface QueryInvoice {
     /** 发票代码 */
-    normal_invoice_code: string;
+    normal_invoice_code?: string;
     /** 发票号码 */
-    normal_invoice_no: string;
+    normal_invoice_no?: string;
     /** 收款方税务登记证号 */
     payee_register_no: string;
     /** 平台代码 */
@@ -675,7 +675,7 @@ declare namespace Alibaba.Invoice {
     /** 流水号 */
     serial_no: string;
     /** 税号版本，商品编码、单机版、移动版、魔盒等 */
-    version: string;
+    version?: string;
   }
 
   /** 入驻阿里发票平台 */
@@ -683,7 +683,7 @@ declare namespace Alibaba.Invoice {
     /** 用户企业名称 */
     company_name: string;
     /** 附加消息 */
-    ex_info: string;
+    ex_info?: string;
     /** 注册ID */
     regist_id: string;
     /** 商家/用户名称 */
@@ -693,21 +693,21 @@ declare namespace Alibaba.Invoice {
   /** 开票请求结果 */
   interface ResultReturn {
     /** 错误码，create_result=fail才有 */
-    biz_error_code: string;
+    biz_error_code?: string;
     /** 错误原因，create_result=fail才有 */
-    biz_error_msg: string;
+    biz_error_msg?: string;
     /** 开票结果，success=成功，fail=失败 */
     create_result: string;
     /** ERP的开票单号 */
-    erp_tid: string;
+    erp_tid?: string;
     /** 错误类型，create_result=fail时有值，biz=业务错误（需要修改报文重新发起开票），sys=服务商系统错误（阿里发票平台自动重试），tax=税务错误（比如盘无票、抄报税等，可重试） */
-    error_type: string;
+    error_type?: string;
     /** 发票种类,0=电子发票，1=纸质普通发票，2=纸质专用发票 */
-    invoice_kind: number;
+    invoice_kind?: number;
     /** 发票类型，blue：蓝票，red：红票 */
-    invoice_type: string;
+    invoice_type?: string;
     /** 是否重试中，根据开票服务商返回的错误码判断是否在重试中 */
-    is_retrying: boolean;
+    is_retrying?: boolean;
     /** 收款方税务登记证号 */
     payee_register_no: string;
     /** 电商平台代码,TB,TM,ALIPAY,JD */
@@ -715,7 +715,7 @@ declare namespace Alibaba.Invoice {
     /** 电商平台对应的订单号 */
     platform_tid: string;
     /** 开票卖家的nick */
-    seller_nick: string;
+    seller_nick?: string;
     /** 开票流水号 */
     serial_no: string;
   }
@@ -729,17 +729,17 @@ declare namespace Alibaba.Invoice {
     /** 发票当前状态 */
     invoice_status: string;
     /** 外围系统发票ID，及申请开票时的requestNo */
-    related_id: string;
+    related_id?: string;
     /** 消息时间戳 */
-    time_stamp: Date;
+    time_stamp: Date | number | string;
   }
 
   /** 商家税号变更 */
   interface TaxChange {
     /** 变更类型 */
-    change_type: number;
+    change_type?: number;
     /** 企业名称 */
-    company_name: string;
+    company_name?: string;
     /** 新税号 */
     new_payee_register_no: string;
     /** 旧税号 */
@@ -755,7 +755,7 @@ declare namespace Alibaba.Invoice {
     /** 请求单号 */
     request_no: string;
     /** 时间戳 */
-    timestamp: Date;
+    timestamp?: Date | number | string;
   }
 }
 
@@ -832,7 +832,7 @@ declare namespace Alibaba.Lst {
   /** 如意音箱播放日志 */
   interface SpeakerAdvertPlayRecord {
     /** 折扣率 */
-    advert_discount_ratio: string;
+    advert_discount_ratio?: string;
     /** 业务ID */
     biz_id: string;
     /** 设备编码 */
@@ -850,7 +850,7 @@ declare namespace Alibaba.Lst {
     /** 播放开始的音量 */
     start_volumn: string;
     /** 折扣率 */
-    store_discount_ratio: string;
+    store_discount_ratio?: string;
     /** 单价 */
     unit_price: string;
   }
@@ -869,27 +869,27 @@ declare namespace Alibaba.Mmc {
   /** MMC五盘货盘招投域盘货变更消息 */
   interface OpenStockAlterNotify {
     /** 盘货结束时间 */
-    end_time: string;
+    end_time?: string;
     /** MMC商家编码 */
-    merchant_code: string;
+    merchant_code?: string;
     /** 消息业务id，用于排查问题 */
-    msg_id: string;
+    msg_id?: string;
     /** 消息标签：STOCK_TAKE_SAVE/STOCK_TAKE_DELETE */
-    msg_tag: string;
+    msg_tag?: string;
     /** 机构子公司编码 */
-    org_no: string;
+    org_no?: string;
     /** 外部盘货结束时间(RT专用) */
-    out_end_time: string;
+    out_end_time?: string;
     /** 外部盘货开始时间(RT专用),会增加两个小时 */
-    out_start_time: string;
+    out_start_time?: string;
     /** 盘货开始时间 */
-    start_time: string;
+    start_time?: string;
     /** 盘货id */
-    stock_take_id: string;
+    stock_take_id?: string;
     /** 盘货名称 */
-    stock_take_name: string;
+    stock_take_name?: string;
     /** 仓编码 */
-    warehouse_code: string;
+    warehouse_code?: string;
   }
 
   /** MMC盘招投商品变更消息 */
@@ -917,9 +917,9 @@ declare namespace Alibaba.Mmc {
     /** 主订单id */
     biz_order_id: string;
     /** 创建时间 */
-    gmt_create: Date;
+    gmt_create: Date | number | string;
     /** 修改时间 */
-    gmt_modified: Date;
+    gmt_modified: Date | number | string;
     /** 消息id */
     message_id: string;
     /** 消息标签 */
@@ -927,7 +927,7 @@ declare namespace Alibaba.Mmc {
     /** 子订单信息列表 */
     sub_biz_order_list: string;
     /** 系统时间 */
-    sys_time: Date;
+    sys_time: Date | number | string;
   }
 
   /** MMC五盘货对接大润发价格修改消息 */
@@ -935,7 +935,7 @@ declare namespace Alibaba.Mmc {
     /** 是否 */
     effective: boolean;
     /** 拓展信息，标准Json格式 */
-    ext_info: string;
+    ext_info?: string;
     /** 商家身份，仅用于测试 */
     merchant_code: string;
     /** 消息id，用于消息轨迹查询 */
@@ -943,9 +943,9 @@ declare namespace Alibaba.Mmc {
     /** 生效价格列表 */
     price_amount_list: string;
     /** 失败原因，有改价单的时候 可能会有 */
-    reason: string;
+    reason?: string;
     /** 改价单编号，有改价单才会返回(MMC内部改价生成的改价单id不会透出) */
-    sheet_no: string;
+    sheet_no?: string;
     /** MMC内部的商品sku编码 */
     sku_code: string;
     /** 改价类型 */
@@ -961,9 +961,9 @@ declare namespace Alibaba.Mmc {
     /** 用户id */
     buyer_id: number;
     /** 创建时间 */
-    gmt_create: Date;
+    gmt_create: Date | number | string;
     /** 修改时间 */
-    gmt_modified: Date;
+    gmt_modified: Date | number | string;
     /** 消息id */
     message_id: string;
     /** 消息标签 */
@@ -973,7 +973,7 @@ declare namespace Alibaba.Mmc {
     /** 子订单id */
     sub_biz_order_id: string;
     /** 系统时间 */
-    sys_time: Date;
+    sys_time: Date | number | string;
   }
 }
 
@@ -984,19 +984,19 @@ declare namespace Alibaba.Monitor {
     /** 告警产生时间 */
     alarm_time: string;
     /** 应用id */
-    app_id: number;
+    app_id?: number;
     /** 应用名称 */
-    app_name: string;
+    app_name?: string;
     /** 集群实例id */
     cluster_id: string;
     /** 集群名称 */
     cluster_name: string;
     /** 备注信息 */
-    comment: string;
+    comment?: string;
     /** 环境id */
-    env_id: number;
+    env_id?: number;
     /** 环境名称 */
-    env_name: string;
+    env_name?: string;
     /** 节点名称 cn-zhangjiakou.内网ip */
     host_name: string;
     /** 事件源类型 Pod或Node */
@@ -1004,7 +1004,7 @@ declare namespace Alibaba.Monitor {
     /** 告警信息 */
     message: string;
     /** 推荐的解决方案 */
-    resolution: string;
+    resolution?: string;
     /** 告警源 POD实例或者节点实例 */
     source: string;
     /** 监控项名称 */
@@ -1030,7 +1030,7 @@ declare namespace Alibaba.Monitor {
     /** 环境名称 */
     env_name: string;
     /** 应用实例名称 */
-    instance_name: string;
+    instance_name?: string;
     /** 监控指标 */
     metric_name: string;
     /** 规则名称 */
@@ -1053,7 +1053,7 @@ declare namespace Alibaba.Mos {
     /** 订单状态 */
     trade_status: number;
     /** 更新时间 */
-    update_time: Date;
+    update_time: Date | number | string;
   }
 
   /** 销售单退款消息 */
@@ -1061,7 +1061,7 @@ declare namespace Alibaba.Mos {
     /** 渠道订单号 */
     out_trade_no: string;
     /** 退款完成时间 */
-    refund_end_time: Date;
+    refund_end_time: Date | number | string;
     /** 退款原因 */
     refund_reason: string;
     /** 退款状态 */
@@ -1098,13 +1098,13 @@ declare namespace Alibaba.Nazca {
     /** 合同编号 */
     contract_num: string;
     /** 源文件（加密） */
-    file: string;
+    file?: string;
     /** 源文件hash */
-    file_sha: string;
+    file_sha?: string;
     /** ip */
     ip: string;
     /** 签署后的文件（加密） */
-    pdf_file: string;
+    pdf_file?: string;
     /** 盖章后的hash */
     pdf_sha: string;
     /** 客户在1688的唯一标识 */
@@ -1112,11 +1112,11 @@ declare namespace Alibaba.Nazca {
     /** 盖章前的hash */
     pristine_pdf_sha: string;
     /** 合同发起时间 */
-    send_date: Date;
+    send_date?: Date | number | string;
     /** 角色 0:接收者 1：发送者 */
     send_receive: string;
     /** 签署合同的时间 */
-    sign_date: Date;
+    sign_date: Date | number | string;
     /** 签署合同手机验证码 */
     sms: string;
     /** 合同名称 */
@@ -1153,19 +1153,19 @@ declare namespace Alibaba.Nlife {
     /** 用户实付金额 单位 人民币 分 */
     actural_pay_fee: number;
     /** 会员id，会员订单必选 */
-    card_no: string;
+    card_no?: string;
     /** 会员所属的企业，会员订单必选 */
-    company_id: string;
+    company_id?: string;
     /** 订单创建时间 */
-    gmt_create: Date;
+    gmt_create: Date | number | string;
     /** 全渠道订单淘宝/天猫订单号 */
-    omni_trade_no: string;
+    omni_trade_no?: string;
     /** 外部订单号 */
-    out_trade_no: string;
+    out_trade_no?: string;
     /** 会员手机号，会员订单必选 */
-    phone_no: string;
+    phone_no?: string;
     /** LOGISTICS：物流发货；SELF_DELIVERY：门店自提，全渠道订单设置该字段 */
-    picking_up_type: string;
+    picking_up_type?: string;
     /** 会员所属的零售+门店 */
     store_id: string;
     /** 订单总金额 单位 人民币 分 */
@@ -1181,7 +1181,7 @@ declare namespace Alibaba.Nlife {
     /** 发货单号 */
     consign_no: string;
     /** 发货单发货时间 */
-    gmt_consign: Date;
+    gmt_consign: Date | number | string;
     /** 物流公司 */
     logistics_company: string;
     /** 物流单号 */
@@ -1223,7 +1223,7 @@ declare namespace Alibaba.Nlife {
   /** 采购单退货通知消息 */
   interface BtobTradeRefundNotify {
     /** 采购退货单生效时间 */
-    gmt_cretae: Date;
+    gmt_cretae: Date | number | string;
     /** 零售商的门店id */
     store_id: number;
     /** 采购退货单号 */
@@ -1245,21 +1245,21 @@ declare namespace Alibaba.Nlife {
   /** 零售+商品变动消息 */
   interface ItemUpdate {
     /** 商品变动前的值（目前包括库存和价格） */
-    before_value: string;
+    before_value?: string;
     /** 商品的itemId */
     item_id: number;
     /** 商品类型:0-IC线上商品; 1-商户导入线下商品 */
-    item_type: number;
+    item_type?: number;
     /** 商品的商家编码 */
-    outer_id: string;
+    outer_id?: string;
     /** 商品的skuId */
-    sku_id: number | bigint;
+    sku_id?: number | bigint;
     /** 门店id */
     store_id: string;
     /** 商品的变动类型:PRICE_CHANGE-价格变化; INVENTORY_CHANGE-库存变化; ONSALE_CHANGE-上架变化; OFFSALE_CHANGE-下架变化; NEWSKU_CHANGE-新增sku变化; DELSKU_CHANGE-删除sku变化 */
     type: string;
     /** 商品变动后的值（目前包括库存和价格） */
-    update_value: string;
+    update_value?: string;
   }
 }
 
@@ -1270,17 +1270,17 @@ declare namespace Alibaba.Serviceplatform {
     /** 核销单操作，比如create、reserve */
     action: string;
     /** 业务身份 */
-    biz_code: string;
+    biz_code?: string;
     /** 核销单id */
     fulfil_task_id: number;
     /** 网点id（寄送业务用） */
-    service_store_id: number;
+    service_store_id?: number;
     /** 操作来源，buyer、worker、system、tp */
-    source: string;
+    source?: string;
     /** 核销单操作时间 */
-    update_date: Date;
+    update_date: Date | number | string;
     /** 工单id列表 */
-    workcard_ids: number[];
+    workcard_ids?: number[];
   }
 
   /** 服务供应链服务单消息 */
@@ -1288,11 +1288,11 @@ declare namespace Alibaba.Serviceplatform {
     /** 服务单操作，如create,effect */
     action: string;
     /** 业务身份 */
-    biz_code: string;
+    biz_code?: string;
     /** 服务单id */
     service_order_id: number;
     /** 服务单操作时间 */
-    update_date: Date;
+    update_date: Date | number | string;
   }
 }
 
@@ -1301,21 +1301,21 @@ declare namespace Alibaba.Sp {
   /** 通知付款结果 */
   interface NotifyPaymentResult {
     /** 付款时间 */
-    actual_pay_time: Date;
+    actual_pay_time?: Date | number | string;
     /** 业务身份 */
-    biz_code: string;
+    biz_code?: string;
     /** 业务付款流水号 */
     no: string;
     /** 通知日期 */
-    notify_time: Date;
+    notify_time: Date | number | string;
     /** 付款单号 */
     out_trade_no: string;
     /** 实际付款账号 */
-    pay_account_no: string;
+    pay_account_no?: string;
     /** 付款币种 */
     pay_currency: string;
     /** 付款状态信息描述 */
-    pay_msg: string;
+    pay_msg?: string;
     /** 付款状态 */
     pay_status: string;
     /** 交易金额 */
@@ -1332,23 +1332,23 @@ declare namespace Alibaba.Tax {
     /** 雇主企业编码 */
     company_code: string;
     /** 雇主企业名称 */
-    company_name: string;
+    company_name?: string;
     /** 雇员在雇主企业身份标识 */
     company_user_identification: string;
     /** 协议终止时间 */
     end_time: string;
     /** 扩展信息 */
-    ext_json: string;
+    ext_json?: string;
     /** 服务商编码 */
     isv_code: string;
     /** 服务商名称 */
-    isv_name: string;
+    isv_name?: string;
     /** 注册结果 */
     result: boolean;
     /** 结果码 */
-    result_code: string;
+    result_code?: string;
     /** 结果描述 */
-    result_msg: string;
+    result_msg?: string;
     /** 发薪资产符号 */
     salary_asset_symbol: string;
     /** 发薪资产类型 */
@@ -1372,13 +1372,13 @@ declare namespace Alibaba.Tax {
     /** 消息类型 */
     message_type: string;
     /** 发薪时间 */
-    pay_salary_time: Date;
+    pay_salary_time: Date | number | string;
     /** 发薪结果码，当发薪失败时，有这个字段 */
-    result_code: string;
+    result_code?: string;
     /** 发薪结果:SUCCESS-成功， NEED_RETRY-处理中（重试发薪），FAIL(失败，不可重试） */
     status: string;
     /** 发薪商户订单号 */
-    tax_fund_order_ids: string;
+    tax_fund_order_ids?: string;
   }
 }
 
@@ -1413,15 +1413,15 @@ declare namespace Alibaba.Tianji {
     /** 分账总金额，单位：分 */
     ledger_amount: number;
     /** 外部产品编码 */
-    out_product_code: string;
+    out_product_code?: string;
     /** 供应商用户名称 */
     supplier_name: string;
     /** 淘宝交易订单创建时间 */
-    tb_order_create_time: Date;
+    tb_order_create_time: Date | number | string;
     /** 淘宝交易订单号 */
     tb_order_no: string;
     /** 交易支付时间 */
-    tb_order_pay_time: Date;
+    tb_order_pay_time: Date | number | string;
   }
 }
 
@@ -1434,11 +1434,11 @@ declare namespace Alibaba.Wdk {
     /** 盒马主单号 */
     biz_order_id: string;
     /** 商家编码 */
-    merchant_code: string;
+    merchant_code?: string;
     /** 外部评论id */
     out_comment_id: string;
     /** 商品编码 */
-    sku_code: string;
+    sku_code?: string;
   }
 
   /** 五道口售中取消外部订单消息 */
@@ -1454,7 +1454,7 @@ declare namespace Alibaba.Wdk {
     /** 经营店Id */
     store_id: string;
     /** 退款子单列表，整单取消时（whole_cancel=true），该值为空，包含子单Id（subBizOrderId）、退款单Id（refundId）、外部子单Id（subOutOrderId）、商家编码（skuCode）、逆向库存数量（refundStockQuantity）、逆向销售数量（refundSaleQuantity）、退款原因类型（refundType）。 */
-    sub_refund_orders: string;
+    sub_refund_orders?: string;
     /** 是否整单取消 */
     whole_cancel: boolean;
   }
@@ -1484,13 +1484,13 @@ declare namespace Alibaba.Wdk {
     /** 盒马主单号 */
     biz_order_id: string;
     /** 退款备注 */
-    memo: string;
+    memo?: string;
     /** 商家编码 */
     merchant_code: string;
     /** 外部订单号 */
     out_order_id: string;
     /** 退款原因 */
-    refund_reason: string;
+    refund_reason?: string;
     /** 退款子单 */
     refund_sub_orders: string;
     /** 渠道店ID */
@@ -1518,7 +1518,7 @@ declare namespace Alibaba.Wdk {
     /** 子单列表 */
     sub_orders: string;
     /** 退款子单列表，仅订单完成时，有部分退款的 */
-    sub_refund_orders: string;
+    sub_refund_orders?: string;
   }
 
   /** 库存同步 */
@@ -1558,7 +1558,7 @@ declare namespace Alibaba.Wdk {
     /** 商家编码 */
     merchant_code: string;
     /** 门店编码 */
-    ou_code: string;
+    ou_code?: string;
     /** 商品编码 */
     sku_code: string;
   }
@@ -1621,9 +1621,9 @@ declare namespace Alibaba.Wdkopen {
   /** 同城零售逆向交易消息 */
   interface RefundMessage {
     /** 退款单号 */
-    refund_id: string;
+    refund_id?: string;
     /** 淘宝子订单ID */
-    tb_sub_order_id: number;
+    tb_sub_order_id?: number;
   }
 }
 
@@ -1632,11 +1632,11 @@ declare namespace Alibaba.Wdkorder {
   /** 五道口订单履约状态变更消息 */
   interface FulfillStatusChange {
     /** 履约值 */
-    fulfill: string;
+    fulfill?: string;
     /** 业务消息id */
     msg_id: string;
     /** 履约状态 */
-    status: string;
+    status?: string;
   }
 
   /** 共享库存保险正向投保消息 */
@@ -1678,7 +1678,7 @@ declare namespace Alibaba.Wdkorder {
     /** 商户编码 */
     merchant_code: string;
     /** 订单状态 */
-    order_status: string;
+    order_status?: string;
     /** 主站主订单ID */
     tb_order_id: number;
   }
@@ -1686,25 +1686,25 @@ declare namespace Alibaba.Wdkorder {
   /** 逆向单企业积分消息发送 */
   interface RefundOrgPoint {
     /** 退款单商品ID */
-    item_id: string;
+    item_id?: string;
     /** 退款单商品标题 */
-    item_title: string;
+    item_title?: string;
     /** 退款子单号 */
-    origin_order_id: string;
+    origin_order_id?: string;
     /** 主订单号 */
-    origin_parent_id: string;
+    origin_parent_id?: string;
     /** 支付单号 */
-    pay_order_id: string;
+    pay_order_id?: string;
     /** 企业商户对应渠道code */
     refund_channel: string;
     /** 该渠道退款金额, 单位:分 */
     refund_channel_fee: string;
     /** 退款单退款金额(不包含折扣计算), 单位:分 */
-    refund_fee: string;
+    refund_fee?: string;
     /** 退款单号 */
     refund_order_id: string;
     /** 退款完成时间 格式: yyyy-MM-dd HH:mm:ss */
-    refund_time: string;
+    refund_time?: string;
     /** 退款子订单号_渠道code,作为消息追溯唯一键 */
     suborder_channel_uuid: string;
   }
@@ -1712,93 +1712,93 @@ declare namespace Alibaba.Wdkorder {
   /** 五道口淘鲜达逆向订单消息 */
   interface RefundSuccess {
     /** 实际取货数量 */
-    actual_pick_quantity: string;
+    actual_pick_quantity?: string;
     /** 实际退货数量 */
-    actual_refund_quantity: string;
+    actual_refund_quantity?: string;
     /** 跑批时间 */
-    batch_time: Date;
+    batch_time?: Date | number | string;
     /** 库存单位购买数量 */
-    buy_amount_stock: string;
+    buy_amount_stock?: string;
     /** 纠纷类型 1：售中 2：售后 */
-    dispute_type: number;
+    dispute_type?: number;
     /** 商品skucode */
-    item_code: string;
+    item_code?: string;
     /** 商家编码 */
-    merchant_code: string;
+    merchant_code?: string;
     /** 非标品购买数量 */
-    ns_quantity: string;
+    ns_quantity?: string;
     /** open_uid */
-    open_uid: string;
+    open_uid?: string;
     /** 操作人id */
-    operator_id: string;
+    operator_id?: string;
     /** 操作人名称 */
-    operator_name: string;
+    operator_name?: string;
     /** 订单渠道，2-APP, 3-POS */
-    order_client: number;
+    order_client?: number;
     /** 渠道来源 3：饿了么 4：淘宝 */
-    order_from: number;
+    order_from?: number;
     /** 淘鲜达子订单号 */
-    origin_order_id: number;
+    origin_order_id?: number;
     /** 淘鲜达父订单号 */
-    origin_parent_id: number;
+    origin_parent_id?: number;
     /** 外部主订单号 */
-    out_mian_order_id: string;
+    out_mian_order_id?: string;
     /** 外部子订单号 */
-    out_order_id: string;
+    out_order_id?: string;
     /** 外部退款id */
-    out_refund_id: string;
+    out_refund_id?: string;
     /** 外部门店id */
-    out_shop_id: string;
+    out_shop_id?: string;
     /** 外部skucode */
-    out_sku_code: string;
+    out_sku_code?: string;
     /** 库存单位拣货数量 */
-    pick_amount_stock: string;
+    pick_amount_stock?: string;
     /** 履约状态 */
-    promise_status: string;
+    promise_status?: string;
     /** 原购买数量 */
-    quantity: number;
+    quantity?: number;
     /** 退款金额 */
-    refund_amount: number;
+    refund_amount?: number;
     /** 退款渠道 */
-    refund_channel_list: string;
+    refund_channel_list?: string;
     /** 退款单id */
-    refund_order_id: number;
+    refund_order_id?: number;
     /** 退款运费，单位为分 */
-    refund_post_fee: number;
+    refund_post_fee?: number;
     /** 理论退货数量 */
-    refund_quantity: string;
+    refund_quantity?: string;
     /** 退款时间 */
-    refund_time: Date;
+    refund_time?: Date | number | string;
     /** 退款类型 */
-    refund_type: number;
+    refund_type?: number;
     /** 销售单位 */
-    sale_unit: string;
+    sale_unit?: string;
     /** 非标品单位 */
-    sell_unit: string;
+    sell_unit?: string;
     /** 渠道店id */
-    shop_id: string;
+    shop_id?: string;
     /** 库存单位 */
-    stock_unit: string;
+    stock_unit?: string;
     /** 店铺码 */
-    store_id: string;
+    store_id?: string;
     /** 同步状态 */
-    sync_status: string;
+    sync_status?: string;
     /** 淘宝子订单号 */
-    tb_biz_order_id: number;
+    tb_biz_order_id?: number;
     /** 淘宝主订单号 */
-    tb_biz_parent_id: number;
+    tb_biz_parent_id?: number;
     /** 交易属性 */
-    trade_attributes: string;
+    trade_attributes?: string;
   }
 
   /** 共享库存SOPO */
   interface SoPo {
     /** 履约子订单号 如果是正向，则为正向履约子单号，如果是退款，则为逆向履约子单号 */
-    fulfill_sub_order_id: string;
+    fulfill_sub_order_id?: string;
     /** 45=猫超，100=共享库存 */
-    order_from: number;
+    order_from?: number;
     /** 未税单价 */
-    price_without_tax: string;
+    price_without_tax?: string;
     /** 采购价（含税） */
     price_with_tax: string;
     /** PO单单号 */
@@ -1808,11 +1808,11 @@ declare namespace Alibaba.Wdkorder {
     /** 交易类型 */
     sales_type: number;
     /** 商品code */
-    sku_code: string;
+    sku_code?: string;
     /** 经营店id */
     store_id: string;
     /** 税率 */
-    tax_rate: string;
+    tax_rate?: string;
     /** 淘系子订单号 */
     tb_sub_order_id: string;
   }
@@ -1822,65 +1822,65 @@ declare namespace Alibaba.Wdkorder {
     /** 盒马主订单号 */
     biz_order_id: number;
     /** 商品优惠总额 */
-    discount_amt: number;
+    discount_amt?: number;
     /** 班次号 */
-    duty_code: string;
+    duty_code?: string;
     /** 赠券，格式为 券ID_券金额， 金额单位为分 */
-    gift_coupon: string;
+    gift_coupon?: string;
     /** 会员卡号 */
-    member_card_num: string;
+    member_card_num?: string;
     /** 会员价优惠总金额 */
-    member_discount_amt: number;
+    member_discount_amt?: number;
     /** 会员积分 */
-    member_point: string;
+    member_point?: string;
     /** 商户码 */
-    merchant_code: string;
+    merchant_code?: string;
     /** open_uid */
-    open_uid: string;
+    open_uid?: string;
     /** 收银员编号 */
-    operator_id: string;
+    operator_id?: string;
     /** 收银员名字 */
-    operator_name: string;
+    operator_name?: string;
     /** app或pos */
-    order_client: string;
+    order_client?: string;
     /** 渠道来源， 3：饿了么 4：盒马 */
-    order_from: number;
+    order_from?: number;
     /** 订单状态 */
-    order_status: string;
+    order_status?: string;
     /** 商品总金额（优惠前） */
-    original_amt: number;
+    original_amt?: number;
     /** 外部订单号 */
-    out_order_id: string;
+    out_order_id?: string;
     /** 外部门店号 */
-    out_shop_id: string;
+    out_shop_id?: string;
     /** 打包时间 */
-    package_time: Date;
+    package_time?: Date | number | string;
     /** 支付渠道信息 */
-    pay_channels: string;
+    pay_channels?: string;
     /** 成交时间 */
-    pay_time: Date;
+    pay_time?: Date | number | string;
     /** 配送费 */
-    post_fee: number;
+    post_fee?: number;
     /** 渠道店id */
-    shop_id: string;
+    shop_id?: string;
     /** 门店编码 */
-    store_id: string;
+    store_id?: string;
     /** 子订单信息 */
-    sub_orders: string;
+    sub_orders?: string;
     /** 淘宝主订单号 */
-    tb_biz_order_id: number;
+    tb_biz_order_id?: number;
     /** 主订单附加属性 */
-    trade_attributes: string;
+    trade_attributes?: string;
     /** 销售类型（正向销售1：逆向销售2。本接口应返回2） */
-    trd_type: number;
+    trd_type?: number;
   }
 
   /** 淘鲜达订单优惠券状态变更 */
   interface VoucherStatus {
     /** 业务时间 */
-    biz_time: Date;
+    biz_time: Date | number | string;
     /** 经营店id */
-    store_id: string;
+    store_id?: string;
     /** 淘系主订单号 */
     tb_order_id: string;
     /** 优惠券状态，occupy：占用 ，used：已使用 ，release：释放 */
@@ -1895,33 +1895,33 @@ declare namespace Alibaba.Wdktrade {
   /** 营销券实例消息 */
   interface CouponInstance {
     /** 门槛金额 */
-    amount: number;
+    amount?: number;
     /** 可使用店列表 */
-    can_use_shop_list: string[];
+    can_use_shop_list?: string[];
     /** 申请渠道 */
-    channel: string;
+    channel?: string;
     /** 优惠券发放方式 */
-    coupon_send_type: string;
+    coupon_send_type?: string;
     /** 卡券来源 */
-    coupon_source: string;
+    coupon_source?: string;
     /** 优惠券详情描述 */
-    description: string;
+    description?: string;
     /** 券详情 */
-    details: string[];
+    details?: string[];
     /** 结束时间 */
-    end_time: Date;
+    end_time?: Date | number | string;
     /** 特性 */
-    features: string;
+    features?: string;
     /** 匿名码code */
     ma_code: string;
     /** 商家编码 */
     merchant_code: string;
     /** 开始时间 */
-    start_time: Date;
+    start_time?: Date | number | string;
     /** 模板id */
-    template_id: string;
+    template_id?: string;
     /** 优惠券名称 */
-    title: string;
+    title?: string;
     /** 券实例ID */
     voucher_id: string;
   }

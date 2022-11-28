@@ -5,13 +5,13 @@ declare namespace Wdk.Market {
     /** 活动ID */
     activity_id: number;
     /** 逻辑分组ID */
-    logic_group_number: number;
+    logic_group_number?: number;
     /** 消息ID */
     msg_id: string;
     /** 操作编码：A-新增，U-更新 */
     operate_code: string;
     /** 商家活动编码 */
-    out_act_id: string;
+    out_act_id?: string;
     /** 错误编码 */
     publish_error_code: string;
     /** 错误描述 */
@@ -27,13 +27,13 @@ declare namespace Wdk.Market {
     /** 五道口营销活动Id */
     activity_id: number;
     /** 商家逻辑分组Id */
-    logic_group_number: number;
+    logic_group_number?: number;
     /** 消息ID */
     msg_id: string;
     /** 操作编码A-新增，D-删除 */
     operate_code: string;
     /** 商家外部活动Id */
-    out_act_id: string;
+    out_act_id?: string;
     /** 错误编码 */
     publish_error_code: string;
     /** 错误信息 */
@@ -56,7 +56,7 @@ declare namespace Wdk.Open {
     /** 外部数据Id */
     out_data_id: string;
     /** 关联的外部数据Id */
-    relation_out_data_list: string[];
+    relation_out_data_list?: string[];
     /** 错误编码 */
     result_code: string;
     /** 错误描述 */

@@ -14,7 +14,7 @@ declare namespace Tmall.Auto {
   /** 天猫汽车交易订单开放 */
   interface TradeModify {
     /** 订单id */
-    order_id: number;
+    order_id?: number;
     /** 订单状态 */
     status: number;
   }
@@ -22,7 +22,7 @@ declare namespace Tmall.Auto {
   /** 天猫二轮车服务工单创建开放 */
   interface TwoWheelsReceiptCreate {
     /** 指定的外部门店id */
-    appointed_outer_store_id: string;
+    appointed_outer_store_id?: string;
     /** 服务工单id */
     receipt_id: number;
   }
@@ -107,7 +107,7 @@ declare namespace Tmall.Fuwu {
     /** 天猫物流订单号。1、物流CP系统的物流单号关系为1对1。 2、要求物流CP系统内部需要保证幂等。 */
     logistics_order_id: number;
     /** 是否为来自新数据源的物流信息 */
-    new_logistics: boolean;
+    new_logistics?: boolean;
     /** 消费者-->门店（工厂）:STAGE1 门店（工厂）--> 消费者:STAGE2 */
     stage_type: string;
   }
@@ -131,7 +131,7 @@ declare namespace Tmall.Fuwu {
     /** 预警提示内容，如请及时处理即将超出6小时时未回传工人信息的服务工单，详情如下：父订单编号：XXX，服务子订单：XXX，服务工单号：XXX */
     content: string;
     /** 服务预警单创建时间，格式如：2011-11-06 13:12:11 */
-    gmt_create: Date;
+    gmt_create: Date | number | string;
     /** 预警单主键id */
     id: number;
     /** 预警级别，1、预警 2、警告 3、严重 */
@@ -195,35 +195,35 @@ declare namespace Tmall.Fuwu {
   /** 天猫服务任务工单 */
   interface WorkcardInfo {
     /** 商品附加属性 */
-    auction_sku_properties: string;
+    auction_sku_properties?: string;
     /** 买家地址编码 */
-    buyer_location: number;
+    buyer_location?: number;
     /** 对外开放的业务对象 */
-    result: string;
+    result?: string;
   }
 
   /** 天猫服务任务工单状态变更 */
   interface WorkcardStatusUpdate {
     /** 工单变更动作。枚举。创建create,完成complete,取消cancel,发货consign */
-    action: string;
+    action?: string;
     /** 备注 */
     comment: string;
     /** 剩余服务次数。仅用于cancel节点和complete节点 */
-    left_service_count: number;
+    left_service_count?: number;
     /** 退掉的服务次数。仅用于cancel节点 */
-    refund_service_count: number;
+    refund_service_count?: number;
     /** 状态。使用action，不要使用本字段 */
     status: number;
     /** 目前总的使用次数。仅用于complete节点 */
-    total_used_service_count: number;
+    total_used_service_count?: number;
     /** 服务提供商id */
     tp_id: number;
     /** 工单类型,固定值:1 */
     type: number;
     /** 更新时间 */
-    update_date: Date;
+    update_date: Date | number | string;
     /** 本次使用的服务次数。仅用于complete节点 */
-    used_service_count: number;
+    used_service_count?: number;
     /** 工单id */
     workcard_id: number;
   }
@@ -244,29 +244,29 @@ declare namespace Tmall.Mei {
   /** 品牌积分变更通知 */
   interface PointChange {
     /** 业务类型。gift_exchange:礼品兑换， cancel_exchange:取消兑换。 */
-    biz_type: string;
+    biz_type?: string;
     /** 拓展信息 */
-    ext_info: string;
+    ext_info?: string;
     /** 加密后的会员手机 */
-    mix_mobile: string;
+    mix_mobile?: string;
     /** 加密后的NICK */
-    mix_nick: string;
+    mix_nick?: string;
     /** 明文手机号 */
-    mobile: string;
+    mobile?: string;
     /** 买家明文nick */
-    nick: string;
+    nick?: string;
     /** 商家主体维度唯一id */
     omid: string;
     /** 卖家维度唯一id */
     ouid: string;
     /** 变动积分值，大于0 */
-    point: number;
+    point?: number;
     /** 该次变更记录ID */
-    record_id: number;
+    record_id?: number;
     /** 卖家名称 */
-    seller_name: string;
+    seller_name?: string;
     /** 1：扣减，2：增加 */
-    type: number;
+    type?: number;
   }
 }
 
@@ -283,7 +283,7 @@ declare namespace Tmall.Nrt {
     /** 商品名称 */
     item_name: string;
     /** 商品类型 同城站 city 普通线下 booth */
-    item_type: string;
+    item_type?: string;
     /** 操作类型 基础类型 new 、update、delete、query */
     op_type: string;
     /** 租赁合同号 */
@@ -302,7 +302,7 @@ declare namespace Tmall.Omnichannel {
     /** 变化的预扣库存数 */
     change_withhold_quantity: number;
     /** 库存变更业务发送时间 */
-    gmt_modified: Date;
+    gmt_modified: Date | number | string;
     /** 库存变更类型 1.增量修改库存 2.全量修改库存 */
     inventory_change_type: number;
     /** 库存记录ID */
@@ -310,7 +310,7 @@ declare namespace Tmall.Omnichannel {
     /** 商品ID */
     item_id: number;
     /** 全渠道ID */
-    omni_id: string;
+    omni_id?: string;
     /** 变化后的可售库存数 */
     result_sellable_quantity: number;
     /** 变化后的预扣库存数 */
@@ -326,7 +326,7 @@ declare namespace Tmall.Omnichannel {
     /** 0库存之前的总库存数 */
     before_quantity: number;
     /** 消息产生的时间 */
-    event_time: Date;
+    event_time: Date | number | string;
     /** 触发0库存的原因 */
     event_type: string;
     /** 商品ID */
@@ -334,7 +334,7 @@ declare namespace Tmall.Omnichannel {
     /** 消息ID */
     message_id: string;
     /** 全渠道ID */
-    omni_id: string;
+    omni_id?: string;
     /** Sku ID */
     sku_id: number | bigint;
     /** 事件类型 */
@@ -346,7 +346,7 @@ declare namespace Tmall.Omnichannel {
     /** 事件ID，能唯一标识一次事件请求 */
     event_id: string;
     /** 变更的时间 */
-    gmt_modified: Date;
+    gmt_modified: Date | number | string;
     /** 是否小二操作 */
     is_by_xiaoer: boolean;
     /** 商品ID */
@@ -356,7 +356,7 @@ declare namespace Tmall.Omnichannel {
     /** 修改之前的描述地址 */
     old_desc_path: string;
     /** 全渠道ID */
-    omni_id: string;
+    omni_id?: string;
     /** 卖家ID */
     seller_id: number;
     /** 事件类型 */
@@ -370,13 +370,13 @@ declare namespace Tmall.Omnichannel {
     /** 事件ID，能唯一标识一次事件请求 */
     event_id: string;
     /** 变更的时间 */
-    gmt_modified: Date;
+    gmt_modified: Date | number | string;
     /** 是否小二操作 */
     is_by_xiaoer: boolean;
     /** 商品ID */
     item_id: number;
     /** 全渠道ID */
-    omni_id: string;
+    omni_id?: string;
     /** 卖家ID */
     seller_id: number;
     /** 事件类型 */
@@ -392,7 +392,7 @@ declare namespace Tmall.Omnichannel {
     /** 事件ID，能唯一标识一次事件请求 */
     event_id: string;
     /** 变更的时间 */
-    gmt_modified: Date;
+    gmt_modified: Date | number | string;
     /** 是否小二操作 */
     is_by_xiaoer: boolean;
     /** 商品ID */
@@ -400,7 +400,7 @@ declare namespace Tmall.Omnichannel {
     /** 商品主图信息 */
     main_pict_url: string;
     /** 全渠道ID */
-    omni_id: string;
+    omni_id?: string;
     /** 卖家ID */
     seller_id: number;
     /** 事件类型 */
@@ -414,7 +414,7 @@ declare namespace Tmall.Omnichannel {
     /** 事件ID，能唯一标识一次事件请求 */
     event_id: string;
     /** 变更的时间 */
-    gmt_modified: Date;
+    gmt_modified: Date | number | string;
     /** 是否小二操作 */
     is_by_xiaoer: boolean;
     /** 商品ID */
@@ -424,7 +424,7 @@ declare namespace Tmall.Omnichannel {
     /** 修改之前的价格 */
     old_price: number;
     /** 全渠道ID */
-    omni_id: string;
+    omni_id?: string;
     /** 卖家ID */
     seller_id: number;
     /** 事件类型 */
@@ -439,15 +439,15 @@ declare namespace Tmall.Servicecenter {
   /** 天猫服务平台工单更新 */
   interface TaskUpdate {
     /** 属性字符串。使用;隔开，key:value格式保存。 */
-    attributes: string;
+    attributes?: string;
     /** 省市区地址,之间用空白隔开 */
-    buyer_address: string;
+    buyer_address?: string;
     /** 买家id */
-    buyer_id: number;
+    buyer_id?: number;
     /** 买家名称 */
     buyer_name: string;
     /** 买家电话 */
-    buyer_phone: string;
+    buyer_phone?: string;
     /** 操作类型，如CREATE:创建， CANCEL:取消，RESERVE:预约，RERESERVE:重新预约 */
     change_type: string;
     /** 工单id */
@@ -457,15 +457,15 @@ declare namespace Tmall.Servicecenter {
     /** 来源系统 */
     order_source: string;
     /** 顾客提交退货取消或改期申请时间 */
-    order_time: string;
+    order_time?: string;
     /** 服务名称,买断 */
     service_code: string;
     /** 买家预约时间 */
-    service_time: Date;
+    service_time?: Date | number | string;
     /** 子状态,1001:鉴定,1002:非鉴定(强制),1003:从新预约;2001:预安排师傅,2002:上门;3001:取消,3002:完成,3003:拒收; */
     sub_status: number;
     /** 更新时间 */
-    update_time: Date;
+    update_time?: Date | number | string;
   }
 }
 
@@ -480,7 +480,7 @@ declare namespace Tmall.Serviceplatform {
     /** parent_order_ids */
     parent_order_ids: string;
     /** sign_datetime */
-    sign_datetime: Date;
+    sign_datetime: Date | number | string;
   }
 
   /** 工人请假发送消息 */
@@ -490,7 +490,7 @@ declare namespace Tmall.Serviceplatform {
     /** 具体请假时间段 */
     leave_time: string;
     /** 操作请假日期的时间 */
-    operate_time: Date;
+    operate_time: Date | number | string;
     /** 工人姓名 */
     worker_name: string;
     /** 工人手机号 */

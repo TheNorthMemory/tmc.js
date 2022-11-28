@@ -13,7 +13,7 @@ declare namespace Cainiao.Consignplatform {
     /** 面单号 */
     mail_no: string;
     /** 事件发生时间 */
-    occur_time: Date;
+    occur_time: Date | number | string;
     /** 订单来源，比如 ”TMJL“ 代表天猫精灵 */
     order_source: string;
     /** 外部系统的业务id */

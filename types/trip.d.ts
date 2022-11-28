@@ -7,15 +7,15 @@ declare namespace Trip.Hotel {
     /** 商品id */
     gid: number;
     /** 酒店id */
-    hid: number;
+    hid?: number;
     /** 消息id */
     requestid: string;
     /** rpId */
     rp_id: number;
     /** 卖家id */
-    seller_id: number;
+    seller_id?: number;
     /** supplier */
-    supplier: string;
+    supplier?: string;
   }
 
   /** 飞猪卖家酒店实体变更消息同步 */
@@ -61,15 +61,15 @@ declare namespace Trip.Hotel {
   /** 酒店价格计划消息 */
   interface RatePlanChange {
     /** 所属的hid */
-    hid: number;
+    hid?: number;
     /** 操作类型,add,update,delete */
     msg_type: string;
     /** 所属酒店的外部code */
-    out_hid: string;
+    out_hid?: string;
     /** 所属房型的外部code */
-    out_rid: string;
+    out_rid?: string;
     /** 说是房型的rid */
-    rid: number;
+    rid?: number;
     /** 修改的价格策略的rp_code */
     rp_code: string;
     /** 修改的价格策略的rpId */
@@ -85,9 +85,9 @@ declare namespace Trip.Hotel {
     /** room的id */
     gid: number;
     /** 酒店hid */
-    hid: number;
+    hid?: number;
     /** 外部酒店code */
-    out_hid: string;
+    out_hid?: string;
     /** 外部房型code */
     out_rid: string;
     /** 房型rid */

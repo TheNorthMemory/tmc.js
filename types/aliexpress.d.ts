@@ -44,7 +44,7 @@ declare namespace Aliexpress.Order {
     /** 当前订单状态，唯一值为：FINISH */
     current_status: string;
     /** 上一个订单状态:RISK_CONTROL、RISK_CONTROL_HOLD、WAIT_SELLER_EXAMINE_MONEY、WAIT_GROUP_SUCCESS、WAIT_SELLER_SEND_GOODS、WAIT_BUYER_ACCEPT_GOODS或IN_CANCEL */
-    last_status: string;
+    last_status?: string;
     /** 卖家账号ID */
     login_id: string;
     /** 订单状态变化时间 */

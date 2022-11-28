@@ -119,7 +119,7 @@ declare namespace Alibaba.Pur {
   /** 同步商品通知 */
   interface NotifyProduct {
     /** 消息描述 */
-    desc: string;
+    desc?: string;
     /** 通知的标识 */
     message_id: string;
     /** 来源 */
@@ -131,9 +131,9 @@ declare namespace Alibaba.Pur {
     /** 状态 enabled,disabled */
     status: string;
     /** 供应商名称 */
-    supplier_name: string;
+    supplier_name?: string;
     /** 租户 */
-    tenant_id: number;
+    tenant_id?: number;
   }
 }
 
@@ -152,7 +152,7 @@ declare namespace Alicom.Secret {
     /** 分隔符,|默认是'|'分隔 */
     split: string;
     /** 时间挫 */
-    timestamp: Date;
+    timestamp: Date | number | string;
     /** 供应商Key */
     vendor_key: string;
   }
@@ -163,7 +163,7 @@ declare namespace Ant.Pur {
   /** 蚂蚁采购同步商品通知 */
   interface NotifyProduct {
     /** 消息描述 */
-    desc: string;
+    desc?: string;
     /** 通知的标识 */
     message_id: string;
     /** 来源 */
@@ -175,9 +175,9 @@ declare namespace Ant.Pur {
     /** 状态 enabled,disabled */
     status: string;
     /** 供应商名称 */
-    supplier_name: string;
+    supplier_name?: string;
     /** 租户 */
-    tenant_id: number;
+    tenant_id?: number;
   }
 }
 
@@ -220,7 +220,7 @@ declare namespace Ele.Fengniao {
   /** 商家签约结果通知 */
   interface MerchantSign {
     /** 签约失败原因 */
-    fail_reason: string;
+    fail_reason?: string;
     /** 是否通过 */
     is_sign: boolean;
     /** 商家code */
@@ -246,11 +246,11 @@ declare namespace Ele.Fengniao {
   /** 物流状态信息同步 */
   interface StatusSync {
     /** 蜂鸟配送员姓名 */
-    carrier_driver_name: string;
+    carrier_driver_name?: string;
     /** 蜂鸟配送员电话 */
-    carrier_driver_phone: string;
+    carrier_driver_phone?: string;
     /** 描述信息 */
-    description: string;
+    description?: string;
     /** 状态码 */
     order_status: number;
     /** 商户自己的订单号 */
@@ -258,7 +258,7 @@ declare namespace Ele.Fengniao {
     /** 状态推送时间(毫秒) */
     push_time: number;
     /** 说明状态码 */
-    remark_code: string;
+    remark_code?: string;
     /** 时间戳(毫秒) */
     timestamp: number;
   }
@@ -279,15 +279,15 @@ declare namespace Taobao.Fuwu {
     /** 咨询人数 */
     consult_num: number;
     /** 报表统计日期 */
-    date: Date;
+    date: Date | number | string;
     /** 最早上线时间 HH:mm:ss */
-    earliest_online_time: Date;
+    earliest_online_time: Date | number | string;
     /** 首次响应总耗时(s) */
     first_reply_cost: number;
     /** 首次响应人数 */
     first_reply_times: number;
     /** 最晚上线时间 HH:mm:ss */
-    latest_online_time: Date;
+    latest_online_time: Date | number | string;
     /** 日登录次数 */
     login_num: number;
     /** 长接待人数 */
@@ -367,7 +367,7 @@ declare namespace Taobao.Fuwu {
     /** 总响应人数 */
     total_reply_times: number;
     /** 数据上传时间 */
-    updatetime: Date;
+    updatetime: Date | number | string;
     /** 用户系统配置 */
     user_config_params: string;
     /** 旺旺昵称 */
@@ -379,7 +379,7 @@ declare namespace Taobao.Fuwu {
     /** 开票金额 */
     amount: string;
     /** 电子发票号 */
-    e_invoice_no: string;
+    e_invoice_no?: string;
     /** 电子发票流水号，流水号唯一标识 */
     id: number;
     /** 发票代码 */
@@ -389,9 +389,9 @@ declare namespace Taobao.Fuwu {
     /** 发票号码 */
     invoice_no: string;
     /** 开票日期 */
-    invoice_time: Date;
+    invoice_time: Date | number | string;
     /** 淘宝子订单号 */
-    oid: number | bigint;
+    oid?: number | bigint;
     /** 交易编号 (父订单的交易编号) */
     tid: number | bigint;
   }
@@ -438,13 +438,13 @@ declare namespace Taobao.Jds {
   /** 交易订单状态跟踪 */
   interface TradeTrace {
     /** 业务动作发生的时间 */
-    action_time: Date;
+    action_time: Date | number | string;
     /** 操作人 */
-    operator: string;
+    operator?: string;
     /** 子订单ID列表，多个ID用半角逗号分隔 */
-    order_ids: string;
+    order_ids?: string;
     /** 业务备注 */
-    remark: string;
+    remark?: string;
     /** 卖家的淘宝用户名 */
     seller_nick: string;
     /** 订单状态。T_WAIT_BUYER_PAY(等待买家付款),T_WAIT_SELLER_SEND_GOODS(等待卖家发货),X_DOWNLOADED(订单已推送),X_TO_SYSTEM(系统已接单),X_SERVICE_AUDITED(已客审),X_FINANCE_AUDITED(已财审),X_ALLOCATION_NOTIFIED(已通知配货),X_WAIT_ALLOCATION(待配货),X_SORT_PRINTED(已打拣货单),X_SEND_PRINTED(已打发货单),X_LOGISTICS_PRINTED(已打物流单),X_SORTED(已拣货),X_EXAMINED(已验货),X_PACKAGED(已打包),X_WEIGHED(已称重),X_OUT_WAREHOUSE(已出库),T_WAIT_BUYER_CONFIRM_GOODS(已发货),T_TRADE_FINISHED(已完成),T_TRADE_CLOSED(已结束) */
@@ -465,9 +465,9 @@ declare namespace Tmall.Mh {
     /** 客户 */
     customer: string;
     /** 发货仓库 */
-    delivery_store: string;
+    delivery_store?: string;
     /** 快递公司 */
-    express: string;
+    express?: string;
     /** 商品名称 */
     item_name: string;
     /** Mac地址 */
@@ -475,29 +475,29 @@ declare namespace Tmall.Mh {
     /** 数量 */
     num: string;
     /** 单价 */
-    price: string;
+    price?: string;
     /** 详细信息 */
-    receiver_address: string;
+    receiver_address?: string;
     /** 城市 */
-    receiver_city: string;
+    receiver_city?: string;
     /** 区县 */
-    receiver_district: string;
+    receiver_district?: string;
     /** 收货人 */
     receiver_name: string;
     /** 省份 */
-    receiver_state: string;
+    receiver_state?: string;
     /** 店铺名称 */
-    seller_nick: string;
+    seller_nick?: string;
     /** 规格名称 */
-    sku_name: string;
+    sku_name?: string;
     /** 规格编码 */
     sku_num: string;
     /** 订单id */
     tid: number | bigint;
     /** 总价 */
-    total: string;
+    total?: string;
     /** 单位 */
-    unit: string;
+    unit?: string;
   }
 
   /** 天猫魔盒扫码SN号回传 */
@@ -534,7 +534,7 @@ declare namespace Tmall.Nrt {
     /** 商户简称 */
     f_jc: string;
     /** 主营品牌 阿里品牌 */
-    f_jypp: string;
+    f_jypp?: string;
     /** 商户名称 */
     f_name: string;
     /** 操作类型 基础类型 new 、update、delete、query */
@@ -562,15 +562,15 @@ declare namespace Tmall.Nrt {
     /** 合同编号 */
     f_hth: string;
     /** 原合同编号 */
-    f_hth_old: string;
+    f_hth_old?: string;
     /** 租赁日期 止 */
-    f_htyxq_end: Date;
+    f_htyxq_end: Date | number | string;
     /** 租赁日期 起 */
-    f_htyxq_start: Date;
+    f_htyxq_start: Date | number | string;
     /** 摊位钉钉部门ID */
     f_stalldingdeptid: string;
     /** 原摊位钉钉部门ID */
-    f_stalldingdeptid_old: string;
+    f_stalldingdeptid_old?: string;
     /** 合同状态 */
     f_status: number;
     /** 门店钉钉部门ID */
@@ -582,13 +582,13 @@ declare namespace Tmall.Nrt {
     /** 主营品类名称 */
     f_zypl_name: string;
     /** 主营品牌代码 */
-    f_zyppdm: string;
+    f_zyppdm?: string;
     /** 主营品牌名称 */
     f_zypp_name: string;
     /** 操作类型 基础类型 new 、update、delete、query */
     op_type: string;
     /** 跨摊位合同号 */
-    related_contract_no: string;
+    related_contract_no?: string;
   }
 
   /** 摊位信息数据回流 */
@@ -604,7 +604,7 @@ declare namespace Tmall.Nrt {
   /** 门店信息回流 */
   interface StoreInfoToTmall {
     /** 门店地址 */
-    f_dz: string;
+    f_dz?: string;
     /** 门店编码 */
     f_fddm: string;
     /** 门店名称 */

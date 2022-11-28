@@ -11,11 +11,11 @@ declare namespace Alicom.Axb {
     /** 绑定关系变更事件event的ID，一组绑定关系分配一个subs_id，期间发生多次变更会产生多个event事件,每个event有一个event_id */
     event_id: number;
     /** 事件生成时间 */
-    gmt_create: Date;
+    gmt_create: Date | number | string;
     /** 绑定失效时间 */
     gmt_subs_end: string;
     /** 绑定开始时间 */
-    gmt_subs_start: Date;
+    gmt_subs_start: Date | number | string;
     /** 是否需要录音 */
     need_record: boolean;
     /** AXB三元组的A号码 */

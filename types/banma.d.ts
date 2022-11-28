@@ -9,6 +9,6 @@ declare namespace Banma.Right {
     /** 实例状态 */
     instance_state: string;
     /** 订单编号 */
-    order_code: string;
+    order_code?: string;
   }
 }

@@ -54,6 +54,6 @@ declare namespace Damai.Trade {
     /** 1表示票单状态，2表示退票状态 */
     status_type: number;
     /** 子订单ID */
-    sub_order_id: number;
+    sub_order_id?: number;
   }
 }

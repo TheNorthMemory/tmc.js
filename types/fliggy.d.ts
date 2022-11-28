@@ -20,27 +20,27 @@ declare namespace Fliggy.Jipiao {
   /** 航变消息服务 */
   interface FlightChange {
     /** 航变产生时间 */
-    flight_change_time: Date;
+    flight_change_time: Date | number | string;
     /** 1为取消，2为变更 */
     flight_change_type: number;
     /** 新到达机场 */
-    new_arr_airport: string;
+    new_arr_airport?: string;
     /** 新到达时间 */
-    new_arr_time: Date;
+    new_arr_time: Date | number | string;
     /** 新出发机场 */
-    new_dep_airport: string;
+    new_dep_airport?: string;
     /** 新出发时间 */
-    new_dep_time: Date;
+    new_dep_time?: Date | number | string;
     /** 新航班号 */
-    new_flight_num: string;
+    new_flight_num?: string;
     /** 到达机场三字码 */
     old_arr_airport: string;
     /** 到达时间 */
-    old_arr_time: Date;
+    old_arr_time: Date | number | string;
     /** 出发机场三字码 */
     old_dep_airport: string;
     /** 出发时间 */
-    old_dep_time: Date;
+    old_dep_time: Date | number | string;
     /** 原航班号 */
     old_flight_num: string;
     /** 订单id */
@@ -69,9 +69,9 @@ declare namespace Fliggy.Ticket {
     /** 采购单关闭原因 */
     close_order_reason: string;
     /** 创建时间 */
-    gmt_create: Date;
+    gmt_create: Date | number | string;
     /** 修改时间 */
-    gmt_modified: Date;
+    gmt_modified: Date | number | string;
     /** 子采购单id */
     order_id: number;
     /** 外部订单id */
