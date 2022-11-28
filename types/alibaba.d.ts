@@ -343,7 +343,7 @@ declare namespace Alibaba.Aliqin {
   /** 语音呼叫结果推送 */
   interface TaFcCallCdr {
     /** 任务主键 */
-    biz_id: string;
+    readonly biz_id: string;
     /** DTMF */
     dtmf?: string;
     /** 通话时长，未接通为0 */
@@ -515,7 +515,7 @@ declare namespace Alibaba.Invoice {
     /** 电商平台代码,TB,TM,ALIPAY,JD */
     platform_code: string;
     /** 电商平台对应的订单号 */
-    platform_tid: string;
+    readonly platform_tid: string;
     /** 卖家Nick */
     seller_nick?: string;
     /** 开票申请的触发类型，buyer_payed=卖家已付款，sent_goods=卖家已发货，buyer_confirm=买家确认收货，refund_seller_confirm=卖家同意退款，invoice_supply=买家申请补开发票，invoice_change=买家申请改抬头，change_paper=电换纸 */
@@ -531,7 +531,7 @@ declare namespace Alibaba.Invoice {
     /** 电商平台代码,TB,TM,ALIPAY,JD */
     platform_code: string;
     /** 电商平台对应的订单号 */
-    platform_tid: string;
+    readonly platform_tid: string;
     /** 审核结果 */
     result: boolean;
   }
@@ -627,7 +627,7 @@ declare namespace Alibaba.Invoice {
     /** 打印标记，ops_type=print时有值，0=打印发票，1=打印清单 */
     print_flag?: number;
     /** 已开具纸票的流水号 */
-    serial_no: string;
+    readonly serial_no: string;
   }
 
   /** 电子发票售前咨询 */
@@ -717,7 +717,7 @@ declare namespace Alibaba.Invoice {
     /** 开票卖家的nick */
     seller_nick?: string;
     /** 开票流水号 */
-    serial_no: string;
+    readonly serial_no: string;
   }
 
   /** 发票状态变更消息 */

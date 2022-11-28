@@ -5,7 +5,7 @@ declare namespace Fuwu.Confirm {
     /** 内购服务名称 */
     article_name: string;
     /** 确认单Id */
-    confirm_id: number;
+    readonly confirm_id: number;
     /** 订单id */
     order_id: string;
     /** 失败原因：用户拒绝，内部错误 */
@@ -21,7 +21,7 @@ declare namespace Fuwu.Confirm {
     /** 内购服务名称 */
     article_name: string;
     /** 确认单Id */
-    confirm_id: number;
+    readonly confirm_id: number;
     /** 订单id */
     order_id: string;
     /** 成功原因：一种是用户主动确认，一种是到期自动确认 */

@@ -52,7 +52,7 @@ declare namespace Tmall.Channel {
   /** 申请单变更消息 */
   interface ApplyOrderChange {
     /** 申请单单号 */
-    channel_purchase_apply_order_no: string;
+    readonly channel_purchase_apply_order_no: string;
     /** 消息类型（1-创建；2-撤回; 3-同意供应商的修改; 4-拒绝供应商的修改） */
     message_type: number;
   }
@@ -60,7 +60,7 @@ declare namespace Tmall.Channel {
   /** 发货单消息变更 */
   interface DeliverOrderChange {
     /** 发货单单号 */
-    main_deliver_order_no: number;
+    readonly main_deliver_order_no: number;
     /** 消息类型 */
     message_type: number;
   }
@@ -68,7 +68,7 @@ declare namespace Tmall.Channel {
   /** 采购单变更消息 */
   interface PurchaseOrderChange {
     /** 主采购单号 */
-    main_purchase_order_no: number;
+    readonly main_purchase_order_no: number;
     /** 消息类型 */
     message_type: number;
   }
@@ -76,7 +76,7 @@ declare namespace Tmall.Channel {
   /** 停止发货单变更消息 */
   interface StopOrderChange {
     /** 主采购单号 */
-    main_purchase_order_no: number;
+    readonly main_purchase_order_no: number;
     /** 消息类型 */
     message_type: number;
   }

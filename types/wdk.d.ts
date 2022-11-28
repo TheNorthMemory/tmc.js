@@ -7,7 +7,7 @@ declare namespace Wdk.Market {
     /** 逻辑分组ID */
     logic_group_number?: number;
     /** 消息ID */
-    msg_id: string;
+    readonly msg_id: string;
     /** 操作编码：A-新增，U-更新 */
     operate_code: string;
     /** 商家活动编码 */
@@ -29,7 +29,7 @@ declare namespace Wdk.Market {
     /** 商家逻辑分组Id */
     logic_group_number?: number;
     /** 消息ID */
-    msg_id: string;
+    readonly msg_id: string;
     /** 操作编码A-新增，D-删除 */
     operate_code: string;
     /** 商家外部活动Id */
@@ -52,7 +52,7 @@ declare namespace Wdk.Open {
     /** 数据类型 */
     biz_code: string;
     /** 消息Id */
-    message_id: string;
+    readonly message_id: string;
     /** 外部数据Id */
     out_data_id: string;
     /** 关联的外部数据Id */
@@ -72,7 +72,7 @@ declare namespace Wdk.Open {
     /** 数据类型 */
     biz_code: string;
     /** 消息Id：${outDataId} + ${bizCode} + ${subBizCode} */
-    message_id: string;
+    readonly message_id: string;
     /** 外部数据ID */
     out_data_id: string;
     /** 子数据类型 */

@@ -433,6 +433,16 @@ declare namespace Taobao.Ihomesvj {
 declare namespace Taobao.Jds {
   /** 退款单状态跟踪 */
   interface RefundTrace {
+    /** 业务动作发生的时间 */
+    action_time: Date | number | string;
+    /** 操作人 */
+    operator?: string;
+    /** 退款单Id */
+    refund_id: number | bigint;
+    /** 卖家的淘宝用户名 */
+    seller_nick: string;
+    /** 退款单状态。X_REFUND_START(退款开始),X_RETURN_START(退货开始),X_TO_SYSTEM(已转单),X_SERVICE_AUDITED(已客审),T_SELLER_REFUSE_BUYER(拒绝退款),X_FINANCE_AUDITED(已财审),T_WAIT_BUYER_RETURN_GOODS(等待买家发货),T_WAIT_SELLER_CONFIRM_GOODS(买家已发货),X_MATCHED(退货已匹配),X_EXAMINED(商家已验收),T_SUCCESS(退款成功),X_RETURN_SUCCESS(退货成功),T_CLOSED(退款关闭) */
+    status: string;
   }
 
   /** 交易订单状态跟踪 */
