@@ -228,6 +228,10 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 
 - [淘宝开放平台-消息服务使用介绍](https://open.taobao.com/doc.htm?docId=101663&docType=1)
 
+## 变更历史
+
+It used [the github release page for the Changelog](releases) here.
+
 ## License
 
 [MIT](LICENSE)
