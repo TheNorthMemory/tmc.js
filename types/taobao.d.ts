@@ -1327,6 +1327,12 @@ declare namespace Taobao.Jipiao {
 
 /** 淘宝直播API */
 declare namespace Taobao.Live {
+  /** 直播严选机构商品池变化通知 */
+  interface AgencyItemChanged {
+    /** 机构openUid */
+    agency_open_uid: string;
+  }
+
   /** 淘宝直播上下播消息 */
   interface FeedRelated {
     /** 主播openId */

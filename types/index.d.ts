@@ -588,6 +588,8 @@ declare interface TaoTopicsDescriptor {
   taobao_jipiao_SellerOrderNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJipiaoSellerOrderNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoJipiaoSellerRefundOrderNotify 淘宝机票 > 【机票代理商】退票订单通知} */
   taobao_jipiao_SellerRefundOrderNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJipiaoSellerRefundOrderNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoLiveAgencyItemChanged 淘宝直播API > 直播严选机构商品池变化通知} */
+  taobao_live_AgencyItemChanged(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLiveAgencyItemChanged) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLiveFeedRelated 淘宝直播API > 淘宝直播上下播消息} */
   taobao_live_FeedRelated(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLiveFeedRelated) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLiveTcpOrder 淘宝直播API > 淘宝直播订单消息} */
@@ -1727,6 +1729,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_jipiao_SellerOrderNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJipiaoSellerOrderNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoJipiaoSellerRefundOrderNotify 淘宝机票 > 【机票代理商】退票订单通知} */
   on(topic: 'taobao_jipiao_SellerRefundOrderNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJipiaoSellerRefundOrderNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoLiveAgencyItemChanged 淘宝直播API > 直播严选机构商品池变化通知} */
+  on(topic: 'taobao_live_AgencyItemChanged', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLiveAgencyItemChanged) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLiveFeedRelated 淘宝直播API > 淘宝直播上下播消息} */
   on(topic: 'taobao_live_FeedRelated', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLiveFeedRelated) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLiveTcpOrder 淘宝直播API > 淘宝直播订单消息} */

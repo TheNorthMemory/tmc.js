@@ -547,6 +547,8 @@ declare namespace IncomingMessage {
   type TaobaoJipiaoSellerOrderNotify = Message & { content?: MessageContent & { topic?: 'taobao_jipiao_SellerOrderNotify', content?: string | Taobao.Jipiao.SellerOrderNotify } };
   /** {@link Taobao.Jipiao.SellerRefundOrderNotify 淘宝机票 > 【机票代理商】退票订单通知} */
   type TaobaoJipiaoSellerRefundOrderNotify = Message & { content?: MessageContent & { topic?: 'taobao_jipiao_SellerRefundOrderNotify', content?: string | Taobao.Jipiao.SellerRefundOrderNotify } };
+  /** {@link Taobao.Live.AgencyItemChanged 淘宝直播API > 直播严选机构商品池变化通知} */
+  type TaobaoLiveAgencyItemChanged = Message & { content?: MessageContent & { topic?: 'taobao_live_AgencyItemChanged', content?: string | Taobao.Live.AgencyItemChanged } };
   /** {@link Taobao.Live.FeedRelated 淘宝直播API > 淘宝直播上下播消息} */
   type TaobaoLiveFeedRelated = Message & { content?: MessageContent & { topic?: 'taobao_live_FeedRelated', content?: string | Taobao.Live.FeedRelated } };
   /** {@link Taobao.Live.TcpOrder 淘宝直播API > 淘宝直播订单消息} */
@@ -1548,10 +1550,12 @@ declare namespace IncomingMessage {
     | TaobaoJipiaoSellerOrderNotify
     | TaobaoJipiaoSellerRefundOrderNotify;
   /**
+   * - {@link TaobaoLiveAgencyItemChanged 淘宝直播API > 直播严选机构商品池变化通知}
    * - {@link TaobaoLiveFeedRelated 淘宝直播API > 淘宝直播上下播消息}
    * - {@link TaobaoLiveTcpOrder 淘宝直播API > 淘宝直播订单消息}
    */
-  type TaobaoLive = TaobaoLiveFeedRelated
+  type TaobaoLive = TaobaoLiveAgencyItemChanged
+    | TaobaoLiveFeedRelated
     | TaobaoLiveTcpOrder;
   /**
    * - {@link TaobaoLogisticsLogsticDetailTrace 淘宝物流 > 物流详情跟踪消息}
