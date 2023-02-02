@@ -1546,6 +1546,18 @@ declare namespace Taobao.Opencrm {
     result_msg?: string;
   }
 
+  /** 数字短信模板审核消息 */
+  interface DigitalTplExamine {
+    /** 不通过 */
+    error_msg?: string;
+    /** 运营商类型 */
+    operator_code: string;
+    /** 审批状态，1：审批通过；2：审批不通过 */
+    status: string;
+    /** 模板id */
+    template_id: number;
+  }
+
   /** 反馈tmc */
   interface Feedback {
     /** 消息体 */
@@ -2321,6 +2333,24 @@ declare namespace Taobao.Top {
     readonly open_id: string;
     /** 用户id */
     user_id?: string;
+  }
+
+  /** 工作流执行回调消息 */
+  interface ProcessCallback {
+    /** 节点名称 */
+    node_name?: string;
+    /** 工作流运行实例id */
+    process_instance_id: string;
+    /** 备注 */
+    remark?: string;
+    /** 错误码 */
+    sys_error_code?: string;
+    /** 错误信息 */
+    sys_error_msg?: string;
+    /** 是否成功 */
+    sys_success: boolean;
+    /** traceId */
+    trace_id: string;
   }
 }
 

@@ -575,6 +575,8 @@ declare namespace IncomingMessage {
   type TaobaoOpencrmCrowdInstResult = Message & { content?: MessageContent & { topic?: 'taobao_opencrm_CrowdInstResult', content?: string | Taobao.Opencrm.CrowdInstResult } };
   /** {@link Taobao.Opencrm.CrowdInstSaveResult 客户运营平台API > 人群快照另存为人群结果} */
   type TaobaoOpencrmCrowdInstSaveResult = Message & { content?: MessageContent & { topic?: 'taobao_opencrm_CrowdInstSaveResult', content?: string | Taobao.Opencrm.CrowdInstSaveResult } };
+  /** {@link Taobao.Opencrm.DigitalTplExamine 客户运营平台API > 数字短信模板审核消息} */
+  type TaobaoOpencrmDigitalTplExamine = Message & { content?: MessageContent & { topic?: 'taobao_opencrm_DigitalTplExamine', content?: string | Taobao.Opencrm.DigitalTplExamine } };
   /** {@link Taobao.Opencrm.Feedback 客户运营平台API > 反馈tmc} */
   type TaobaoOpencrmFeedback = Message & { content?: MessageContent & { topic?: 'taobao_opencrm_Feedback', content?: string | Taobao.Opencrm.Feedback } };
   /** {@link Taobao.Opencrm.MemberGradeChange 客户运营平台API > 会员等级变更} */
@@ -673,6 +675,8 @@ declare namespace IncomingMessage {
   type TaobaoTaeItemUpShelf = Message & { content?: MessageContent & { topic?: 'taobao_tae_ItemUpShelf', content?: string | Taobao.Tae.ItemUpShelf } };
   /** {@link Taobao.Top.AuthCancel 平台消息 > 取消授权消息通知} */
   type TaobaoTopAuthCancel = Message & { content?: MessageContent & { topic?: 'taobao_top_AuthCancel', content?: string | Taobao.Top.AuthCancel } };
+  /** {@link Taobao.Top.ProcessCallback 平台消息 > 工作流执行回调消息} */
+  type TaobaoTopProcessCallback = Message & { content?: MessageContent & { topic?: 'taobao_top_ProcessCallback', content?: string | Taobao.Top.ProcessCallback } };
   /** {@link Taobao.Topats.TaskComplete 平台消息 > 异步任务执行完成} */
   type TaobaoTopatsTaskComplete = Message & { content?: MessageContent & { topic?: 'taobao_topats_TaskComplete', content?: string | Taobao.Topats.TaskComplete } };
   /** {@link Taobao.Trade.AdvanceDisburse 淘宝交易 > 订单极速放款成功消息} */
@@ -1587,6 +1591,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoOpencrmCardTplExamine 客户运营平台API > 卡片短信模板审核消息}
    * - {@link TaobaoOpencrmCrowdInstResult 客户运营平台API > 人群快照生成结果}
    * - {@link TaobaoOpencrmCrowdInstSaveResult 客户运营平台API > 人群快照另存为人群结果}
+   * - {@link TaobaoOpencrmDigitalTplExamine 客户运营平台API > 数字短信模板审核消息}
    * - {@link TaobaoOpencrmFeedback 客户运营平台API > 反馈tmc}
    * - {@link TaobaoOpencrmMemberGradeChange 客户运营平台API > 会员等级变更}
    * - {@link TaobaoOpencrmNodeExecuteFinished 客户运营平台API > 节点执行完成消息}
@@ -1600,6 +1605,7 @@ declare namespace IncomingMessage {
     | TaobaoOpencrmCardTplExamine
     | TaobaoOpencrmCrowdInstResult
     | TaobaoOpencrmCrowdInstSaveResult
+    | TaobaoOpencrmDigitalTplExamine
     | TaobaoOpencrmFeedback
     | TaobaoOpencrmMemberGradeChange
     | TaobaoOpencrmNodeExecuteFinished
@@ -1707,8 +1713,10 @@ declare namespace IncomingMessage {
     | TaobaoTaeItemUpShelf;
   /**
    * - {@link TaobaoTopAuthCancel 平台消息 > 取消授权消息通知}
+   * - {@link TaobaoTopProcessCallback 平台消息 > 工作流执行回调消息}
    */
-  type TaobaoTop = TaobaoTopAuthCancel;
+  type TaobaoTop = TaobaoTopAuthCancel
+    | TaobaoTopProcessCallback;
   /**
    * - {@link TaobaoTopatsTaskComplete 平台消息 > 异步任务执行完成}
    */

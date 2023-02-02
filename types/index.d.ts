@@ -616,6 +616,8 @@ declare interface TaoTopicsDescriptor {
   taobao_opencrm_CrowdInstResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmCrowdInstResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmCrowdInstSaveResult 客户运营平台API > 人群快照另存为人群结果} */
   taobao_opencrm_CrowdInstSaveResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmCrowdInstSaveResult) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOpencrmDigitalTplExamine 客户运营平台API > 数字短信模板审核消息} */
+  taobao_opencrm_DigitalTplExamine(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmDigitalTplExamine) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmFeedback 客户运营平台API > 反馈tmc} */
   taobao_opencrm_Feedback(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmFeedback) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmMemberGradeChange 客户运营平台API > 会员等级变更} */
@@ -714,6 +716,8 @@ declare interface TaoTopicsDescriptor {
   taobao_tae_ItemUpShelf(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTaeItemUpShelf) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTopAuthCancel 平台消息 > 取消授权消息通知} */
   taobao_top_AuthCancel(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTopAuthCancel) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoTopProcessCallback 平台消息 > 工作流执行回调消息} */
+  taobao_top_ProcessCallback(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTopProcessCallback) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTopatsTaskComplete 平台消息 > 异步任务执行完成} */
   taobao_topats_TaskComplete(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTopatsTaskComplete) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTradeAdvanceDisburse 淘宝交易 > 订单极速放款成功消息} */
@@ -1757,6 +1761,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_opencrm_CrowdInstResult', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmCrowdInstResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmCrowdInstSaveResult 客户运营平台API > 人群快照另存为人群结果} */
   on(topic: 'taobao_opencrm_CrowdInstSaveResult', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmCrowdInstSaveResult) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOpencrmDigitalTplExamine 客户运营平台API > 数字短信模板审核消息} */
+  on(topic: 'taobao_opencrm_DigitalTplExamine', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmDigitalTplExamine) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmFeedback 客户运营平台API > 反馈tmc} */
   on(topic: 'taobao_opencrm_Feedback', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmFeedback) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmMemberGradeChange 客户运营平台API > 会员等级变更} */
@@ -1855,6 +1861,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_tae_ItemUpShelf', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTaeItemUpShelf) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTopAuthCancel 平台消息 > 取消授权消息通知} */
   on(topic: 'taobao_top_AuthCancel', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTopAuthCancel) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoTopProcessCallback 平台消息 > 工作流执行回调消息} */
+  on(topic: 'taobao_top_ProcessCallback', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTopProcessCallback) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTopatsTaskComplete 平台消息 > 异步任务执行完成} */
   on(topic: 'taobao_topats_TaskComplete', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTopatsTaskComplete) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTradeAdvanceDisburse 淘宝交易 > 订单极速放款成功消息} */
