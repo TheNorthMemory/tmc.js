@@ -2062,6 +2062,23 @@ declare namespace Taobao.Rhino {
   }
 }
 
+/** 平台消息 */
+declare namespace Taobao.Smartapp {
+  /** 用户订阅变更消息 */
+  interface AppSubChange {
+    /** 应用id */
+    app_id: string;
+    /** 对接应用名称列表 */
+    cooperation_list: string[];
+    /** open_uid */
+    open_uid: string;
+    /** 场景code */
+    screen_code: string;
+    /** 订阅状态，ON:开启 ，OFF:关闭 */
+    status: string;
+  }
+}
+
 /** 导购平台 */
 declare namespace Taobao.Tae {
   /** 商品信息变更 */

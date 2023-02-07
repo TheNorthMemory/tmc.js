@@ -637,6 +637,8 @@ declare namespace IncomingMessage {
   type TaobaoRefundTaobaoIntervened = Message & { content?: MessageContent & { topic?: 'taobao_refund_TaobaoIntervened', content?: string | Taobao.Refund.TaobaoIntervened } };
   /** {@link Taobao.Rhino.DeviceStatus 智能制造API > 智能制造-设备状态变更} */
   type TaobaoRhinoDeviceStatus = Message & { content?: MessageContent & { topic?: 'taobao_rhino_DeviceStatus', content?: string | Taobao.Rhino.DeviceStatus } };
+  /** {@link Taobao.Smartapp.AppSubChange 平台消息 > 用户订阅变更消息} */
+  type TaobaoSmartappAppSubChange = Message & { content?: MessageContent & { topic?: 'taobao_smartapp_AppSubChange', content?: string | Taobao.Smartapp.AppSubChange } };
   /** {@link Taobao.Tae.BaichuanAuctionChange 导购平台 > 商品信息变更} */
   type TaobaoTaeBaichuanAuctionChange = Message & { content?: MessageContent & { topic?: 'taobao_tae_BaichuanAuctionChange', content?: string | Taobao.Tae.BaichuanAuctionChange } };
   /** {@link Taobao.Tae.BaichuanTradeClosed 导购平台 > 交易关闭} */
@@ -1674,6 +1676,10 @@ declare namespace IncomingMessage {
    */
   type TaobaoRhino = TaobaoRhinoDeviceStatus;
   /**
+   * - {@link TaobaoSmartappAppSubChange 平台消息 > 用户订阅变更消息}
+   */
+  type TaobaoSmartapp = TaobaoSmartappAppSubChange;
+  /**
    * - {@link TaobaoTaeBaichuanAuctionChange 导购平台 > 商品信息变更}
    * - {@link TaobaoTaeBaichuanTradeClosed 导购平台 > 交易关闭}
    * - {@link TaobaoTaeBaichuanTradeCreated 导购平台 > 创建订单}
@@ -2152,6 +2158,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoRecycle}
    * - {@link TaobaoRefund}
    * - {@link TaobaoRhino}
+   * - {@link TaobaoSmartapp}
    * - {@link TaobaoTae}
    * - {@link TaobaoTop}
    * - {@link TaobaoTopats}
@@ -2199,6 +2206,7 @@ declare namespace IncomingMessage {
     | TaobaoRecycle
     | TaobaoRefund
     | TaobaoRhino
+    | TaobaoSmartapp
     | TaobaoTae
     | TaobaoTop
     | TaobaoTopats

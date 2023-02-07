@@ -678,6 +678,8 @@ declare interface TaoTopicsDescriptor {
   taobao_refund_TaobaoIntervened(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRefundTaobaoIntervened) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRhinoDeviceStatus 智能制造API > 智能制造-设备状态变更} */
   taobao_rhino_DeviceStatus(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRhinoDeviceStatus) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoSmartappAppSubChange 平台消息 > 用户订阅变更消息} */
+  taobao_smartapp_AppSubChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartappAppSubChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTaeBaichuanAuctionChange 导购平台 > 商品信息变更} */
   taobao_tae_BaichuanAuctionChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTaeBaichuanAuctionChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTaeBaichuanTradeClosed 导购平台 > 交易关闭} */
@@ -1100,6 +1102,8 @@ declare interface TaoTopicsDescriptor {
   taobao_refund(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRefund) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRhino} */
   taobao_rhino(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRhino) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoSmartapp} */
+  taobao_smartapp(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartapp) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTae} */
   taobao_tae(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTae) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTop} */
@@ -1823,6 +1827,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_refund_TaobaoIntervened', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRefundTaobaoIntervened) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRhinoDeviceStatus 智能制造API > 智能制造-设备状态变更} */
   on(topic: 'taobao_rhino_DeviceStatus', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRhinoDeviceStatus) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoSmartappAppSubChange 平台消息 > 用户订阅变更消息} */
+  on(topic: 'taobao_smartapp_AppSubChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartappAppSubChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTaeBaichuanAuctionChange 导购平台 > 商品信息变更} */
   on(topic: 'taobao_tae_BaichuanAuctionChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTaeBaichuanAuctionChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTaeBaichuanTradeClosed 导购平台 > 交易关闭} */
@@ -2245,6 +2251,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_refund', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRefund) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRhino} */
   on(topic: 'taobao_rhino', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRhino) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoSmartapp} */
+  on(topic: 'taobao_smartapp', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartapp) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTae} */
   on(topic: 'taobao_tae', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTae) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTop} */
