@@ -442,6 +442,8 @@ declare interface TaoTopicsDescriptor {
   taobao_bus_TradePayStatus(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoBusTradePayStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoCarleaseFreeDpOrderMsgSend 天猫服务 > 天猫汽车直租免首付订单消息} */
   taobao_carlease_FreeDpOrderMsgSend(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoCarleaseFreeDpOrderMsgSend) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoContentOrderPaid 淘宝交易 > 内容开放短视频模板支付消息} */
+  taobao_content_OrderPaid(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoContentOrderPaid) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDaifaDistributorOrderStatusChange 代发管理 > 代发管理_分销商侧订单状态变更消息} */
   taobao_daifa_DistributorOrderStatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDaifaDistributorOrderStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDaifaSupplierOrderStatusChange 代发管理 > 代发管理_供货商侧订单状态变更消息} */
@@ -1044,6 +1046,8 @@ declare interface TaoTopicsDescriptor {
   taobao_bus(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoBus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoCarlease} */
   taobao_carlease(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoCarlease) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoContent} */
+  taobao_content(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoContent) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDaifa} */
   taobao_daifa(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDaifa) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDd} */
@@ -1591,6 +1595,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_bus_TradePayStatus', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoBusTradePayStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoCarleaseFreeDpOrderMsgSend 天猫服务 > 天猫汽车直租免首付订单消息} */
   on(topic: 'taobao_carlease_FreeDpOrderMsgSend', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoCarleaseFreeDpOrderMsgSend) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoContentOrderPaid 淘宝交易 > 内容开放短视频模板支付消息} */
+  on(topic: 'taobao_content_OrderPaid', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoContentOrderPaid) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDaifaDistributorOrderStatusChange 代发管理 > 代发管理_分销商侧订单状态变更消息} */
   on(topic: 'taobao_daifa_DistributorOrderStatusChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDaifaDistributorOrderStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDaifaSupplierOrderStatusChange 代发管理 > 代发管理_供货商侧订单状态变更消息} */
@@ -2193,6 +2199,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_bus', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoBus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoCarlease} */
   on(topic: 'taobao_carlease', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoCarlease) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoContent} */
+  on(topic: 'taobao_content', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoContent) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDaifa} */
   on(topic: 'taobao_daifa', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDaifa) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDd} */

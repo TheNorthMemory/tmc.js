@@ -219,6 +219,23 @@ declare namespace Taobao.Carlease {
   }
 }
 
+/** 淘宝交易 */
+declare namespace Taobao.Content {
+  /** 内容开放短视频模板支付消息 */
+  interface OrderPaid {
+    /** 外部产品ID */
+    out_product_id: string;
+    /** 服务市场的产品子订单号 */
+    sub_order_id: string;
+    /** 用户openUid */
+    user_open_uid: string;
+    /** 短视频模板ID */
+    video_service_id: string;
+    /** 短视频模板订单ID */
+    video_service_order_id: string;
+  }
+}
+
 /** 代发管理 */
 declare namespace Taobao.Daifa {
   /** 代发管理_分销商侧订单状态变更消息 */

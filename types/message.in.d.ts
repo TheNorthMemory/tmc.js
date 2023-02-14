@@ -401,6 +401,8 @@ declare namespace IncomingMessage {
   type TaobaoBusTradePayStatus = Message & { content?: MessageContent & { topic?: 'taobao_bus_TradePayStatus', content?: string | Taobao.Bus.TradePayStatus } };
   /** {@link Taobao.Carlease.FreeDpOrderMsgSend 天猫服务 > 天猫汽车直租免首付订单消息} */
   type TaobaoCarleaseFreeDpOrderMsgSend = Message & { content?: MessageContent & { topic?: 'taobao_carlease_FreeDpOrderMsgSend', content?: string | Taobao.Carlease.FreeDpOrderMsgSend } };
+  /** {@link Taobao.Content.OrderPaid 淘宝交易 > 内容开放短视频模板支付消息} */
+  type TaobaoContentOrderPaid = Message & { content?: MessageContent & { topic?: 'taobao_content_OrderPaid', content?: string | Taobao.Content.OrderPaid } };
   /** {@link Taobao.Daifa.DistributorOrderStatusChange 代发管理 > 代发管理_分销商侧订单状态变更消息} */
   type TaobaoDaifaDistributorOrderStatusChange = Message & { content?: MessageContent & { topic?: 'taobao_daifa_DistributorOrderStatusChange', content?: string | Taobao.Daifa.DistributorOrderStatusChange } };
   /** {@link Taobao.Daifa.SupplierOrderStatusChange 代发管理 > 代发管理_供货商侧订单状态变更消息} */
@@ -1382,6 +1384,10 @@ declare namespace IncomingMessage {
    */
   type TaobaoCarlease = TaobaoCarleaseFreeDpOrderMsgSend;
   /**
+   * - {@link TaobaoContentOrderPaid 淘宝交易 > 内容开放短视频模板支付消息}
+   */
+  type TaobaoContent = TaobaoContentOrderPaid;
+  /**
    * - {@link TaobaoDaifaDistributorOrderStatusChange 代发管理 > 代发管理_分销商侧订单状态变更消息}
    * - {@link TaobaoDaifaSupplierOrderStatusChange 代发管理 > 代发管理_供货商侧订单状态变更消息}
    */
@@ -2129,6 +2135,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoBmc}
    * - {@link TaobaoBus}
    * - {@link TaobaoCarlease}
+   * - {@link TaobaoContent}
    * - {@link TaobaoDaifa}
    * - {@link TaobaoDd}
    * - {@link TaobaoDiandian}
@@ -2177,6 +2184,7 @@ declare namespace IncomingMessage {
     | TaobaoBmc
     | TaobaoBus
     | TaobaoCarlease
+    | TaobaoContent
     | TaobaoDaifa
     | TaobaoDd
     | TaobaoDiandian
