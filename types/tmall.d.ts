@@ -158,6 +158,8 @@ declare namespace Tmall.Fuwu {
 
   /** 单个结算调整单数据推送 */
   interface SettleAdjustmentStatusUpdate {
+    /** 扩展属性 */
+    attributes: string;
     /** 实物订单信息 */
     biz_order_id: number;
     /** 费用 */
