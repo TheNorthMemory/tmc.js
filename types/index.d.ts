@@ -840,6 +840,8 @@ declare interface TaoTopicsDescriptor {
   tmall_fuwu_ServiceStoreRegister(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuServiceStoreRegister) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuSettleAdjustmentStatusUpdate 天猫服务 > 单个结算调整单数据推送} */
   tmall_fuwu_SettleAdjustmentStatusUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuSettleAdjustmentStatusUpdate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallFuwuSettleSupplierFcBill 天猫服务 > 天猫服务服务商分账消息推送} */
+  tmall_fuwu_SettleSupplierFcBill(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuSettleSupplierFcBill) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuWorkcardContract 天猫服务 > 天猫服务履约合同单} */
   tmall_fuwu_WorkcardContract(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuWorkcardContract) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuWorkcardInfo 天猫服务 > 天猫服务任务工单} */
@@ -1993,6 +1995,8 @@ declare interface TaoEventsListener {
   on(topic: 'tmall_fuwu_ServiceStoreRegister', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuServiceStoreRegister) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuSettleAdjustmentStatusUpdate 天猫服务 > 单个结算调整单数据推送} */
   on(topic: 'tmall_fuwu_SettleAdjustmentStatusUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuSettleAdjustmentStatusUpdate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallFuwuSettleSupplierFcBill 天猫服务 > 天猫服务服务商分账消息推送} */
+  on(topic: 'tmall_fuwu_SettleSupplierFcBill', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuSettleSupplierFcBill) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuWorkcardContract 天猫服务 > 天猫服务履约合同单} */
   on(topic: 'tmall_fuwu_WorkcardContract', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuWorkcardContract) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuWorkcardInfo 天猫服务 > 天猫服务任务工单} */

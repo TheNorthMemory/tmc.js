@@ -186,6 +186,18 @@ declare namespace Tmall.Fuwu {
     workcard_id: number;
   }
 
+  /** 天猫服务服务商分账消息推送 */
+  interface SettleSupplierFcBill {
+    /** 分成金额，单位分 */
+    amount: number;
+    /** 结算费用项 */
+    details: string;
+    /** 平台佣金比例 */
+    platform_commission_rate: number;
+    /** 服务工单ID */
+    workcard_id: number;
+  }
+
   /** 天猫服务履约合同单 */
   interface WorkcardContract {
     /** long，id */

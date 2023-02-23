@@ -799,6 +799,8 @@ declare namespace IncomingMessage {
   type TmallFuwuServiceStoreRegister = Message & { content?: MessageContent & { topic?: 'tmall_fuwu_ServiceStoreRegister', content?: string | Tmall.Fuwu.ServiceStoreRegister } };
   /** {@link Tmall.Fuwu.SettleAdjustmentStatusUpdate 天猫服务 > 单个结算调整单数据推送} */
   type TmallFuwuSettleAdjustmentStatusUpdate = Message & { content?: MessageContent & { topic?: 'tmall_fuwu_SettleAdjustmentStatusUpdate', content?: string | Tmall.Fuwu.SettleAdjustmentStatusUpdate } };
+  /** {@link Tmall.Fuwu.SettleSupplierFcBill 天猫服务 > 天猫服务服务商分账消息推送} */
+  type TmallFuwuSettleSupplierFcBill = Message & { content?: MessageContent & { topic?: 'tmall_fuwu_SettleSupplierFcBill', content?: string | Tmall.Fuwu.SettleSupplierFcBill } };
   /** {@link Tmall.Fuwu.WorkcardContract 天猫服务 > 天猫服务履约合同单} */
   type TmallFuwuWorkcardContract = Message & { content?: MessageContent & { topic?: 'tmall_fuwu_WorkcardContract', content?: string | Tmall.Fuwu.WorkcardContract } };
   /** {@link Tmall.Fuwu.WorkcardInfo 天猫服务 > 天猫服务任务工单} */
@@ -1865,6 +1867,7 @@ declare namespace IncomingMessage {
    * - {@link TmallFuwuServiceMonitorMessage 天猫服务 > 服务预警消息}
    * - {@link TmallFuwuServiceStoreRegister 天猫服务 > 服务网点注册消息}
    * - {@link TmallFuwuSettleAdjustmentStatusUpdate 天猫服务 > 单个结算调整单数据推送}
+   * - {@link TmallFuwuSettleSupplierFcBill 天猫服务 > 天猫服务服务商分账消息推送}
    * - {@link TmallFuwuWorkcardContract 天猫服务 > 天猫服务履约合同单}
    * - {@link TmallFuwuWorkcardInfo 天猫服务 > 天猫服务任务工单}
    * - {@link TmallFuwuWorkcardStatusUpdate 天猫服务 > 天猫服务任务工单状态变更}
@@ -1876,6 +1879,7 @@ declare namespace IncomingMessage {
     | TmallFuwuServiceMonitorMessage
     | TmallFuwuServiceStoreRegister
     | TmallFuwuSettleAdjustmentStatusUpdate
+    | TmallFuwuSettleSupplierFcBill
     | TmallFuwuWorkcardContract
     | TmallFuwuWorkcardInfo
     | TmallFuwuWorkcardStatusUpdate;
