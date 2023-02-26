@@ -350,6 +350,8 @@ declare interface TaoTopicsDescriptor {
   alitrip_visa_TradeDone(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlitripVisaTradeDone) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AliyunIotOrderSync IOT-智能制造 > 天天工厂采购单同步} */
   aliyun_iot_OrderSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.AliyunIotOrderSync) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AscpInsdustryCancelInquiry 天猫服务 > 送货入户并安装取消询价接口} */
+  ascp_insdustry_CancelInquiry(fn: (this: TaoMessageConsumer, message: IncomingMessage.AscpInsdustryCancelInquiry) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.BanmaRightTradeCreate 平台消息 > 斑马权益平台权益变更通知} */
   banma_right_TradeCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.BanmaRightTradeCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.CainiaoConsignplatformLogisiticsDetail 菜鸟发货工作台 > 发货工作台下发物流详情消息} */
@@ -996,6 +998,8 @@ declare interface TaoTopicsDescriptor {
   alitrip_visa(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlitripVisa) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AliyunIot} */
   aliyun_iot(fn: (this: TaoMessageConsumer, message: IncomingMessage.AliyunIot) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AscpInsdustry} */
+  ascp_insdustry(fn: (this: TaoMessageConsumer, message: IncomingMessage.AscpInsdustry) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.BanmaRight} */
   banma_right(fn: (this: TaoMessageConsumer, message: IncomingMessage.BanmaRight) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.CainiaoConsignplatform} */
@@ -1184,6 +1188,8 @@ declare interface TaoTopicsDescriptor {
   alitrip(fn: (this: TaoMessageConsumer, message: IncomingMessage.Alitrip) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Aliyun} */
   aliyun(fn: (this: TaoMessageConsumer, message: IncomingMessage.Aliyun) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Ascp} */
+  ascp(fn: (this: TaoMessageConsumer, message: IncomingMessage.Ascp) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Banma} */
   banma(fn: (this: TaoMessageConsumer, message: IncomingMessage.Banma) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Cainiao} */
@@ -1505,6 +1511,8 @@ declare interface TaoEventsListener {
   on(topic: 'alitrip_visa_TradeDone', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlitripVisaTradeDone) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AliyunIotOrderSync IOT-智能制造 > 天天工厂采购单同步} */
   on(topic: 'aliyun_iot_OrderSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.AliyunIotOrderSync) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AscpInsdustryCancelInquiry 天猫服务 > 送货入户并安装取消询价接口} */
+  on(topic: 'ascp_insdustry_CancelInquiry', listener: (this: TaoMessageConsumer, message: IncomingMessage.AscpInsdustryCancelInquiry) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.BanmaRightTradeCreate 平台消息 > 斑马权益平台权益变更通知} */
   on(topic: 'banma_right_TradeCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.BanmaRightTradeCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.CainiaoConsignplatformLogisiticsDetail 菜鸟发货工作台 > 发货工作台下发物流详情消息} */
@@ -2151,6 +2159,8 @@ declare interface TaoEventsListener {
   on(topic: 'alitrip_visa', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlitripVisa) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AliyunIot} */
   on(topic: 'aliyun_iot', listener: (this: TaoMessageConsumer, message: IncomingMessage.AliyunIot) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AscpInsdustry} */
+  on(topic: 'ascp_insdustry', listener: (this: TaoMessageConsumer, message: IncomingMessage.AscpInsdustry) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.BanmaRight} */
   on(topic: 'banma_right', listener: (this: TaoMessageConsumer, message: IncomingMessage.BanmaRight) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.CainiaoConsignplatform} */
@@ -2339,6 +2349,8 @@ declare interface TaoEventsListener {
   on(topic: 'alitrip', listener: (this: TaoMessageConsumer, message: IncomingMessage.Alitrip) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Aliyun} */
   on(topic: 'aliyun', listener: (this: TaoMessageConsumer, message: IncomingMessage.Aliyun) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Ascp} */
+  on(topic: 'ascp', listener: (this: TaoMessageConsumer, message: IncomingMessage.Ascp) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Banma} */
   on(topic: 'banma', listener: (this: TaoMessageConsumer, message: IncomingMessage.Banma) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Cainiao} */

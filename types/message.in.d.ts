@@ -5,6 +5,7 @@
 /// <reference path="alihealth.d.ts" />
 /// <reference path="alitrip.d.ts" />
 /// <reference path="aliyun.d.ts" />
+/// <reference path="ascp.d.ts" />
 /// <reference path="banma.d.ts" />
 /// <reference path="cainiao.d.ts" />
 /// <reference path="damai.d.ts" />
@@ -309,6 +310,8 @@ declare namespace IncomingMessage {
   type AlitripVisaTradeDone = Message & { content?: MessageContent & { topic?: 'alitrip_visa_TradeDone', content?: string | Alitrip.Visa.TradeDone } };
   /** {@link Aliyun.Iot.OrderSync IOT-智能制造 > 天天工厂采购单同步} */
   type AliyunIotOrderSync = Message & { content?: MessageContent & { topic?: 'aliyun_iot_OrderSync', content?: string | Aliyun.Iot.OrderSync } };
+  /** {@link Ascp.Insdustry.CancelInquiry 天猫服务 > 送货入户并安装取消询价接口} */
+  type AscpInsdustryCancelInquiry = Message & { content?: MessageContent & { topic?: 'ascp_insdustry_CancelInquiry', content?: string | Ascp.Insdustry.CancelInquiry } };
   /** {@link Banma.Right.TradeCreate 平台消息 > 斑马权益平台权益变更通知} */
   type BanmaRightTradeCreate = Message & { content?: MessageContent & { topic?: 'banma_right_TradeCreate', content?: string | Banma.Right.TradeCreate } };
   /** {@link Cainiao.Consignplatform.LogisiticsDetail 菜鸟发货工作台 > 发货工作台下发物流详情消息} */
@@ -1242,6 +1245,10 @@ declare namespace IncomingMessage {
    */
   type AliyunIot = AliyunIotOrderSync;
   /**
+   * - {@link AscpInsdustryCancelInquiry 天猫服务 > 送货入户并安装取消询价接口}
+   */
+  type AscpInsdustry = AscpInsdustryCancelInquiry;
+  /**
    * - {@link BanmaRightTradeCreate 平台消息 > 斑马权益平台权益变更通知}
    */
   type BanmaRight = BanmaRightTradeCreate;
@@ -2075,6 +2082,10 @@ declare namespace IncomingMessage {
    * - {@link AliyunIot}
    */
   type Aliyun = AliyunIot;
+  /**
+   * - {@link AscpInsdustry}
+   */
+  type Ascp = AscpInsdustry;
   /**
    * - {@link BanmaRight}
    */
