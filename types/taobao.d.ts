@@ -231,8 +231,6 @@ declare namespace Taobao.Content {
     user_open_uid: string;
     /** 短视频模板ID */
     video_service_id: string;
-    /** 短视频模板订单ID */
-    video_service_order_id: string;
   }
 }
 
