@@ -15,6 +15,7 @@
 /// <reference path="idle.d.ts" />
 /// <reference path="jae.d.ts" />
 /// <reference path="lst.d.ts" />
+/// <reference path="niaochao.d.ts" />
 /// <reference path="taobao.d.ts" />
 /// <reference path="tmall.d.ts" />
 /// <reference path="trip.d.ts" />
@@ -380,6 +381,8 @@ declare namespace IncomingMessage {
   type LstSupplierBroadcastFastRefundMessage = Message & { content?: MessageContent & { topic?: 'lst_supplier_BroadcastFastRefundMessage', content?: string | Lst.Supplier.BroadcastFastRefundMessage } };
   /** {@link Lst.Supplier.FastRefundMessageCreate 零售通_公共 > 品牌商极速退款消息创建} */
   type LstSupplierFastRefundMessageCreate = Message & { content?: MessageContent & { topic?: 'lst_supplier_FastRefundMessageCreate', content?: string | Lst.Supplier.FastRefundMessageCreate } };
+  /** {@link Niaochao.Tccompass.WarehouseNetworkChange 五道口配送 > 仓网络变更消息} */
+  type NiaochaoTccompassWarehouseNetworkChange = Message & { content?: MessageContent & { topic?: 'niaochao_tccompass_WarehouseNetworkChange', content?: string | Niaochao.Tccompass.WarehouseNetworkChange } };
   /** {@link Taobao.Ag.RefundSignInfo AliGenius > 商家在AG的签收信息} */
   type TaobaoAgRefundSignInfo = Message & { content?: MessageContent & { topic?: 'taobao_ag_RefundSignInfo', content?: string | Taobao.Ag.RefundSignInfo } };
   /** {@link Taobao.Aps.CommentAdd 平台消息 > 百川反馈-开发者/客服回复} */
@@ -1355,6 +1358,10 @@ declare namespace IncomingMessage {
   type LstSupplier = LstSupplierBroadcastFastRefundMessage
     | LstSupplierFastRefundMessageCreate;
   /**
+   * - {@link NiaochaoTccompassWarehouseNetworkChange 五道口配送 > 仓网络变更消息}
+   */
+  type NiaochaoTccompass = NiaochaoTccompassWarehouseNetworkChange;
+  /**
    * - {@link TaobaoAgRefundSignInfo AliGenius > 商家在AG的签收信息}
    */
   type TaobaoAg = TaobaoAgRefundSignInfo;
@@ -2142,6 +2149,10 @@ declare namespace IncomingMessage {
    * - {@link LstSupplier}
    */
   type Lst = LstSupplier;
+  /**
+   * - {@link NiaochaoTccompass}
+   */
+  type Niaochao = NiaochaoTccompass;
   /**
    * - {@link TaobaoAg}
    * - {@link TaobaoAps}

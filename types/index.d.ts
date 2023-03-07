@@ -420,6 +420,8 @@ declare interface TaoTopicsDescriptor {
   lst_supplier_BroadcastFastRefundMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.LstSupplierBroadcastFastRefundMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LstSupplierFastRefundMessageCreate 零售通_公共 > 品牌商极速退款消息创建} */
   lst_supplier_FastRefundMessageCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.LstSupplierFastRefundMessageCreate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.NiaochaoTccompassWarehouseNetworkChange 五道口配送 > 仓网络变更消息} */
+  niaochao_tccompass_WarehouseNetworkChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.NiaochaoTccompassWarehouseNetworkChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAgRefundSignInfo AliGenius > 商家在AG的签收信息} */
   taobao_ag_RefundSignInfo(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAgRefundSignInfo) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoApsCommentAdd 平台消息 > 百川反馈-开发者/客服回复} */
@@ -1038,6 +1040,8 @@ declare interface TaoTopicsDescriptor {
   jae_trade(fn: (this: TaoMessageConsumer, message: IncomingMessage.JaeTrade) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LstSupplier} */
   lst_supplier(fn: (this: TaoMessageConsumer, message: IncomingMessage.LstSupplier) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.NiaochaoTccompass} */
+  niaochao_tccompass(fn: (this: TaoMessageConsumer, message: IncomingMessage.NiaochaoTccompass) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAg} */
   taobao_ag(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAps} */
@@ -1208,6 +1212,8 @@ declare interface TaoTopicsDescriptor {
   jae(fn: (this: TaoMessageConsumer, message: IncomingMessage.Jae) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Lst} */
   lst(fn: (this: TaoMessageConsumer, message: IncomingMessage.Lst) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Niaochao} */
+  niaochao(fn: (this: TaoMessageConsumer, message: IncomingMessage.Niaochao) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Taobao} */
   taobao(fn: (this: TaoMessageConsumer, message: IncomingMessage.Taobao) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Tmall} */
@@ -1581,6 +1587,8 @@ declare interface TaoEventsListener {
   on(topic: 'lst_supplier_BroadcastFastRefundMessage', listener: (this: TaoMessageConsumer, message: IncomingMessage.LstSupplierBroadcastFastRefundMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LstSupplierFastRefundMessageCreate 零售通_公共 > 品牌商极速退款消息创建} */
   on(topic: 'lst_supplier_FastRefundMessageCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.LstSupplierFastRefundMessageCreate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.NiaochaoTccompassWarehouseNetworkChange 五道口配送 > 仓网络变更消息} */
+  on(topic: 'niaochao_tccompass_WarehouseNetworkChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.NiaochaoTccompassWarehouseNetworkChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAgRefundSignInfo AliGenius > 商家在AG的签收信息} */
   on(topic: 'taobao_ag_RefundSignInfo', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAgRefundSignInfo) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoApsCommentAdd 平台消息 > 百川反馈-开发者/客服回复} */
@@ -2199,6 +2207,8 @@ declare interface TaoEventsListener {
   on(topic: 'jae_trade', listener: (this: TaoMessageConsumer, message: IncomingMessage.JaeTrade) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LstSupplier} */
   on(topic: 'lst_supplier', listener: (this: TaoMessageConsumer, message: IncomingMessage.LstSupplier) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.NiaochaoTccompass} */
+  on(topic: 'niaochao_tccompass', listener: (this: TaoMessageConsumer, message: IncomingMessage.NiaochaoTccompass) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAg} */
   on(topic: 'taobao_ag', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAps} */
@@ -2369,6 +2379,8 @@ declare interface TaoEventsListener {
   on(topic: 'jae', listener: (this: TaoMessageConsumer, message: IncomingMessage.Jae) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Lst} */
   on(topic: 'lst', listener: (this: TaoMessageConsumer, message: IncomingMessage.Lst) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Niaochao} */
+  on(topic: 'niaochao', listener: (this: TaoMessageConsumer, message: IncomingMessage.Niaochao) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Taobao} */
   on(topic: 'taobao', listener: (this: TaoMessageConsumer, message: IncomingMessage.Taobao) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Tmall} */
