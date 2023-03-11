@@ -1,6 +1,6 @@
 # tmc.js
 
-Events driven and chained Taobao Message Channel(TMC) for NodeJS
+Event driven and chained Taobao Message Channel(TMC) for NodeJS
 
 [![release](https://img.shields.io/npm/v/tmc.js)](https://github.com/TheNorthMemory/tmc.js/releases)
 [![vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/tmc.js?label=snyk.io)](https://snyk.io/advisor/npm-package/tmc.js)
@@ -134,7 +134,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 
 ## 支持的TOPICS
 
-<details><summary>共计 83+ 类别，453+ 消息数</summary>
+<details><summary>共计 83+ 类别，454+ 消息数</summary>
 
 | 类别 | 消息数 |
 | --- | --- |
@@ -168,7 +168,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | 零售plus | 8 |
 | 客户运营平台API | 13 |
 | AE-交易 | 10 |
-| 五道口配送 | 2 |
+| 五道口配送 | 3 |
 | 百川 | 2 |
 | 闲鱼 | 14 |
 | 闲鱼回收商消息 | 5 |

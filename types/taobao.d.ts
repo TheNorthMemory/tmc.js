@@ -223,6 +223,8 @@ declare namespace Taobao.Carlease {
 declare namespace Taobao.Content {
   /** 内容开放短视频模板支付消息 */
   interface OrderPaid {
+    /** 订单标识 */
+    outer_trade_code?: string;
     /** 外部产品ID */
     out_product_id: string;
     /** 服务市场的产品子订单号 */
