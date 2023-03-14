@@ -422,6 +422,8 @@ declare interface TaoTopicsDescriptor {
   lst_supplier_FastRefundMessageCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.LstSupplierFastRefundMessageCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.NiaochaoTccompassDockInfoChange 五道口配送 > 鸟潮站点变更消息} */
   niaochao_tccompass_DockInfoChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.NiaochaoTccompassDockInfoChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.NiaochaoTccompassMaterialCodeUpdate 五道口配送 > 物资箱号变动消息} */
+  niaochao_tccompass_MaterialCodeUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.NiaochaoTccompassMaterialCodeUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.NiaochaoTccompassWarehouseNetworkChange 五道口配送 > 仓网络变更消息} */
   niaochao_tccompass_WarehouseNetworkChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.NiaochaoTccompassWarehouseNetworkChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAgRefundSignInfo AliGenius > 商家在AG的签收信息} */
@@ -1591,6 +1593,8 @@ declare interface TaoEventsListener {
   on(topic: 'lst_supplier_FastRefundMessageCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.LstSupplierFastRefundMessageCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.NiaochaoTccompassDockInfoChange 五道口配送 > 鸟潮站点变更消息} */
   on(topic: 'niaochao_tccompass_DockInfoChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.NiaochaoTccompassDockInfoChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.NiaochaoTccompassMaterialCodeUpdate 五道口配送 > 物资箱号变动消息} */
+  on(topic: 'niaochao_tccompass_MaterialCodeUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.NiaochaoTccompassMaterialCodeUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.NiaochaoTccompassWarehouseNetworkChange 五道口配送 > 仓网络变更消息} */
   on(topic: 'niaochao_tccompass_WarehouseNetworkChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.NiaochaoTccompassWarehouseNetworkChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAgRefundSignInfo AliGenius > 商家在AG的签收信息} */

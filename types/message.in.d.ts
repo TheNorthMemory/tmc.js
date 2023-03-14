@@ -383,6 +383,8 @@ declare namespace IncomingMessage {
   type LstSupplierFastRefundMessageCreate = Message & { content?: MessageContent & { topic?: 'lst_supplier_FastRefundMessageCreate', content?: string | Lst.Supplier.FastRefundMessageCreate } };
   /** {@link Niaochao.Tccompass.DockInfoChange 五道口配送 > 鸟潮站点变更消息} */
   type NiaochaoTccompassDockInfoChange = Message & { content?: MessageContent & { topic?: 'niaochao_tccompass_DockInfoChange', content?: string | Niaochao.Tccompass.DockInfoChange } };
+  /** {@link Niaochao.Tccompass.MaterialCodeUpdate 五道口配送 > 物资箱号变动消息} */
+  type NiaochaoTccompassMaterialCodeUpdate = Message & { content?: MessageContent & { topic?: 'niaochao_tccompass_MaterialCodeUpdate', content?: string | Niaochao.Tccompass.MaterialCodeUpdate } };
   /** {@link Niaochao.Tccompass.WarehouseNetworkChange 五道口配送 > 仓网络变更消息} */
   type NiaochaoTccompassWarehouseNetworkChange = Message & { content?: MessageContent & { topic?: 'niaochao_tccompass_WarehouseNetworkChange', content?: string | Niaochao.Tccompass.WarehouseNetworkChange } };
   /** {@link Taobao.Ag.RefundSignInfo AliGenius > 商家在AG的签收信息} */
@@ -1361,9 +1363,11 @@ declare namespace IncomingMessage {
     | LstSupplierFastRefundMessageCreate;
   /**
    * - {@link NiaochaoTccompassDockInfoChange 五道口配送 > 鸟潮站点变更消息}
+   * - {@link NiaochaoTccompassMaterialCodeUpdate 五道口配送 > 物资箱号变动消息}
    * - {@link NiaochaoTccompassWarehouseNetworkChange 五道口配送 > 仓网络变更消息}
    */
   type NiaochaoTccompass = NiaochaoTccompassDockInfoChange
+    | NiaochaoTccompassMaterialCodeUpdate
     | NiaochaoTccompassWarehouseNetworkChange;
   /**
    * - {@link TaobaoAgRefundSignInfo AliGenius > 商家在AG的签收信息}
