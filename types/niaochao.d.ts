@@ -16,10 +16,6 @@ declare namespace Niaochao.Tccompass {
     city_id?: string;
     /** 城市名称 */
     city_name?: string;
-    /** 站点联系人 */
-    contacts_name?: string;
-    /** 联系电话 */
-    contacts_tel?: string;
     /** 站点商家编码 */
     merchant_code: string;
     /** 经纬度 */
