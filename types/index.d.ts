@@ -400,6 +400,8 @@ declare interface TaoTopicsDescriptor {
   idle_consignment_OrderSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleConsignmentOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleConsignmentiiOrderSyn 闲鱼回收商消息 > 闲鱼寄卖V2订单履约状态同步} */
   idle_consignmentii_OrderSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleConsignmentiiOrderSyn) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleRecycleOrderStateSyn 闲鱼回收商消息 > 闲鱼回收业务订单消息} */
+  idle_recycle_OrderStateSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleRecycleOrderStateSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleRecycleOrderSyn 闲鱼回收商消息 > 回收订单交易消息} */
   idle_recycle_OrderSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleRecycleOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleRecycleRefundStatusModify 闲鱼回收商消息 > 退款消息} */
@@ -1571,6 +1573,8 @@ declare interface TaoEventsListener {
   on(topic: 'idle_consignment_OrderSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleConsignmentOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleConsignmentiiOrderSyn 闲鱼回收商消息 > 闲鱼寄卖V2订单履约状态同步} */
   on(topic: 'idle_consignmentii_OrderSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleConsignmentiiOrderSyn) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleRecycleOrderStateSyn 闲鱼回收商消息 > 闲鱼回收业务订单消息} */
+  on(topic: 'idle_recycle_OrderStateSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleRecycleOrderStateSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleRecycleOrderSyn 闲鱼回收商消息 > 回收订单交易消息} */
   on(topic: 'idle_recycle_OrderSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleRecycleOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleRecycleRefundStatusModify 闲鱼回收商消息 > 退款消息} */

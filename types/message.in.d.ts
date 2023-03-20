@@ -361,6 +361,8 @@ declare namespace IncomingMessage {
   type IdleConsignmentOrderSyn = Message & { content?: MessageContent & { topic?: 'idle_consignment_OrderSyn', content?: string | Idle.Consignment.OrderSyn } };
   /** {@link Idle.Consignmentii.OrderSyn 闲鱼回收商消息 > 闲鱼寄卖V2订单履约状态同步} */
   type IdleConsignmentiiOrderSyn = Message & { content?: MessageContent & { topic?: 'idle_consignmentii_OrderSyn', content?: string | Idle.Consignmentii.OrderSyn } };
+  /** {@link Idle.Recycle.OrderStateSyn 闲鱼回收商消息 > 闲鱼回收业务订单消息} */
+  type IdleRecycleOrderStateSyn = Message & { content?: MessageContent & { topic?: 'idle_recycle_OrderStateSyn', content?: string | Idle.Recycle.OrderStateSyn } };
   /** {@link Idle.Recycle.OrderSyn 闲鱼回收商消息 > 回收订单交易消息} */
   type IdleRecycleOrderSyn = Message & { content?: MessageContent & { topic?: 'idle_recycle_OrderSyn', content?: string | Idle.Recycle.OrderSyn } };
   /** {@link Idle.Recycle.RefundStatusModify 闲鱼回收商消息 > 退款消息} */
@@ -1332,10 +1334,12 @@ declare namespace IncomingMessage {
    */
   type IdleConsignmentii = IdleConsignmentiiOrderSyn;
   /**
+   * - {@link IdleRecycleOrderStateSyn 闲鱼回收商消息 > 闲鱼回收业务订单消息}
    * - {@link IdleRecycleOrderSyn 闲鱼回收商消息 > 回收订单交易消息}
    * - {@link IdleRecycleRefundStatusModify 闲鱼回收商消息 > 退款消息}
    */
-  type IdleRecycle = IdleRecycleOrderSyn
+  type IdleRecycle = IdleRecycleOrderStateSyn
+    | IdleRecycleOrderSyn
     | IdleRecycleRefundStatusModify;
   /**
    * - {@link IdleTopisvGlobalProductNotice 闲鱼已验货 > 闲鱼开放平台-国际货品变更消息通知}

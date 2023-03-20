@@ -86,6 +86,16 @@ declare namespace Idle.Consignmentii {
 
 /** 闲鱼回收商消息 */
 declare namespace Idle.Recycle {
+  /** 闲鱼回收业务订单消息 */
+  interface OrderStateSyn {
+    /** 订单id */
+    biz_order_id: string;
+    /** 当前状态 */
+    order_status: string;
+    /** 回收场景 */
+    scene_type: string;
+  }
+
   /** 回收订单交易消息 */
   interface OrderSyn {
     /** 回收商appkey */
