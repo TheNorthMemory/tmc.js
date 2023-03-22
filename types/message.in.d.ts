@@ -91,6 +91,8 @@ declare namespace IncomingMessage {
   type AlibabaFuwuOrderPaid = Message & { content?: MessageContent & { topic?: 'alibaba_fuwu_OrderPaid', content?: string | Alibaba.Fuwu.OrderPaid } };
   /** {@link Alibaba.Happytrip.OrderNotify 欢行开放平台 > 欢行统一订单模型变更通知消息} */
   type AlibabaHappytripOrderNotify = Message & { content?: MessageContent & { topic?: 'alibaba_happytrip_OrderNotify', content?: string | Alibaba.Happytrip.OrderNotify } };
+  /** {@link Alibaba.Ifp.PackageCfcContainer 五道口配送 > 同城履约包裹状态变更消息} */
+  type AlibabaIfpPackageCfcContainer = Message & { content?: MessageContent & { topic?: 'alibaba_ifp_PackageCfcContainer', content?: string | Alibaba.Ifp.PackageCfcContainer } };
   /** {@link Alibaba.Invoice.Apply 电子发票 > 开票申请} */
   type AlibabaInvoiceApply = Message & { content?: MessageContent & { topic?: 'alibaba_invoice_Apply', content?: string | Alibaba.Invoice.Apply } };
   /** {@link Alibaba.Invoice.ApplyResult 电子发票 > 开票申请审核结果} */
@@ -967,6 +969,10 @@ declare namespace IncomingMessage {
    * - {@link AlibabaHappytripOrderNotify 欢行开放平台 > 欢行统一订单模型变更通知消息}
    */
   type AlibabaHappytrip = AlibabaHappytripOrderNotify;
+  /**
+   * - {@link AlibabaIfpPackageCfcContainer 五道口配送 > 同城履约包裹状态变更消息}
+   */
+  type AlibabaIfp = AlibabaIfpPackageCfcContainer;
   /**
    * - {@link AlibabaInvoiceApply 电子发票 > 开票申请}
    * - {@link AlibabaInvoiceApplyResult 电子发票 > 开票申请审核结果}
@@ -2016,6 +2022,7 @@ declare namespace IncomingMessage {
    * - {@link AlibabaEinvoice}
    * - {@link AlibabaFuwu}
    * - {@link AlibabaHappytrip}
+   * - {@link AlibabaIfp}
    * - {@link AlibabaInvoice}
    * - {@link AlibabaLst}
    * - {@link AlibabaMmc}
@@ -2043,6 +2050,7 @@ declare namespace IncomingMessage {
     | AlibabaEinvoice
     | AlibabaFuwu
     | AlibabaHappytrip
+    | AlibabaIfp
     | AlibabaInvoice
     | AlibabaLst
     | AlibabaMmc

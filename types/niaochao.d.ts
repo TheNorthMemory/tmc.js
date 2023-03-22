@@ -32,6 +32,8 @@ declare namespace Niaochao.Tccompass {
   interface MaterialCodeUpdate {
     /** 唯一 */
     biz_order_id: string;
+    /** 箱类型 NORMAL:周转箱 COLD:冷链箱 */
+    container_type: string;
     /** lock_status=0 有效 */
     lock_reasion: string;
     /** 1-可用 0-不可用（温控箱创建的时候，默认不可用） */

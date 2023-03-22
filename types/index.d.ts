@@ -130,6 +130,8 @@ declare interface TaoTopicsDescriptor {
   alibaba_fuwu_OrderPaid(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaFuwuOrderPaid) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaHappytripOrderNotify 欢行开放平台 > 欢行统一订单模型变更通知消息} */
   alibaba_happytrip_OrderNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHappytripOrderNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaIfpPackageCfcContainer 五道口配送 > 同城履约包裹状态变更消息} */
+  alibaba_ifp_PackageCfcContainer(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIfpPackageCfcContainer) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInvoiceApply 电子发票 > 开票申请} */
   alibaba_invoice_Apply(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaInvoiceApply) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInvoiceApplyResult 电子发票 > 开票申请审核结果} */
@@ -940,6 +942,8 @@ declare interface TaoTopicsDescriptor {
   alibaba_fuwu(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaFuwu) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaHappytrip} */
   alibaba_happytrip(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHappytrip) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaIfp} */
+  alibaba_ifp(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIfp) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInvoice} */
   alibaba_invoice(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaInvoice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaLst} */
@@ -1303,6 +1307,8 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_fuwu_OrderPaid', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaFuwuOrderPaid) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaHappytripOrderNotify 欢行开放平台 > 欢行统一订单模型变更通知消息} */
   on(topic: 'alibaba_happytrip_OrderNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHappytripOrderNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaIfpPackageCfcContainer 五道口配送 > 同城履约包裹状态变更消息} */
+  on(topic: 'alibaba_ifp_PackageCfcContainer', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIfpPackageCfcContainer) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInvoiceApply 电子发票 > 开票申请} */
   on(topic: 'alibaba_invoice_Apply', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaInvoiceApply) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInvoiceApplyResult 电子发票 > 开票申请审核结果} */
@@ -2113,6 +2119,8 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_fuwu', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaFuwu) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaHappytrip} */
   on(topic: 'alibaba_happytrip', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHappytrip) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaIfp} */
+  on(topic: 'alibaba_ifp', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIfp) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInvoice} */
   on(topic: 'alibaba_invoice', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaInvoice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaLst} */

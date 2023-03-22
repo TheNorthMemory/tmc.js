@@ -504,6 +504,23 @@ declare namespace Alibaba.Happytrip {
   }
 }
 
+/** 五道口配送 */
+declare namespace Alibaba.Ifp {
+  /** 同城履约包裹状态变更消息 */
+  interface PackageCfcContainer {
+    /** 履约单号 */
+    fulfillOrderId: string;
+    /** CFC_CONTAINER:CFC封箱 */
+    status: string;
+    /** 包裹令牌号 */
+    token: string;
+    /** 仓编码 */
+    warehouseCode: string;
+    /** 仓商户编码 */
+    workMerchantCode: string;
+  }
+}
+
 /** 电子发票 */
 declare namespace Alibaba.Invoice {
   /** 开票申请 */

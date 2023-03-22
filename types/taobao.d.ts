@@ -229,7 +229,7 @@ declare namespace Taobao.Content {
     out_product_id: string;
     /** 服务市场的产品子订单号 */
     sub_order_id: string;
-    /** 用户openUid */
+    /** 商家openUid */
     user_open_uid: string;
     /** 短视频模板ID */
     video_service_id: string;
