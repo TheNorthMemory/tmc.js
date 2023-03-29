@@ -161,6 +161,8 @@ declare namespace IncomingMessage {
   type AlibabaMosSaleOrder = Message & { content?: MessageContent & { topic?: 'alibaba_mos_SaleOrder', content?: string | Alibaba.Mos.SaleOrder } };
   /** {@link Alibaba.Mos.SaleOrderRefund 银泰开放平台消息 > 销售单退款消息} */
   type AlibabaMosSaleOrderRefund = Message & { content?: MessageContent & { topic?: 'alibaba_mos_SaleOrderRefund', content?: string | Alibaba.Mos.SaleOrderRefund } };
+  /** {@link Alibaba.Msfservice.AuditCreate 天猫服务 > 喵师傅审核单通知} */
+  type AlibabaMsfserviceAuditCreate = Message & { content?: MessageContent & { topic?: 'alibaba_msfservice_AuditCreate', content?: string | Alibaba.Msfservice.AuditCreate } };
   /** {@link Alibaba.Nazca.AbandonCert 网上法庭 > 作废存证消息接口} */
   type AlibabaNazcaAbandonCert = Message & { content?: MessageContent & { topic?: 'alibaba_nazca_AbandonCert', content?: string | Alibaba.Nazca.AbandonCert } };
   /** {@link Alibaba.Nazca.QueryChargeNum 网上法庭 > 查询收费数量} */
@@ -1051,6 +1053,10 @@ declare namespace IncomingMessage {
    */
   type AlibabaMos = AlibabaMosSaleOrder
     | AlibabaMosSaleOrderRefund;
+  /**
+   * - {@link AlibabaMsfserviceAuditCreate 天猫服务 > 喵师傅审核单通知}
+   */
+  type AlibabaMsfservice = AlibabaMsfserviceAuditCreate;
   /**
    * - {@link AlibabaNazcaAbandonCert 网上法庭 > 作废存证消息接口}
    * - {@link AlibabaNazcaQueryChargeNum 网上法庭 > 查询收费数量}
@@ -2028,6 +2034,7 @@ declare namespace IncomingMessage {
    * - {@link AlibabaMmc}
    * - {@link AlibabaMonitor}
    * - {@link AlibabaMos}
+   * - {@link AlibabaMsfservice}
    * - {@link AlibabaNazca}
    * - {@link AlibabaNlife}
    * - {@link AlibabaServiceplatform}
@@ -2056,6 +2063,7 @@ declare namespace IncomingMessage {
     | AlibabaMmc
     | AlibabaMonitor
     | AlibabaMos
+    | AlibabaMsfservice
     | AlibabaNazca
     | AlibabaNlife
     | AlibabaServiceplatform

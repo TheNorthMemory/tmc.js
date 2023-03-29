@@ -1088,6 +1088,45 @@ declare namespace Alibaba.Mos {
   }
 }
 
+/** 天猫服务 */
+declare namespace Alibaba.Msfservice {
+  /** 喵师傅审核单通知 */
+  interface AuditCreate {
+    /** 审核单id */
+    audit_id: number;
+    /** 下次联系时间（日期）（改约不确定时间） */
+    contact_time: string;
+    /** 下次联系时间（时间段）（改约不确定时间） */
+    contact_time_range: string;
+    /** 审批单创建时间 */
+    gmt_create: Date | number | string;
+    /** 核销单id */
+    identify_task_id: string;
+    /** 原始时间(日期) */
+    origin_time: string;
+    /** 原始时间（时间段） */
+    origin_time_range: string;
+    /** 改约原因 */
+    reason: string;
+    /** 改约原因编号 */
+    reason_code: number;
+    /** 交易单id */
+    trade_order_id: string;
+    /** 变更时间（日期）（改约确定时间） */
+    update_time: string;
+    /** 变更时间（时间段）（改约确定时间） */
+    update_time_range: string;
+    /** 工单id */
+    workcard_ids: string;
+    /** 师傅id */
+    worker_id: number;
+    /** 师傅手机号 */
+    worker_mobile: string;
+    /** 师傅名称 */
+    worker_name: string;
+  }
+}
+
 /** 网上法庭 */
 declare namespace Alibaba.Nazca {
   /** 作废存证消息接口 */
