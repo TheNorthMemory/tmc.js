@@ -35,7 +35,7 @@ declare namespace Niaochao.Tccompass {
     /** 箱类型 NORMAL:周转箱 COLD:冷链箱 */
     container_type: string;
     /** lock_status=0 有效 */
-    lock_reasion: string;
+    lock_reason: string;
     /** 1-可用 0-不可用（温控箱创建的时候，默认不可用） */
     lock_status: number;
     /** 箱号列表 */
