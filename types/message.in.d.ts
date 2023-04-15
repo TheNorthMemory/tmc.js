@@ -499,15 +499,17 @@ declare namespace IncomingMessage {
   type TaobaoFliggyStdHotelModify = Message & { content?: MessageContent & { topic?: 'taobao_fliggy_StdHotelModify', content?: string | Taobao.Fliggy.StdHotelModify } };
   /** {@link Taobao.Fliggy.StdRoomTypeModify 酒店签约中心消息 > 标准房型领域模型实体变更消息} */
   type TaobaoFliggyStdRoomTypeModify = Message & { content?: MessageContent & { topic?: 'taobao_fliggy_StdRoomTypeModify', content?: string | Taobao.Fliggy.StdRoomTypeModify } };
-  /** {@link Taobao.Fuwu.OrderClosed 服务市场 > 订单关闭消息} */
+  /** {@link Taobao.Fuwu.FundsChange 淘宝交易 > 以旧换新资金变更通知消息} */
+  type TaobaoFuwuFundsChange = Message & { content?: MessageContent & { topic?: 'taobao_fuwu_FundsChange', content?: string | Taobao.Fuwu.FundsChange } };
+  /** {@link Taobao.Fuwu.OrderClosed 淘宝交易 > 订单关闭消息} */
   type TaobaoFuwuOrderClosed = Message & { content?: MessageContent & { topic?: 'taobao_fuwu_OrderClosed', content?: string | Taobao.Fuwu.OrderClosed } };
-  /** {@link Taobao.Fuwu.OrderCreated 服务市场 > 订单创建消息} */
+  /** {@link Taobao.Fuwu.OrderCreated 淘宝交易 > 订单创建消息} */
   type TaobaoFuwuOrderCreated = Message & { content?: MessageContent & { topic?: 'taobao_fuwu_OrderCreated', content?: string | Taobao.Fuwu.OrderCreated } };
-  /** {@link Taobao.Fuwu.OrderPaid 服务市场 > 订单支付消息} */
+  /** {@link Taobao.Fuwu.OrderPaid 淘宝交易 > 订单支付消息} */
   type TaobaoFuwuOrderPaid = Message & { content?: MessageContent & { topic?: 'taobao_fuwu_OrderPaid', content?: string | Taobao.Fuwu.OrderPaid } };
-  /** {@link Taobao.Fuwu.ServiceOpen 服务市场 > 服务开通消息} */
+  /** {@link Taobao.Fuwu.ServiceOpen 淘宝交易 > 服务开通消息} */
   type TaobaoFuwuServiceOpen = Message & { content?: MessageContent & { topic?: 'taobao_fuwu_ServiceOpen', content?: string | Taobao.Fuwu.ServiceOpen } };
-  /** {@link Taobao.Fuwu.WitkeySyncModeling 服务市场 > 威客同步建模数据} */
+  /** {@link Taobao.Fuwu.WitkeySyncModeling 淘宝交易 > 威客同步建模数据} */
   type TaobaoFuwuWitkeySyncModeling = Message & { content?: MessageContent & { topic?: 'taobao_fuwu_WitkeySyncModeling', content?: string | Taobao.Fuwu.WitkeySyncModeling } };
   /** {@link Taobao.Globalbuys.SeamailOrderNotify 全球购跨境物流 > 跨境服务平台推送物流订单消息} */
   type TaobaoGlobalbuysSeamailOrderNotify = Message & { content?: MessageContent & { topic?: 'taobao_globalbuys_SeamailOrderNotify', content?: string | Taobao.Globalbuys.SeamailOrderNotify } };
@@ -1522,13 +1524,15 @@ declare namespace IncomingMessage {
     | TaobaoFliggyStdHotelModify
     | TaobaoFliggyStdRoomTypeModify;
   /**
-   * - {@link TaobaoFuwuOrderClosed 服务市场 > 订单关闭消息}
-   * - {@link TaobaoFuwuOrderCreated 服务市场 > 订单创建消息}
-   * - {@link TaobaoFuwuOrderPaid 服务市场 > 订单支付消息}
-   * - {@link TaobaoFuwuServiceOpen 服务市场 > 服务开通消息}
-   * - {@link TaobaoFuwuWitkeySyncModeling 服务市场 > 威客同步建模数据}
+   * - {@link TaobaoFuwuFundsChange 淘宝交易 > 以旧换新资金变更通知消息}
+   * - {@link TaobaoFuwuOrderClosed 淘宝交易 > 订单关闭消息}
+   * - {@link TaobaoFuwuOrderCreated 淘宝交易 > 订单创建消息}
+   * - {@link TaobaoFuwuOrderPaid 淘宝交易 > 订单支付消息}
+   * - {@link TaobaoFuwuServiceOpen 淘宝交易 > 服务开通消息}
+   * - {@link TaobaoFuwuWitkeySyncModeling 淘宝交易 > 威客同步建模数据}
    */
-  type TaobaoFuwu = TaobaoFuwuOrderClosed
+  type TaobaoFuwu = TaobaoFuwuFundsChange
+    | TaobaoFuwuOrderClosed
     | TaobaoFuwuOrderCreated
     | TaobaoFuwuOrderPaid
     | TaobaoFuwuServiceOpen

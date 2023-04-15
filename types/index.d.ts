@@ -538,15 +538,17 @@ declare interface TaoTopicsDescriptor {
   taobao_fliggy_StdHotelModify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFliggyStdHotelModify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFliggyStdRoomTypeModify 酒店签约中心消息 > 标准房型领域模型实体变更消息} */
   taobao_fliggy_StdRoomTypeModify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFliggyStdRoomTypeModify) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TaobaoFuwuOrderClosed 服务市场 > 订单关闭消息} */
+  /** {@link IncomingMessage.TaobaoFuwuFundsChange 淘宝交易 > 以旧换新资金变更通知消息} */
+  taobao_fuwu_FundsChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFuwuFundsChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoFuwuOrderClosed 淘宝交易 > 订单关闭消息} */
   taobao_fuwu_OrderClosed(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFuwuOrderClosed) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TaobaoFuwuOrderCreated 服务市场 > 订单创建消息} */
+  /** {@link IncomingMessage.TaobaoFuwuOrderCreated 淘宝交易 > 订单创建消息} */
   taobao_fuwu_OrderCreated(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFuwuOrderCreated) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TaobaoFuwuOrderPaid 服务市场 > 订单支付消息} */
+  /** {@link IncomingMessage.TaobaoFuwuOrderPaid 淘宝交易 > 订单支付消息} */
   taobao_fuwu_OrderPaid(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFuwuOrderPaid) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TaobaoFuwuServiceOpen 服务市场 > 服务开通消息} */
+  /** {@link IncomingMessage.TaobaoFuwuServiceOpen 淘宝交易 > 服务开通消息} */
   taobao_fuwu_ServiceOpen(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFuwuServiceOpen) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TaobaoFuwuWitkeySyncModeling 服务市场 > 威客同步建模数据} */
+  /** {@link IncomingMessage.TaobaoFuwuWitkeySyncModeling 淘宝交易 > 威客同步建模数据} */
   taobao_fuwu_WitkeySyncModeling(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFuwuWitkeySyncModeling) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoGlobalbuysSeamailOrderNotify 全球购跨境物流 > 跨境服务平台推送物流订单消息} */
   taobao_globalbuys_SeamailOrderNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoGlobalbuysSeamailOrderNotify) => void): TaoMessageConsumer;
@@ -1719,15 +1721,17 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_fliggy_StdHotelModify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFliggyStdHotelModify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFliggyStdRoomTypeModify 酒店签约中心消息 > 标准房型领域模型实体变更消息} */
   on(topic: 'taobao_fliggy_StdRoomTypeModify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFliggyStdRoomTypeModify) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TaobaoFuwuOrderClosed 服务市场 > 订单关闭消息} */
+  /** {@link IncomingMessage.TaobaoFuwuFundsChange 淘宝交易 > 以旧换新资金变更通知消息} */
+  on(topic: 'taobao_fuwu_FundsChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFuwuFundsChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoFuwuOrderClosed 淘宝交易 > 订单关闭消息} */
   on(topic: 'taobao_fuwu_OrderClosed', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFuwuOrderClosed) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TaobaoFuwuOrderCreated 服务市场 > 订单创建消息} */
+  /** {@link IncomingMessage.TaobaoFuwuOrderCreated 淘宝交易 > 订单创建消息} */
   on(topic: 'taobao_fuwu_OrderCreated', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFuwuOrderCreated) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TaobaoFuwuOrderPaid 服务市场 > 订单支付消息} */
+  /** {@link IncomingMessage.TaobaoFuwuOrderPaid 淘宝交易 > 订单支付消息} */
   on(topic: 'taobao_fuwu_OrderPaid', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFuwuOrderPaid) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TaobaoFuwuServiceOpen 服务市场 > 服务开通消息} */
+  /** {@link IncomingMessage.TaobaoFuwuServiceOpen 淘宝交易 > 服务开通消息} */
   on(topic: 'taobao_fuwu_ServiceOpen', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFuwuServiceOpen) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TaobaoFuwuWitkeySyncModeling 服务市场 > 威客同步建模数据} */
+  /** {@link IncomingMessage.TaobaoFuwuWitkeySyncModeling 淘宝交易 > 威客同步建模数据} */
   on(topic: 'taobao_fuwu_WitkeySyncModeling', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFuwuWitkeySyncModeling) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoGlobalbuysSeamailOrderNotify 全球购跨境物流 > 跨境服务平台推送物流订单消息} */
   on(topic: 'taobao_globalbuys_SeamailOrderNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoGlobalbuysSeamailOrderNotify) => void): TaoMessageConsumer;

@@ -645,8 +645,16 @@ declare namespace Taobao.Fliggy {
   }
 }
 
-/** 服务市场 */
+/** 淘宝交易 */
 declare namespace Taobao.Fuwu {
+  /** 以旧换新资金变更通知消息 */
+  interface FundsChange {
+    /** 新机单ID */
+    new_order_id?: string;
+    /** 回收单ID */
+    old_order_id: string;
+  }
+
   /** 订单关闭消息 */
   interface OrderClosed {
     /** 活动代码，从合作伙伴后台（i.fuwu.taobao.com）-收费管理-营销活动列表 能够获得该活动的代码 */
