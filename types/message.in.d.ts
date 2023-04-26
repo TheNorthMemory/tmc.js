@@ -807,8 +807,12 @@ declare namespace IncomingMessage {
   type TmallFuwuAnomalyRecourse = Message & { content?: MessageContent & { topic?: 'tmall_fuwu_AnomalyRecourse', content?: string | Tmall.Fuwu.AnomalyRecourse } };
   /** {@link Tmall.Fuwu.AnomalyRecourseStatusUpdate 天猫服务 > 一键求助状态变更消息} */
   type TmallFuwuAnomalyRecourseStatusUpdate = Message & { content?: MessageContent & { topic?: 'tmall_fuwu_AnomalyRecourseStatusUpdate', content?: string | Tmall.Fuwu.AnomalyRecourseStatusUpdate } };
+  /** {@link Tmall.Fuwu.ElectricMaintenanceWorkCardComplete 天猫服务 > 天猫服务消电维修工单完结消息} */
+  type TmallFuwuElectricMaintenanceWorkCardComplete = Message & { content?: MessageContent & { topic?: 'tmall_fuwu_ElectricMaintenanceWorkCardComplete', content?: string | Tmall.Fuwu.ElectricMaintenanceWorkCardComplete } };
   /** {@link Tmall.Fuwu.LogisticsInfoMessage 天猫服务 > 服务供应链物流业务消息} */
   type TmallFuwuLogisticsInfoMessage = Message & { content?: MessageContent & { topic?: 'tmall_fuwu_LogisticsInfoMessage', content?: string | Tmall.Fuwu.LogisticsInfoMessage } };
+  /** {@link Tmall.Fuwu.RateMessageTP 天猫服务 > 消费者评价成功top消息} */
+  type TmallFuwuRateMessageTP = Message & { content?: MessageContent & { topic?: 'tmall_fuwu_RateMessageTP', content?: string | Tmall.Fuwu.RateMessageTP } };
   /** {@link Tmall.Fuwu.ServiceItemUpdate 天猫服务 > 服务商品信息变更消息} */
   type TmallFuwuServiceItemUpdate = Message & { content?: MessageContent & { topic?: 'tmall_fuwu_ServiceItemUpdate', content?: string | Tmall.Fuwu.ServiceItemUpdate } };
   /** {@link Tmall.Fuwu.ServiceMonitorMessage 天猫服务 > 服务预警消息} */
@@ -1904,7 +1908,9 @@ declare namespace IncomingMessage {
   /**
    * - {@link TmallFuwuAnomalyRecourse 天猫服务 > 天猫服务平台一键求助单消息队列}
    * - {@link TmallFuwuAnomalyRecourseStatusUpdate 天猫服务 > 一键求助状态变更消息}
+   * - {@link TmallFuwuElectricMaintenanceWorkCardComplete 天猫服务 > 天猫服务消电维修工单完结消息}
    * - {@link TmallFuwuLogisticsInfoMessage 天猫服务 > 服务供应链物流业务消息}
+   * - {@link TmallFuwuRateMessageTP 天猫服务 > 消费者评价成功top消息}
    * - {@link TmallFuwuServiceItemUpdate 天猫服务 > 服务商品信息变更消息}
    * - {@link TmallFuwuServiceMonitorMessage 天猫服务 > 服务预警消息}
    * - {@link TmallFuwuServiceStoreRegister 天猫服务 > 服务网点注册消息}
@@ -1916,7 +1922,9 @@ declare namespace IncomingMessage {
    */
   type TmallFuwu = TmallFuwuAnomalyRecourse
     | TmallFuwuAnomalyRecourseStatusUpdate
+    | TmallFuwuElectricMaintenanceWorkCardComplete
     | TmallFuwuLogisticsInfoMessage
+    | TmallFuwuRateMessageTP
     | TmallFuwuServiceItemUpdate
     | TmallFuwuServiceMonitorMessage
     | TmallFuwuServiceStoreRegister

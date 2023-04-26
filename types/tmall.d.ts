@@ -100,6 +100,12 @@ declare namespace Tmall.Fuwu {
     status: number;
   }
 
+  /** 天猫服务消电维修工单完结消息 */
+  interface ElectricMaintenanceWorkCardComplete {
+    /** 工单号 */
+    workcard_id: string;
+  }
+
   /** 服务供应链物流业务消息 */
   interface LogisticsInfoMessage {
     /** 物流创建 ：create 物流取消 ：cancel 分派小件员：assign 已经分派小件员: assigned 包裹上门揽收: pickup_door 包裹已揽收完成: pickup_finished 包裹派送中: dispatching 包裹已签收: signed */
@@ -110,6 +116,18 @@ declare namespace Tmall.Fuwu {
     new_logistics?: boolean;
     /** 消费者-->门店（工厂）:STAGE1 门店（工厂）--> 消费者:STAGE2 */
     stage_type: string;
+  }
+
+  /** 消费者评价成功top消息 */
+  interface RateMessageTP {
+    /** 单据类型 */
+    order_type: number;
+    /** 评价id */
+    rate_id: number;
+    /** 评价星级 */
+    rate_value: number;
+    /** 单据id */
+    work_order_id: number;
   }
 
   /** 服务商品信息变更消息 */

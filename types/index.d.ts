@@ -846,8 +846,12 @@ declare interface TaoTopicsDescriptor {
   tmall_fuwu_AnomalyRecourse(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuAnomalyRecourse) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuAnomalyRecourseStatusUpdate 天猫服务 > 一键求助状态变更消息} */
   tmall_fuwu_AnomalyRecourseStatusUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuAnomalyRecourseStatusUpdate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallFuwuElectricMaintenanceWorkCardComplete 天猫服务 > 天猫服务消电维修工单完结消息} */
+  tmall_fuwu_ElectricMaintenanceWorkCardComplete(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuElectricMaintenanceWorkCardComplete) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuLogisticsInfoMessage 天猫服务 > 服务供应链物流业务消息} */
   tmall_fuwu_LogisticsInfoMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuLogisticsInfoMessage) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallFuwuRateMessageTP 天猫服务 > 消费者评价成功top消息} */
+  tmall_fuwu_RateMessageTP(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuRateMessageTP) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuServiceItemUpdate 天猫服务 > 服务商品信息变更消息} */
   tmall_fuwu_ServiceItemUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuServiceItemUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuServiceMonitorMessage 天猫服务 > 服务预警消息} */
@@ -2029,8 +2033,12 @@ declare interface TaoEventsListener {
   on(topic: 'tmall_fuwu_AnomalyRecourse', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuAnomalyRecourse) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuAnomalyRecourseStatusUpdate 天猫服务 > 一键求助状态变更消息} */
   on(topic: 'tmall_fuwu_AnomalyRecourseStatusUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuAnomalyRecourseStatusUpdate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallFuwuElectricMaintenanceWorkCardComplete 天猫服务 > 天猫服务消电维修工单完结消息} */
+  on(topic: 'tmall_fuwu_ElectricMaintenanceWorkCardComplete', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuElectricMaintenanceWorkCardComplete) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuLogisticsInfoMessage 天猫服务 > 服务供应链物流业务消息} */
   on(topic: 'tmall_fuwu_LogisticsInfoMessage', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuLogisticsInfoMessage) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallFuwuRateMessageTP 天猫服务 > 消费者评价成功top消息} */
+  on(topic: 'tmall_fuwu_RateMessageTP', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuRateMessageTP) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuServiceItemUpdate 天猫服务 > 服务商品信息变更消息} */
   on(topic: 'tmall_fuwu_ServiceItemUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuServiceItemUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuServiceMonitorMessage 天猫服务 > 服务预警消息} */
