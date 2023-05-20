@@ -439,6 +439,8 @@ declare namespace IncomingMessage {
   type TaobaoDpaasEquipmentCreate = Message & { content?: MessageContent & { topic?: 'taobao_dpaas_EquipmentCreate', content?: string | Taobao.Dpaas.EquipmentCreate } };
   /** {@link Taobao.Dpaas.FaceToCustomerAck DPAAS > 会员标示消息推送} */
   type TaobaoDpaasFaceToCustomerAck = Message & { content?: MessageContent & { topic?: 'taobao_dpaas_FaceToCustomerAck', content?: string | Taobao.Dpaas.FaceToCustomerAck } };
+  /** {@link Taobao.Dv.External 阿里通信 > 淘宝数字虚拟外放} */
+  type TaobaoDvExternal = Message & { content?: MessageContent & { topic?: 'taobao_dv_External', content?: string | Taobao.Dv.External } };
   /** {@link Taobao.Einvoice.BuyerConfirmSend 电子发票 > 买家确认发送到报销系统} */
   type TaobaoEinvoiceBuyerConfirmSend = Message & { content?: MessageContent & { topic?: 'taobao_einvoice_BuyerConfirmSend', content?: string | Taobao.Einvoice.BuyerConfirmSend } };
   /** {@link Taobao.Einvoice.InvoiceResultReturn 电子发票 > 电子发票开票回流} */
@@ -1462,6 +1464,10 @@ declare namespace IncomingMessage {
     | TaobaoDpaasEquipmentCreate
     | TaobaoDpaasFaceToCustomerAck;
   /**
+   * - {@link TaobaoDvExternal 阿里通信 > 淘宝数字虚拟外放}
+   */
+  type TaobaoDv = TaobaoDvExternal;
+  /**
    * - {@link TaobaoEinvoiceBuyerConfirmSend 电子发票 > 买家确认发送到报销系统}
    * - {@link TaobaoEinvoiceInvoiceResultReturn 电子发票 > 电子发票开票回流}
    */
@@ -2206,6 +2212,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoDd}
    * - {@link TaobaoDiandian}
    * - {@link TaobaoDpaas}
+   * - {@link TaobaoDv}
    * - {@link TaobaoEinvoice}
    * - {@link TaobaoFenxiao}
    * - {@link TaobaoFliggy}
@@ -2255,6 +2262,7 @@ declare namespace IncomingMessage {
     | TaobaoDd
     | TaobaoDiandian
     | TaobaoDpaas
+    | TaobaoDv
     | TaobaoEinvoice
     | TaobaoFenxiao
     | TaobaoFliggy

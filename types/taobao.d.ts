@@ -382,6 +382,17 @@ declare namespace Taobao.Dpaas {
   }
 }
 
+/** 阿里通信 */
+declare namespace Taobao.Dv {
+  /** 淘宝数字虚拟外放 */
+  interface External {
+    /** 外部订单号 */
+    out_order_id: string;
+    /** 0:进行中，1:成功，2:失败，9:不存在 */
+    status: string;
+  }
+}
+
 /** 电子发票 */
 declare namespace Taobao.Einvoice {
   /** 买家确认发送到报销系统 */

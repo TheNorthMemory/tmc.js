@@ -478,6 +478,8 @@ declare interface TaoTopicsDescriptor {
   taobao_dpaas_EquipmentCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDpaasEquipmentCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDpaasFaceToCustomerAck DPAAS > 会员标示消息推送} */
   taobao_dpaas_FaceToCustomerAck(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDpaasFaceToCustomerAck) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDvExternal 阿里通信 > 淘宝数字虚拟外放} */
+  taobao_dv_External(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDvExternal) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoEinvoiceBuyerConfirmSend 电子发票 > 买家确认发送到报销系统} */
   taobao_einvoice_BuyerConfirmSend(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoEinvoiceBuyerConfirmSend) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoEinvoiceInvoiceResultReturn 电子发票 > 电子发票开票回流} */
@@ -1086,6 +1088,8 @@ declare interface TaoTopicsDescriptor {
   taobao_diandian(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDiandian) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDpaas} */
   taobao_dpaas(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDpaas) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDv} */
+  taobao_dv(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDv) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoEinvoice} */
   taobao_einvoice(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoEinvoice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFenxiao} */
@@ -1665,6 +1669,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_dpaas_EquipmentCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDpaasEquipmentCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDpaasFaceToCustomerAck DPAAS > 会员标示消息推送} */
   on(topic: 'taobao_dpaas_FaceToCustomerAck', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDpaasFaceToCustomerAck) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDvExternal 阿里通信 > 淘宝数字虚拟外放} */
+  on(topic: 'taobao_dv_External', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDvExternal) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoEinvoiceBuyerConfirmSend 电子发票 > 买家确认发送到报销系统} */
   on(topic: 'taobao_einvoice_BuyerConfirmSend', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoEinvoiceBuyerConfirmSend) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoEinvoiceInvoiceResultReturn 电子发票 > 电子发票开票回流} */
@@ -2273,6 +2279,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_diandian', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDiandian) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDpaas} */
   on(topic: 'taobao_dpaas', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDpaas) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDv} */
+  on(topic: 'taobao_dv', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDv) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoEinvoice} */
   on(topic: 'taobao_einvoice', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoEinvoice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFenxiao} */
