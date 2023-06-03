@@ -72,6 +72,26 @@ declare namespace Taobao.Aps {
 
 /** 阿信消息通知前台类目 */
 declare namespace Taobao.Axin {
+  /** 新增行政区划结果通知 */
+  interface DivisionApplyResult {
+    /** 行政区划编号 */
+    divisionId: string;
+    /** 行政区划外部编号（供应商侧编号） */
+    divisionOuterId: string;
+    /** 新增结果 */
+    result: string;
+  }
+
+  /** 新增POI结果通知 */
+  interface PoiApplyResult {
+    /** POI编号 */
+    poiId: string;
+    /** POI外部编号（供应商侧编号） */
+    poiOuterId: string;
+    /** 新增结果 */
+    result: string;
+  }
+
   /** 阿信退款回调消息 */
   interface RefundCallBack {
     /** 外部订单号 */
@@ -653,6 +673,25 @@ declare namespace Taobao.Fliggy {
     shid: number;
     /** srid */
     srid: number;
+  }
+}
+
+/** 阿信消息通知前台类目 */
+declare namespace Taobao.Fsc {
+  /** 线路订单状态变更通知 */
+  interface RouteOrderStatusChange {
+    /** 阿信订单id */
+    orderId: string;
+    /** 1-已下单 2-已确认 3-已退团 4-已取消 5-拒绝确认，驳回 14-交易成功 */
+    orderStatus: string;
+    /** 外部团id	String */
+    outProjectId: string;
+    /** 付款状态1-未付款 2-已付定金3-已付款（代表全部付款完成） 4-已结算完成 5-已关闭 */
+    payStatus: string;
+    /** 供应商id */
+    supplierId: string;
+    /** 供应商订单号id */
+    supplierOrderId: string;
   }
 }
 

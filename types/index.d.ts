@@ -370,6 +370,8 @@ declare interface TaoTopicsDescriptor {
   damai_distribution_PreSaleToNow(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionPreSaleToNow) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionProjectStatus 大麦第三方票务供应商接入 > 项目状态推送} */
   damai_distribution_ProjectStatus(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionProjectStatus) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.DamaiDistributionRefundOrder 大麦第三方票务供应商接入 > 退票通知} */
+  damai_distribution_RefundOrder(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionRefundOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionTicketItemStatus 大麦第三方票务供应商接入 > 票品状态变更} */
   damai_distribution_TicketItemStatus(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionTicketItemStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiTradeTicketStatusPush 大麦票单状态 > 大麦票单状态推送} */
@@ -438,6 +440,10 @@ declare interface TaoTopicsDescriptor {
   taobao_aps_CommentAdd(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoApsCommentAdd) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoApsNewFeedback 平台消息 > 收到舆情} */
   taobao_aps_NewFeedback(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoApsNewFeedback) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoAxinDivisionApplyResult 阿信消息通知前台类目 > 新增行政区划结果通知} */
+  taobao_axin_DivisionApplyResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAxinDivisionApplyResult) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoAxinPoiApplyResult 阿信消息通知前台类目 > 新增POI结果通知} */
+  taobao_axin_PoiApplyResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAxinPoiApplyResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAxinRefundCallBack 阿信消息通知前台类目 > 阿信退款回调消息} */
   taobao_axin_RefundCallBack(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAxinRefundCallBack) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoBaichuanASODeviceActivate 百川 > 设备APP激活} */
@@ -540,6 +546,8 @@ declare interface TaoTopicsDescriptor {
   taobao_fliggy_StdHotelModify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFliggyStdHotelModify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFliggyStdRoomTypeModify 酒店签约中心消息 > 标准房型领域模型实体变更消息} */
   taobao_fliggy_StdRoomTypeModify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFliggyStdRoomTypeModify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoFscRouteOrderStatusChange 阿信消息通知前台类目 > 线路订单状态变更通知} */
+  taobao_fsc_RouteOrderStatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFscRouteOrderStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFuwuFundsChange 淘宝交易 > 以旧换新资金变更通知消息} */
   taobao_fuwu_FundsChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFuwuFundsChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFuwuOrderClosed 淘宝交易 > 订单关闭消息} */
@@ -1096,6 +1104,8 @@ declare interface TaoTopicsDescriptor {
   taobao_fenxiao(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFenxiao) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFliggy} */
   taobao_fliggy(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFliggy) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoFsc} */
+  taobao_fsc(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFsc) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFuwu} */
   taobao_fuwu(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFuwu) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoGlobalbuys} */
@@ -1561,6 +1571,8 @@ declare interface TaoEventsListener {
   on(topic: 'damai_distribution_PreSaleToNow', listener: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionPreSaleToNow) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionProjectStatus 大麦第三方票务供应商接入 > 项目状态推送} */
   on(topic: 'damai_distribution_ProjectStatus', listener: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionProjectStatus) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.DamaiDistributionRefundOrder 大麦第三方票务供应商接入 > 退票通知} */
+  on(topic: 'damai_distribution_RefundOrder', listener: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionRefundOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionTicketItemStatus 大麦第三方票务供应商接入 > 票品状态变更} */
   on(topic: 'damai_distribution_TicketItemStatus', listener: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionTicketItemStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiTradeTicketStatusPush 大麦票单状态 > 大麦票单状态推送} */
@@ -1629,6 +1641,10 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_aps_CommentAdd', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoApsCommentAdd) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoApsNewFeedback 平台消息 > 收到舆情} */
   on(topic: 'taobao_aps_NewFeedback', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoApsNewFeedback) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoAxinDivisionApplyResult 阿信消息通知前台类目 > 新增行政区划结果通知} */
+  on(topic: 'taobao_axin_DivisionApplyResult', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAxinDivisionApplyResult) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoAxinPoiApplyResult 阿信消息通知前台类目 > 新增POI结果通知} */
+  on(topic: 'taobao_axin_PoiApplyResult', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAxinPoiApplyResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAxinRefundCallBack 阿信消息通知前台类目 > 阿信退款回调消息} */
   on(topic: 'taobao_axin_RefundCallBack', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAxinRefundCallBack) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoBaichuanASODeviceActivate 百川 > 设备APP激活} */
@@ -1731,6 +1747,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_fliggy_StdHotelModify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFliggyStdHotelModify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFliggyStdRoomTypeModify 酒店签约中心消息 > 标准房型领域模型实体变更消息} */
   on(topic: 'taobao_fliggy_StdRoomTypeModify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFliggyStdRoomTypeModify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoFscRouteOrderStatusChange 阿信消息通知前台类目 > 线路订单状态变更通知} */
+  on(topic: 'taobao_fsc_RouteOrderStatusChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFscRouteOrderStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFuwuFundsChange 淘宝交易 > 以旧换新资金变更通知消息} */
   on(topic: 'taobao_fuwu_FundsChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFuwuFundsChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFuwuOrderClosed 淘宝交易 > 订单关闭消息} */
@@ -2287,6 +2305,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_fenxiao', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFenxiao) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFliggy} */
   on(topic: 'taobao_fliggy', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFliggy) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoFsc} */
+  on(topic: 'taobao_fsc', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFsc) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFuwu} */
   on(topic: 'taobao_fuwu', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFuwu) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoGlobalbuys} */

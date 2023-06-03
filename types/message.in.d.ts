@@ -331,6 +331,8 @@ declare namespace IncomingMessage {
   type DamaiDistributionPreSaleToNow = Message & { content?: MessageContent & { topic?: 'damai_distribution_PreSaleToNow', content?: string | Damai.Distribution.PreSaleToNow } };
   /** {@link Damai.Distribution.ProjectStatus 大麦第三方票务供应商接入 > 项目状态推送} */
   type DamaiDistributionProjectStatus = Message & { content?: MessageContent & { topic?: 'damai_distribution_ProjectStatus', content?: string | Damai.Distribution.ProjectStatus } };
+  /** {@link Damai.Distribution.RefundOrder 大麦第三方票务供应商接入 > 退票通知} */
+  type DamaiDistributionRefundOrder = Message & { content?: MessageContent & { topic?: 'damai_distribution_RefundOrder', content?: string | Damai.Distribution.RefundOrder } };
   /** {@link Damai.Distribution.TicketItemStatus 大麦第三方票务供应商接入 > 票品状态变更} */
   type DamaiDistributionTicketItemStatus = Message & { content?: MessageContent & { topic?: 'damai_distribution_TicketItemStatus', content?: string | Damai.Distribution.TicketItemStatus } };
   /** {@link Damai.Trade.TicketStatusPush 大麦票单状态 > 大麦票单状态推送} */
@@ -399,6 +401,10 @@ declare namespace IncomingMessage {
   type TaobaoApsCommentAdd = Message & { content?: MessageContent & { topic?: 'taobao_aps_CommentAdd', content?: string | Taobao.Aps.CommentAdd } };
   /** {@link Taobao.Aps.NewFeedback 平台消息 > 收到舆情} */
   type TaobaoApsNewFeedback = Message & { content?: MessageContent & { topic?: 'taobao_aps_NewFeedback', content?: string | Taobao.Aps.NewFeedback } };
+  /** {@link Taobao.Axin.DivisionApplyResult 阿信消息通知前台类目 > 新增行政区划结果通知} */
+  type TaobaoAxinDivisionApplyResult = Message & { content?: MessageContent & { topic?: 'taobao_axin_DivisionApplyResult', content?: string | Taobao.Axin.DivisionApplyResult } };
+  /** {@link Taobao.Axin.PoiApplyResult 阿信消息通知前台类目 > 新增POI结果通知} */
+  type TaobaoAxinPoiApplyResult = Message & { content?: MessageContent & { topic?: 'taobao_axin_PoiApplyResult', content?: string | Taobao.Axin.PoiApplyResult } };
   /** {@link Taobao.Axin.RefundCallBack 阿信消息通知前台类目 > 阿信退款回调消息} */
   type TaobaoAxinRefundCallBack = Message & { content?: MessageContent & { topic?: 'taobao_axin_RefundCallBack', content?: string | Taobao.Axin.RefundCallBack } };
   /** {@link Taobao.Baichuan.ASODeviceActivate 百川 > 设备APP激活} */
@@ -501,6 +507,8 @@ declare namespace IncomingMessage {
   type TaobaoFliggyStdHotelModify = Message & { content?: MessageContent & { topic?: 'taobao_fliggy_StdHotelModify', content?: string | Taobao.Fliggy.StdHotelModify } };
   /** {@link Taobao.Fliggy.StdRoomTypeModify 酒店签约中心消息 > 标准房型领域模型实体变更消息} */
   type TaobaoFliggyStdRoomTypeModify = Message & { content?: MessageContent & { topic?: 'taobao_fliggy_StdRoomTypeModify', content?: string | Taobao.Fliggy.StdRoomTypeModify } };
+  /** {@link Taobao.Fsc.RouteOrderStatusChange 阿信消息通知前台类目 > 线路订单状态变更通知} */
+  type TaobaoFscRouteOrderStatusChange = Message & { content?: MessageContent & { topic?: 'taobao_fsc_RouteOrderStatusChange', content?: string | Taobao.Fsc.RouteOrderStatusChange } };
   /** {@link Taobao.Fuwu.FundsChange 淘宝交易 > 以旧换新资金变更通知消息} */
   type TaobaoFuwuFundsChange = Message & { content?: MessageContent & { topic?: 'taobao_fuwu_FundsChange', content?: string | Taobao.Fuwu.FundsChange } };
   /** {@link Taobao.Fuwu.OrderClosed 淘宝交易 > 订单关闭消息} */
@@ -1294,12 +1302,14 @@ declare namespace IncomingMessage {
    * - {@link DamaiDistributionPerformStatus 大麦第三方票务供应商接入 > 场次状态变更推送}
    * - {@link DamaiDistributionPreSaleToNow 大麦第三方票务供应商接入 > 预售改开票}
    * - {@link DamaiDistributionProjectStatus 大麦第三方票务供应商接入 > 项目状态推送}
+   * - {@link DamaiDistributionRefundOrder 大麦第三方票务供应商接入 > 退票通知}
    * - {@link DamaiDistributionTicketItemStatus 大麦第三方票务供应商接入 > 票品状态变更}
    */
   type DamaiDistribution = DamaiDistributionPerformCancel
     | DamaiDistributionPerformStatus
     | DamaiDistributionPreSaleToNow
     | DamaiDistributionProjectStatus
+    | DamaiDistributionRefundOrder
     | DamaiDistributionTicketItemStatus;
   /**
    * - {@link DamaiTradeTicketStatusPush 大麦票单状态 > 大麦票单状态推送}
@@ -1404,9 +1414,13 @@ declare namespace IncomingMessage {
   type TaobaoAps = TaobaoApsCommentAdd
     | TaobaoApsNewFeedback;
   /**
+   * - {@link TaobaoAxinDivisionApplyResult 阿信消息通知前台类目 > 新增行政区划结果通知}
+   * - {@link TaobaoAxinPoiApplyResult 阿信消息通知前台类目 > 新增POI结果通知}
    * - {@link TaobaoAxinRefundCallBack 阿信消息通知前台类目 > 阿信退款回调消息}
    */
-  type TaobaoAxin = TaobaoAxinRefundCallBack;
+  type TaobaoAxin = TaobaoAxinDivisionApplyResult
+    | TaobaoAxinPoiApplyResult
+    | TaobaoAxinRefundCallBack;
   /**
    * - {@link TaobaoBaichuanASODeviceActivate 百川 > 设备APP激活}
    * - {@link TaobaoBaichuanPasswordRuleChange 百川 > 口令规则变化消息}
@@ -1533,6 +1547,10 @@ declare namespace IncomingMessage {
     | TaobaoFliggySignStatus
     | TaobaoFliggyStdHotelModify
     | TaobaoFliggyStdRoomTypeModify;
+  /**
+   * - {@link TaobaoFscRouteOrderStatusChange 阿信消息通知前台类目 > 线路订单状态变更通知}
+   */
+  type TaobaoFsc = TaobaoFscRouteOrderStatusChange;
   /**
    * - {@link TaobaoFuwuFundsChange 淘宝交易 > 以旧换新资金变更通知消息}
    * - {@link TaobaoFuwuOrderClosed 淘宝交易 > 订单关闭消息}
@@ -2216,6 +2234,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoEinvoice}
    * - {@link TaobaoFenxiao}
    * - {@link TaobaoFliggy}
+   * - {@link TaobaoFsc}
    * - {@link TaobaoFuwu}
    * - {@link TaobaoGlobalbuys}
    * - {@link TaobaoHomeai}
@@ -2266,6 +2285,7 @@ declare namespace IncomingMessage {
     | TaobaoEinvoice
     | TaobaoFenxiao
     | TaobaoFliggy
+    | TaobaoFsc
     | TaobaoFuwu
     | TaobaoGlobalbuys
     | TaobaoHomeai

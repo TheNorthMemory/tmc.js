@@ -34,6 +34,22 @@ declare namespace Damai.Distribution {
     project_id: number;
   }
 
+  /** 退票通知 */
+  interface RefundOrder {
+    /** 渠道id */
+    channel_id: string;
+    /** 大麦订单号 */
+    external_order_no: string;
+    /** 场次id */
+    perform_id: number;
+    /** 项目id */
+    project_id: number;
+    /** 部分退true，整单退false */
+    refund_part: boolean;
+    /** 票单列表 */
+    voucher_ids: number[];
+  }
+
   /** 票品状态变更 */
   interface TicketItemStatus {
     /** 是否可售 */

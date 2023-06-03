@@ -134,7 +134,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 
 ## 支持的TOPICS
 
-<details><summary>共计 83+ 类别，462+ 消息数</summary>
+<details><summary>共计 83+ 类别，466+ 消息数</summary>
 
 | 类别 | 消息数 |
 | --- | --- |
@@ -192,7 +192,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | 商旅API | 3 |
 | 阿里健康-O2O中台 | 2 |
 | 业务平台新零售-消息上行 | 2 |
-| 大麦第三方票务供应商接入 | 5 |
+| 大麦第三方票务供应商接入 | 6 |
 | TVOS应用审核平台 | 1 |
 | Gifting送礼 | 1 |
 | 五道口商品 | 2 |
@@ -211,7 +211,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | 大资产拍卖Top端拍品消息 | 2 |
 | AE-任务平台消息 | 1 |
 | 天猫汽车 | 5 |
-| 阿信消息通知前台类目 | 1 |
+| 阿信消息通知前台类目 | 4 |
 | 阿里健康追溯码 | 1 |
 | 自动驾驶API | 3 |
 | MMC五盘货项目 | 5 |
