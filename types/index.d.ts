@@ -640,6 +640,8 @@ declare interface TaoTopicsDescriptor {
   taobao_opencrm_CardEstTask(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmCardEstTask) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmCardTplExamine 客户运营平台API > 卡片短信模板审核消息} */
   taobao_opencrm_CardTplExamine(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmCardTplExamine) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOpencrmCouponUseUp 客户运营平台API > 优惠券发完TMC} */
+  taobao_opencrm_CouponUseUp(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmCouponUseUp) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmCrowdInstResult 客户运营平台API > 人群快照生成结果} */
   taobao_opencrm_CrowdInstResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmCrowdInstResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmCrowdInstSaveResult 客户运营平台API > 人群快照另存为人群结果} */
@@ -648,16 +650,26 @@ declare interface TaoTopicsDescriptor {
   taobao_opencrm_DigitalTplExamine(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmDigitalTplExamine) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmFeedback 客户运营平台API > 反馈tmc} */
   taobao_opencrm_Feedback(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmFeedback) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOpencrmFullRuleResult 客户运营平台API > 规则全量计算结果通知} */
+  taobao_opencrm_FullRuleResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmFullRuleResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmMemberGradeChange 客户运营平台API > 会员等级变更} */
   taobao_opencrm_MemberGradeChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmMemberGradeChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOpencrmMemberJoin 客户运营平台API > 会员入会消息} */
+  taobao_opencrm_MemberJoin(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmMemberJoin) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOpencrmMemberJoinPrivate 客户运营平台API > 会员入会消息} */
+  taobao_opencrm_MemberJoinPrivate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmMemberJoinPrivate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmNodeExecuteFinished 客户运营平台API > 节点执行完成消息} */
   taobao_opencrm_NodeExecuteFinished(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmNodeExecuteFinished) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmOpenStrategyEvent 客户运营平台API > 开放策略事件类单发短信TMC消息} */
   taobao_opencrm_OpenStrategyEvent(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmOpenStrategyEvent) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOpencrmSMSOfficaial 客户运营平台API > 官方营销场景短信发送通知} */
+  taobao_opencrm_SMSOfficaial(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmSMSOfficaial) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmSellerDimensionCharge 客户运营平台API > CRM商业化计费商家维度账单} */
   taobao_opencrm_SellerDimensionCharge(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmSellerDimensionCharge) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmShortMessageBill 客户运营平台API > 短信账单} */
   taobao_opencrm_ShortMessageBill(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmShortMessageBill) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOpencrmShortMessageSent 客户运营平台API > 短信发送TMC} */
+  taobao_opencrm_ShortMessageSent(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmShortMessageSent) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmUtouch 客户运营平台API > 智能外呼回执} */
   taobao_opencrm_Utouch(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmUtouch) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpenimOffMsgPush OpenIM消息 > openim 离线消息推送} */
@@ -1841,6 +1853,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_opencrm_CardEstTask', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmCardEstTask) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmCardTplExamine 客户运营平台API > 卡片短信模板审核消息} */
   on(topic: 'taobao_opencrm_CardTplExamine', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmCardTplExamine) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOpencrmCouponUseUp 客户运营平台API > 优惠券发完TMC} */
+  on(topic: 'taobao_opencrm_CouponUseUp', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmCouponUseUp) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmCrowdInstResult 客户运营平台API > 人群快照生成结果} */
   on(topic: 'taobao_opencrm_CrowdInstResult', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmCrowdInstResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmCrowdInstSaveResult 客户运营平台API > 人群快照另存为人群结果} */
@@ -1849,16 +1863,26 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_opencrm_DigitalTplExamine', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmDigitalTplExamine) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmFeedback 客户运营平台API > 反馈tmc} */
   on(topic: 'taobao_opencrm_Feedback', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmFeedback) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOpencrmFullRuleResult 客户运营平台API > 规则全量计算结果通知} */
+  on(topic: 'taobao_opencrm_FullRuleResult', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmFullRuleResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmMemberGradeChange 客户运营平台API > 会员等级变更} */
   on(topic: 'taobao_opencrm_MemberGradeChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmMemberGradeChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOpencrmMemberJoin 客户运营平台API > 会员入会消息} */
+  on(topic: 'taobao_opencrm_MemberJoin', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmMemberJoin) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOpencrmMemberJoinPrivate 客户运营平台API > 会员入会消息} */
+  on(topic: 'taobao_opencrm_MemberJoinPrivate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmMemberJoinPrivate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmNodeExecuteFinished 客户运营平台API > 节点执行完成消息} */
   on(topic: 'taobao_opencrm_NodeExecuteFinished', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmNodeExecuteFinished) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmOpenStrategyEvent 客户运营平台API > 开放策略事件类单发短信TMC消息} */
   on(topic: 'taobao_opencrm_OpenStrategyEvent', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmOpenStrategyEvent) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOpencrmSMSOfficaial 客户运营平台API > 官方营销场景短信发送通知} */
+  on(topic: 'taobao_opencrm_SMSOfficaial', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmSMSOfficaial) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmSellerDimensionCharge 客户运营平台API > CRM商业化计费商家维度账单} */
   on(topic: 'taobao_opencrm_SellerDimensionCharge', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmSellerDimensionCharge) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmShortMessageBill 客户运营平台API > 短信账单} */
   on(topic: 'taobao_opencrm_ShortMessageBill', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmShortMessageBill) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOpencrmShortMessageSent 客户运营平台API > 短信发送TMC} */
+  on(topic: 'taobao_opencrm_ShortMessageSent', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmShortMessageSent) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmUtouch 客户运营平台API > 智能外呼回执} */
   on(topic: 'taobao_opencrm_Utouch', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpencrmUtouch) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpenimOffMsgPush OpenIM消息 > openim 离线消息推送} */

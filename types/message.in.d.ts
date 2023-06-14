@@ -601,6 +601,8 @@ declare namespace IncomingMessage {
   type TaobaoOpencrmCardEstTask = Message & { content?: MessageContent & { topic?: 'taobao_opencrm_CardEstTask', content?: string | Taobao.Opencrm.CardEstTask } };
   /** {@link Taobao.Opencrm.CardTplExamine 客户运营平台API > 卡片短信模板审核消息} */
   type TaobaoOpencrmCardTplExamine = Message & { content?: MessageContent & { topic?: 'taobao_opencrm_CardTplExamine', content?: string | Taobao.Opencrm.CardTplExamine } };
+  /** {@link Taobao.Opencrm.CouponUseUp 客户运营平台API > 优惠券发完TMC} */
+  type TaobaoOpencrmCouponUseUp = Message & { content?: MessageContent & { topic?: 'taobao_opencrm_CouponUseUp', content?: string | Taobao.Opencrm.CouponUseUp } };
   /** {@link Taobao.Opencrm.CrowdInstResult 客户运营平台API > 人群快照生成结果} */
   type TaobaoOpencrmCrowdInstResult = Message & { content?: MessageContent & { topic?: 'taobao_opencrm_CrowdInstResult', content?: string | Taobao.Opencrm.CrowdInstResult } };
   /** {@link Taobao.Opencrm.CrowdInstSaveResult 客户运营平台API > 人群快照另存为人群结果} */
@@ -609,16 +611,26 @@ declare namespace IncomingMessage {
   type TaobaoOpencrmDigitalTplExamine = Message & { content?: MessageContent & { topic?: 'taobao_opencrm_DigitalTplExamine', content?: string | Taobao.Opencrm.DigitalTplExamine } };
   /** {@link Taobao.Opencrm.Feedback 客户运营平台API > 反馈tmc} */
   type TaobaoOpencrmFeedback = Message & { content?: MessageContent & { topic?: 'taobao_opencrm_Feedback', content?: string | Taobao.Opencrm.Feedback } };
+  /** {@link Taobao.Opencrm.FullRuleResult 客户运营平台API > 规则全量计算结果通知} */
+  type TaobaoOpencrmFullRuleResult = Message & { content?: MessageContent & { topic?: 'taobao_opencrm_FullRuleResult', content?: string | Taobao.Opencrm.FullRuleResult } };
   /** {@link Taobao.Opencrm.MemberGradeChange 客户运营平台API > 会员等级变更} */
   type TaobaoOpencrmMemberGradeChange = Message & { content?: MessageContent & { topic?: 'taobao_opencrm_MemberGradeChange', content?: string | Taobao.Opencrm.MemberGradeChange } };
+  /** {@link Taobao.Opencrm.MemberJoin 客户运营平台API > 会员入会消息} */
+  type TaobaoOpencrmMemberJoin = Message & { content?: MessageContent & { topic?: 'taobao_opencrm_MemberJoin', content?: string | Taobao.Opencrm.MemberJoin } };
+  /** {@link Taobao.Opencrm.MemberJoinPrivate 客户运营平台API > 会员入会消息} */
+  type TaobaoOpencrmMemberJoinPrivate = Message & { content?: MessageContent & { topic?: 'taobao_opencrm_MemberJoinPrivate', content?: string | Taobao.Opencrm.MemberJoinPrivate } };
   /** {@link Taobao.Opencrm.NodeExecuteFinished 客户运营平台API > 节点执行完成消息} */
   type TaobaoOpencrmNodeExecuteFinished = Message & { content?: MessageContent & { topic?: 'taobao_opencrm_NodeExecuteFinished', content?: string | Taobao.Opencrm.NodeExecuteFinished } };
   /** {@link Taobao.Opencrm.OpenStrategyEvent 客户运营平台API > 开放策略事件类单发短信TMC消息} */
   type TaobaoOpencrmOpenStrategyEvent = Message & { content?: MessageContent & { topic?: 'taobao_opencrm_OpenStrategyEvent', content?: string | Taobao.Opencrm.OpenStrategyEvent } };
+  /** {@link Taobao.Opencrm.SMSOfficaial 客户运营平台API > 官方营销场景短信发送通知} */
+  type TaobaoOpencrmSMSOfficaial = Message & { content?: MessageContent & { topic?: 'taobao_opencrm_SMSOfficaial', content?: string | Taobao.Opencrm.SMSOfficaial } };
   /** {@link Taobao.Opencrm.SellerDimensionCharge 客户运营平台API > CRM商业化计费商家维度账单} */
   type TaobaoOpencrmSellerDimensionCharge = Message & { content?: MessageContent & { topic?: 'taobao_opencrm_SellerDimensionCharge', content?: string | Taobao.Opencrm.SellerDimensionCharge } };
   /** {@link Taobao.Opencrm.ShortMessageBill 客户运营平台API > 短信账单} */
   type TaobaoOpencrmShortMessageBill = Message & { content?: MessageContent & { topic?: 'taobao_opencrm_ShortMessageBill', content?: string | Taobao.Opencrm.ShortMessageBill } };
+  /** {@link Taobao.Opencrm.ShortMessageSent 客户运营平台API > 短信发送TMC} */
+  type TaobaoOpencrmShortMessageSent = Message & { content?: MessageContent & { topic?: 'taobao_opencrm_ShortMessageSent', content?: string | Taobao.Opencrm.ShortMessageSent } };
   /** {@link Taobao.Opencrm.Utouch 客户运营平台API > 智能外呼回执} */
   type TaobaoOpencrmUtouch = Message & { content?: MessageContent & { topic?: 'taobao_opencrm_Utouch', content?: string | Taobao.Opencrm.Utouch } };
   /** {@link Taobao.Openim.OffMsgPush OpenIM消息 > openim 离线消息推送} */
@@ -1669,29 +1681,41 @@ declare namespace IncomingMessage {
    * - {@link TaobaoOpencrmAuthTouchMessage 客户运营平台API > 营销短信授权消息}
    * - {@link TaobaoOpencrmCardEstTask 客户运营平台API > 卡片短信发送预估消息}
    * - {@link TaobaoOpencrmCardTplExamine 客户运营平台API > 卡片短信模板审核消息}
+   * - {@link TaobaoOpencrmCouponUseUp 客户运营平台API > 优惠券发完TMC}
    * - {@link TaobaoOpencrmCrowdInstResult 客户运营平台API > 人群快照生成结果}
    * - {@link TaobaoOpencrmCrowdInstSaveResult 客户运营平台API > 人群快照另存为人群结果}
    * - {@link TaobaoOpencrmDigitalTplExamine 客户运营平台API > 数字短信模板审核消息}
    * - {@link TaobaoOpencrmFeedback 客户运营平台API > 反馈tmc}
+   * - {@link TaobaoOpencrmFullRuleResult 客户运营平台API > 规则全量计算结果通知}
    * - {@link TaobaoOpencrmMemberGradeChange 客户运营平台API > 会员等级变更}
+   * - {@link TaobaoOpencrmMemberJoin 客户运营平台API > 会员入会消息}
+   * - {@link TaobaoOpencrmMemberJoinPrivate 客户运营平台API > 会员入会消息}
    * - {@link TaobaoOpencrmNodeExecuteFinished 客户运营平台API > 节点执行完成消息}
    * - {@link TaobaoOpencrmOpenStrategyEvent 客户运营平台API > 开放策略事件类单发短信TMC消息}
+   * - {@link TaobaoOpencrmSMSOfficaial 客户运营平台API > 官方营销场景短信发送通知}
    * - {@link TaobaoOpencrmSellerDimensionCharge 客户运营平台API > CRM商业化计费商家维度账单}
    * - {@link TaobaoOpencrmShortMessageBill 客户运营平台API > 短信账单}
+   * - {@link TaobaoOpencrmShortMessageSent 客户运营平台API > 短信发送TMC}
    * - {@link TaobaoOpencrmUtouch 客户运营平台API > 智能外呼回执}
    */
   type TaobaoOpencrm = TaobaoOpencrmAuthTouchMessage
     | TaobaoOpencrmCardEstTask
     | TaobaoOpencrmCardTplExamine
+    | TaobaoOpencrmCouponUseUp
     | TaobaoOpencrmCrowdInstResult
     | TaobaoOpencrmCrowdInstSaveResult
     | TaobaoOpencrmDigitalTplExamine
     | TaobaoOpencrmFeedback
+    | TaobaoOpencrmFullRuleResult
     | TaobaoOpencrmMemberGradeChange
+    | TaobaoOpencrmMemberJoin
+    | TaobaoOpencrmMemberJoinPrivate
     | TaobaoOpencrmNodeExecuteFinished
     | TaobaoOpencrmOpenStrategyEvent
+    | TaobaoOpencrmSMSOfficaial
     | TaobaoOpencrmSellerDimensionCharge
     | TaobaoOpencrmShortMessageBill
+    | TaobaoOpencrmShortMessageSent
     | TaobaoOpencrmUtouch;
   /**
    * - {@link TaobaoOpenimOffMsgPush OpenIM消息 > openim 离线消息推送}

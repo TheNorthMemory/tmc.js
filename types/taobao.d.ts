@@ -1581,6 +1581,16 @@ declare namespace Taobao.Opencrm {
     template_id: number;
   }
 
+  /** 优惠券发完TMC */
+  interface CouponUseUp {
+    /** 规则实例ID */
+    rule_inst_id: number;
+    /** 卖家ID */
+    seller_id: number;
+    /** 优惠券唯一ID */
+    uuid: string;
+  }
+
   /** 人群快照生成结果 */
   interface CrowdInstResult {
     /** 营销活动ID */
@@ -1643,6 +1653,18 @@ declare namespace Taobao.Opencrm {
     type: number;
   }
 
+  /** 规则全量计算结果通知 */
+  interface FullRuleResult {
+    /** 业务id,时间戳 */
+    id: string;
+    /** 描述信息 */
+    msg_info: string;
+    /** 全部成功：0,其他1 */
+    result: string;
+    /** 卖家昵称 */
+    seller_nick: string;
+  }
+
   /** 会员等级变更 */
   interface MemberGradeChange {
     /** 扩展字段 bizOrderId：付费会员订单ID */
@@ -1659,6 +1681,34 @@ declare namespace Taobao.Opencrm {
     ouid: string;
     /** 商家ID */
     seller_id: number;
+  }
+
+  /** 会员入会消息 */
+  interface MemberJoin {
+    /** 首次入会时间 */
+    first_join_time: Date | number | string;
+    /** 本次入会时间 */
+    join_time: Date | number | string;
+    /** 消息id，无实际意义 */
+    msg_id: string;
+    /** 卖家昵称 */
+    seller: string;
+    /** 买家昵称 */
+    user: string;
+  }
+
+  /** 会员入会消息 */
+  interface MemberJoinPrivate {
+    /** 首次入会时间 */
+    first_join_time: Date | number | string;
+    /** 本次入会时间 */
+    join_time: Date | number | string;
+    /** 消息id,无实际意义 */
+    msg_id: string;
+    /** 卖家昵称 */
+    seller: string;
+    /** ouid */
+    user: string;
   }
 
   /** 节点执行完成消息 */
@@ -1681,6 +1731,20 @@ declare namespace Taobao.Opencrm {
     seller_id: number;
     /** 模板实例id */
     task_inst_id: string;
+  }
+
+  /** 官方营销场景短信发送通知 */
+  interface SMSOfficaial {
+    /** 通知内容，发送失败通知内容为空 */
+    content: string;
+    /** 错误描述 */
+    error_msg: string;
+    /** 商家主账号nick */
+    seller: string;
+    /** 任务id */
+    task_id: number;
+    /** 通知类型：0-发送失败，1-发送成功 */
+    type: string;
   }
 
   /** CRM商业化计费商家维度账单 */
@@ -1717,6 +1781,18 @@ declare namespace Taobao.Opencrm {
     unknown_status_bill_count: number;
     /** 状态未知人数 */
     unknown_status_count: number;
+  }
+
+  /** 短信发送TMC */
+  interface ShortMessageSent {
+    /** 计费条数 */
+    bill_count: number;
+    /** 短信流水唯一ID */
+    biz_id: number;
+    /** 卖家ID */
+    seller_id: number;
+    /** 短信发送时间 */
+    send_time: Date | number | string;
   }
 
   /** 智能外呼回执 */
