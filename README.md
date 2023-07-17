@@ -3,7 +3,7 @@
 Event driven and chained Taobao Message Channel(TMC) for NodeJS
 
 [![release](https://img.shields.io/npm/v/tmc.js)](https://github.com/TheNorthMemory/tmc.js/releases)
-[![vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/tmc.js?label=snyk.io)](https://snyk.io/advisor/npm-package/tmc.js)
+[![advisor](https://snyk.io/advisor/npm-package/tmc.js/badge.svg)](https://snyk.io/advisor/npm-package/tmc.js)
 [![types](https://img.shields.io/badge/types-included-blue)](https://www.npmjs.com/package/tmc.js)
 [![requirement](https://img.shields.io/node/v/tmc.js)](https://www.npmjs.com/package/tmc.js)
 [![downloads](https://img.shields.io/npm/dm/tmc.js)](https://www.npmjs.com/package/tmc.js)
@@ -134,14 +134,14 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 
 ## 支持的TOPICS
 
-<details><summary>共计 83+ 类别，472+ 消息数</summary>
+<details><summary>共计 83+ 类别，476+ 消息数</summary>
 
 | 类别 | 消息数 |
 | --- | --- |
 | 淘宝交易 | 23 |
 | 淘宝退款 | 13 |
 | 淘宝商品 | 13 |
-| 淘宝分销 | 23 |
+| 淘宝分销 | 24 |
 | 淘宝点点 | 12 |
 | 淘宝火车票 | 5 |
 | 平台消息 | 9 |
@@ -150,7 +150,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | 导购平台 | 21 |
 | 淘宝汽车票 | 4 |
 | 服务市场 | 9 |
-| 天猫服务 | 21 |
+| 天猫服务 | 23 |
 | 天猫美妆 | 2 |
 | 聚石塔 | 9 |
 | 淘宝物流 | 1 |
@@ -170,7 +170,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | AE-交易 | 10 |
 | 五道口配送 | 5 |
 | 百川 | 2 |
-| 闲鱼 | 14 |
+| 闲鱼 | 15 |
 | 闲鱼回收商消息 | 6 |
 | 零售通POS开放平台消息 | 4 |
 | DPAAS | 6 |
