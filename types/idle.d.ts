@@ -54,6 +54,21 @@ declare namespace Idle.Appraiseisv {
   }
 }
 
+/** 闲鱼 */
+declare namespace Idle.Autotrade {
+  /** 闲鱼AutoTrade订单状态变更消息 */
+  interface OrderStateSync {
+    /** 订单id */
+    order_id: number;
+    /** 订单状态 */
+    order_status: string;
+    /** 订单子状态 */
+    order_sub_status: string;
+    /** 交易产品业务标识 */
+    x_global_biz_code: string;
+  }
+}
+
 /** 闲鱼回收商消息 */
 declare namespace Idle.Consignment {
   /** 闲鱼帮卖订单履约状态同步 */

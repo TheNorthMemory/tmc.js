@@ -106,6 +106,22 @@ declare namespace Tmall.Fuwu {
     workcard_id: string;
   }
 
+  /** 天猫服务家装优质供给规则变更 */
+  interface HomeDecorationSupplyRuleUpdate {
+    /** 叶子类目名称 */
+    category_name?: string;
+    /** 商家名称 */
+    seller_nick?: string;
+    /** servicecode名称 */
+    service_name: string;
+    /** 规则唯一编号 */
+    unique_no: string;
+    /** 更新时间 */
+    update_date: Date | number | string;
+    /** 工人校验类型（高级工人/品牌品类工人） */
+    worker_check_type_list: string;
+  }
+
   /** 服务供应链物流业务消息 */
   interface LogisticsInfoMessage {
     /** 物流创建 ：create 物流取消 ：cancel 分派小件员：assign 已经分派小件员: assigned 包裹上门揽收: pickup_door 包裹已揽收完成: pickup_finished 包裹派送中: dispatching 包裹已签收: signed */

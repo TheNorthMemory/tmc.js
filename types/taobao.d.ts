@@ -1050,17 +1050,17 @@ declare namespace Taobao.Item {
 
   /** 商品下架消息 */
   interface ItemDownshelf {
-    /** 卖家昵称 */
-    nick: string;
-    /** 商品数字ID */
+    /** 卖家昵称(不发送) */
+    nick?: string;
+    /** 商品ID */
     readonly num_iid: number | bigint;
-    /** 商品价格 */
+    /** 商品价格(不发送) */
     price?: string;
-    /** 商品SKU ID */
+    /** 商品SKU ID(不发送) */
     sku_id?: number | bigint;
-    /** 商品SKU数量 */
+    /** 商品SKU数量(不发送) */
     sku_num?: number;
-    /** 商品状态 */
+    /** 商品状态(不发送) */
     status?: string;
   }
 
@@ -1397,6 +1397,29 @@ declare namespace Taobao.Jipiao {
     msg_type: number;
     /** 机票订单id */
     order_id: number;
+  }
+}
+
+/** 淘宝分销 */
+declare namespace Taobao.Jzfx {
+  /** 家装分销_采购单创建 */
+  interface PurchaseOrderCreate {
+    /** 采购单创建时间 */
+    created: Date | number | string;
+    /** 分销商店铺昵称 */
+    distributor_nick: string;
+    /** 采购单修改时间 */
+    modified: Date | number | string;
+    /** 采购单号 */
+    purchase_id: number;
+    /** 采购单状态 */
+    status: string;
+    /** 供应商店铺昵称 */
+    supplier_nick: string;
+    /** 交易主订单号 */
+    tc_order_id: number;
+    /** 交易子订单号 */
+    tc_sub_order_id: number;
   }
 }
 

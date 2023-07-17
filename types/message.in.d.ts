@@ -163,6 +163,8 @@ declare namespace IncomingMessage {
   type AlibabaMosSaleOrderRefund = Message & { content?: MessageContent & { topic?: 'alibaba_mos_SaleOrderRefund', content?: string | Alibaba.Mos.SaleOrderRefund } };
   /** {@link Alibaba.Msfservice.AuditCreate 天猫服务 > 喵师傅审核单通知} */
   type AlibabaMsfserviceAuditCreate = Message & { content?: MessageContent & { topic?: 'alibaba_msfservice_AuditCreate', content?: string | Alibaba.Msfservice.AuditCreate } };
+  /** {@link Alibaba.Msfservice.ReminderCreate 天猫服务 > 催单消息} */
+  type AlibabaMsfserviceReminderCreate = Message & { content?: MessageContent & { topic?: 'alibaba_msfservice_ReminderCreate', content?: string | Alibaba.Msfservice.ReminderCreate } };
   /** {@link Alibaba.Nazca.AbandonCert 网上法庭 > 作废存证消息接口} */
   type AlibabaNazcaAbandonCert = Message & { content?: MessageContent & { topic?: 'alibaba_nazca_AbandonCert', content?: string | Alibaba.Nazca.AbandonCert } };
   /** {@link Alibaba.Nazca.QueryChargeNum 网上法庭 > 查询收费数量} */
@@ -363,6 +365,8 @@ declare namespace IncomingMessage {
   type IdleAppraiseisvOrderSyn = Message & { content?: MessageContent & { topic?: 'idle_appraiseisv_OrderSyn', content?: string | Idle.Appraiseisv.OrderSyn } };
   /** {@link Idle.Appraiseisv.RefundSyn 闲鱼已验货 > 闲鱼已验货退货/退款事件} */
   type IdleAppraiseisvRefundSyn = Message & { content?: MessageContent & { topic?: 'idle_appraiseisv_RefundSyn', content?: string | Idle.Appraiseisv.RefundSyn } };
+  /** {@link Idle.Autotrade.OrderStateSync 闲鱼 > 闲鱼AutoTrade订单状态变更消息} */
+  type IdleAutotradeOrderStateSync = Message & { content?: MessageContent & { topic?: 'idle_autotrade_OrderStateSync', content?: string | Idle.Autotrade.OrderStateSync } };
   /** {@link Idle.Consignment.OrderSyn 闲鱼回收商消息 > 闲鱼帮卖订单履约状态同步} */
   type IdleConsignmentOrderSyn = Message & { content?: MessageContent & { topic?: 'idle_consignment_OrderSyn', content?: string | Idle.Consignment.OrderSyn } };
   /** {@link Idle.Consignmentii.OrderSyn 闲鱼回收商消息 > 闲鱼寄卖V2订单履约状态同步} */
@@ -577,6 +581,8 @@ declare namespace IncomingMessage {
   type TaobaoJipiaoSellerOrderNotify = Message & { content?: MessageContent & { topic?: 'taobao_jipiao_SellerOrderNotify', content?: string | Taobao.Jipiao.SellerOrderNotify } };
   /** {@link Taobao.Jipiao.SellerRefundOrderNotify 淘宝机票 > 【机票代理商】退票订单通知} */
   type TaobaoJipiaoSellerRefundOrderNotify = Message & { content?: MessageContent & { topic?: 'taobao_jipiao_SellerRefundOrderNotify', content?: string | Taobao.Jipiao.SellerRefundOrderNotify } };
+  /** {@link Taobao.Jzfx.PurchaseOrderCreate 淘宝分销 > 家装分销_采购单创建} */
+  type TaobaoJzfxPurchaseOrderCreate = Message & { content?: MessageContent & { topic?: 'taobao_jzfx_PurchaseOrderCreate', content?: string | Taobao.Jzfx.PurchaseOrderCreate } };
   /** {@link Taobao.Live.AgencyItemChanged 淘宝直播API > 直播严选机构商品池变化通知} */
   type TaobaoLiveAgencyItemChanged = Message & { content?: MessageContent & { topic?: 'taobao_live_AgencyItemChanged', content?: string | Taobao.Live.AgencyItemChanged } };
   /** {@link Taobao.Live.FeedRelated 淘宝直播API > 淘宝直播上下播消息} */
@@ -831,6 +837,8 @@ declare namespace IncomingMessage {
   type TmallFuwuAnomalyRecourseStatusUpdate = Message & { content?: MessageContent & { topic?: 'tmall_fuwu_AnomalyRecourseStatusUpdate', content?: string | Tmall.Fuwu.AnomalyRecourseStatusUpdate } };
   /** {@link Tmall.Fuwu.ElectricMaintenanceWorkCardComplete 天猫服务 > 天猫服务消电维修工单完结消息} */
   type TmallFuwuElectricMaintenanceWorkCardComplete = Message & { content?: MessageContent & { topic?: 'tmall_fuwu_ElectricMaintenanceWorkCardComplete', content?: string | Tmall.Fuwu.ElectricMaintenanceWorkCardComplete } };
+  /** {@link Tmall.Fuwu.HomeDecorationSupplyRuleUpdate 天猫服务 > 天猫服务家装优质供给规则变更} */
+  type TmallFuwuHomeDecorationSupplyRuleUpdate = Message & { content?: MessageContent & { topic?: 'tmall_fuwu_HomeDecorationSupplyRuleUpdate', content?: string | Tmall.Fuwu.HomeDecorationSupplyRuleUpdate } };
   /** {@link Tmall.Fuwu.LogisticsInfoMessage 天猫服务 > 服务供应链物流业务消息} */
   type TmallFuwuLogisticsInfoMessage = Message & { content?: MessageContent & { topic?: 'tmall_fuwu_LogisticsInfoMessage', content?: string | Tmall.Fuwu.LogisticsInfoMessage } };
   /** {@link Tmall.Fuwu.RateMessageTP 天猫服务 > 消费者评价成功top消息} */
@@ -1083,8 +1091,10 @@ declare namespace IncomingMessage {
     | AlibabaMosSaleOrderRefund;
   /**
    * - {@link AlibabaMsfserviceAuditCreate 天猫服务 > 喵师傅审核单通知}
+   * - {@link AlibabaMsfserviceReminderCreate 天猫服务 > 催单消息}
    */
-  type AlibabaMsfservice = AlibabaMsfserviceAuditCreate;
+  type AlibabaMsfservice = AlibabaMsfserviceAuditCreate
+    | AlibabaMsfserviceReminderCreate;
   /**
    * - {@link AlibabaNazcaAbandonCert 网上法庭 > 作废存证消息接口}
    * - {@link AlibabaNazcaQueryChargeNum 网上法庭 > 查询收费数量}
@@ -1368,6 +1378,10 @@ declare namespace IncomingMessage {
     | IdleAppraiseisvOrderSyn
     | IdleAppraiseisvRefundSyn;
   /**
+   * - {@link IdleAutotradeOrderStateSync 闲鱼 > 闲鱼AutoTrade订单状态变更消息}
+   */
+  type IdleAutotrade = IdleAutotradeOrderStateSync;
+  /**
    * - {@link IdleConsignmentOrderSyn 闲鱼回收商消息 > 闲鱼帮卖订单履约状态同步}
    */
   type IdleConsignment = IdleConsignmentOrderSyn;
@@ -1645,6 +1659,10 @@ declare namespace IncomingMessage {
     | TaobaoJipiaoJipiaoRefundOrderNotify
     | TaobaoJipiaoSellerOrderNotify
     | TaobaoJipiaoSellerRefundOrderNotify;
+  /**
+   * - {@link TaobaoJzfxPurchaseOrderCreate 淘宝分销 > 家装分销_采购单创建}
+   */
+  type TaobaoJzfx = TaobaoJzfxPurchaseOrderCreate;
   /**
    * - {@link TaobaoLiveAgencyItemChanged 淘宝直播API > 直播严选机构商品池变化通知}
    * - {@link TaobaoLiveFeedRelated 淘宝直播API > 淘宝直播上下播消息}
@@ -1957,6 +1975,7 @@ declare namespace IncomingMessage {
    * - {@link TmallFuwuAnomalyRecourse 天猫服务 > 天猫服务平台一键求助单消息队列}
    * - {@link TmallFuwuAnomalyRecourseStatusUpdate 天猫服务 > 一键求助状态变更消息}
    * - {@link TmallFuwuElectricMaintenanceWorkCardComplete 天猫服务 > 天猫服务消电维修工单完结消息}
+   * - {@link TmallFuwuHomeDecorationSupplyRuleUpdate 天猫服务 > 天猫服务家装优质供给规则变更}
    * - {@link TmallFuwuLogisticsInfoMessage 天猫服务 > 服务供应链物流业务消息}
    * - {@link TmallFuwuRateMessageTP 天猫服务 > 消费者评价成功top消息}
    * - {@link TmallFuwuServiceItemUpdate 天猫服务 > 服务商品信息变更消息}
@@ -1971,6 +1990,7 @@ declare namespace IncomingMessage {
   type TmallFuwu = TmallFuwuAnomalyRecourse
     | TmallFuwuAnomalyRecourseStatusUpdate
     | TmallFuwuElectricMaintenanceWorkCardComplete
+    | TmallFuwuHomeDecorationSupplyRuleUpdate
     | TmallFuwuLogisticsInfoMessage
     | TmallFuwuRateMessageTP
     | TmallFuwuServiceItemUpdate
@@ -2216,6 +2236,7 @@ declare namespace IncomingMessage {
   /**
    * - {@link IdleAgreement}
    * - {@link IdleAppraiseisv}
+   * - {@link IdleAutotrade}
    * - {@link IdleConsignment}
    * - {@link IdleConsignmentii}
    * - {@link IdleRecycle}
@@ -2224,6 +2245,7 @@ declare namespace IncomingMessage {
    */
   type Idle = IdleAgreement
     | IdleAppraiseisv
+    | IdleAutotrade
     | IdleConsignment
     | IdleConsignmentii
     | IdleRecycle
@@ -2266,6 +2288,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoIstore}
    * - {@link TaobaoItem}
    * - {@link TaobaoJipiao}
+   * - {@link TaobaoJzfx}
    * - {@link TaobaoLive}
    * - {@link TaobaoLogistics}
    * - {@link TaobaoModifyaddress}
@@ -2317,6 +2340,7 @@ declare namespace IncomingMessage {
     | TaobaoIstore
     | TaobaoItem
     | TaobaoJipiao
+    | TaobaoJzfx
     | TaobaoLive
     | TaobaoLogistics
     | TaobaoModifyaddress

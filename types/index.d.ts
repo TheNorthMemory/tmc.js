@@ -202,6 +202,8 @@ declare interface TaoTopicsDescriptor {
   alibaba_mos_SaleOrderRefund(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMosSaleOrderRefund) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaMsfserviceAuditCreate 天猫服务 > 喵师傅审核单通知} */
   alibaba_msfservice_AuditCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMsfserviceAuditCreate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaMsfserviceReminderCreate 天猫服务 > 催单消息} */
+  alibaba_msfservice_ReminderCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMsfserviceReminderCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaNazcaAbandonCert 网上法庭 > 作废存证消息接口} */
   alibaba_nazca_AbandonCert(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaNazcaAbandonCert) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaNazcaQueryChargeNum 网上法庭 > 查询收费数量} */
@@ -402,6 +404,8 @@ declare interface TaoTopicsDescriptor {
   idle_appraiseisv_OrderSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleAppraiseisvOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleAppraiseisvRefundSyn 闲鱼已验货 > 闲鱼已验货退货/退款事件} */
   idle_appraiseisv_RefundSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleAppraiseisvRefundSyn) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleAutotradeOrderStateSync 闲鱼 > 闲鱼AutoTrade订单状态变更消息} */
+  idle_autotrade_OrderStateSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleAutotradeOrderStateSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleConsignmentOrderSyn 闲鱼回收商消息 > 闲鱼帮卖订单履约状态同步} */
   idle_consignment_OrderSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleConsignmentOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleConsignmentiiOrderSyn 闲鱼回收商消息 > 闲鱼寄卖V2订单履约状态同步} */
@@ -616,6 +620,8 @@ declare interface TaoTopicsDescriptor {
   taobao_jipiao_SellerOrderNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJipiaoSellerOrderNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoJipiaoSellerRefundOrderNotify 淘宝机票 > 【机票代理商】退票订单通知} */
   taobao_jipiao_SellerRefundOrderNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJipiaoSellerRefundOrderNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoJzfxPurchaseOrderCreate 淘宝分销 > 家装分销_采购单创建} */
+  taobao_jzfx_PurchaseOrderCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJzfxPurchaseOrderCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLiveAgencyItemChanged 淘宝直播API > 直播严选机构商品池变化通知} */
   taobao_live_AgencyItemChanged(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLiveAgencyItemChanged) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLiveFeedRelated 淘宝直播API > 淘宝直播上下播消息} */
@@ -870,6 +876,8 @@ declare interface TaoTopicsDescriptor {
   tmall_fuwu_AnomalyRecourseStatusUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuAnomalyRecourseStatusUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuElectricMaintenanceWorkCardComplete 天猫服务 > 天猫服务消电维修工单完结消息} */
   tmall_fuwu_ElectricMaintenanceWorkCardComplete(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuElectricMaintenanceWorkCardComplete) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallFuwuHomeDecorationSupplyRuleUpdate 天猫服务 > 天猫服务家装优质供给规则变更} */
+  tmall_fuwu_HomeDecorationSupplyRuleUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuHomeDecorationSupplyRuleUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuLogisticsInfoMessage 天猫服务 > 服务供应链物流业务消息} */
   tmall_fuwu_LogisticsInfoMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuLogisticsInfoMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuRateMessageTP 天猫服务 > 消费者评价成功top消息} */
@@ -1068,6 +1076,8 @@ declare interface TaoTopicsDescriptor {
   idle_agreement(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleAgreement) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleAppraiseisv} */
   idle_appraiseisv(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleAppraiseisv) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleAutotrade} */
+  idle_autotrade(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleAutotrade) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleConsignment} */
   idle_consignment(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleConsignment) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleConsignmentii} */
@@ -1132,6 +1142,8 @@ declare interface TaoTopicsDescriptor {
   taobao_item(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItem) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoJipiao} */
   taobao_jipiao(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJipiao) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoJzfx} */
+  taobao_jzfx(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJzfx) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLive} */
   taobao_live(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLive) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLogistics} */
@@ -1415,6 +1427,8 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_mos_SaleOrderRefund', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMosSaleOrderRefund) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaMsfserviceAuditCreate 天猫服务 > 喵师傅审核单通知} */
   on(topic: 'alibaba_msfservice_AuditCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMsfserviceAuditCreate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaMsfserviceReminderCreate 天猫服务 > 催单消息} */
+  on(topic: 'alibaba_msfservice_ReminderCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMsfserviceReminderCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaNazcaAbandonCert 网上法庭 > 作废存证消息接口} */
   on(topic: 'alibaba_nazca_AbandonCert', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaNazcaAbandonCert) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaNazcaQueryChargeNum 网上法庭 > 查询收费数量} */
@@ -1615,6 +1629,8 @@ declare interface TaoEventsListener {
   on(topic: 'idle_appraiseisv_OrderSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleAppraiseisvOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleAppraiseisvRefundSyn 闲鱼已验货 > 闲鱼已验货退货/退款事件} */
   on(topic: 'idle_appraiseisv_RefundSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleAppraiseisvRefundSyn) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleAutotradeOrderStateSync 闲鱼 > 闲鱼AutoTrade订单状态变更消息} */
+  on(topic: 'idle_autotrade_OrderStateSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleAutotradeOrderStateSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleConsignmentOrderSyn 闲鱼回收商消息 > 闲鱼帮卖订单履约状态同步} */
   on(topic: 'idle_consignment_OrderSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleConsignmentOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleConsignmentiiOrderSyn 闲鱼回收商消息 > 闲鱼寄卖V2订单履约状态同步} */
@@ -1829,6 +1845,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_jipiao_SellerOrderNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJipiaoSellerOrderNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoJipiaoSellerRefundOrderNotify 淘宝机票 > 【机票代理商】退票订单通知} */
   on(topic: 'taobao_jipiao_SellerRefundOrderNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJipiaoSellerRefundOrderNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoJzfxPurchaseOrderCreate 淘宝分销 > 家装分销_采购单创建} */
+  on(topic: 'taobao_jzfx_PurchaseOrderCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJzfxPurchaseOrderCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLiveAgencyItemChanged 淘宝直播API > 直播严选机构商品池变化通知} */
   on(topic: 'taobao_live_AgencyItemChanged', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLiveAgencyItemChanged) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLiveFeedRelated 淘宝直播API > 淘宝直播上下播消息} */
@@ -2083,6 +2101,8 @@ declare interface TaoEventsListener {
   on(topic: 'tmall_fuwu_AnomalyRecourseStatusUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuAnomalyRecourseStatusUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuElectricMaintenanceWorkCardComplete 天猫服务 > 天猫服务消电维修工单完结消息} */
   on(topic: 'tmall_fuwu_ElectricMaintenanceWorkCardComplete', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuElectricMaintenanceWorkCardComplete) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallFuwuHomeDecorationSupplyRuleUpdate 天猫服务 > 天猫服务家装优质供给规则变更} */
+  on(topic: 'tmall_fuwu_HomeDecorationSupplyRuleUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuHomeDecorationSupplyRuleUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuLogisticsInfoMessage 天猫服务 > 服务供应链物流业务消息} */
   on(topic: 'tmall_fuwu_LogisticsInfoMessage', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuLogisticsInfoMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuRateMessageTP 天猫服务 > 消费者评价成功top消息} */
@@ -2281,6 +2301,8 @@ declare interface TaoEventsListener {
   on(topic: 'idle_agreement', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleAgreement) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleAppraiseisv} */
   on(topic: 'idle_appraiseisv', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleAppraiseisv) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleAutotrade} */
+  on(topic: 'idle_autotrade', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleAutotrade) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleConsignment} */
   on(topic: 'idle_consignment', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleConsignment) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleConsignmentii} */
@@ -2345,6 +2367,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_item', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItem) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoJipiao} */
   on(topic: 'taobao_jipiao', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJipiao) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoJzfx} */
+  on(topic: 'taobao_jzfx', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJzfx) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLive} */
   on(topic: 'taobao_live', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLive) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLogistics} */

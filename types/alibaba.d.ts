@@ -1125,6 +1125,24 @@ declare namespace Alibaba.Msfservice {
     /** 师傅名称 */
     worker_name: string;
   }
+
+  /** 催单消息 */
+  interface ReminderCreate {
+    /** 渠道（0:商家端 1消费者端） */
+    channel: number;
+    /** 催单生成时间 */
+    gmt_create: Date | number | string;
+    /** 催单id */
+    reminder_id: string;
+    /** 时间类型 */
+    type: number;
+    /** 工单id（多工单用逗号分隔） */
+    workcard_ids: string;
+    /** 师傅id */
+    worker_id: number;
+    /** 师傅姓名 */
+    worker_name: string;
+  }
 }
 
 /** 网上法庭 */
