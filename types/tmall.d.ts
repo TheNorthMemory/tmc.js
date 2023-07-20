@@ -110,10 +110,10 @@ declare namespace Tmall.Fuwu {
   interface HomeDecorationSupplyRuleUpdate {
     /** 叶子类目名称 */
     category_name?: string;
-    /** 商家名称 */
-    seller_nick?: string;
-    /** servicecode名称 */
-    service_name: string;
+    /** servicecode */
+    service_code: string;
+    /** 店铺名称 */
+    shop_name?: string;
     /** 规则唯一编号 */
     unique_no: string;
     /** 更新时间 */
