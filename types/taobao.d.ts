@@ -1408,12 +1408,8 @@ declare namespace Taobao.Jzfx {
     created: Date | number | string;
     /** 分销商店铺昵称 */
     distributor_nick: string;
-    /** 采购单修改时间 */
-    modified: Date | number | string;
     /** 采购单号 */
     purchase_id: number;
-    /** 采购单状态 */
-    status: string;
     /** 供应商店铺昵称 */
     supplier_nick: string;
     /** 交易主订单号 */
