@@ -1407,14 +1407,70 @@ declare namespace Taobao.Jzfx {
     /** 采购单创建时间 */
     created: Date | number | string;
     /** 分销商店铺昵称 */
-    distributor_nick: string;
+    distributor_shop_name: string;
     /** 采购单号 */
     purchase_id: number;
     /** 供应商店铺昵称 */
-    supplier_nick: string;
+    supplier_shop_name: string;
     /** 交易主订单号 */
     tc_order_id: number;
     /** 交易子订单号 */
+    tc_sub_order_id: number;
+  }
+
+  /** 家装分销_采购单状态修改 */
+  interface PurchaseOrderStatusModify {
+    /** 分销商店铺昵称 */
+    distributor_shop_name: string;
+    /** 采购单修改时间 */
+    modified: Date | number | string;
+    /** 采购单号 */
+    purchase_id: number;
+    /** 采购单状态，WAIT_SELLER_SEND_GOODS(等待发货) WAIT_SELLER_SEND_GOODS(待确认收款) WAIT_BUYER_PAY(等待付款) WAIT_BUYER_CONFIRM_GOODS(已发货) TRADE_REFUNDING(退款中) TRADE_FINISHED(交易成功) TRADE_CLOSED(已关闭) TRADE_REFUNDED(已退款) */
+    status: string;
+    /** 供应商店铺昵称 */
+    supplier_shop_name: string;
+    /** 交易主订单号 */
+    tc_order_id: number;
+    /** 交易子订单号 */
+    tc_sub_order_id: number;
+  }
+
+  /** 家装分销_采购逆向单创建 */
+  interface PurchaseReverseOrderCreate {
+    /** 修改时间 */
+    created: Date | number | string;
+    /** 分销商店铺名称 */
+    distributor_shop_name: string;
+    /** 采购单ID */
+    purchase_id: number;
+    /** 采购逆向单ID */
+    purchase_reverse_id: number;
+    /** 供应商店铺名称 */
+    supplier_shop_name: string;
+    /** 淘宝主订单ID */
+    tc_order_id: number;
+    /** 淘宝子订单ID */
+    tc_sub_order_id: number;
+  }
+
+  /** 家装分销_采购逆向单状态修改 */
+  interface PurchaseReverseOrderStatusModify {
+    /** 分销商店铺名称 */
+    distributor_shop_name: string;
+    /** 修改时间 */
+    modified: Date | number | string;
+    /** 采购单ID */
+    purchase_id: number;
+    /** 采购逆向单ID */
+    purchase_reverse_id: number;
+    /** 采购逆向单状态，INIT(消费者发起退款申请) AGREE(分销商同意退货中) REFUND(退款完成) SETTLE(退款结算完成) CLOSED(退款关闭) */
+    status: string;
+    /** 供应商店铺名称 */
+    supplier_shop_name: string;
+    /** 淘宝主订单ID */
+    tc_order_id: number;
+    /** 淘宝子订单ID */
     tc_sub_order_id: number;
   }
 }

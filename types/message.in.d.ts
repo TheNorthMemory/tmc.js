@@ -367,6 +367,8 @@ declare namespace IncomingMessage {
   type IdleAppraiseisvRefundSyn = Message & { content?: MessageContent & { topic?: 'idle_appraiseisv_RefundSyn', content?: string | Idle.Appraiseisv.RefundSyn } };
   /** {@link Idle.Autotrade.OrderStateSync 闲鱼 > 闲鱼AutoTrade订单状态变更消息} */
   type IdleAutotradeOrderStateSync = Message & { content?: MessageContent & { topic?: 'idle_autotrade_OrderStateSync', content?: string | Idle.Autotrade.OrderStateSync } };
+  /** {@link Idle.Autotrade.RefundSync 闲鱼 > 闲鱼AutoTrade逆向退款消息} */
+  type IdleAutotradeRefundSync = Message & { content?: MessageContent & { topic?: 'idle_autotrade_RefundSync', content?: string | Idle.Autotrade.RefundSync } };
   /** {@link Idle.Consignment.OrderSyn 闲鱼回收商消息 > 闲鱼帮卖订单履约状态同步} */
   type IdleConsignmentOrderSyn = Message & { content?: MessageContent & { topic?: 'idle_consignment_OrderSyn', content?: string | Idle.Consignment.OrderSyn } };
   /** {@link Idle.Consignmentii.OrderSyn 闲鱼回收商消息 > 闲鱼寄卖V2订单履约状态同步} */
@@ -583,6 +585,12 @@ declare namespace IncomingMessage {
   type TaobaoJipiaoSellerRefundOrderNotify = Message & { content?: MessageContent & { topic?: 'taobao_jipiao_SellerRefundOrderNotify', content?: string | Taobao.Jipiao.SellerRefundOrderNotify } };
   /** {@link Taobao.Jzfx.PurchaseOrderCreate 淘宝分销 > 家装分销_采购单创建} */
   type TaobaoJzfxPurchaseOrderCreate = Message & { content?: MessageContent & { topic?: 'taobao_jzfx_PurchaseOrderCreate', content?: string | Taobao.Jzfx.PurchaseOrderCreate } };
+  /** {@link Taobao.Jzfx.PurchaseOrderStatusModify 淘宝分销 > 家装分销_采购单状态修改} */
+  type TaobaoJzfxPurchaseOrderStatusModify = Message & { content?: MessageContent & { topic?: 'taobao_jzfx_PurchaseOrderStatusModify', content?: string | Taobao.Jzfx.PurchaseOrderStatusModify } };
+  /** {@link Taobao.Jzfx.PurchaseReverseOrderCreate 淘宝分销 > 家装分销_采购逆向单创建} */
+  type TaobaoJzfxPurchaseReverseOrderCreate = Message & { content?: MessageContent & { topic?: 'taobao_jzfx_PurchaseReverseOrderCreate', content?: string | Taobao.Jzfx.PurchaseReverseOrderCreate } };
+  /** {@link Taobao.Jzfx.PurchaseReverseOrderStatusModify 淘宝分销 > 家装分销_采购逆向单状态修改} */
+  type TaobaoJzfxPurchaseReverseOrderStatusModify = Message & { content?: MessageContent & { topic?: 'taobao_jzfx_PurchaseReverseOrderStatusModify', content?: string | Taobao.Jzfx.PurchaseReverseOrderStatusModify } };
   /** {@link Taobao.Live.AgencyItemChanged 淘宝直播API > 直播严选机构商品池变化通知} */
   type TaobaoLiveAgencyItemChanged = Message & { content?: MessageContent & { topic?: 'taobao_live_AgencyItemChanged', content?: string | Taobao.Live.AgencyItemChanged } };
   /** {@link Taobao.Live.FeedRelated 淘宝直播API > 淘宝直播上下播消息} */
@@ -1379,8 +1387,10 @@ declare namespace IncomingMessage {
     | IdleAppraiseisvRefundSyn;
   /**
    * - {@link IdleAutotradeOrderStateSync 闲鱼 > 闲鱼AutoTrade订单状态变更消息}
+   * - {@link IdleAutotradeRefundSync 闲鱼 > 闲鱼AutoTrade逆向退款消息}
    */
-  type IdleAutotrade = IdleAutotradeOrderStateSync;
+  type IdleAutotrade = IdleAutotradeOrderStateSync
+    | IdleAutotradeRefundSync;
   /**
    * - {@link IdleConsignmentOrderSyn 闲鱼回收商消息 > 闲鱼帮卖订单履约状态同步}
    */
@@ -1661,8 +1671,14 @@ declare namespace IncomingMessage {
     | TaobaoJipiaoSellerRefundOrderNotify;
   /**
    * - {@link TaobaoJzfxPurchaseOrderCreate 淘宝分销 > 家装分销_采购单创建}
+   * - {@link TaobaoJzfxPurchaseOrderStatusModify 淘宝分销 > 家装分销_采购单状态修改}
+   * - {@link TaobaoJzfxPurchaseReverseOrderCreate 淘宝分销 > 家装分销_采购逆向单创建}
+   * - {@link TaobaoJzfxPurchaseReverseOrderStatusModify 淘宝分销 > 家装分销_采购逆向单状态修改}
    */
-  type TaobaoJzfx = TaobaoJzfxPurchaseOrderCreate;
+  type TaobaoJzfx = TaobaoJzfxPurchaseOrderCreate
+    | TaobaoJzfxPurchaseOrderStatusModify
+    | TaobaoJzfxPurchaseReverseOrderCreate
+    | TaobaoJzfxPurchaseReverseOrderStatusModify;
   /**
    * - {@link TaobaoLiveAgencyItemChanged 淘宝直播API > 直播严选机构商品池变化通知}
    * - {@link TaobaoLiveFeedRelated 淘宝直播API > 淘宝直播上下播消息}

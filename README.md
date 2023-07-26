@@ -134,14 +134,14 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 
 ## 支持的TOPICS
 
-<details><summary>共计 83+ 类别，476+ 消息数</summary>
+<details><summary>共计 83+ 类别，480+ 消息数</summary>
 
 | 类别 | 消息数 |
 | --- | --- |
 | 淘宝交易 | 23 |
 | 淘宝退款 | 13 |
 | 淘宝商品 | 13 |
-| 淘宝分销 | 24 |
+| 淘宝分销 | 27 |
 | 淘宝点点 | 12 |
 | 淘宝火车票 | 5 |
 | 平台消息 | 9 |
@@ -170,7 +170,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | AE-交易 | 10 |
 | 五道口配送 | 5 |
 | 百川 | 2 |
-| 闲鱼 | 15 |
+| 闲鱼 | 16 |
 | 闲鱼回收商消息 | 6 |
 | 零售通POS开放平台消息 | 4 |
 | DPAAS | 6 |

@@ -406,6 +406,8 @@ declare interface TaoTopicsDescriptor {
   idle_appraiseisv_RefundSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleAppraiseisvRefundSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleAutotradeOrderStateSync 闲鱼 > 闲鱼AutoTrade订单状态变更消息} */
   idle_autotrade_OrderStateSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleAutotradeOrderStateSync) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleAutotradeRefundSync 闲鱼 > 闲鱼AutoTrade逆向退款消息} */
+  idle_autotrade_RefundSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleAutotradeRefundSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleConsignmentOrderSyn 闲鱼回收商消息 > 闲鱼帮卖订单履约状态同步} */
   idle_consignment_OrderSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleConsignmentOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleConsignmentiiOrderSyn 闲鱼回收商消息 > 闲鱼寄卖V2订单履约状态同步} */
@@ -622,6 +624,12 @@ declare interface TaoTopicsDescriptor {
   taobao_jipiao_SellerRefundOrderNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJipiaoSellerRefundOrderNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoJzfxPurchaseOrderCreate 淘宝分销 > 家装分销_采购单创建} */
   taobao_jzfx_PurchaseOrderCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJzfxPurchaseOrderCreate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoJzfxPurchaseOrderStatusModify 淘宝分销 > 家装分销_采购单状态修改} */
+  taobao_jzfx_PurchaseOrderStatusModify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJzfxPurchaseOrderStatusModify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoJzfxPurchaseReverseOrderCreate 淘宝分销 > 家装分销_采购逆向单创建} */
+  taobao_jzfx_PurchaseReverseOrderCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJzfxPurchaseReverseOrderCreate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoJzfxPurchaseReverseOrderStatusModify 淘宝分销 > 家装分销_采购逆向单状态修改} */
+  taobao_jzfx_PurchaseReverseOrderStatusModify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJzfxPurchaseReverseOrderStatusModify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLiveAgencyItemChanged 淘宝直播API > 直播严选机构商品池变化通知} */
   taobao_live_AgencyItemChanged(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLiveAgencyItemChanged) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLiveFeedRelated 淘宝直播API > 淘宝直播上下播消息} */
@@ -1631,6 +1639,8 @@ declare interface TaoEventsListener {
   on(topic: 'idle_appraiseisv_RefundSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleAppraiseisvRefundSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleAutotradeOrderStateSync 闲鱼 > 闲鱼AutoTrade订单状态变更消息} */
   on(topic: 'idle_autotrade_OrderStateSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleAutotradeOrderStateSync) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleAutotradeRefundSync 闲鱼 > 闲鱼AutoTrade逆向退款消息} */
+  on(topic: 'idle_autotrade_RefundSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleAutotradeRefundSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleConsignmentOrderSyn 闲鱼回收商消息 > 闲鱼帮卖订单履约状态同步} */
   on(topic: 'idle_consignment_OrderSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleConsignmentOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleConsignmentiiOrderSyn 闲鱼回收商消息 > 闲鱼寄卖V2订单履约状态同步} */
@@ -1847,6 +1857,12 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_jipiao_SellerRefundOrderNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJipiaoSellerRefundOrderNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoJzfxPurchaseOrderCreate 淘宝分销 > 家装分销_采购单创建} */
   on(topic: 'taobao_jzfx_PurchaseOrderCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJzfxPurchaseOrderCreate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoJzfxPurchaseOrderStatusModify 淘宝分销 > 家装分销_采购单状态修改} */
+  on(topic: 'taobao_jzfx_PurchaseOrderStatusModify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJzfxPurchaseOrderStatusModify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoJzfxPurchaseReverseOrderCreate 淘宝分销 > 家装分销_采购逆向单创建} */
+  on(topic: 'taobao_jzfx_PurchaseReverseOrderCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJzfxPurchaseReverseOrderCreate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoJzfxPurchaseReverseOrderStatusModify 淘宝分销 > 家装分销_采购逆向单状态修改} */
+  on(topic: 'taobao_jzfx_PurchaseReverseOrderStatusModify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJzfxPurchaseReverseOrderStatusModify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLiveAgencyItemChanged 淘宝直播API > 直播严选机构商品池变化通知} */
   on(topic: 'taobao_live_AgencyItemChanged', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLiveAgencyItemChanged) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLiveFeedRelated 淘宝直播API > 淘宝直播上下播消息} */

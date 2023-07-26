@@ -67,6 +67,18 @@ declare namespace Idle.Autotrade {
     /** 交易产品业务标识 */
     x_global_biz_code: string;
   }
+
+  /** 闲鱼AutoTrade逆向退款消息 */
+  interface RefundSync {
+    /** 订单id */
+    order_id: number;
+    /** 订单状态;1: 买家已经申请退款，等待卖家同意, 2: 卖家已经同意退款，等待买家退货, 3: 买家已经退货，等待卖家确认收货, 4: 退款关闭, 5: 退款成功, 6: 卖家拒绝退款, 8: 等待卖家确认退货地址, 9: 没有申请退款, 11: 退款结束。 */
+    order_status: string;
+    /** 订单子状态 */
+    order_sub_status: string;
+    /** 业务标识 */
+    x_global_biz_code: string;
+  }
 }
 
 /** 闲鱼回收商消息 */
