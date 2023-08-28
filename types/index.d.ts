@@ -84,6 +84,8 @@ declare interface TaoTopicsDescriptor {
   alibaba_alihealth_TradeOrderStatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthTradeOrderStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAlihealthTradeVaccineSubscribeChange 阿里健康追溯码 > 疫苗交易预约信息变动} */
   alibaba_alihealth_TradeVaccineSubscribeChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthTradeVaccineSubscribeChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaAlihealthVcRegisterCancel 阿里健康追溯码 > 用户取消订阅缺苗登记同步isv} */
+  alibaba_alihealth_VcRegisterCancel(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthVcRegisterCancel) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAlinkDeviceDataPush 阿里物联 > 设备数据推送} */
   alibaba_alink_DeviceDataPush(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlinkDeviceDataPush) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAlinkDeviceMessage 阿里物联 > 设备报警消息} */
@@ -1317,6 +1319,8 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_alihealth_TradeOrderStatusChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthTradeOrderStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAlihealthTradeVaccineSubscribeChange 阿里健康追溯码 > 疫苗交易预约信息变动} */
   on(topic: 'alibaba_alihealth_TradeVaccineSubscribeChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthTradeVaccineSubscribeChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaAlihealthVcRegisterCancel 阿里健康追溯码 > 用户取消订阅缺苗登记同步isv} */
+  on(topic: 'alibaba_alihealth_VcRegisterCancel', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthVcRegisterCancel) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAlinkDeviceDataPush 阿里物联 > 设备数据推送} */
   on(topic: 'alibaba_alink_DeviceDataPush', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlinkDeviceDataPush) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAlinkDeviceMessage 阿里物联 > 设备报警消息} */

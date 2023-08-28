@@ -147,6 +147,16 @@ declare namespace Alibaba.Alihealth {
     /** 预约记录主键 */
     subscribe_id: string;
   }
+
+  /** 用户取消订阅缺苗登记同步isv */
+  interface VcRegisterCancel {
+    /** 消息id */
+    message_id: string;
+    /** 消息类型 */
+    msg_type: string;
+    /** 对外登记单id */
+    outer_register_id: string;
+  }
 }
 
 /** 阿里物联 */

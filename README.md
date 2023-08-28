@@ -134,7 +134,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 
 ## 支持的TOPICS
 
-<details><summary>共计 83+ 类别，480+ 消息数</summary>
+<details><summary>共计 83+ 类别，481+ 消息数</summary>
 
 | 类别 | 消息数 |
 | --- | --- |
@@ -220,7 +220,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | 代发管理 | 2 |
 | 蚂蚁采购 | 1 |
 | 阿里健康&一树-电商中台对接 | 2 |
-| 阿里健康-疫苗 | 1 |
+| 阿里健康-疫苗 | 2 |
 
 </details>
 

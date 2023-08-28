@@ -45,6 +45,8 @@ declare namespace IncomingMessage {
   type AlibabaAlihealthTradeOrderStatusChange = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_TradeOrderStatusChange', content?: string | Alibaba.Alihealth.TradeOrderStatusChange } };
   /** {@link Alibaba.Alihealth.TradeVaccineSubscribeChange 阿里健康追溯码 > 疫苗交易预约信息变动} */
   type AlibabaAlihealthTradeVaccineSubscribeChange = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_TradeVaccineSubscribeChange', content?: string | Alibaba.Alihealth.TradeVaccineSubscribeChange } };
+  /** {@link Alibaba.Alihealth.VcRegisterCancel 阿里健康追溯码 > 用户取消订阅缺苗登记同步isv} */
+  type AlibabaAlihealthVcRegisterCancel = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_VcRegisterCancel', content?: string | Alibaba.Alihealth.VcRegisterCancel } };
   /** {@link Alibaba.Alink.DeviceDataPush 阿里物联 > 设备数据推送} */
   type AlibabaAlinkDeviceDataPush = Message & { content?: MessageContent & { topic?: 'alibaba_alink_DeviceDataPush', content?: string | Alibaba.Alink.DeviceDataPush } };
   /** {@link Alibaba.Alink.DeviceMessage 阿里物联 > 设备报警消息} */
@@ -952,13 +954,15 @@ declare namespace IncomingMessage {
    * - {@link AlibabaAlihealthOrderStatusChange 阿里健康追溯码 > 平台通知三方机构"订单状态变更"}
    * - {@link AlibabaAlihealthTradeOrderStatusChange 阿里健康追溯码 > O2O订单状态变更通知}
    * - {@link AlibabaAlihealthTradeVaccineSubscribeChange 阿里健康追溯码 > 疫苗交易预约信息变动}
+   * - {@link AlibabaAlihealthVcRegisterCancel 阿里健康追溯码 > 用户取消订阅缺苗登记同步isv}
    */
   type AlibabaAlihealth = AlibabaAlihealthBillProcessStatusNotify
     | AlibabaAlihealthDoctorMessage
     | AlibabaAlihealthNrmopOrderStatusChange
     | AlibabaAlihealthOrderStatusChange
     | AlibabaAlihealthTradeOrderStatusChange
-    | AlibabaAlihealthTradeVaccineSubscribeChange;
+    | AlibabaAlihealthTradeVaccineSubscribeChange
+    | AlibabaAlihealthVcRegisterCancel;
   /**
    * - {@link AlibabaAlinkDeviceDataPush 阿里物联 > 设备数据推送}
    * - {@link AlibabaAlinkDeviceMessage 阿里物联 > 设备报警消息}
