@@ -1426,7 +1426,7 @@ declare namespace Taobao.Jzfx {
     modified: Date | number | string;
     /** 采购单号 */
     purchase_id: number;
-    /** 采购单状态，WAIT_SELLER_SEND_GOODS(等待发货) WAIT_SELLER_SEND_GOODS(待确认收款) WAIT_BUYER_PAY(等待付款) WAIT_BUYER_CONFIRM_GOODS(已发货) TRADE_REFUNDING(退款中) TRADE_FINISHED(交易成功) TRADE_CLOSED(已关闭) TRADE_REFUNDED(已退款) */
+    /** 采购单状态：WAIT_BUYER_PAY(待付款) WAIT_SELLER_SEND_GOODS(待发货) WAIT_BUYER_CONFIRM_GOODS(待收货确认) WAIT_SETTLE(已收货待结算) SETTLE_IN_PROGRESS(结算中) TRADE_FINISHED(交易成功) TRADE_CLOSED(已关闭) */
     status: string;
     /** 供应商店铺昵称 */
     supplier_shop_name: string;
