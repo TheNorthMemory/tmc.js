@@ -202,6 +202,8 @@ declare interface TaoTopicsDescriptor {
   alibaba_mos_SaleOrder(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMosSaleOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaMosSaleOrderRefund 银泰开放平台消息 > 销售单退款消息} */
   alibaba_mos_SaleOrderRefund(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMosSaleOrderRefund) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaMsdSettlementBillDetail 天猫服务 > 喵速达服务供应链结算单明细消息} */
+  alibaba_msd_SettlementBillDetail(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMsdSettlementBillDetail) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaMsfserviceAuditCreate 天猫服务 > 喵师傅审核单通知} */
   alibaba_msfservice_AuditCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMsfserviceAuditCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaMsfserviceReminderCreate 天猫服务 > 催单消息} */
@@ -1002,6 +1004,8 @@ declare interface TaoTopicsDescriptor {
   alibaba_monitor(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMonitor) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaMos} */
   alibaba_mos(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMos) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaMsd} */
+  alibaba_msd(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMsd) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaMsfservice} */
   alibaba_msfservice(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMsfservice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaNazca} */
@@ -1437,6 +1441,8 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_mos_SaleOrder', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMosSaleOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaMosSaleOrderRefund 银泰开放平台消息 > 销售单退款消息} */
   on(topic: 'alibaba_mos_SaleOrderRefund', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMosSaleOrderRefund) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaMsdSettlementBillDetail 天猫服务 > 喵速达服务供应链结算单明细消息} */
+  on(topic: 'alibaba_msd_SettlementBillDetail', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMsdSettlementBillDetail) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaMsfserviceAuditCreate 天猫服务 > 喵师傅审核单通知} */
   on(topic: 'alibaba_msfservice_AuditCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMsfserviceAuditCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaMsfserviceReminderCreate 天猫服务 > 催单消息} */
@@ -2237,6 +2243,8 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_monitor', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMonitor) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaMos} */
   on(topic: 'alibaba_mos', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMos) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaMsd} */
+  on(topic: 'alibaba_msd', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMsd) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaMsfservice} */
   on(topic: 'alibaba_msfservice', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMsfservice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaNazca} */

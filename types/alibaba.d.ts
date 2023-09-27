@@ -1099,6 +1099,21 @@ declare namespace Alibaba.Mos {
 }
 
 /** 天猫服务 */
+declare namespace Alibaba.Msd {
+  /** 喵速达服务供应链结算单明细消息 */
+  interface SettlementBillDetail {
+    /** 支付流水号 */
+    alipayOrderId: string;
+    /** 结算金额 */
+    amount: string;
+    /** 服务交易订单id */
+    serviceTradeOrderId: number;
+    /** 服务单id */
+    spServiceOrderId: number;
+  }
+}
+
+/** 天猫服务 */
 declare namespace Alibaba.Msfservice {
   /** 喵师傅审核单通知 */
   interface AuditCreate {

@@ -163,6 +163,8 @@ declare namespace IncomingMessage {
   type AlibabaMosSaleOrder = Message & { content?: MessageContent & { topic?: 'alibaba_mos_SaleOrder', content?: string | Alibaba.Mos.SaleOrder } };
   /** {@link Alibaba.Mos.SaleOrderRefund 银泰开放平台消息 > 销售单退款消息} */
   type AlibabaMosSaleOrderRefund = Message & { content?: MessageContent & { topic?: 'alibaba_mos_SaleOrderRefund', content?: string | Alibaba.Mos.SaleOrderRefund } };
+  /** {@link Alibaba.Msd.SettlementBillDetail 天猫服务 > 喵速达服务供应链结算单明细消息} */
+  type AlibabaMsdSettlementBillDetail = Message & { content?: MessageContent & { topic?: 'alibaba_msd_SettlementBillDetail', content?: string | Alibaba.Msd.SettlementBillDetail } };
   /** {@link Alibaba.Msfservice.AuditCreate 天猫服务 > 喵师傅审核单通知} */
   type AlibabaMsfserviceAuditCreate = Message & { content?: MessageContent & { topic?: 'alibaba_msfservice_AuditCreate', content?: string | Alibaba.Msfservice.AuditCreate } };
   /** {@link Alibaba.Msfservice.ReminderCreate 天猫服务 > 催单消息} */
@@ -1101,6 +1103,10 @@ declare namespace IncomingMessage {
    */
   type AlibabaMos = AlibabaMosSaleOrder
     | AlibabaMosSaleOrderRefund;
+  /**
+   * - {@link AlibabaMsdSettlementBillDetail 天猫服务 > 喵速达服务供应链结算单明细消息}
+   */
+  type AlibabaMsd = AlibabaMsdSettlementBillDetail;
   /**
    * - {@link AlibabaMsfserviceAuditCreate 天猫服务 > 喵师傅审核单通知}
    * - {@link AlibabaMsfserviceReminderCreate 天猫服务 > 催单消息}
@@ -2134,6 +2140,7 @@ declare namespace IncomingMessage {
    * - {@link AlibabaMmc}
    * - {@link AlibabaMonitor}
    * - {@link AlibabaMos}
+   * - {@link AlibabaMsd}
    * - {@link AlibabaMsfservice}
    * - {@link AlibabaNazca}
    * - {@link AlibabaNlife}
@@ -2163,6 +2170,7 @@ declare namespace IncomingMessage {
     | AlibabaMmc
     | AlibabaMonitor
     | AlibabaMos
+    | AlibabaMsd
     | AlibabaMsfservice
     | AlibabaNazca
     | AlibabaNlife
