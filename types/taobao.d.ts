@@ -843,6 +843,14 @@ declare namespace Taobao.Fuwu {
     version_no?: number;
   }
 
+  /** 以旧换新取送一体服务最终决策通知 */
+  interface RecycleFinalService {
+    /** 是否取送一体，1表示取送一体，0表示非取送一体 */
+    old_and_new_together: string;
+    /** 回收单ID */
+    recycle_order_id: string;
+  }
+
   /** 服务开通消息 */
   interface ServiceOpen {
     /** 应用收费代码，从服务商后台（i.fuwu.taobao.com）-收费管理-收费项目列表 能够获得该应用的收费代码 */

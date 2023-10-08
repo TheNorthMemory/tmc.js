@@ -527,6 +527,8 @@ declare namespace IncomingMessage {
   type TaobaoFuwuOrderCreated = Message & { content?: MessageContent & { topic?: 'taobao_fuwu_OrderCreated', content?: string | Taobao.Fuwu.OrderCreated } };
   /** {@link Taobao.Fuwu.OrderPaid 淘宝交易 > 订单支付消息} */
   type TaobaoFuwuOrderPaid = Message & { content?: MessageContent & { topic?: 'taobao_fuwu_OrderPaid', content?: string | Taobao.Fuwu.OrderPaid } };
+  /** {@link Taobao.Fuwu.RecycleFinalService 淘宝交易 > 以旧换新取送一体服务最终决策通知} */
+  type TaobaoFuwuRecycleFinalService = Message & { content?: MessageContent & { topic?: 'taobao_fuwu_RecycleFinalService', content?: string | Taobao.Fuwu.RecycleFinalService } };
   /** {@link Taobao.Fuwu.ServiceOpen 淘宝交易 > 服务开通消息} */
   type TaobaoFuwuServiceOpen = Message & { content?: MessageContent & { topic?: 'taobao_fuwu_ServiceOpen', content?: string | Taobao.Fuwu.ServiceOpen } };
   /** {@link Taobao.Fuwu.WitkeySyncModeling 淘宝交易 > 威客同步建模数据} */
@@ -1602,6 +1604,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoFuwuOrderClosed 淘宝交易 > 订单关闭消息}
    * - {@link TaobaoFuwuOrderCreated 淘宝交易 > 订单创建消息}
    * - {@link TaobaoFuwuOrderPaid 淘宝交易 > 订单支付消息}
+   * - {@link TaobaoFuwuRecycleFinalService 淘宝交易 > 以旧换新取送一体服务最终决策通知}
    * - {@link TaobaoFuwuServiceOpen 淘宝交易 > 服务开通消息}
    * - {@link TaobaoFuwuWitkeySyncModeling 淘宝交易 > 威客同步建模数据}
    */
@@ -1609,6 +1612,7 @@ declare namespace IncomingMessage {
     | TaobaoFuwuOrderClosed
     | TaobaoFuwuOrderCreated
     | TaobaoFuwuOrderPaid
+    | TaobaoFuwuRecycleFinalService
     | TaobaoFuwuServiceOpen
     | TaobaoFuwuWitkeySyncModeling;
   /**

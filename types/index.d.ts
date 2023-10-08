@@ -566,6 +566,8 @@ declare interface TaoTopicsDescriptor {
   taobao_fuwu_OrderCreated(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFuwuOrderCreated) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFuwuOrderPaid 淘宝交易 > 订单支付消息} */
   taobao_fuwu_OrderPaid(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFuwuOrderPaid) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoFuwuRecycleFinalService 淘宝交易 > 以旧换新取送一体服务最终决策通知} */
+  taobao_fuwu_RecycleFinalService(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFuwuRecycleFinalService) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFuwuServiceOpen 淘宝交易 > 服务开通消息} */
   taobao_fuwu_ServiceOpen(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFuwuServiceOpen) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFuwuWitkeySyncModeling 淘宝交易 > 威客同步建模数据} */
@@ -1805,6 +1807,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_fuwu_OrderCreated', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFuwuOrderCreated) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFuwuOrderPaid 淘宝交易 > 订单支付消息} */
   on(topic: 'taobao_fuwu_OrderPaid', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFuwuOrderPaid) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoFuwuRecycleFinalService 淘宝交易 > 以旧换新取送一体服务最终决策通知} */
+  on(topic: 'taobao_fuwu_RecycleFinalService', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFuwuRecycleFinalService) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFuwuServiceOpen 淘宝交易 > 服务开通消息} */
   on(topic: 'taobao_fuwu_ServiceOpen', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFuwuServiceOpen) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFuwuWitkeySyncModeling 淘宝交易 > 威客同步建模数据} */
