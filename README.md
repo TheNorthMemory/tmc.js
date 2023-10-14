@@ -134,7 +134,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 
 ## 支持的TOPICS
 
-<details><summary>共计 83+ 类别，483+ 消息数</summary>
+<details><summary>共计 84+ 类别，487+ 消息数</summary>
 
 | 类别 | 消息数 |
 | --- | --- |
@@ -143,14 +143,14 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | 淘宝商品 | 13 |
 | 淘宝分销 | 27 |
 | 淘宝点点 | 12 |
-| 淘宝火车票 | 5 |
+| 淘宝火车票 | 6 |
 | 平台消息 | 9 |
 | 交易全链路 | 3 |
 | 淘宝机票 | 14 |
 | 导购平台 | 21 |
 | 淘宝汽车票 | 4 |
 | 服务市场 | 9 |
-| 天猫服务 | 24 |
+| 天猫服务 | 26 |
 | 天猫美妆 | 2 |
 | 聚石塔 | 9 |
 | 淘宝物流 | 1 |
@@ -221,6 +221,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | 蚂蚁采购 | 1 |
 | 阿里健康&一树-电商中台对接 | 2 |
 | 阿里健康-疫苗 | 2 |
+| 智能应用 | 1 |
 
 </details>
 

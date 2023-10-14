@@ -2311,6 +2311,22 @@ declare namespace Taobao.Smartapp {
     /** 订阅状态，ON:开启 ，OFF:关闭 */
     status: string;
   }
+
+  /** 智能应用服务登记数据变更消息 */
+  interface DataSync {
+    /** 智能应用ID */
+    app_id: number;
+    /** 操作类型，包含INSERT、UPDATE、DELETE */
+    operation_type: string;
+    /** 数据行id */
+    record_id: string;
+    /** 表id */
+    table_id: string;
+    /** 表中文名称 */
+    table_name: string;
+    /** 时间戳 */
+    timestamp: number;
+  }
 }
 
 /** 导购平台 */

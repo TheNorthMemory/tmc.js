@@ -34,7 +34,7 @@ declare namespace Alitrip.Btrip {
   /** 阿里商旅企业超标审批单提交消息 */
   interface ExceedApplySubmit {
     /** 商旅审批单号 */
-    apply_id: number;
+    readonly apply_id: number;
     /** 业务类型，3：超标审批，5：改签审批，6：退票审批 */
     biz_category: number;
     /** 第三方企业id */
@@ -179,6 +179,30 @@ declare namespace Alitrip.Train {
     train_no: string;
     /** 唯一标识uuid */
     uuid: string;
+  }
+
+  /** 飞猪火车票风控消息 */
+  interface RiskNotify {
+    /** 12306账号，可能为手机号/邮箱/唯一用户名 */
+    accountName: string;
+    /** 唯一标识 */
+    id: string;
+    /** 12306用户ID */
+    outUserId: string;
+    /** 协议类型，app或pc，一般仅app */
+    protocol: string;
+    /** 风控码 */
+    riskCode: string;
+    /** 风控消息类型、MARK_RISK 和 CLEAR_RISK */
+    riskTag: string;
+    /** 对应的解风控动作 */
+    solveAction: string;
+    /** 提示信息，指导用户行为 */
+    tips: string;
+    /** 用户淘宝ID */
+    userId: number;
+    /** 12306唯一用户名 */
+    userUniqName: string;
   }
 }
 

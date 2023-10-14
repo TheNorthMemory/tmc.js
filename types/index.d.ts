@@ -206,6 +206,8 @@ declare interface TaoTopicsDescriptor {
   alibaba_msd_SettlementBillDetail(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMsdSettlementBillDetail) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaMsfserviceAuditCreate 天猫服务 > 喵师傅审核单通知} */
   alibaba_msfservice_AuditCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMsfserviceAuditCreate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaMsfserviceExtrafeeRecordCreate 天猫服务 > 喵师傅收费单消息通知} */
+  alibaba_msfservice_ExtrafeeRecordCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMsfserviceExtrafeeRecordCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaMsfserviceReminderCreate 天猫服务 > 催单消息} */
   alibaba_msfservice_ReminderCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMsfserviceReminderCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaNazcaAbandonCert 网上法庭 > 作废存证消息接口} */
@@ -348,6 +350,8 @@ declare interface TaoTopicsDescriptor {
   alitrip_ietrade_RefundMsg(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlitripIetradeRefundMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlitripTrainAgentStopQuery 淘宝火车票 > 火车票车次状态变更消息} */
   alitrip_train_AgentStopQuery(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlitripTrainAgentStopQuery) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlitripTrainRiskNotify 淘宝火车票 > 飞猪火车票风控消息} */
+  alitrip_train_RiskNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlitripTrainRiskNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlitripTravelOrderChanged 航旅度假交易 > 飞猪度假交易订单状态变更消息} */
   alitrip_travel_OrderChanged(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlitripTravelOrderChanged) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlitripTravelPersonChanged 航旅度假交易 > 出行人信息变更消息} */
@@ -740,6 +744,8 @@ declare interface TaoTopicsDescriptor {
   taobao_rhino_DeviceStatus(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRhinoDeviceStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSmartappAppSubChange 平台消息 > 用户订阅变更消息} */
   taobao_smartapp_AppSubChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartappAppSubChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoSmartappDataSync 平台消息 > 智能应用服务登记数据变更消息} */
+  taobao_smartapp_DataSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartappDataSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTaeBaichuanAuctionChange 导购平台 > 商品信息变更} */
   taobao_tae_BaichuanAuctionChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTaeBaichuanAuctionChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTaeBaichuanTradeClosed 导购平台 > 交易关闭} */
@@ -890,6 +896,8 @@ declare interface TaoTopicsDescriptor {
   tmall_fuwu_AnomalyRecourseStatusUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuAnomalyRecourseStatusUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuElectricMaintenanceWorkCardComplete 天猫服务 > 天猫服务消电维修工单完结消息} */
   tmall_fuwu_ElectricMaintenanceWorkCardComplete(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuElectricMaintenanceWorkCardComplete) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallFuwuElectricWarrantyCodeStatusUpdate 天猫服务 > 天猫服务消电保修码状态变更} */
+  tmall_fuwu_ElectricWarrantyCodeStatusUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuElectricWarrantyCodeStatusUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuHomeDecorationSupplyRuleUpdate 天猫服务 > 天猫服务家装优质供给规则变更} */
   tmall_fuwu_HomeDecorationSupplyRuleUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuHomeDecorationSupplyRuleUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuLogisticsInfoMessage 天猫服务 > 服务供应链物流业务消息} */
@@ -1447,6 +1455,8 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_msd_SettlementBillDetail', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMsdSettlementBillDetail) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaMsfserviceAuditCreate 天猫服务 > 喵师傅审核单通知} */
   on(topic: 'alibaba_msfservice_AuditCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMsfserviceAuditCreate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaMsfserviceExtrafeeRecordCreate 天猫服务 > 喵师傅收费单消息通知} */
+  on(topic: 'alibaba_msfservice_ExtrafeeRecordCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMsfserviceExtrafeeRecordCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaMsfserviceReminderCreate 天猫服务 > 催单消息} */
   on(topic: 'alibaba_msfservice_ReminderCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaMsfserviceReminderCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaNazcaAbandonCert 网上法庭 > 作废存证消息接口} */
@@ -1589,6 +1599,8 @@ declare interface TaoEventsListener {
   on(topic: 'alitrip_ietrade_RefundMsg', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlitripIetradeRefundMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlitripTrainAgentStopQuery 淘宝火车票 > 火车票车次状态变更消息} */
   on(topic: 'alitrip_train_AgentStopQuery', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlitripTrainAgentStopQuery) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlitripTrainRiskNotify 淘宝火车票 > 飞猪火车票风控消息} */
+  on(topic: 'alitrip_train_RiskNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlitripTrainRiskNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlitripTravelOrderChanged 航旅度假交易 > 飞猪度假交易订单状态变更消息} */
   on(topic: 'alitrip_travel_OrderChanged', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlitripTravelOrderChanged) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlitripTravelPersonChanged 航旅度假交易 > 出行人信息变更消息} */
@@ -1981,6 +1993,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_rhino_DeviceStatus', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRhinoDeviceStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSmartappAppSubChange 平台消息 > 用户订阅变更消息} */
   on(topic: 'taobao_smartapp_AppSubChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartappAppSubChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoSmartappDataSync 平台消息 > 智能应用服务登记数据变更消息} */
+  on(topic: 'taobao_smartapp_DataSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartappDataSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTaeBaichuanAuctionChange 导购平台 > 商品信息变更} */
   on(topic: 'taobao_tae_BaichuanAuctionChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTaeBaichuanAuctionChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTaeBaichuanTradeClosed 导购平台 > 交易关闭} */
@@ -2131,6 +2145,8 @@ declare interface TaoEventsListener {
   on(topic: 'tmall_fuwu_AnomalyRecourseStatusUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuAnomalyRecourseStatusUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuElectricMaintenanceWorkCardComplete 天猫服务 > 天猫服务消电维修工单完结消息} */
   on(topic: 'tmall_fuwu_ElectricMaintenanceWorkCardComplete', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuElectricMaintenanceWorkCardComplete) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallFuwuElectricWarrantyCodeStatusUpdate 天猫服务 > 天猫服务消电保修码状态变更} */
+  on(topic: 'tmall_fuwu_ElectricWarrantyCodeStatusUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuElectricWarrantyCodeStatusUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuHomeDecorationSupplyRuleUpdate 天猫服务 > 天猫服务家装优质供给规则变更} */
   on(topic: 'tmall_fuwu_HomeDecorationSupplyRuleUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuHomeDecorationSupplyRuleUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuLogisticsInfoMessage 天猫服务 > 服务供应链物流业务消息} */

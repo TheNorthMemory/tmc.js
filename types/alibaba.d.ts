@@ -1151,6 +1151,26 @@ declare namespace Alibaba.Msfservice {
     worker_name: string;
   }
 
+  /** 喵师傅收费单消息通知 */
+  interface ExtrafeeRecordCreate {
+    /** 收费明细 */
+    content_detail: string;
+    /** 生成时间 */
+    gmt_create: Date | number | string;
+    /** 核销单id */
+    identify_task_id: number;
+    /** 总价 */
+    price: string;
+    /** 收费单id */
+    record_id: string;
+    /** 工单id */
+    workcard_ids: string;
+    /** 师傅id */
+    worker_id: number;
+    /** 师傅姓名 */
+    worker_name: string;
+  }
+
   /** 催单消息 */
   interface ReminderCreate {
     /** 渠道（0:商家端 1消费者端） */

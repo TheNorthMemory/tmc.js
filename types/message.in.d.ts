@@ -167,6 +167,8 @@ declare namespace IncomingMessage {
   type AlibabaMsdSettlementBillDetail = Message & { content?: MessageContent & { topic?: 'alibaba_msd_SettlementBillDetail', content?: string | Alibaba.Msd.SettlementBillDetail } };
   /** {@link Alibaba.Msfservice.AuditCreate 天猫服务 > 喵师傅审核单通知} */
   type AlibabaMsfserviceAuditCreate = Message & { content?: MessageContent & { topic?: 'alibaba_msfservice_AuditCreate', content?: string | Alibaba.Msfservice.AuditCreate } };
+  /** {@link Alibaba.Msfservice.ExtrafeeRecordCreate 天猫服务 > 喵师傅收费单消息通知} */
+  type AlibabaMsfserviceExtrafeeRecordCreate = Message & { content?: MessageContent & { topic?: 'alibaba_msfservice_ExtrafeeRecordCreate', content?: string | Alibaba.Msfservice.ExtrafeeRecordCreate } };
   /** {@link Alibaba.Msfservice.ReminderCreate 天猫服务 > 催单消息} */
   type AlibabaMsfserviceReminderCreate = Message & { content?: MessageContent & { topic?: 'alibaba_msfservice_ReminderCreate', content?: string | Alibaba.Msfservice.ReminderCreate } };
   /** {@link Alibaba.Nazca.AbandonCert 网上法庭 > 作废存证消息接口} */
@@ -309,6 +311,8 @@ declare namespace IncomingMessage {
   type AlitripIetradeRefundMsg = Message & { content?: MessageContent & { topic?: 'alitrip_ietrade_RefundMsg', content?: string | Alitrip.Ietrade.RefundMsg } };
   /** {@link Alitrip.Train.AgentStopQuery 淘宝火车票 > 火车票车次状态变更消息} */
   type AlitripTrainAgentStopQuery = Message & { content?: MessageContent & { topic?: 'alitrip_train_AgentStopQuery', content?: string | Alitrip.Train.AgentStopQuery } };
+  /** {@link Alitrip.Train.RiskNotify 淘宝火车票 > 飞猪火车票风控消息} */
+  type AlitripTrainRiskNotify = Message & { content?: MessageContent & { topic?: 'alitrip_train_RiskNotify', content?: string | Alitrip.Train.RiskNotify } };
   /** {@link Alitrip.Travel.OrderChanged 航旅度假交易 > 飞猪度假交易订单状态变更消息} */
   type AlitripTravelOrderChanged = Message & { content?: MessageContent & { topic?: 'alitrip_travel_OrderChanged', content?: string | Alitrip.Travel.OrderChanged } };
   /** {@link Alitrip.Travel.PersonChanged 航旅度假交易 > 出行人信息变更消息} */
@@ -701,6 +705,8 @@ declare namespace IncomingMessage {
   type TaobaoRhinoDeviceStatus = Message & { content?: MessageContent & { topic?: 'taobao_rhino_DeviceStatus', content?: string | Taobao.Rhino.DeviceStatus } };
   /** {@link Taobao.Smartapp.AppSubChange 平台消息 > 用户订阅变更消息} */
   type TaobaoSmartappAppSubChange = Message & { content?: MessageContent & { topic?: 'taobao_smartapp_AppSubChange', content?: string | Taobao.Smartapp.AppSubChange } };
+  /** {@link Taobao.Smartapp.DataSync 平台消息 > 智能应用服务登记数据变更消息} */
+  type TaobaoSmartappDataSync = Message & { content?: MessageContent & { topic?: 'taobao_smartapp_DataSync', content?: string | Taobao.Smartapp.DataSync } };
   /** {@link Taobao.Tae.BaichuanAuctionChange 导购平台 > 商品信息变更} */
   type TaobaoTaeBaichuanAuctionChange = Message & { content?: MessageContent & { topic?: 'taobao_tae_BaichuanAuctionChange', content?: string | Taobao.Tae.BaichuanAuctionChange } };
   /** {@link Taobao.Tae.BaichuanTradeClosed 导购平台 > 交易关闭} */
@@ -851,6 +857,8 @@ declare namespace IncomingMessage {
   type TmallFuwuAnomalyRecourseStatusUpdate = Message & { content?: MessageContent & { topic?: 'tmall_fuwu_AnomalyRecourseStatusUpdate', content?: string | Tmall.Fuwu.AnomalyRecourseStatusUpdate } };
   /** {@link Tmall.Fuwu.ElectricMaintenanceWorkCardComplete 天猫服务 > 天猫服务消电维修工单完结消息} */
   type TmallFuwuElectricMaintenanceWorkCardComplete = Message & { content?: MessageContent & { topic?: 'tmall_fuwu_ElectricMaintenanceWorkCardComplete', content?: string | Tmall.Fuwu.ElectricMaintenanceWorkCardComplete } };
+  /** {@link Tmall.Fuwu.ElectricWarrantyCodeStatusUpdate 天猫服务 > 天猫服务消电保修码状态变更} */
+  type TmallFuwuElectricWarrantyCodeStatusUpdate = Message & { content?: MessageContent & { topic?: 'tmall_fuwu_ElectricWarrantyCodeStatusUpdate', content?: string | Tmall.Fuwu.ElectricWarrantyCodeStatusUpdate } };
   /** {@link Tmall.Fuwu.HomeDecorationSupplyRuleUpdate 天猫服务 > 天猫服务家装优质供给规则变更} */
   type TmallFuwuHomeDecorationSupplyRuleUpdate = Message & { content?: MessageContent & { topic?: 'tmall_fuwu_HomeDecorationSupplyRuleUpdate', content?: string | Tmall.Fuwu.HomeDecorationSupplyRuleUpdate } };
   /** {@link Tmall.Fuwu.LogisticsInfoMessage 天猫服务 > 服务供应链物流业务消息} */
@@ -1111,9 +1119,11 @@ declare namespace IncomingMessage {
   type AlibabaMsd = AlibabaMsdSettlementBillDetail;
   /**
    * - {@link AlibabaMsfserviceAuditCreate 天猫服务 > 喵师傅审核单通知}
+   * - {@link AlibabaMsfserviceExtrafeeRecordCreate 天猫服务 > 喵师傅收费单消息通知}
    * - {@link AlibabaMsfserviceReminderCreate 天猫服务 > 催单消息}
    */
   type AlibabaMsfservice = AlibabaMsfserviceAuditCreate
+    | AlibabaMsfserviceExtrafeeRecordCreate
     | AlibabaMsfserviceReminderCreate;
   /**
    * - {@link AlibabaNazcaAbandonCert 网上法庭 > 作废存证消息接口}
@@ -1301,8 +1311,10 @@ declare namespace IncomingMessage {
     | AlitripIetradeRefundMsg;
   /**
    * - {@link AlitripTrainAgentStopQuery 淘宝火车票 > 火车票车次状态变更消息}
+   * - {@link AlitripTrainRiskNotify 淘宝火车票 > 飞猪火车票风控消息}
    */
-  type AlitripTrain = AlitripTrainAgentStopQuery;
+  type AlitripTrain = AlitripTrainAgentStopQuery
+    | AlitripTrainRiskNotify;
   /**
    * - {@link AlitripTravelOrderChanged 航旅度假交易 > 飞猪度假交易订单状态变更消息}
    * - {@link AlitripTravelPersonChanged 航旅度假交易 > 出行人信息变更消息}
@@ -1827,8 +1839,10 @@ declare namespace IncomingMessage {
   type TaobaoRhino = TaobaoRhinoDeviceStatus;
   /**
    * - {@link TaobaoSmartappAppSubChange 平台消息 > 用户订阅变更消息}
+   * - {@link TaobaoSmartappDataSync 平台消息 > 智能应用服务登记数据变更消息}
    */
-  type TaobaoSmartapp = TaobaoSmartappAppSubChange;
+  type TaobaoSmartapp = TaobaoSmartappAppSubChange
+    | TaobaoSmartappDataSync;
   /**
    * - {@link TaobaoTaeBaichuanAuctionChange 导购平台 > 商品信息变更}
    * - {@link TaobaoTaeBaichuanTradeClosed 导购平台 > 交易关闭}
@@ -2005,6 +2019,7 @@ declare namespace IncomingMessage {
    * - {@link TmallFuwuAnomalyRecourse 天猫服务 > 天猫服务平台一键求助单消息队列}
    * - {@link TmallFuwuAnomalyRecourseStatusUpdate 天猫服务 > 一键求助状态变更消息}
    * - {@link TmallFuwuElectricMaintenanceWorkCardComplete 天猫服务 > 天猫服务消电维修工单完结消息}
+   * - {@link TmallFuwuElectricWarrantyCodeStatusUpdate 天猫服务 > 天猫服务消电保修码状态变更}
    * - {@link TmallFuwuHomeDecorationSupplyRuleUpdate 天猫服务 > 天猫服务家装优质供给规则变更}
    * - {@link TmallFuwuLogisticsInfoMessage 天猫服务 > 服务供应链物流业务消息}
    * - {@link TmallFuwuRateMessageTP 天猫服务 > 消费者评价成功top消息}
@@ -2020,6 +2035,7 @@ declare namespace IncomingMessage {
   type TmallFuwu = TmallFuwuAnomalyRecourse
     | TmallFuwuAnomalyRecourseStatusUpdate
     | TmallFuwuElectricMaintenanceWorkCardComplete
+    | TmallFuwuElectricWarrantyCodeStatusUpdate
     | TmallFuwuHomeDecorationSupplyRuleUpdate
     | TmallFuwuLogisticsInfoMessage
     | TmallFuwuRateMessageTP

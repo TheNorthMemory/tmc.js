@@ -5,6 +5,6 @@ declare namespace Ascp.Insdustry {
     /** 取消原因 */
     reason: string;
     /** 服务单号 */
-    wds_coordination_order_id: string;
+    readonly wds_coordination_order_id: string;
   }
 }

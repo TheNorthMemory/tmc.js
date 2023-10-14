@@ -106,6 +106,16 @@ declare namespace Tmall.Fuwu {
     workcard_id: string;
   }
 
+  /** 天猫服务消电保修码状态变更 */
+  interface ElectricWarrantyCodeStatusUpdate {
+    /** 保修码OSS文件名 */
+    oss_file_name: string;
+    /** 保修码OSS文件下载链接 */
+    oss_file_url: string;
+    /** 保修码状态 */
+    status: string;
+  }
+
   /** 天猫服务家装优质供给规则变更 */
   interface HomeDecorationSupplyRuleUpdate {
     /** 叶子类目名称 */
