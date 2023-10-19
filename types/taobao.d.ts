@@ -2318,7 +2318,7 @@ declare namespace Taobao.Smartapp {
     app_id: number;
     /** 操作类型，包含INSERT、UPDATE、DELETE */
     operation_type: string;
-    /** 数据行id */
+    /** 表记录ID */
     record_id: string;
     /** 表id */
     table_id: string;
