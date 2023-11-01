@@ -974,6 +974,8 @@ declare interface TaoTopicsDescriptor {
   xianyu_recycle_OrderStatusSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuRecycleOrderStatusSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuRecycleSpuModifySync 闲鱼 > 闲鱼回收SPU变更消息} */
   xianyu_recycle_SpuModifySync(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuRecycleSpuModifySync) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.XianyuRegisterStatusChange 闲鱼 > 闲鱼SPU挂载上下线消息} */
+  xianyu_register_StatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuRegisterStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuTemplateQuesChange 闲鱼 > 闲鱼问卷变更} */
   xianyu_template_QuesChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuTemplateQuesChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuTemplateStatusChange 闲鱼 > 闲鱼问卷状态变更消息} */
@@ -1254,6 +1256,8 @@ declare interface TaoTopicsDescriptor {
   xianyu_car(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCar) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuRecycle} */
   xianyu_recycle(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuRecycle) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.XianyuRegister} */
+  xianyu_register(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuRegister) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuTemplate} */
   xianyu_template(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuTemplate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuTender} */
@@ -2223,6 +2227,8 @@ declare interface TaoEventsListener {
   on(topic: 'xianyu_recycle_OrderStatusSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuRecycleOrderStatusSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuRecycleSpuModifySync 闲鱼 > 闲鱼回收SPU变更消息} */
   on(topic: 'xianyu_recycle_SpuModifySync', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuRecycleSpuModifySync) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.XianyuRegisterStatusChange 闲鱼 > 闲鱼SPU挂载上下线消息} */
+  on(topic: 'xianyu_register_StatusChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuRegisterStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuTemplateQuesChange 闲鱼 > 闲鱼问卷变更} */
   on(topic: 'xianyu_template_QuesChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuTemplateQuesChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuTemplateStatusChange 闲鱼 > 闲鱼问卷状态变更消息} */
@@ -2503,6 +2509,8 @@ declare interface TaoEventsListener {
   on(topic: 'xianyu_car', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCar) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuRecycle} */
   on(topic: 'xianyu_recycle', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuRecycle) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.XianyuRegister} */
+  on(topic: 'xianyu_register', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuRegister) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuTemplate} */
   on(topic: 'xianyu_template', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuTemplate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuTender} */

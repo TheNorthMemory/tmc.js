@@ -141,6 +141,21 @@ declare namespace Xianyu.Recycle {
 }
 
 /** 闲鱼 */
+declare namespace Xianyu.Register {
+  /** 闲鱼SPU挂载上下线消息 */
+  interface StatusChange {
+    /** 业务英文编码，如HS-回收，BM-帮卖 */
+    pd_code: string;
+    /** 场景，如3C、3C_TENDER、BULKS */
+    scene_type: string;
+    /** spuId */
+    spu_id: string;
+    /** 状态英文编码，OFFLINE-下线，ONLINE-上线 */
+    status: string;
+  }
+}
+
+/** 闲鱼 */
 declare namespace Xianyu.Template {
   /** 闲鱼问卷变更 */
   interface QuesChange {

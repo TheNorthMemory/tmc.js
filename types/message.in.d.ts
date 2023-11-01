@@ -935,6 +935,8 @@ declare namespace IncomingMessage {
   type XianyuRecycleOrderStatusSync = Message & { content?: MessageContent & { topic?: 'xianyu_recycle_OrderStatusSync', content?: string | Xianyu.Recycle.OrderStatusSync } };
   /** {@link Xianyu.Recycle.SpuModifySync 闲鱼 > 闲鱼回收SPU变更消息} */
   type XianyuRecycleSpuModifySync = Message & { content?: MessageContent & { topic?: 'xianyu_recycle_SpuModifySync', content?: string | Xianyu.Recycle.SpuModifySync } };
+  /** {@link Xianyu.Register.StatusChange 闲鱼 > 闲鱼SPU挂载上下线消息} */
+  type XianyuRegisterStatusChange = Message & { content?: MessageContent & { topic?: 'xianyu_register_StatusChange', content?: string | Xianyu.Register.StatusChange } };
   /** {@link Xianyu.Template.QuesChange 闲鱼 > 闲鱼问卷变更} */
   type XianyuTemplateQuesChange = Message & { content?: MessageContent & { topic?: 'xianyu_template_QuesChange', content?: string | Xianyu.Template.QuesChange } };
   /** {@link Xianyu.Template.StatusChange 闲鱼 > 闲鱼问卷状态变更消息} */
@@ -2126,6 +2128,10 @@ declare namespace IncomingMessage {
   type XianyuRecycle = XianyuRecycleOrderStatusSync
     | XianyuRecycleSpuModifySync;
   /**
+   * - {@link XianyuRegisterStatusChange 闲鱼 > 闲鱼SPU挂载上下线消息}
+   */
+  type XianyuRegister = XianyuRegisterStatusChange;
+  /**
    * - {@link XianyuTemplateQuesChange 闲鱼 > 闲鱼问卷变更}
    * - {@link XianyuTemplateStatusChange 闲鱼 > 闲鱼问卷状态变更消息}
    */
@@ -2452,6 +2458,7 @@ declare namespace IncomingMessage {
    * - {@link XianyuAppraise}
    * - {@link XianyuCar}
    * - {@link XianyuRecycle}
+   * - {@link XianyuRegister}
    * - {@link XianyuTemplate}
    * - {@link XianyuTender}
    */
@@ -2459,6 +2466,7 @@ declare namespace IncomingMessage {
     | XianyuAppraise
     | XianyuCar
     | XianyuRecycle
+    | XianyuRegister
     | XianyuTemplate
     | XianyuTender;
   /**
