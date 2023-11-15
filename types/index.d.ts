@@ -234,6 +234,8 @@ declare interface TaoTopicsDescriptor {
   alibaba_nlife_InstorageDiffAuditNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaNlifeInstorageDiffAuditNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaNlifeItemUpdate 零售plus > 零售+商品变动消息} */
   alibaba_nlife_ItemUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaNlifeItemUpdate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaPurResourceOrderShipNotify 信息平台-采购 > 发货提醒} */
+  alibaba_pur_ResourceOrderShipNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaPurResourceOrderShipNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaServiceplatformFulfilTask 天猫服务 > 服务供应链核销单消息} */
   alibaba_serviceplatform_FulfilTask(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaServiceplatformFulfilTask) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaServiceplatformServiceOrder 天猫服务 > 服务供应链服务单消息} */
@@ -1024,6 +1026,8 @@ declare interface TaoTopicsDescriptor {
   alibaba_nazca(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaNazca) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaNlife} */
   alibaba_nlife(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaNlife) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaPur} */
+  alibaba_pur(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaPur) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaServiceplatform} */
   alibaba_serviceplatform(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaServiceplatform) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaSp} */
@@ -1487,6 +1491,8 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_nlife_InstorageDiffAuditNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaNlifeInstorageDiffAuditNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaNlifeItemUpdate 零售plus > 零售+商品变动消息} */
   on(topic: 'alibaba_nlife_ItemUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaNlifeItemUpdate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaPurResourceOrderShipNotify 信息平台-采购 > 发货提醒} */
+  on(topic: 'alibaba_pur_ResourceOrderShipNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaPurResourceOrderShipNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaServiceplatformFulfilTask 天猫服务 > 服务供应链核销单消息} */
   on(topic: 'alibaba_serviceplatform_FulfilTask', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaServiceplatformFulfilTask) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaServiceplatformServiceOrder 天猫服务 > 服务供应链服务单消息} */
@@ -2277,6 +2283,8 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_nazca', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaNazca) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaNlife} */
   on(topic: 'alibaba_nlife', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaNlife) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaPur} */
+  on(topic: 'alibaba_pur', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaPur) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaServiceplatform} */
   on(topic: 'alibaba_serviceplatform', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaServiceplatform) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaSp} */

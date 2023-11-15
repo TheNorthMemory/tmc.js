@@ -1382,6 +1382,19 @@ declare namespace Alibaba.Nlife {
   }
 }
 
+/** 信息平台-采购 */
+declare namespace Alibaba.Pur {
+  /** 发货提醒 */
+  interface ResourceOrderShipNotify {
+    /** 子订单 */
+    orderItems: string;
+    /** 平台订单号 */
+    orderNo: string;
+    /** 三方订单号 */
+    outOrderNo: string;
+  }
+}
+
 /** 天猫服务 */
 declare namespace Alibaba.Serviceplatform {
   /** 服务供应链核销单消息 */

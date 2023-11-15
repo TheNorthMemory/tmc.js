@@ -195,6 +195,8 @@ declare namespace IncomingMessage {
   type AlibabaNlifeInstorageDiffAuditNotify = Message & { content?: MessageContent & { topic?: 'alibaba_nlife_InstorageDiffAuditNotify', content?: string | Alibaba.Nlife.InstorageDiffAuditNotify } };
   /** {@link Alibaba.Nlife.ItemUpdate 零售plus > 零售+商品变动消息} */
   type AlibabaNlifeItemUpdate = Message & { content?: MessageContent & { topic?: 'alibaba_nlife_ItemUpdate', content?: string | Alibaba.Nlife.ItemUpdate } };
+  /** {@link Alibaba.Pur.ResourceOrderShipNotify 信息平台-采购 > 发货提醒} */
+  type AlibabaPurResourceOrderShipNotify = Message & { content?: MessageContent & { topic?: 'alibaba_pur_ResourceOrderShipNotify', content?: string | Alibaba.Pur.ResourceOrderShipNotify } };
   /** {@link Alibaba.Serviceplatform.FulfilTask 天猫服务 > 服务供应链核销单消息} */
   type AlibabaServiceplatformFulfilTask = Message & { content?: MessageContent & { topic?: 'alibaba_serviceplatform_FulfilTask', content?: string | Alibaba.Serviceplatform.FulfilTask } };
   /** {@link Alibaba.Serviceplatform.ServiceOrder 天猫服务 > 服务供应链服务单消息} */
@@ -1155,6 +1157,10 @@ declare namespace IncomingMessage {
     | AlibabaNlifeBtobTradeRefundNotify
     | AlibabaNlifeInstorageDiffAuditNotify
     | AlibabaNlifeItemUpdate;
+  /**
+   * - {@link AlibabaPurResourceOrderShipNotify 信息平台-采购 > 发货提醒}
+   */
+  type AlibabaPur = AlibabaPurResourceOrderShipNotify;
   /**
    * - {@link AlibabaServiceplatformFulfilTask 天猫服务 > 服务供应链核销单消息}
    * - {@link AlibabaServiceplatformServiceOrder 天猫服务 > 服务供应链服务单消息}
@@ -2170,6 +2176,7 @@ declare namespace IncomingMessage {
    * - {@link AlibabaMsfservice}
    * - {@link AlibabaNazca}
    * - {@link AlibabaNlife}
+   * - {@link AlibabaPur}
    * - {@link AlibabaServiceplatform}
    * - {@link AlibabaSp}
    * - {@link AlibabaTax}
@@ -2200,6 +2207,7 @@ declare namespace IncomingMessage {
     | AlibabaMsfservice
     | AlibabaNazca
     | AlibabaNlife
+    | AlibabaPur
     | AlibabaServiceplatform
     | AlibabaSp
     | AlibabaTax
