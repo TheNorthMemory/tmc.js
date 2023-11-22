@@ -634,6 +634,8 @@ declare interface TaoTopicsDescriptor {
   taobao_jipiao_SellerOrderNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJipiaoSellerOrderNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoJipiaoSellerRefundOrderNotify 淘宝机票 > 【机票代理商】退票订单通知} */
   taobao_jipiao_SellerRefundOrderNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJipiaoSellerRefundOrderNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoJipiaoUrgeIssueTicket 淘宝机票 > 催出票/拦截出票消息} */
+  taobao_jipiao_UrgeIssueTicket(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJipiaoUrgeIssueTicket) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoJzfxPurchaseOrderCreate 淘宝分销 > 家装分销_采购单创建} */
   taobao_jzfx_PurchaseOrderCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJzfxPurchaseOrderCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoJzfxPurchaseOrderStatusModify 淘宝分销 > 家装分销_采购单状态修改} */
@@ -1891,6 +1893,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_jipiao_SellerOrderNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJipiaoSellerOrderNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoJipiaoSellerRefundOrderNotify 淘宝机票 > 【机票代理商】退票订单通知} */
   on(topic: 'taobao_jipiao_SellerRefundOrderNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJipiaoSellerRefundOrderNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoJipiaoUrgeIssueTicket 淘宝机票 > 催出票/拦截出票消息} */
+  on(topic: 'taobao_jipiao_UrgeIssueTicket', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJipiaoUrgeIssueTicket) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoJzfxPurchaseOrderCreate 淘宝分销 > 家装分销_采购单创建} */
   on(topic: 'taobao_jzfx_PurchaseOrderCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJzfxPurchaseOrderCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoJzfxPurchaseOrderStatusModify 淘宝分销 > 家装分销_采购单状态修改} */

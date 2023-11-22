@@ -1406,6 +1406,16 @@ declare namespace Taobao.Jipiao {
     /** 机票订单id */
     order_id: number;
   }
+
+  /** 催出票/拦截出票消息 */
+  interface UrgeIssueTicket {
+    /** 代理商id */
+    agent_id: number;
+    /** 订单号 */
+    order_id: number;
+    /** 消息类型：0-催出票，1-拦截出票 */
+    send_type: number;
+  }
 }
 
 /** 淘宝分销 */

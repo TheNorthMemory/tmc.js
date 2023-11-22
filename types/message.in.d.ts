@@ -595,6 +595,8 @@ declare namespace IncomingMessage {
   type TaobaoJipiaoSellerOrderNotify = Message & { content?: MessageContent & { topic?: 'taobao_jipiao_SellerOrderNotify', content?: string | Taobao.Jipiao.SellerOrderNotify } };
   /** {@link Taobao.Jipiao.SellerRefundOrderNotify 淘宝机票 > 【机票代理商】退票订单通知} */
   type TaobaoJipiaoSellerRefundOrderNotify = Message & { content?: MessageContent & { topic?: 'taobao_jipiao_SellerRefundOrderNotify', content?: string | Taobao.Jipiao.SellerRefundOrderNotify } };
+  /** {@link Taobao.Jipiao.UrgeIssueTicket 淘宝机票 > 催出票/拦截出票消息} */
+  type TaobaoJipiaoUrgeIssueTicket = Message & { content?: MessageContent & { topic?: 'taobao_jipiao_UrgeIssueTicket', content?: string | Taobao.Jipiao.UrgeIssueTicket } };
   /** {@link Taobao.Jzfx.PurchaseOrderCreate 淘宝分销 > 家装分销_采购单创建} */
   type TaobaoJzfxPurchaseOrderCreate = Message & { content?: MessageContent & { topic?: 'taobao_jzfx_PurchaseOrderCreate', content?: string | Taobao.Jzfx.PurchaseOrderCreate } };
   /** {@link Taobao.Jzfx.PurchaseOrderStatusModify 淘宝分销 > 家装分销_采购单状态修改} */
@@ -1696,13 +1698,15 @@ declare namespace IncomingMessage {
    * - {@link TaobaoJipiaoJipiaoRefundOrderNotify 淘宝机票 > 机票退票订单状态推送}
    * - {@link TaobaoJipiaoSellerOrderNotify 淘宝机票 > 【机票代理商】订单通知}
    * - {@link TaobaoJipiaoSellerRefundOrderNotify 淘宝机票 > 【机票代理商】退票订单通知}
+   * - {@link TaobaoJipiaoUrgeIssueTicket 淘宝机票 > 催出票/拦截出票消息}
    */
   type TaobaoJipiao = TaobaoJipiaoAncillaryOrderPaid
     | TaobaoJipiaoJipiaoModifyOrderNotify
     | TaobaoJipiaoJipiaoOrderStatusNotify
     | TaobaoJipiaoJipiaoRefundOrderNotify
     | TaobaoJipiaoSellerOrderNotify
-    | TaobaoJipiaoSellerRefundOrderNotify;
+    | TaobaoJipiaoSellerRefundOrderNotify
+    | TaobaoJipiaoUrgeIssueTicket;
   /**
    * - {@link TaobaoJzfxPurchaseOrderCreate 淘宝分销 > 家装分销_采购单创建}
    * - {@link TaobaoJzfxPurchaseOrderStatusModify 淘宝分销 > 家装分销_采购单状态修改}
