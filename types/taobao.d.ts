@@ -406,6 +406,8 @@ declare namespace Taobao.Dpaas {
 declare namespace Taobao.Dv {
   /** 淘宝数字虚拟外放 */
   interface External {
+    /** json形式，里面包括bizType和业务信息 */
+    ext?: string;
     /** 外部订单号 */
     out_order_id: string;
     /** 0:进行中，1:成功，2:失败，9:不存在 */
