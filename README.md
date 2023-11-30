@@ -134,7 +134,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 
 ## 支持的TOPICS
 
-<details><summary>共计 84+ 类别，490+ 消息数</summary>
+<details><summary>共计 84+ 类别，491+ 消息数</summary>
 
 | 类别 | 消息数 |
 | --- | --- |
@@ -178,7 +178,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | 智慧门店下行消息 | 2 |
 | 渠道中心API | 4 |
 | 五道口订单 | 22 |
-| 信息平台-采购 | 2 |
+| 信息平台-采购 | 3 |
 | 1688服务市场 | 1 |
 | 酒店商品消息api | 9 |
 | 新零售终端下行消息 | 1 |

@@ -195,6 +195,8 @@ declare namespace IncomingMessage {
   type AlibabaNlifeInstorageDiffAuditNotify = Message & { content?: MessageContent & { topic?: 'alibaba_nlife_InstorageDiffAuditNotify', content?: string | Alibaba.Nlife.InstorageDiffAuditNotify } };
   /** {@link Alibaba.Nlife.ItemUpdate 零售plus > 零售+商品变动消息} */
   type AlibabaNlifeItemUpdate = Message & { content?: MessageContent & { topic?: 'alibaba_nlife_ItemUpdate', content?: string | Alibaba.Nlife.ItemUpdate } };
+  /** {@link Alibaba.Pur.ResourceOrderCancelNotify 信息平台-采购 > 取消订单结果通知} */
+  type AlibabaPurResourceOrderCancelNotify = Message & { content?: MessageContent & { topic?: 'alibaba_pur_ResourceOrderCancelNotify', content?: string | Alibaba.Pur.ResourceOrderCancelNotify } };
   /** {@link Alibaba.Pur.ResourceOrderShipNotify 信息平台-采购 > 发货提醒} */
   type AlibabaPurResourceOrderShipNotify = Message & { content?: MessageContent & { topic?: 'alibaba_pur_ResourceOrderShipNotify', content?: string | Alibaba.Pur.ResourceOrderShipNotify } };
   /** {@link Alibaba.Serviceplatform.FulfilTask 天猫服务 > 服务供应链核销单消息} */
@@ -1160,9 +1162,11 @@ declare namespace IncomingMessage {
     | AlibabaNlifeInstorageDiffAuditNotify
     | AlibabaNlifeItemUpdate;
   /**
+   * - {@link AlibabaPurResourceOrderCancelNotify 信息平台-采购 > 取消订单结果通知}
    * - {@link AlibabaPurResourceOrderShipNotify 信息平台-采购 > 发货提醒}
    */
-  type AlibabaPur = AlibabaPurResourceOrderShipNotify;
+  type AlibabaPur = AlibabaPurResourceOrderCancelNotify
+    | AlibabaPurResourceOrderShipNotify;
   /**
    * - {@link AlibabaServiceplatformFulfilTask 天猫服务 > 服务供应链核销单消息}
    * - {@link AlibabaServiceplatformServiceOrder 天猫服务 > 服务供应链服务单消息}

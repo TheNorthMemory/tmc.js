@@ -234,6 +234,8 @@ declare interface TaoTopicsDescriptor {
   alibaba_nlife_InstorageDiffAuditNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaNlifeInstorageDiffAuditNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaNlifeItemUpdate 零售plus > 零售+商品变动消息} */
   alibaba_nlife_ItemUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaNlifeItemUpdate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaPurResourceOrderCancelNotify 信息平台-采购 > 取消订单结果通知} */
+  alibaba_pur_ResourceOrderCancelNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaPurResourceOrderCancelNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaPurResourceOrderShipNotify 信息平台-采购 > 发货提醒} */
   alibaba_pur_ResourceOrderShipNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaPurResourceOrderShipNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaServiceplatformFulfilTask 天猫服务 > 服务供应链核销单消息} */
@@ -1493,6 +1495,8 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_nlife_InstorageDiffAuditNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaNlifeInstorageDiffAuditNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaNlifeItemUpdate 零售plus > 零售+商品变动消息} */
   on(topic: 'alibaba_nlife_ItemUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaNlifeItemUpdate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaPurResourceOrderCancelNotify 信息平台-采购 > 取消订单结果通知} */
+  on(topic: 'alibaba_pur_ResourceOrderCancelNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaPurResourceOrderCancelNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaPurResourceOrderShipNotify 信息平台-采购 > 发货提醒} */
   on(topic: 'alibaba_pur_ResourceOrderShipNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaPurResourceOrderShipNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaServiceplatformFulfilTask 天猫服务 > 服务供应链核销单消息} */

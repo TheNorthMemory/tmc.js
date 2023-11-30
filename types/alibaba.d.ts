@@ -1384,6 +1384,24 @@ declare namespace Alibaba.Nlife {
 
 /** 信息平台-采购 */
 declare namespace Alibaba.Pur {
+  /** 取消订单结果通知 */
+  interface ResourceOrderCancelNotify {
+    /** 失败原因 */
+    failedMsg?: string;
+    /** 平台子订单号 */
+    orderItemNo: string;
+    /** 平台订单号 */
+    orderNo: string;
+    /** 三方子订单号 */
+    outOrderItemNo: string;
+    /** 三方订单号 */
+    outOrderNo: string;
+    /** 逆向单号 */
+    returnNo: string;
+    /** 取消订单是否成功 */
+    success: boolean;
+  }
+
   /** 发货提醒 */
   interface ResourceOrderShipNotify {
     /** 子订单 */
