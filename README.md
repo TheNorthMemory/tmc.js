@@ -134,11 +134,11 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 
 ## 支持的TOPICS
 
-<details><summary>共计 84+ 类别，491+ 消息数</summary>
+<details><summary>共计 84+ 类别，492+ 消息数</summary>
 
 | 类别 | 消息数 |
 | --- | --- |
-| 淘宝交易 | 24 |
+| 淘宝交易 | 25 |
 | 淘宝退款 | 13 |
 | 淘宝商品 | 13 |
 | 淘宝分销 | 27 |

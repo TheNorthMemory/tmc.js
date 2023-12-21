@@ -623,6 +623,8 @@ declare namespace IncomingMessage {
   type TaobaoModifyskuResultNotify = Message & { content?: MessageContent & { topic?: 'taobao_modifysku_ResultNotify', content?: string | Taobao.Modifysku.ResultNotify } };
   /** {@link Taobao.Oc.TradeTagChanged 交易全链路 > oc订单标签变更} */
   type TaobaoOcTradeTagChanged = Message & { content?: MessageContent & { topic?: 'taobao_oc_TradeTagChanged', content?: string | Taobao.Oc.TradeTagChanged } };
+  /** {@link Taobao.Ofn.OrderStatusSync 淘宝交易 > 以旧换新回收单状态同步} */
+  type TaobaoOfnOrderStatusSync = Message & { content?: MessageContent & { topic?: 'taobao_ofn_OrderStatusSync', content?: string | Taobao.Ofn.OrderStatusSync } };
   /** {@link Taobao.Openaccount.DataSync 导购平台 > openaccount数据同步} */
   type TaobaoOpenaccountDataSync = Message & { content?: MessageContent & { topic?: 'taobao_openaccount_DataSync', content?: string | Taobao.Openaccount.DataSync } };
   /** {@link Taobao.Opencrm.AuthTouchMessage 客户运营平台API > 营销短信授权消息} */
@@ -1750,6 +1752,10 @@ declare namespace IncomingMessage {
    */
   type TaobaoOc = TaobaoOcTradeTagChanged;
   /**
+   * - {@link TaobaoOfnOrderStatusSync 淘宝交易 > 以旧换新回收单状态同步}
+   */
+  type TaobaoOfn = TaobaoOfnOrderStatusSync;
+  /**
    * - {@link TaobaoOpenaccountDataSync 导购平台 > openaccount数据同步}
    */
   type TaobaoOpenaccount = TaobaoOpenaccountDataSync;
@@ -2365,6 +2371,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoModifyorder}
    * - {@link TaobaoModifysku}
    * - {@link TaobaoOc}
+   * - {@link TaobaoOfn}
    * - {@link TaobaoOpenaccount}
    * - {@link TaobaoOpencrm}
    * - {@link TaobaoOpenim}
@@ -2417,6 +2424,7 @@ declare namespace IncomingMessage {
     | TaobaoModifyorder
     | TaobaoModifysku
     | TaobaoOc
+    | TaobaoOfn
     | TaobaoOpenaccount
     | TaobaoOpencrm
     | TaobaoOpenim

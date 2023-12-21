@@ -1623,6 +1623,37 @@ declare namespace Taobao.Oc {
   }
 }
 
+/** 淘宝交易 */
+declare namespace Taobao.Ofn {
+  /** 以旧换新回收单状态同步 */
+  interface OrderStatusSync {
+    /** 估价金额，单位 分 */
+    apprize_amount?: string;
+    /** 回收单 ID */
+    biz_order_id: string;
+    /** 渠道 */
+    channel: string;
+    /** 渠道数据，json格式 */
+    channel_data?: string;
+    /** 信用预付金额，单位分 */
+    credit_pay_amount?: string;
+    /** 创单时间 */
+    gmt_create?: string;
+    /** 订单状态 */
+    order_status: string;
+    /** 1 现金支付 / 2 红包支付 */
+    pay_type?: string;
+    /** 估价 ID */
+    quote_id?: string;
+    /** 上门取件时间 */
+    ship_time?: string;
+    /** SPU ID */
+    spu_id: string;
+    /** 回收商 appKey */
+    supplier_id?: string;
+  }
+}
+
 /** 导购平台 */
 declare namespace Taobao.Openaccount {
   /** openaccount数据同步 */

@@ -662,6 +662,8 @@ declare interface TaoTopicsDescriptor {
   taobao_modifysku_ResultNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoModifyskuResultNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOcTradeTagChanged 交易全链路 > oc订单标签变更} */
   taobao_oc_TradeTagChanged(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOcTradeTagChanged) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOfnOrderStatusSync 淘宝交易 > 以旧换新回收单状态同步} */
+  taobao_ofn_OrderStatusSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnOrderStatusSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpenaccountDataSync 导购平台 > openaccount数据同步} */
   taobao_openaccount_DataSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpenaccountDataSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmAuthTouchMessage 客户运营平台API > 营销短信授权消息} */
@@ -1190,6 +1192,8 @@ declare interface TaoTopicsDescriptor {
   taobao_modifysku(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoModifysku) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOc} */
   taobao_oc(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOc) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOfn} */
+  taobao_ofn(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpenaccount} */
   taobao_openaccount(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpenaccount) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrm} */
@@ -1923,6 +1927,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_modifysku_ResultNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoModifyskuResultNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOcTradeTagChanged 交易全链路 > oc订单标签变更} */
   on(topic: 'taobao_oc_TradeTagChanged', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOcTradeTagChanged) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOfnOrderStatusSync 淘宝交易 > 以旧换新回收单状态同步} */
+  on(topic: 'taobao_ofn_OrderStatusSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnOrderStatusSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpenaccountDataSync 导购平台 > openaccount数据同步} */
   on(topic: 'taobao_openaccount_DataSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpenaccountDataSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmAuthTouchMessage 客户运营平台API > 营销短信授权消息} */
@@ -2451,6 +2457,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_modifysku', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoModifysku) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOc} */
   on(topic: 'taobao_oc', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOc) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOfn} */
+  on(topic: 'taobao_ofn', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpenaccount} */
   on(topic: 'taobao_openaccount', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpenaccount) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrm} */
