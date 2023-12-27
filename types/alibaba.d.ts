@@ -599,6 +599,16 @@ declare namespace Alibaba.Invoice {
     trade_type: number;
   }
 
+  /** 获取xml发票文件 */
+  interface GetXmlFile {
+    /** 全电发票的发票号码 */
+    invoice_no: string;
+    /** 订单号 */
+    platform_tid: string;
+    /** 卖家Nick */
+    seller_nick?: string;
+  }
+
   /** 税控服务开票申请 */
   interface InvoiceApply {
     /** 开票申请ID */

@@ -103,6 +103,8 @@ declare namespace IncomingMessage {
   type AlibabaInvoiceDiskOffline = Message & { content?: MessageContent & { topic?: 'alibaba_invoice_DiskOffline', content?: string | Alibaba.Invoice.DiskOffline } };
   /** {@link Alibaba.Invoice.FlowBuket 电子发票 > 资源包开通/订购记录同步} */
   type AlibabaInvoiceFlowBuket = Message & { content?: MessageContent & { topic?: 'alibaba_invoice_FlowBuket', content?: string | Alibaba.Invoice.FlowBuket } };
+  /** {@link Alibaba.Invoice.GetXmlFile 电子发票 > 获取xml发票文件} */
+  type AlibabaInvoiceGetXmlFile = Message & { content?: MessageContent & { topic?: 'alibaba_invoice_GetXmlFile', content?: string | Alibaba.Invoice.GetXmlFile } };
   /** {@link Alibaba.Invoice.InvoiceApply 电子发票 > 税控服务开票申请} */
   type AlibabaInvoiceInvoiceApply = Message & { content?: MessageContent & { topic?: 'alibaba_invoice_InvoiceApply', content?: string | Alibaba.Invoice.InvoiceApply } };
   /** {@link Alibaba.Invoice.Logistics 电子发票 > 发票对外通知物流信息} */
@@ -1050,6 +1052,7 @@ declare namespace IncomingMessage {
    * - {@link AlibabaInvoiceApplyResult 电子发票 > 开票申请审核结果}
    * - {@link AlibabaInvoiceDiskOffline 电子发票 > 税盘下架单新增和更新通知}
    * - {@link AlibabaInvoiceFlowBuket 电子发票 > 资源包开通/订购记录同步}
+   * - {@link AlibabaInvoiceGetXmlFile 电子发票 > 获取xml发票文件}
    * - {@link AlibabaInvoiceInvoiceApply 电子发票 > 税控服务开票申请}
    * - {@link AlibabaInvoiceLogistics 电子发票 > 发票对外通知物流信息}
    * - {@link AlibabaInvoicePaperOpsReturn 电子发票 > 纸票操作结果回传（打印、作废等）}
@@ -1066,6 +1069,7 @@ declare namespace IncomingMessage {
     | AlibabaInvoiceApplyResult
     | AlibabaInvoiceDiskOffline
     | AlibabaInvoiceFlowBuket
+    | AlibabaInvoiceGetXmlFile
     | AlibabaInvoiceInvoiceApply
     | AlibabaInvoiceLogistics
     | AlibabaInvoicePaperOpsReturn

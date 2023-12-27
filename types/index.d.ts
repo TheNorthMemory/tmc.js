@@ -142,6 +142,8 @@ declare interface TaoTopicsDescriptor {
   alibaba_invoice_DiskOffline(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaInvoiceDiskOffline) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInvoiceFlowBuket 电子发票 > 资源包开通/订购记录同步} */
   alibaba_invoice_FlowBuket(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaInvoiceFlowBuket) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaInvoiceGetXmlFile 电子发票 > 获取xml发票文件} */
+  alibaba_invoice_GetXmlFile(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaInvoiceGetXmlFile) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInvoiceInvoiceApply 电子发票 > 税控服务开票申请} */
   alibaba_invoice_InvoiceApply(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaInvoiceInvoiceApply) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInvoiceLogistics 电子发票 > 发票对外通知物流信息} */
@@ -1407,6 +1409,8 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_invoice_DiskOffline', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaInvoiceDiskOffline) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInvoiceFlowBuket 电子发票 > 资源包开通/订购记录同步} */
   on(topic: 'alibaba_invoice_FlowBuket', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaInvoiceFlowBuket) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaInvoiceGetXmlFile 电子发票 > 获取xml发票文件} */
+  on(topic: 'alibaba_invoice_GetXmlFile', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaInvoiceGetXmlFile) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInvoiceInvoiceApply 电子发票 > 税控服务开票申请} */
   on(topic: 'alibaba_invoice_InvoiceApply', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaInvoiceInvoiceApply) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInvoiceLogistics 电子发票 > 发票对外通知物流信息} */
