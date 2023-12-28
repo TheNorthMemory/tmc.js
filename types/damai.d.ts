@@ -50,6 +50,12 @@ declare namespace Damai.Distribution {
     voucher_ids: number[];
   }
 
+  /** 项目退款规则 */
+  interface RefundRule {
+    /** 项目id */
+    project_id: number;
+  }
+
   /** 票品状态变更 */
   interface TicketItemStatus {
     /** 是否可售 */

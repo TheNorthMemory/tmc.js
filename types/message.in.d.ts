@@ -349,6 +349,8 @@ declare namespace IncomingMessage {
   type DamaiDistributionProjectStatus = Message & { content?: MessageContent & { topic?: 'damai_distribution_ProjectStatus', content?: string | Damai.Distribution.ProjectStatus } };
   /** {@link Damai.Distribution.RefundOrder 大麦第三方票务供应商接入 > 退票通知} */
   type DamaiDistributionRefundOrder = Message & { content?: MessageContent & { topic?: 'damai_distribution_RefundOrder', content?: string | Damai.Distribution.RefundOrder } };
+  /** {@link Damai.Distribution.RefundRule 大麦第三方票务供应商接入 > 项目退款规则} */
+  type DamaiDistributionRefundRule = Message & { content?: MessageContent & { topic?: 'damai_distribution_RefundRule', content?: string | Damai.Distribution.RefundRule } };
   /** {@link Damai.Distribution.TicketItemStatus 大麦第三方票务供应商接入 > 票品状态变更} */
   type DamaiDistributionTicketItemStatus = Message & { content?: MessageContent & { topic?: 'damai_distribution_TicketItemStatus', content?: string | Damai.Distribution.TicketItemStatus } };
   /** {@link Damai.Trade.TicketStatusPush 大麦票单状态 > 大麦票单状态推送} */
@@ -1377,6 +1379,7 @@ declare namespace IncomingMessage {
    * - {@link DamaiDistributionPreSaleToNow 大麦第三方票务供应商接入 > 预售改开票}
    * - {@link DamaiDistributionProjectStatus 大麦第三方票务供应商接入 > 项目状态推送}
    * - {@link DamaiDistributionRefundOrder 大麦第三方票务供应商接入 > 退票通知}
+   * - {@link DamaiDistributionRefundRule 大麦第三方票务供应商接入 > 项目退款规则}
    * - {@link DamaiDistributionTicketItemStatus 大麦第三方票务供应商接入 > 票品状态变更}
    */
   type DamaiDistribution = DamaiDistributionPerformCancel
@@ -1384,6 +1387,7 @@ declare namespace IncomingMessage {
     | DamaiDistributionPreSaleToNow
     | DamaiDistributionProjectStatus
     | DamaiDistributionRefundOrder
+    | DamaiDistributionRefundRule
     | DamaiDistributionTicketItemStatus;
   /**
    * - {@link DamaiTradeTicketStatusPush 大麦票单状态 > 大麦票单状态推送}

@@ -388,6 +388,8 @@ declare interface TaoTopicsDescriptor {
   damai_distribution_ProjectStatus(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionProjectStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionRefundOrder 大麦第三方票务供应商接入 > 退票通知} */
   damai_distribution_RefundOrder(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionRefundOrder) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.DamaiDistributionRefundRule 大麦第三方票务供应商接入 > 项目退款规则} */
+  damai_distribution_RefundRule(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionRefundRule) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionTicketItemStatus 大麦第三方票务供应商接入 > 票品状态变更} */
   damai_distribution_TicketItemStatus(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionTicketItemStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiTradeTicketStatusPush 大麦票单状态 > 大麦票单状态推送} */
@@ -1655,6 +1657,8 @@ declare interface TaoEventsListener {
   on(topic: 'damai_distribution_ProjectStatus', listener: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionProjectStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionRefundOrder 大麦第三方票务供应商接入 > 退票通知} */
   on(topic: 'damai_distribution_RefundOrder', listener: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionRefundOrder) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.DamaiDistributionRefundRule 大麦第三方票务供应商接入 > 项目退款规则} */
+  on(topic: 'damai_distribution_RefundRule', listener: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionRefundRule) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionTicketItemStatus 大麦第三方票务供应商接入 > 票品状态变更} */
   on(topic: 'damai_distribution_TicketItemStatus', listener: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionTicketItemStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiTradeTicketStatusPush 大麦票单状态 > 大麦票单状态推送} */
