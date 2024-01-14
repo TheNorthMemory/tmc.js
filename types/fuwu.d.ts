@@ -1,6 +1,6 @@
 /** 服务市场 */
 declare namespace Fuwu.Confirm {
-  /** 收入确认失败 */
+  /** {@link https://open.taobao.com/tmc.htm?docId=828&docType=9 收入确认失败} */
   interface Fail {
     /** 内购服务名称 */
     article_name: string;
@@ -16,7 +16,7 @@ declare namespace Fuwu.Confirm {
     user_nick: string;
   }
 
-  /** 收入确认成功 */
+  /** {@link https://open.taobao.com/tmc.htm?docId=827&docType=9 收入确认成功} */
   interface Success {
     /** 内购服务名称 */
     article_name: string;

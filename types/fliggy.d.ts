@@ -1,6 +1,6 @@
 /** 商旅API */
 declare namespace Fliggy.Btrip {
-  /** 订单状态变化 */
+  /** {@link https://open.taobao.com/tmc.htm?docId=1940&docType=9 订单状态变化} */
   interface HotelDistributionOrderChange {
     /** 商旅订单号 */
     btrip_order_id: number;
@@ -15,9 +15,26 @@ declare namespace Fliggy.Btrip {
   }
 }
 
+/** 飞猪 */
+declare namespace Fliggy.Interact {
+  /** {@link https://open.taobao.com/tmc.htm?docId=1932&docType=9 飞猪互动海豚事件产生} */
+  interface HaitunEventCreate {
+    /** 支付宝id */
+    alipay_uid: string;
+    /** 业务编号 */
+    biz_no: string;
+    /** 业务类型 */
+    biz_type: string;
+    /** 事件类型 */
+    event_type: string;
+    /** 消息topic */
+    topic?: string;
+  }
+}
+
 /** 淘宝机票 */
 declare namespace Fliggy.Jipiao {
-  /** 航变消息服务 */
+  /** {@link https://open.taobao.com/tmc.htm?docId=1281&docType=9 航变消息服务} */
   interface FlightChange {
     /** 航变产生时间 */
     flight_change_time: Date | number | string;
@@ -48,9 +65,56 @@ declare namespace Fliggy.Jipiao {
   }
 }
 
+/** 飞猪 */
+declare namespace Fliggy.Member {
+  /** {@link https://open.taobao.com/tmc.htm?docId=1632&docType=9 通知合作商家飞猪会员等级变更消息} */
+  interface LevelChange {
+    /** 飞猪会员身份唯一标识 */
+    fliggy_user_name: string;
+    /** openuid */
+    openuid?: string;
+    /** 商家会员系统标识 */
+    partner_key: string;
+    /** 商家会员身份唯一标识 */
+    partner_member_id: string;
+  }
+}
+
+/** 飞猪 */
+declare namespace Fliggy.Push {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2161&docType=9 飞猪多端投放体系海豚事件产生} */
+  interface HaitunEventCreate {
+    /** 支付宝用户id */
+    alipay_id: string;
+    /** 业务编号，唯一便于后面查消息轨迹 */
+    biz_no: string;
+    /** 业务类型 */
+    biz_type: string;
+    /** 事件类型 */
+    event_type: string;
+    /** 消息topic */
+    topic: string;
+  }
+}
+
+/** 飞猪 */
+declare namespace Fliggy.Sht {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2517&docType=9 飞猪四海通订单消息} */
+  interface OrderMsg {
+    /** 订单信息 */
+    content: string;
+    /** 消息唯一ID */
+    msgId: string;
+    /** 淘宝订单ID */
+    orderId: string;
+    /** 订单状态 */
+    orderStatus: number;
+  }
+}
+
 /** 航旅度假交易 */
 declare namespace Fliggy.Ticket {
-  /** 域外分销订单退款消息 */
+  /** {@link https://open.taobao.com/tmc.htm?docId=1920&docType=9 域外分销订单退款消息} */
   interface OrderRefund {
     /** 子采购单id */
     order_id: number;
@@ -62,7 +126,7 @@ declare namespace Fliggy.Ticket {
     refund_status: number;
   }
 
-  /** 域外分销订单状态变更消息 */
+  /** {@link https://open.taobao.com/tmc.htm?docId=1918&docType=9 域外分销订单状态变更消息} */
   interface OrderStatusChange {
     /** 购买数量 */
     buy_amount: number;
@@ -86,11 +150,37 @@ declare namespace Fliggy.Ticket {
     sku_id: number | bigint;
   }
 
-  /** 域外分销订单码核销消息 */
+  /** {@link https://open.taobao.com/tmc.htm?docId=1919&docType=9 域外分销订单码核销消息} */
   interface VerifyNotify {
     /** 子采购单id */
     order_id: number;
     /** 码核销信息 */
     voucher_infos: string;
+  }
+}
+
+/** 飞猪 */
+declare namespace Fliggy.Visa {
+  /** {@link https://open.taobao.com/tmc.htm?docId=1867&docType=9 签证状态变化消息} */
+  interface StatusChange {
+    /** 申请人id */
+    apply_id: string;
+    /** 申请人状态 */
+    apply_status: number;
+    /** 申请人状态描述 */
+    apply_status_desc: string;
+    /** 备注信息 */
+    remark: string;
+  }
+}
+
+/** 飞猪 */
+declare namespace Fliggy.Xhotel {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2405&docType=9 套餐创建消息回传} */
+  interface ComboCreateResult {
+    /** 套餐创建的返回值 */
+    combo_result: string;
+    /** itemid */
+    item_id: number;
   }
 }

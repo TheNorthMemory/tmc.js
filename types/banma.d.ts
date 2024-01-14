@@ -1,6 +1,6 @@
 /** 平台消息 */
 declare namespace Banma.Right {
-  /** 斑马权益平台权益变更通知 */
+  /** {@link https://open.taobao.com/tmc.htm?docId=2162&docType=9 斑马权益平台权益变更通知} */
   interface TradeCreate {
     /** 第三方返回信息 */
     extra: string;

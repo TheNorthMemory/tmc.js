@@ -1,6 +1,6 @@
 /** 闲鱼 */
 declare namespace Xianyu.Aftersale {
-  /** 闲鱼售后订单状态变更消息 */
+  /** {@link https://open.taobao.com/tmc.htm?docId=2286&docType=9 闲鱼售后订单状态变更消息} */
   interface OrderSyn {
     /** 售后服务订单号 */
     after_sale_order_id: string;
@@ -17,7 +17,7 @@ declare namespace Xianyu.Aftersale {
 
 /** 闲鱼 */
 declare namespace Xianyu.Appraise {
-  /** 验货担保订单状态同步回收商 */
+  /** {@link https://open.taobao.com/tmc.htm?docId=1781&docType=9 验货担保订单状态同步回收商} */
   interface OrderSyn {
     /** 触发服务商服务的消息具体动作 */
     action?: string;
@@ -32,7 +32,7 @@ declare namespace Xianyu.Appraise {
 
 /** 闲鱼回收商消息 */
 declare namespace Xianyu.Car {
-  /** 闲鱼二手车寄卖订单状态同步 */
+  /** {@link https://open.taobao.com/tmc.htm?docId=2296&docType=9 闲鱼二手车寄卖订单状态同步} */
   interface OrderStatusSync {
     /** 订单id */
     biz_order_id: string;
@@ -43,9 +43,33 @@ declare namespace Xianyu.Car {
   }
 }
 
+/** 咸鱼 */
+declare namespace Xianyu.Environment {
+  /** {@link https://open.taobao.com/tmc.htm?docId=1427&docType=9 闲鱼双11公益游戏任务事件同步} */
+  interface EventSyn {
+    /** 周期 */
+    ds: string;
+    /** 3：日常行为 4：闲鱼互动行为 5：发布闲置、发布免费送、发布信用回收、购买商品 */
+    task_biz_code: string;
+    /** 用户ID */
+    user_id: string;
+  }
+}
+
+/** 咸鱼 */
+declare namespace Xianyu.Isv {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2219&docType=9 闲鱼服务商订单提醒} */
+  interface OrderRemind {
+    /** 订单号 */
+    biz_order_id: string;
+    /** 提醒消息类型，见对接文档 */
+    remind_type: string;
+  }
+}
+
 /** 闲鱼 */
 declare namespace Xianyu.Recycle {
-  /** 订单状态同步给回收商 */
+  /** {@link https://open.taobao.com/tmc.htm?docId=1209&docType=9 订单状态同步给回收商} */
   interface OrderStatusSync {
     /** 预估金额,单位分 */
     apprize_amount: number;
@@ -123,7 +147,7 @@ declare namespace Xianyu.Recycle {
     zm_score?: string;
   }
 
-  /** 闲鱼回收SPU变更消息 */
+  /** {@link https://open.taobao.com/tmc.htm?docId=1206&docType=9 闲鱼回收SPU变更消息} */
   interface SpuModifySync {
     /** 操作类型，0新增，1删除，2修改 */
     action_type: string;
@@ -142,7 +166,7 @@ declare namespace Xianyu.Recycle {
 
 /** 闲鱼 */
 declare namespace Xianyu.Register {
-  /** 闲鱼SPU挂载上下线消息 */
+  /** {@link https://open.taobao.com/tmc.htm?docId=2476&docType=9 闲鱼SPU挂载上下线消息} */
   interface StatusChange {
     /** 业务英文编码，如HS-回收，BM-帮卖 */
     pd_code: string;
@@ -157,7 +181,7 @@ declare namespace Xianyu.Register {
 
 /** 闲鱼 */
 declare namespace Xianyu.Template {
-  /** 闲鱼问卷变更 */
+  /** {@link https://open.taobao.com/tmc.htm?docId=2250&docType=9 闲鱼问卷变更} */
   interface QuesChange {
     /** 投放业务 */
     biz_type: string;
@@ -171,7 +195,7 @@ declare namespace Xianyu.Template {
     spu_id: string;
   }
 
-  /** 闲鱼问卷状态变更消息 */
+  /** {@link https://open.taobao.com/tmc.htm?docId=2251&docType=9 闲鱼问卷状态变更消息} */
   interface StatusChange {
     /** 投放业务 */
     biz_type: string;
@@ -186,7 +210,7 @@ declare namespace Xianyu.Template {
 
 /** 闲鱼 */
 declare namespace Xianyu.Tender {
-  /** 省心卖-暗拍项目订单消息 */
+  /** {@link https://open.taobao.com/tmc.htm?docId=2054&docType=9 省心卖-暗拍项目订单消息} */
   interface OrderSyn {
     /** 订单ID */
     biz_order_id: string;

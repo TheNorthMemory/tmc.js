@@ -1,6 +1,23 @@
+/** 优酷 */
+declare namespace Youku.Aigc {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2477&docType=9 妙鸭SaaS对外开放-训练结果通知} */
+  interface TrainResultNotify {
+    /** 训练生成的模型信息 */
+    data?: string;
+    /** 错误码 */
+    resCode?: string;
+    /** 错误信息 */
+    resInfo?: string;
+    /** 是否成功标识 */
+    success: boolean;
+    /** 任务id */
+    taskId: string;
+  }
+}
+
 /** TVOS应用审核平台 */
 declare namespace Youku.Tvosappstore {
-  /** TVOS审核平台应用状态变更通知消息 */
+  /** {@link https://open.taobao.com/tmc.htm?docId=1397&docType=9 TVOS审核平台应用状态变更通知消息} */
   interface AppStatusChange {
     /** apk文件记录id */
     apk_file_id: number;

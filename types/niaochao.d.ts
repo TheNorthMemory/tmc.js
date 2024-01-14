@@ -1,6 +1,6 @@
 /** 五道口配送 */
 declare namespace Niaochao.Tccompass {
-  /** 鸟潮站点变更消息 */
+  /** {@link https://open.taobao.com/tmc.htm?docId=2382&docType=9 鸟潮站点变更消息} */
   interface DockInfoChange {
     /** 地址 */
     address?: string;
@@ -28,7 +28,7 @@ declare namespace Niaochao.Tccompass {
     trace_id?: string;
   }
 
-  /** 物资箱号变动消息 */
+  /** {@link https://open.taobao.com/tmc.htm?docId=2381&docType=9 物资箱号变动消息} */
   interface MaterialCodeUpdate {
     /** 唯一 */
     biz_order_id: string;
@@ -52,7 +52,7 @@ declare namespace Niaochao.Tccompass {
     timestamp: number;
   }
 
-  /** 仓网络变更消息 */
+  /** {@link https://open.taobao.com/tmc.htm?docId=2377&docType=9 仓网络变更消息} */
   interface WarehouseNetworkChange {
     /** 服务，WAVE_ARRIVE(1, "波次达"),ONE_HOUR(0, "小时达"), */
     service_type: string;

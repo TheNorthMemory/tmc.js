@@ -1,6 +1,6 @@
 /** 酒店商品消息api */
 declare namespace Trip.Hotel {
-  /** 酒店商品底价加价商品加价规则消息通知 */
+  /** {@link https://open.taobao.com/tmc.htm?docId=1670&docType=9 酒店商品底价加价商品加价规则消息通知} */
   interface BottomPriceRuleChange {
     /** 实体类型,枚举:rate,hotel,supplier,seller */
     entity_type: string;
@@ -18,7 +18,7 @@ declare namespace Trip.Hotel {
     supplier?: string;
   }
 
-  /** 飞猪卖家酒店实体变更消息同步 */
+  /** {@link https://open.taobao.com/tmc.htm?docId=1668&docType=9 飞猪卖家酒店实体变更消息同步} */
   interface HotelChange {
     /** json格式,一些定制的扩展信息。目前暂定会放酒店标签信息。比如是否菲住联盟签约酒店 */
     extend: string;
@@ -34,7 +34,7 @@ declare namespace Trip.Hotel {
     type: string;
   }
 
-  /** 酒店rate信息变更 */
+  /** {@link https://open.taobao.com/tmc.htm?docId=1643&docType=9 酒店rate信息变更} */
   interface RateChange {
     /** 所属酒店hid */
     hid: number;
@@ -58,7 +58,7 @@ declare namespace Trip.Hotel {
     vendor: string;
   }
 
-  /** 酒店价格计划消息 */
+  /** {@link https://open.taobao.com/tmc.htm?docId=1642&docType=9 酒店价格计划消息} */
   interface RatePlanChange {
     /** 所属的hid */
     hid?: number;
@@ -80,7 +80,7 @@ declare namespace Trip.Hotel {
     vendor: string;
   }
 
-  /** room变更消息 */
+  /** {@link https://open.taobao.com/tmc.htm?docId=1644&docType=9 room变更消息} */
   interface RoomChange {
     /** room的id */
     gid: number;
@@ -96,7 +96,7 @@ declare namespace Trip.Hotel {
     seller_id: number;
   }
 
-  /** 酒店房型消息 */
+  /** {@link https://open.taobao.com/tmc.htm?docId=1641&docType=9 酒店房型消息} */
   interface RoomTypeChange {
     /** 变更酒店的hid */
     hid: number;

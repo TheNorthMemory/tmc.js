@@ -1,6 +1,19 @@
+/** 五道口 */
+declare namespace Wdk.Capacity {
+  /** {@link https://open.taobao.com/tmc.htm?docId=1360&docType=9 盒马运力消息} */
+  interface Delivery {
+    /** message_type: 2 => 工作状态变更；message_type: 3 => 到离站状态变更 */
+    message_type: string;
+    /** 消息体 */
+    messgae_body: string;
+    /** 链路调用ID */
+    trace_id: string;
+  }
+}
+
 /** 五道口营销 */
 declare namespace Wdk.Market {
-  /** 营销操作错误消息 */
+  /** {@link https://open.taobao.com/tmc.htm?docId=1366&docType=9 营销操作错误消息} */
   interface OperateSkuError {
     /** 活动ID */
     activity_id: number;
@@ -22,7 +35,7 @@ declare namespace Wdk.Market {
     sku_code: string;
   }
 
-  /** 营销发布商品错误 */
+  /** {@link https://open.taobao.com/tmc.htm?docId=1354&docType=9 营销发布商品错误} */
   interface OperateSkuErrror {
     /** 五道口营销活动Id */
     activity_id: number;
@@ -47,7 +60,7 @@ declare namespace Wdk.Market {
 
 /** 五道口营销 */
 declare namespace Wdk.Open {
-  /** 五道口开放数据发布错误 */
+  /** {@link https://open.taobao.com/tmc.htm?docId=1503&docType=9 五道口开放数据发布错误} */
   interface DataPublishError {
     /** 数据类型 */
     biz_code: string;
@@ -67,7 +80,7 @@ declare namespace Wdk.Open {
     version_id: number;
   }
 
-  /** 五道口开放数据关联通知 */
+  /** {@link https://open.taobao.com/tmc.htm?docId=1502&docType=9 五道口开放数据关联通知} */
   interface DataRelation {
     /** 数据类型 */
     biz_code: string;
@@ -79,5 +92,18 @@ declare namespace Wdk.Open {
     sub_biz_code: string;
     /** 淘鲜达数据Id */
     txd_data_id: string;
+  }
+}
+
+/** 五道口 */
+declare namespace Wdk.Workforce {
+  /** {@link https://open.taobao.com/tmc.htm?docId=1359&docType=9 盒马三方用工需求发布} */
+  interface RequirementPublish {
+    /** 需求ID */
+    demand_info_id: string;
+    /** 消息体 */
+    messgae_body: string;
+    /** 消息ID */
+    trace_id: string;
   }
 }

@@ -1,6 +1,6 @@
 /** 零售通_公共 */
 declare namespace Lst.Supplier {
-  /** 零售通广播极速退款消息 */
+  /** {@link https://open.taobao.com/tmc.htm?docId=1592&docType=9 零售通广播极速退款消息} */
   interface BroadcastFastRefundMessage {
     /** 主订单id */
     main_order_id: string;
@@ -12,7 +12,7 @@ declare namespace Lst.Supplier {
     sub_order_ids: string;
   }
 
-  /** 品牌商极速退款消息创建 */
+  /** {@link https://open.taobao.com/tmc.htm?docId=1567&docType=9 品牌商极速退款消息创建} */
   interface FastRefundMessageCreate {
     /** 主订单id */
     main_order_id: string;
