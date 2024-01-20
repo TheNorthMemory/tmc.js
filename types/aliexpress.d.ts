@@ -52,7 +52,7 @@ declare namespace Aliexpress.Message {
   interface Pushnewmsg {
     /** 消息内容 */
     content: string;
-    /** 针对不同类型填对应关联对象的ID：如msgType为product时填入productId值(必填) 如msgType为member时不填 */
+    /** 针对不同类型填对应关联对象的ID：如msgType为product时填入productId值(必填) 如msgType为order时填入orderId值(必填) 如msgType为member时不填 */
     extern_id?: string;
     /** 消息发送时间 */
     gmt_create: string;

@@ -1258,6 +1258,16 @@ declare namespace Alibaba.Hj {
     timestamp?: Date | number | string;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2523&docType=9 汇金销项票文件上传通知} */
+  interface InvoiceFileUpload {
+    /** 发票信息 */
+    invoice_info: string;
+    /** 请求号 */
+    request_no: string;
+    /** 时间戳 */
+    timestamp: Date | number | string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=1498&docType=9 汇金销项票开具通知} */
   interface InvoiceIssue {
     /** 蓝票(发票ID,请求单号，发票号，发票状态，是否重开以及关联发票号) */
@@ -1387,6 +1397,21 @@ declare namespace Alibaba.Homestyler {
     requestId: string;
     /** 合成结果 */
     status: string;
+  }
+}
+
+/** ICBU */
+declare namespace Alibaba.Icbulive {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2522&docType=9 直播观众进场通知} */
+  interface EnterNotice {
+    /** 国家 */
+    country_code?: string;
+    /** 进场id */
+    enter_toice_id: number;
+    /** 直播的liveuuid */
+    live_uuid: string;
+    /** 用户名称 */
+    user_nick_name?: string;
   }
 }
 

@@ -1241,6 +1241,8 @@ declare namespace Taobao.Epp {
   interface OrderCreate {
     /** String	变化时间 */
     modifiedTime: string;
+    /** 外部采购单号 */
+    outOrderId: string;
     /** 订单ID */
     tbOrderId: string;
     /** 当前订单状态： 2=已支付 6=交易成功 8=关闭 */

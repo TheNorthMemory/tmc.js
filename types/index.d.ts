@@ -242,6 +242,8 @@ declare interface TaoTopicsDescriptor {
   alibaba_happytrip_OrderNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHappytripOrderNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaHjInvoiceCancel 汇金销项票 > 汇金销项票作废通知} */
   alibaba_hj_InvoiceCancel(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHjInvoiceCancel) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaHjInvoiceFileUpload 汇金销项票 > 汇金销项票文件上传通知} */
+  alibaba_hj_InvoiceFileUpload(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHjInvoiceFileUpload) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaHjInvoiceIssue 汇金销项票 > 汇金销项票开具通知} */
   alibaba_hj_InvoiceIssue(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHjInvoiceIssue) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaHjInvoiceRedIssue 汇金销项票 > 汇金销项票冲红通知} */
@@ -258,6 +260,8 @@ declare interface TaoTopicsDescriptor {
   alibaba_homestyler_AigcContentImageGenerateCallback(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHomestylerAigcContentImageGenerateCallback) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaHomestylerAigcPanoramaReplaceCallback 洞窝 > 洞窝全景图替换消息回调} */
   alibaba_homestyler_AigcPanoramaReplaceCallback(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHomestylerAigcPanoramaReplaceCallback) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaIcbuliveEnterNotice ICBU > 直播观众进场通知} */
+  alibaba_icbulive_EnterNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIcbuliveEnterNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIfpPackageCfcContainer 五道口配送 > 同城履约包裹状态变更消息} */
   alibaba_ifp_PackageCfcContainer(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIfpPackageCfcContainer) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInfopGoodsChange 采购系统 > 采购系统商品消息变更消息} */
@@ -2330,6 +2334,8 @@ declare interface TaoTopicsDescriptor {
   alibaba_hj(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHj) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaHomestyler} */
   alibaba_homestyler(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHomestyler) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaIcbulive} */
+  alibaba_icbulive(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIcbulive) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIfp} */
   alibaba_ifp(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIfp) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInfop} */
@@ -3207,6 +3213,8 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_happytrip_OrderNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHappytripOrderNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaHjInvoiceCancel 汇金销项票 > 汇金销项票作废通知} */
   on(topic: 'alibaba_hj_InvoiceCancel', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHjInvoiceCancel) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaHjInvoiceFileUpload 汇金销项票 > 汇金销项票文件上传通知} */
+  on(topic: 'alibaba_hj_InvoiceFileUpload', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHjInvoiceFileUpload) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaHjInvoiceIssue 汇金销项票 > 汇金销项票开具通知} */
   on(topic: 'alibaba_hj_InvoiceIssue', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHjInvoiceIssue) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaHjInvoiceRedIssue 汇金销项票 > 汇金销项票冲红通知} */
@@ -3223,6 +3231,8 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_homestyler_AigcContentImageGenerateCallback', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHomestylerAigcContentImageGenerateCallback) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaHomestylerAigcPanoramaReplaceCallback 洞窝 > 洞窝全景图替换消息回调} */
   on(topic: 'alibaba_homestyler_AigcPanoramaReplaceCallback', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHomestylerAigcPanoramaReplaceCallback) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaIcbuliveEnterNotice ICBU > 直播观众进场通知} */
+  on(topic: 'alibaba_icbulive_EnterNotice', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIcbuliveEnterNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIfpPackageCfcContainer 五道口配送 > 同城履约包裹状态变更消息} */
   on(topic: 'alibaba_ifp_PackageCfcContainer', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIfpPackageCfcContainer) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInfopGoodsChange 采购系统 > 采购系统商品消息变更消息} */
@@ -5295,6 +5305,8 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_hj', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHj) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaHomestyler} */
   on(topic: 'alibaba_homestyler', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHomestyler) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaIcbulive} */
+  on(topic: 'alibaba_icbulive', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIcbulive) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIfp} */
   on(topic: 'alibaba_ifp', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIfp) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInfop} */

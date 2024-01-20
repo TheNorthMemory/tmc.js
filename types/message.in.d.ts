@@ -222,6 +222,8 @@ declare namespace IncomingMessage {
   type AlibabaHappytripOrderNotify = Message & { content?: MessageContent & { topic?: 'alibaba_happytrip_OrderNotify', content?: string | Alibaba.Happytrip.OrderNotify } };
   /** {@link Alibaba.Hj.InvoiceCancel 汇金销项票 > 汇金销项票作废通知} */
   type AlibabaHjInvoiceCancel = Message & { content?: MessageContent & { topic?: 'alibaba_hj_InvoiceCancel', content?: string | Alibaba.Hj.InvoiceCancel } };
+  /** {@link Alibaba.Hj.InvoiceFileUpload 汇金销项票 > 汇金销项票文件上传通知} */
+  type AlibabaHjInvoiceFileUpload = Message & { content?: MessageContent & { topic?: 'alibaba_hj_InvoiceFileUpload', content?: string | Alibaba.Hj.InvoiceFileUpload } };
   /** {@link Alibaba.Hj.InvoiceIssue 汇金销项票 > 汇金销项票开具通知} */
   type AlibabaHjInvoiceIssue = Message & { content?: MessageContent & { topic?: 'alibaba_hj_InvoiceIssue', content?: string | Alibaba.Hj.InvoiceIssue } };
   /** {@link Alibaba.Hj.InvoiceRedIssue 汇金销项票 > 汇金销项票冲红通知} */
@@ -238,6 +240,8 @@ declare namespace IncomingMessage {
   type AlibabaHomestylerAigcContentImageGenerateCallback = Message & { content?: MessageContent & { topic?: 'alibaba_homestyler_AigcContentImageGenerateCallback', content?: string | Alibaba.Homestyler.AigcContentImageGenerateCallback } };
   /** {@link Alibaba.Homestyler.AigcPanoramaReplaceCallback 洞窝 > 洞窝全景图替换消息回调} */
   type AlibabaHomestylerAigcPanoramaReplaceCallback = Message & { content?: MessageContent & { topic?: 'alibaba_homestyler_AigcPanoramaReplaceCallback', content?: string | Alibaba.Homestyler.AigcPanoramaReplaceCallback } };
+  /** {@link Alibaba.Icbulive.EnterNotice ICBU > 直播观众进场通知} */
+  type AlibabaIcbuliveEnterNotice = Message & { content?: MessageContent & { topic?: 'alibaba_icbulive_EnterNotice', content?: string | Alibaba.Icbulive.EnterNotice } };
   /** {@link Alibaba.Ifp.PackageCfcContainer 五道口配送 > 同城履约包裹状态变更消息} */
   type AlibabaIfpPackageCfcContainer = Message & { content?: MessageContent & { topic?: 'alibaba_ifp_PackageCfcContainer', content?: string | Alibaba.Ifp.PackageCfcContainer } };
   /** {@link Alibaba.Infop.GoodsChange 采购系统 > 采购系统商品消息变更消息} */
@@ -2484,6 +2488,7 @@ declare namespace IncomingMessage {
   type AlibabaHappytrip = AlibabaHappytripOrderNotify;
   /**
    * - {@link AlibabaHjInvoiceCancel 汇金销项票 > 汇金销项票作废通知}
+   * - {@link AlibabaHjInvoiceFileUpload 汇金销项票 > 汇金销项票文件上传通知}
    * - {@link AlibabaHjInvoiceIssue 汇金销项票 > 汇金销项票开具通知}
    * - {@link AlibabaHjInvoiceRedIssue 汇金销项票 > 汇金销项票冲红通知}
    * - {@link AlibabaHjInvoiceReject 汇金销项票 > 汇金销项票开票拒绝通知}
@@ -2492,6 +2497,7 @@ declare namespace IncomingMessage {
    * - {@link AlibabaHjInvoiceUnissue 汇金销项票 > 汇金销项票待开通知}
    */
   type AlibabaHj = AlibabaHjInvoiceCancel
+    | AlibabaHjInvoiceFileUpload
     | AlibabaHjInvoiceIssue
     | AlibabaHjInvoiceRedIssue
     | AlibabaHjInvoiceReject
@@ -2504,6 +2510,10 @@ declare namespace IncomingMessage {
    */
   type AlibabaHomestyler = AlibabaHomestylerAigcContentImageGenerateCallback
     | AlibabaHomestylerAigcPanoramaReplaceCallback;
+  /**
+   * - {@link AlibabaIcbuliveEnterNotice ICBU > 直播观众进场通知}
+   */
+  type AlibabaIcbulive = AlibabaIcbuliveEnterNotice;
   /**
    * - {@link AlibabaIfpPackageCfcContainer 五道口配送 > 同城履约包裹状态变更消息}
    */
@@ -5167,6 +5177,7 @@ declare namespace IncomingMessage {
    * - {@link AlibabaHappytrip}
    * - {@link AlibabaHj}
    * - {@link AlibabaHomestyler}
+   * - {@link AlibabaIcbulive}
    * - {@link AlibabaIfp}
    * - {@link AlibabaInfop}
    * - {@link AlibabaIntime}
@@ -5229,6 +5240,7 @@ declare namespace IncomingMessage {
     | AlibabaHappytrip
     | AlibabaHj
     | AlibabaHomestyler
+    | AlibabaIcbulive
     | AlibabaIfp
     | AlibabaInfop
     | AlibabaIntime
