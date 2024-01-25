@@ -1970,6 +1970,8 @@ declare namespace Taobao.Fuwu {
     item_code: string;
     /** 收费项目名称 */
     item_name?: string;
+    /** 由user_id加密, 可对外开放, 用来替换user_nick作为唯一标识 */
+    open_uid?: string;
     /** 订购记录id */
     readonly sub_id: number;
     /** 淘宝会员名 */
