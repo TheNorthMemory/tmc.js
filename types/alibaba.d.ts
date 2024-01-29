@@ -1402,12 +1402,26 @@ declare namespace Alibaba.Homestyler {
 
 /** ICBU */
 declare namespace Alibaba.Icbulive {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2524&docType=9 直播评论通知} */
+  interface CommentNotice {
+    /** 评论内容 */
+    comment_content?: string;
+    /** 评论id */
+    comment_id: number;
+    /** 国家code */
+    country_code?: string;
+    /** 直播liveUuid */
+    live_uuid: string;
+    /** 用户名称 */
+    user_nick_name: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2522&docType=9 直播观众进场通知} */
   interface EnterNotice {
     /** 国家 */
     country_code?: string;
     /** 进场id */
-    enter_toice_id: number;
+    enter_notice_id: number;
     /** 直播的liveuuid */
     live_uuid: string;
     /** 用户名称 */

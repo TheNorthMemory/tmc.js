@@ -3475,6 +3475,22 @@ declare namespace Taobao.Oc {
 
 /** 淘宝交易 */
 declare namespace Taobao.Ofn {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2482&docType=9 信用代扣状态变更同步} */
+  interface CreditPayStatusChange {
+    /** 支付宝流水号 */
+    alipay_trade_no: string;
+    /** 回收单 ID */
+    biz_order_id: number;
+    /** 预付金额，单位 分 */
+    credit_amount: number;
+    /** 代扣状态 */
+    recover_status: string;
+    /** 代扣状态描述 */
+    recover_status_desc: string;
+    /** 回收商 ID（appKey） */
+    supplier_id: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2483&docType=9 以旧换新新机单事件同步} */
   interface NewOrderEventSync {
     /** 事件类型，SHIPPED（已发货），PAID（已支付） */
@@ -4209,6 +4225,18 @@ declare namespace Taobao.Recycle {
 
 /** 淘宝退款 */
 declare namespace Taobao.Refund {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2520&docType=9 逆向订单数据同步} */
+  interface OrderStatusSync {
+    /** 更新时间 */
+    modifiedTime: string;
+    /** 外部订单号 */
+    outOrderId: string;
+    /** 退款单号 */
+    refundOrderId: string;
+    /** 退款单状态2=退款成功 3=退款取消 4=卖家拒绝 */
+    refundStatus: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=124&docType=9 屏蔽退款留言消息-无此消息} */
   interface RefundBlockMessage {
     /** 更新时间。格式:yyyy-MM-dd HH:mm:ss */

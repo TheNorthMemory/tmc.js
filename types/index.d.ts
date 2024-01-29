@@ -260,6 +260,8 @@ declare interface TaoTopicsDescriptor {
   alibaba_homestyler_AigcContentImageGenerateCallback(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHomestylerAigcContentImageGenerateCallback) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaHomestylerAigcPanoramaReplaceCallback 洞窝 > 洞窝全景图替换消息回调} */
   alibaba_homestyler_AigcPanoramaReplaceCallback(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHomestylerAigcPanoramaReplaceCallback) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaIcbuliveCommentNotice ICBU > 直播评论通知} */
+  alibaba_icbulive_CommentNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIcbuliveCommentNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIcbuliveEnterNotice ICBU > 直播观众进场通知} */
   alibaba_icbulive_EnterNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIcbuliveEnterNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIfpPackageCfcContainer 五道口配送 > 同城履约包裹状态变更消息} */
@@ -1574,6 +1576,8 @@ declare interface TaoTopicsDescriptor {
   taobao_modifysku_ResultNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoModifyskuResultNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOcTradeTagChanged 交易全链路 > oc订单标签变更} */
   taobao_oc_TradeTagChanged(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOcTradeTagChanged) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOfnCreditPayStatusChange 淘宝交易 > 信用代扣状态变更同步} */
+  taobao_ofn_CreditPayStatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnCreditPayStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOfnNewOrderEventSync 淘宝交易 > 以旧换新新机单事件同步} */
   taobao_ofn_NewOrderEventSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnNewOrderEventSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOfnOrderStatusSync 淘宝交易 > 以旧换新回收单状态同步} */
@@ -1670,6 +1674,8 @@ declare interface TaoTopicsDescriptor {
   taobao_rdcaligenius_OrderMsgSend(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRdcaligeniusOrderMsgSend) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRecycleOfnPreRedPacketSync 淘宝交易 > 同步前置补贴红包的最新数据} */
   taobao_recycle_OfnPreRedPacketSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRecycleOfnPreRedPacketSync) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoRefundOrderStatusSync 淘宝退款 > 逆向订单数据同步} */
+  taobao_refund_OrderStatusSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRefundOrderStatusSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRefundRefundBlockMessage 淘宝退款 > 屏蔽退款留言消息-无此消息} */
   taobao_refund_RefundBlockMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRefundRefundBlockMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRefundRefundBuyerModifyAgreement 淘宝退款 > 买家修改退款协议消息} */
@@ -3231,6 +3237,8 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_homestyler_AigcContentImageGenerateCallback', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHomestylerAigcContentImageGenerateCallback) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaHomestylerAigcPanoramaReplaceCallback 洞窝 > 洞窝全景图替换消息回调} */
   on(topic: 'alibaba_homestyler_AigcPanoramaReplaceCallback', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHomestylerAigcPanoramaReplaceCallback) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaIcbuliveCommentNotice ICBU > 直播评论通知} */
+  on(topic: 'alibaba_icbulive_CommentNotice', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIcbuliveCommentNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIcbuliveEnterNotice ICBU > 直播观众进场通知} */
   on(topic: 'alibaba_icbulive_EnterNotice', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIcbuliveEnterNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIfpPackageCfcContainer 五道口配送 > 同城履约包裹状态变更消息} */
@@ -4545,6 +4553,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_modifysku_ResultNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoModifyskuResultNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOcTradeTagChanged 交易全链路 > oc订单标签变更} */
   on(topic: 'taobao_oc_TradeTagChanged', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOcTradeTagChanged) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOfnCreditPayStatusChange 淘宝交易 > 信用代扣状态变更同步} */
+  on(topic: 'taobao_ofn_CreditPayStatusChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnCreditPayStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOfnNewOrderEventSync 淘宝交易 > 以旧换新新机单事件同步} */
   on(topic: 'taobao_ofn_NewOrderEventSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnNewOrderEventSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOfnOrderStatusSync 淘宝交易 > 以旧换新回收单状态同步} */
@@ -4641,6 +4651,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_rdcaligenius_OrderMsgSend', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRdcaligeniusOrderMsgSend) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRecycleOfnPreRedPacketSync 淘宝交易 > 同步前置补贴红包的最新数据} */
   on(topic: 'taobao_recycle_OfnPreRedPacketSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRecycleOfnPreRedPacketSync) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoRefundOrderStatusSync 淘宝退款 > 逆向订单数据同步} */
+  on(topic: 'taobao_refund_OrderStatusSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRefundOrderStatusSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRefundRefundBlockMessage 淘宝退款 > 屏蔽退款留言消息-无此消息} */
   on(topic: 'taobao_refund_RefundBlockMessage', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRefundRefundBlockMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRefundRefundBuyerModifyAgreement 淘宝退款 > 买家修改退款协议消息} */

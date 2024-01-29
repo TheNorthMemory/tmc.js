@@ -240,6 +240,8 @@ declare namespace IncomingMessage {
   type AlibabaHomestylerAigcContentImageGenerateCallback = Message & { content?: MessageContent & { topic?: 'alibaba_homestyler_AigcContentImageGenerateCallback', content?: string | Alibaba.Homestyler.AigcContentImageGenerateCallback } };
   /** {@link Alibaba.Homestyler.AigcPanoramaReplaceCallback 洞窝 > 洞窝全景图替换消息回调} */
   type AlibabaHomestylerAigcPanoramaReplaceCallback = Message & { content?: MessageContent & { topic?: 'alibaba_homestyler_AigcPanoramaReplaceCallback', content?: string | Alibaba.Homestyler.AigcPanoramaReplaceCallback } };
+  /** {@link Alibaba.Icbulive.CommentNotice ICBU > 直播评论通知} */
+  type AlibabaIcbuliveCommentNotice = Message & { content?: MessageContent & { topic?: 'alibaba_icbulive_CommentNotice', content?: string | Alibaba.Icbulive.CommentNotice } };
   /** {@link Alibaba.Icbulive.EnterNotice ICBU > 直播观众进场通知} */
   type AlibabaIcbuliveEnterNotice = Message & { content?: MessageContent & { topic?: 'alibaba_icbulive_EnterNotice', content?: string | Alibaba.Icbulive.EnterNotice } };
   /** {@link Alibaba.Ifp.PackageCfcContainer 五道口配送 > 同城履约包裹状态变更消息} */
@@ -1554,6 +1556,8 @@ declare namespace IncomingMessage {
   type TaobaoModifyskuResultNotify = Message & { content?: MessageContent & { topic?: 'taobao_modifysku_ResultNotify', content?: string | Taobao.Modifysku.ResultNotify } };
   /** {@link Taobao.Oc.TradeTagChanged 交易全链路 > oc订单标签变更} */
   type TaobaoOcTradeTagChanged = Message & { content?: MessageContent & { topic?: 'taobao_oc_TradeTagChanged', content?: string | Taobao.Oc.TradeTagChanged } };
+  /** {@link Taobao.Ofn.CreditPayStatusChange 淘宝交易 > 信用代扣状态变更同步} */
+  type TaobaoOfnCreditPayStatusChange = Message & { content?: MessageContent & { topic?: 'taobao_ofn_CreditPayStatusChange', content?: string | Taobao.Ofn.CreditPayStatusChange } };
   /** {@link Taobao.Ofn.NewOrderEventSync 淘宝交易 > 以旧换新新机单事件同步} */
   type TaobaoOfnNewOrderEventSync = Message & { content?: MessageContent & { topic?: 'taobao_ofn_NewOrderEventSync', content?: string | Taobao.Ofn.NewOrderEventSync } };
   /** {@link Taobao.Ofn.OrderStatusSync 淘宝交易 > 以旧换新回收单状态同步} */
@@ -1650,6 +1654,8 @@ declare namespace IncomingMessage {
   type TaobaoRdcaligeniusOrderMsgSend = Message & { content?: MessageContent & { topic?: 'taobao_rdcaligenius_OrderMsgSend', content?: string | Taobao.Rdcaligenius.OrderMsgSend } };
   /** {@link Taobao.Recycle.OfnPreRedPacketSync 淘宝交易 > 同步前置补贴红包的最新数据} */
   type TaobaoRecycleOfnPreRedPacketSync = Message & { content?: MessageContent & { topic?: 'taobao_recycle_OfnPreRedPacketSync', content?: string | Taobao.Recycle.OfnPreRedPacketSync } };
+  /** {@link Taobao.Refund.OrderStatusSync 淘宝退款 > 逆向订单数据同步} */
+  type TaobaoRefundOrderStatusSync = Message & { content?: MessageContent & { topic?: 'taobao_refund_OrderStatusSync', content?: string | Taobao.Refund.OrderStatusSync } };
   /** {@link Taobao.Refund.RefundBlockMessage 淘宝退款 > 屏蔽退款留言消息-无此消息} */
   type TaobaoRefundRefundBlockMessage = Message & { content?: MessageContent & { topic?: 'taobao_refund_RefundBlockMessage', content?: string | Taobao.Refund.RefundBlockMessage } };
   /** {@link Taobao.Refund.RefundBuyerModifyAgreement 淘宝退款 > 买家修改退款协议消息} */
@@ -2511,9 +2517,11 @@ declare namespace IncomingMessage {
   type AlibabaHomestyler = AlibabaHomestylerAigcContentImageGenerateCallback
     | AlibabaHomestylerAigcPanoramaReplaceCallback;
   /**
+   * - {@link AlibabaIcbuliveCommentNotice ICBU > 直播评论通知}
    * - {@link AlibabaIcbuliveEnterNotice ICBU > 直播观众进场通知}
    */
-  type AlibabaIcbulive = AlibabaIcbuliveEnterNotice;
+  type AlibabaIcbulive = AlibabaIcbuliveCommentNotice
+    | AlibabaIcbuliveEnterNotice;
   /**
    * - {@link AlibabaIfpPackageCfcContainer 五道口配送 > 同城履约包裹状态变更消息}
    */
@@ -4229,10 +4237,12 @@ declare namespace IncomingMessage {
    */
   type TaobaoOc = TaobaoOcTradeTagChanged;
   /**
+   * - {@link TaobaoOfnCreditPayStatusChange 淘宝交易 > 信用代扣状态变更同步}
    * - {@link TaobaoOfnNewOrderEventSync 淘宝交易 > 以旧换新新机单事件同步}
    * - {@link TaobaoOfnOrderStatusSync 淘宝交易 > 以旧换新回收单状态同步}
    */
-  type TaobaoOfn = TaobaoOfnNewOrderEventSync
+  type TaobaoOfn = TaobaoOfnCreditPayStatusChange
+    | TaobaoOfnNewOrderEventSync
     | TaobaoOfnOrderStatusSync;
   /**
    * - {@link TaobaoOpenaccountDataSync 导购平台 > openaccount数据同步}
@@ -4353,6 +4363,7 @@ declare namespace IncomingMessage {
    */
   type TaobaoRecycle = TaobaoRecycleOfnPreRedPacketSync;
   /**
+   * - {@link TaobaoRefundOrderStatusSync 淘宝退款 > 逆向订单数据同步}
    * - {@link TaobaoRefundRefundBlockMessage 淘宝退款 > 屏蔽退款留言消息-无此消息}
    * - {@link TaobaoRefundRefundBuyerModifyAgreement 淘宝退款 > 买家修改退款协议消息}
    * - {@link TaobaoRefundRefundBuyerReturnGoods 淘宝退款 > 买家退货给卖家消息}
@@ -4368,7 +4379,8 @@ declare namespace IncomingMessage {
    * - {@link TaobaoRefundTaobaoInterApplied 淘宝退款 > 申请淘宝介入消息}
    * - {@link TaobaoRefundTaobaoIntervened 淘宝退款 > 淘宝介入退款消息}
    */
-  type TaobaoRefund = TaobaoRefundRefundBlockMessage
+  type TaobaoRefund = TaobaoRefundOrderStatusSync
+    | TaobaoRefundRefundBlockMessage
     | TaobaoRefundRefundBuyerModifyAgreement
     | TaobaoRefundRefundBuyerReturnGoods
     | TaobaoRefundRefundClosed
