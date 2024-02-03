@@ -1068,6 +1068,8 @@ declare namespace IncomingMessage {
   type IcbuCrmXMOrderChange = Message & { content?: MessageContent & { topic?: 'icbu_crm_XMOrderChange', content?: string | Icbu.Crm.XMOrderChange } };
   /** {@link Icbu.Member.XmUnBind ICBU > icbu国际站账号解绑小满账号} */
   type IcbuMemberXmUnBind = Message & { content?: MessageContent & { topic?: 'icbu_member_XmUnBind', content?: string | Icbu.Member.XmUnBind } };
+  /** {@link Icbu.Risk.ZeroersMessage ICBU > 天鹿风控事件异步消息结果} */
+  type IcbuRiskZeroersMessage = Message & { content?: MessageContent & { topic?: 'icbu_risk_ZeroersMessage', content?: string | Icbu.Risk.ZeroersMessage } };
   /** {@link Icbu.Trade.OrderNotify ICBU > 国际站订单变更消息} */
   type IcbuTradeOrderNotify = Message & { content?: MessageContent & { topic?: 'icbu_trade_OrderNotify', content?: string | Icbu.Trade.OrderNotify } };
   /** {@link Idle.Agreement.StatusChange 闲鱼 > 闲鱼代扣消息通知} */
@@ -3605,6 +3607,10 @@ declare namespace IncomingMessage {
    */
   type IcbuMember = IcbuMemberXmUnBind;
   /**
+   * - {@link IcbuRiskZeroersMessage ICBU > 天鹿风控事件异步消息结果}
+   */
+  type IcbuRisk = IcbuRiskZeroersMessage;
+  /**
    * - {@link IcbuTradeOrderNotify ICBU > 国际站订单变更消息}
    */
   type IcbuTrade = IcbuTradeOrderNotify;
@@ -5515,12 +5521,14 @@ declare namespace IncomingMessage {
    * - {@link IcbuChat}
    * - {@link IcbuCrm}
    * - {@link IcbuMember}
+   * - {@link IcbuRisk}
    * - {@link IcbuTrade}
    */
   type Icbu = IcbuAlicrm
     | IcbuChat
     | IcbuCrm
     | IcbuMember
+    | IcbuRisk
     | IcbuTrade;
   /**
    * - {@link IdleAgreement}

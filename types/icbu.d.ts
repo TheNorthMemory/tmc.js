@@ -113,6 +113,25 @@ declare namespace Icbu.Member {
 }
 
 /** ICBU */
+declare namespace Icbu.Risk {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2525&docType=9 天鹿风控事件异步消息结果} */
+  interface ZeroersMessage {
+    /** 业务回调id */
+    callbackId: string;
+    /** 审核结果 */
+    callbackResult?: string;
+    /** 风控事件 */
+    eventCode: string;
+    /** 风控唯一id */
+    eventDataId?: string;
+    /** reject原因 */
+    rejectReason?: string;
+    /** 风控结果 */
+    riskJudgeResult: string;
+  }
+}
+
+/** ICBU */
 declare namespace Icbu.Trade {
   /** {@link https://open.taobao.com/tmc.htm?docId=1754&docType=9 国际站订单变更消息} */
   interface OrderNotify {
