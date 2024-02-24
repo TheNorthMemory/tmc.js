@@ -437,8 +437,14 @@ declare namespace Alitrip.Train {
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2464&docType=9 创建订单成功消息} */
   interface TobOrderCreate {
-    /** 平台订单号 */
-    orderId: string;
+    /** 商户id */
+    merchantId: number;
+    /** 商户订单号 */
+    merchantOrderId: string;
+    /** 飞猪订单号 */
+    orderId: number;
+    /** 12306账号 */
+    outBuyerId: string;
   }
 }
 
