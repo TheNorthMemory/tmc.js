@@ -4233,7 +4233,7 @@ declare namespace Taobao.Refund {
     outOrderId: string;
     /** 退款单号 */
     refundOrderId: string;
-    /** 退款单状态2=退款成功 3=退款取消 4=卖家拒绝 */
+    /** 退款单状态 1:退款单创建;2:卖家同意退款;3:卖家拒绝退款;4:卖家同意退货; 5:买家已寄回;6:退款单完成;7:退款单已取消; */
     refundStatus: string;
   }
 
