@@ -1308,6 +1308,8 @@ declare interface TaoTopicsDescriptor {
   taobao_einvoice_InvoiceResultReturn(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoEinvoiceInvoiceResultReturn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoEppOrderCreate 淘宝 > epp企业购对接isv订单状态同步} */
   taobao_epp_OrderCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoEppOrderCreate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoEppPurchaseOrderStatusUpdate 淘宝 > 天猫企业购实物采购单状态变更消息} */
+  taobao_epp_PurchaseOrderStatusUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoEppPurchaseOrderStatusUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFenxiaoDealerAgree 淘宝分销 > 经销采购单审核通过} */
   taobao_fenxiao_DealerAgree(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFenxiaoDealerAgree) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFenxiaoDealerClose 淘宝分销 > 经销采购单关闭} */
@@ -4289,6 +4291,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_einvoice_InvoiceResultReturn', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoEinvoiceInvoiceResultReturn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoEppOrderCreate 淘宝 > epp企业购对接isv订单状态同步} */
   on(topic: 'taobao_epp_OrderCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoEppOrderCreate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoEppPurchaseOrderStatusUpdate 淘宝 > 天猫企业购实物采购单状态变更消息} */
+  on(topic: 'taobao_epp_PurchaseOrderStatusUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoEppPurchaseOrderStatusUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFenxiaoDealerAgree 淘宝分销 > 经销采购单审核通过} */
   on(topic: 'taobao_fenxiao_DealerAgree', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoFenxiaoDealerAgree) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoFenxiaoDealerClose 淘宝分销 > 经销采购单关闭} */

@@ -1248,6 +1248,14 @@ declare namespace Taobao.Epp {
     /** 当前订单状态： 2=已支付 6=交易成功 8=关闭 */
     tbOrderStatus: string;
   }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2528&docType=9 天猫企业购实物采购单状态变更消息} */
+  interface PurchaseOrderStatusUpdate {
+    /** 外部采购单号 */
+    outOrderId: string;
+    /** 状态描述（会随淘宝订单的状态变化而变化） -1：采购失败 10：采购中 11：采购成功 31：部分已发货 32：已全部发货 51：部分交易成功 52：全部交易成功 */
+    status: string;
+  }
 }
 
 /** 淘宝分销 */

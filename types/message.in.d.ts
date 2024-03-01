@@ -1288,6 +1288,8 @@ declare namespace IncomingMessage {
   type TaobaoEinvoiceInvoiceResultReturn = Message & { content?: MessageContent & { topic?: 'taobao_einvoice_InvoiceResultReturn', content?: string | Taobao.Einvoice.InvoiceResultReturn } };
   /** {@link Taobao.Epp.OrderCreate 淘宝 > epp企业购对接isv订单状态同步} */
   type TaobaoEppOrderCreate = Message & { content?: MessageContent & { topic?: 'taobao_epp_OrderCreate', content?: string | Taobao.Epp.OrderCreate } };
+  /** {@link Taobao.Epp.PurchaseOrderStatusUpdate 淘宝 > 天猫企业购实物采购单状态变更消息} */
+  type TaobaoEppPurchaseOrderStatusUpdate = Message & { content?: MessageContent & { topic?: 'taobao_epp_PurchaseOrderStatusUpdate', content?: string | Taobao.Epp.PurchaseOrderStatusUpdate } };
   /** {@link Taobao.Fenxiao.DealerAgree 淘宝分销 > 经销采购单审核通过} */
   type TaobaoFenxiaoDealerAgree = Message & { content?: MessageContent & { topic?: 'taobao_fenxiao_DealerAgree', content?: string | Taobao.Fenxiao.DealerAgree } };
   /** {@link Taobao.Fenxiao.DealerClose 淘宝分销 > 经销采购单关闭} */
@@ -3908,8 +3910,10 @@ declare namespace IncomingMessage {
     | TaobaoEinvoiceInvoiceResultReturn;
   /**
    * - {@link TaobaoEppOrderCreate 淘宝 > epp企业购对接isv订单状态同步}
+   * - {@link TaobaoEppPurchaseOrderStatusUpdate 淘宝 > 天猫企业购实物采购单状态变更消息}
    */
-  type TaobaoEpp = TaobaoEppOrderCreate;
+  type TaobaoEpp = TaobaoEppOrderCreate
+    | TaobaoEppPurchaseOrderStatusUpdate;
   /**
    * - {@link TaobaoFenxiaoDealerAgree 淘宝分销 > 经销采购单审核通过}
    * - {@link TaobaoFenxiaoDealerClose 淘宝分销 > 经销采购单关闭}
