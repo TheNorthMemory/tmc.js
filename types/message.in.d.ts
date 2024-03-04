@@ -1720,6 +1720,8 @@ declare namespace IncomingMessage {
   type TaobaoSmartappDataSync = Message & { content?: MessageContent & { topic?: 'taobao_smartapp_DataSync', content?: string | Taobao.Smartapp.DataSync } };
   /** {@link Taobao.Smartapp.DiagnosticMetrics 平台消息 > 智能应用开放生意参谋诊断指标} */
   type TaobaoSmartappDiagnosticMetrics = Message & { content?: MessageContent & { topic?: 'taobao_smartapp_DiagnosticMetrics', content?: string | Taobao.Smartapp.DiagnosticMetrics } };
+  /** {@link Taobao.Smartapp.OrderAlert 平台消息 > 淘宝智能应用订单预警事件} */
+  type TaobaoSmartappOrderAlert = Message & { content?: MessageContent & { topic?: 'taobao_smartapp_OrderAlert', content?: string | Taobao.Smartapp.OrderAlert } };
   /** {@link Taobao.Smartapp.PresellEnd 平台消息 > 淘宝智能应用预售尾款截止短信催付} */
   type TaobaoSmartappPresellEnd = Message & { content?: MessageContent & { topic?: 'taobao_smartapp_PresellEnd', content?: string | Taobao.Smartapp.PresellEnd } };
   /** {@link Taobao.Smartapp.PresellStart 平台消息 > 淘宝智能应用预售开始短信催付} */
@@ -4444,6 +4446,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoSmartappAppSubChange 平台消息 > 用户订阅变更消息}
    * - {@link TaobaoSmartappDataSync 平台消息 > 智能应用服务登记数据变更消息}
    * - {@link TaobaoSmartappDiagnosticMetrics 平台消息 > 智能应用开放生意参谋诊断指标}
+   * - {@link TaobaoSmartappOrderAlert 平台消息 > 淘宝智能应用订单预警事件}
    * - {@link TaobaoSmartappPresellEnd 平台消息 > 淘宝智能应用预售尾款截止短信催付}
    * - {@link TaobaoSmartappPresellStart 平台消息 > 淘宝智能应用预售开始短信催付}
    * - {@link TaobaoSmartappSchedulerTask 平台消息 > 定时任务消息}
@@ -4454,6 +4457,7 @@ declare namespace IncomingMessage {
   type TaobaoSmartapp = TaobaoSmartappAppSubChange
     | TaobaoSmartappDataSync
     | TaobaoSmartappDiagnosticMetrics
+    | TaobaoSmartappOrderAlert
     | TaobaoSmartappPresellEnd
     | TaobaoSmartappPresellStart
     | TaobaoSmartappSchedulerTask

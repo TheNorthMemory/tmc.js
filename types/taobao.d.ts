@@ -4715,6 +4715,20 @@ declare namespace Taobao.Smartapp {
     user_nick: string;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2529&docType=9 淘宝智能应用订单预警事件} */
+  interface OrderAlert {
+    /** 操作链接 */
+    action: string;
+    /** 预警任务类型 */
+    alertType: string;
+    /** 预警任务ID */
+    eventId: string;
+    /** 预警任务名称 */
+    flowName: string;
+    /** 订单号 */
+    tid: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2414&docType=9 淘宝智能应用预售尾款截止短信催付} */
   interface PresellEnd {
     /** 买家openId */

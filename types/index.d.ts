@@ -1740,6 +1740,8 @@ declare interface TaoTopicsDescriptor {
   taobao_smartapp_DataSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartappDataSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSmartappDiagnosticMetrics 平台消息 > 智能应用开放生意参谋诊断指标} */
   taobao_smartapp_DiagnosticMetrics(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartappDiagnosticMetrics) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoSmartappOrderAlert 平台消息 > 淘宝智能应用订单预警事件} */
+  taobao_smartapp_OrderAlert(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartappOrderAlert) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSmartappPresellEnd 平台消息 > 淘宝智能应用预售尾款截止短信催付} */
   taobao_smartapp_PresellEnd(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartappPresellEnd) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSmartappPresellStart 平台消息 > 淘宝智能应用预售开始短信催付} */
@@ -4723,6 +4725,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_smartapp_DataSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartappDataSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSmartappDiagnosticMetrics 平台消息 > 智能应用开放生意参谋诊断指标} */
   on(topic: 'taobao_smartapp_DiagnosticMetrics', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartappDiagnosticMetrics) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoSmartappOrderAlert 平台消息 > 淘宝智能应用订单预警事件} */
+  on(topic: 'taobao_smartapp_OrderAlert', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartappOrderAlert) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSmartappPresellEnd 平台消息 > 淘宝智能应用预售尾款截止短信催付} */
   on(topic: 'taobao_smartapp_PresellEnd', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartappPresellEnd) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSmartappPresellStart 平台消息 > 淘宝智能应用预售开始短信催付} */
