@@ -1266,6 +1266,8 @@ declare namespace IncomingMessage {
   type TaobaoDisputeRefundPriceProtect = Message & { content?: MessageContent & { topic?: 'taobao_dispute_RefundPriceProtect', content?: string | Taobao.Dispute.RefundPriceProtect } };
   /** {@link Taobao.Dispute.RefundSuccess 淘宝 > 新退款成功消息} */
   type TaobaoDisputeRefundSuccess = Message & { content?: MessageContent & { topic?: 'taobao_dispute_RefundSuccess', content?: string | Taobao.Dispute.RefundSuccess } };
+  /** {@link Taobao.Dispute.TaobaoInterApplied 淘宝 > 申请小二介入} */
+  type TaobaoDisputeTaobaoInterApplied = Message & { content?: MessageContent & { topic?: 'taobao_dispute_TaobaoInterApplied', content?: string | Taobao.Dispute.TaobaoInterApplied } };
   /** {@link Taobao.Dpaas.AuthTokenCreate DPAAS > dpaas三方服务token} */
   type TaobaoDpaasAuthTokenCreate = Message & { content?: MessageContent & { topic?: 'taobao_dpaas_AuthTokenCreate', content?: string | Taobao.Dpaas.AuthTokenCreate } };
   /** {@link Taobao.Dpaas.CustomerFlow DPAAS > 客流新增及会员到店消息} */
@@ -3874,6 +3876,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoDisputeRefundCreated 淘宝 > 新退款创建}
    * - {@link TaobaoDisputeRefundPriceProtect 淘宝 > 价保退款成功}
    * - {@link TaobaoDisputeRefundSuccess 淘宝 > 新退款成功消息}
+   * - {@link TaobaoDisputeTaobaoInterApplied 淘宝 > 申请小二介入}
    */
   type TaobaoDispute = TaobaoDisputeExchangeAgree
     | TaobaoDisputeExchangeClosed
@@ -3883,7 +3886,8 @@ declare namespace IncomingMessage {
     | TaobaoDisputeExchangeTurnToRefund
     | TaobaoDisputeRefundCreated
     | TaobaoDisputeRefundPriceProtect
-    | TaobaoDisputeRefundSuccess;
+    | TaobaoDisputeRefundSuccess
+    | TaobaoDisputeTaobaoInterApplied;
   /**
    * - {@link TaobaoDpaasAuthTokenCreate DPAAS > dpaas三方服务token}
    * - {@link TaobaoDpaasCustomerFlow DPAAS > 客流新增及会员到店消息}

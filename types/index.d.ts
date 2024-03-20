@@ -1286,6 +1286,8 @@ declare interface TaoTopicsDescriptor {
   taobao_dispute_RefundPriceProtect(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeRefundPriceProtect) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDisputeRefundSuccess 淘宝 > 新退款成功消息} */
   taobao_dispute_RefundSuccess(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeRefundSuccess) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDisputeTaobaoInterApplied 淘宝 > 申请小二介入} */
+  taobao_dispute_TaobaoInterApplied(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeTaobaoInterApplied) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDpaasAuthTokenCreate DPAAS > dpaas三方服务token} */
   taobao_dpaas_AuthTokenCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDpaasAuthTokenCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDpaasCustomerFlow DPAAS > 客流新增及会员到店消息} */
@@ -4271,6 +4273,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_dispute_RefundPriceProtect', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeRefundPriceProtect) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDisputeRefundSuccess 淘宝 > 新退款成功消息} */
   on(topic: 'taobao_dispute_RefundSuccess', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeRefundSuccess) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDisputeTaobaoInterApplied 淘宝 > 申请小二介入} */
+  on(topic: 'taobao_dispute_TaobaoInterApplied', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeTaobaoInterApplied) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDpaasAuthTokenCreate DPAAS > dpaas三方服务token} */
   on(topic: 'taobao_dpaas_AuthTokenCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDpaasAuthTokenCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDpaasCustomerFlow DPAAS > 客流新增及会员到店消息} */

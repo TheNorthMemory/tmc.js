@@ -1651,7 +1651,7 @@ declare namespace Xiaoman.Perform {
     /** 小满客户id */
     okki_client_id: string;
     /** 执行时间 */
-    okki_execute_time: Date | number | string;
+    okki_execute_time?: Date | number | string;
     /** 小满订单号 */
     okki_order_no: string;
     /** 小满合同号 */
