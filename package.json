@@ -1,6 +1,6 @@
 {
   "name": "tmc.js",
-  "version": "0.3.37",
+  "version": "0.3.38",
   "description": "Event driven and chained Taobao Message Channel(TMC) for NodeJS",
   "author": "James ZHANG",
   "license": "MIT",
