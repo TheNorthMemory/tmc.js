@@ -67,6 +67,43 @@ declare namespace Xianyu.Isv {
   }
 }
 
+/** 咸鱼 */
+declare namespace Xianyu.Marketrecycle {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2534&docType=9 保卖订单变更通知} */
+  interface OrderStateSyn {
+    /** 订单号 */
+    bizOrderId: string;
+    /** 环境参数 */
+    env: string;
+    /** 状态变更 */
+    status: string;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2533&docType=9 闲鱼保卖计划变更消息} */
+  interface PlanStateSyn {
+    /** 地址信息 */
+    address?: string;
+    /** 地址详细信息 */
+    address_detail?: string;
+    /** 纬度 */
+    lat?: string;
+    /** 经度 */
+    lng?: string;
+    /** 计划主状态 */
+    main_status: string;
+    /** 计划id */
+    plan_id: string;
+    /** 估价id */
+    quote_id: string;
+    /** 估价版本 */
+    quote_version: string;
+    /** 上门时间 */
+    ship_time?: string;
+    /** 计划子状态 */
+    sub_status: string;
+  }
+}
+
 /** 闲鱼 */
 declare namespace Xianyu.Recycle {
   /** {@link https://open.taobao.com/tmc.htm?docId=1209&docType=9 订单状态同步给回收商} */

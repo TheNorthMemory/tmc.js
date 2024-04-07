@@ -2252,6 +2252,10 @@ declare namespace IncomingMessage {
   type XianyuEnvironmentEventSyn = Message & { content?: MessageContent & { topic?: 'xianyu_environment_EventSyn', content?: string | Xianyu.Environment.EventSyn } };
   /** {@link Xianyu.Isv.OrderRemind 咸鱼 > 闲鱼服务商订单提醒} */
   type XianyuIsvOrderRemind = Message & { content?: MessageContent & { topic?: 'xianyu_isv_OrderRemind', content?: string | Xianyu.Isv.OrderRemind } };
+  /** {@link Xianyu.Marketrecycle.OrderStateSyn 咸鱼 > 保卖订单变更通知} */
+  type XianyuMarketrecycleOrderStateSyn = Message & { content?: MessageContent & { topic?: 'xianyu_marketrecycle_OrderStateSyn', content?: string | Xianyu.Marketrecycle.OrderStateSyn } };
+  /** {@link Xianyu.Marketrecycle.PlanStateSyn 咸鱼 > 闲鱼保卖计划变更消息} */
+  type XianyuMarketrecyclePlanStateSyn = Message & { content?: MessageContent & { topic?: 'xianyu_marketrecycle_PlanStateSyn', content?: string | Xianyu.Marketrecycle.PlanStateSyn } };
   /** {@link Xianyu.Recycle.OrderStatusSync 闲鱼 > 订单状态同步给回收商} */
   type XianyuRecycleOrderStatusSync = Message & { content?: MessageContent & { topic?: 'xianyu_recycle_OrderStatusSync', content?: string | Xianyu.Recycle.OrderStatusSync } };
   /** {@link Xianyu.Recycle.SpuModifySync 闲鱼 > 闲鱼回收SPU变更消息} */
@@ -5135,6 +5139,12 @@ declare namespace IncomingMessage {
    */
   type XianyuIsv = XianyuIsvOrderRemind;
   /**
+   * - {@link XianyuMarketrecycleOrderStateSyn 咸鱼 > 保卖订单变更通知}
+   * - {@link XianyuMarketrecyclePlanStateSyn 咸鱼 > 闲鱼保卖计划变更消息}
+   */
+  type XianyuMarketrecycle = XianyuMarketrecycleOrderStateSyn
+    | XianyuMarketrecyclePlanStateSyn;
+  /**
    * - {@link XianyuRecycleOrderStatusSync 闲鱼 > 订单状态同步给回收商}
    * - {@link XianyuRecycleSpuModifySync 闲鱼 > 闲鱼回收SPU变更消息}
    */
@@ -5900,6 +5910,7 @@ declare namespace IncomingMessage {
    * - {@link XianyuCar}
    * - {@link XianyuEnvironment}
    * - {@link XianyuIsv}
+   * - {@link XianyuMarketrecycle}
    * - {@link XianyuRecycle}
    * - {@link XianyuRegister}
    * - {@link XianyuTemplate}
@@ -5910,6 +5921,7 @@ declare namespace IncomingMessage {
     | XianyuCar
     | XianyuEnvironment
     | XianyuIsv
+    | XianyuMarketrecycle
     | XianyuRecycle
     | XianyuRegister
     | XianyuTemplate
