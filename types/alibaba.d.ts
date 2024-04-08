@@ -1390,11 +1390,11 @@ declare namespace Alibaba.Homestyler {
   /** {@link https://open.taobao.com/tmc.htm?docId=2498&docType=9 洞窝全景图替换消息回调} */
   interface AigcPanoramaReplaceCallback {
     /** 合成结果图片地址 */
-    imageUrl: string;
+    image_url: string;
     /** 错误信息描述 */
     message: string;
     /** 同步请求返回的requestId */
-    requestId: string;
+    request_id: string;
     /** 合成结果 */
     status: string;
   }
@@ -1434,15 +1434,15 @@ declare namespace Alibaba.Ifp {
   /** {@link https://open.taobao.com/tmc.htm?docId=2386&docType=9 同城履约包裹状态变更消息} */
   interface PackageCfcContainer {
     /** 履约单号 */
-    fulfillOrderId: string;
+    fulfill_order_id: string;
     /** CFC_CONTAINER:CFC封箱 */
     status: string;
     /** 包裹令牌号 */
     token: string;
     /** 仓编码 */
-    warehouseCode: string;
+    warehouse_code: string;
     /** 仓商户编码 */
-    workMerchantCode: string;
+    work_merchant_code: string;
   }
 }
 
@@ -2474,53 +2474,53 @@ declare namespace Alibaba.Jym {
   /** {@link https://open.taobao.com/tmc.htm?docId=2445&docType=9 交易猫steam正向消息通知} */
   interface SteamTradeOrderNotify {
     /** 订单ID */
-    orderId: string;
+    order_id: string;
     /** 订单状态 1.交易成功 2.结算成功 */
-    orderStatus: number;
+    order_status: number;
   }
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2446&docType=9 交易猫steam逆向通知} */
   interface SteamTradeRefundNotify {
     /** 1-新建 */
-    isNewRefund?: number;
+    is_new_refund?: number;
     /** 逆向单新状态 */
-    newStatus: number;
+    new_status: number;
     /** 逆向单新子状态 */
-    newSubStatus: number;
+    new_sub_status: number;
     /** 逆向单旧状态 */
-    oldStatus?: number;
+    old_status?: number;
     /** 逆向单旧子状态 */
-    oldSubStatus?: number;
+    old_sub_status?: number;
     /** 订单ID */
-    orderId: string;
+    order_id: string;
     /** 1.快速退款 2.审核退款 */
-    processType: number;
+    process_type: number;
     /** 退款单ID */
-    refundOrderId: string;
+    refund_order_id: string;
     /** 退款类型 1:售中 2:售后 */
-    refundType: number;
+    refund_type: number;
   }
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2441&docType=9 交易猫逆向单状态通知} */
   interface TradeRefundNotify {
     /** 1-新建 */
-    isNewRefund?: number;
+    is_new_refund?: number;
     /** 逆向单新状态 */
-    newStatus?: number;
+    new_status?: number;
     /** 逆向单新子状态 */
-    newSubStatus?: number;
+    new_sub_status?: number;
     /** 逆向单旧状态 */
-    oldStatus?: number;
+    old_status?: number;
     /** 逆向单旧子状态 */
-    oldSubStatus?: number;
+    old_sub_status?: number;
     /** 商品ID */
-    orderId: string;
+    order_id: string;
     /** 1.快速退款 2.审核退款 */
-    processType: number;
+    process_type: number;
     /** 退款单ID */
-    refundOrderId: string;
+    refund_order_id: string;
     /** 退款类型 1:售中 2:售后 */
-    refundType: number;
+    refund_type: number;
   }
 }
 
@@ -3027,13 +3027,13 @@ declare namespace Alibaba.Msd {
   /** {@link https://open.taobao.com/tmc.htm?docId=2458&docType=9 喵速达服务供应链结算单明细消息} */
   interface SettlementBillDetail {
     /** 支付流水号 */
-    alipayOrderId: string;
+    alipay_order_id: string;
     /** 结算金额 */
     amount: string;
     /** 服务交易订单id */
-    serviceTradeOrderId: number;
+    service_trade_order_id: number;
     /** 服务单id */
-    spServiceOrderId: number;
+    sp_service_order_id: number;
   }
 }
 
@@ -3588,17 +3588,17 @@ declare namespace Alibaba.Pur {
   /** {@link https://open.taobao.com/tmc.htm?docId=2485&docType=9 取消订单结果通知} */
   interface ResourceOrderCancelNotify {
     /** 失败原因 */
-    failedMsg?: string;
+    failed_msg?: string;
     /** 平台子订单号 */
-    orderItemNo: string;
+    order_item_no: string;
     /** 平台订单号 */
-    orderNo: string;
+    order_no: string;
     /** 三方子订单号 */
-    outOrderItemNo: string;
+    out_order_item_no: string;
     /** 三方订单号 */
-    outOrderNo: string;
+    out_order_no: string;
     /** 逆向单号 */
-    returnNo: string;
+    return_no: string;
     /** 取消订单是否成功 */
     success: boolean;
   }
@@ -3606,11 +3606,11 @@ declare namespace Alibaba.Pur {
   /** {@link https://open.taobao.com/tmc.htm?docId=2448&docType=9 发货提醒} */
   interface ResourceOrderShipNotify {
     /** 子订单 */
-    orderItems: string;
+    order_items: string;
     /** 平台订单号 */
-    orderNo: string;
+    order_no: string;
     /** 三方订单号 */
-    outOrderNo: string;
+    out_order_no: string;
   }
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2084&docType=9 RT审批完成消息通知} */

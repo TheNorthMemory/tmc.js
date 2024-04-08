@@ -3,11 +3,11 @@ declare namespace Ali.Fin {
   /** {@link https://open.taobao.com/tmc.htm?docId=2391&docType=9 阿里场景金融大延保理赔结果通知给服务商} */
   interface DybClaimResult {
     /** 理赔通过金额，单位分 */
-    claimFee?: string;
+    claim_fee?: string;
     /** 理赔收单id */
-    claimNo: string;
+    claim_no: string;
     /** 理赔结果，WAIT_UPDATE/FINISHED */
-    claimStatus: string;
+    claim_status: string;
     /** 退回原因 */
     reason?: string;
   }

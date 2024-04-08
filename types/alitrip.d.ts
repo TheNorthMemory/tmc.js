@@ -175,41 +175,41 @@ declare namespace Alitrip.Flight {
   /** {@link https://open.taobao.com/tmc.htm?docId=2359&docType=9 新京航航变消息} */
   interface FlightChange {
     /** 航变原因 */
-    changeReason?: string;
+    change_reason?: string;
     /** 航变时间 */
-    changeTime?: Date | number | string;
+    change_time?: Date | number | string;
     /** 航变类型,1为取消，2为变更 */
-    changeType?: number;
+    change_type?: number;
     /** 消息id */
-    messageId: string;
+    message_id: string;
     /** 到达机场三字码 */
-    newArriveCode?: string;
+    new_arrive_code?: string;
     /** 到达时间 */
-    newArriveTime?: Date | number | string;
+    new_arrive_time?: Date | number | string;
     /** 出发机场三字码 */
-    newDepartCode?: string;
+    new_depart_code?: string;
     /** 出发时间 */
-    newDepartTime?: Date | number | string;
+    new_depart_time?: Date | number | string;
     /** 新航班日期 */
-    newFlightDate?: Date | number | string;
+    new_flight_date?: Date | number | string;
     /** 航班号 */
-    newFlightNo?: string;
+    new_flight_no?: string;
     /** 到达机场三字码 */
-    oldArriveCode: string;
+    old_arrive_code: string;
     /** 出发时间 */
-    oldArriveTime: Date | number | string;
+    old_arrive_time: Date | number | string;
     /** 出发机场三字码 */
-    oldDepartCode: string;
+    old_depart_code: string;
     /** 出发时间 */
-    oldDepartTime: Date | number | string;
+    old_depart_time: Date | number | string;
     /** 原航班日期 */
-    oldFlightDate?: Date | number | string;
+    old_flight_date?: Date | number | string;
     /** 原航班号 */
-    oldFlightNo: string;
+    old_flight_no: string;
     /** 采购订单号 */
-    orderId?: number;
+    order_id?: number;
     /** 航变子类型 */
-    subType?: number;
+    sub_type?: number;
   }
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2189&docType=9 机票支付结果异步通知} */
@@ -414,37 +414,37 @@ declare namespace Alitrip.Train {
   /** {@link https://open.taobao.com/tmc.htm?docId=2465&docType=9 飞猪火车票风控消息} */
   interface RiskNotify {
     /** 12306账号，可能为手机号/邮箱/唯一用户名 */
-    accountName: string;
+    account_name: string;
     /** 唯一标识 */
     id: string;
     /** 12306用户ID */
-    outUserId: string;
+    out_user_id: string;
     /** 协议类型，app或pc，一般仅app */
     protocol: string;
     /** 风控码 */
-    riskCode: string;
+    risk_code: string;
     /** 风控消息类型、MARK_RISK 和 CLEAR_RISK */
-    riskTag: string;
+    risk_tag: string;
     /** 对应的解风控动作 */
-    solveAction: string;
+    solve_action: string;
     /** 提示信息，指导用户行为 */
     tips: string;
     /** 用户淘宝ID */
-    userId: number;
+    user_id: number;
     /** 12306唯一用户名 */
-    userUniqName: string;
+    user_uniq_name: string;
   }
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2464&docType=9 创建订单成功消息} */
   interface TobOrderCreate {
     /** 商户id */
-    merchantId: number;
+    merchant_id: number;
     /** 商户订单号 */
-    merchantOrderId: string;
+    merchant_order_id: string;
     /** 飞猪订单号 */
-    orderId: number;
+    order_id: number;
     /** 12306账号 */
-    outBuyerId: string;
+    out_buyer_id: string;
   }
 }
 

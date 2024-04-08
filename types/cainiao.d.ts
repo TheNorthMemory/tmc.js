@@ -980,13 +980,13 @@ declare namespace Cainiao.Waybill {
   /** {@link https://open.taobao.com/tmc.htm?docId=2376&docType=9 单据状态跟踪} */
   interface TrackTicketStatus {
     /** 操作时间 */
-    opTime: number;
+    op_time: number;
     /** 外部单号 */
-    orderId: string;
+    order_id: string;
     /** 拦截状态 */
     status: string;
     /** 状态描述 */
-    statusDesc: string;
+    status_desc: string;
   }
 }
 

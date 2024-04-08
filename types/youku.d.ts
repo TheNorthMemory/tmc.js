@@ -5,13 +5,13 @@ declare namespace Youku.Aigc {
     /** 训练生成的模型信息 */
     data?: string;
     /** 错误码 */
-    resCode?: string;
+    res_code?: string;
     /** 错误信息 */
-    resInfo?: string;
+    res_info?: string;
     /** 是否成功标识 */
     success: boolean;
     /** 任务id */
-    taskId: string;
+    task_id: string;
   }
 }
 

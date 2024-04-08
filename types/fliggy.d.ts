@@ -104,11 +104,11 @@ declare namespace Fliggy.Sht {
     /** 订单信息 */
     content: string;
     /** 消息唯一ID */
-    msgId: string;
+    msg_id: string;
     /** 淘宝订单ID */
-    orderId: string;
+    order_id: string;
     /** 订单状态 */
-    orderStatus: number;
+    order_status: number;
   }
 }
 

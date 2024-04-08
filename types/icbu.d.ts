@@ -117,17 +117,17 @@ declare namespace Icbu.Risk {
   /** {@link https://open.taobao.com/tmc.htm?docId=2525&docType=9 天鹿风控事件异步消息结果} */
   interface ZeroersMessage {
     /** 业务回调id */
-    callbackId: string;
+    callback_id: string;
     /** 审核结果 */
-    callbackResult?: string;
+    callback_result?: string;
     /** 风控事件 */
-    eventCode: string;
+    event_code: string;
     /** 风控唯一id */
-    eventDataId?: string;
+    event_data_id?: string;
     /** reject原因 */
-    rejectReason?: string;
+    reject_reason?: string;
     /** 风控结果 */
-    riskJudgeResult: string;
+    risk_judge_result: string;
   }
 }
 

@@ -323,9 +323,9 @@ declare namespace Taobao.Axin {
   /** {@link https://open.taobao.com/tmc.htm?docId=2402&docType=9 新增行政区划结果通知} */
   interface DivisionApplyResult {
     /** 行政区划编号 */
-    divisionId: string;
+    division_id: string;
     /** 行政区划外部编号（供应商侧编号） */
-    divisionOuterId: string;
+    division_outer_id: string;
     /** 新增结果 */
     result: string;
   }
@@ -379,9 +379,9 @@ declare namespace Taobao.Axin {
   /** {@link https://open.taobao.com/tmc.htm?docId=2403&docType=9 新增POI结果通知} */
   interface PoiApplyResult {
     /** POI编号 */
-    poiId: string;
+    poi_id: string;
     /** POI外部编号（供应商侧编号） */
-    poiOuterId: string;
+    poi_outer_id: string;
     /** 新增结果 */
     result: string;
   }
@@ -1262,19 +1262,19 @@ declare namespace Taobao.Epp {
   /** {@link https://open.taobao.com/tmc.htm?docId=2500&docType=9 epp企业购对接isv订单状态同步} */
   interface OrderCreate {
     /** String	变化时间 */
-    modifiedTime: string;
+    modified_time: string;
     /** 外部采购单号 */
-    outOrderId: string;
+    out_order_id: string;
     /** 订单ID */
-    tbOrderId: string;
+    tb_order_id: string;
     /** 当前订单状态： 2=已支付 6=交易成功 8=关闭 */
-    tbOrderStatus: string;
+    tb_order_status: string;
   }
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2528&docType=9 天猫企业购实物采购单状态变更消息} */
   interface PurchaseOrderStatusUpdate {
     /** 外部采购单号 */
-    outOrderId: string;
+    out_order_id: string;
     /** 状态描述（会随淘宝订单的状态变化而变化） -1：采购失败 10：采购中 11：采购成功 31：部分已发货 32：已全部发货 51：部分交易成功 52：全部交易成功 */
     status: string;
   }
@@ -1792,17 +1792,17 @@ declare namespace Taobao.Fsc {
   /** {@link https://open.taobao.com/tmc.htm?docId=2420&docType=9 线路订单状态变更通知} */
   interface RouteOrderStatusChange {
     /** 阿信订单id */
-    orderId: string;
+    order_id: string;
     /** 1-已下单 2-已确认 3-已退团 4-已取消 5-拒绝确认，驳回 14-交易成功 */
-    orderStatus: string;
+    order_status: string;
     /** 外部团id	String */
-    outProjectId: string;
+    out_project_id: string;
     /** 付款状态1-未付款 2-已付定金3-已付款（代表全部付款完成） 4-已结算完成 5-已关闭 */
-    payStatus: string;
+    pay_status: string;
     /** 供应商id */
-    supplierId: string;
+    supplier_id: string;
     /** 供应商订单号id */
-    supplierOrderId: string;
+    supplier_order_id: string;
   }
 }
 
@@ -2379,17 +2379,17 @@ declare namespace Taobao.Ihome {
   /** {@link https://open.taobao.com/tmc.htm?docId=2444&docType=9 aigc任务状态变更} */
   interface AigcTaskChange {
     /** 对应bizType */
-    bizType: string;
+    biz_type: string;
     /** 失败原因 */
     reason?: string;
     /** 分片id */
-    shardId: number;
+    shard_id: number;
     /** 任务状态 */
     status: string;
     /** 任务id */
-    taskId: number;
+    task_id: number;
     /** 用户平台 */
-    userPlatform: string;
+    user_platform: string;
   }
 }
 
@@ -2773,11 +2773,11 @@ declare namespace Taobao.Itemmarket {
   /** {@link https://open.taobao.com/tmc.htm?docId=2461&docType=9 铺货成功推送} */
   interface ItemRelationChange {
     /** 商品id */
-    itemId: number;
+    item_id: number;
     /** 分销商店铺名称 */
-    shopName: string;
+    shop_name: string;
     /** 淘宝商品id */
-    tbItemId: number;
+    tb_item_id: number;
   }
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2356&docType=9 货品素材信息变更} */
@@ -2801,11 +2801,11 @@ declare namespace Taobao.Itemmarket {
     /** 是否是主单 */
     is_main?: string;
     /** 操作类型 */
-    operationType?: string;
+    operation_type?: string;
     /** 采购单id */
     purchase_order_id: number;
     /** 销售状态 */
-    sellingStatus?: number;
+    selling_status?: number;
     /** 采购单类型 */
     usage_type?: string;
   }
@@ -4258,13 +4258,13 @@ declare namespace Taobao.Refund {
   /** {@link https://open.taobao.com/tmc.htm?docId=2520&docType=9 逆向订单数据同步} */
   interface OrderStatusSync {
     /** 更新时间 */
-    modifiedTime: string;
+    modified_time: string;
     /** 外部订单号 */
-    outOrderId: string;
+    out_order_id: string;
     /** 退款单号 */
-    refundOrderId: string;
+    refund_order_id: string;
     /** 退款单状态 1:退款单创建;2:卖家同意退款;3:卖家拒绝退款;4:卖家同意退货; 5:买家已寄回;6:退款单完成;7:退款单已取消; */
-    refundStatus: string;
+    refund_status: string;
   }
 
   /** {@link https://open.taobao.com/tmc.htm?docId=124&docType=9 屏蔽退款留言消息-无此消息} */
@@ -4557,7 +4557,7 @@ declare namespace Taobao.Rhino {
   /** {@link https://open.taobao.com/tmc.htm?docId=2496&docType=9 裁剪进度变更消息} */
   interface IntegrationCutProgressUpdateMessage {
     /** 裁剪指示单列表 */
-    ticketList: string;
+    ticket_list: string;
   }
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2494&docType=9 外协订单创建消息通知} */
@@ -4742,11 +4742,11 @@ declare namespace Taobao.Smartapp {
     /** 操作链接 */
     action: string;
     /** 预警任务类型 */
-    alertType: string;
+    alert_type: string;
     /** 预警任务ID */
-    eventId: string;
+    event_id: string;
     /** 预警任务名称 */
-    flowName: string;
+    flow_name: string;
     /** 订单号 */
     tid: string;
   }
@@ -5295,13 +5295,13 @@ declare namespace Taobao.Tc {
   /** {@link https://open.taobao.com/tmc.htm?docId=2364&docType=9 物资库存变动} */
   interface MaterialStock {
     /** code */
-    nodeCode: string;
+    node_code: string;
     /** WAREHOUSE("仓"), CFC("CFC"), DP("配送站"), TMS("运输/司机"), */
-    nodeType: string;
+    node_type: string;
     /** DRF-大润发 */
-    ownershipInstitution: string;
+    ownership_institution: string;
     /** 处理列表 */
-    processingList: string;
+    processing_list: string;
     /** 时间戳 */
     timestamp: number;
   }
@@ -5391,7 +5391,7 @@ declare namespace Taobao.Top {
   /** {@link https://open.taobao.com/tmc.htm?docId=2504&docType=9 mqf消息通道} */
   interface MqfNotify {
     /** dataId */
-    dataId?: string;
+    data_id?: string;
   }
 
   /** {@link https://open.taobao.com/tmc.htm?docId=1534&docType=9 似年测试ONS} */
