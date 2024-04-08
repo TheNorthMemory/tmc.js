@@ -111,7 +111,7 @@ declare namespace Idle.Consignmentii {
   }
 }
 
-/** 咸鱼 */
+/** 闲鱼 */
 declare namespace Idle.Cycleshop {
   /** {@link https://open.taobao.com/tmc.htm?docId=2499&docType=9 闲鱼循环商店-货品变更通知} */
   interface GoodsNotice {
@@ -251,7 +251,7 @@ declare namespace Idle.Tranferpay {
   }
 }
 
-/** 咸鱼 */
+/** 闲鱼 */
 declare namespace Idle.Twjd {
   /** {@link https://open.taobao.com/tmc.htm?docId=2407&docType=9 闲鱼图文鉴定业务订单消息} */
   interface OrderSyn {

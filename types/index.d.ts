@@ -1108,9 +1108,9 @@ declare interface TaoTopicsDescriptor {
   idle_consignment_OrderSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleConsignmentOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleConsignmentiiOrderSyn 闲鱼回收商消息 > 闲鱼寄卖V2订单履约状态同步} */
   idle_consignmentii_OrderSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleConsignmentiiOrderSyn) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.IdleCycleshopGoodsNotice 咸鱼 > 闲鱼循环商店-货品变更通知} */
+  /** {@link IncomingMessage.IdleCycleshopGoodsNotice 闲鱼 > 闲鱼循环商店-货品变更通知} */
   idle_cycleshop_GoodsNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleCycleshopGoodsNotice) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.IdleCycleshopSaleOrderNotice 咸鱼 > 闲鱼循环商店-销售单变更通知} */
+  /** {@link IncomingMessage.IdleCycleshopSaleOrderNotice 闲鱼 > 闲鱼循环商店-销售单变更通知} */
   idle_cycleshop_SaleOrderNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleCycleshopSaleOrderNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleRecycleOrderStateSyn 闲鱼回收商消息 > 闲鱼回收业务订单消息} */
   idle_recycle_OrderStateSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleRecycleOrderStateSyn) => void): TaoMessageConsumer;
@@ -1130,7 +1130,7 @@ declare interface TaoTopicsDescriptor {
   idle_topisv_TradeNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleTopisvTradeNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleTranferpayOrderChange 闲鱼 > 直接转账交易消息} */
   idle_tranferpay_OrderChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleTranferpayOrderChange) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.IdleTwjdOrderSyn 咸鱼 > 闲鱼图文鉴定业务订单消息} */
+  /** {@link IncomingMessage.IdleTwjdOrderSyn 闲鱼 > 闲鱼图文鉴定业务订单消息} */
   idle_twjd_OrderSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleTwjdOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IntimeDatacenterOrderStatus 银泰 > 状态同步} */
   intime_datacenter_OrderStatus(fn: (this: TaoMessageConsumer, message: IncomingMessage.IntimeDatacenterOrderStatus) => void): TaoMessageConsumer;
@@ -2268,11 +2268,11 @@ declare interface TaoTopicsDescriptor {
   xianyu_appraise_OrderSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuAppraiseOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuCarOrderStatusSync 闲鱼回收商消息 > 闲鱼二手车寄卖订单状态同步} */
   xianyu_car_OrderStatusSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCarOrderStatusSync) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.XianyuCtoxRateStateSyn 咸鱼 > c2x业务订单评价消息同步} */
+  /** {@link IncomingMessage.XianyuCtoxRateStateSyn 闲鱼 > c2x业务订单评价消息同步} */
   xianyu_ctox_RateStateSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCtoxRateStateSyn) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.XianyuEnvironmentEventSyn 咸鱼 > 闲鱼双11公益游戏任务事件同步} */
+  /** {@link IncomingMessage.XianyuEnvironmentEventSyn 闲鱼 > 闲鱼双11公益游戏任务事件同步} */
   xianyu_environment_EventSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuEnvironmentEventSyn) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.XianyuIsvOrderRemind 咸鱼 > 闲鱼服务商订单提醒} */
+  /** {@link IncomingMessage.XianyuIsvOrderRemind 闲鱼 > 闲鱼服务商订单提醒} */
   xianyu_isv_OrderRemind(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuIsvOrderRemind) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuMarketrecycleOrderStateSyn 闲鱼 > 保卖订单变更通知} */
   xianyu_marketrecycle_OrderStateSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuMarketrecycleOrderStateSyn) => void): TaoMessageConsumer;
@@ -4105,9 +4105,9 @@ declare interface TaoEventsListener {
   on(topic: 'idle_consignment_OrderSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleConsignmentOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleConsignmentiiOrderSyn 闲鱼回收商消息 > 闲鱼寄卖V2订单履约状态同步} */
   on(topic: 'idle_consignmentii_OrderSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleConsignmentiiOrderSyn) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.IdleCycleshopGoodsNotice 咸鱼 > 闲鱼循环商店-货品变更通知} */
+  /** {@link IncomingMessage.IdleCycleshopGoodsNotice 闲鱼 > 闲鱼循环商店-货品变更通知} */
   on(topic: 'idle_cycleshop_GoodsNotice', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleCycleshopGoodsNotice) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.IdleCycleshopSaleOrderNotice 咸鱼 > 闲鱼循环商店-销售单变更通知} */
+  /** {@link IncomingMessage.IdleCycleshopSaleOrderNotice 闲鱼 > 闲鱼循环商店-销售单变更通知} */
   on(topic: 'idle_cycleshop_SaleOrderNotice', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleCycleshopSaleOrderNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleRecycleOrderStateSyn 闲鱼回收商消息 > 闲鱼回收业务订单消息} */
   on(topic: 'idle_recycle_OrderStateSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleRecycleOrderStateSyn) => void): TaoMessageConsumer;
@@ -4127,7 +4127,7 @@ declare interface TaoEventsListener {
   on(topic: 'idle_topisv_TradeNotice', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleTopisvTradeNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleTranferpayOrderChange 闲鱼 > 直接转账交易消息} */
   on(topic: 'idle_tranferpay_OrderChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleTranferpayOrderChange) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.IdleTwjdOrderSyn 咸鱼 > 闲鱼图文鉴定业务订单消息} */
+  /** {@link IncomingMessage.IdleTwjdOrderSyn 闲鱼 > 闲鱼图文鉴定业务订单消息} */
   on(topic: 'idle_twjd_OrderSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleTwjdOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IntimeDatacenterOrderStatus 银泰 > 状态同步} */
   on(topic: 'intime_datacenter_OrderStatus', listener: (this: TaoMessageConsumer, message: IncomingMessage.IntimeDatacenterOrderStatus) => void): TaoMessageConsumer;
@@ -5265,11 +5265,11 @@ declare interface TaoEventsListener {
   on(topic: 'xianyu_appraise_OrderSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuAppraiseOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuCarOrderStatusSync 闲鱼回收商消息 > 闲鱼二手车寄卖订单状态同步} */
   on(topic: 'xianyu_car_OrderStatusSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCarOrderStatusSync) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.XianyuCtoxRateStateSyn 咸鱼 > c2x业务订单评价消息同步} */
+  /** {@link IncomingMessage.XianyuCtoxRateStateSyn 闲鱼 > c2x业务订单评价消息同步} */
   on(topic: 'xianyu_ctox_RateStateSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCtoxRateStateSyn) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.XianyuEnvironmentEventSyn 咸鱼 > 闲鱼双11公益游戏任务事件同步} */
+  /** {@link IncomingMessage.XianyuEnvironmentEventSyn 闲鱼 > 闲鱼双11公益游戏任务事件同步} */
   on(topic: 'xianyu_environment_EventSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuEnvironmentEventSyn) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.XianyuIsvOrderRemind 咸鱼 > 闲鱼服务商订单提醒} */
+  /** {@link IncomingMessage.XianyuIsvOrderRemind 闲鱼 > 闲鱼服务商订单提醒} */
   on(topic: 'xianyu_isv_OrderRemind', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuIsvOrderRemind) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuMarketrecycleOrderStateSyn 闲鱼 > 保卖订单变更通知} */
   on(topic: 'xianyu_marketrecycle_OrderStateSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuMarketrecycleOrderStateSyn) => void): TaoMessageConsumer;

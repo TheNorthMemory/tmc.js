@@ -43,7 +43,7 @@ declare namespace Xianyu.Car {
   }
 }
 
-/** 咸鱼 */
+/** 闲鱼 */
 declare namespace Xianyu.Ctox {
   /** {@link https://open.taobao.com/tmc.htm?docId=2536&docType=9 c2x业务订单评价消息同步} */
   interface RateStateSyn {
@@ -58,7 +58,7 @@ declare namespace Xianyu.Ctox {
   }
 }
 
-/** 咸鱼 */
+/** 闲鱼 */
 declare namespace Xianyu.Environment {
   /** {@link https://open.taobao.com/tmc.htm?docId=1427&docType=9 闲鱼双11公益游戏任务事件同步} */
   interface EventSyn {
@@ -71,7 +71,7 @@ declare namespace Xianyu.Environment {
   }
 }
 
-/** 咸鱼 */
+/** 闲鱼 */
 declare namespace Xianyu.Isv {
   /** {@link https://open.taobao.com/tmc.htm?docId=2219&docType=9 闲鱼服务商订单提醒} */
   interface OrderRemind {

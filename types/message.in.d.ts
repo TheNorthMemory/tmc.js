@@ -1088,9 +1088,9 @@ declare namespace IncomingMessage {
   type IdleConsignmentOrderSyn = Message & { content?: MessageContent & { topic?: 'idle_consignment_OrderSyn', content?: string | Idle.Consignment.OrderSyn } };
   /** {@link Idle.Consignmentii.OrderSyn 闲鱼回收商消息 > 闲鱼寄卖V2订单履约状态同步} */
   type IdleConsignmentiiOrderSyn = Message & { content?: MessageContent & { topic?: 'idle_consignmentii_OrderSyn', content?: string | Idle.Consignmentii.OrderSyn } };
-  /** {@link Idle.Cycleshop.GoodsNotice 咸鱼 > 闲鱼循环商店-货品变更通知} */
+  /** {@link Idle.Cycleshop.GoodsNotice 闲鱼 > 闲鱼循环商店-货品变更通知} */
   type IdleCycleshopGoodsNotice = Message & { content?: MessageContent & { topic?: 'idle_cycleshop_GoodsNotice', content?: string | Idle.Cycleshop.GoodsNotice } };
-  /** {@link Idle.Cycleshop.SaleOrderNotice 咸鱼 > 闲鱼循环商店-销售单变更通知} */
+  /** {@link Idle.Cycleshop.SaleOrderNotice 闲鱼 > 闲鱼循环商店-销售单变更通知} */
   type IdleCycleshopSaleOrderNotice = Message & { content?: MessageContent & { topic?: 'idle_cycleshop_SaleOrderNotice', content?: string | Idle.Cycleshop.SaleOrderNotice } };
   /** {@link Idle.Recycle.OrderStateSyn 闲鱼回收商消息 > 闲鱼回收业务订单消息} */
   type IdleRecycleOrderStateSyn = Message & { content?: MessageContent & { topic?: 'idle_recycle_OrderStateSyn', content?: string | Idle.Recycle.OrderStateSyn } };
@@ -1110,7 +1110,7 @@ declare namespace IncomingMessage {
   type IdleTopisvTradeNotice = Message & { content?: MessageContent & { topic?: 'idle_topisv_TradeNotice', content?: string | Idle.Topisv.TradeNotice } };
   /** {@link Idle.Tranferpay.OrderChange 闲鱼 > 直接转账交易消息} */
   type IdleTranferpayOrderChange = Message & { content?: MessageContent & { topic?: 'idle_tranferpay_OrderChange', content?: string | Idle.Tranferpay.OrderChange } };
-  /** {@link Idle.Twjd.OrderSyn 咸鱼 > 闲鱼图文鉴定业务订单消息} */
+  /** {@link Idle.Twjd.OrderSyn 闲鱼 > 闲鱼图文鉴定业务订单消息} */
   type IdleTwjdOrderSyn = Message & { content?: MessageContent & { topic?: 'idle_twjd_OrderSyn', content?: string | Idle.Twjd.OrderSyn } };
   /** {@link Intime.Datacenter.OrderStatus 银泰 > 状态同步} */
   type IntimeDatacenterOrderStatus = Message & { content?: MessageContent & { topic?: 'intime_datacenter_OrderStatus', content?: string | Intime.Datacenter.OrderStatus } };
@@ -2248,11 +2248,11 @@ declare namespace IncomingMessage {
   type XianyuAppraiseOrderSyn = Message & { content?: MessageContent & { topic?: 'xianyu_appraise_OrderSyn', content?: string | Xianyu.Appraise.OrderSyn } };
   /** {@link Xianyu.Car.OrderStatusSync 闲鱼回收商消息 > 闲鱼二手车寄卖订单状态同步} */
   type XianyuCarOrderStatusSync = Message & { content?: MessageContent & { topic?: 'xianyu_car_OrderStatusSync', content?: string | Xianyu.Car.OrderStatusSync } };
-  /** {@link Xianyu.Ctox.RateStateSyn 咸鱼 > c2x业务订单评价消息同步} */
+  /** {@link Xianyu.Ctox.RateStateSyn 闲鱼 > c2x业务订单评价消息同步} */
   type XianyuCtoxRateStateSyn = Message & { content?: MessageContent & { topic?: 'xianyu_ctox_RateStateSyn', content?: string | Xianyu.Ctox.RateStateSyn } };
-  /** {@link Xianyu.Environment.EventSyn 咸鱼 > 闲鱼双11公益游戏任务事件同步} */
+  /** {@link Xianyu.Environment.EventSyn 闲鱼 > 闲鱼双11公益游戏任务事件同步} */
   type XianyuEnvironmentEventSyn = Message & { content?: MessageContent & { topic?: 'xianyu_environment_EventSyn', content?: string | Xianyu.Environment.EventSyn } };
-  /** {@link Xianyu.Isv.OrderRemind 咸鱼 > 闲鱼服务商订单提醒} */
+  /** {@link Xianyu.Isv.OrderRemind 闲鱼 > 闲鱼服务商订单提醒} */
   type XianyuIsvOrderRemind = Message & { content?: MessageContent & { topic?: 'xianyu_isv_OrderRemind', content?: string | Xianyu.Isv.OrderRemind } };
   /** {@link Xianyu.Marketrecycle.OrderStateSyn 闲鱼 > 保卖订单变更通知} */
   type XianyuMarketrecycleOrderStateSyn = Message & { content?: MessageContent & { topic?: 'xianyu_marketrecycle_OrderStateSyn', content?: string | Xianyu.Marketrecycle.OrderStateSyn } };
@@ -3653,8 +3653,8 @@ declare namespace IncomingMessage {
    */
   type IdleConsignmentii = IdleConsignmentiiOrderSyn;
   /**
-   * - {@link IdleCycleshopGoodsNotice 咸鱼 > 闲鱼循环商店-货品变更通知}
-   * - {@link IdleCycleshopSaleOrderNotice 咸鱼 > 闲鱼循环商店-销售单变更通知}
+   * - {@link IdleCycleshopGoodsNotice 闲鱼 > 闲鱼循环商店-货品变更通知}
+   * - {@link IdleCycleshopSaleOrderNotice 闲鱼 > 闲鱼循环商店-销售单变更通知}
    */
   type IdleCycleshop = IdleCycleshopGoodsNotice
     | IdleCycleshopSaleOrderNotice;
@@ -3683,7 +3683,7 @@ declare namespace IncomingMessage {
    */
   type IdleTranferpay = IdleTranferpayOrderChange;
   /**
-   * - {@link IdleTwjdOrderSyn 咸鱼 > 闲鱼图文鉴定业务订单消息}
+   * - {@link IdleTwjdOrderSyn 闲鱼 > 闲鱼图文鉴定业务订单消息}
    */
   type IdleTwjd = IdleTwjdOrderSyn;
   /**
@@ -5133,15 +5133,15 @@ declare namespace IncomingMessage {
    */
   type XianyuCar = XianyuCarOrderStatusSync;
   /**
-   * - {@link XianyuCtoxRateStateSyn 咸鱼 > c2x业务订单评价消息同步}
+   * - {@link XianyuCtoxRateStateSyn 闲鱼 > c2x业务订单评价消息同步}
    */
   type XianyuCtox = XianyuCtoxRateStateSyn;
   /**
-   * - {@link XianyuEnvironmentEventSyn 咸鱼 > 闲鱼双11公益游戏任务事件同步}
+   * - {@link XianyuEnvironmentEventSyn 闲鱼 > 闲鱼双11公益游戏任务事件同步}
    */
   type XianyuEnvironment = XianyuEnvironmentEventSyn;
   /**
-   * - {@link XianyuIsvOrderRemind 咸鱼 > 闲鱼服务商订单提醒}
+   * - {@link XianyuIsvOrderRemind 闲鱼 > 闲鱼服务商订单提醒}
    */
   type XianyuIsv = XianyuIsvOrderRemind;
   /**
