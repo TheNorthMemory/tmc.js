@@ -2248,13 +2248,15 @@ declare namespace IncomingMessage {
   type XianyuAppraiseOrderSyn = Message & { content?: MessageContent & { topic?: 'xianyu_appraise_OrderSyn', content?: string | Xianyu.Appraise.OrderSyn } };
   /** {@link Xianyu.Car.OrderStatusSync 闲鱼回收商消息 > 闲鱼二手车寄卖订单状态同步} */
   type XianyuCarOrderStatusSync = Message & { content?: MessageContent & { topic?: 'xianyu_car_OrderStatusSync', content?: string | Xianyu.Car.OrderStatusSync } };
+  /** {@link Xianyu.Ctox.RateStateSyn 咸鱼 > c2x业务订单评价消息同步} */
+  type XianyuCtoxRateStateSyn = Message & { content?: MessageContent & { topic?: 'xianyu_ctox_RateStateSyn', content?: string | Xianyu.Ctox.RateStateSyn } };
   /** {@link Xianyu.Environment.EventSyn 咸鱼 > 闲鱼双11公益游戏任务事件同步} */
   type XianyuEnvironmentEventSyn = Message & { content?: MessageContent & { topic?: 'xianyu_environment_EventSyn', content?: string | Xianyu.Environment.EventSyn } };
   /** {@link Xianyu.Isv.OrderRemind 咸鱼 > 闲鱼服务商订单提醒} */
   type XianyuIsvOrderRemind = Message & { content?: MessageContent & { topic?: 'xianyu_isv_OrderRemind', content?: string | Xianyu.Isv.OrderRemind } };
-  /** {@link Xianyu.Marketrecycle.OrderStateSyn 咸鱼 > 保卖订单变更通知} */
+  /** {@link Xianyu.Marketrecycle.OrderStateSyn 闲鱼 > 保卖订单变更通知} */
   type XianyuMarketrecycleOrderStateSyn = Message & { content?: MessageContent & { topic?: 'xianyu_marketrecycle_OrderStateSyn', content?: string | Xianyu.Marketrecycle.OrderStateSyn } };
-  /** {@link Xianyu.Marketrecycle.PlanStateSyn 咸鱼 > 闲鱼保卖计划变更消息} */
+  /** {@link Xianyu.Marketrecycle.PlanStateSyn 闲鱼 > 闲鱼保卖计划变更消息} */
   type XianyuMarketrecyclePlanStateSyn = Message & { content?: MessageContent & { topic?: 'xianyu_marketrecycle_PlanStateSyn', content?: string | Xianyu.Marketrecycle.PlanStateSyn } };
   /** {@link Xianyu.Recycle.OrderStatusSync 闲鱼 > 订单状态同步给回收商} */
   type XianyuRecycleOrderStatusSync = Message & { content?: MessageContent & { topic?: 'xianyu_recycle_OrderStatusSync', content?: string | Xianyu.Recycle.OrderStatusSync } };
@@ -5131,6 +5133,10 @@ declare namespace IncomingMessage {
    */
   type XianyuCar = XianyuCarOrderStatusSync;
   /**
+   * - {@link XianyuCtoxRateStateSyn 咸鱼 > c2x业务订单评价消息同步}
+   */
+  type XianyuCtox = XianyuCtoxRateStateSyn;
+  /**
    * - {@link XianyuEnvironmentEventSyn 咸鱼 > 闲鱼双11公益游戏任务事件同步}
    */
   type XianyuEnvironment = XianyuEnvironmentEventSyn;
@@ -5139,8 +5145,8 @@ declare namespace IncomingMessage {
    */
   type XianyuIsv = XianyuIsvOrderRemind;
   /**
-   * - {@link XianyuMarketrecycleOrderStateSyn 咸鱼 > 保卖订单变更通知}
-   * - {@link XianyuMarketrecyclePlanStateSyn 咸鱼 > 闲鱼保卖计划变更消息}
+   * - {@link XianyuMarketrecycleOrderStateSyn 闲鱼 > 保卖订单变更通知}
+   * - {@link XianyuMarketrecyclePlanStateSyn 闲鱼 > 闲鱼保卖计划变更消息}
    */
   type XianyuMarketrecycle = XianyuMarketrecycleOrderStateSyn
     | XianyuMarketrecyclePlanStateSyn;
@@ -5908,6 +5914,7 @@ declare namespace IncomingMessage {
    * - {@link XianyuAftersale}
    * - {@link XianyuAppraise}
    * - {@link XianyuCar}
+   * - {@link XianyuCtox}
    * - {@link XianyuEnvironment}
    * - {@link XianyuIsv}
    * - {@link XianyuMarketrecycle}
@@ -5919,6 +5926,7 @@ declare namespace IncomingMessage {
   type Xianyu = XianyuAftersale
     | XianyuAppraise
     | XianyuCar
+    | XianyuCtox
     | XianyuEnvironment
     | XianyuIsv
     | XianyuMarketrecycle

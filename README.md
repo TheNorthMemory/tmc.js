@@ -134,7 +134,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 
 ## 支持的TOPICS
 
-<details><summary>共计 84+ 类别，494+ 消息数</summary>
+<details><summary>共计 84+ 类别，495+ 消息数</summary>
 
 | 类别 | 消息数 |
 | --- | --- |
@@ -170,7 +170,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | AE-交易 | 10 |
 | 五道口配送 | 5 |
 | 百川 | 2 |
-| 闲鱼 | 17 |
+| 闲鱼 | 18 |
 | 闲鱼回收商消息 | 6 |
 | 零售通POS开放平台消息 | 4 |
 | DPAAS | 6 |
