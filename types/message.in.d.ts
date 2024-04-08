@@ -2248,6 +2248,8 @@ declare namespace IncomingMessage {
   type XianyuAppraiseOrderSyn = Message & { content?: MessageContent & { topic?: 'xianyu_appraise_OrderSyn', content?: string | Xianyu.Appraise.OrderSyn } };
   /** {@link Xianyu.Car.OrderStatusSync 闲鱼回收商消息 > 闲鱼二手车寄卖订单状态同步} */
   type XianyuCarOrderStatusSync = Message & { content?: MessageContent & { topic?: 'xianyu_car_OrderStatusSync', content?: string | Xianyu.Car.OrderStatusSync } };
+  /** {@link Xianyu.Ctox.PayDkChange 闲鱼 > c2x代扣协议变更通知} */
+  type XianyuCtoxPayDkChange = Message & { content?: MessageContent & { topic?: 'xianyu_ctox_PayDkChange', content?: string | Xianyu.Ctox.PayDkChange } };
   /** {@link Xianyu.Ctox.RateStateSyn 闲鱼 > c2x业务订单评价消息同步} */
   type XianyuCtoxRateStateSyn = Message & { content?: MessageContent & { topic?: 'xianyu_ctox_RateStateSyn', content?: string | Xianyu.Ctox.RateStateSyn } };
   /** {@link Xianyu.Environment.EventSyn 闲鱼 > 闲鱼双11公益游戏任务事件同步} */
@@ -5133,9 +5135,11 @@ declare namespace IncomingMessage {
    */
   type XianyuCar = XianyuCarOrderStatusSync;
   /**
+   * - {@link XianyuCtoxPayDkChange 闲鱼 > c2x代扣协议变更通知}
    * - {@link XianyuCtoxRateStateSyn 闲鱼 > c2x业务订单评价消息同步}
    */
-  type XianyuCtox = XianyuCtoxRateStateSyn;
+  type XianyuCtox = XianyuCtoxPayDkChange
+    | XianyuCtoxRateStateSyn;
   /**
    * - {@link XianyuEnvironmentEventSyn 闲鱼 > 闲鱼双11公益游戏任务事件同步}
    */

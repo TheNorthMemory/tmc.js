@@ -2268,6 +2268,8 @@ declare interface TaoTopicsDescriptor {
   xianyu_appraise_OrderSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuAppraiseOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuCarOrderStatusSync 闲鱼回收商消息 > 闲鱼二手车寄卖订单状态同步} */
   xianyu_car_OrderStatusSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCarOrderStatusSync) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.XianyuCtoxPayDkChange 闲鱼 > c2x代扣协议变更通知} */
+  xianyu_ctox_PayDkChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCtoxPayDkChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuCtoxRateStateSyn 闲鱼 > c2x业务订单评价消息同步} */
   xianyu_ctox_RateStateSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCtoxRateStateSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuEnvironmentEventSyn 闲鱼 > 闲鱼双11公益游戏任务事件同步} */
@@ -5265,6 +5267,8 @@ declare interface TaoEventsListener {
   on(topic: 'xianyu_appraise_OrderSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuAppraiseOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuCarOrderStatusSync 闲鱼回收商消息 > 闲鱼二手车寄卖订单状态同步} */
   on(topic: 'xianyu_car_OrderStatusSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCarOrderStatusSync) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.XianyuCtoxPayDkChange 闲鱼 > c2x代扣协议变更通知} */
+  on(topic: 'xianyu_ctox_PayDkChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCtoxPayDkChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuCtoxRateStateSyn 闲鱼 > c2x业务订单评价消息同步} */
   on(topic: 'xianyu_ctox_RateStateSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCtoxRateStateSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuEnvironmentEventSyn 闲鱼 > 闲鱼双11公益游戏任务事件同步} */

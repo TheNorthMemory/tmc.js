@@ -45,6 +45,22 @@ declare namespace Xianyu.Car {
 
 /** 闲鱼 */
 declare namespace Xianyu.Ctox {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2535&docType=9 c2x代扣协议变更通知} */
+  interface PayDkChange {
+    /** 主订单（保卖订单等） */
+    biz_order_id: string;
+    /** 代扣金额，分 */
+    confirm_fee: string;
+    /** 代扣流水号 */
+    dk_number: string;
+    /** 代扣订单 */
+    dk_order_id: string;
+    /** 代扣时间 */
+    dk_time: string;
+    /** 代扣状态 */
+    status: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2536&docType=9 c2x业务订单评价消息同步} */
   interface RateStateSyn {
     /** 服务商appkey */
@@ -87,7 +103,7 @@ declare namespace Xianyu.Marketrecycle {
   /** {@link https://open.taobao.com/tmc.htm?docId=2534&docType=9 保卖订单变更通知} */
   interface OrderStateSyn {
     /** 订单号 */
-    bizOrderId: string;
+    biz_order_id: string;
     /** 环境参数 */
     env: string;
     /** 状态变更 */
