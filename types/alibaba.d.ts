@@ -1751,7 +1751,7 @@ declare namespace Alibaba.Invoice {
     /** 全电发票的发票号码 */
     invoice_no: string;
     /** 订单号 */
-    platform_tid: string;
+    readonly platform_tid: string;
     /** 卖家Nick */
     seller_nick?: string;
   }
