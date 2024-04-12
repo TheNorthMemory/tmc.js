@@ -1696,6 +1696,8 @@ declare namespace IncomingMessage {
   type TaobaoRhinoDeviceStatus = Message & { content?: MessageContent & { topic?: 'taobao_rhino_DeviceStatus', content?: string | Taobao.Rhino.DeviceStatus } };
   /** {@link Taobao.Rhino.IntegrationCutProgressUpdateMessage 智能制造API > 裁剪进度变更消息} */
   type TaobaoRhinoIntegrationCutProgressUpdateMessage = Message & { content?: MessageContent & { topic?: 'taobao_rhino_IntegrationCutProgressUpdateMessage', content?: string | Taobao.Rhino.IntegrationCutProgressUpdateMessage } };
+  /** {@link Taobao.Rhino.IntegrationOrderProcessUpdateMessage 智能制造API > 订单工序变更通知消息} */
+  type TaobaoRhinoIntegrationOrderProcessUpdateMessage = Message & { content?: MessageContent & { topic?: 'taobao_rhino_IntegrationOrderProcessUpdateMessage', content?: string | Taobao.Rhino.IntegrationOrderProcessUpdateMessage } };
   /** {@link Taobao.Rhino.IntegrationOuterOrderCreateMessage 智能制造API > 外协订单创建消息通知} */
   type TaobaoRhinoIntegrationOuterOrderCreateMessage = Message & { content?: MessageContent & { topic?: 'taobao_rhino_IntegrationOuterOrderCreateMessage', content?: string | Taobao.Rhino.IntegrationOuterOrderCreateMessage } };
   /** {@link Taobao.Rhino.IntegrationOuterProgressUpdateMessage 智能制造API > 外协进度变更消息} */
@@ -4422,6 +4424,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoRhinoDeliveryUpdate 智能制造API > 订单发货通知}
    * - {@link TaobaoRhinoDeviceStatus 智能制造API > 智能制造-设备状态变更}
    * - {@link TaobaoRhinoIntegrationCutProgressUpdateMessage 智能制造API > 裁剪进度变更消息}
+   * - {@link TaobaoRhinoIntegrationOrderProcessUpdateMessage 智能制造API > 订单工序变更通知消息}
    * - {@link TaobaoRhinoIntegrationOuterOrderCreateMessage 智能制造API > 外协订单创建消息通知}
    * - {@link TaobaoRhinoIntegrationOuterProgressUpdateMessage 智能制造API > 外协进度变更消息}
    * - {@link TaobaoRhinoOrderStatusUpdate 智能制造API > 生产订单状态变化通知}
@@ -4432,6 +4435,7 @@ declare namespace IncomingMessage {
   type TaobaoRhino = TaobaoRhinoDeliveryUpdate
     | TaobaoRhinoDeviceStatus
     | TaobaoRhinoIntegrationCutProgressUpdateMessage
+    | TaobaoRhinoIntegrationOrderProcessUpdateMessage
     | TaobaoRhinoIntegrationOuterOrderCreateMessage
     | TaobaoRhinoIntegrationOuterProgressUpdateMessage
     | TaobaoRhinoOrderStatusUpdate

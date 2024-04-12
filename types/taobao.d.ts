@@ -4560,6 +4560,16 @@ declare namespace Taobao.Rhino {
     ticket_list: string;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2537&docType=9 订单工序变更通知消息} */
+  interface IntegrationOrderProcessUpdateMessage {
+    /** 订单编号 */
+    order_no: string;
+    /** 产品名称 */
+    product_name: string;
+    /** 款式编号 */
+    style_no: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2494&docType=9 外协订单创建消息通知} */
   interface IntegrationOuterOrderCreateMessage {
     /** 计数来源 */

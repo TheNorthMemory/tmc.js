@@ -1716,6 +1716,8 @@ declare interface TaoTopicsDescriptor {
   taobao_rhino_DeviceStatus(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRhinoDeviceStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRhinoIntegrationCutProgressUpdateMessage 智能制造API > 裁剪进度变更消息} */
   taobao_rhino_IntegrationCutProgressUpdateMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRhinoIntegrationCutProgressUpdateMessage) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoRhinoIntegrationOrderProcessUpdateMessage 智能制造API > 订单工序变更通知消息} */
+  taobao_rhino_IntegrationOrderProcessUpdateMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRhinoIntegrationOrderProcessUpdateMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRhinoIntegrationOuterOrderCreateMessage 智能制造API > 外协订单创建消息通知} */
   taobao_rhino_IntegrationOuterOrderCreateMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRhinoIntegrationOuterOrderCreateMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRhinoIntegrationOuterProgressUpdateMessage 智能制造API > 外协进度变更消息} */
@@ -4715,6 +4717,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_rhino_DeviceStatus', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRhinoDeviceStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRhinoIntegrationCutProgressUpdateMessage 智能制造API > 裁剪进度变更消息} */
   on(topic: 'taobao_rhino_IntegrationCutProgressUpdateMessage', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRhinoIntegrationCutProgressUpdateMessage) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoRhinoIntegrationOrderProcessUpdateMessage 智能制造API > 订单工序变更通知消息} */
+  on(topic: 'taobao_rhino_IntegrationOrderProcessUpdateMessage', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRhinoIntegrationOrderProcessUpdateMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRhinoIntegrationOuterOrderCreateMessage 智能制造API > 外协订单创建消息通知} */
   on(topic: 'taobao_rhino_IntegrationOuterOrderCreateMessage', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRhinoIntegrationOuterOrderCreateMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRhinoIntegrationOuterProgressUpdateMessage 智能制造API > 外协进度变更消息} */
