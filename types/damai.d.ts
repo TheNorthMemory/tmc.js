@@ -126,6 +126,16 @@ declare namespace Damai.Mz {
     timestamp: number;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2539&docType=9 麦座退单审核通过通知} */
+  interface OrderRefund {
+    /** 会员id */
+    mz_user_id: string;
+    /** 正式单id */
+    order_id: string;
+    /** 退单id */
+    refund_order_id: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2241&docType=9 订单状态通知} */
   interface OrderStateChange {
     /** 麦座订单号 */
@@ -154,6 +164,14 @@ declare namespace Damai.Mz {
     state: number;
     /** 单票票单codes */
     ticket_code_no_list: string[];
+    /** 时间戳 */
+    timestamp: number;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2538&docType=9 麦座会员注册成功通知} */
+  interface UserRegister {
+    /** 麦座会员id */
+    mz_user_id: string;
     /** 时间戳 */
     timestamp: number;
   }

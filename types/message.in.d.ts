@@ -990,12 +990,16 @@ declare namespace IncomingMessage {
   type DamaiMzForwardMessage = Message & { content?: MessageContent & { topic?: 'damai_mz_ForwardMessage', content?: string | Damai.Mz.ForwardMessage } };
   /** {@link Damai.Mz.OrderChangeState 大麦 > 订单状态变动通知} */
   type DamaiMzOrderChangeState = Message & { content?: MessageContent & { topic?: 'damai_mz_OrderChangeState', content?: string | Damai.Mz.OrderChangeState } };
+  /** {@link Damai.Mz.OrderRefund 大麦 > 麦座退单审核通过通知} */
+  type DamaiMzOrderRefund = Message & { content?: MessageContent & { topic?: 'damai_mz_OrderRefund', content?: string | Damai.Mz.OrderRefund } };
   /** {@link Damai.Mz.OrderStateChange 大麦 > 订单状态通知} */
   type DamaiMzOrderStateChange = Message & { content?: MessageContent & { topic?: 'damai_mz_OrderStateChange', content?: string | Damai.Mz.OrderStateChange } };
   /** {@link Damai.Mz.SeatStateChange 大麦 > 大麦麦座座位状态变化消息} */
   type DamaiMzSeatStateChange = Message & { content?: MessageContent & { topic?: 'damai_mz_SeatStateChange', content?: string | Damai.Mz.SeatStateChange } };
   /** {@link Damai.Mz.TicketStateChange 大麦 > 大麦麦座票状态变化消息} */
   type DamaiMzTicketStateChange = Message & { content?: MessageContent & { topic?: 'damai_mz_TicketStateChange', content?: string | Damai.Mz.TicketStateChange } };
+  /** {@link Damai.Mz.UserRegister 大麦 > 麦座会员注册成功通知} */
+  type DamaiMzUserRegister = Message & { content?: MessageContent & { topic?: 'damai_mz_UserRegister', content?: string | Damai.Mz.UserRegister } };
   /** {@link Damai.Trade.TicketStatusPush 大麦票单状态 > 大麦票单状态推送} */
   type DamaiTradeTicketStatusPush = Message & { content?: MessageContent & { topic?: 'damai_trade_TicketStatusPush', content?: string | Damai.Trade.TicketStatusPush } };
   /** {@link Ele.Enterprise.PushOrderDetail 饿了么 > 饿了么企业订餐推送订单详情} */
@@ -3492,16 +3496,20 @@ declare namespace IncomingMessage {
    * - {@link DamaiMzEventStateChange 大麦 > 场次状态通知接口}
    * - {@link DamaiMzForwardMessage 大麦 > 大麦新麦座消息}
    * - {@link DamaiMzOrderChangeState 大麦 > 订单状态变动通知}
+   * - {@link DamaiMzOrderRefund 大麦 > 麦座退单审核通过通知}
    * - {@link DamaiMzOrderStateChange 大麦 > 订单状态通知}
    * - {@link DamaiMzSeatStateChange 大麦 > 大麦麦座座位状态变化消息}
    * - {@link DamaiMzTicketStateChange 大麦 > 大麦麦座票状态变化消息}
+   * - {@link DamaiMzUserRegister 大麦 > 麦座会员注册成功通知}
    */
   type DamaiMz = DamaiMzEventStateChange
     | DamaiMzForwardMessage
     | DamaiMzOrderChangeState
+    | DamaiMzOrderRefund
     | DamaiMzOrderStateChange
     | DamaiMzSeatStateChange
-    | DamaiMzTicketStateChange;
+    | DamaiMzTicketStateChange
+    | DamaiMzUserRegister;
   /**
    * - {@link DamaiTradeTicketStatusPush 大麦票单状态 > 大麦票单状态推送}
    */

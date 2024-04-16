@@ -1010,12 +1010,16 @@ declare interface TaoTopicsDescriptor {
   damai_mz_ForwardMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiMzForwardMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiMzOrderChangeState 大麦 > 订单状态变动通知} */
   damai_mz_OrderChangeState(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiMzOrderChangeState) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.DamaiMzOrderRefund 大麦 > 麦座退单审核通过通知} */
+  damai_mz_OrderRefund(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiMzOrderRefund) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiMzOrderStateChange 大麦 > 订单状态通知} */
   damai_mz_OrderStateChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiMzOrderStateChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiMzSeatStateChange 大麦 > 大麦麦座座位状态变化消息} */
   damai_mz_SeatStateChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiMzSeatStateChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiMzTicketStateChange 大麦 > 大麦麦座票状态变化消息} */
   damai_mz_TicketStateChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiMzTicketStateChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.DamaiMzUserRegister 大麦 > 麦座会员注册成功通知} */
+  damai_mz_UserRegister(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiMzUserRegister) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiTradeTicketStatusPush 大麦票单状态 > 大麦票单状态推送} */
   damai_trade_TicketStatusPush(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiTradeTicketStatusPush) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.EleEnterprisePushOrderDetail 饿了么 > 饿了么企业订餐推送订单详情} */
@@ -4011,12 +4015,16 @@ declare interface TaoEventsListener {
   on(topic: 'damai_mz_ForwardMessage', listener: (this: TaoMessageConsumer, message: IncomingMessage.DamaiMzForwardMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiMzOrderChangeState 大麦 > 订单状态变动通知} */
   on(topic: 'damai_mz_OrderChangeState', listener: (this: TaoMessageConsumer, message: IncomingMessage.DamaiMzOrderChangeState) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.DamaiMzOrderRefund 大麦 > 麦座退单审核通过通知} */
+  on(topic: 'damai_mz_OrderRefund', listener: (this: TaoMessageConsumer, message: IncomingMessage.DamaiMzOrderRefund) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiMzOrderStateChange 大麦 > 订单状态通知} */
   on(topic: 'damai_mz_OrderStateChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.DamaiMzOrderStateChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiMzSeatStateChange 大麦 > 大麦麦座座位状态变化消息} */
   on(topic: 'damai_mz_SeatStateChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.DamaiMzSeatStateChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiMzTicketStateChange 大麦 > 大麦麦座票状态变化消息} */
   on(topic: 'damai_mz_TicketStateChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.DamaiMzTicketStateChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.DamaiMzUserRegister 大麦 > 麦座会员注册成功通知} */
+  on(topic: 'damai_mz_UserRegister', listener: (this: TaoMessageConsumer, message: IncomingMessage.DamaiMzUserRegister) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiTradeTicketStatusPush 大麦票单状态 > 大麦票单状态推送} */
   on(topic: 'damai_trade_TicketStatusPush', listener: (this: TaoMessageConsumer, message: IncomingMessage.DamaiTradeTicketStatusPush) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.EleEnterprisePushOrderDetail 饿了么 > 饿了么企业订餐推送订单详情} */
