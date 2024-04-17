@@ -4556,12 +4556,16 @@ declare namespace Taobao.Rhino {
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2496&docType=9 裁剪进度变更消息} */
   interface IntegrationCutProgressUpdateMessage {
+    /** 消息唯一id */
+    auction_id: number;
     /** 裁剪指示单列表 */
     ticket_list: string;
   }
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2537&docType=9 订单工序变更通知消息} */
   interface IntegrationOrderProcessUpdateMessage {
+    /** 消息唯一id */
+    auction_id: number;
     /** 订单编号 */
     order_no: string;
     /** 产品名称 */
@@ -4572,24 +4576,28 @@ declare namespace Taobao.Rhino {
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2494&docType=9 外协订单创建消息通知} */
   interface IntegrationOuterOrderCreateMessage {
+    /** 消息唯一id */
+    auction_id: number;
     /** 计数来源 */
-    count_source: string;
+    count_source?: string;
     /** 入库类型 */
-    enter_type: string;
+    enter_type?: string;
     /** 外协订单编号 */
     outer_order_id: string;
     /** 自制类型 */
-    outer_type: string;
+    outer_type?: string;
     /** 外协订单明细 */
-    plans: string;
+    plans?: string;
     /** 备注 */
     remark?: string;
     /** 供应商名称 */
-    supplier_name: string;
+    supplier_name?: string;
   }
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2495&docType=9 外协进度变更消息} */
   interface IntegrationOuterProgressUpdateMessage {
+    /** 消息唯一id */
+    auction_id: number;
     /** 外协订单编号 */
     outer_order_id: string;
     /** 计划单列表 */
