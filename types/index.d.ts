@@ -988,6 +988,8 @@ declare interface TaoTopicsDescriptor {
   cainiao_waybill_TrackTicketStatus(fn: (this: TaoMessageConsumer, message: IncomingMessage.CainiaoWaybillTrackTicketStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.CainiaoYimaSmsRecordPush 菜鸟 > 短信记录推送} */
   cainiao_yima_SmsRecordPush(fn: (this: TaoMessageConsumer, message: IncomingMessage.CainiaoYimaSmsRecordPush) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.DamaiDistributionMatchSeat 大麦第三方票务供应商接入 > 履约补选座位成功通知三方} */
+  damai_distribution_MatchSeat(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionMatchSeat) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionPerformCancel 大麦第三方票务供应商接入 > 场次取消消息推送} */
   damai_distribution_PerformCancel(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionPerformCancel) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionPerformStatus 大麦第三方票务供应商接入 > 场次状态变更推送} */
@@ -1000,6 +1002,8 @@ declare interface TaoTopicsDescriptor {
   damai_distribution_RefundOrder(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionRefundOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionRefundRule 大麦第三方票务供应商接入 > 项目退款规则} */
   damai_distribution_RefundRule(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionRefundRule) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.DamaiDistributionSendExpress 大麦第三方票务供应商接入 > 履约发快递成功通知三方} */
+  damai_distribution_SendExpress(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionSendExpress) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionTicketItemStatus 大麦第三方票务供应商接入 > 票品状态变更} */
   damai_distribution_TicketItemStatus(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionTicketItemStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiMevDatasyncTalkMaitix 大麦 > maitix与datasync数据同步} */
@@ -3993,6 +3997,8 @@ declare interface TaoEventsListener {
   on(topic: 'cainiao_waybill_TrackTicketStatus', listener: (this: TaoMessageConsumer, message: IncomingMessage.CainiaoWaybillTrackTicketStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.CainiaoYimaSmsRecordPush 菜鸟 > 短信记录推送} */
   on(topic: 'cainiao_yima_SmsRecordPush', listener: (this: TaoMessageConsumer, message: IncomingMessage.CainiaoYimaSmsRecordPush) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.DamaiDistributionMatchSeat 大麦第三方票务供应商接入 > 履约补选座位成功通知三方} */
+  on(topic: 'damai_distribution_MatchSeat', listener: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionMatchSeat) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionPerformCancel 大麦第三方票务供应商接入 > 场次取消消息推送} */
   on(topic: 'damai_distribution_PerformCancel', listener: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionPerformCancel) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionPerformStatus 大麦第三方票务供应商接入 > 场次状态变更推送} */
@@ -4005,6 +4011,8 @@ declare interface TaoEventsListener {
   on(topic: 'damai_distribution_RefundOrder', listener: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionRefundOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionRefundRule 大麦第三方票务供应商接入 > 项目退款规则} */
   on(topic: 'damai_distribution_RefundRule', listener: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionRefundRule) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.DamaiDistributionSendExpress 大麦第三方票务供应商接入 > 履约发快递成功通知三方} */
+  on(topic: 'damai_distribution_SendExpress', listener: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionSendExpress) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionTicketItemStatus 大麦第三方票务供应商接入 > 票品状态变更} */
   on(topic: 'damai_distribution_TicketItemStatus', listener: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionTicketItemStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiMevDatasyncTalkMaitix 大麦 > maitix与datasync数据同步} */

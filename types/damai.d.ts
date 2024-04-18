@@ -1,5 +1,11 @@
 /** 大麦第三方票务供应商接入 */
 declare namespace Damai.Distribution {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2541&docType=9 履约补选座位成功通知三方} */
+  interface MatchSeat {
+    /** 主订单号 */
+    main_order_id: number;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=1980&docType=9 场次取消消息推送} */
   interface PerformCancel {
     /** 场次取消的场次id */
@@ -54,6 +60,16 @@ declare namespace Damai.Distribution {
   interface RefundRule {
     /** 项目id */
     project_id: number;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2540&docType=9 履约发快递成功通知三方} */
+  interface SendExpress {
+    /** 物流类型，1-顺丰，2-EMS */
+    delivery_company_id: number;
+    /** 主订单号 */
+    main_order_id: number;
+    /** 物流单号 */
+    waybill_no: string;
   }
 
   /** {@link https://open.taobao.com/tmc.htm?docId=1628&docType=9 票品状态变更} */

@@ -968,6 +968,8 @@ declare namespace IncomingMessage {
   type CainiaoWaybillTrackTicketStatus = Message & { content?: MessageContent & { topic?: 'cainiao_waybill_TrackTicketStatus', content?: string | Cainiao.Waybill.TrackTicketStatus } };
   /** {@link Cainiao.Yima.SmsRecordPush 菜鸟 > 短信记录推送} */
   type CainiaoYimaSmsRecordPush = Message & { content?: MessageContent & { topic?: 'cainiao_yima_SmsRecordPush', content?: string | Cainiao.Yima.SmsRecordPush } };
+  /** {@link Damai.Distribution.MatchSeat 大麦第三方票务供应商接入 > 履约补选座位成功通知三方} */
+  type DamaiDistributionMatchSeat = Message & { content?: MessageContent & { topic?: 'damai_distribution_MatchSeat', content?: string | Damai.Distribution.MatchSeat } };
   /** {@link Damai.Distribution.PerformCancel 大麦第三方票务供应商接入 > 场次取消消息推送} */
   type DamaiDistributionPerformCancel = Message & { content?: MessageContent & { topic?: 'damai_distribution_PerformCancel', content?: string | Damai.Distribution.PerformCancel } };
   /** {@link Damai.Distribution.PerformStatus 大麦第三方票务供应商接入 > 场次状态变更推送} */
@@ -980,6 +982,8 @@ declare namespace IncomingMessage {
   type DamaiDistributionRefundOrder = Message & { content?: MessageContent & { topic?: 'damai_distribution_RefundOrder', content?: string | Damai.Distribution.RefundOrder } };
   /** {@link Damai.Distribution.RefundRule 大麦第三方票务供应商接入 > 项目退款规则} */
   type DamaiDistributionRefundRule = Message & { content?: MessageContent & { topic?: 'damai_distribution_RefundRule', content?: string | Damai.Distribution.RefundRule } };
+  /** {@link Damai.Distribution.SendExpress 大麦第三方票务供应商接入 > 履约发快递成功通知三方} */
+  type DamaiDistributionSendExpress = Message & { content?: MessageContent & { topic?: 'damai_distribution_SendExpress', content?: string | Damai.Distribution.SendExpress } };
   /** {@link Damai.Distribution.TicketItemStatus 大麦第三方票务供应商接入 > 票品状态变更} */
   type DamaiDistributionTicketItemStatus = Message & { content?: MessageContent & { topic?: 'damai_distribution_TicketItemStatus', content?: string | Damai.Distribution.TicketItemStatus } };
   /** {@link Damai.Mev.DatasyncTalkMaitix 大麦 > maitix与datasync数据同步} */
@@ -3473,20 +3477,24 @@ declare namespace IncomingMessage {
    */
   type CainiaoYima = CainiaoYimaSmsRecordPush;
   /**
+   * - {@link DamaiDistributionMatchSeat 大麦第三方票务供应商接入 > 履约补选座位成功通知三方}
    * - {@link DamaiDistributionPerformCancel 大麦第三方票务供应商接入 > 场次取消消息推送}
    * - {@link DamaiDistributionPerformStatus 大麦第三方票务供应商接入 > 场次状态变更推送}
    * - {@link DamaiDistributionPreSaleToNow 大麦第三方票务供应商接入 > 预售改开票}
    * - {@link DamaiDistributionProjectStatus 大麦第三方票务供应商接入 > 项目状态推送}
    * - {@link DamaiDistributionRefundOrder 大麦第三方票务供应商接入 > 退票通知}
    * - {@link DamaiDistributionRefundRule 大麦第三方票务供应商接入 > 项目退款规则}
+   * - {@link DamaiDistributionSendExpress 大麦第三方票务供应商接入 > 履约发快递成功通知三方}
    * - {@link DamaiDistributionTicketItemStatus 大麦第三方票务供应商接入 > 票品状态变更}
    */
-  type DamaiDistribution = DamaiDistributionPerformCancel
+  type DamaiDistribution = DamaiDistributionMatchSeat
+    | DamaiDistributionPerformCancel
     | DamaiDistributionPerformStatus
     | DamaiDistributionPreSaleToNow
     | DamaiDistributionProjectStatus
     | DamaiDistributionRefundOrder
     | DamaiDistributionRefundRule
+    | DamaiDistributionSendExpress
     | DamaiDistributionTicketItemStatus;
   /**
    * - {@link DamaiMevDatasyncTalkMaitix 大麦 > maitix与datasync数据同步}
