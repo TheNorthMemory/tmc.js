@@ -1480,6 +1480,8 @@ declare namespace IncomingMessage {
   type TaobaoItemmarketPurchaseDistributorChange = Message & { content?: MessageContent & { topic?: 'taobao_itemmarket_PurchaseDistributorChange', content?: string | Taobao.Itemmarket.PurchaseDistributorChange } };
   /** {@link Taobao.Itemmarket.PurchaseOrderChange 淘宝 > 三方货源采购单变更} */
   type TaobaoItemmarketPurchaseOrderChange = Message & { content?: MessageContent & { topic?: 'taobao_itemmarket_PurchaseOrderChange', content?: string | Taobao.Itemmarket.PurchaseOrderChange } };
+  /** {@link Taobao.Itemmarket.VideoCreate 淘宝 > 货品视频创建} */
+  type TaobaoItemmarketVideoCreate = Message & { content?: MessageContent & { topic?: 'taobao_itemmarket_VideoCreate', content?: string | Taobao.Itemmarket.VideoCreate } };
   /** {@link Taobao.Jaq.AuditResult 淘宝 > 聚安全实人认证审核结果} */
   type TaobaoJaqAuditResult = Message & { content?: MessageContent & { topic?: 'taobao_jaq_AuditResult', content?: string | Taobao.Jaq.AuditResult } };
   /** {@link Taobao.Jipiao.AncillaryOrderPaid 淘宝机票 > 飞猪辅营订单支付通知接口} */
@@ -4150,12 +4152,14 @@ declare namespace IncomingMessage {
    * - {@link TaobaoItemmarketMaterialChange 淘宝 > 货品素材信息变更}
    * - {@link TaobaoItemmarketPurchaseDistributorChange 淘宝 > 三方货源分销商采购单消息}
    * - {@link TaobaoItemmarketPurchaseOrderChange 淘宝 > 三方货源采购单变更}
+   * - {@link TaobaoItemmarketVideoCreate 淘宝 > 货品视频创建}
    */
   type TaobaoItemmarket = TaobaoItemmarketItemDistributorChange
     | TaobaoItemmarketItemRelationChange
     | TaobaoItemmarketMaterialChange
     | TaobaoItemmarketPurchaseDistributorChange
-    | TaobaoItemmarketPurchaseOrderChange;
+    | TaobaoItemmarketPurchaseOrderChange
+    | TaobaoItemmarketVideoCreate;
   /**
    * - {@link TaobaoJaqAuditResult 淘宝 > 聚安全实人认证审核结果}
    */

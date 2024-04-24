@@ -2817,6 +2817,16 @@ declare namespace Taobao.Itemmarket {
     /** 采购单 id */
     purchase_order_id: number;
   }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2544&docType=9 货品视频创建} */
+  interface VideoCreate {
+    /** 自定义参数 */
+    custom_id?: string;
+    /** 视频id */
+    video_id: number;
+    /** 上传时的视频url */
+    video_url: string;
+  }
 }
 
 /** 淘宝 */

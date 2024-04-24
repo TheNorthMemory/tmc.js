@@ -1500,6 +1500,8 @@ declare interface TaoTopicsDescriptor {
   taobao_itemmarket_PurchaseDistributorChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItemmarketPurchaseDistributorChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoItemmarketPurchaseOrderChange 淘宝 > 三方货源采购单变更} */
   taobao_itemmarket_PurchaseOrderChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItemmarketPurchaseOrderChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoItemmarketVideoCreate 淘宝 > 货品视频创建} */
+  taobao_itemmarket_VideoCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItemmarketVideoCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoJaqAuditResult 淘宝 > 聚安全实人认证审核结果} */
   taobao_jaq_AuditResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJaqAuditResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoJipiaoAncillaryOrderPaid 淘宝机票 > 飞猪辅营订单支付通知接口} */
@@ -4509,6 +4511,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_itemmarket_PurchaseDistributorChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItemmarketPurchaseDistributorChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoItemmarketPurchaseOrderChange 淘宝 > 三方货源采购单变更} */
   on(topic: 'taobao_itemmarket_PurchaseOrderChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItemmarketPurchaseOrderChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoItemmarketVideoCreate 淘宝 > 货品视频创建} */
+  on(topic: 'taobao_itemmarket_VideoCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItemmarketVideoCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoJaqAuditResult 淘宝 > 聚安全实人认证审核结果} */
   on(topic: 'taobao_jaq_AuditResult', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoJaqAuditResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoJipiaoAncillaryOrderPaid 淘宝机票 > 飞猪辅营订单支付通知接口} */
