@@ -1386,6 +1386,31 @@ declare namespace Tmall.Xf {
   }
 }
 
+/** 蚁巢 */
+declare namespace Tmall.Yichao {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2546&docType=9 蚁巢工单更新消息} */
+  interface WorkcardStatusUpdate {
+    /** 行为 */
+    action: string;
+    /** 下次预约时间 */
+    gmt_next_contact: string;
+    /** 原因码 */
+    reason_code: string;
+    /** 原因描述 */
+    reason_desc: string;
+    /** 预约结束时间 */
+    reserve_time_end: string;
+    /** 预约开始时间 */
+    reserve_time_start: string;
+    /** 服务商 */
+    source: string;
+    /** 发生时间 */
+    update_date: string;
+    /** 工单id */
+    workcard_id: number;
+  }
+}
+
 /** 天猫 */
 declare namespace Tmall.Yougou {
   /** {@link https://open.taobao.com/tmc.htm?docId=1758&docType=9 天猫优购商品变更} */

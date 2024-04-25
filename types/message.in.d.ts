@@ -2220,6 +2220,8 @@ declare namespace IncomingMessage {
   type TmallXfFutureOrders = Message & { content?: MessageContent & { topic?: 'tmall_xf_FutureOrders', content?: string | Tmall.Xf.FutureOrders } };
   /** {@link Tmall.Xf.GoodsInfo 天猫 > 天猫鞋服货品信息回流} */
   type TmallXfGoodsInfo = Message & { content?: MessageContent & { topic?: 'tmall_xf_GoodsInfo', content?: string | Tmall.Xf.GoodsInfo } };
+  /** {@link Tmall.Yichao.WorkcardStatusUpdate 蚁巢 > 蚁巢工单更新消息} */
+  type TmallYichaoWorkcardStatusUpdate = Message & { content?: MessageContent & { topic?: 'tmall_yichao_WorkcardStatusUpdate', content?: string | Tmall.Yichao.WorkcardStatusUpdate } };
   /** {@link Tmall.Yougou.ItemChange 天猫 > 天猫优购商品变更} */
   type TmallYougouItemChange = Message & { content?: MessageContent & { topic?: 'tmall_yougou_ItemChange', content?: string | Tmall.Yougou.ItemChange } };
   /** {@link Tmall.Yougou.OrderChange 天猫 > 天猫优购订单变更} */
@@ -5095,6 +5097,10 @@ declare namespace IncomingMessage {
   type TmallXf = TmallXfFutureOrders
     | TmallXfGoodsInfo;
   /**
+   * - {@link TmallYichaoWorkcardStatusUpdate 蚁巢 > 蚁巢工单更新消息}
+   */
+  type TmallYichao = TmallYichaoWorkcardStatusUpdate;
+  /**
    * - {@link TmallYougouItemChange 天猫 > 天猫优购商品变更}
    * - {@link TmallYougouOrderChange 天猫 > 天猫优购订单变更}
    */
@@ -5881,6 +5887,7 @@ declare namespace IncomingMessage {
    * - {@link TmallTlc}
    * - {@link TmallTmg}
    * - {@link TmallXf}
+   * - {@link TmallYichao}
    * - {@link TmallYougou}
    */
   type Tmall = TmallAliauto
@@ -5911,6 +5918,7 @@ declare namespace IncomingMessage {
     | TmallTlc
     | TmallTmg
     | TmallXf
+    | TmallYichao
     | TmallYougou;
   /**
    * - {@link TobaoLive}
