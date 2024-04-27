@@ -2240,7 +2240,7 @@ declare interface TaoTopicsDescriptor {
   tmall_xf_FutureOrders(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallXfFutureOrders) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallXfGoodsInfo 天猫 > 天猫鞋服货品信息回流} */
   tmall_xf_GoodsInfo(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallXfGoodsInfo) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TmallYichaoWorkcardStatusUpdate 蚁巢 > 蚁巢工单更新消息} */
+  /** {@link IncomingMessage.TmallYichaoWorkcardStatusUpdate 天猫服务 > 蚁巢工单更新消息} */
   tmall_yichao_WorkcardStatusUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallYichaoWorkcardStatusUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallYougouItemChange 天猫 > 天猫优购商品变更} */
   tmall_yougou_ItemChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallYougouItemChange) => void): TaoMessageConsumer;
@@ -5255,7 +5255,7 @@ declare interface TaoEventsListener {
   on(topic: 'tmall_xf_FutureOrders', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallXfFutureOrders) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallXfGoodsInfo 天猫 > 天猫鞋服货品信息回流} */
   on(topic: 'tmall_xf_GoodsInfo', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallXfGoodsInfo) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TmallYichaoWorkcardStatusUpdate 蚁巢 > 蚁巢工单更新消息} */
+  /** {@link IncomingMessage.TmallYichaoWorkcardStatusUpdate 天猫服务 > 蚁巢工单更新消息} */
   on(topic: 'tmall_yichao_WorkcardStatusUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallYichaoWorkcardStatusUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallYougouItemChange 天猫 > 天猫优购商品变更} */
   on(topic: 'tmall_yougou_ItemChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallYougouItemChange) => void): TaoMessageConsumer;

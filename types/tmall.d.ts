@@ -1386,7 +1386,7 @@ declare namespace Tmall.Xf {
   }
 }
 
-/** 蚁巢 */
+/** 天猫服务 */
 declare namespace Tmall.Yichao {
   /** {@link https://open.taobao.com/tmc.htm?docId=2546&docType=9 蚁巢工单更新消息} */
   interface WorkcardStatusUpdate {
