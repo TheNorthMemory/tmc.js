@@ -598,6 +598,8 @@ declare namespace IncomingMessage {
   type AlibabaWdkorderVoucherStatus = Message & { content?: MessageContent & { topic?: 'alibaba_wdkorder_VoucherStatus', content?: string | Alibaba.Wdkorder.VoucherStatus } };
   /** {@link Alibaba.Wdktrade.CouponInstance 五道口营销 > 营销券实例消息} */
   type AlibabaWdktradeCouponInstance = Message & { content?: MessageContent & { topic?: 'alibaba_wdktrade_CouponInstance', content?: string | Alibaba.Wdktrade.CouponInstance } };
+  /** {@link Alibaba.Yichao.InsuranceUpdate 天猫服务 > 蚁巢保单修改消息} */
+  type AlibabaYichaoInsuranceUpdate = Message & { content?: MessageContent & { topic?: 'alibaba_yichao_InsuranceUpdate', content?: string | Alibaba.Yichao.InsuranceUpdate } };
   /** {@link Alibaba.Yunio.DataTransfer 平台消息 > YunIO数据流转} */
   type AlibabaYunioDataTransfer = Message & { content?: MessageContent & { topic?: 'alibaba_yunio_DataTransfer', content?: string | Alibaba.Yunio.DataTransfer } };
   /** {@link Alicom.Axb.SubsEventSync 阿里通信 > 绑定事件同步} */
@@ -2979,6 +2981,10 @@ declare namespace IncomingMessage {
    */
   type AlibabaWdktrade = AlibabaWdktradeCouponInstance;
   /**
+   * - {@link AlibabaYichaoInsuranceUpdate 天猫服务 > 蚁巢保单修改消息}
+   */
+  type AlibabaYichao = AlibabaYichaoInsuranceUpdate;
+  /**
    * - {@link AlibabaYunioDataTransfer 平台消息 > YunIO数据流转}
    */
   type AlibabaYunio = AlibabaYunioDataTransfer;
@@ -5294,6 +5300,7 @@ declare namespace IncomingMessage {
    * - {@link AlibabaWdkopen}
    * - {@link AlibabaWdkorder}
    * - {@link AlibabaWdktrade}
+   * - {@link AlibabaYichao}
    * - {@link AlibabaYunio}
    */
   type Alibaba = AlibabaAdlab
@@ -5357,6 +5364,7 @@ declare namespace IncomingMessage {
     | AlibabaWdkopen
     | AlibabaWdkorder
     | AlibabaWdktrade
+    | AlibabaYichao
     | AlibabaYunio;
   /**
    * - {@link AlicomAxb}

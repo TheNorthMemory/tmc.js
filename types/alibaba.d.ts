@@ -4563,6 +4563,37 @@ declare namespace Alibaba.Wdktrade {
   }
 }
 
+/** 天猫服务 */
+declare namespace Alibaba.Yichao {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2549&docType=9 蚁巢保单修改消息} */
+  interface InsuranceUpdate {
+    /** 保单生效时间 */
+    gmt_effect: string;
+    /** 保单失效时间 */
+    gmt_expiry: string;
+    /** 保司保单号 */
+    insurance_application_no: string;
+    /** 蚁巢保单号 */
+    insurance_order_id: string;
+    /** 被保人id */
+    insurant_id: string;
+    /** 被保人姓名 */
+    insurant_name: string;
+    /** 单据唯一键 */
+    out_id: string;
+    /** 工单或者服务单号 */
+    out_order_id: string;
+    /** 关联单据类型 */
+    out_order_type: string;
+    /** 保单类型 */
+    product_code: string;
+    /** 蚁巢保单状态 */
+    status: string;
+    /** 蚁巢保单状态 */
+    status_code: string;
+  }
+}
+
 /** 平台消息 */
 declare namespace Alibaba.Yunio {
   /** {@link https://open.taobao.com/tmc.htm?docId=1063&docType=9 YunIO数据流转} */

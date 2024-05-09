@@ -618,6 +618,8 @@ declare interface TaoTopicsDescriptor {
   alibaba_wdkorder_VoucherStatus(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkorderVoucherStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaWdktradeCouponInstance 五道口营销 > 营销券实例消息} */
   alibaba_wdktrade_CouponInstance(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdktradeCouponInstance) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaYichaoInsuranceUpdate 天猫服务 > 蚁巢保单修改消息} */
+  alibaba_yichao_InsuranceUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaYichaoInsuranceUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaYunioDataTransfer 平台消息 > YunIO数据流转} */
   alibaba_yunio_DataTransfer(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaYunioDataTransfer) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlicomAxbSubsEventSync 阿里通信 > 绑定事件同步} */
@@ -2444,6 +2446,8 @@ declare interface TaoTopicsDescriptor {
   alibaba_wdkorder(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkorder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaWdktrade} */
   alibaba_wdktrade(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdktrade) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaYichao} */
+  alibaba_yichao(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaYichao) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaYunio} */
   alibaba_yunio(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaYunio) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlicomAxb} */
@@ -3633,6 +3637,8 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_wdkorder_VoucherStatus', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkorderVoucherStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaWdktradeCouponInstance 五道口营销 > 营销券实例消息} */
   on(topic: 'alibaba_wdktrade_CouponInstance', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdktradeCouponInstance) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaYichaoInsuranceUpdate 天猫服务 > 蚁巢保单修改消息} */
+  on(topic: 'alibaba_yichao_InsuranceUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaYichaoInsuranceUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaYunioDataTransfer 平台消息 > YunIO数据流转} */
   on(topic: 'alibaba_yunio_DataTransfer', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaYunioDataTransfer) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlicomAxbSubsEventSync 阿里通信 > 绑定事件同步} */
@@ -5459,6 +5465,8 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_wdkorder', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkorder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaWdktrade} */
   on(topic: 'alibaba_wdktrade', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdktrade) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaYichao} */
+  on(topic: 'alibaba_yichao', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaYichao) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaYunio} */
   on(topic: 'alibaba_yunio', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaYunio) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlicomAxb} */
