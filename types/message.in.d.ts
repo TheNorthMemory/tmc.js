@@ -870,6 +870,8 @@ declare namespace IncomingMessage {
   type AlscKbbbtProductChange = Message & { content?: MessageContent & { topic?: 'alsc_kbbbt_ProductChange', content?: string | Alsc.Kbbbt.ProductChange } };
   /** {@link Alsc.Reviewbwc.ActivityEnrollSync 口碑 > 本地联盟饿了么评价有礼门店活动消息} */
   type AlscReviewbwcActivityEnrollSync = Message & { content?: MessageContent & { topic?: 'alsc_reviewbwc_ActivityEnrollSync', content?: string | Alsc.Reviewbwc.ActivityEnrollSync } };
+  /** {@link Alsc.Reviewbwc.SidBindSync 口碑 > 评价有礼渠道用户身份SID绑定通知} */
+  type AlscReviewbwcSidBindSync = Message & { content?: MessageContent & { topic?: 'alsc_reviewbwc_SidBindSync', content?: string | Alsc.Reviewbwc.SidBindSync } };
   /** {@link Alsc.Risk.PunishSend 口碑 > 本地生活处罚中心处罚下发} */
   type AlscRiskPunishSend = Message & { content?: MessageContent & { topic?: 'alsc_risk_PunishSend', content?: string | Alsc.Risk.PunishSend } };
   /** {@link Alsc.Salesadaptor.ShopAuditingNotify 口碑 > 饿了么开店状态通知接口} */
@@ -1442,6 +1444,8 @@ declare namespace IncomingMessage {
   type TaobaoIstoreGiftingMsg = Message & { content?: MessageContent & { topic?: 'taobao_istore_GiftingMsg', content?: string | Taobao.Istore.GiftingMsg } };
   /** {@link Taobao.Item.AuditResultNotify 淘宝商品 > 淘宝商品审核结果消息通知} */
   type TaobaoItemAuditResultNotify = Message & { content?: MessageContent & { topic?: 'taobao_item_AuditResultNotify', content?: string | Taobao.Item.AuditResultNotify } };
+  /** {@link Taobao.Item.DistributeItemEdit 淘宝商品 > 商品变更消息通知} */
+  type TaobaoItemDistributeItemEdit = Message & { content?: MessageContent & { topic?: 'taobao_item_DistributeItemEdit', content?: string | Taobao.Item.DistributeItemEdit } };
   /** {@link Taobao.Item.ItemAdd 淘宝商品 > 商品新增消息} */
   type TaobaoItemItemAdd = Message & { content?: MessageContent & { topic?: 'taobao_item_ItemAdd', content?: string | Taobao.Item.ItemAdd } };
   /** {@link Taobao.Item.ItemDelete 淘宝商品 > 商品删除消息} */
@@ -3358,8 +3362,10 @@ declare namespace IncomingMessage {
     | AlscKbbbtProductChange;
   /**
    * - {@link AlscReviewbwcActivityEnrollSync 口碑 > 本地联盟饿了么评价有礼门店活动消息}
+   * - {@link AlscReviewbwcSidBindSync 口碑 > 评价有礼渠道用户身份SID绑定通知}
    */
-  type AlscReviewbwc = AlscReviewbwcActivityEnrollSync;
+  type AlscReviewbwc = AlscReviewbwcActivityEnrollSync
+    | AlscReviewbwcSidBindSync;
   /**
    * - {@link AlscRiskPunishSend 口碑 > 本地生活处罚中心处罚下发}
    */
@@ -4122,6 +4128,7 @@ declare namespace IncomingMessage {
   type TaobaoIstore = TaobaoIstoreGiftingMsg;
   /**
    * - {@link TaobaoItemAuditResultNotify 淘宝商品 > 淘宝商品审核结果消息通知}
+   * - {@link TaobaoItemDistributeItemEdit 淘宝商品 > 商品变更消息通知}
    * - {@link TaobaoItemItemAdd 淘宝商品 > 商品新增消息}
    * - {@link TaobaoItemItemDelete 淘宝商品 > 商品删除消息}
    * - {@link TaobaoItemItemDownshelf 淘宝商品 > 商品下架消息}
@@ -4139,6 +4146,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoItemItemZeroStock 淘宝商品 > 商品卖空消息}
    */
   type TaobaoItem = TaobaoItemAuditResultNotify
+    | TaobaoItemDistributeItemEdit
     | TaobaoItemItemAdd
     | TaobaoItemItemDelete
     | TaobaoItemItemDownshelf

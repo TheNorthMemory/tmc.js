@@ -2449,6 +2449,16 @@ declare namespace Taobao.Item {
     user_nick: string;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2551&docType=9 商品变更消息通知} */
+  interface DistributeItemEdit {
+    /** 变更类型 */
+    message_type?: string;
+    /** 消息主键id */
+    msg_id: string;
+    /** 平台商品id */
+    platform_item_id?: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=128&docType=9 商品新增消息} */
   interface ItemAdd {
     /** 卖家昵称 */

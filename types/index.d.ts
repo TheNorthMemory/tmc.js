@@ -890,6 +890,8 @@ declare interface TaoTopicsDescriptor {
   alsc_kbbbt_ProductChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlscKbbbtProductChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlscReviewbwcActivityEnrollSync 口碑 > 本地联盟饿了么评价有礼门店活动消息} */
   alsc_reviewbwc_ActivityEnrollSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlscReviewbwcActivityEnrollSync) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlscReviewbwcSidBindSync 口碑 > 评价有礼渠道用户身份SID绑定通知} */
+  alsc_reviewbwc_SidBindSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlscReviewbwcSidBindSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlscRiskPunishSend 口碑 > 本地生活处罚中心处罚下发} */
   alsc_risk_PunishSend(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlscRiskPunishSend) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlscSalesadaptorShopAuditingNotify 口碑 > 饿了么开店状态通知接口} */
@@ -1462,6 +1464,8 @@ declare interface TaoTopicsDescriptor {
   taobao_istore_GiftingMsg(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoIstoreGiftingMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoItemAuditResultNotify 淘宝商品 > 淘宝商品审核结果消息通知} */
   taobao_item_AuditResultNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItemAuditResultNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoItemDistributeItemEdit 淘宝商品 > 商品变更消息通知} */
+  taobao_item_DistributeItemEdit(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItemDistributeItemEdit) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoItemItemAdd 淘宝商品 > 商品新增消息} */
   taobao_item_ItemAdd(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItemItemAdd) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoItemItemDelete 淘宝商品 > 商品删除消息} */
@@ -3909,6 +3913,8 @@ declare interface TaoEventsListener {
   on(topic: 'alsc_kbbbt_ProductChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlscKbbbtProductChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlscReviewbwcActivityEnrollSync 口碑 > 本地联盟饿了么评价有礼门店活动消息} */
   on(topic: 'alsc_reviewbwc_ActivityEnrollSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlscReviewbwcActivityEnrollSync) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlscReviewbwcSidBindSync 口碑 > 评价有礼渠道用户身份SID绑定通知} */
+  on(topic: 'alsc_reviewbwc_SidBindSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlscReviewbwcSidBindSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlscRiskPunishSend 口碑 > 本地生活处罚中心处罚下发} */
   on(topic: 'alsc_risk_PunishSend', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlscRiskPunishSend) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlscSalesadaptorShopAuditingNotify 口碑 > 饿了么开店状态通知接口} */
@@ -4481,6 +4487,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_istore_GiftingMsg', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoIstoreGiftingMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoItemAuditResultNotify 淘宝商品 > 淘宝商品审核结果消息通知} */
   on(topic: 'taobao_item_AuditResultNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItemAuditResultNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoItemDistributeItemEdit 淘宝商品 > 商品变更消息通知} */
+  on(topic: 'taobao_item_DistributeItemEdit', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItemDistributeItemEdit) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoItemItemAdd 淘宝商品 > 商品新增消息} */
   on(topic: 'taobao_item_ItemAdd', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItemItemAdd) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoItemItemDelete 淘宝商品 > 商品删除消息} */

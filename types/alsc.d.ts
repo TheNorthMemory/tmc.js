@@ -243,6 +243,16 @@ declare namespace Alsc.Reviewbwc {
     /** 消息类型 */
     type: string;
   }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2552&docType=9 评价有礼渠道用户身份SID绑定通知} */
+  interface SidBindSync {
+    /** 推广位 */
+    pid: string;
+    /** 短码 */
+    scene: string;
+    /** 用户侧会员ID */
+    sid: string;
+  }
 }
 
 /** 口碑 */
