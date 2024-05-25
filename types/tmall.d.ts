@@ -1041,6 +1041,27 @@ declare namespace Tmall.Scm {
   }
 }
 
+/** 天猫 */
+declare namespace Tmall.Service {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2542&docType=9 服务结算账期账单发票消息} */
+  interface CycleBillInvoice {
+    /** 含税金额 元 */
+    amount: string;
+    /** 账期 */
+    bill_cycle: string;
+    /** 账单ID */
+    bill_id: string;
+    /** 不含税金额 元 */
+    excluding_tax_amount: string;
+    /** 发票错误信息 */
+    invoice_error_info?: string;
+    /** 发票状态 */
+    invoice_status?: string;
+    /** 税额 元 */
+    tax_amount: string;
+  }
+}
+
 /** 天猫服务 */
 declare namespace Tmall.Servicecenter {
   /** {@link https://open.taobao.com/tmc.htm?docId=905&docType=9 天猫服务平台工单更新} */

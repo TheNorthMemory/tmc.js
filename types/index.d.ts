@@ -264,6 +264,8 @@ declare interface TaoTopicsDescriptor {
   alibaba_icbulive_CommentNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIcbuliveCommentNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIcbuliveEnterNotice ICBU > 直播观众进场通知} */
   alibaba_icbulive_EnterNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIcbuliveEnterNotice) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaIdleHouseStatusNotify 闲鱼 > 闲鱼房源状态变更通知} */
+  alibaba_idle_HouseStatusNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleHouseStatusNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIfpPackageCfcContainer 五道口配送 > 同城履约包裹状态变更消息} */
   alibaba_ifp_PackageCfcContainer(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIfpPackageCfcContainer) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInfopGoodsChange 采购系统 > 采购系统商品消息变更消息} */
@@ -2214,6 +2216,8 @@ declare interface TaoTopicsDescriptor {
   tmall_sasssign_Msg(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallSasssignMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallScmSendTmcsDistributeSettleFee 天猫 > 猫超经销结算打款消息} */
   tmall_scm_SendTmcsDistributeSettleFee(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallScmSendTmcsDistributeSettleFee) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallServiceCycleBillInvoice 天猫 > 服务结算账期账单发票消息} */
+  tmall_service_CycleBillInvoice(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallServiceCycleBillInvoice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallServicecenterTaskUpdate 天猫服务 > 天猫服务平台工单更新} */
   tmall_servicecenter_TaskUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallServicecenterTaskUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallServiceplatformServiceProductChanged 天猫服务 > 天猫服务产品变更消息} */
@@ -2378,6 +2382,8 @@ declare interface TaoTopicsDescriptor {
   alibaba_homestyler(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHomestyler) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIcbulive} */
   alibaba_icbulive(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIcbulive) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaIdle} */
+  alibaba_idle(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdle) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIfp} */
   alibaba_ifp(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIfp) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInfop} */
@@ -2934,6 +2940,8 @@ declare interface TaoTopicsDescriptor {
   tmall_sasssign(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallSasssign) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallScm} */
   tmall_scm(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallScm) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallService} */
+  tmall_service(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallService) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallServicecenter} */
   tmall_servicecenter(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallServicecenter) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallServiceplatform} */
@@ -3287,6 +3295,8 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_icbulive_CommentNotice', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIcbuliveCommentNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIcbuliveEnterNotice ICBU > 直播观众进场通知} */
   on(topic: 'alibaba_icbulive_EnterNotice', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIcbuliveEnterNotice) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaIdleHouseStatusNotify 闲鱼 > 闲鱼房源状态变更通知} */
+  on(topic: 'alibaba_idle_HouseStatusNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleHouseStatusNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIfpPackageCfcContainer 五道口配送 > 同城履约包裹状态变更消息} */
   on(topic: 'alibaba_ifp_PackageCfcContainer', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIfpPackageCfcContainer) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInfopGoodsChange 采购系统 > 采购系统商品消息变更消息} */
@@ -5237,6 +5247,8 @@ declare interface TaoEventsListener {
   on(topic: 'tmall_sasssign_Msg', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallSasssignMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallScmSendTmcsDistributeSettleFee 天猫 > 猫超经销结算打款消息} */
   on(topic: 'tmall_scm_SendTmcsDistributeSettleFee', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallScmSendTmcsDistributeSettleFee) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallServiceCycleBillInvoice 天猫 > 服务结算账期账单发票消息} */
+  on(topic: 'tmall_service_CycleBillInvoice', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallServiceCycleBillInvoice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallServicecenterTaskUpdate 天猫服务 > 天猫服务平台工单更新} */
   on(topic: 'tmall_servicecenter_TaskUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallServicecenterTaskUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallServiceplatformServiceProductChanged 天猫服务 > 天猫服务产品变更消息} */
@@ -5401,6 +5413,8 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_homestyler', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHomestyler) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIcbulive} */
   on(topic: 'alibaba_icbulive', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIcbulive) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaIdle} */
+  on(topic: 'alibaba_idle', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdle) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIfp} */
   on(topic: 'alibaba_ifp', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIfp) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInfop} */
@@ -5957,6 +5971,8 @@ declare interface TaoEventsListener {
   on(topic: 'tmall_sasssign', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallSasssign) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallScm} */
   on(topic: 'tmall_scm', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallScm) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallService} */
+  on(topic: 'tmall_service', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallService) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallServicecenter} */
   on(topic: 'tmall_servicecenter', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallServicecenter) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallServiceplatform} */

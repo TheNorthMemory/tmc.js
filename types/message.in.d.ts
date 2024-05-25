@@ -244,6 +244,8 @@ declare namespace IncomingMessage {
   type AlibabaIcbuliveCommentNotice = Message & { content?: MessageContent & { topic?: 'alibaba_icbulive_CommentNotice', content?: string | Alibaba.Icbulive.CommentNotice } };
   /** {@link Alibaba.Icbulive.EnterNotice ICBU > 直播观众进场通知} */
   type AlibabaIcbuliveEnterNotice = Message & { content?: MessageContent & { topic?: 'alibaba_icbulive_EnterNotice', content?: string | Alibaba.Icbulive.EnterNotice } };
+  /** {@link Alibaba.Idle.HouseStatusNotify 闲鱼 > 闲鱼房源状态变更通知} */
+  type AlibabaIdleHouseStatusNotify = Message & { content?: MessageContent & { topic?: 'alibaba_idle_HouseStatusNotify', content?: string | Alibaba.Idle.HouseStatusNotify } };
   /** {@link Alibaba.Ifp.PackageCfcContainer 五道口配送 > 同城履约包裹状态变更消息} */
   type AlibabaIfpPackageCfcContainer = Message & { content?: MessageContent & { topic?: 'alibaba_ifp_PackageCfcContainer', content?: string | Alibaba.Ifp.PackageCfcContainer } };
   /** {@link Alibaba.Infop.GoodsChange 采购系统 > 采购系统商品消息变更消息} */
@@ -2194,6 +2196,8 @@ declare namespace IncomingMessage {
   type TmallSasssignMsg = Message & { content?: MessageContent & { topic?: 'tmall_sasssign_Msg', content?: string | Tmall.Sasssign.Msg } };
   /** {@link Tmall.Scm.SendTmcsDistributeSettleFee 天猫 > 猫超经销结算打款消息} */
   type TmallScmSendTmcsDistributeSettleFee = Message & { content?: MessageContent & { topic?: 'tmall_scm_SendTmcsDistributeSettleFee', content?: string | Tmall.Scm.SendTmcsDistributeSettleFee } };
+  /** {@link Tmall.Service.CycleBillInvoice 天猫 > 服务结算账期账单发票消息} */
+  type TmallServiceCycleBillInvoice = Message & { content?: MessageContent & { topic?: 'tmall_service_CycleBillInvoice', content?: string | Tmall.Service.CycleBillInvoice } };
   /** {@link Tmall.Servicecenter.TaskUpdate 天猫服务 > 天猫服务平台工单更新} */
   type TmallServicecenterTaskUpdate = Message & { content?: MessageContent & { topic?: 'tmall_servicecenter_TaskUpdate', content?: string | Tmall.Servicecenter.TaskUpdate } };
   /** {@link Tmall.Serviceplatform.ServiceProductChanged 天猫服务 > 天猫服务产品变更消息} */
@@ -2558,6 +2562,10 @@ declare namespace IncomingMessage {
    */
   type AlibabaIcbulive = AlibabaIcbuliveCommentNotice
     | AlibabaIcbuliveEnterNotice;
+  /**
+   * - {@link AlibabaIdleHouseStatusNotify 闲鱼 > 闲鱼房源状态变更通知}
+   */
+  type AlibabaIdle = AlibabaIdleHouseStatusNotify;
   /**
    * - {@link AlibabaIfpPackageCfcContainer 五道口配送 > 同城履约包裹状态变更消息}
    */
@@ -5065,6 +5073,10 @@ declare namespace IncomingMessage {
    */
   type TmallScm = TmallScmSendTmcsDistributeSettleFee;
   /**
+   * - {@link TmallServiceCycleBillInvoice 天猫 > 服务结算账期账单发票消息}
+   */
+  type TmallService = TmallServiceCycleBillInvoice;
+  /**
    * - {@link TmallServicecenterTaskUpdate 天猫服务 > 天猫服务平台工单更新}
    */
   type TmallServicecenter = TmallServicecenterTaskUpdate;
@@ -5272,6 +5284,7 @@ declare namespace IncomingMessage {
    * - {@link AlibabaHj}
    * - {@link AlibabaHomestyler}
    * - {@link AlibabaIcbulive}
+   * - {@link AlibabaIdle}
    * - {@link AlibabaIfp}
    * - {@link AlibabaInfop}
    * - {@link AlibabaIntime}
@@ -5336,6 +5349,7 @@ declare namespace IncomingMessage {
     | AlibabaHj
     | AlibabaHomestyler
     | AlibabaIcbulive
+    | AlibabaIdle
     | AlibabaIfp
     | AlibabaInfop
     | AlibabaIntime
@@ -5896,6 +5910,7 @@ declare namespace IncomingMessage {
    * - {@link TmallRetail}
    * - {@link TmallSasssign}
    * - {@link TmallScm}
+   * - {@link TmallService}
    * - {@link TmallServicecenter}
    * - {@link TmallServiceplatform}
    * - {@link TmallSupermarket}
@@ -5927,6 +5942,7 @@ declare namespace IncomingMessage {
     | TmallRetail
     | TmallSasssign
     | TmallScm
+    | TmallService
     | TmallServicecenter
     | TmallServiceplatform
     | TmallSupermarket

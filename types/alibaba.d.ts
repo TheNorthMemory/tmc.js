@@ -1429,6 +1429,17 @@ declare namespace Alibaba.Icbulive {
   }
 }
 
+/** 闲鱼 */
+declare namespace Alibaba.Idle {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2555&docType=9 闲鱼房源状态变更通知} */
+  interface HouseStatusNotify {
+    /** 房源状态 0：上架，-1：删除，-2：下架 */
+    house_status: number;
+    /** 房源id */
+    item_id: number;
+  }
+}
+
 /** 五道口配送 */
 declare namespace Alibaba.Ifp {
   /** {@link https://open.taobao.com/tmc.htm?docId=2386&docType=9 同城履约包裹状态变更消息} */
