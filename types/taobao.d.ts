@@ -2451,6 +2451,8 @@ declare namespace Taobao.Item {
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2551&docType=9 商品变更消息通知} */
   interface DistributeItemEdit {
+    /** 业务类型 */
+    biz_type: string;
     /** 变更类型 */
     message_type?: string;
     /** 消息主键id */
