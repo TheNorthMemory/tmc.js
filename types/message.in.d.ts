@@ -8,6 +8,7 @@
 /// <reference path="alihouse.d.ts" />
 /// <reference path="alios.d.ts" />
 /// <reference path="alipay.d.ts" />
+/// <reference path="alipic.d.ts" />
 /// <reference path="alisports.d.ts" />
 /// <reference path="alitrip.d.ts" />
 /// <reference path="aliyun.d.ts" />
@@ -768,6 +769,8 @@ declare namespace IncomingMessage {
   type AlipayUpdateSeller = Message & { content?: MessageContent & { topic?: 'alipay_update_Seller', content?: string | Alipay.Update.Seller } };
   /** {@link Alipay.Xiaodai.SignNotify 阿里金融 > 阿里金融签约通知} */
   type AlipayXiaodaiSignNotify = Message & { content?: MessageContent & { topic?: 'alipay_xiaodai_SignNotify', content?: string | Alipay.Xiaodai.SignNotify } };
+  /** {@link Alipic.Lark.SchedulesDataDownlink ALIPIC > 排期列表数据增量下行} */
+  type AlipicLarkSchedulesDataDownlink = Message & { content?: MessageContent & { topic?: 'alipic_lark_SchedulesDataDownlink', content?: string | Alipic.Lark.SchedulesDataDownlink } };
   /** {@link Alisports.Bank.Alipayattention 支付宝体育 > 支付宝体育服务小程序关注消息} */
   type AlisportsBankAlipayattention = Message & { content?: MessageContent & { topic?: 'alisports_bank_Alipayattention', content?: string | Alisports.Bank.Alipayattention } };
   /** {@link Alitrip.Agent.Notify 淘宝机票 > 商家机票业务通知} */
@@ -3219,6 +3222,10 @@ declare namespace IncomingMessage {
    */
   type AlipayXiaodai = AlipayXiaodaiSignNotify;
   /**
+   * - {@link AlipicLarkSchedulesDataDownlink ALIPIC > 排期列表数据增量下行}
+   */
+  type AlipicLark = AlipicLarkSchedulesDataDownlink;
+  /**
    * - {@link AlisportsBankAlipayattention 支付宝体育 > 支付宝体育服务小程序关注消息}
    */
   type AlisportsBank = AlisportsBankAlipayattention;
@@ -5454,6 +5461,10 @@ declare namespace IncomingMessage {
     | AlipayTrade
     | AlipayUpdate
     | AlipayXiaodai;
+  /**
+   * - {@link AlipicLark}
+   */
+  type Alipic = AlipicLark;
   /**
    * - {@link AlisportsBank}
    */
