@@ -3443,6 +3443,19 @@ declare namespace Alibaba.Nlife {
   }
 }
 
+/** 小满 */
+declare namespace Alibaba.Okki {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2557&docType=9 小满商品服务状态同步} */
+  interface SpuStatusSync {
+    /** 小满客户id */
+    client_id: string;
+    /** 先富客户id */
+    global_id: string;
+    /** 小满商品服务状态 */
+    spu_status: string;
+  }
+}
+
 /** 阿里拍卖 */
 declare namespace Alibaba.Paimai {
   /** {@link https://open.taobao.com/tmc.htm?docId=2111&docType=9 支付宝用户完成消费金任务} */

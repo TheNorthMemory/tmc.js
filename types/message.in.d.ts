@@ -465,6 +465,8 @@ declare namespace IncomingMessage {
   type AlibabaNlifeInstorageDiffAuditNotify = Message & { content?: MessageContent & { topic?: 'alibaba_nlife_InstorageDiffAuditNotify', content?: string | Alibaba.Nlife.InstorageDiffAuditNotify } };
   /** {@link Alibaba.Nlife.ItemUpdate 零售plus > 零售+商品变动消息} */
   type AlibabaNlifeItemUpdate = Message & { content?: MessageContent & { topic?: 'alibaba_nlife_ItemUpdate', content?: string | Alibaba.Nlife.ItemUpdate } };
+  /** {@link Alibaba.Okki.SpuStatusSync 小满 > 小满商品服务状态同步} */
+  type AlibabaOkkiSpuStatusSync = Message & { content?: MessageContent & { topic?: 'alibaba_okki_SpuStatusSync', content?: string | Alibaba.Okki.SpuStatusSync } };
   /** {@link Alibaba.Paimai.AlipayConsumeGoldTaskFinish 阿里拍卖 > 支付宝用户完成消费金任务} */
   type AlibabaPaimaiAlipayConsumeGoldTaskFinish = Message & { content?: MessageContent & { topic?: 'alibaba_paimai_AlipayConsumeGoldTaskFinish', content?: string | Alibaba.Paimai.AlipayConsumeGoldTaskFinish } };
   /** {@link Alibaba.Paimai.CommonPromoTask 阿里拍卖 > 拍卖支付宝营销通用消息} */
@@ -2825,6 +2827,10 @@ declare namespace IncomingMessage {
     | AlibabaNlifeBtobTradeRefundNotify
     | AlibabaNlifeInstorageDiffAuditNotify
     | AlibabaNlifeItemUpdate;
+  /**
+   * - {@link AlibabaOkkiSpuStatusSync 小满 > 小满商品服务状态同步}
+   */
+  type AlibabaOkki = AlibabaOkkiSpuStatusSync;
   /**
    * - {@link AlibabaPaimaiAlipayConsumeGoldTaskFinish 阿里拍卖 > 支付宝用户完成消费金任务}
    * - {@link AlibabaPaimaiCommonPromoTask 阿里拍卖 > 拍卖支付宝营销通用消息}
@@ -5311,6 +5317,7 @@ declare namespace IncomingMessage {
    * - {@link AlibabaNazca}
    * - {@link AlibabaNewretail}
    * - {@link AlibabaNlife}
+   * - {@link AlibabaOkki}
    * - {@link AlibabaPaimai}
    * - {@link AlibabaPur}
    * - {@link AlibabaServiceplatform}
@@ -5376,6 +5383,7 @@ declare namespace IncomingMessage {
     | AlibabaNazca
     | AlibabaNewretail
     | AlibabaNlife
+    | AlibabaOkki
     | AlibabaPaimai
     | AlibabaPur
     | AlibabaServiceplatform
