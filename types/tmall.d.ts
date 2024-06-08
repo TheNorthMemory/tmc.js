@@ -227,6 +227,16 @@ declare namespace Tmall.Fuwu {
     stage_type: string;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2560&docType=9 服务管控消息更新} */
+  interface NewAnomalyRecourseStatusUpdate {
+    /** 一键求助单id */
+    anomaly_recourse_id: number;
+    /** 状态 1:求助中;2完结(已核销) */
+    status: number;
+    /** 催促次数，如：3表示催促3次 */
+    urges_number: number;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2409&docType=9 消费者评价成功top消息} */
   interface RateMessageTP {
     /** 单据类型 */

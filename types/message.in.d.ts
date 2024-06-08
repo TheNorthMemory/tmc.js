@@ -30,6 +30,7 @@
 /// <reference path="intime.d.ts" />
 /// <reference path="jae.d.ts" />
 /// <reference path="jym.d.ts" />
+/// <reference path="lianfan.d.ts" />
 /// <reference path="lst.d.ts" />
 /// <reference path="niaochao.d.ts" />
 /// <reference path="taobao.d.ts" />
@@ -771,6 +772,8 @@ declare namespace IncomingMessage {
   type AlipayUpdateSeller = Message & { content?: MessageContent & { topic?: 'alipay_update_Seller', content?: string | Alipay.Update.Seller } };
   /** {@link Alipay.Xiaodai.SignNotify 阿里金融 > 阿里金融签约通知} */
   type AlipayXiaodaiSignNotify = Message & { content?: MessageContent & { topic?: 'alipay_xiaodai_SignNotify', content?: string | Alipay.Xiaodai.SignNotify } };
+  /** {@link Alipic.Lark.ResultDataDownlink ALIPIC > POS配置态数据增量下行} */
+  type AlipicLarkResultDataDownlink = Message & { content?: MessageContent & { topic?: 'alipic_lark_ResultDataDownlink', content?: string | Alipic.Lark.ResultDataDownlink } };
   /** {@link Alipic.Lark.SchedulesDataDownlink ALIPIC > 排期列表数据增量下行} */
   type AlipicLarkSchedulesDataDownlink = Message & { content?: MessageContent & { topic?: 'alipic_lark_SchedulesDataDownlink', content?: string | Alipic.Lark.SchedulesDataDownlink } };
   /** {@link Alisports.Bank.Alipayattention 支付宝体育 > 支付宝体育服务小程序关注消息} */
@@ -1139,6 +1142,10 @@ declare namespace IncomingMessage {
   type JaeTradePaidSuccessed = Message & { content?: MessageContent & { topic?: 'jae_trade_PaidSuccessed', content?: string | Jae.Trade.PaidSuccessed } };
   /** {@link Jym.Order.BoosterStatusChange 交易猫 > 交易猫代练订单状态变更} */
   type JymOrderBoosterStatusChange = Message & { content?: MessageContent & { topic?: 'jym_order_BoosterStatusChange', content?: string | Jym.Order.BoosterStatusChange } };
+  /** {@link Lianfan.Huiwa.ModelStateUpdate 连凡 > 绘蛙模型状态变更消息} */
+  type LianfanHuiwaModelStateUpdate = Message & { content?: MessageContent & { topic?: 'lianfan_huiwa_ModelStateUpdate', content?: string | Lianfan.Huiwa.ModelStateUpdate } };
+  /** {@link Lianfan.Huiwa.TaskStateUpdate 连凡 > 绘蛙生图任务状态变更消息} */
+  type LianfanHuiwaTaskStateUpdate = Message & { content?: MessageContent & { topic?: 'lianfan_huiwa_TaskStateUpdate', content?: string | Lianfan.Huiwa.TaskStateUpdate } };
   /** {@link Lst.Supplier.BroadcastFastRefundMessage 零售通_公共 > 零售通广播极速退款消息} */
   type LstSupplierBroadcastFastRefundMessage = Message & { content?: MessageContent & { topic?: 'lst_supplier_BroadcastFastRefundMessage', content?: string | Lst.Supplier.BroadcastFastRefundMessage } };
   /** {@link Lst.Supplier.FastRefundMessageCreate 零售通_公共 > 品牌商极速退款消息创建} */
@@ -2083,6 +2090,8 @@ declare namespace IncomingMessage {
   type TmallFuwuHomeDecorationSupplyRuleUpdate = Message & { content?: MessageContent & { topic?: 'tmall_fuwu_HomeDecorationSupplyRuleUpdate', content?: string | Tmall.Fuwu.HomeDecorationSupplyRuleUpdate } };
   /** {@link Tmall.Fuwu.LogisticsInfoMessage 天猫服务 > 服务供应链物流业务消息} */
   type TmallFuwuLogisticsInfoMessage = Message & { content?: MessageContent & { topic?: 'tmall_fuwu_LogisticsInfoMessage', content?: string | Tmall.Fuwu.LogisticsInfoMessage } };
+  /** {@link Tmall.Fuwu.NewAnomalyRecourseStatusUpdate 天猫服务 > 服务管控消息更新} */
+  type TmallFuwuNewAnomalyRecourseStatusUpdate = Message & { content?: MessageContent & { topic?: 'tmall_fuwu_NewAnomalyRecourseStatusUpdate', content?: string | Tmall.Fuwu.NewAnomalyRecourseStatusUpdate } };
   /** {@link Tmall.Fuwu.RateMessageTP 天猫服务 > 消费者评价成功top消息} */
   type TmallFuwuRateMessageTP = Message & { content?: MessageContent & { topic?: 'tmall_fuwu_RateMessageTP', content?: string | Tmall.Fuwu.RateMessageTP } };
   /** {@link Tmall.Fuwu.ServiceItemUpdate 天猫服务 > 服务商品信息变更消息} */
@@ -3228,9 +3237,11 @@ declare namespace IncomingMessage {
    */
   type AlipayXiaodai = AlipayXiaodaiSignNotify;
   /**
+   * - {@link AlipicLarkResultDataDownlink ALIPIC > POS配置态数据增量下行}
    * - {@link AlipicLarkSchedulesDataDownlink ALIPIC > 排期列表数据增量下行}
    */
-  type AlipicLark = AlipicLarkSchedulesDataDownlink;
+  type AlipicLark = AlipicLarkResultDataDownlink
+    | AlipicLarkSchedulesDataDownlink;
   /**
    * - {@link AlisportsBankAlipayattention 支付宝体育 > 支付宝体育服务小程序关注消息}
    */
@@ -3759,6 +3770,12 @@ declare namespace IncomingMessage {
    * - {@link JymOrderBoosterStatusChange 交易猫 > 交易猫代练订单状态变更}
    */
   type JymOrder = JymOrderBoosterStatusChange;
+  /**
+   * - {@link LianfanHuiwaModelStateUpdate 连凡 > 绘蛙模型状态变更消息}
+   * - {@link LianfanHuiwaTaskStateUpdate 连凡 > 绘蛙生图任务状态变更消息}
+   */
+  type LianfanHuiwa = LianfanHuiwaModelStateUpdate
+    | LianfanHuiwaTaskStateUpdate;
   /**
    * - {@link LstSupplierBroadcastFastRefundMessage 零售通_公共 > 零售通广播极速退款消息}
    * - {@link LstSupplierFastRefundMessageCreate 零售通_公共 > 品牌商极速退款消息创建}
@@ -4930,6 +4947,7 @@ declare namespace IncomingMessage {
    * - {@link TmallFuwuElectricWarrantyCodeStatusUpdate 天猫服务 > 天猫服务消电保修码状态变更}
    * - {@link TmallFuwuHomeDecorationSupplyRuleUpdate 天猫服务 > 天猫服务家装优质供给规则变更}
    * - {@link TmallFuwuLogisticsInfoMessage 天猫服务 > 服务供应链物流业务消息}
+   * - {@link TmallFuwuNewAnomalyRecourseStatusUpdate 天猫服务 > 服务管控消息更新}
    * - {@link TmallFuwuRateMessageTP 天猫服务 > 消费者评价成功top消息}
    * - {@link TmallFuwuServiceItemUpdate 天猫服务 > 服务商品信息变更消息}
    * - {@link TmallFuwuServiceMonitorMessage 天猫服务 > 服务预警消息}
@@ -4947,6 +4965,7 @@ declare namespace IncomingMessage {
     | TmallFuwuElectricWarrantyCodeStatusUpdate
     | TmallFuwuHomeDecorationSupplyRuleUpdate
     | TmallFuwuLogisticsInfoMessage
+    | TmallFuwuNewAnomalyRecourseStatusUpdate
     | TmallFuwuRateMessageTP
     | TmallFuwuServiceItemUpdate
     | TmallFuwuServiceMonitorMessage
@@ -5677,6 +5696,10 @@ declare namespace IncomingMessage {
    * - {@link JymOrder}
    */
   type Jym = JymOrder;
+  /**
+   * - {@link LianfanHuiwa}
+   */
+  type Lianfan = LianfanHuiwa;
   /**
    * - {@link LstSupplier}
    */

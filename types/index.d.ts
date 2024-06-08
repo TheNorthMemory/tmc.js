@@ -790,6 +790,8 @@ declare interface TaoTopicsDescriptor {
   alipay_update_Seller(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlipayUpdateSeller) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlipayXiaodaiSignNotify 阿里金融 > 阿里金融签约通知} */
   alipay_xiaodai_SignNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlipayXiaodaiSignNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlipicLarkResultDataDownlink ALIPIC > POS配置态数据增量下行} */
+  alipic_lark_ResultDataDownlink(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlipicLarkResultDataDownlink) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlipicLarkSchedulesDataDownlink ALIPIC > 排期列表数据增量下行} */
   alipic_lark_SchedulesDataDownlink(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlipicLarkSchedulesDataDownlink) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlisportsBankAlipayattention 支付宝体育 > 支付宝体育服务小程序关注消息} */
@@ -1158,6 +1160,10 @@ declare interface TaoTopicsDescriptor {
   jae_trade_PaidSuccessed(fn: (this: TaoMessageConsumer, message: IncomingMessage.JaeTradePaidSuccessed) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.JymOrderBoosterStatusChange 交易猫 > 交易猫代练订单状态变更} */
   jym_order_BoosterStatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.JymOrderBoosterStatusChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.LianfanHuiwaModelStateUpdate 连凡 > 绘蛙模型状态变更消息} */
+  lianfan_huiwa_ModelStateUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.LianfanHuiwaModelStateUpdate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.LianfanHuiwaTaskStateUpdate 连凡 > 绘蛙生图任务状态变更消息} */
+  lianfan_huiwa_TaskStateUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.LianfanHuiwaTaskStateUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LstSupplierBroadcastFastRefundMessage 零售通_公共 > 零售通广播极速退款消息} */
   lst_supplier_BroadcastFastRefundMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.LstSupplierBroadcastFastRefundMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LstSupplierFastRefundMessageCreate 零售通_公共 > 品牌商极速退款消息创建} */
@@ -2102,6 +2108,8 @@ declare interface TaoTopicsDescriptor {
   tmall_fuwu_HomeDecorationSupplyRuleUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuHomeDecorationSupplyRuleUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuLogisticsInfoMessage 天猫服务 > 服务供应链物流业务消息} */
   tmall_fuwu_LogisticsInfoMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuLogisticsInfoMessage) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallFuwuNewAnomalyRecourseStatusUpdate 天猫服务 > 服务管控消息更新} */
+  tmall_fuwu_NewAnomalyRecourseStatusUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuNewAnomalyRecourseStatusUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuRateMessageTP 天猫服务 > 消费者评价成功top消息} */
   tmall_fuwu_RateMessageTP(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuRateMessageTP) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuServiceItemUpdate 天猫服务 > 服务商品信息变更消息} */
@@ -2684,6 +2692,8 @@ declare interface TaoTopicsDescriptor {
   jae_trade(fn: (this: TaoMessageConsumer, message: IncomingMessage.JaeTrade) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.JymOrder} */
   jym_order(fn: (this: TaoMessageConsumer, message: IncomingMessage.JymOrder) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.LianfanHuiwa} */
+  lianfan_huiwa(fn: (this: TaoMessageConsumer, message: IncomingMessage.LianfanHuiwa) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LstSupplier} */
   lst_supplier(fn: (this: TaoMessageConsumer, message: IncomingMessage.LstSupplier) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.NiaochaoTccompass} */
@@ -3076,6 +3086,8 @@ declare interface TaoTopicsDescriptor {
   jae(fn: (this: TaoMessageConsumer, message: IncomingMessage.Jae) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Jym} */
   jym(fn: (this: TaoMessageConsumer, message: IncomingMessage.Jym) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Lianfan} */
+  lianfan(fn: (this: TaoMessageConsumer, message: IncomingMessage.Lianfan) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Lst} */
   lst(fn: (this: TaoMessageConsumer, message: IncomingMessage.Lst) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Niaochao} */
@@ -3831,6 +3843,8 @@ declare interface TaoEventsListener {
   on(topic: 'alipay_update_Seller', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlipayUpdateSeller) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlipayXiaodaiSignNotify 阿里金融 > 阿里金融签约通知} */
   on(topic: 'alipay_xiaodai_SignNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlipayXiaodaiSignNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlipicLarkResultDataDownlink ALIPIC > POS配置态数据增量下行} */
+  on(topic: 'alipic_lark_ResultDataDownlink', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlipicLarkResultDataDownlink) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlipicLarkSchedulesDataDownlink ALIPIC > 排期列表数据增量下行} */
   on(topic: 'alipic_lark_SchedulesDataDownlink', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlipicLarkSchedulesDataDownlink) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlisportsBankAlipayattention 支付宝体育 > 支付宝体育服务小程序关注消息} */
@@ -4199,6 +4213,10 @@ declare interface TaoEventsListener {
   on(topic: 'jae_trade_PaidSuccessed', listener: (this: TaoMessageConsumer, message: IncomingMessage.JaeTradePaidSuccessed) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.JymOrderBoosterStatusChange 交易猫 > 交易猫代练订单状态变更} */
   on(topic: 'jym_order_BoosterStatusChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.JymOrderBoosterStatusChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.LianfanHuiwaModelStateUpdate 连凡 > 绘蛙模型状态变更消息} */
+  on(topic: 'lianfan_huiwa_ModelStateUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.LianfanHuiwaModelStateUpdate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.LianfanHuiwaTaskStateUpdate 连凡 > 绘蛙生图任务状态变更消息} */
+  on(topic: 'lianfan_huiwa_TaskStateUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.LianfanHuiwaTaskStateUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LstSupplierBroadcastFastRefundMessage 零售通_公共 > 零售通广播极速退款消息} */
   on(topic: 'lst_supplier_BroadcastFastRefundMessage', listener: (this: TaoMessageConsumer, message: IncomingMessage.LstSupplierBroadcastFastRefundMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LstSupplierFastRefundMessageCreate 零售通_公共 > 品牌商极速退款消息创建} */
@@ -5143,6 +5161,8 @@ declare interface TaoEventsListener {
   on(topic: 'tmall_fuwu_HomeDecorationSupplyRuleUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuHomeDecorationSupplyRuleUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuLogisticsInfoMessage 天猫服务 > 服务供应链物流业务消息} */
   on(topic: 'tmall_fuwu_LogisticsInfoMessage', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuLogisticsInfoMessage) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallFuwuNewAnomalyRecourseStatusUpdate 天猫服务 > 服务管控消息更新} */
+  on(topic: 'tmall_fuwu_NewAnomalyRecourseStatusUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuNewAnomalyRecourseStatusUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuRateMessageTP 天猫服务 > 消费者评价成功top消息} */
   on(topic: 'tmall_fuwu_RateMessageTP', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuRateMessageTP) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuServiceItemUpdate 天猫服务 > 服务商品信息变更消息} */
@@ -5725,6 +5745,8 @@ declare interface TaoEventsListener {
   on(topic: 'jae_trade', listener: (this: TaoMessageConsumer, message: IncomingMessage.JaeTrade) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.JymOrder} */
   on(topic: 'jym_order', listener: (this: TaoMessageConsumer, message: IncomingMessage.JymOrder) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.LianfanHuiwa} */
+  on(topic: 'lianfan_huiwa', listener: (this: TaoMessageConsumer, message: IncomingMessage.LianfanHuiwa) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LstSupplier} */
   on(topic: 'lst_supplier', listener: (this: TaoMessageConsumer, message: IncomingMessage.LstSupplier) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.NiaochaoTccompass} */
@@ -6117,6 +6139,8 @@ declare interface TaoEventsListener {
   on(topic: 'jae', listener: (this: TaoMessageConsumer, message: IncomingMessage.Jae) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Jym} */
   on(topic: 'jym', listener: (this: TaoMessageConsumer, message: IncomingMessage.Jym) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Lianfan} */
+  on(topic: 'lianfan', listener: (this: TaoMessageConsumer, message: IncomingMessage.Lianfan) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Lst} */
   on(topic: 'lst', listener: (this: TaoMessageConsumer, message: IncomingMessage.Lst) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Niaochao} */
