@@ -5849,6 +5849,8 @@ declare namespace Taobao.Trade {
 
   /** {@link https://open.taobao.com/tmc.htm?docId=113&docType=9 交易备注修改消息} */
   interface TradeMemoModified {
+    /** buyer:更新买家备注,seller:更新卖家备注,other:其他 */
+    action_type: string;
     /** 买家昵称 */
     buyer_nick: string;
     /** 由buyer_id加密, 可对外开放, 用来替换buyer_nick作为唯一标识 */
