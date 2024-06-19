@@ -2076,6 +2076,8 @@ declare interface TaoTopicsDescriptor {
   tmall_auto_TradeModify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallAutoTradeModify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallAutoTwoWheelsReceiptCreate 天猫汽车 > 天猫二轮车服务工单创建开放} */
   tmall_auto_TwoWheelsReceiptCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallAutoTwoWheelsReceiptCreate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallCarAbnormalSettleSeller 天猫汽车 > 天猫汽车安装服务-异常商家上下线通知} */
+  tmall_car_AbnormalSettleSeller(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallCarAbnormalSettleSeller) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallCarAliapayTelRedPacket 天猫汽车 > 天猫汽车-支付宝手机充值红包发放} */
   tmall_car_AliapayTelRedPacket(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallCarAliapayTelRedPacket) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallCarAlipayEvent 天猫汽车 > 天猫汽车触发支付宝事件发奖} */
@@ -2228,7 +2230,7 @@ declare interface TaoTopicsDescriptor {
   tmall_sasssign_Msg(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallSasssignMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallScmSendTmcsDistributeSettleFee 天猫 > 猫超经销结算打款消息} */
   tmall_scm_SendTmcsDistributeSettleFee(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallScmSendTmcsDistributeSettleFee) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TmallServiceCycleBillInvoice 天猫 > 服务结算账期账单发票消息} */
+  /** {@link IncomingMessage.TmallServiceCycleBillInvoice 天猫服务 > 服务结算账期账单发票消息} */
   tmall_service_CycleBillInvoice(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallServiceCycleBillInvoice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallServicecenterTaskUpdate 天猫服务 > 天猫服务平台工单更新} */
   tmall_servicecenter_TaskUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallServicecenterTaskUpdate) => void): TaoMessageConsumer;
@@ -2304,6 +2306,8 @@ declare interface TaoTopicsDescriptor {
   xianyu_appraise_OrderSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuAppraiseOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuCarOrderStatusSync 闲鱼回收商消息 > 闲鱼二手车寄卖订单状态同步} */
   xianyu_car_OrderStatusSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCarOrderStatusSync) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.XianyuCtoxCommissionStateSyn 闲鱼 > 闲鱼C2X抽佣退佣消息同步} */
+  xianyu_ctox_CommissionStateSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCtoxCommissionStateSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuCtoxPayDkChange 闲鱼 > c2x代扣协议变更通知} */
   xianyu_ctox_PayDkChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCtoxPayDkChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuCtoxRateStateSyn 闲鱼 > c2x业务订单评价消息同步} */
@@ -5129,6 +5133,8 @@ declare interface TaoEventsListener {
   on(topic: 'tmall_auto_TradeModify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallAutoTradeModify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallAutoTwoWheelsReceiptCreate 天猫汽车 > 天猫二轮车服务工单创建开放} */
   on(topic: 'tmall_auto_TwoWheelsReceiptCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallAutoTwoWheelsReceiptCreate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallCarAbnormalSettleSeller 天猫汽车 > 天猫汽车安装服务-异常商家上下线通知} */
+  on(topic: 'tmall_car_AbnormalSettleSeller', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallCarAbnormalSettleSeller) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallCarAliapayTelRedPacket 天猫汽车 > 天猫汽车-支付宝手机充值红包发放} */
   on(topic: 'tmall_car_AliapayTelRedPacket', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallCarAliapayTelRedPacket) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallCarAlipayEvent 天猫汽车 > 天猫汽车触发支付宝事件发奖} */
@@ -5281,7 +5287,7 @@ declare interface TaoEventsListener {
   on(topic: 'tmall_sasssign_Msg', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallSasssignMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallScmSendTmcsDistributeSettleFee 天猫 > 猫超经销结算打款消息} */
   on(topic: 'tmall_scm_SendTmcsDistributeSettleFee', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallScmSendTmcsDistributeSettleFee) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TmallServiceCycleBillInvoice 天猫 > 服务结算账期账单发票消息} */
+  /** {@link IncomingMessage.TmallServiceCycleBillInvoice 天猫服务 > 服务结算账期账单发票消息} */
   on(topic: 'tmall_service_CycleBillInvoice', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallServiceCycleBillInvoice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallServicecenterTaskUpdate 天猫服务 > 天猫服务平台工单更新} */
   on(topic: 'tmall_servicecenter_TaskUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallServicecenterTaskUpdate) => void): TaoMessageConsumer;
@@ -5357,6 +5363,8 @@ declare interface TaoEventsListener {
   on(topic: 'xianyu_appraise_OrderSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuAppraiseOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuCarOrderStatusSync 闲鱼回收商消息 > 闲鱼二手车寄卖订单状态同步} */
   on(topic: 'xianyu_car_OrderStatusSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCarOrderStatusSync) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.XianyuCtoxCommissionStateSyn 闲鱼 > 闲鱼C2X抽佣退佣消息同步} */
+  on(topic: 'xianyu_ctox_CommissionStateSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCtoxCommissionStateSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuCtoxPayDkChange 闲鱼 > c2x代扣协议变更通知} */
   on(topic: 'xianyu_ctox_PayDkChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCtoxPayDkChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuCtoxRateStateSyn 闲鱼 > c2x业务订单评价消息同步} */

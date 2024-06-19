@@ -2058,6 +2058,8 @@ declare namespace IncomingMessage {
   type TmallAutoTradeModify = Message & { content?: MessageContent & { topic?: 'tmall_auto_TradeModify', content?: string | Tmall.Auto.TradeModify } };
   /** {@link Tmall.Auto.TwoWheelsReceiptCreate 天猫汽车 > 天猫二轮车服务工单创建开放} */
   type TmallAutoTwoWheelsReceiptCreate = Message & { content?: MessageContent & { topic?: 'tmall_auto_TwoWheelsReceiptCreate', content?: string | Tmall.Auto.TwoWheelsReceiptCreate } };
+  /** {@link Tmall.Car.AbnormalSettleSeller 天猫汽车 > 天猫汽车安装服务-异常商家上下线通知} */
+  type TmallCarAbnormalSettleSeller = Message & { content?: MessageContent & { topic?: 'tmall_car_AbnormalSettleSeller', content?: string | Tmall.Car.AbnormalSettleSeller } };
   /** {@link Tmall.Car.AliapayTelRedPacket 天猫汽车 > 天猫汽车-支付宝手机充值红包发放} */
   type TmallCarAliapayTelRedPacket = Message & { content?: MessageContent & { topic?: 'tmall_car_AliapayTelRedPacket', content?: string | Tmall.Car.AliapayTelRedPacket } };
   /** {@link Tmall.Car.AlipayEvent 天猫汽车 > 天猫汽车触发支付宝事件发奖} */
@@ -2210,7 +2212,7 @@ declare namespace IncomingMessage {
   type TmallSasssignMsg = Message & { content?: MessageContent & { topic?: 'tmall_sasssign_Msg', content?: string | Tmall.Sasssign.Msg } };
   /** {@link Tmall.Scm.SendTmcsDistributeSettleFee 天猫 > 猫超经销结算打款消息} */
   type TmallScmSendTmcsDistributeSettleFee = Message & { content?: MessageContent & { topic?: 'tmall_scm_SendTmcsDistributeSettleFee', content?: string | Tmall.Scm.SendTmcsDistributeSettleFee } };
-  /** {@link Tmall.Service.CycleBillInvoice 天猫 > 服务结算账期账单发票消息} */
+  /** {@link Tmall.Service.CycleBillInvoice 天猫服务 > 服务结算账期账单发票消息} */
   type TmallServiceCycleBillInvoice = Message & { content?: MessageContent & { topic?: 'tmall_service_CycleBillInvoice', content?: string | Tmall.Service.CycleBillInvoice } };
   /** {@link Tmall.Servicecenter.TaskUpdate 天猫服务 > 天猫服务平台工单更新} */
   type TmallServicecenterTaskUpdate = Message & { content?: MessageContent & { topic?: 'tmall_servicecenter_TaskUpdate', content?: string | Tmall.Servicecenter.TaskUpdate } };
@@ -2286,6 +2288,8 @@ declare namespace IncomingMessage {
   type XianyuAppraiseOrderSyn = Message & { content?: MessageContent & { topic?: 'xianyu_appraise_OrderSyn', content?: string | Xianyu.Appraise.OrderSyn } };
   /** {@link Xianyu.Car.OrderStatusSync 闲鱼回收商消息 > 闲鱼二手车寄卖订单状态同步} */
   type XianyuCarOrderStatusSync = Message & { content?: MessageContent & { topic?: 'xianyu_car_OrderStatusSync', content?: string | Xianyu.Car.OrderStatusSync } };
+  /** {@link Xianyu.Ctox.CommissionStateSyn 闲鱼 > 闲鱼C2X抽佣退佣消息同步} */
+  type XianyuCtoxCommissionStateSyn = Message & { content?: MessageContent & { topic?: 'xianyu_ctox_CommissionStateSyn', content?: string | Xianyu.Ctox.CommissionStateSyn } };
   /** {@link Xianyu.Ctox.PayDkChange 闲鱼 > c2x代扣协议变更通知} */
   type XianyuCtoxPayDkChange = Message & { content?: MessageContent & { topic?: 'xianyu_ctox_PayDkChange', content?: string | Xianyu.Ctox.PayDkChange } };
   /** {@link Xianyu.Ctox.RateStateSyn 闲鱼 > c2x业务订单评价消息同步} */
@@ -4915,13 +4919,15 @@ declare namespace IncomingMessage {
     | TmallAutoTradeModify
     | TmallAutoTwoWheelsReceiptCreate;
   /**
+   * - {@link TmallCarAbnormalSettleSeller 天猫汽车 > 天猫汽车安装服务-异常商家上下线通知}
    * - {@link TmallCarAliapayTelRedPacket 天猫汽车 > 天猫汽车-支付宝手机充值红包发放}
    * - {@link TmallCarAlipayEvent 天猫汽车 > 天猫汽车触发支付宝事件发奖}
    * - {@link TmallCarContractSign 天猫汽车 > 合同签署消息}
    * - {@link TmallCarFinanceMsg 天猫汽车 > 汽车金融消息}
    * - {@link TmallCarTelCoupon 天猫汽车 > 天猫汽车特惠充}
    */
-  type TmallCar = TmallCarAliapayTelRedPacket
+  type TmallCar = TmallCarAbnormalSettleSeller
+    | TmallCarAliapayTelRedPacket
     | TmallCarAlipayEvent
     | TmallCarContractSign
     | TmallCarFinanceMsg
@@ -5105,7 +5111,7 @@ declare namespace IncomingMessage {
    */
   type TmallScm = TmallScmSendTmcsDistributeSettleFee;
   /**
-   * - {@link TmallServiceCycleBillInvoice 天猫 > 服务结算账期账单发票消息}
+   * - {@link TmallServiceCycleBillInvoice 天猫服务 > 服务结算账期账单发票消息}
    */
   type TmallService = TmallServiceCycleBillInvoice;
   /**
@@ -5223,10 +5229,12 @@ declare namespace IncomingMessage {
    */
   type XianyuCar = XianyuCarOrderStatusSync;
   /**
+   * - {@link XianyuCtoxCommissionStateSyn 闲鱼 > 闲鱼C2X抽佣退佣消息同步}
    * - {@link XianyuCtoxPayDkChange 闲鱼 > c2x代扣协议变更通知}
    * - {@link XianyuCtoxRateStateSyn 闲鱼 > c2x业务订单评价消息同步}
    */
-  type XianyuCtox = XianyuCtoxPayDkChange
+  type XianyuCtox = XianyuCtoxCommissionStateSyn
+    | XianyuCtoxPayDkChange
     | XianyuCtoxRateStateSyn;
   /**
    * - {@link XianyuEnvironmentEventSyn 闲鱼 > 闲鱼双11公益游戏任务事件同步}

@@ -48,6 +48,20 @@ declare namespace Tmall.Auto {
 
 /** 天猫汽车 */
 declare namespace Tmall.Car {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2562&docType=9 天猫汽车安装服务-异常商家上下线通知} */
+  interface AbnormalSettleSeller {
+    /** 业务身份 */
+    biz_code: string;
+    /** 业务id */
+    biz_id: string;
+    /** 下线原因 */
+    offline_reason: string;
+    /** 商家昵称 */
+    process_seller_nick: string;
+    /** 处理状态：0：下线；1：上线 */
+    process_status: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2457&docType=9 天猫汽车-支付宝手机充值红包发放} */
   interface AliapayTelRedPacket {
     /** 业务id */
@@ -1051,7 +1065,7 @@ declare namespace Tmall.Scm {
   }
 }
 
-/** 天猫 */
+/** 天猫服务 */
 declare namespace Tmall.Service {
   /** {@link https://open.taobao.com/tmc.htm?docId=2542&docType=9 服务结算账期账单发票消息} */
   interface CycleBillInvoice {
@@ -1060,15 +1074,17 @@ declare namespace Tmall.Service {
     /** 账期 */
     bill_cycle: string;
     /** 账单ID */
-    bill_id: string;
+    bill_id: number;
     /** 不含税金额 元 */
     excluding_tax_amount: string;
     /** 发票错误信息 */
     invoice_error_info?: string;
-    /** 发票状态 */
+    /** 发票状态 NOT_EXISTS 未上传; NOT_PARSED 待解析; PARSING 解析中; PARSE_FAILED 解析失败 (需重新上传); PARSE_SUCCESS 解析成功; PARSE_INFO_NOT_MATCH 发票信息不匹配(需重新上传); CHECKING 发票验真中; CHECK_FAILED 发票验真不通过(需重新上传); CHECK_PASS 发票验真通过; ATTACHING 发票匹配中; ATTACHED 发票匹配完成; ATTACHE_FAILED 发票匹配失败(需人工处理); ACCEPTED 发票接收完成; */
     invoice_status?: string;
     /** 税额 元 */
     tax_amount: string;
+    /** 税率 */
+    tax_rate: string;
   }
 }
 
