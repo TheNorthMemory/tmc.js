@@ -772,6 +772,8 @@ declare namespace IncomingMessage {
   type AlipayUpdateSeller = Message & { content?: MessageContent & { topic?: 'alipay_update_Seller', content?: string | Alipay.Update.Seller } };
   /** {@link Alipay.Xiaodai.SignNotify 阿里金融 > 阿里金融签约通知} */
   type AlipayXiaodaiSignNotify = Message & { content?: MessageContent & { topic?: 'alipay_xiaodai_SignNotify', content?: string | Alipay.Xiaodai.SignNotify } };
+  /** {@link Alipic.Lark.JiayingDataReport ALIPIC > 佳影数据上云} */
+  type AlipicLarkJiayingDataReport = Message & { content?: MessageContent & { topic?: 'alipic_lark_JiayingDataReport', content?: string | Alipic.Lark.JiayingDataReport } };
   /** {@link Alipic.Lark.ResultDataDownlink ALIPIC > POS配置态数据增量下行} */
   type AlipicLarkResultDataDownlink = Message & { content?: MessageContent & { topic?: 'alipic_lark_ResultDataDownlink', content?: string | Alipic.Lark.ResultDataDownlink } };
   /** {@link Alipic.Lark.SchedulesDataDownlink ALIPIC > 排期列表数据增量下行} */
@@ -3241,10 +3243,12 @@ declare namespace IncomingMessage {
    */
   type AlipayXiaodai = AlipayXiaodaiSignNotify;
   /**
+   * - {@link AlipicLarkJiayingDataReport ALIPIC > 佳影数据上云}
    * - {@link AlipicLarkResultDataDownlink ALIPIC > POS配置态数据增量下行}
    * - {@link AlipicLarkSchedulesDataDownlink ALIPIC > 排期列表数据增量下行}
    */
-  type AlipicLark = AlipicLarkResultDataDownlink
+  type AlipicLark = AlipicLarkJiayingDataReport
+    | AlipicLarkResultDataDownlink
     | AlipicLarkSchedulesDataDownlink;
   /**
    * - {@link AlisportsBankAlipayattention 支付宝体育 > 支付宝体育服务小程序关注消息}

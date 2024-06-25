@@ -790,6 +790,8 @@ declare interface TaoTopicsDescriptor {
   alipay_update_Seller(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlipayUpdateSeller) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlipayXiaodaiSignNotify 阿里金融 > 阿里金融签约通知} */
   alipay_xiaodai_SignNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlipayXiaodaiSignNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlipicLarkJiayingDataReport ALIPIC > 佳影数据上云} */
+  alipic_lark_JiayingDataReport(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlipicLarkJiayingDataReport) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlipicLarkResultDataDownlink ALIPIC > POS配置态数据增量下行} */
   alipic_lark_ResultDataDownlink(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlipicLarkResultDataDownlink) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlipicLarkSchedulesDataDownlink ALIPIC > 排期列表数据增量下行} */
@@ -3847,6 +3849,8 @@ declare interface TaoEventsListener {
   on(topic: 'alipay_update_Seller', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlipayUpdateSeller) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlipayXiaodaiSignNotify 阿里金融 > 阿里金融签约通知} */
   on(topic: 'alipay_xiaodai_SignNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlipayXiaodaiSignNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlipicLarkJiayingDataReport ALIPIC > 佳影数据上云} */
+  on(topic: 'alipic_lark_JiayingDataReport', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlipicLarkJiayingDataReport) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlipicLarkResultDataDownlink ALIPIC > POS配置态数据增量下行} */
   on(topic: 'alipic_lark_ResultDataDownlink', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlipicLarkResultDataDownlink) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlipicLarkSchedulesDataDownlink ALIPIC > 排期列表数据增量下行} */
