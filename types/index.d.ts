@@ -1162,6 +1162,8 @@ declare interface TaoTopicsDescriptor {
   jae_trade_PaidSuccessed(fn: (this: TaoMessageConsumer, message: IncomingMessage.JaeTradePaidSuccessed) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.JymOrderBoosterStatusChange 交易猫 > 交易猫代练订单状态变更} */
   jym_order_BoosterStatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.JymOrderBoosterStatusChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.LarkTradePosTradeDataTransmit 云智POS > 云智POS离线交易信息同步} */
+  lark_trade_PosTradeDataTransmit(fn: (this: TaoMessageConsumer, message: IncomingMessage.LarkTradePosTradeDataTransmit) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LianfanHuiwaModelStateUpdate 连凡 > 绘蛙模型状态变更消息} */
   lianfan_huiwa_ModelStateUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.LianfanHuiwaModelStateUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LianfanHuiwaTaskStateUpdate 连凡 > 绘蛙生图任务状态变更消息} */
@@ -2698,6 +2700,8 @@ declare interface TaoTopicsDescriptor {
   jae_trade(fn: (this: TaoMessageConsumer, message: IncomingMessage.JaeTrade) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.JymOrder} */
   jym_order(fn: (this: TaoMessageConsumer, message: IncomingMessage.JymOrder) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.LarkTrade} */
+  lark_trade(fn: (this: TaoMessageConsumer, message: IncomingMessage.LarkTrade) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LianfanHuiwa} */
   lianfan_huiwa(fn: (this: TaoMessageConsumer, message: IncomingMessage.LianfanHuiwa) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LstSupplier} */
@@ -3092,6 +3096,8 @@ declare interface TaoTopicsDescriptor {
   jae(fn: (this: TaoMessageConsumer, message: IncomingMessage.Jae) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Jym} */
   jym(fn: (this: TaoMessageConsumer, message: IncomingMessage.Jym) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Lark} */
+  lark(fn: (this: TaoMessageConsumer, message: IncomingMessage.Lark) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Lianfan} */
   lianfan(fn: (this: TaoMessageConsumer, message: IncomingMessage.Lianfan) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Lst} */
@@ -4221,6 +4227,8 @@ declare interface TaoEventsListener {
   on(topic: 'jae_trade_PaidSuccessed', listener: (this: TaoMessageConsumer, message: IncomingMessage.JaeTradePaidSuccessed) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.JymOrderBoosterStatusChange 交易猫 > 交易猫代练订单状态变更} */
   on(topic: 'jym_order_BoosterStatusChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.JymOrderBoosterStatusChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.LarkTradePosTradeDataTransmit 云智POS > 云智POS离线交易信息同步} */
+  on(topic: 'lark_trade_PosTradeDataTransmit', listener: (this: TaoMessageConsumer, message: IncomingMessage.LarkTradePosTradeDataTransmit) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LianfanHuiwaModelStateUpdate 连凡 > 绘蛙模型状态变更消息} */
   on(topic: 'lianfan_huiwa_ModelStateUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.LianfanHuiwaModelStateUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LianfanHuiwaTaskStateUpdate 连凡 > 绘蛙生图任务状态变更消息} */
@@ -5757,6 +5765,8 @@ declare interface TaoEventsListener {
   on(topic: 'jae_trade', listener: (this: TaoMessageConsumer, message: IncomingMessage.JaeTrade) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.JymOrder} */
   on(topic: 'jym_order', listener: (this: TaoMessageConsumer, message: IncomingMessage.JymOrder) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.LarkTrade} */
+  on(topic: 'lark_trade', listener: (this: TaoMessageConsumer, message: IncomingMessage.LarkTrade) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LianfanHuiwa} */
   on(topic: 'lianfan_huiwa', listener: (this: TaoMessageConsumer, message: IncomingMessage.LianfanHuiwa) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LstSupplier} */
@@ -6151,6 +6161,8 @@ declare interface TaoEventsListener {
   on(topic: 'jae', listener: (this: TaoMessageConsumer, message: IncomingMessage.Jae) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Jym} */
   on(topic: 'jym', listener: (this: TaoMessageConsumer, message: IncomingMessage.Jym) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Lark} */
+  on(topic: 'lark', listener: (this: TaoMessageConsumer, message: IncomingMessage.Lark) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Lianfan} */
   on(topic: 'lianfan', listener: (this: TaoMessageConsumer, message: IncomingMessage.Lianfan) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Lst} */

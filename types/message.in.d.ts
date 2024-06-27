@@ -30,6 +30,7 @@
 /// <reference path="intime.d.ts" />
 /// <reference path="jae.d.ts" />
 /// <reference path="jym.d.ts" />
+/// <reference path="lark.d.ts" />
 /// <reference path="lianfan.d.ts" />
 /// <reference path="lst.d.ts" />
 /// <reference path="niaochao.d.ts" />
@@ -1144,6 +1145,8 @@ declare namespace IncomingMessage {
   type JaeTradePaidSuccessed = Message & { content?: MessageContent & { topic?: 'jae_trade_PaidSuccessed', content?: string | Jae.Trade.PaidSuccessed } };
   /** {@link Jym.Order.BoosterStatusChange 交易猫 > 交易猫代练订单状态变更} */
   type JymOrderBoosterStatusChange = Message & { content?: MessageContent & { topic?: 'jym_order_BoosterStatusChange', content?: string | Jym.Order.BoosterStatusChange } };
+  /** {@link Lark.Trade.PosTradeDataTransmit 云智POS > 云智POS离线交易信息同步} */
+  type LarkTradePosTradeDataTransmit = Message & { content?: MessageContent & { topic?: 'lark_trade_PosTradeDataTransmit', content?: string | Lark.Trade.PosTradeDataTransmit } };
   /** {@link Lianfan.Huiwa.ModelStateUpdate 连凡 > 绘蛙模型状态变更消息} */
   type LianfanHuiwaModelStateUpdate = Message & { content?: MessageContent & { topic?: 'lianfan_huiwa_ModelStateUpdate', content?: string | Lianfan.Huiwa.ModelStateUpdate } };
   /** {@link Lianfan.Huiwa.TaskStateUpdate 连凡 > 绘蛙生图任务状态变更消息} */
@@ -3779,6 +3782,10 @@ declare namespace IncomingMessage {
    */
   type JymOrder = JymOrderBoosterStatusChange;
   /**
+   * - {@link LarkTradePosTradeDataTransmit 云智POS > 云智POS离线交易信息同步}
+   */
+  type LarkTrade = LarkTradePosTradeDataTransmit;
+  /**
    * - {@link LianfanHuiwaModelStateUpdate 连凡 > 绘蛙模型状态变更消息}
    * - {@link LianfanHuiwaTaskStateUpdate 连凡 > 绘蛙生图任务状态变更消息}
    */
@@ -5708,6 +5715,10 @@ declare namespace IncomingMessage {
    * - {@link JymOrder}
    */
   type Jym = JymOrder;
+  /**
+   * - {@link LarkTrade}
+   */
+  type Lark = LarkTrade;
   /**
    * - {@link LianfanHuiwa}
    */
