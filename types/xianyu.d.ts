@@ -49,16 +49,12 @@ declare namespace Xianyu.Ctox {
   interface CommissionStateSyn {
     /** 订单id */
     biz_order_id: string;
-    /** 11-抽佣帮卖卖家单;12-抽佣:帮卖买家服务费单;21-退佣:帮卖售后 */
+    /** 11-抽佣帮卖卖家服务费;12-抽佣:帮卖买家服务费;21-退佣:帮卖售后 */
     biz_type: string;
-    /** 成交金额，单位分 */
-    deal_price: string;
     /** 佣金，单位分 */
     fee_commission: string;
-    /** 0-正向抽佣；1-逆向退佣 */
+    /** 1-正向抽佣；2-逆向退佣 */
     fee_type: string;
-    /** 服务费，单位分 */
-    service_fee: string;
   }
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2535&docType=9 c2x代扣协议变更通知} */
