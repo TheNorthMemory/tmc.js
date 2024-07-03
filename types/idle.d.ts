@@ -112,6 +112,29 @@ declare namespace Idle.Consignmentii {
 }
 
 /** 闲鱼 */
+declare namespace Idle.Cro {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2567&docType=9 闲鱼安全处罚消息} */
+  interface PunishMsg {
+    /** 0-处罚中，1-处罚完结，2-处罚撤销，10-申诉前置处罚 */
+    action_type: string;
+    /** 具体处罚项是什么 */
+    asset_list: string;
+    /** 处罚开始时间 */
+    begin_date: Date | number | string;
+    /** 处罚结束时间 */
+    end_date: Date | number | string;
+    /** 处罚ID */
+    result_id: string;
+    /** 处罚规则CODE */
+    rule_code: string;
+    /** 处罚规则名称 */
+    rule_name: string;
+    /** 处罚的用户ID */
+    user_id: number;
+  }
+}
+
+/** 闲鱼 */
 declare namespace Idle.Cycleshop {
   /** {@link https://open.taobao.com/tmc.htm?docId=2499&docType=9 闲鱼循环商店-货品变更通知} */
   interface GoodsNotice {

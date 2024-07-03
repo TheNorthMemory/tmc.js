@@ -1113,6 +1113,8 @@ declare namespace IncomingMessage {
   type IdleConsignmentOrderSyn = Message & { content?: MessageContent & { topic?: 'idle_consignment_OrderSyn', content?: string | Idle.Consignment.OrderSyn } };
   /** {@link Idle.Consignmentii.OrderSyn 闲鱼回收商消息 > 闲鱼寄卖V2订单履约状态同步} */
   type IdleConsignmentiiOrderSyn = Message & { content?: MessageContent & { topic?: 'idle_consignmentii_OrderSyn', content?: string | Idle.Consignmentii.OrderSyn } };
+  /** {@link Idle.Cro.PunishMsg 闲鱼 > 闲鱼安全处罚消息} */
+  type IdleCroPunishMsg = Message & { content?: MessageContent & { topic?: 'idle_cro_PunishMsg', content?: string | Idle.Cro.PunishMsg } };
   /** {@link Idle.Cycleshop.GoodsNotice 闲鱼 > 闲鱼循环商店-货品变更通知} */
   type IdleCycleshopGoodsNotice = Message & { content?: MessageContent & { topic?: 'idle_cycleshop_GoodsNotice', content?: string | Idle.Cycleshop.GoodsNotice } };
   /** {@link Idle.Cycleshop.SaleOrderNotice 闲鱼 > 闲鱼循环商店-销售单变更通知} */
@@ -3732,6 +3734,10 @@ declare namespace IncomingMessage {
    */
   type IdleConsignmentii = IdleConsignmentiiOrderSyn;
   /**
+   * - {@link IdleCroPunishMsg 闲鱼 > 闲鱼安全处罚消息}
+   */
+  type IdleCro = IdleCroPunishMsg;
+  /**
    * - {@link IdleCycleshopGoodsNotice 闲鱼 > 闲鱼循环商店-货品变更通知}
    * - {@link IdleCycleshopSaleOrderNotice 闲鱼 > 闲鱼循环商店-销售单变更通知}
    */
@@ -5685,6 +5691,7 @@ declare namespace IncomingMessage {
    * - {@link IdleAutotrade}
    * - {@link IdleConsignment}
    * - {@link IdleConsignmentii}
+   * - {@link IdleCro}
    * - {@link IdleCycleshop}
    * - {@link IdleRecycle}
    * - {@link IdleTopisv}
@@ -5696,6 +5703,7 @@ declare namespace IncomingMessage {
     | IdleAutotrade
     | IdleConsignment
     | IdleConsignmentii
+    | IdleCro
     | IdleCycleshop
     | IdleRecycle
     | IdleTopisv
