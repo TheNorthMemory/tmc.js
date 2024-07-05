@@ -2036,6 +2036,8 @@ declare interface TaoTopicsDescriptor {
   taobao_wt_OpenTradeTaskMsg(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWtOpenTradeTaskMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoWtVerifyInform 淘宝 > 阿里通信实人认证主动通知运营商} */
   taobao_wt_VerifyInform(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWtVerifyInform) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoXhotelDistributionStdInfoChange 飞猪 > 通用分销 标准信息变更消息} */
+  taobao_xhotel_DistributionStdInfoChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoXhotelDistributionStdInfoChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoXianyuHouseBooking 闲鱼 > 闲鱼房源预约消息} */
   taobao_xianyu_HouseBooking(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoXianyuHouseBooking) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoXianyuRentBillPaid 闲鱼 > 闲鱼租房订单支付} */
@@ -2920,6 +2922,8 @@ declare interface TaoTopicsDescriptor {
   taobao_worktable(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWorktable) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoWt} */
   taobao_wt(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWt) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoXhotel} */
+  taobao_xhotel(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoXhotel) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoXianyu} */
   taobao_xianyu(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoXianyu) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoXiaoqu} */
@@ -5105,6 +5109,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_wt_OpenTradeTaskMsg', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWtOpenTradeTaskMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoWtVerifyInform 淘宝 > 阿里通信实人认证主动通知运营商} */
   on(topic: 'taobao_wt_VerifyInform', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWtVerifyInform) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoXhotelDistributionStdInfoChange 飞猪 > 通用分销 标准信息变更消息} */
+  on(topic: 'taobao_xhotel_DistributionStdInfoChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoXhotelDistributionStdInfoChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoXianyuHouseBooking 闲鱼 > 闲鱼房源预约消息} */
   on(topic: 'taobao_xianyu_HouseBooking', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoXianyuHouseBooking) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoXianyuRentBillPaid 闲鱼 > 闲鱼租房订单支付} */
@@ -5989,6 +5995,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_worktable', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWorktable) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoWt} */
   on(topic: 'taobao_wt', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWt) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoXhotel} */
+  on(topic: 'taobao_xhotel', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoXhotel) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoXianyu} */
   on(topic: 'taobao_xianyu', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoXianyu) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoXiaoqu} */
