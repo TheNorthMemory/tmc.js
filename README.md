@@ -134,7 +134,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 
 ## 支持的TOPICS
 
-<details><summary>共计 84+ 类别，506+ 消息数</summary>
+<details><summary>共计 84+ 类别，507+ 消息数</summary>
 
 | 类别 | 消息数 |
 | --- | --- |
@@ -199,7 +199,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | HOMEAI | 2 |
 | HOMEAI消息对接 | 5 |
 | 零售通_公共 | 8 |
-| 酒店标准库基础信息变更消息 | 2 |
+| 酒店标准库基础信息变更消息 | 3 |
 | 菜鸟发货工作台 | 1 |
 | IOT-智能制造 | 2 |
 | 智能制造API | 1 |

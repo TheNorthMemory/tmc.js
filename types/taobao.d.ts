@@ -6690,7 +6690,7 @@ declare namespace Taobao.Wt {
   }
 }
 
-/** 飞猪 */
+/** 酒店标准库基础信息变更消息 */
 declare namespace Taobao.Xhotel {
   /** {@link https://open.taobao.com/tmc.htm?docId=2569&docType=9 通用分销 标准信息变更消息} */
   interface DistributionStdInfoChange {

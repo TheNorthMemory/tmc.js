@@ -2036,7 +2036,7 @@ declare interface TaoTopicsDescriptor {
   taobao_wt_OpenTradeTaskMsg(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWtOpenTradeTaskMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoWtVerifyInform 淘宝 > 阿里通信实人认证主动通知运营商} */
   taobao_wt_VerifyInform(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWtVerifyInform) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TaobaoXhotelDistributionStdInfoChange 飞猪 > 通用分销 标准信息变更消息} */
+  /** {@link IncomingMessage.TaobaoXhotelDistributionStdInfoChange 酒店标准库基础信息变更消息 > 通用分销 标准信息变更消息} */
   taobao_xhotel_DistributionStdInfoChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoXhotelDistributionStdInfoChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoXianyuHouseBooking 闲鱼 > 闲鱼房源预约消息} */
   taobao_xianyu_HouseBooking(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoXianyuHouseBooking) => void): TaoMessageConsumer;
@@ -5109,7 +5109,7 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_wt_OpenTradeTaskMsg', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWtOpenTradeTaskMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoWtVerifyInform 淘宝 > 阿里通信实人认证主动通知运营商} */
   on(topic: 'taobao_wt_VerifyInform', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWtVerifyInform) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TaobaoXhotelDistributionStdInfoChange 飞猪 > 通用分销 标准信息变更消息} */
+  /** {@link IncomingMessage.TaobaoXhotelDistributionStdInfoChange 酒店标准库基础信息变更消息 > 通用分销 标准信息变更消息} */
   on(topic: 'taobao_xhotel_DistributionStdInfoChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoXhotelDistributionStdInfoChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoXianyuHouseBooking 闲鱼 > 闲鱼房源预约消息} */
   on(topic: 'taobao_xianyu_HouseBooking', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoXianyuHouseBooking) => void): TaoMessageConsumer;

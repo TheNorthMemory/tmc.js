@@ -2019,7 +2019,7 @@ declare namespace IncomingMessage {
   type TaobaoWtOpenTradeTaskMsg = Message & { content?: MessageContent & { topic?: 'taobao_wt_OpenTradeTaskMsg', content?: string | Taobao.Wt.OpenTradeTaskMsg } };
   /** {@link Taobao.Wt.VerifyInform 淘宝 > 阿里通信实人认证主动通知运营商} */
   type TaobaoWtVerifyInform = Message & { content?: MessageContent & { topic?: 'taobao_wt_VerifyInform', content?: string | Taobao.Wt.VerifyInform } };
-  /** {@link Taobao.Xhotel.DistributionStdInfoChange 飞猪 > 通用分销 标准信息变更消息} */
+  /** {@link Taobao.Xhotel.DistributionStdInfoChange 酒店标准库基础信息变更消息 > 通用分销 标准信息变更消息} */
   type TaobaoXhotelDistributionStdInfoChange = Message & { content?: MessageContent & { topic?: 'taobao_xhotel_DistributionStdInfoChange', content?: string | Taobao.Xhotel.DistributionStdInfoChange } };
   /** {@link Taobao.Xianyu.HouseBooking 闲鱼 > 闲鱼房源预约消息} */
   type TaobaoXianyuHouseBooking = Message & { content?: MessageContent & { topic?: 'taobao_xianyu_HouseBooking', content?: string | Taobao.Xianyu.HouseBooking } };
@@ -4878,7 +4878,7 @@ declare namespace IncomingMessage {
     | TaobaoWtOpenTradeTaskMsg
     | TaobaoWtVerifyInform;
   /**
-   * - {@link TaobaoXhotelDistributionStdInfoChange 飞猪 > 通用分销 标准信息变更消息}
+   * - {@link TaobaoXhotelDistributionStdInfoChange 酒店标准库基础信息变更消息 > 通用分销 标准信息变更消息}
    */
   type TaobaoXhotel = TaobaoXhotelDistributionStdInfoChange;
   /**
