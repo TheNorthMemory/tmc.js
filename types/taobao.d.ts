@@ -3580,6 +3580,16 @@ declare namespace Taobao.Ofn {
     /** 回收商 appKey */
     supplier_id?: string;
   }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2572&docType=9 以旧换新回收单评价消息} */
+  interface RateSync {
+    /** 回收单 ID */
+    biz_order_id: string;
+    /** 评价内容 */
+    rate_content: string;
+    /** 1是好评，0 是差评 */
+    rate_grade: string;
+  }
 }
 
 /** 导购平台 */
@@ -6629,6 +6639,8 @@ declare namespace Taobao.Wt {
     phone?: string;
     /** 阿里侧虚拟产品Id */
     product_id?: string;
+    /** 办理结果描述 */
+    result_desc?: string;
     /** 订单状态: 0-代付款 1-支付成功 2-合约办理成功 3-合约办理失败 */
     status: string;
     /** 淘宝id */
@@ -6958,5 +6970,18 @@ declare namespace Taobao.Yichao {
     oss_file_url: string;
     /** 保修码状态 */
     status: string;
+  }
+}
+
+/** 淘宝真酷 */
+declare namespace Taobao.Zk {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2571&docType=9 淘宝真酷需求鉴别单创建消息} */
+  interface IdentifyCreate {
+    /** 鉴定机构id */
+    identify_institution_id: string;
+    /** 货品鉴别单id，多个以逗号分隔 */
+    identify_order_id_list: string;
+    /** 需求鉴别单id */
+    identify_request_id: string;
   }
 }

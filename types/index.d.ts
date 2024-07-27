@@ -1622,6 +1622,8 @@ declare interface TaoTopicsDescriptor {
   taobao_ofn_NewOrderEventSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnNewOrderEventSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOfnOrderStatusSync 淘宝交易 > 以旧换新回收单状态同步} */
   taobao_ofn_OrderStatusSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnOrderStatusSync) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOfnRateSync 淘宝交易 > 以旧换新回收单评价消息} */
+  taobao_ofn_RateSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnRateSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpenaccountDataSync 导购平台 > openaccount数据同步} */
   taobao_openaccount_DataSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpenaccountDataSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmAuthTouchMessage 客户运营平台API > 营销短信授权消息} */
@@ -2072,6 +2074,8 @@ declare interface TaoTopicsDescriptor {
   taobao_xiaowei_Test(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoXiaoweiTest) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoYichaoWarrantyCodeStatusUpdate 淘宝 > 蚁巢保修码状态变更消息} */
   taobao_yichao_WarrantyCodeStatusUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoYichaoWarrantyCodeStatusUpdate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoZkIdentifyCreate 淘宝真酷 > 淘宝真酷需求鉴别单创建消息} */
+  taobao_zk_IdentifyCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkIdentifyCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaotaoFilmThirdPartyRefundPush 淘宝 > 退款消息同步} */
   taotao_film_ThirdPartyRefundPush(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaotaoFilmThirdPartyRefundPush) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallAliautoStepOrderPartConfirm 天猫汽车 > 天猫汽车分阶段订单打款消息} */
@@ -2932,6 +2936,8 @@ declare interface TaoTopicsDescriptor {
   taobao_xiaowei(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoXiaowei) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoYichao} */
   taobao_yichao(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoYichao) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoZk} */
+  taobao_zk(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZk) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaotaoFilm} */
   taotao_film(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaotaoFilm) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallAliauto} */
@@ -4695,6 +4701,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_ofn_NewOrderEventSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnNewOrderEventSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOfnOrderStatusSync 淘宝交易 > 以旧换新回收单状态同步} */
   on(topic: 'taobao_ofn_OrderStatusSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnOrderStatusSync) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOfnRateSync 淘宝交易 > 以旧换新回收单评价消息} */
+  on(topic: 'taobao_ofn_RateSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnRateSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpenaccountDataSync 导购平台 > openaccount数据同步} */
   on(topic: 'taobao_openaccount_DataSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpenaccountDataSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpencrmAuthTouchMessage 客户运营平台API > 营销短信授权消息} */
@@ -5145,6 +5153,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_xiaowei_Test', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoXiaoweiTest) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoYichaoWarrantyCodeStatusUpdate 淘宝 > 蚁巢保修码状态变更消息} */
   on(topic: 'taobao_yichao_WarrantyCodeStatusUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoYichaoWarrantyCodeStatusUpdate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoZkIdentifyCreate 淘宝真酷 > 淘宝真酷需求鉴别单创建消息} */
+  on(topic: 'taobao_zk_IdentifyCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkIdentifyCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaotaoFilmThirdPartyRefundPush 淘宝 > 退款消息同步} */
   on(topic: 'taotao_film_ThirdPartyRefundPush', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaotaoFilmThirdPartyRefundPush) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallAliautoStepOrderPartConfirm 天猫汽车 > 天猫汽车分阶段订单打款消息} */
@@ -6005,6 +6015,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_xiaowei', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoXiaowei) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoYichao} */
   on(topic: 'taobao_yichao', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoYichao) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoZk} */
+  on(topic: 'taobao_zk', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZk) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaotaoFilm} */
   on(topic: 'taotao_film', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaotaoFilm) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallAliauto} */

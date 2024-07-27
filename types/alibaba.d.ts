@@ -1615,6 +1615,8 @@ declare namespace Alibaba.Invoice {
     readonly platform_tid: string;
     /** 卖家Nick */
     seller_nick?: string;
+    /** 流水号 */
+    serial_no?: string;
     /** 开票申请的触发类型，buyer_payed=卖家已付款，sent_goods=卖家已发货，buyer_confirm=买家确认收货，refund_seller_confirm=卖家同意退款，invoice_supply=买家申请补开发票，invoice_change=买家申请改抬头，change_paper=电换纸 */
     trigger_status?: string;
   }

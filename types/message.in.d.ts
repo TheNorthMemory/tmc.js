@@ -1605,6 +1605,8 @@ declare namespace IncomingMessage {
   type TaobaoOfnNewOrderEventSync = Message & { content?: MessageContent & { topic?: 'taobao_ofn_NewOrderEventSync', content?: string | Taobao.Ofn.NewOrderEventSync } };
   /** {@link Taobao.Ofn.OrderStatusSync 淘宝交易 > 以旧换新回收单状态同步} */
   type TaobaoOfnOrderStatusSync = Message & { content?: MessageContent & { topic?: 'taobao_ofn_OrderStatusSync', content?: string | Taobao.Ofn.OrderStatusSync } };
+  /** {@link Taobao.Ofn.RateSync 淘宝交易 > 以旧换新回收单评价消息} */
+  type TaobaoOfnRateSync = Message & { content?: MessageContent & { topic?: 'taobao_ofn_RateSync', content?: string | Taobao.Ofn.RateSync } };
   /** {@link Taobao.Openaccount.DataSync 导购平台 > openaccount数据同步} */
   type TaobaoOpenaccountDataSync = Message & { content?: MessageContent & { topic?: 'taobao_openaccount_DataSync', content?: string | Taobao.Openaccount.DataSync } };
   /** {@link Taobao.Opencrm.AuthTouchMessage 客户运营平台API > 营销短信授权消息} */
@@ -2055,6 +2057,8 @@ declare namespace IncomingMessage {
   type TaobaoXiaoweiTest = Message & { content?: MessageContent & { topic?: 'taobao_xiaowei_Test', content?: string | Taobao.Xiaowei.Test } };
   /** {@link Taobao.Yichao.WarrantyCodeStatusUpdate 淘宝 > 蚁巢保修码状态变更消息} */
   type TaobaoYichaoWarrantyCodeStatusUpdate = Message & { content?: MessageContent & { topic?: 'taobao_yichao_WarrantyCodeStatusUpdate', content?: string | Taobao.Yichao.WarrantyCodeStatusUpdate } };
+  /** {@link Taobao.Zk.IdentifyCreate 淘宝真酷 > 淘宝真酷需求鉴别单创建消息} */
+  type TaobaoZkIdentifyCreate = Message & { content?: MessageContent & { topic?: 'taobao_zk_IdentifyCreate', content?: string | Taobao.Zk.IdentifyCreate } };
   /** {@link Taotao.Film.ThirdPartyRefundPush 淘宝 > 退款消息同步} */
   type TaotaoFilmThirdPartyRefundPush = Message & { content?: MessageContent & { topic?: 'taotao_film_ThirdPartyRefundPush', content?: string | Taotao.Film.ThirdPartyRefundPush } };
   /** {@link Tmall.Aliauto.StepOrderPartConfirm 天猫汽车 > 天猫汽车分阶段订单打款消息} */
@@ -4363,10 +4367,12 @@ declare namespace IncomingMessage {
    * - {@link TaobaoOfnCreditPayStatusChange 淘宝交易 > 信用代扣状态变更同步}
    * - {@link TaobaoOfnNewOrderEventSync 淘宝交易 > 以旧换新新机单事件同步}
    * - {@link TaobaoOfnOrderStatusSync 淘宝交易 > 以旧换新回收单状态同步}
+   * - {@link TaobaoOfnRateSync 淘宝交易 > 以旧换新回收单评价消息}
    */
   type TaobaoOfn = TaobaoOfnCreditPayStatusChange
     | TaobaoOfnNewOrderEventSync
-    | TaobaoOfnOrderStatusSync;
+    | TaobaoOfnOrderStatusSync
+    | TaobaoOfnRateSync;
   /**
    * - {@link TaobaoOpenaccountDataSync 导购平台 > openaccount数据同步}
    */
@@ -4923,6 +4929,10 @@ declare namespace IncomingMessage {
    * - {@link TaobaoYichaoWarrantyCodeStatusUpdate 淘宝 > 蚁巢保修码状态变更消息}
    */
   type TaobaoYichao = TaobaoYichaoWarrantyCodeStatusUpdate;
+  /**
+   * - {@link TaobaoZkIdentifyCreate 淘宝真酷 > 淘宝真酷需求鉴别单创建消息}
+   */
+  type TaobaoZk = TaobaoZkIdentifyCreate;
   /**
    * - {@link TaotaoFilmThirdPartyRefundPush 淘宝 > 退款消息同步}
    */
@@ -5855,6 +5865,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoXiaoqu}
    * - {@link TaobaoXiaowei}
    * - {@link TaobaoYichao}
+   * - {@link TaobaoZk}
    */
   type Taobao = TaobaoAg
     | TaobaoAis
@@ -5964,7 +5975,8 @@ declare namespace IncomingMessage {
     | TaobaoXianyu
     | TaobaoXiaoqu
     | TaobaoXiaowei
-    | TaobaoYichao;
+    | TaobaoYichao
+    | TaobaoZk;
   /**
    * - {@link TaotaoFilm}
    */
