@@ -100,6 +100,21 @@ declare namespace Xianyu.Environment {
 }
 
 /** 闲鱼 */
+declare namespace Xianyu.Fishmarket {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2574&docType=9 鱼市商品状态变更} */
+  interface ItemSyn {
+    /** 卖家单id */
+    biz_order_id: string;
+    /** true-表示有出价 */
+    is_bid: string;
+    /** 商品ID */
+    item_id: string;
+    /** 场次 */
+    schedule: string;
+  }
+}
+
+/** 闲鱼 */
 declare namespace Xianyu.Isv {
   /** {@link https://open.taobao.com/tmc.htm?docId=2219&docType=9 闲鱼服务商订单提醒} */
   interface OrderRemind {

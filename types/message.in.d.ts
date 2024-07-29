@@ -2309,6 +2309,8 @@ declare namespace IncomingMessage {
   type XianyuCtoxRateStateSyn = Message & { content?: MessageContent & { topic?: 'xianyu_ctox_RateStateSyn', content?: string | Xianyu.Ctox.RateStateSyn } };
   /** {@link Xianyu.Environment.EventSyn 闲鱼 > 闲鱼双11公益游戏任务事件同步} */
   type XianyuEnvironmentEventSyn = Message & { content?: MessageContent & { topic?: 'xianyu_environment_EventSyn', content?: string | Xianyu.Environment.EventSyn } };
+  /** {@link Xianyu.Fishmarket.ItemSyn 闲鱼 > 鱼市商品状态变更} */
+  type XianyuFishmarketItemSyn = Message & { content?: MessageContent & { topic?: 'xianyu_fishmarket_ItemSyn', content?: string | Xianyu.Fishmarket.ItemSyn } };
   /** {@link Xianyu.Isv.OrderRemind 闲鱼 > 闲鱼服务商订单提醒} */
   type XianyuIsvOrderRemind = Message & { content?: MessageContent & { topic?: 'xianyu_isv_OrderRemind', content?: string | Xianyu.Isv.OrderRemind } };
   /** {@link Xianyu.Marketrecycle.OrderStateSyn 闲鱼 > 保卖订单变更通知} */
@@ -5274,6 +5276,10 @@ declare namespace IncomingMessage {
    */
   type XianyuEnvironment = XianyuEnvironmentEventSyn;
   /**
+   * - {@link XianyuFishmarketItemSyn 闲鱼 > 鱼市商品状态变更}
+   */
+  type XianyuFishmarket = XianyuFishmarketItemSyn;
+  /**
    * - {@link XianyuIsvOrderRemind 闲鱼 > 闲鱼服务商订单提醒}
    */
   type XianyuIsv = XianyuIsvOrderRemind;
@@ -6077,6 +6083,7 @@ declare namespace IncomingMessage {
    * - {@link XianyuCar}
    * - {@link XianyuCtox}
    * - {@link XianyuEnvironment}
+   * - {@link XianyuFishmarket}
    * - {@link XianyuIsv}
    * - {@link XianyuMarketrecycle}
    * - {@link XianyuRecycle}
@@ -6089,6 +6096,7 @@ declare namespace IncomingMessage {
     | XianyuCar
     | XianyuCtox
     | XianyuEnvironment
+    | XianyuFishmarket
     | XianyuIsv
     | XianyuMarketrecycle
     | XianyuRecycle
