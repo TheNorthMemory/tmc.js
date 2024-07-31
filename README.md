@@ -134,7 +134,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 
 ## 支持的TOPICS
 
-<details><summary>共计 84+ 类别，507+ 消息数</summary>
+<details><summary>共计 85+ 类别，509+ 消息数</summary>
 
 | 类别 | 消息数 |
 | --- | --- |
@@ -170,7 +170,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | AE-交易 | 10 |
 | 五道口配送 | 5 |
 | 百川 | 2 |
-| 闲鱼 | 22 |
+| 闲鱼 | 23 |
 | 闲鱼回收商消息 | 6 |
 | 零售通POS开放平台消息 | 4 |
 | DPAAS | 6 |
@@ -203,6 +203,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | 菜鸟发货工作台 | 1 |
 | IOT-智能制造 | 2 |
 | 智能制造API | 1 |
+| ICBU-交易 | 1 |
 | IoT售后解决方案 | 1 |
 | OpenMall-API | 5 |
 | 闲鱼已验货 | 6 |

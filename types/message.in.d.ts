@@ -1095,7 +1095,7 @@ declare namespace IncomingMessage {
   type IcbuMemberXmUnBind = Message & { content?: MessageContent & { topic?: 'icbu_member_XmUnBind', content?: string | Icbu.Member.XmUnBind } };
   /** {@link Icbu.Risk.ZeroersMessage ICBU > 天鹿风控事件异步消息结果} */
   type IcbuRiskZeroersMessage = Message & { content?: MessageContent & { topic?: 'icbu_risk_ZeroersMessage', content?: string | Icbu.Risk.ZeroersMessage } };
-  /** {@link Icbu.Trade.OrderNotify ICBU > 国际站订单变更消息} */
+  /** {@link Icbu.Trade.OrderNotify ICBU-交易 > 国际站订单变更消息} */
   type IcbuTradeOrderNotify = Message & { content?: MessageContent & { topic?: 'icbu_trade_OrderNotify', content?: string | Icbu.Trade.OrderNotify } };
   /** {@link Idle.Agreement.StatusChange 闲鱼 > 闲鱼代扣消息通知} */
   type IdleAgreementStatusChange = Message & { content?: MessageContent & { topic?: 'idle_agreement_StatusChange', content?: string | Idle.Agreement.StatusChange } };
@@ -3712,7 +3712,7 @@ declare namespace IncomingMessage {
    */
   type IcbuRisk = IcbuRiskZeroersMessage;
   /**
-   * - {@link IcbuTradeOrderNotify ICBU > 国际站订单变更消息}
+   * - {@link IcbuTradeOrderNotify ICBU-交易 > 国际站订单变更消息}
    */
   type IcbuTrade = IcbuTradeOrderNotify;
   /**

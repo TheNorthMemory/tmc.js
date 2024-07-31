@@ -131,7 +131,7 @@ declare namespace Icbu.Risk {
   }
 }
 
-/** ICBU */
+/** ICBU-交易 */
 declare namespace Icbu.Trade {
   /** {@link https://open.taobao.com/tmc.htm?docId=1754&docType=9 国际站订单变更消息} */
   interface OrderNotify {

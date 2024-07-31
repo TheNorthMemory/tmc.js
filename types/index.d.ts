@@ -1112,7 +1112,7 @@ declare interface TaoTopicsDescriptor {
   icbu_member_XmUnBind(fn: (this: TaoMessageConsumer, message: IncomingMessage.IcbuMemberXmUnBind) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IcbuRiskZeroersMessage ICBU > 天鹿风控事件异步消息结果} */
   icbu_risk_ZeroersMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.IcbuRiskZeroersMessage) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.IcbuTradeOrderNotify ICBU > 国际站订单变更消息} */
+  /** {@link IncomingMessage.IcbuTradeOrderNotify ICBU-交易 > 国际站订单变更消息} */
   icbu_trade_OrderNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.IcbuTradeOrderNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleAgreementStatusChange 闲鱼 > 闲鱼代扣消息通知} */
   idle_agreement_StatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleAgreementStatusChange) => void): TaoMessageConsumer;
@@ -4195,7 +4195,7 @@ declare interface TaoEventsListener {
   on(topic: 'icbu_member_XmUnBind', listener: (this: TaoMessageConsumer, message: IncomingMessage.IcbuMemberXmUnBind) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IcbuRiskZeroersMessage ICBU > 天鹿风控事件异步消息结果} */
   on(topic: 'icbu_risk_ZeroersMessage', listener: (this: TaoMessageConsumer, message: IncomingMessage.IcbuRiskZeroersMessage) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.IcbuTradeOrderNotify ICBU > 国际站订单变更消息} */
+  /** {@link IncomingMessage.IcbuTradeOrderNotify ICBU-交易 > 国际站订单变更消息} */
   on(topic: 'icbu_trade_OrderNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.IcbuTradeOrderNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleAgreementStatusChange 闲鱼 > 闲鱼代扣消息通知} */
   on(topic: 'idle_agreement_StatusChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleAgreementStatusChange) => void): TaoMessageConsumer;
