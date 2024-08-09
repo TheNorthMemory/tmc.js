@@ -1818,6 +1818,8 @@ declare namespace Taobao.Fuwu {
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2384&docType=9 以旧换新资金变更通知消息} */
   interface FundsChange {
+    /** 资金类型 */
+    funds_type?: string;
     /** 新机单ID */
     new_order_id?: string;
     /** 回收单ID */
