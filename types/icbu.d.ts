@@ -84,6 +84,20 @@ declare namespace Icbu.Chat {
 
 /** ICBU */
 declare namespace Icbu.Crm {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2576&docType=9 ICBU CRM小满订单状态变更通知（GGS港台）} */
+  interface GgsXMOrderChange {
+    /** 2支付订单 3取消订单 */
+    action: string;
+    /** 阿里gid */
+    ali_gid: string;
+    /** 阿里订单号 */
+    ali_order_no: string;
+    /** 付款时间 */
+    ali_paid_time: string;
+    /** 付款金额 */
+    amout: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=1797&docType=9 ICBU CRM小满订单状态变更通知} */
   interface XMOrderChange {
     /** 2支付订单 3取消订单 */

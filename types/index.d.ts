@@ -1106,6 +1106,8 @@ declare interface TaoTopicsDescriptor {
   icbu_alicrm_OfflineDataChanged(fn: (this: TaoMessageConsumer, message: IncomingMessage.IcbuAlicrmOfflineDataChanged) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IcbuChatMessageTipForXiaoMan ICBU > ICBU沟通消息推送给小满提醒} */
   icbu_chat_MessageTipForXiaoMan(fn: (this: TaoMessageConsumer, message: IncomingMessage.IcbuChatMessageTipForXiaoMan) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IcbuCrmGgsXMOrderChange ICBU > ICBU CRM小满订单状态变更通知（GGS港台）} */
+  icbu_crm_GgsXMOrderChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.IcbuCrmGgsXMOrderChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IcbuCrmXMOrderChange ICBU > ICBU CRM小满订单状态变更通知} */
   icbu_crm_XMOrderChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.IcbuCrmXMOrderChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IcbuMemberXmUnBind ICBU > icbu国际站账号解绑小满账号} */
@@ -4189,6 +4191,8 @@ declare interface TaoEventsListener {
   on(topic: 'icbu_alicrm_OfflineDataChanged', listener: (this: TaoMessageConsumer, message: IncomingMessage.IcbuAlicrmOfflineDataChanged) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IcbuChatMessageTipForXiaoMan ICBU > ICBU沟通消息推送给小满提醒} */
   on(topic: 'icbu_chat_MessageTipForXiaoMan', listener: (this: TaoMessageConsumer, message: IncomingMessage.IcbuChatMessageTipForXiaoMan) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IcbuCrmGgsXMOrderChange ICBU > ICBU CRM小满订单状态变更通知（GGS港台）} */
+  on(topic: 'icbu_crm_GgsXMOrderChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.IcbuCrmGgsXMOrderChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IcbuCrmXMOrderChange ICBU > ICBU CRM小满订单状态变更通知} */
   on(topic: 'icbu_crm_XMOrderChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.IcbuCrmXMOrderChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IcbuMemberXmUnBind ICBU > icbu国际站账号解绑小满账号} */

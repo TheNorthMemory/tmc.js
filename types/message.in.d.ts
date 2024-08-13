@@ -1089,6 +1089,8 @@ declare namespace IncomingMessage {
   type IcbuAlicrmOfflineDataChanged = Message & { content?: MessageContent & { topic?: 'icbu_alicrm_OfflineDataChanged', content?: string | Icbu.Alicrm.OfflineDataChanged } };
   /** {@link Icbu.Chat.MessageTipForXiaoMan ICBU > ICBU沟通消息推送给小满提醒} */
   type IcbuChatMessageTipForXiaoMan = Message & { content?: MessageContent & { topic?: 'icbu_chat_MessageTipForXiaoMan', content?: string | Icbu.Chat.MessageTipForXiaoMan } };
+  /** {@link Icbu.Crm.GgsXMOrderChange ICBU > ICBU CRM小满订单状态变更通知（GGS港台）} */
+  type IcbuCrmGgsXMOrderChange = Message & { content?: MessageContent & { topic?: 'icbu_crm_GgsXMOrderChange', content?: string | Icbu.Crm.GgsXMOrderChange } };
   /** {@link Icbu.Crm.XMOrderChange ICBU > ICBU CRM小满订单状态变更通知} */
   type IcbuCrmXMOrderChange = Message & { content?: MessageContent & { topic?: 'icbu_crm_XMOrderChange', content?: string | Icbu.Crm.XMOrderChange } };
   /** {@link Icbu.Member.XmUnBind ICBU > icbu国际站账号解绑小满账号} */
@@ -3700,9 +3702,11 @@ declare namespace IncomingMessage {
    */
   type IcbuChat = IcbuChatMessageTipForXiaoMan;
   /**
+   * - {@link IcbuCrmGgsXMOrderChange ICBU > ICBU CRM小满订单状态变更通知（GGS港台）}
    * - {@link IcbuCrmXMOrderChange ICBU > ICBU CRM小满订单状态变更通知}
    */
-  type IcbuCrm = IcbuCrmXMOrderChange;
+  type IcbuCrm = IcbuCrmGgsXMOrderChange
+    | IcbuCrmXMOrderChange;
   /**
    * - {@link IcbuMemberXmUnBind ICBU > icbu国际站账号解绑小满账号}
    */
