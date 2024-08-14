@@ -6,12 +6,14 @@ declare namespace Xianyu.Aftersale {
     after_sale_order_id: string;
     /** 推进到当前状态的事件 */
     event: string;
-    /** 正向交易单订单号 */
+    /** 正向交易买家单订单号 */
     main_order_id: string;
     /** 当前主状态 */
     main_status: string;
     /** 当前子状态 */
     sub_status: string;
+    /** 帮卖卖家单单号 */
+    tender_order_id?: string;
   }
 }
 
