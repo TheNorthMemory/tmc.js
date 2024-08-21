@@ -2059,6 +2059,8 @@ declare namespace IncomingMessage {
   type TaobaoXiaoweiTest = Message & { content?: MessageContent & { topic?: 'taobao_xiaowei_Test', content?: string | Taobao.Xiaowei.Test } };
   /** {@link Taobao.Yichao.WarrantyCodeStatusUpdate 淘宝 > 蚁巢保修码状态变更消息} */
   type TaobaoYichaoWarrantyCodeStatusUpdate = Message & { content?: MessageContent & { topic?: 'taobao_yichao_WarrantyCodeStatusUpdate', content?: string | Taobao.Yichao.WarrantyCodeStatusUpdate } };
+  /** {@link Taobao.Zk.FirstLogisticsNotify 淘宝真酷 > 淘宝真酷一段物流发货消息} */
+  type TaobaoZkFirstLogisticsNotify = Message & { content?: MessageContent & { topic?: 'taobao_zk_FirstLogisticsNotify', content?: string | Taobao.Zk.FirstLogisticsNotify } };
   /** {@link Taobao.Zk.IdentifyCreate 淘宝真酷 > 淘宝真酷需求鉴别单创建消息} */
   type TaobaoZkIdentifyCreate = Message & { content?: MessageContent & { topic?: 'taobao_zk_IdentifyCreate', content?: string | Taobao.Zk.IdentifyCreate } };
   /** {@link Taotao.Film.ThirdPartyRefundPush 淘宝 > 退款消息同步} */
@@ -4936,9 +4938,11 @@ declare namespace IncomingMessage {
    */
   type TaobaoYichao = TaobaoYichaoWarrantyCodeStatusUpdate;
   /**
+   * - {@link TaobaoZkFirstLogisticsNotify 淘宝真酷 > 淘宝真酷一段物流发货消息}
    * - {@link TaobaoZkIdentifyCreate 淘宝真酷 > 淘宝真酷需求鉴别单创建消息}
    */
-  type TaobaoZk = TaobaoZkIdentifyCreate;
+  type TaobaoZk = TaobaoZkFirstLogisticsNotify
+    | TaobaoZkIdentifyCreate;
   /**
    * - {@link TaotaoFilmThirdPartyRefundPush 淘宝 > 退款消息同步}
    */
