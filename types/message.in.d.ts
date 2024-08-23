@@ -1291,6 +1291,8 @@ declare namespace IncomingMessage {
   type TaobaoDisputeExchangeModified = Message & { content?: MessageContent & { topic?: 'taobao_dispute_ExchangeModified', content?: string | Taobao.Dispute.ExchangeModified } };
   /** {@link Taobao.Dispute.ExchangeSellerConfirmed 淘宝 > 卖家确认收货} */
   type TaobaoDisputeExchangeSellerConfirmed = Message & { content?: MessageContent & { topic?: 'taobao_dispute_ExchangeSellerConfirmed', content?: string | Taobao.Dispute.ExchangeSellerConfirmed } };
+  /** {@link Taobao.Dispute.ExchangeSellerGoodsConsigned 淘宝 > 换货-卖家寄出商品} */
+  type TaobaoDisputeExchangeSellerGoodsConsigned = Message & { content?: MessageContent & { topic?: 'taobao_dispute_ExchangeSellerGoodsConsigned', content?: string | Taobao.Dispute.ExchangeSellerGoodsConsigned } };
   /** {@link Taobao.Dispute.ExchangeSuccess 淘宝 > 买家确认收货,换货成功} */
   type TaobaoDisputeExchangeSuccess = Message & { content?: MessageContent & { topic?: 'taobao_dispute_ExchangeSuccess', content?: string | Taobao.Dispute.ExchangeSuccess } };
   /** {@link Taobao.Dispute.ExchangeTurnToRefund 淘宝 > 卖家换货转退款} */
@@ -3986,6 +3988,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoDisputeExchangeClosed 淘宝 > 买家关闭换货协议}
    * - {@link TaobaoDisputeExchangeModified 淘宝 > 买家修改换货申请}
    * - {@link TaobaoDisputeExchangeSellerConfirmed 淘宝 > 卖家确认收货}
+   * - {@link TaobaoDisputeExchangeSellerGoodsConsigned 淘宝 > 换货-卖家寄出商品}
    * - {@link TaobaoDisputeExchangeSuccess 淘宝 > 买家确认收货,换货成功}
    * - {@link TaobaoDisputeExchangeTurnToRefund 淘宝 > 卖家换货转退款}
    * - {@link TaobaoDisputeRefundCreated 淘宝 > 新退款创建}
@@ -3997,6 +4000,7 @@ declare namespace IncomingMessage {
     | TaobaoDisputeExchangeClosed
     | TaobaoDisputeExchangeModified
     | TaobaoDisputeExchangeSellerConfirmed
+    | TaobaoDisputeExchangeSellerGoodsConsigned
     | TaobaoDisputeExchangeSuccess
     | TaobaoDisputeExchangeTurnToRefund
     | TaobaoDisputeRefundCreated

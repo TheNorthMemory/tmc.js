@@ -1308,6 +1308,8 @@ declare interface TaoTopicsDescriptor {
   taobao_dispute_ExchangeModified(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeExchangeModified) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDisputeExchangeSellerConfirmed 淘宝 > 卖家确认收货} */
   taobao_dispute_ExchangeSellerConfirmed(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeExchangeSellerConfirmed) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDisputeExchangeSellerGoodsConsigned 淘宝 > 换货-卖家寄出商品} */
+  taobao_dispute_ExchangeSellerGoodsConsigned(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeExchangeSellerGoodsConsigned) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDisputeExchangeSuccess 淘宝 > 买家确认收货,换货成功} */
   taobao_dispute_ExchangeSuccess(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeExchangeSuccess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDisputeExchangeTurnToRefund 淘宝 > 卖家换货转退款} */
@@ -4395,6 +4397,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_dispute_ExchangeModified', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeExchangeModified) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDisputeExchangeSellerConfirmed 淘宝 > 卖家确认收货} */
   on(topic: 'taobao_dispute_ExchangeSellerConfirmed', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeExchangeSellerConfirmed) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDisputeExchangeSellerGoodsConsigned 淘宝 > 换货-卖家寄出商品} */
+  on(topic: 'taobao_dispute_ExchangeSellerGoodsConsigned', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeExchangeSellerGoodsConsigned) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDisputeExchangeSuccess 淘宝 > 买家确认收货,换货成功} */
   on(topic: 'taobao_dispute_ExchangeSuccess', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeExchangeSuccess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDisputeExchangeTurnToRefund 淘宝 > 卖家换货转退款} */
