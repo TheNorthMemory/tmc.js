@@ -163,6 +163,25 @@ declare namespace Idle.Cycleshop {
   }
 }
 
+/** 闲鱼 */
+declare namespace Idle.Newoutlets {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2584&docType=9 闲鱼用户身份变更消息} */
+  interface UserTagNotice {
+    /** 商家所在的业务类型("new_outlets"-新奥莱，"flash_sale"-特卖) */
+    biz_line: string;
+    /** 业务所涉及的商家鱼小铺能力（"nfr_policy"-描述不符包邮退，"sdr_policy"-七天无理由退款） */
+    idle_shop_ability: string;
+    /** 商家身份变化类型（"user_entrance_pass"-商家入驻通过，"user_entrance_clear"-商家清退） */
+    operation_type: string;
+    /** 业务所涉及的商品类型，通过","分隔。例如(新奥莱)："15,16,26" */
+    sp_item_type: string;
+    /** 商家ID */
+    user_id: number;
+    /** 商家名称 */
+    user_name: string;
+  }
+}
+
 /** 闲鱼回收商消息 */
 declare namespace Idle.Recycle {
   /** {@link https://open.taobao.com/tmc.htm?docId=2385&docType=9 闲鱼回收业务订单消息} */

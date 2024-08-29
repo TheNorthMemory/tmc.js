@@ -1064,6 +1064,8 @@ declare interface TaoTopicsDescriptor {
   fliggy_ticket_OrderStatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTicketOrderStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyTicketVerifyNotify 航旅度假交易 > 域外分销订单码核销消息} */
   fliggy_ticket_VerifyNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTicketVerifyNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FliggyVisaApplicantStatusChanged 飞猪 > 签证申请人状态变更消息} */
+  fliggy_visa_ApplicantStatusChanged(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyVisaApplicantStatusChanged) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyVisaStatusChange 飞猪 > 签证状态变化消息} */
   fliggy_visa_StatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyVisaStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyXhotelComboCreateResult 飞猪 > 套餐创建消息回传} */
@@ -1138,6 +1140,8 @@ declare interface TaoTopicsDescriptor {
   idle_cycleshop_GoodsNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleCycleshopGoodsNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleCycleshopSaleOrderNotice 闲鱼 > 闲鱼循环商店-销售单变更通知} */
   idle_cycleshop_SaleOrderNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleCycleshopSaleOrderNotice) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleNewoutletsUserTagNotice 闲鱼 > 闲鱼用户身份变更消息} */
+  idle_newoutlets_UserTagNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleNewoutletsUserTagNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleRecycleOrderStateSyn 闲鱼回收商消息 > 闲鱼回收业务订单消息} */
   idle_recycle_OrderStateSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleRecycleOrderStateSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleRecycleOrderSyn 闲鱼回收商消息 > 回收订单交易消息} */
@@ -2702,6 +2706,8 @@ declare interface TaoTopicsDescriptor {
   idle_cro(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleCro) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleCycleshop} */
   idle_cycleshop(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleCycleshop) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleNewoutlets} */
+  idle_newoutlets(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleNewoutlets) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleRecycle} */
   idle_recycle(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleRecycle) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleTopisv} */
@@ -4153,6 +4159,8 @@ declare interface TaoEventsListener {
   on(topic: 'fliggy_ticket_OrderStatusChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTicketOrderStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyTicketVerifyNotify 航旅度假交易 > 域外分销订单码核销消息} */
   on(topic: 'fliggy_ticket_VerifyNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTicketVerifyNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FliggyVisaApplicantStatusChanged 飞猪 > 签证申请人状态变更消息} */
+  on(topic: 'fliggy_visa_ApplicantStatusChanged', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyVisaApplicantStatusChanged) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyVisaStatusChange 飞猪 > 签证状态变化消息} */
   on(topic: 'fliggy_visa_StatusChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyVisaStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyXhotelComboCreateResult 飞猪 > 套餐创建消息回传} */
@@ -4227,6 +4235,8 @@ declare interface TaoEventsListener {
   on(topic: 'idle_cycleshop_GoodsNotice', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleCycleshopGoodsNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleCycleshopSaleOrderNotice 闲鱼 > 闲鱼循环商店-销售单变更通知} */
   on(topic: 'idle_cycleshop_SaleOrderNotice', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleCycleshopSaleOrderNotice) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleNewoutletsUserTagNotice 闲鱼 > 闲鱼用户身份变更消息} */
+  on(topic: 'idle_newoutlets_UserTagNotice', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleNewoutletsUserTagNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleRecycleOrderStateSyn 闲鱼回收商消息 > 闲鱼回收业务订单消息} */
   on(topic: 'idle_recycle_OrderStateSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleRecycleOrderStateSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleRecycleOrderSyn 闲鱼回收商消息 > 回收订单交易消息} */
@@ -5791,6 +5801,8 @@ declare interface TaoEventsListener {
   on(topic: 'idle_cro', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleCro) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleCycleshop} */
   on(topic: 'idle_cycleshop', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleCycleshop) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleNewoutlets} */
+  on(topic: 'idle_newoutlets', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleNewoutlets) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleRecycle} */
   on(topic: 'idle_recycle', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleRecycle) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleTopisv} */

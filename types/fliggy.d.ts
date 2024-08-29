@@ -161,6 +161,20 @@ declare namespace Fliggy.Ticket {
 
 /** 飞猪 */
 declare namespace Fliggy.Visa {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2582&docType=9 签证申请人状态变更消息} */
+  interface ApplicantStatusChanged {
+    /** 申请人id */
+    apply_id: string;
+    /** 办理模式 */
+    apply_mode: number;
+    /** 申请人状态 */
+    apply_status: number;
+    /** 订单id */
+    order_id: string;
+    /** 办签进度流程类型 */
+    process_type: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=1867&docType=9 签证状态变化消息} */
   interface StatusChange {
     /** 申请人id */

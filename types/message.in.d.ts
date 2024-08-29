@@ -1047,6 +1047,8 @@ declare namespace IncomingMessage {
   type FliggyTicketOrderStatusChange = Message & { content?: MessageContent & { topic?: 'fliggy_ticket_OrderStatusChange', content?: string | Fliggy.Ticket.OrderStatusChange } };
   /** {@link Fliggy.Ticket.VerifyNotify 航旅度假交易 > 域外分销订单码核销消息} */
   type FliggyTicketVerifyNotify = Message & { content?: MessageContent & { topic?: 'fliggy_ticket_VerifyNotify', content?: string | Fliggy.Ticket.VerifyNotify } };
+  /** {@link Fliggy.Visa.ApplicantStatusChanged 飞猪 > 签证申请人状态变更消息} */
+  type FliggyVisaApplicantStatusChanged = Message & { content?: MessageContent & { topic?: 'fliggy_visa_ApplicantStatusChanged', content?: string | Fliggy.Visa.ApplicantStatusChanged } };
   /** {@link Fliggy.Visa.StatusChange 飞猪 > 签证状态变化消息} */
   type FliggyVisaStatusChange = Message & { content?: MessageContent & { topic?: 'fliggy_visa_StatusChange', content?: string | Fliggy.Visa.StatusChange } };
   /** {@link Fliggy.Xhotel.ComboCreateResult 飞猪 > 套餐创建消息回传} */
@@ -1121,6 +1123,8 @@ declare namespace IncomingMessage {
   type IdleCycleshopGoodsNotice = Message & { content?: MessageContent & { topic?: 'idle_cycleshop_GoodsNotice', content?: string | Idle.Cycleshop.GoodsNotice } };
   /** {@link Idle.Cycleshop.SaleOrderNotice 闲鱼 > 闲鱼循环商店-销售单变更通知} */
   type IdleCycleshopSaleOrderNotice = Message & { content?: MessageContent & { topic?: 'idle_cycleshop_SaleOrderNotice', content?: string | Idle.Cycleshop.SaleOrderNotice } };
+  /** {@link Idle.Newoutlets.UserTagNotice 闲鱼 > 闲鱼用户身份变更消息} */
+  type IdleNewoutletsUserTagNotice = Message & { content?: MessageContent & { topic?: 'idle_newoutlets_UserTagNotice', content?: string | Idle.Newoutlets.UserTagNotice } };
   /** {@link Idle.Recycle.OrderStateSyn 闲鱼回收商消息 > 闲鱼回收业务订单消息} */
   type IdleRecycleOrderStateSyn = Message & { content?: MessageContent & { topic?: 'idle_recycle_OrderStateSyn', content?: string | Idle.Recycle.OrderStateSyn } };
   /** {@link Idle.Recycle.OrderSyn 闲鱼回收商消息 > 回收订单交易消息} */
@@ -3642,9 +3646,11 @@ declare namespace IncomingMessage {
     | FliggyTicketOrderStatusChange
     | FliggyTicketVerifyNotify;
   /**
+   * - {@link FliggyVisaApplicantStatusChanged 飞猪 > 签证申请人状态变更消息}
    * - {@link FliggyVisaStatusChange 飞猪 > 签证状态变化消息}
    */
-  type FliggyVisa = FliggyVisaStatusChange;
+  type FliggyVisa = FliggyVisaApplicantStatusChanged
+    | FliggyVisaStatusChange;
   /**
    * - {@link FliggyXhotelComboCreateResult 飞猪 > 套餐创建消息回传}
    */
@@ -3759,6 +3765,10 @@ declare namespace IncomingMessage {
    */
   type IdleCycleshop = IdleCycleshopGoodsNotice
     | IdleCycleshopSaleOrderNotice;
+  /**
+   * - {@link IdleNewoutletsUserTagNotice 闲鱼 > 闲鱼用户身份变更消息}
+   */
+  type IdleNewoutlets = IdleNewoutletsUserTagNotice;
   /**
    * - {@link IdleRecycleOrderStateSyn 闲鱼回收商消息 > 闲鱼回收业务订单消息}
    * - {@link IdleRecycleOrderSyn 闲鱼回收商消息 > 回收订单交易消息}
@@ -5727,6 +5737,7 @@ declare namespace IncomingMessage {
    * - {@link IdleConsignmentii}
    * - {@link IdleCro}
    * - {@link IdleCycleshop}
+   * - {@link IdleNewoutlets}
    * - {@link IdleRecycle}
    * - {@link IdleTopisv}
    * - {@link IdleTranferpay}
@@ -5739,6 +5750,7 @@ declare namespace IncomingMessage {
     | IdleConsignmentii
     | IdleCro
     | IdleCycleshop
+    | IdleNewoutlets
     | IdleRecycle
     | IdleTopisv
     | IdleTranferpay
