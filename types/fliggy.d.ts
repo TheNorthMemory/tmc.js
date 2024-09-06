@@ -169,6 +169,8 @@ declare namespace Fliggy.Visa {
     apply_mode: number;
     /** 申请人状态 */
     apply_status: number;
+    /** 订单拓展信息，详情见[签证对接文档](https://open.alitrip.com/docs/doc.htm?docType=1&articleId=121404) */
+    biz_exts: string;
     /** 订单id */
     order_id: string;
     /** 办签进度流程类型 */
