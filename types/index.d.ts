@@ -2084,8 +2084,14 @@ declare interface TaoTopicsDescriptor {
   taobao_yichao_WarrantyCodeStatusUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoYichaoWarrantyCodeStatusUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoZkFirstLogisticsNotify 淘宝真酷 > 淘宝真酷一段物流发货消息} */
   taobao_zk_FirstLogisticsNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkFirstLogisticsNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoZkFirstLogisticsReceivedNotify 淘宝真酷 > 一段物流签收通知} */
+  taobao_zk_FirstLogisticsReceivedNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkFirstLogisticsReceivedNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoZkIdentifyCreate 淘宝真酷 > 淘宝真酷需求鉴别单创建消息} */
   taobao_zk_IdentifyCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkIdentifyCreate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoZkRefundNotify 淘宝真酷 > 真酷鉴定用户退款通知} */
+  taobao_zk_RefundNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkRefundNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoZkSecondLogisticsGotNotify 淘宝真酷 > 淘宝真酷二段寄出后揽收通知机构} */
+  taobao_zk_SecondLogisticsGotNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkSecondLogisticsGotNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaotaoFilmThirdPartyRefundPush 淘宝 > 退款消息同步} */
   taotao_film_ThirdPartyRefundPush(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaotaoFilmThirdPartyRefundPush) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallAliautoStepOrderPartConfirm 天猫汽车 > 天猫汽车分阶段订单打款消息} */
@@ -5179,8 +5185,14 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_yichao_WarrantyCodeStatusUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoYichaoWarrantyCodeStatusUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoZkFirstLogisticsNotify 淘宝真酷 > 淘宝真酷一段物流发货消息} */
   on(topic: 'taobao_zk_FirstLogisticsNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkFirstLogisticsNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoZkFirstLogisticsReceivedNotify 淘宝真酷 > 一段物流签收通知} */
+  on(topic: 'taobao_zk_FirstLogisticsReceivedNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkFirstLogisticsReceivedNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoZkIdentifyCreate 淘宝真酷 > 淘宝真酷需求鉴别单创建消息} */
   on(topic: 'taobao_zk_IdentifyCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkIdentifyCreate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoZkRefundNotify 淘宝真酷 > 真酷鉴定用户退款通知} */
+  on(topic: 'taobao_zk_RefundNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkRefundNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoZkSecondLogisticsGotNotify 淘宝真酷 > 淘宝真酷二段寄出后揽收通知机构} */
+  on(topic: 'taobao_zk_SecondLogisticsGotNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkSecondLogisticsGotNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaotaoFilmThirdPartyRefundPush 淘宝 > 退款消息同步} */
   on(topic: 'taotao_film_ThirdPartyRefundPush', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaotaoFilmThirdPartyRefundPush) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallAliautoStepOrderPartConfirm 天猫汽车 > 天猫汽车分阶段订单打款消息} */

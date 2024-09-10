@@ -2067,8 +2067,14 @@ declare namespace IncomingMessage {
   type TaobaoYichaoWarrantyCodeStatusUpdate = Message & { content?: MessageContent & { topic?: 'taobao_yichao_WarrantyCodeStatusUpdate', content?: string | Taobao.Yichao.WarrantyCodeStatusUpdate } };
   /** {@link Taobao.Zk.FirstLogisticsNotify 淘宝真酷 > 淘宝真酷一段物流发货消息} */
   type TaobaoZkFirstLogisticsNotify = Message & { content?: MessageContent & { topic?: 'taobao_zk_FirstLogisticsNotify', content?: string | Taobao.Zk.FirstLogisticsNotify } };
+  /** {@link Taobao.Zk.FirstLogisticsReceivedNotify 淘宝真酷 > 一段物流签收通知} */
+  type TaobaoZkFirstLogisticsReceivedNotify = Message & { content?: MessageContent & { topic?: 'taobao_zk_FirstLogisticsReceivedNotify', content?: string | Taobao.Zk.FirstLogisticsReceivedNotify } };
   /** {@link Taobao.Zk.IdentifyCreate 淘宝真酷 > 淘宝真酷需求鉴别单创建消息} */
   type TaobaoZkIdentifyCreate = Message & { content?: MessageContent & { topic?: 'taobao_zk_IdentifyCreate', content?: string | Taobao.Zk.IdentifyCreate } };
+  /** {@link Taobao.Zk.RefundNotify 淘宝真酷 > 真酷鉴定用户退款通知} */
+  type TaobaoZkRefundNotify = Message & { content?: MessageContent & { topic?: 'taobao_zk_RefundNotify', content?: string | Taobao.Zk.RefundNotify } };
+  /** {@link Taobao.Zk.SecondLogisticsGotNotify 淘宝真酷 > 淘宝真酷二段寄出后揽收通知机构} */
+  type TaobaoZkSecondLogisticsGotNotify = Message & { content?: MessageContent & { topic?: 'taobao_zk_SecondLogisticsGotNotify', content?: string | Taobao.Zk.SecondLogisticsGotNotify } };
   /** {@link Taotao.Film.ThirdPartyRefundPush 淘宝 > 退款消息同步} */
   type TaotaoFilmThirdPartyRefundPush = Message & { content?: MessageContent & { topic?: 'taotao_film_ThirdPartyRefundPush', content?: string | Taotao.Film.ThirdPartyRefundPush } };
   /** {@link Tmall.Aliauto.StepOrderPartConfirm 天猫汽车 > 天猫汽车分阶段订单打款消息} */
@@ -4953,10 +4959,16 @@ declare namespace IncomingMessage {
   type TaobaoYichao = TaobaoYichaoWarrantyCodeStatusUpdate;
   /**
    * - {@link TaobaoZkFirstLogisticsNotify 淘宝真酷 > 淘宝真酷一段物流发货消息}
+   * - {@link TaobaoZkFirstLogisticsReceivedNotify 淘宝真酷 > 一段物流签收通知}
    * - {@link TaobaoZkIdentifyCreate 淘宝真酷 > 淘宝真酷需求鉴别单创建消息}
+   * - {@link TaobaoZkRefundNotify 淘宝真酷 > 真酷鉴定用户退款通知}
+   * - {@link TaobaoZkSecondLogisticsGotNotify 淘宝真酷 > 淘宝真酷二段寄出后揽收通知机构}
    */
   type TaobaoZk = TaobaoZkFirstLogisticsNotify
-    | TaobaoZkIdentifyCreate;
+    | TaobaoZkFirstLogisticsReceivedNotify
+    | TaobaoZkIdentifyCreate
+    | TaobaoZkRefundNotify
+    | TaobaoZkSecondLogisticsGotNotify;
   /**
    * - {@link TaotaoFilmThirdPartyRefundPush 淘宝 > 退款消息同步}
    */
