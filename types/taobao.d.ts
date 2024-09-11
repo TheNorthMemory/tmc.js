@@ -7009,6 +7009,8 @@ declare namespace Taobao.Zk {
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2588&docType=9 一段物流签收通知} */
   interface FirstLogisticsReceivedNotify {
+    /** 订单id */
+    biz_order_id: string;
     /** 鉴定机构id */
     identify_institution_id: string;
     /** 一段物流单号 */
@@ -7027,6 +7029,8 @@ declare namespace Taobao.Zk {
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2589&docType=9 真酷鉴定用户退款通知} */
   interface RefundNotify {
+    /** 订单id */
+    biz_order_id: string;
     /** 鉴定机构id */
     identify_institution_id: string;
     /** 物流单号 */
@@ -7035,6 +7039,8 @@ declare namespace Taobao.Zk {
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2590&docType=9 淘宝真酷二段寄出后揽收通知机构} */
   interface SecondLogisticsGotNotify {
+    /** 订单id */
+    biz_order_id: string;
     /** 鉴定机构id */
     identify_institution_id: string;
     /** 物流单号 */
