@@ -7001,6 +7001,8 @@ declare namespace Taobao.Yichao {
 declare namespace Taobao.Zk {
   /** {@link https://open.taobao.com/tmc.htm?docId=2581&docType=9 淘宝真酷一段物流发货消息} */
   interface FirstLogisticsNotify {
+    /** 订单id */
+    biz_order_id: string;
     /** 鉴定机构id */
     identify_institution_id: string;
     /** 一段物流单号 */
