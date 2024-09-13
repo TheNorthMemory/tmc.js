@@ -2260,6 +2260,8 @@ declare interface TaoTopicsDescriptor {
   tmall_scm_SendTmcsDistributeSettleFee(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallScmSendTmcsDistributeSettleFee) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallServiceCycleBillInvoice 天猫服务 > 服务结算账期账单发票消息} */
   tmall_service_CycleBillInvoice(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallServiceCycleBillInvoice) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallServicecenterConsultationMessage 天猫服务 > 咨询工单消息} */
+  tmall_servicecenter_ConsultationMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallServicecenterConsultationMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallServicecenterTaskUpdate 天猫服务 > 天猫服务平台工单更新} */
   tmall_servicecenter_TaskUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallServicecenterTaskUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallServiceplatformServiceProductChanged 天猫服务 > 天猫服务产品变更消息} */
@@ -5361,6 +5363,8 @@ declare interface TaoEventsListener {
   on(topic: 'tmall_scm_SendTmcsDistributeSettleFee', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallScmSendTmcsDistributeSettleFee) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallServiceCycleBillInvoice 天猫服务 > 服务结算账期账单发票消息} */
   on(topic: 'tmall_service_CycleBillInvoice', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallServiceCycleBillInvoice) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallServicecenterConsultationMessage 天猫服务 > 咨询工单消息} */
+  on(topic: 'tmall_servicecenter_ConsultationMessage', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallServicecenterConsultationMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallServicecenterTaskUpdate 天猫服务 > 天猫服务平台工单更新} */
   on(topic: 'tmall_servicecenter_TaskUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallServicecenterTaskUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallServiceplatformServiceProductChanged 天猫服务 > 天猫服务产品变更消息} */

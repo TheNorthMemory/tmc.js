@@ -2243,6 +2243,8 @@ declare namespace IncomingMessage {
   type TmallScmSendTmcsDistributeSettleFee = Message & { content?: MessageContent & { topic?: 'tmall_scm_SendTmcsDistributeSettleFee', content?: string | Tmall.Scm.SendTmcsDistributeSettleFee } };
   /** {@link Tmall.Service.CycleBillInvoice 天猫服务 > 服务结算账期账单发票消息} */
   type TmallServiceCycleBillInvoice = Message & { content?: MessageContent & { topic?: 'tmall_service_CycleBillInvoice', content?: string | Tmall.Service.CycleBillInvoice } };
+  /** {@link Tmall.Servicecenter.ConsultationMessage 天猫服务 > 咨询工单消息} */
+  type TmallServicecenterConsultationMessage = Message & { content?: MessageContent & { topic?: 'tmall_servicecenter_ConsultationMessage', content?: string | Tmall.Servicecenter.ConsultationMessage } };
   /** {@link Tmall.Servicecenter.TaskUpdate 天猫服务 > 天猫服务平台工单更新} */
   type TmallServicecenterTaskUpdate = Message & { content?: MessageContent & { topic?: 'tmall_servicecenter_TaskUpdate', content?: string | Tmall.Servicecenter.TaskUpdate } };
   /** {@link Tmall.Serviceplatform.ServiceProductChanged 天猫服务 > 天猫服务产品变更消息} */
@@ -5184,9 +5186,11 @@ declare namespace IncomingMessage {
    */
   type TmallService = TmallServiceCycleBillInvoice;
   /**
+   * - {@link TmallServicecenterConsultationMessage 天猫服务 > 咨询工单消息}
    * - {@link TmallServicecenterTaskUpdate 天猫服务 > 天猫服务平台工单更新}
    */
-  type TmallServicecenter = TmallServicecenterTaskUpdate;
+  type TmallServicecenter = TmallServicecenterConsultationMessage
+    | TmallServicecenterTaskUpdate;
   /**
    * - {@link TmallServiceplatformServiceProductChanged 天猫服务 > 天猫服务产品变更消息}
    * - {@link TmallServiceplatformSignCreate 天猫服务 > 签到消息}

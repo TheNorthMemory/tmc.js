@@ -1090,6 +1090,28 @@ declare namespace Tmall.Service {
 
 /** 天猫服务 */
 declare namespace Tmall.Servicecenter {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2585&docType=9 咨询工单消息} */
+  interface ConsultationMessage {
+    /** create,response,append,close */
+    action: string;
+    /** 追加时间 */
+    append_time: string;
+    /** 咨询单 id */
+    consultation_id: string;
+    /** 内容 */
+    content: string;
+    /** 问题编码 */
+    issue_code: string;
+    /** 问题名称 */
+    issue_name: string;
+    /** 发起角色, home_xiaoer , supplier, seller, buyer */
+    launch_role: string;
+    /** 附件链接 */
+    notes: string;
+    /** 工单 */
+    work_card_id: number;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=905&docType=9 天猫服务平台工单更新} */
   interface TaskUpdate {
     /** 属性字符串。使用;隔开，key:value格式保存。 */
