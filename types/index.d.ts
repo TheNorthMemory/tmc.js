@@ -2142,6 +2142,8 @@ declare interface TaoTopicsDescriptor {
   tmall_fuwu_NewAnomalyRecourseStatusUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuNewAnomalyRecourseStatusUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuRateMessageTP 天猫服务 > 消费者评价成功top消息} */
   tmall_fuwu_RateMessageTP(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuRateMessageTP) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallFuwuSendCallRecord 天猫服务 > 发送通话记录} */
+  tmall_fuwu_SendCallRecord(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuSendCallRecord) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuServiceItemUpdate 天猫服务 > 服务商品信息变更消息} */
   tmall_fuwu_ServiceItemUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuServiceItemUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuServiceMonitorMessage 天猫服务 > 服务预警消息} */
@@ -5245,6 +5247,8 @@ declare interface TaoEventsListener {
   on(topic: 'tmall_fuwu_NewAnomalyRecourseStatusUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuNewAnomalyRecourseStatusUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuRateMessageTP 天猫服务 > 消费者评价成功top消息} */
   on(topic: 'tmall_fuwu_RateMessageTP', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuRateMessageTP) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallFuwuSendCallRecord 天猫服务 > 发送通话记录} */
+  on(topic: 'tmall_fuwu_SendCallRecord', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuSendCallRecord) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuServiceItemUpdate 天猫服务 > 服务商品信息变更消息} */
   on(topic: 'tmall_fuwu_ServiceItemUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuServiceItemUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallFuwuServiceMonitorMessage 天猫服务 > 服务预警消息} */

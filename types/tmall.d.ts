@@ -263,6 +263,16 @@ declare namespace Tmall.Fuwu {
     work_order_id: number;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2592&docType=9 发送通话记录} */
+  interface SendCallRecord {
+    /** 工单号 */
+    biz_identify: string;
+    /**  */
+    call_id?: string;
+    /**  */
+    record_link?: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=1290&docType=9 服务商品信息变更消息} */
   interface ServiceItemUpdate {
     /** 服务商品id */

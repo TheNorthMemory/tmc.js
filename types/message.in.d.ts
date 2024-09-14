@@ -2125,6 +2125,8 @@ declare namespace IncomingMessage {
   type TmallFuwuNewAnomalyRecourseStatusUpdate = Message & { content?: MessageContent & { topic?: 'tmall_fuwu_NewAnomalyRecourseStatusUpdate', content?: string | Tmall.Fuwu.NewAnomalyRecourseStatusUpdate } };
   /** {@link Tmall.Fuwu.RateMessageTP 天猫服务 > 消费者评价成功top消息} */
   type TmallFuwuRateMessageTP = Message & { content?: MessageContent & { topic?: 'tmall_fuwu_RateMessageTP', content?: string | Tmall.Fuwu.RateMessageTP } };
+  /** {@link Tmall.Fuwu.SendCallRecord 天猫服务 > 发送通话记录} */
+  type TmallFuwuSendCallRecord = Message & { content?: MessageContent & { topic?: 'tmall_fuwu_SendCallRecord', content?: string | Tmall.Fuwu.SendCallRecord } };
   /** {@link Tmall.Fuwu.ServiceItemUpdate 天猫服务 > 服务商品信息变更消息} */
   type TmallFuwuServiceItemUpdate = Message & { content?: MessageContent & { topic?: 'tmall_fuwu_ServiceItemUpdate', content?: string | Tmall.Fuwu.ServiceItemUpdate } };
   /** {@link Tmall.Fuwu.ServiceMonitorMessage 天猫服务 > 服务预警消息} */
@@ -5026,6 +5028,7 @@ declare namespace IncomingMessage {
    * - {@link TmallFuwuLogisticsInfoMessage 天猫服务 > 服务供应链物流业务消息}
    * - {@link TmallFuwuNewAnomalyRecourseStatusUpdate 天猫服务 > 服务管控消息更新}
    * - {@link TmallFuwuRateMessageTP 天猫服务 > 消费者评价成功top消息}
+   * - {@link TmallFuwuSendCallRecord 天猫服务 > 发送通话记录}
    * - {@link TmallFuwuServiceItemUpdate 天猫服务 > 服务商品信息变更消息}
    * - {@link TmallFuwuServiceMonitorMessage 天猫服务 > 服务预警消息}
    * - {@link TmallFuwuServiceStoreRegister 天猫服务 > 服务网点注册消息}
@@ -5044,6 +5047,7 @@ declare namespace IncomingMessage {
     | TmallFuwuLogisticsInfoMessage
     | TmallFuwuNewAnomalyRecourseStatusUpdate
     | TmallFuwuRateMessageTP
+    | TmallFuwuSendCallRecord
     | TmallFuwuServiceItemUpdate
     | TmallFuwuServiceMonitorMessage
     | TmallFuwuServiceStoreRegister

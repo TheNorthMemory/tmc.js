@@ -134,7 +134,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 
 ## 支持的TOPICS
 
-<details><summary>共计 85+ 类别，512+ 消息数</summary>
+<details><summary>共计 85+ 类别，513+ 消息数</summary>
 
 | 类别 | 消息数 |
 | --- | --- |
@@ -150,7 +150,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | 导购平台 | 21 |
 | 淘宝汽车票 | 4 |
 | 服务市场 | 9 |
-| 天猫服务 | 31 |
+| 天猫服务 | 32 |
 | 天猫美妆 | 2 |
 | 聚石塔 | 9 |
 | 淘宝物流 | 1 |
