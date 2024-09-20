@@ -7048,4 +7048,12 @@ declare namespace Taobao.Zk {
     /** 物流单号 */
     identify_logistics_id: string;
   }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2593&docType=9 真酷供应商提交报价结果通知} */
+  interface SubmitQuote {
+    /** 返回结果 */
+    data: string;
+    /** 用户id */
+    user_id: string;
+  }
 }

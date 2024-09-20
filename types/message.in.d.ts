@@ -2075,6 +2075,8 @@ declare namespace IncomingMessage {
   type TaobaoZkRefundNotify = Message & { content?: MessageContent & { topic?: 'taobao_zk_RefundNotify', content?: string | Taobao.Zk.RefundNotify } };
   /** {@link Taobao.Zk.SecondLogisticsGotNotify 淘宝真酷 > 淘宝真酷二段寄出后揽收通知机构} */
   type TaobaoZkSecondLogisticsGotNotify = Message & { content?: MessageContent & { topic?: 'taobao_zk_SecondLogisticsGotNotify', content?: string | Taobao.Zk.SecondLogisticsGotNotify } };
+  /** {@link Taobao.Zk.SubmitQuote 淘宝真酷 > 真酷供应商提交报价结果通知} */
+  type TaobaoZkSubmitQuote = Message & { content?: MessageContent & { topic?: 'taobao_zk_SubmitQuote', content?: string | Taobao.Zk.SubmitQuote } };
   /** {@link Taotao.Film.ThirdPartyRefundPush 淘宝 > 退款消息同步} */
   type TaotaoFilmThirdPartyRefundPush = Message & { content?: MessageContent & { topic?: 'taotao_film_ThirdPartyRefundPush', content?: string | Taotao.Film.ThirdPartyRefundPush } };
   /** {@link Tmall.Aliauto.StepOrderPartConfirm 天猫汽车 > 天猫汽车分阶段订单打款消息} */
@@ -4967,12 +4969,14 @@ declare namespace IncomingMessage {
    * - {@link TaobaoZkIdentifyCreate 淘宝真酷 > 淘宝真酷需求鉴别单创建消息}
    * - {@link TaobaoZkRefundNotify 淘宝真酷 > 真酷鉴定用户退款通知}
    * - {@link TaobaoZkSecondLogisticsGotNotify 淘宝真酷 > 淘宝真酷二段寄出后揽收通知机构}
+   * - {@link TaobaoZkSubmitQuote 淘宝真酷 > 真酷供应商提交报价结果通知}
    */
   type TaobaoZk = TaobaoZkFirstLogisticsNotify
     | TaobaoZkFirstLogisticsReceivedNotify
     | TaobaoZkIdentifyCreate
     | TaobaoZkRefundNotify
-    | TaobaoZkSecondLogisticsGotNotify;
+    | TaobaoZkSecondLogisticsGotNotify
+    | TaobaoZkSubmitQuote;
   /**
    * - {@link TaotaoFilmThirdPartyRefundPush 淘宝 > 退款消息同步}
    */
