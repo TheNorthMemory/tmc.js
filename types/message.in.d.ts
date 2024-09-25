@@ -181,6 +181,8 @@ declare namespace IncomingMessage {
   type AlibabaCrmOutboundInfoMessage = Message & { content?: MessageContent & { topic?: 'alibaba_crm_OutboundInfoMessage', content?: string | Alibaba.Crm.OutboundInfoMessage } };
   /** {@link Alibaba.Crowdsourcing.Material - > 素材生成通知} */
   type AlibabaCrowdsourcingMaterial = Message & { content?: MessageContent & { topic?: 'alibaba_crowdsourcing_Material', content?: string | Alibaba.Crowdsourcing.Material } };
+  /** {@link Alibaba.Csr.ZhiyuanhuiSyncEnergy 三小时公益 > 3小时积分捐同步活力值到志愿汇} */
+  type AlibabaCsrZhiyuanhuiSyncEnergy = Message & { content?: MessageContent & { topic?: 'alibaba_csr_ZhiyuanhuiSyncEnergy', content?: string | Alibaba.Csr.ZhiyuanhuiSyncEnergy } };
   /** {@link Alibaba.Decoration.AidesignFinish 阿里楼盘 > AI设计方案状态变更通知} */
   type AlibabaDecorationAidesignFinish = Message & { content?: MessageContent & { topic?: 'alibaba_decoration_AidesignFinish', content?: string | Alibaba.Decoration.AidesignFinish } };
   /** {@link Alibaba.Decoration.ApartmentExport 阿里楼盘 > 生成户型图消息} */
@@ -2533,6 +2535,10 @@ declare namespace IncomingMessage {
    * - {@link AlibabaCrowdsourcingMaterial - > 素材生成通知}
    */
   type AlibabaCrowdsourcing = AlibabaCrowdsourcingMaterial;
+  /**
+   * - {@link AlibabaCsrZhiyuanhuiSyncEnergy 三小时公益 > 3小时积分捐同步活力值到志愿汇}
+   */
+  type AlibabaCsr = AlibabaCsrZhiyuanhuiSyncEnergy;
   /**
    * - {@link AlibabaDecorationAidesignFinish 阿里楼盘 > AI设计方案状态变更通知}
    * - {@link AlibabaDecorationApartmentExport 阿里楼盘 > 生成户型图消息}
@@ -5400,6 +5406,7 @@ declare namespace IncomingMessage {
    * - {@link AlibabaCoupon}
    * - {@link AlibabaCrm}
    * - {@link AlibabaCrowdsourcing}
+   * - {@link AlibabaCsr}
    * - {@link AlibabaDecoration}
    * - {@link AlibabaEinvoice}
    * - {@link AlibabaEsl}
@@ -5466,6 +5473,7 @@ declare namespace IncomingMessage {
     | AlibabaCoupon
     | AlibabaCrm
     | AlibabaCrowdsourcing
+    | AlibabaCsr
     | AlibabaDecoration
     | AlibabaEinvoice
     | AlibabaEsl

@@ -964,6 +964,19 @@ declare namespace Alibaba.Crowdsourcing {
   }
 }
 
+/** 三小时公益 */
+declare namespace Alibaba.Csr {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2594&docType=9 3小时积分捐同步活力值到志愿汇} */
+  interface ZhiyuanhuiSyncEnergy {
+    /** 捐赠爱能数量 */
+    donate_love_bean_num: string;
+    /** 用户3小时id#用户捐赠记录id */
+    msg_id: string;
+    /** 用户志愿汇侧用户标识 */
+    zyh_user_account_code: string;
+  }
+}
+
 /** 阿里楼盘 */
 declare namespace Alibaba.Decoration {
   /** {@link https://open.taobao.com/tmc.htm?docId=2014&docType=9 AI设计方案状态变更通知} */

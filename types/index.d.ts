@@ -198,6 +198,8 @@ declare interface TaoTopicsDescriptor {
   alibaba_crm_OutboundInfoMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCrmOutboundInfoMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaCrowdsourcingMaterial - > 素材生成通知} */
   alibaba_crowdsourcing_Material(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCrowdsourcingMaterial) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaCsrZhiyuanhuiSyncEnergy 三小时公益 > 3小时积分捐同步活力值到志愿汇} */
+  alibaba_csr_ZhiyuanhuiSyncEnergy(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCsrZhiyuanhuiSyncEnergy) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaDecorationAidesignFinish 阿里楼盘 > AI设计方案状态变更通知} */
   alibaba_decoration_AidesignFinish(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaDecorationAidesignFinish) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaDecorationApartmentExport 阿里楼盘 > 生成户型图消息} */
@@ -2416,6 +2418,8 @@ declare interface TaoTopicsDescriptor {
   alibaba_crm(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCrm) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaCrowdsourcing} */
   alibaba_crowdsourcing(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCrowdsourcing) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaCsr} */
+  alibaba_csr(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCsr) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaDecoration} */
   alibaba_decoration(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaDecoration) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaEinvoice} */
@@ -3305,6 +3309,8 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_crm_OutboundInfoMessage', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCrmOutboundInfoMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaCrowdsourcingMaterial - > 素材生成通知} */
   on(topic: 'alibaba_crowdsourcing_Material', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCrowdsourcingMaterial) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaCsrZhiyuanhuiSyncEnergy 三小时公益 > 3小时积分捐同步活力值到志愿汇} */
+  on(topic: 'alibaba_csr_ZhiyuanhuiSyncEnergy', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCsrZhiyuanhuiSyncEnergy) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaDecorationAidesignFinish 阿里楼盘 > AI设计方案状态变更通知} */
   on(topic: 'alibaba_decoration_AidesignFinish', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaDecorationAidesignFinish) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaDecorationApartmentExport 阿里楼盘 > 生成户型图消息} */
@@ -5523,6 +5529,8 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_crm', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCrm) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaCrowdsourcing} */
   on(topic: 'alibaba_crowdsourcing', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCrowdsourcing) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaCsr} */
+  on(topic: 'alibaba_csr', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCsr) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaDecoration} */
   on(topic: 'alibaba_decoration', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaDecoration) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaEinvoice} */
