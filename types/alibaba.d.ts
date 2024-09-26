@@ -966,6 +966,18 @@ declare namespace Alibaba.Crowdsourcing {
 
 /** 三小时公益 */
 declare namespace Alibaba.Csr {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2596&docType=9 公益三小时积分捐行为同步} */
+  interface DonatePointSync {
+    /** 捐赠积分数量 */
+    donate_point_num: string;
+    /** 捐赠时间毫秒级时间戳 */
+    donate_time: string;
+    /** 消息幂等id */
+    msg_id: string;
+    /** 合作方绑定三小时账户时传递的用户标识 */
+    user_account_code: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2594&docType=9 3小时积分捐同步活力值到志愿汇} */
   interface ZhiyuanhuiSyncEnergy {
     /** 捐赠爱能数量 */

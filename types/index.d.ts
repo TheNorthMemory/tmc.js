@@ -198,6 +198,8 @@ declare interface TaoTopicsDescriptor {
   alibaba_crm_OutboundInfoMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCrmOutboundInfoMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaCrowdsourcingMaterial - > 素材生成通知} */
   alibaba_crowdsourcing_Material(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCrowdsourcingMaterial) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaCsrDonatePointSync 三小时公益 > 公益三小时积分捐行为同步} */
+  alibaba_csr_DonatePointSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCsrDonatePointSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaCsrZhiyuanhuiSyncEnergy 三小时公益 > 3小时积分捐同步活力值到志愿汇} */
   alibaba_csr_ZhiyuanhuiSyncEnergy(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCsrZhiyuanhuiSyncEnergy) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaDecorationAidesignFinish 阿里楼盘 > AI设计方案状态变更通知} */
@@ -3309,6 +3311,8 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_crm_OutboundInfoMessage', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCrmOutboundInfoMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaCrowdsourcingMaterial - > 素材生成通知} */
   on(topic: 'alibaba_crowdsourcing_Material', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCrowdsourcingMaterial) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaCsrDonatePointSync 三小时公益 > 公益三小时积分捐行为同步} */
+  on(topic: 'alibaba_csr_DonatePointSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCsrDonatePointSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaCsrZhiyuanhuiSyncEnergy 三小时公益 > 3小时积分捐同步活力值到志愿汇} */
   on(topic: 'alibaba_csr_ZhiyuanhuiSyncEnergy', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCsrZhiyuanhuiSyncEnergy) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaDecorationAidesignFinish 阿里楼盘 > AI设计方案状态变更通知} */
