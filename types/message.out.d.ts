@@ -1659,7 +1659,7 @@ declare namespace Xiaoman.Perform {
     /** 服务开始时间 */
     okki_valid_from: Date | number | string;
     /** 服务结束时间 */
-    okki_valid_to: Date | number | string;
+    okki_valid_to?: Date | number | string;
   }
 }
 
