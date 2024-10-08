@@ -1104,6 +1104,8 @@ declare namespace Tmall.Servicecenter {
   interface ConsultationMessage {
     /** create,response,append,close */
     action: string;
+    /** 本次操作角色 */
+    action_role: string;
     /** 追加时间 */
     append_time: string;
     /** 咨询单 id */
