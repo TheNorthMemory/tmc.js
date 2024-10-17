@@ -1016,6 +1016,8 @@ declare interface TaoTopicsDescriptor {
   damai_distribution_PreSaleToNow(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionPreSaleToNow) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionProjectStatus 大麦第三方票务供应商接入 > 项目状态推送} */
   damai_distribution_ProjectStatus(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionProjectStatus) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.DamaiDistributionRefundAuditResult 大麦第三方票务供应商接入 > 分销退票审核结果消息通知} */
+  damai_distribution_RefundAuditResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionRefundAuditResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionRefundOrder 大麦第三方票务供应商接入 > 退票通知} */
   damai_distribution_RefundOrder(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionRefundOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionRefundRule 大麦第三方票务供应商接入 > 项目退款规则} */
@@ -4129,6 +4131,8 @@ declare interface TaoEventsListener {
   on(topic: 'damai_distribution_PreSaleToNow', listener: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionPreSaleToNow) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionProjectStatus 大麦第三方票务供应商接入 > 项目状态推送} */
   on(topic: 'damai_distribution_ProjectStatus', listener: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionProjectStatus) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.DamaiDistributionRefundAuditResult 大麦第三方票务供应商接入 > 分销退票审核结果消息通知} */
+  on(topic: 'damai_distribution_RefundAuditResult', listener: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionRefundAuditResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionRefundOrder 大麦第三方票务供应商接入 > 退票通知} */
   on(topic: 'damai_distribution_RefundOrder', listener: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionRefundOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionRefundRule 大麦第三方票务供应商接入 > 项目退款规则} */

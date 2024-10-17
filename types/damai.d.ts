@@ -40,6 +40,26 @@ declare namespace Damai.Distribution {
     project_id: number;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2597&docType=9 分销退票审核结果消息通知} */
+  interface RefundAuditResult {
+    /** 退票申请主键ID */
+    audit_id: number;
+    /** 审核人 */
+    audit_staffer_name: string;
+    /** 审核状态：10=提交审核状态；30=审核通过状态；40=驳回状态 */
+    audit_status: number;
+    /** 审核时间时间戳 */
+    audit_time: number;
+    /** 外部订单号 */
+    outoid: string;
+    /** 大麦主订单ID */
+    poid: number;
+    /** 项目名称 */
+    project_name: string;
+    /** 退票理由或描述 */
+    refund_describe: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2334&docType=9 退票通知} */
   interface RefundOrder {
     /** 渠道id */

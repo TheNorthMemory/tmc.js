@@ -999,6 +999,8 @@ declare namespace IncomingMessage {
   type DamaiDistributionPreSaleToNow = Message & { content?: MessageContent & { topic?: 'damai_distribution_PreSaleToNow', content?: string | Damai.Distribution.PreSaleToNow } };
   /** {@link Damai.Distribution.ProjectStatus 大麦第三方票务供应商接入 > 项目状态推送} */
   type DamaiDistributionProjectStatus = Message & { content?: MessageContent & { topic?: 'damai_distribution_ProjectStatus', content?: string | Damai.Distribution.ProjectStatus } };
+  /** {@link Damai.Distribution.RefundAuditResult 大麦第三方票务供应商接入 > 分销退票审核结果消息通知} */
+  type DamaiDistributionRefundAuditResult = Message & { content?: MessageContent & { topic?: 'damai_distribution_RefundAuditResult', content?: string | Damai.Distribution.RefundAuditResult } };
   /** {@link Damai.Distribution.RefundOrder 大麦第三方票务供应商接入 > 退票通知} */
   type DamaiDistributionRefundOrder = Message & { content?: MessageContent & { topic?: 'damai_distribution_RefundOrder', content?: string | Damai.Distribution.RefundOrder } };
   /** {@link Damai.Distribution.RefundRule 大麦第三方票务供应商接入 > 项目退款规则} */
@@ -3583,6 +3585,7 @@ declare namespace IncomingMessage {
    * - {@link DamaiDistributionPerformStatus 大麦第三方票务供应商接入 > 场次状态变更推送}
    * - {@link DamaiDistributionPreSaleToNow 大麦第三方票务供应商接入 > 预售改开票}
    * - {@link DamaiDistributionProjectStatus 大麦第三方票务供应商接入 > 项目状态推送}
+   * - {@link DamaiDistributionRefundAuditResult 大麦第三方票务供应商接入 > 分销退票审核结果消息通知}
    * - {@link DamaiDistributionRefundOrder 大麦第三方票务供应商接入 > 退票通知}
    * - {@link DamaiDistributionRefundRule 大麦第三方票务供应商接入 > 项目退款规则}
    * - {@link DamaiDistributionSendExpress 大麦第三方票务供应商接入 > 履约发快递成功通知三方}
@@ -3593,6 +3596,7 @@ declare namespace IncomingMessage {
     | DamaiDistributionPerformStatus
     | DamaiDistributionPreSaleToNow
     | DamaiDistributionProjectStatus
+    | DamaiDistributionRefundAuditResult
     | DamaiDistributionRefundOrder
     | DamaiDistributionRefundRule
     | DamaiDistributionSendExpress
