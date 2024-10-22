@@ -2088,6 +2088,8 @@ declare interface TaoTopicsDescriptor {
   taobao_xiaowei_Test(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoXiaoweiTest) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoYichaoWarrantyCodeStatusUpdate 淘宝 > 蚁巢保修码状态变更消息} */
   taobao_yichao_WarrantyCodeStatusUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoYichaoWarrantyCodeStatusUpdate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoZkCloudIdentifyCreateNotify 淘宝真酷 > 淘宝真酷-云鉴定创建通知} */
+  taobao_zk_CloudIdentifyCreateNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkCloudIdentifyCreateNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoZkFirstLogisticsNotify 淘宝真酷 > 淘宝真酷一段物流发货消息} */
   taobao_zk_FirstLogisticsNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkFirstLogisticsNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoZkFirstLogisticsReceivedNotify 淘宝真酷 > 一段物流签收通知} */
@@ -5203,6 +5205,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_xiaowei_Test', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoXiaoweiTest) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoYichaoWarrantyCodeStatusUpdate 淘宝 > 蚁巢保修码状态变更消息} */
   on(topic: 'taobao_yichao_WarrantyCodeStatusUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoYichaoWarrantyCodeStatusUpdate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoZkCloudIdentifyCreateNotify 淘宝真酷 > 淘宝真酷-云鉴定创建通知} */
+  on(topic: 'taobao_zk_CloudIdentifyCreateNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkCloudIdentifyCreateNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoZkFirstLogisticsNotify 淘宝真酷 > 淘宝真酷一段物流发货消息} */
   on(topic: 'taobao_zk_FirstLogisticsNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkFirstLogisticsNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoZkFirstLogisticsReceivedNotify 淘宝真酷 > 一段物流签收通知} */

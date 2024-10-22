@@ -2071,6 +2071,8 @@ declare namespace IncomingMessage {
   type TaobaoXiaoweiTest = Message & { content?: MessageContent & { topic?: 'taobao_xiaowei_Test', content?: string | Taobao.Xiaowei.Test } };
   /** {@link Taobao.Yichao.WarrantyCodeStatusUpdate 淘宝 > 蚁巢保修码状态变更消息} */
   type TaobaoYichaoWarrantyCodeStatusUpdate = Message & { content?: MessageContent & { topic?: 'taobao_yichao_WarrantyCodeStatusUpdate', content?: string | Taobao.Yichao.WarrantyCodeStatusUpdate } };
+  /** {@link Taobao.Zk.CloudIdentifyCreateNotify 淘宝真酷 > 淘宝真酷-云鉴定创建通知} */
+  type TaobaoZkCloudIdentifyCreateNotify = Message & { content?: MessageContent & { topic?: 'taobao_zk_CloudIdentifyCreateNotify', content?: string | Taobao.Zk.CloudIdentifyCreateNotify } };
   /** {@link Taobao.Zk.FirstLogisticsNotify 淘宝真酷 > 淘宝真酷一段物流发货消息} */
   type TaobaoZkFirstLogisticsNotify = Message & { content?: MessageContent & { topic?: 'taobao_zk_FirstLogisticsNotify', content?: string | Taobao.Zk.FirstLogisticsNotify } };
   /** {@link Taobao.Zk.FirstLogisticsReceivedNotify 淘宝真酷 > 一段物流签收通知} */
@@ -4978,6 +4980,7 @@ declare namespace IncomingMessage {
    */
   type TaobaoYichao = TaobaoYichaoWarrantyCodeStatusUpdate;
   /**
+   * - {@link TaobaoZkCloudIdentifyCreateNotify 淘宝真酷 > 淘宝真酷-云鉴定创建通知}
    * - {@link TaobaoZkFirstLogisticsNotify 淘宝真酷 > 淘宝真酷一段物流发货消息}
    * - {@link TaobaoZkFirstLogisticsReceivedNotify 淘宝真酷 > 一段物流签收通知}
    * - {@link TaobaoZkIdentifyCreate 淘宝真酷 > 淘宝真酷需求鉴别单创建消息}
@@ -4985,7 +4988,8 @@ declare namespace IncomingMessage {
    * - {@link TaobaoZkSecondLogisticsGotNotify 淘宝真酷 > 淘宝真酷二段寄出后揽收通知机构}
    * - {@link TaobaoZkSubmitQuote 淘宝真酷 > 真酷供应商提交报价结果通知}
    */
-  type TaobaoZk = TaobaoZkFirstLogisticsNotify
+  type TaobaoZk = TaobaoZkCloudIdentifyCreateNotify
+    | TaobaoZkFirstLogisticsNotify
     | TaobaoZkFirstLogisticsReceivedNotify
     | TaobaoZkIdentifyCreate
     | TaobaoZkRefundNotify

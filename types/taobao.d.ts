@@ -7009,6 +7009,40 @@ declare namespace Taobao.Yichao {
 
 /** 淘宝真酷 */
 declare namespace Taobao.Zk {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2599&docType=9 淘宝真酷-云鉴定创建通知} */
+  interface CloudIdentifyCreateNotify {
+    /** 货品鉴别单号 */
+    biz_identify_order_id: string;
+    /** 品牌id */
+    brand_id: string;
+    /** 品牌名称 */
+    brand_name: string;
+    /** 检测点 */
+    check_point: string;
+    /** 货号 */
+    goods_number: string;
+    /** 机构id */
+    identify_institution_id: string;
+    /** 货品鉴别id */
+    identify_order_id: string;
+    /** 需求鉴别id */
+    identify_request_id: string;
+    /** 行业id */
+    industry_id: string;
+    /** 行业名称 */
+    industry_name: string;
+    /** 商品id */
+    item_id: string;
+    /** skuId */
+    sku_id: string;
+    /** sku名称 */
+    sku_name: string;
+    /** 商品名称 */
+    title: string;
+    /** 订单号 */
+    tp_order_id: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2581&docType=9 淘宝真酷一段物流发货消息} */
   interface FirstLogisticsNotify {
     /** 订单id */
@@ -7021,12 +7055,12 @@ declare namespace Taobao.Zk {
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2588&docType=9 一段物流签收通知} */
   interface FirstLogisticsReceivedNotify {
-    /** 订单id */
-    biz_order_id: string;
     /** 鉴定机构id */
     identify_institution_id: string;
     /** 一段物流单号 */
     identify_logistics_id: string;
+    /** 订单id */
+    tp_order_id: string;
   }
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2571&docType=9 淘宝真酷需求鉴别单创建消息} */
@@ -7041,22 +7075,22 @@ declare namespace Taobao.Zk {
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2589&docType=9 真酷鉴定用户退款通知} */
   interface RefundNotify {
-    /** 订单id */
-    biz_order_id: string;
     /** 鉴定机构id */
     identify_institution_id: string;
     /** 物流单号 */
     identify_logistics_id: string;
+    /** 订单id */
+    tp_order_id: string;
   }
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2590&docType=9 淘宝真酷二段寄出后揽收通知机构} */
   interface SecondLogisticsGotNotify {
-    /** 订单id */
-    biz_order_id: string;
     /** 鉴定机构id */
     identify_institution_id: string;
     /** 物流单号 */
     identify_logistics_id: string;
+    /** 订单id */
+    tp_order_id: string;
   }
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2593&docType=9 真酷供应商提交报价结果通知} */
