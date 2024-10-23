@@ -164,6 +164,17 @@ declare namespace Idle.Cycleshop {
 }
 
 /** 闲鱼 */
+declare namespace Idle.Distribution {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2598&docType=9 分销闲管家消息通道} */
+  interface ItemChange {
+    /** 消息类型 */
+    event_type: string;
+    /** 发生变更的消息列表 */
+    item_change_info: string;
+  }
+}
+
+/** 闲鱼 */
 declare namespace Idle.Newoutlets {
   /** {@link https://open.taobao.com/tmc.htm?docId=2584&docType=9 闲鱼用户身份变更消息} */
   interface UserTagNotice {
