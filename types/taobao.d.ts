@@ -7045,12 +7045,12 @@ declare namespace Taobao.Zk {
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2581&docType=9 淘宝真酷一段物流发货消息} */
   interface FirstLogisticsNotify {
-    /** 订单id */
-    biz_order_id: string;
     /** 鉴定机构id */
     identify_institution_id: string;
     /** 一段物流单号 */
     identify_logistics_id: string;
+    /** 订单id */
+    tp_order_id: string;
   }
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2588&docType=9 一段物流签收通知} */
