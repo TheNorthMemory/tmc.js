@@ -117,6 +117,23 @@ declare namespace Xianyu.Fishmarket {
 }
 
 /** 闲鱼 */
+declare namespace Xianyu.Hjbt {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2600&docType=9 换机补贴打款消息} */
+  interface PaymentStatus {
+    /** 成交金额 */
+    deal_amount: number;
+    /** 订单ID */
+    order_id: string;
+    /** 补贴金额 */
+    subsidy_amount: number;
+    /** 补贴时间 */
+    subsidy_time: string;
+    /** 打款用户ID */
+    user_id: number;
+  }
+}
+
+/** 闲鱼 */
 declare namespace Xianyu.Isv {
   /** {@link https://open.taobao.com/tmc.htm?docId=2219&docType=9 闲鱼服务商订单提醒} */
   interface OrderRemind {
