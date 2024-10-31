@@ -128,8 +128,6 @@ declare namespace Xianyu.Hjbt {
     subsidy_amount: number;
     /** 补贴时间 */
     subsidy_time: string;
-    /** 打款用户ID */
-    user_id: number;
   }
 }
 
