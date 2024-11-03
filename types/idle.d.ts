@@ -163,7 +163,7 @@ declare namespace Idle.Cycleshop {
   }
 }
 
-/** 闲鱼 */
+/** 闲鱼回收商消息 */
 declare namespace Idle.Distribution {
   /** {@link https://open.taobao.com/tmc.htm?docId=2598&docType=9 分销闲管家消息通道} */
   interface ItemChange {

@@ -1129,7 +1129,7 @@ declare namespace IncomingMessage {
   type IdleCycleshopGoodsNotice = Message & { content?: MessageContent & { topic?: 'idle_cycleshop_GoodsNotice', content?: string | Idle.Cycleshop.GoodsNotice } };
   /** {@link Idle.Cycleshop.SaleOrderNotice 闲鱼 > 闲鱼循环商店-销售单变更通知} */
   type IdleCycleshopSaleOrderNotice = Message & { content?: MessageContent & { topic?: 'idle_cycleshop_SaleOrderNotice', content?: string | Idle.Cycleshop.SaleOrderNotice } };
-  /** {@link Idle.Distribution.ItemChange 闲鱼 > 分销闲管家消息通道} */
+  /** {@link Idle.Distribution.ItemChange 闲鱼回收商消息 > 分销闲管家消息通道} */
   type IdleDistributionItemChange = Message & { content?: MessageContent & { topic?: 'idle_distribution_ItemChange', content?: string | Idle.Distribution.ItemChange } };
   /** {@link Idle.Newoutlets.UserTagNotice 闲鱼 > 闲鱼用户身份变更消息} */
   type IdleNewoutletsUserTagNotice = Message & { content?: MessageContent & { topic?: 'idle_newoutlets_UserTagNotice', content?: string | Idle.Newoutlets.UserTagNotice } };
@@ -3798,7 +3798,7 @@ declare namespace IncomingMessage {
   type IdleCycleshop = IdleCycleshopGoodsNotice
     | IdleCycleshopSaleOrderNotice;
   /**
-   * - {@link IdleDistributionItemChange 闲鱼 > 分销闲管家消息通道}
+   * - {@link IdleDistributionItemChange 闲鱼回收商消息 > 分销闲管家消息通道}
    */
   type IdleDistribution = IdleDistributionItemChange;
   /**
