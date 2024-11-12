@@ -49,6 +49,8 @@ declare namespace Xianyu.Car {
 declare namespace Xianyu.Ctox {
   /** {@link https://open.taobao.com/tmc.htm?docId=2564&docType=9 闲鱼C2X抽佣退佣消息同步} */
   interface CommissionStateSyn {
+    /** 支付宝交易号 */
+    alipay_trade_no?: string;
     /** 订单id */
     biz_order_id: string;
     /** 11-抽佣帮卖卖家服务费;12-抽佣:帮卖买家服务费;21-退佣:帮卖售后 */
@@ -57,6 +59,8 @@ declare namespace Xianyu.Ctox {
     fee_commission: string;
     /** 1-正向抽佣；2-逆向退佣 */
     fee_type: string;
+    /** 扣佣时间 */
+    wirte_off_time?: string;
   }
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2535&docType=9 c2x代扣协议变更通知} */
