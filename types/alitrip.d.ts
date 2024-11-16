@@ -238,12 +238,14 @@ declare namespace Alitrip.Flight {
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2208&docType=9 机票交易通知} */
   interface TradeNotify {
-    /** 支付宝交易流水号，支付成功通知里会有这个值 */
+    /** 支付宝交易流水号（后续将废弃，请使用trade_no字段），支付成功通知里会有这个值 */
     alipay_trade_no?: string;
     /** 消息id */
     id: string;
     /** 订单号 */
     order_no: string;
+    /** 交易流水号 */
+    trade_no?: string;
     /** 消息类型 1:支付成功 2:关单 3：出票成功 */
     type: string;
   }
