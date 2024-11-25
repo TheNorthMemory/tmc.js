@@ -1053,9 +1053,9 @@ declare namespace IncomingMessage {
   type FliggyTicketOrderStatusChange = Message & { content?: MessageContent & { topic?: 'fliggy_ticket_OrderStatusChange', content?: string | Fliggy.Ticket.OrderStatusChange } };
   /** {@link Fliggy.Ticket.VerifyNotify 航旅度假交易 > 域外分销订单码核销消息} */
   type FliggyTicketVerifyNotify = Message & { content?: MessageContent & { topic?: 'fliggy_ticket_VerifyNotify', content?: string | Fliggy.Ticket.VerifyNotify } };
-  /** {@link Fliggy.Visa.ApplicantStatusChanged 飞猪 > 签证申请人状态变更消息} */
+  /** {@link Fliggy.Visa.ApplicantStatusChanged 航旅度假交易 > 签证申请人状态变更消息} */
   type FliggyVisaApplicantStatusChanged = Message & { content?: MessageContent & { topic?: 'fliggy_visa_ApplicantStatusChanged', content?: string | Fliggy.Visa.ApplicantStatusChanged } };
-  /** {@link Fliggy.Visa.StatusChange 飞猪 > 签证状态变化消息} */
+  /** {@link Fliggy.Visa.StatusChange 航旅度假交易 > 签证状态变化消息} */
   type FliggyVisaStatusChange = Message & { content?: MessageContent & { topic?: 'fliggy_visa_StatusChange', content?: string | Fliggy.Visa.StatusChange } };
   /** {@link Fliggy.Xhotel.ComboCreateResult 飞猪 > 套餐创建消息回传} */
   type FliggyXhotelComboCreateResult = Message & { content?: MessageContent & { topic?: 'fliggy_xhotel_ComboCreateResult', content?: string | Fliggy.Xhotel.ComboCreateResult } };
@@ -3678,8 +3678,8 @@ declare namespace IncomingMessage {
     | FliggyTicketOrderStatusChange
     | FliggyTicketVerifyNotify;
   /**
-   * - {@link FliggyVisaApplicantStatusChanged 飞猪 > 签证申请人状态变更消息}
-   * - {@link FliggyVisaStatusChange 飞猪 > 签证状态变化消息}
+   * - {@link FliggyVisaApplicantStatusChanged 航旅度假交易 > 签证申请人状态变更消息}
+   * - {@link FliggyVisaStatusChange 航旅度假交易 > 签证状态变化消息}
    */
   type FliggyVisa = FliggyVisaApplicantStatusChanged
     | FliggyVisaStatusChange;

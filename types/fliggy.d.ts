@@ -159,7 +159,7 @@ declare namespace Fliggy.Ticket {
   }
 }
 
-/** 飞猪 */
+/** 航旅度假交易 */
 declare namespace Fliggy.Visa {
   /** {@link https://open.taobao.com/tmc.htm?docId=2582&docType=9 签证申请人状态变更消息} */
   interface ApplicantStatusChanged {
