@@ -2380,6 +2380,8 @@ declare interface TaoTopicsDescriptor {
   xianyu_template_StatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuTemplateStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuTenderOrderSyn 闲鱼 > 省心卖-暗拍项目订单消息} */
   xianyu_tender_OrderSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuTenderOrderSyn) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.XianyuYushiTsOffShelf 闲鱼 > 闲鱼商品下架消息} */
+  xianyu_yushi_TsOffShelf(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuYushiTsOffShelf) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.YoukuAigcTrainResultNotify 优酷 > 妙鸭SaaS对外开放-训练结果通知} */
   youku_aigc_TrainResultNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.YoukuAigcTrainResultNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.YoukuTvosappstoreAppStatusChange TVOS应用审核平台 > TVOS审核平台应用状态变更通知消息} */
@@ -3086,6 +3088,8 @@ declare interface TaoTopicsDescriptor {
   xianyu_template(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuTemplate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuTender} */
   xianyu_tender(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuTender) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.XianyuYushi} */
+  xianyu_yushi(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuYushi) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.YoukuAigc} */
   youku_aigc(fn: (this: TaoMessageConsumer, message: IncomingMessage.YoukuAigc) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.YoukuTvosappstore} */
@@ -5505,6 +5509,8 @@ declare interface TaoEventsListener {
   on(topic: 'xianyu_template_StatusChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuTemplateStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuTenderOrderSyn 闲鱼 > 省心卖-暗拍项目订单消息} */
   on(topic: 'xianyu_tender_OrderSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuTenderOrderSyn) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.XianyuYushiTsOffShelf 闲鱼 > 闲鱼商品下架消息} */
+  on(topic: 'xianyu_yushi_TsOffShelf', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuYushiTsOffShelf) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.YoukuAigcTrainResultNotify 优酷 > 妙鸭SaaS对外开放-训练结果通知} */
   on(topic: 'youku_aigc_TrainResultNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.YoukuAigcTrainResultNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.YoukuTvosappstoreAppStatusChange TVOS应用审核平台 > TVOS审核平台应用状态变更通知消息} */
@@ -6211,6 +6217,8 @@ declare interface TaoEventsListener {
   on(topic: 'xianyu_template', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuTemplate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuTender} */
   on(topic: 'xianyu_tender', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuTender) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.XianyuYushi} */
+  on(topic: 'xianyu_yushi', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuYushi) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.YoukuAigc} */
   on(topic: 'youku_aigc', listener: (this: TaoMessageConsumer, message: IncomingMessage.YoukuAigc) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.YoukuTvosappstore} */

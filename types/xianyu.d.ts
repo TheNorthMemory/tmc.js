@@ -336,3 +336,18 @@ declare namespace Xianyu.Tender {
     order_sub_status: string;
   }
 }
+
+/** 闲鱼 */
+declare namespace Xianyu.Yushi {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2601&docType=9 闲鱼商品下架消息} */
+  interface TsOffShelf {
+    /** 卖家订单 */
+    biz_order_id: string;
+    /** 是否永久删除 */
+    is_forever_del: string;
+    /** 商品ID */
+    item_id: string;
+    /** 场次 */
+    schedule: string;
+  }
+}

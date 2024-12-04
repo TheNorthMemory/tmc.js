@@ -2363,6 +2363,8 @@ declare namespace IncomingMessage {
   type XianyuTemplateStatusChange = Message & { content?: MessageContent & { topic?: 'xianyu_template_StatusChange', content?: string | Xianyu.Template.StatusChange } };
   /** {@link Xianyu.Tender.OrderSyn 闲鱼 > 省心卖-暗拍项目订单消息} */
   type XianyuTenderOrderSyn = Message & { content?: MessageContent & { topic?: 'xianyu_tender_OrderSyn', content?: string | Xianyu.Tender.OrderSyn } };
+  /** {@link Xianyu.Yushi.TsOffShelf 闲鱼 > 闲鱼商品下架消息} */
+  type XianyuYushiTsOffShelf = Message & { content?: MessageContent & { topic?: 'xianyu_yushi_TsOffShelf', content?: string | Xianyu.Yushi.TsOffShelf } };
   /** {@link Youku.Aigc.TrainResultNotify 优酷 > 妙鸭SaaS对外开放-训练结果通知} */
   type YoukuAigcTrainResultNotify = Message & { content?: MessageContent & { topic?: 'youku_aigc_TrainResultNotify', content?: string | Youku.Aigc.TrainResultNotify } };
   /** {@link Youku.Tvosappstore.AppStatusChange TVOS应用审核平台 > TVOS审核平台应用状态变更通知消息} */
@@ -5386,6 +5388,10 @@ declare namespace IncomingMessage {
    */
   type XianyuTender = XianyuTenderOrderSyn;
   /**
+   * - {@link XianyuYushiTsOffShelf 闲鱼 > 闲鱼商品下架消息}
+   */
+  type XianyuYushi = XianyuYushiTsOffShelf;
+  /**
    * - {@link YoukuAigcTrainResultNotify 优酷 > 妙鸭SaaS对外开放-训练结果通知}
    */
   type YoukuAigc = YoukuAigcTrainResultNotify;
@@ -6173,6 +6179,7 @@ declare namespace IncomingMessage {
    * - {@link XianyuRegister}
    * - {@link XianyuTemplate}
    * - {@link XianyuTender}
+   * - {@link XianyuYushi}
    */
   type Xianyu = XianyuAftersale
     | XianyuAppraise
@@ -6186,7 +6193,8 @@ declare namespace IncomingMessage {
     | XianyuRecycle
     | XianyuRegister
     | XianyuTemplate
-    | XianyuTender;
+    | XianyuTender
+    | XianyuYushi;
   /**
    * - {@link YoukuAigc}
    * - {@link YoukuTvosappstore}
