@@ -995,6 +995,8 @@ declare namespace IncomingMessage {
   type DamaiDistributionPerformCancel = Message & { content?: MessageContent & { topic?: 'damai_distribution_PerformCancel', content?: string | Damai.Distribution.PerformCancel } };
   /** {@link Damai.Distribution.PerformStatus 大麦第三方票务供应商接入 > 场次状态变更推送} */
   type DamaiDistributionPerformStatus = Message & { content?: MessageContent & { topic?: 'damai_distribution_PerformStatus', content?: string | Damai.Distribution.PerformStatus } };
+  /** {@link Damai.Distribution.PerformTimeChange 大麦第三方票务供应商接入 > 场次时间变更消息} */
+  type DamaiDistributionPerformTimeChange = Message & { content?: MessageContent & { topic?: 'damai_distribution_PerformTimeChange', content?: string | Damai.Distribution.PerformTimeChange } };
   /** {@link Damai.Distribution.PreSaleToNow 大麦第三方票务供应商接入 > 预售改开票} */
   type DamaiDistributionPreSaleToNow = Message & { content?: MessageContent & { topic?: 'damai_distribution_PreSaleToNow', content?: string | Damai.Distribution.PreSaleToNow } };
   /** {@link Damai.Distribution.ProjectStatus 大麦第三方票务供应商接入 > 项目状态推送} */
@@ -2351,6 +2353,8 @@ declare namespace IncomingMessage {
   type XianyuMarketrecycleOrderStateSyn = Message & { content?: MessageContent & { topic?: 'xianyu_marketrecycle_OrderStateSyn', content?: string | Xianyu.Marketrecycle.OrderStateSyn } };
   /** {@link Xianyu.Marketrecycle.PlanStateSyn 闲鱼 > 闲鱼保卖计划变更消息} */
   type XianyuMarketrecyclePlanStateSyn = Message & { content?: MessageContent & { topic?: 'xianyu_marketrecycle_PlanStateSyn', content?: string | Xianyu.Marketrecycle.PlanStateSyn } };
+  /** {@link Xianyu.Outlet.CycleBuyVendueCreate 闲鱼 > 闲鱼奥莱周期拍拍品创建} */
+  type XianyuOutletCycleBuyVendueCreate = Message & { content?: MessageContent & { topic?: 'xianyu_outlet_CycleBuyVendueCreate', content?: string | Xianyu.Outlet.CycleBuyVendueCreate } };
   /** {@link Xianyu.Recycle.OrderStatusSync 闲鱼 > 订单状态同步给回收商} */
   type XianyuRecycleOrderStatusSync = Message & { content?: MessageContent & { topic?: 'xianyu_recycle_OrderStatusSync', content?: string | Xianyu.Recycle.OrderStatusSync } };
   /** {@link Xianyu.Recycle.SpuModifySync 闲鱼 > 闲鱼回收SPU变更消息} */
@@ -3591,6 +3595,7 @@ declare namespace IncomingMessage {
    * - {@link DamaiDistributionMatchSeat 大麦第三方票务供应商接入 > 履约补选座位成功通知三方}
    * - {@link DamaiDistributionPerformCancel 大麦第三方票务供应商接入 > 场次取消消息推送}
    * - {@link DamaiDistributionPerformStatus 大麦第三方票务供应商接入 > 场次状态变更推送}
+   * - {@link DamaiDistributionPerformTimeChange 大麦第三方票务供应商接入 > 场次时间变更消息}
    * - {@link DamaiDistributionPreSaleToNow 大麦第三方票务供应商接入 > 预售改开票}
    * - {@link DamaiDistributionProjectStatus 大麦第三方票务供应商接入 > 项目状态推送}
    * - {@link DamaiDistributionRefundAuditResult 大麦第三方票务供应商接入 > 分销退票审核结果消息通知}
@@ -3602,6 +3607,7 @@ declare namespace IncomingMessage {
   type DamaiDistribution = DamaiDistributionMatchSeat
     | DamaiDistributionPerformCancel
     | DamaiDistributionPerformStatus
+    | DamaiDistributionPerformTimeChange
     | DamaiDistributionPreSaleToNow
     | DamaiDistributionProjectStatus
     | DamaiDistributionRefundAuditResult
@@ -5368,6 +5374,10 @@ declare namespace IncomingMessage {
   type XianyuMarketrecycle = XianyuMarketrecycleOrderStateSyn
     | XianyuMarketrecyclePlanStateSyn;
   /**
+   * - {@link XianyuOutletCycleBuyVendueCreate 闲鱼 > 闲鱼奥莱周期拍拍品创建}
+   */
+  type XianyuOutlet = XianyuOutletCycleBuyVendueCreate;
+  /**
    * - {@link XianyuRecycleOrderStatusSync 闲鱼 > 订单状态同步给回收商}
    * - {@link XianyuRecycleSpuModifySync 闲鱼 > 闲鱼回收SPU变更消息}
    */
@@ -6175,6 +6185,7 @@ declare namespace IncomingMessage {
    * - {@link XianyuHjbt}
    * - {@link XianyuIsv}
    * - {@link XianyuMarketrecycle}
+   * - {@link XianyuOutlet}
    * - {@link XianyuRecycle}
    * - {@link XianyuRegister}
    * - {@link XianyuTemplate}
@@ -6190,6 +6201,7 @@ declare namespace IncomingMessage {
     | XianyuHjbt
     | XianyuIsv
     | XianyuMarketrecycle
+    | XianyuOutlet
     | XianyuRecycle
     | XianyuRegister
     | XianyuTemplate

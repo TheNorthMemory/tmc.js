@@ -1012,6 +1012,8 @@ declare interface TaoTopicsDescriptor {
   damai_distribution_PerformCancel(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionPerformCancel) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionPerformStatus 大麦第三方票务供应商接入 > 场次状态变更推送} */
   damai_distribution_PerformStatus(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionPerformStatus) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.DamaiDistributionPerformTimeChange 大麦第三方票务供应商接入 > 场次时间变更消息} */
+  damai_distribution_PerformTimeChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionPerformTimeChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionPreSaleToNow 大麦第三方票务供应商接入 > 预售改开票} */
   damai_distribution_PreSaleToNow(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionPreSaleToNow) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionProjectStatus 大麦第三方票务供应商接入 > 项目状态推送} */
@@ -2368,6 +2370,8 @@ declare interface TaoTopicsDescriptor {
   xianyu_marketrecycle_OrderStateSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuMarketrecycleOrderStateSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuMarketrecyclePlanStateSyn 闲鱼 > 闲鱼保卖计划变更消息} */
   xianyu_marketrecycle_PlanStateSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuMarketrecyclePlanStateSyn) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.XianyuOutletCycleBuyVendueCreate 闲鱼 > 闲鱼奥莱周期拍拍品创建} */
+  xianyu_outlet_CycleBuyVendueCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuOutletCycleBuyVendueCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuRecycleOrderStatusSync 闲鱼 > 订单状态同步给回收商} */
   xianyu_recycle_OrderStatusSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuRecycleOrderStatusSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuRecycleSpuModifySync 闲鱼 > 闲鱼回收SPU变更消息} */
@@ -3080,6 +3084,8 @@ declare interface TaoTopicsDescriptor {
   xianyu_isv(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuIsv) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuMarketrecycle} */
   xianyu_marketrecycle(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuMarketrecycle) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.XianyuOutlet} */
+  xianyu_outlet(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuOutlet) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuRecycle} */
   xianyu_recycle(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuRecycle) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuRegister} */
@@ -4141,6 +4147,8 @@ declare interface TaoEventsListener {
   on(topic: 'damai_distribution_PerformCancel', listener: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionPerformCancel) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionPerformStatus 大麦第三方票务供应商接入 > 场次状态变更推送} */
   on(topic: 'damai_distribution_PerformStatus', listener: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionPerformStatus) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.DamaiDistributionPerformTimeChange 大麦第三方票务供应商接入 > 场次时间变更消息} */
+  on(topic: 'damai_distribution_PerformTimeChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionPerformTimeChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionPreSaleToNow 大麦第三方票务供应商接入 > 预售改开票} */
   on(topic: 'damai_distribution_PreSaleToNow', listener: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionPreSaleToNow) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionProjectStatus 大麦第三方票务供应商接入 > 项目状态推送} */
@@ -5497,6 +5505,8 @@ declare interface TaoEventsListener {
   on(topic: 'xianyu_marketrecycle_OrderStateSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuMarketrecycleOrderStateSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuMarketrecyclePlanStateSyn 闲鱼 > 闲鱼保卖计划变更消息} */
   on(topic: 'xianyu_marketrecycle_PlanStateSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuMarketrecyclePlanStateSyn) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.XianyuOutletCycleBuyVendueCreate 闲鱼 > 闲鱼奥莱周期拍拍品创建} */
+  on(topic: 'xianyu_outlet_CycleBuyVendueCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuOutletCycleBuyVendueCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuRecycleOrderStatusSync 闲鱼 > 订单状态同步给回收商} */
   on(topic: 'xianyu_recycle_OrderStatusSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuRecycleOrderStatusSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuRecycleSpuModifySync 闲鱼 > 闲鱼回收SPU变更消息} */
@@ -6209,6 +6219,8 @@ declare interface TaoEventsListener {
   on(topic: 'xianyu_isv', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuIsv) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuMarketrecycle} */
   on(topic: 'xianyu_marketrecycle', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuMarketrecycle) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.XianyuOutlet} */
+  on(topic: 'xianyu_outlet', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuOutlet) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuRecycle} */
   on(topic: 'xianyu_recycle', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuRecycle) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuRegister} */

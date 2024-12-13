@@ -22,6 +22,28 @@ declare namespace Damai.Distribution {
     perform_id: number;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2606&docType=9 场次时间变更消息} */
+  interface PerformTimeChange {
+    /** 结束时间 */
+    end_time: string;
+    /** 原始结束时间 */
+    original_end_time: string;
+    /** 原始场次名称 */
+    original_perform_name: string;
+    /** 原始开始时间 */
+    original_start_time: string;
+    /** 场次id */
+    perform_id: number;
+    /** 场次名称 */
+    perform_name: string;
+    /** 项目id */
+    project_id: number;
+    /** 变更原因 */
+    reason: string;
+    /** 开始时间 */
+    start_time: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=1629&docType=9 预售改开票} */
   interface PreSaleToNow {
     /** 场次id */

@@ -184,6 +184,55 @@ declare namespace Xianyu.Marketrecycle {
 }
 
 /** 闲鱼 */
+declare namespace Xianyu.Outlet {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2605&docType=9 闲鱼奥莱周期拍拍品创建} */
+  interface CycleBuyVendueCreate {
+    /** 扩展参数 */
+    attributes?: string;
+    /** 业务类型 */
+    biz?: number;
+    /** 买家保证金 */
+    buyer_deposit?: number;
+    /** 描述地址 */
+    desc_tfs_url?: string;
+    /** 拍卖结束时间 */
+    end_time: string;
+    /** 创建时间 */
+    gmt_create: string;
+    /** 修改时间 */
+    gmt_modified: string;
+    /** 初始结束时间 */
+    init_end_time?: string;
+    /** 商品id */
+    item_id: number;
+    /** 最大价格 */
+    max_price?: number;
+    /** 最小价格 */
+    mini_price?: number;
+    /** 图片地址 */
+    pict_url?: string;
+    /** 价格 */
+    price_margin?: number;
+    /** 卖家id */
+    seller_id: number;
+    /** 起拍价 */
+    start_price: number;
+    /** 拍卖开始时间 */
+    start_time: string;
+    /** 拍品状态 */
+    status?: number;
+    /** 标题 */
+    title?: string;
+    /** 拍品id */
+    vendue_id: number;
+    /** 拍卖状态 */
+    vendue_status?: number;
+    /** 视频地址 */
+    video?: string;
+  }
+}
+
+/** 闲鱼 */
 declare namespace Xianyu.Recycle {
   /** {@link https://open.taobao.com/tmc.htm?docId=1209&docType=9 订单状态同步给回收商} */
   interface OrderStatusSync {
