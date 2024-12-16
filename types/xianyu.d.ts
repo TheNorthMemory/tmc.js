@@ -387,6 +387,29 @@ declare namespace Xianyu.Tender {
 }
 
 /** 闲鱼 */
+declare namespace Xianyu.Yellowbox {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2608&docType=9 GPU模版处罚消息通知} */
+  interface GpuTemplatePunish {
+    /** 动作类型, PUNISH处罚, CANCEL撤销 */
+    action_code: string;
+    /** 模版描述 */
+    gpu_desc: string;
+    /** GPU主键 */
+    gpu_id: number;
+    /** 模版id */
+    id: number;
+    /** 市场价，分为单位 */
+    market_price?: number;
+    /** 货号 */
+    product_code?: string;
+    /** 租户 */
+    tenant: string;
+    /** 标题 */
+    title?: string;
+  }
+}
+
+/** 闲鱼 */
 declare namespace Xianyu.Yushi {
   /** {@link https://open.taobao.com/tmc.htm?docId=2601&docType=9 闲鱼商品下架消息} */
   interface TsOffShelf {
