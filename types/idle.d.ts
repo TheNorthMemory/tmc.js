@@ -224,6 +224,32 @@ declare namespace Idle.Recycle {
     /** 退款状态 */
     refund_status: string;
   }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2609&docType=9 黄金回收门店信息变更通知} */
+  interface StoreSyn {
+    /** 具体地址 */
+    address: string;
+    /** 区/县名称 */
+    area_name: string;
+    /** 扩展字段 */
+    attributes: string;
+    /** 营业信息 */
+    business_info: string;
+    /** 城市名称 */
+    city_name: string;
+    /** 纬度 */
+    latitude: string;
+    /** 经度 */
+    longitude: string;
+    /** 高德门店id */
+    poid: string;
+    /** 省名称 */
+    province_name: string;
+    /** 门店名称 */
+    store_name: string;
+    /** 门店状态 0:下线 1:上线 */
+    store_status: string;
+  }
 }
 
 /** 闲鱼已验货 */

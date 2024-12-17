@@ -626,6 +626,8 @@ declare interface TaoTopicsDescriptor {
   alibaba_wdkorder_VoucherStatus(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkorderVoucherStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaWdktradeCouponInstance 五道口营销 > 营销券实例消息} */
   alibaba_wdktrade_CouponInstance(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdktradeCouponInstance) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaYichaoClaimOrder 天猫服务 > 蚁巢投保理赔消息} */
+  alibaba_yichao_ClaimOrder(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaYichaoClaimOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaYichaoInsuranceUpdate 天猫服务 > 蚁巢保单修改消息} */
   alibaba_yichao_InsuranceUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaYichaoInsuranceUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaYunioDataTransfer 平台消息 > YunIO数据流转} */
@@ -1158,6 +1160,8 @@ declare interface TaoTopicsDescriptor {
   idle_recycle_OrderSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleRecycleOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleRecycleRefundStatusModify 闲鱼回收商消息 > 退款消息} */
   idle_recycle_RefundStatusModify(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleRecycleRefundStatusModify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleRecycleStoreSyn 闲鱼回收商消息 > 黄金回收门店信息变更通知} */
+  idle_recycle_StoreSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleRecycleStoreSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleTopisvCompensateNotice 闲鱼已验货 > 闲鱼开放平台-服务赔付单变更消息通知} */
   idle_topisv_CompensateNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleTopisvCompensateNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleTopisvGlobalProductNotice 闲鱼已验货 > 闲鱼开放平台-国际货品变更消息通知} */
@@ -3765,6 +3769,8 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_wdkorder_VoucherStatus', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdkorderVoucherStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaWdktradeCouponInstance 五道口营销 > 营销券实例消息} */
   on(topic: 'alibaba_wdktrade_CouponInstance', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaWdktradeCouponInstance) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaYichaoClaimOrder 天猫服务 > 蚁巢投保理赔消息} */
+  on(topic: 'alibaba_yichao_ClaimOrder', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaYichaoClaimOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaYichaoInsuranceUpdate 天猫服务 > 蚁巢保单修改消息} */
   on(topic: 'alibaba_yichao_InsuranceUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaYichaoInsuranceUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaYunioDataTransfer 平台消息 > YunIO数据流转} */
@@ -4297,6 +4303,8 @@ declare interface TaoEventsListener {
   on(topic: 'idle_recycle_OrderSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleRecycleOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleRecycleRefundStatusModify 闲鱼回收商消息 > 退款消息} */
   on(topic: 'idle_recycle_RefundStatusModify', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleRecycleRefundStatusModify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleRecycleStoreSyn 闲鱼回收商消息 > 黄金回收门店信息变更通知} */
+  on(topic: 'idle_recycle_StoreSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleRecycleStoreSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleTopisvCompensateNotice 闲鱼已验货 > 闲鱼开放平台-服务赔付单变更消息通知} */
   on(topic: 'idle_topisv_CompensateNotice', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleTopisvCompensateNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleTopisvGlobalProductNotice 闲鱼已验货 > 闲鱼开放平台-国际货品变更消息通知} */

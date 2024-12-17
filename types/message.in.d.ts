@@ -609,6 +609,8 @@ declare namespace IncomingMessage {
   type AlibabaWdkorderVoucherStatus = Message & { content?: MessageContent & { topic?: 'alibaba_wdkorder_VoucherStatus', content?: string | Alibaba.Wdkorder.VoucherStatus } };
   /** {@link Alibaba.Wdktrade.CouponInstance 五道口营销 > 营销券实例消息} */
   type AlibabaWdktradeCouponInstance = Message & { content?: MessageContent & { topic?: 'alibaba_wdktrade_CouponInstance', content?: string | Alibaba.Wdktrade.CouponInstance } };
+  /** {@link Alibaba.Yichao.ClaimOrder 天猫服务 > 蚁巢投保理赔消息} */
+  type AlibabaYichaoClaimOrder = Message & { content?: MessageContent & { topic?: 'alibaba_yichao_ClaimOrder', content?: string | Alibaba.Yichao.ClaimOrder } };
   /** {@link Alibaba.Yichao.InsuranceUpdate 天猫服务 > 蚁巢保单修改消息} */
   type AlibabaYichaoInsuranceUpdate = Message & { content?: MessageContent & { topic?: 'alibaba_yichao_InsuranceUpdate', content?: string | Alibaba.Yichao.InsuranceUpdate } };
   /** {@link Alibaba.Yunio.DataTransfer 平台消息 > YunIO数据流转} */
@@ -1141,6 +1143,8 @@ declare namespace IncomingMessage {
   type IdleRecycleOrderSyn = Message & { content?: MessageContent & { topic?: 'idle_recycle_OrderSyn', content?: string | Idle.Recycle.OrderSyn } };
   /** {@link Idle.Recycle.RefundStatusModify 闲鱼回收商消息 > 退款消息} */
   type IdleRecycleRefundStatusModify = Message & { content?: MessageContent & { topic?: 'idle_recycle_RefundStatusModify', content?: string | Idle.Recycle.RefundStatusModify } };
+  /** {@link Idle.Recycle.StoreSyn 闲鱼回收商消息 > 黄金回收门店信息变更通知} */
+  type IdleRecycleStoreSyn = Message & { content?: MessageContent & { topic?: 'idle_recycle_StoreSyn', content?: string | Idle.Recycle.StoreSyn } };
   /** {@link Idle.Topisv.CompensateNotice 闲鱼已验货 > 闲鱼开放平台-服务赔付单变更消息通知} */
   type IdleTopisvCompensateNotice = Message & { content?: MessageContent & { topic?: 'idle_topisv_CompensateNotice', content?: string | Idle.Topisv.CompensateNotice } };
   /** {@link Idle.Topisv.GlobalProductNotice 闲鱼已验货 > 闲鱼开放平台-国际货品变更消息通知} */
@@ -3078,9 +3082,11 @@ declare namespace IncomingMessage {
    */
   type AlibabaWdktrade = AlibabaWdktradeCouponInstance;
   /**
+   * - {@link AlibabaYichaoClaimOrder 天猫服务 > 蚁巢投保理赔消息}
    * - {@link AlibabaYichaoInsuranceUpdate 天猫服务 > 蚁巢保单修改消息}
    */
-  type AlibabaYichao = AlibabaYichaoInsuranceUpdate;
+  type AlibabaYichao = AlibabaYichaoClaimOrder
+    | AlibabaYichaoInsuranceUpdate;
   /**
    * - {@link AlibabaYunioDataTransfer 平台消息 > YunIO数据流转}
    */
@@ -3819,10 +3825,12 @@ declare namespace IncomingMessage {
    * - {@link IdleRecycleOrderStateSyn 闲鱼回收商消息 > 闲鱼回收业务订单消息}
    * - {@link IdleRecycleOrderSyn 闲鱼回收商消息 > 回收订单交易消息}
    * - {@link IdleRecycleRefundStatusModify 闲鱼回收商消息 > 退款消息}
+   * - {@link IdleRecycleStoreSyn 闲鱼回收商消息 > 黄金回收门店信息变更通知}
    */
   type IdleRecycle = IdleRecycleOrderStateSyn
     | IdleRecycleOrderSyn
-    | IdleRecycleRefundStatusModify;
+    | IdleRecycleRefundStatusModify
+    | IdleRecycleStoreSyn;
   /**
    * - {@link IdleTopisvCompensateNotice 闲鱼已验货 > 闲鱼开放平台-服务赔付单变更消息通知}
    * - {@link IdleTopisvGlobalProductNotice 闲鱼已验货 > 闲鱼开放平台-国际货品变更消息通知}

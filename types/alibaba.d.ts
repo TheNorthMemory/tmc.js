@@ -4616,6 +4616,20 @@ declare namespace Alibaba.Wdktrade {
 
 /** 天猫服务 */
 declare namespace Alibaba.Yichao {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2607&docType=9 蚁巢投保理赔消息} */
+  interface ClaimOrder {
+    /** 行为 */
+    action: string;
+    /** 理赔申请方ID */
+    claimant_id: string;
+    /** 理赔单号 */
+    claim_order_id: string;
+    /** 外部业务单据 报案单 */
+    out_order_id: string;
+    /** 产品码 */
+    product_code: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2549&docType=9 蚁巢保单修改消息} */
   interface InsuranceUpdate {
     /** 保单生效时间 */
