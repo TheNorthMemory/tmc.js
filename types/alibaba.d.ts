@@ -4640,10 +4640,6 @@ declare namespace Alibaba.Yichao {
     insurance_application_no: string;
     /** 蚁巢保单号 */
     insurance_order_id: string;
-    /** 被保人id */
-    insurant_id: string;
-    /** 被保人姓名 */
-    insurant_name: string;
     /** 单据唯一键 */
     out_id: string;
     /** 工单或者服务单号 */
