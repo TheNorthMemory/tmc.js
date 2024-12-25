@@ -10,6 +10,18 @@ declare namespace Lianfan.Huiwa {
     model_type: number;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2613&docType=9 绘蛙需求状态变更消息} */
+  interface RequirementStateUpdate {
+    /** 外部用户ID */
+    outer_user: string;
+    /** 需求ID */
+    requirement_id: number;
+    /** 需求名称 */
+    requirement_name: string;
+    /** 需求状态 */
+    requirement_status: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2559&docType=9 绘蛙生图任务状态变更消息} */
   interface TaskStateUpdate {
     /** 主任务id */

@@ -1171,6 +1171,8 @@ declare namespace IncomingMessage {
   type LarkTradePosTradeDataTransmit = Message & { content?: MessageContent & { topic?: 'lark_trade_PosTradeDataTransmit', content?: string | Lark.Trade.PosTradeDataTransmit } };
   /** {@link Lianfan.Huiwa.ModelStateUpdate 连凡 > 绘蛙模型状态变更消息} */
   type LianfanHuiwaModelStateUpdate = Message & { content?: MessageContent & { topic?: 'lianfan_huiwa_ModelStateUpdate', content?: string | Lianfan.Huiwa.ModelStateUpdate } };
+  /** {@link Lianfan.Huiwa.RequirementStateUpdate 连凡 > 绘蛙需求状态变更消息} */
+  type LianfanHuiwaRequirementStateUpdate = Message & { content?: MessageContent & { topic?: 'lianfan_huiwa_RequirementStateUpdate', content?: string | Lianfan.Huiwa.RequirementStateUpdate } };
   /** {@link Lianfan.Huiwa.TaskStateUpdate 连凡 > 绘蛙生图任务状态变更消息} */
   type LianfanHuiwaTaskStateUpdate = Message & { content?: MessageContent & { topic?: 'lianfan_huiwa_TaskStateUpdate', content?: string | Lianfan.Huiwa.TaskStateUpdate } };
   /** {@link Lst.Supplier.BroadcastFastRefundMessage 零售通_公共 > 零售通广播极速退款消息} */
@@ -3873,9 +3875,11 @@ declare namespace IncomingMessage {
   type LarkTrade = LarkTradePosTradeDataTransmit;
   /**
    * - {@link LianfanHuiwaModelStateUpdate 连凡 > 绘蛙模型状态变更消息}
+   * - {@link LianfanHuiwaRequirementStateUpdate 连凡 > 绘蛙需求状态变更消息}
    * - {@link LianfanHuiwaTaskStateUpdate 连凡 > 绘蛙生图任务状态变更消息}
    */
   type LianfanHuiwa = LianfanHuiwaModelStateUpdate
+    | LianfanHuiwaRequirementStateUpdate
     | LianfanHuiwaTaskStateUpdate;
   /**
    * - {@link LstSupplierBroadcastFastRefundMessage 零售通_公共 > 零售通广播极速退款消息}

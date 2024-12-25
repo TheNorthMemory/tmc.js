@@ -1188,6 +1188,8 @@ declare interface TaoTopicsDescriptor {
   lark_trade_PosTradeDataTransmit(fn: (this: TaoMessageConsumer, message: IncomingMessage.LarkTradePosTradeDataTransmit) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LianfanHuiwaModelStateUpdate 连凡 > 绘蛙模型状态变更消息} */
   lianfan_huiwa_ModelStateUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.LianfanHuiwaModelStateUpdate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.LianfanHuiwaRequirementStateUpdate 连凡 > 绘蛙需求状态变更消息} */
+  lianfan_huiwa_RequirementStateUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.LianfanHuiwaRequirementStateUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LianfanHuiwaTaskStateUpdate 连凡 > 绘蛙生图任务状态变更消息} */
   lianfan_huiwa_TaskStateUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.LianfanHuiwaTaskStateUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LstSupplierBroadcastFastRefundMessage 零售通_公共 > 零售通广播极速退款消息} */
@@ -4331,6 +4333,8 @@ declare interface TaoEventsListener {
   on(topic: 'lark_trade_PosTradeDataTransmit', listener: (this: TaoMessageConsumer, message: IncomingMessage.LarkTradePosTradeDataTransmit) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LianfanHuiwaModelStateUpdate 连凡 > 绘蛙模型状态变更消息} */
   on(topic: 'lianfan_huiwa_ModelStateUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.LianfanHuiwaModelStateUpdate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.LianfanHuiwaRequirementStateUpdate 连凡 > 绘蛙需求状态变更消息} */
+  on(topic: 'lianfan_huiwa_RequirementStateUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.LianfanHuiwaRequirementStateUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LianfanHuiwaTaskStateUpdate 连凡 > 绘蛙生图任务状态变更消息} */
   on(topic: 'lianfan_huiwa_TaskStateUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.LianfanHuiwaTaskStateUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LstSupplierBroadcastFastRefundMessage 零售通_公共 > 零售通广播极速退款消息} */
