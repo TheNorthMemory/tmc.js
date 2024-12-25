@@ -67,6 +67,8 @@ declare namespace Xianyu.Ctox {
   interface PayDkChange {
     /** 主订单（保卖订单等） */
     biz_order_id: string;
+    /** 业务类型 */
+    biz_type?: string;
     /** 代扣金额，分 */
     confirm_fee: string;
     /** 代扣流水号 */
