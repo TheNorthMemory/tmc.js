@@ -245,10 +245,12 @@ declare namespace Idle.Recycle {
     poid: string;
     /** 省名称 */
     province_name: string;
+    /** 门店id */
+    store_id: number;
     /** 门店名称 */
     store_name: string;
     /** 门店状态 0:下线 1:上线 */
-    store_status: string;
+    store_status: number;
   }
 }
 
