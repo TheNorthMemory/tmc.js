@@ -2100,10 +2100,14 @@ declare interface TaoTopicsDescriptor {
   taobao_yichao_WarrantyCodeStatusUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoYichaoWarrantyCodeStatusUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoZkCloudIdentifyCreateNotify 淘宝真酷 > 淘宝真酷-云鉴定创建通知} */
   taobao_zk_CloudIdentifyCreateNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkCloudIdentifyCreateNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoZkCloudIdentifyResaleNotify 淘宝真酷 > 淘宝真酷二次鉴别通知} */
+  taobao_zk_CloudIdentifyResaleNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkCloudIdentifyResaleNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoZkFirstLogisticsNotify 淘宝真酷 > 淘宝真酷一段物流发货消息} */
   taobao_zk_FirstLogisticsNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkFirstLogisticsNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoZkFirstLogisticsReceivedNotify 淘宝真酷 > 一段物流签收通知} */
   taobao_zk_FirstLogisticsReceivedNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkFirstLogisticsReceivedNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoZkFirstLogisticsUpdateNotify 淘宝真酷 > 淘宝真酷-一段运单号修改消息} */
+  taobao_zk_FirstLogisticsUpdateNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkFirstLogisticsUpdateNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoZkIdentifyCreate 淘宝真酷 > 淘宝真酷需求鉴别单创建消息} */
   taobao_zk_IdentifyCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkIdentifyCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoZkRefundNotify 淘宝真酷 > 真酷鉴定用户退款通知} */
@@ -5245,10 +5249,14 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_yichao_WarrantyCodeStatusUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoYichaoWarrantyCodeStatusUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoZkCloudIdentifyCreateNotify 淘宝真酷 > 淘宝真酷-云鉴定创建通知} */
   on(topic: 'taobao_zk_CloudIdentifyCreateNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkCloudIdentifyCreateNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoZkCloudIdentifyResaleNotify 淘宝真酷 > 淘宝真酷二次鉴别通知} */
+  on(topic: 'taobao_zk_CloudIdentifyResaleNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkCloudIdentifyResaleNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoZkFirstLogisticsNotify 淘宝真酷 > 淘宝真酷一段物流发货消息} */
   on(topic: 'taobao_zk_FirstLogisticsNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkFirstLogisticsNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoZkFirstLogisticsReceivedNotify 淘宝真酷 > 一段物流签收通知} */
   on(topic: 'taobao_zk_FirstLogisticsReceivedNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkFirstLogisticsReceivedNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoZkFirstLogisticsUpdateNotify 淘宝真酷 > 淘宝真酷-一段运单号修改消息} */
+  on(topic: 'taobao_zk_FirstLogisticsUpdateNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkFirstLogisticsUpdateNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoZkIdentifyCreate 淘宝真酷 > 淘宝真酷需求鉴别单创建消息} */
   on(topic: 'taobao_zk_IdentifyCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkIdentifyCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoZkRefundNotify 淘宝真酷 > 真酷鉴定用户退款通知} */

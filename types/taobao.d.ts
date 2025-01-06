@@ -7043,6 +7043,16 @@ declare namespace Taobao.Zk {
     tp_order_id: string;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2612&docType=9 淘宝真酷二次鉴别通知} */
+  interface CloudIdentifyResaleNotify {
+    /** 货品鉴别单号 */
+    identify_order_id: string;
+    /** 鉴别请求单号 */
+    identify_request_id: string;
+    /** 是否二次鉴别 */
+    resale: boolean;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2581&docType=9 淘宝真酷一段物流发货消息} */
   interface FirstLogisticsNotify {
     /** 鉴定机构id */
@@ -7060,6 +7070,20 @@ declare namespace Taobao.Zk {
     /** 一段物流单号 */
     identify_logistics_id: string;
     /** 订单id */
+    tp_order_id: string;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2616&docType=9 淘宝真酷-一段运单号修改消息} */
+  interface FirstLogisticsUpdateNotify {
+    /** 货品鉴别单id */
+    identify_order_id: string;
+    /** 需求鉴别单号 */
+    identify_request_id: string;
+    /** 运单号(修改后) */
+    new_mail_no?: string;
+    /** 运单号(修改前) */
+    old_mail_no?: string;
+    /** 订单号 */
     tp_order_id: string;
   }
 
