@@ -134,7 +134,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 
 ## 支持的TOPICS
 
-<details><summary>共计 85+ 类别，520+ 消息数</summary>
+<details><summary>共计 85+ 类别，521+ 消息数</summary>
 
 | 类别 | 消息数 |
 | --- | --- |
@@ -216,7 +216,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | 阿里健康追溯码 | 1 |
 | 自动驾驶API | 3 |
 | MMC五盘货项目 | 5 |
-| 银泰开放平台消息 | 2 |
+| 银泰开放平台消息 | 3 |
 | 阿里智付 | 1 |
 | 代发管理 | 2 |
 | 蚂蚁采购 | 1 |

@@ -1080,6 +1080,8 @@ declare interface TaoTopicsDescriptor {
   fliggy_visa_StatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyVisaStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyXhotelComboCreateResult 飞猪 > 套餐创建消息回传} */
   fliggy_xhotel_ComboCreateResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyXhotelComboCreateResult) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FlyggyFlightDomesticDistributionQuotationFull 飞猪 > 飞猪机票国内分销全量报价} */
+  flyggy_flight_DomesticDistributionQuotationFull(fn: (this: TaoMessageConsumer, message: IncomingMessage.FlyggyFlightDomesticDistributionQuotationFull) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FuwuConfirmFail 服务市场 > 收入确认失败} */
   fuwu_confirm_Fail(fn: (this: TaoMessageConsumer, message: IncomingMessage.FuwuConfirmFail) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FuwuConfirmSuccess 服务市场 > 收入确认成功} */
@@ -2710,6 +2712,8 @@ declare interface TaoTopicsDescriptor {
   fliggy_visa(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyVisa) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyXhotel} */
   fliggy_xhotel(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyXhotel) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FlyggyFlight} */
+  flyggy_flight(fn: (this: TaoMessageConsumer, message: IncomingMessage.FlyggyFlight) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FuwuConfirm} */
   fuwu_confirm(fn: (this: TaoMessageConsumer, message: IncomingMessage.FuwuConfirm) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.GaodeCaiji} */
@@ -3160,6 +3164,8 @@ declare interface TaoTopicsDescriptor {
   eleme(fn: (this: TaoMessageConsumer, message: IncomingMessage.Eleme) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Fliggy} */
   fliggy(fn: (this: TaoMessageConsumer, message: IncomingMessage.Fliggy) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Flyggy} */
+  flyggy(fn: (this: TaoMessageConsumer, message: IncomingMessage.Flyggy) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Fuwu} */
   fuwu(fn: (this: TaoMessageConsumer, message: IncomingMessage.Fuwu) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Gaode} */
@@ -4229,6 +4235,8 @@ declare interface TaoEventsListener {
   on(topic: 'fliggy_visa_StatusChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyVisaStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyXhotelComboCreateResult 飞猪 > 套餐创建消息回传} */
   on(topic: 'fliggy_xhotel_ComboCreateResult', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyXhotelComboCreateResult) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FlyggyFlightDomesticDistributionQuotationFull 飞猪 > 飞猪机票国内分销全量报价} */
+  on(topic: 'flyggy_flight_DomesticDistributionQuotationFull', listener: (this: TaoMessageConsumer, message: IncomingMessage.FlyggyFlightDomesticDistributionQuotationFull) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FuwuConfirmFail 服务市场 > 收入确认失败} */
   on(topic: 'fuwu_confirm_Fail', listener: (this: TaoMessageConsumer, message: IncomingMessage.FuwuConfirmFail) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FuwuConfirmSuccess 服务市场 > 收入确认成功} */
@@ -5859,6 +5867,8 @@ declare interface TaoEventsListener {
   on(topic: 'fliggy_visa', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyVisa) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyXhotel} */
   on(topic: 'fliggy_xhotel', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyXhotel) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FlyggyFlight} */
+  on(topic: 'flyggy_flight', listener: (this: TaoMessageConsumer, message: IncomingMessage.FlyggyFlight) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FuwuConfirm} */
   on(topic: 'fuwu_confirm', listener: (this: TaoMessageConsumer, message: IncomingMessage.FuwuConfirm) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.GaodeCaiji} */
@@ -6309,6 +6319,8 @@ declare interface TaoEventsListener {
   on(topic: 'eleme', listener: (this: TaoMessageConsumer, message: IncomingMessage.Eleme) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Fliggy} */
   on(topic: 'fliggy', listener: (this: TaoMessageConsumer, message: IncomingMessage.Fliggy) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Flyggy} */
+  on(topic: 'flyggy', listener: (this: TaoMessageConsumer, message: IncomingMessage.Flyggy) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Fuwu} */
   on(topic: 'fuwu', listener: (this: TaoMessageConsumer, message: IncomingMessage.Fuwu) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Gaode} */

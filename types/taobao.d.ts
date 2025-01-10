@@ -7051,6 +7051,8 @@ declare namespace Taobao.Zk {
     identify_request_id: string;
     /** 是否二次鉴别 */
     resale: boolean;
+    /** 变更时间 */
+    time?: string;
   }
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2581&docType=9 淘宝真酷一段物流发货消息} */

@@ -20,6 +20,7 @@
 /// <reference path="ele.d.ts" />
 /// <reference path="eleme.d.ts" />
 /// <reference path="fliggy.d.ts" />
+/// <reference path="flyggy.d.ts" />
 /// <reference path="fuwu.d.ts" />
 /// <reference path="gaode.d.ts" />
 /// <reference path="genie.d.ts" />
@@ -1063,6 +1064,8 @@ declare namespace IncomingMessage {
   type FliggyVisaStatusChange = Message & { content?: MessageContent & { topic?: 'fliggy_visa_StatusChange', content?: string | Fliggy.Visa.StatusChange } };
   /** {@link Fliggy.Xhotel.ComboCreateResult 飞猪 > 套餐创建消息回传} */
   type FliggyXhotelComboCreateResult = Message & { content?: MessageContent & { topic?: 'fliggy_xhotel_ComboCreateResult', content?: string | Fliggy.Xhotel.ComboCreateResult } };
+  /** {@link Flyggy.Flight.DomesticDistributionQuotationFull 飞猪 > 飞猪机票国内分销全量报价} */
+  type FlyggyFlightDomesticDistributionQuotationFull = Message & { content?: MessageContent & { topic?: 'flyggy_flight_DomesticDistributionQuotationFull', content?: string | Flyggy.Flight.DomesticDistributionQuotationFull } };
   /** {@link Fuwu.Confirm.Fail 服务市场 > 收入确认失败} */
   type FuwuConfirmFail = Message & { content?: MessageContent & { topic?: 'fuwu_confirm_Fail', content?: string | Fuwu.Confirm.Fail } };
   /** {@link Fuwu.Confirm.Success 服务市场 > 收入确认成功} */
@@ -3710,6 +3713,10 @@ declare namespace IncomingMessage {
    */
   type FliggyXhotel = FliggyXhotelComboCreateResult;
   /**
+   * - {@link FlyggyFlightDomesticDistributionQuotationFull 飞猪 > 飞猪机票国内分销全量报价}
+   */
+  type FlyggyFlight = FlyggyFlightDomesticDistributionQuotationFull;
+  /**
    * - {@link FuwuConfirmFail 服务市场 > 收入确认失败}
    * - {@link FuwuConfirmSuccess 服务市场 > 收入确认成功}
    */
@@ -5789,6 +5796,10 @@ declare namespace IncomingMessage {
     | FliggyTicket
     | FliggyVisa
     | FliggyXhotel;
+  /**
+   * - {@link FlyggyFlight}
+   */
+  type Flyggy = FlyggyFlight;
   /**
    * - {@link FuwuConfirm}
    */
