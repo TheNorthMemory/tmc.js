@@ -244,6 +244,8 @@ declare interface TaoTopicsDescriptor {
   alibaba_happyfinance_InNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHappyfinanceInNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaHappytripOrderNotify 欢行开放平台 > 欢行统一订单模型变更通知消息} */
   alibaba_happytrip_OrderNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHappytripOrderNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaHappytripTravelApplyStateNotify 欢行开放平台 > 差旅申请单状态变更同步} */
+  alibaba_happytrip_TravelApplyStateNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHappytripTravelApplyStateNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaHjInvoiceCancel 汇金销项票 > 汇金销项票作废通知} */
   alibaba_hj_InvoiceCancel(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHjInvoiceCancel) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaHjInvoiceFileUpload 汇金销项票 > 汇金销项票文件上传通知} */
@@ -3399,6 +3401,8 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_happyfinance_InNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHappyfinanceInNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaHappytripOrderNotify 欢行开放平台 > 欢行统一订单模型变更通知消息} */
   on(topic: 'alibaba_happytrip_OrderNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHappytripOrderNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaHappytripTravelApplyStateNotify 欢行开放平台 > 差旅申请单状态变更同步} */
+  on(topic: 'alibaba_happytrip_TravelApplyStateNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHappytripTravelApplyStateNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaHjInvoiceCancel 汇金销项票 > 汇金销项票作废通知} */
   on(topic: 'alibaba_hj_InvoiceCancel', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaHjInvoiceCancel) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaHjInvoiceFileUpload 汇金销项票 > 汇金销项票文件上传通知} */

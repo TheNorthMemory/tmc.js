@@ -228,6 +228,8 @@ declare namespace IncomingMessage {
   type AlibabaHappyfinanceInNotify = Message & { content?: MessageContent & { topic?: 'alibaba_happyfinance_InNotify', content?: string | Alibaba.Happyfinance.InNotify } };
   /** {@link Alibaba.Happytrip.OrderNotify 欢行开放平台 > 欢行统一订单模型变更通知消息} */
   type AlibabaHappytripOrderNotify = Message & { content?: MessageContent & { topic?: 'alibaba_happytrip_OrderNotify', content?: string | Alibaba.Happytrip.OrderNotify } };
+  /** {@link Alibaba.Happytrip.TravelApplyStateNotify 欢行开放平台 > 差旅申请单状态变更同步} */
+  type AlibabaHappytripTravelApplyStateNotify = Message & { content?: MessageContent & { topic?: 'alibaba_happytrip_TravelApplyStateNotify', content?: string | Alibaba.Happytrip.TravelApplyStateNotify } };
   /** {@link Alibaba.Hj.InvoiceCancel 汇金销项票 > 汇金销项票作废通知} */
   type AlibabaHjInvoiceCancel = Message & { content?: MessageContent & { topic?: 'alibaba_hj_InvoiceCancel', content?: string | Alibaba.Hj.InvoiceCancel } };
   /** {@link Alibaba.Hj.InvoiceFileUpload 汇金销项票 > 汇金销项票文件上传通知} */
@@ -2624,8 +2626,10 @@ declare namespace IncomingMessage {
   type AlibabaHappyfinance = AlibabaHappyfinanceInNotify;
   /**
    * - {@link AlibabaHappytripOrderNotify 欢行开放平台 > 欢行统一订单模型变更通知消息}
+   * - {@link AlibabaHappytripTravelApplyStateNotify 欢行开放平台 > 差旅申请单状态变更同步}
    */
-  type AlibabaHappytrip = AlibabaHappytripOrderNotify;
+  type AlibabaHappytrip = AlibabaHappytripOrderNotify
+    | AlibabaHappytripTravelApplyStateNotify;
   /**
    * - {@link AlibabaHjInvoiceCancel 汇金销项票 > 汇金销项票作废通知}
    * - {@link AlibabaHjInvoiceFileUpload 汇金销项票 > 汇金销项票文件上传通知}

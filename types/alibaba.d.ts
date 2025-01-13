@@ -1259,6 +1259,18 @@ declare namespace Alibaba.Happytrip {
     /** 订单当前状态 -1, "未知状态" 1, "预定中" 2, "已取消" 3, "待付款" 4, "已付款" 5, "已删除" 6, "已完成" 7, "已关闭" 8, "已预订" 9, "已变更" 10, "预定失败" */
     status: string;
   }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2617&docType=9 差旅申请单状态变更同步} */
+  interface TravelApplyStateNotify {
+    /** 欢行租户id */
+    corp_id: string;
+    /** 消息id */
+    msg_id: string;
+    /** 差旅单审批状态 */
+    state: string;
+    /** 差旅单号 */
+    ta_head_id: string;
+  }
 }
 
 /** 汇金销项票 */
