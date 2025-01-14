@@ -7099,6 +7099,18 @@ declare namespace Taobao.Zk {
     identify_request_id: string;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2620&docType=9 淘宝真酷鉴别单暂停通知} */
+  interface PauseNotify {
+    /** 货品鉴别单号 */
+    biz_identify_order_id: string;
+    /** 需求鉴别单号 */
+    biz_identify_request_id: string;
+    /** 是否暂停 */
+    is_pause: boolean;
+    /** 订单号 */
+    tp_order_id: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2589&docType=9 真酷鉴定用户退款通知} */
   interface RefundNotify {
     /** 鉴定机构id */

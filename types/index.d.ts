@@ -2114,6 +2114,8 @@ declare interface TaoTopicsDescriptor {
   taobao_zk_FirstLogisticsUpdateNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkFirstLogisticsUpdateNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoZkIdentifyCreate 淘宝真酷 > 淘宝真酷需求鉴别单创建消息} */
   taobao_zk_IdentifyCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkIdentifyCreate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoZkPauseNotify 淘宝真酷 > 淘宝真酷鉴别单暂停通知} */
+  taobao_zk_PauseNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkPauseNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoZkRefundNotify 淘宝真酷 > 真酷鉴定用户退款通知} */
   taobao_zk_RefundNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkRefundNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoZkSecondLogisticsGotNotify 淘宝真酷 > 淘宝真酷二段寄出后揽收通知机构} */
@@ -5271,6 +5273,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_zk_FirstLogisticsUpdateNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkFirstLogisticsUpdateNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoZkIdentifyCreate 淘宝真酷 > 淘宝真酷需求鉴别单创建消息} */
   on(topic: 'taobao_zk_IdentifyCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkIdentifyCreate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoZkPauseNotify 淘宝真酷 > 淘宝真酷鉴别单暂停通知} */
+  on(topic: 'taobao_zk_PauseNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkPauseNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoZkRefundNotify 淘宝真酷 > 真酷鉴定用户退款通知} */
   on(topic: 'taobao_zk_RefundNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkRefundNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoZkSecondLogisticsGotNotify 淘宝真酷 > 淘宝真酷二段寄出后揽收通知机构} */

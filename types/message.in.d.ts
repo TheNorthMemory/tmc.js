@@ -2098,6 +2098,8 @@ declare namespace IncomingMessage {
   type TaobaoZkFirstLogisticsUpdateNotify = Message & { content?: MessageContent & { topic?: 'taobao_zk_FirstLogisticsUpdateNotify', content?: string | Taobao.Zk.FirstLogisticsUpdateNotify } };
   /** {@link Taobao.Zk.IdentifyCreate 淘宝真酷 > 淘宝真酷需求鉴别单创建消息} */
   type TaobaoZkIdentifyCreate = Message & { content?: MessageContent & { topic?: 'taobao_zk_IdentifyCreate', content?: string | Taobao.Zk.IdentifyCreate } };
+  /** {@link Taobao.Zk.PauseNotify 淘宝真酷 > 淘宝真酷鉴别单暂停通知} */
+  type TaobaoZkPauseNotify = Message & { content?: MessageContent & { topic?: 'taobao_zk_PauseNotify', content?: string | Taobao.Zk.PauseNotify } };
   /** {@link Taobao.Zk.RefundNotify 淘宝真酷 > 真酷鉴定用户退款通知} */
   type TaobaoZkRefundNotify = Message & { content?: MessageContent & { topic?: 'taobao_zk_RefundNotify', content?: string | Taobao.Zk.RefundNotify } };
   /** {@link Taobao.Zk.SecondLogisticsGotNotify 淘宝真酷 > 淘宝真酷二段寄出后揽收通知机构} */
@@ -5031,6 +5033,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoZkFirstLogisticsReceivedNotify 淘宝真酷 > 一段物流签收通知}
    * - {@link TaobaoZkFirstLogisticsUpdateNotify 淘宝真酷 > 淘宝真酷-一段运单号修改消息}
    * - {@link TaobaoZkIdentifyCreate 淘宝真酷 > 淘宝真酷需求鉴别单创建消息}
+   * - {@link TaobaoZkPauseNotify 淘宝真酷 > 淘宝真酷鉴别单暂停通知}
    * - {@link TaobaoZkRefundNotify 淘宝真酷 > 真酷鉴定用户退款通知}
    * - {@link TaobaoZkSecondLogisticsGotNotify 淘宝真酷 > 淘宝真酷二段寄出后揽收通知机构}
    * - {@link TaobaoZkSubmitQuote 淘宝真酷 > 真酷供应商提交报价结果通知}
@@ -5041,6 +5044,7 @@ declare namespace IncomingMessage {
     | TaobaoZkFirstLogisticsReceivedNotify
     | TaobaoZkFirstLogisticsUpdateNotify
     | TaobaoZkIdentifyCreate
+    | TaobaoZkPauseNotify
     | TaobaoZkRefundNotify
     | TaobaoZkSecondLogisticsGotNotify
     | TaobaoZkSubmitQuote;
