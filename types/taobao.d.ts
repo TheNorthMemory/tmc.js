@@ -7014,13 +7014,13 @@ declare namespace Taobao.Zk {
     /** 货品鉴别单号 */
     biz_identify_order_id: string;
     /** 品牌id */
-    brand_id: string;
+    brand_id?: string;
     /** 品牌名称 */
-    brand_name: string;
+    brand_name?: string;
     /** 检测点 */
-    check_point: string;
+    check_point?: string;
     /** 货号 */
-    goods_number: string;
+    goods_number?: string;
     /** 机构id */
     identify_institution_id: string;
     /** 货品鉴别id */
@@ -7028,17 +7028,19 @@ declare namespace Taobao.Zk {
     /** 需求鉴别id */
     identify_request_id: string;
     /** 行业id */
-    industry_id: string;
+    industry_id?: string;
     /** 行业名称 */
-    industry_name: string;
+    industry_name?: string;
     /** 商品id */
-    item_id: string;
+    item_id?: string;
+    /** 是否二次鉴别 */
+    resale?: boolean;
     /** skuId */
-    sku_id: string;
+    sku_id?: string;
     /** sku名称 */
-    sku_name: string;
+    sku_name?: string;
     /** 商品名称 */
-    title: string;
+    title?: string;
     /** 订单号 */
     tp_order_id: string;
   }
