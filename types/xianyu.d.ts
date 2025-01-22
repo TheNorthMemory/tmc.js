@@ -46,6 +46,41 @@ declare namespace Xianyu.Car {
 }
 
 /** 闲鱼 */
+declare namespace Xianyu.Cco {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2621&docType=9 闲鱼投诉消息} */
+  interface Complain {
+    /** 发起投诉用户id */
+    complainant_id: number;
+    /** 发起投诉用户类型 seller:卖家；buyer:买家 */
+    complainant_role: string;
+    /** 资损金额 单位是分 */
+    complain_amount?: number;
+    /** 投诉id */
+    complain_id: number;
+    /** 投诉子类型，投诉类型对应的二级类型 */
+    complain_sub_type: number;
+    /** 投诉类型 */
+    complain_type: number;
+    /** 投诉单流转前状态的status */
+    from_status: number;
+    /** 投诉创建时间 2024-01-08 21:41:15 */
+    gmt_create: string;
+    /** 消息类型：submit创建 statusChange状态变更 */
+    msg_type: string;
+    /** 订单id */
+    order_id: number;
+    /** 凭证描述 */
+    proof_desc?: string;
+    /** 用户上传的凭证图片，多个图片用英文逗号分隔 */
+    proof_pic_list?: string;
+    /** 被投诉用户id */
+    respondent_id: number;
+    /** 投诉单流转后状态的status */
+    to_status: number;
+  }
+}
+
+/** 闲鱼 */
 declare namespace Xianyu.Ctox {
   /** {@link https://open.taobao.com/tmc.htm?docId=2564&docType=9 闲鱼C2X抽佣退佣消息同步} */
   interface CommissionStateSyn {
