@@ -6985,12 +6985,10 @@ declare namespace Taobao.Xiaowei {
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2030&docType=9 xiaowe测试消息} */
   interface Test {
-    /** test */
-    param: string;
-    /** body */
-    table_name: string;
-    /** 用户id */
-    user_id: string;
+    /** 涉及金额 */
+    buyer_refund_fee: string;
+    /** 卖家openUid */
+    seller_open_uid: string;
   }
 }
 
