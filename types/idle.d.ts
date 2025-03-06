@@ -175,6 +175,21 @@ declare namespace Idle.Distribution {
 }
 
 /** 闲鱼 */
+declare namespace Idle.Fishmarketfixed {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2623&docType=9 鱼市一口价买家单订单交易消息变更} */
+  interface OrderSyn {
+    /** 鱼市一口价买家单id */
+    biz_order_id: string;
+    /** 鱼市一口价ic商品id */
+    item_id: number;
+    /** 鱼市一口价买家单主状态 */
+    order_status: number;
+    /** 鱼市一口价买家单子状态 */
+    order_sub_status: number;
+  }
+}
+
+/** 闲鱼 */
 declare namespace Idle.Newoutlets {
   /** {@link https://open.taobao.com/tmc.htm?docId=2584&docType=9 闲鱼用户身份变更消息} */
   interface UserTagNotice {

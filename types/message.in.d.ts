@@ -1140,6 +1140,8 @@ declare namespace IncomingMessage {
   type IdleCycleshopSaleOrderNotice = Message & { content?: MessageContent & { topic?: 'idle_cycleshop_SaleOrderNotice', content?: string | Idle.Cycleshop.SaleOrderNotice } };
   /** {@link Idle.Distribution.ItemChange 闲鱼回收商消息 > 分销闲管家消息通道} */
   type IdleDistributionItemChange = Message & { content?: MessageContent & { topic?: 'idle_distribution_ItemChange', content?: string | Idle.Distribution.ItemChange } };
+  /** {@link Idle.Fishmarketfixed.OrderSyn 闲鱼 > 鱼市一口价买家单订单交易消息变更} */
+  type IdleFishmarketfixedOrderSyn = Message & { content?: MessageContent & { topic?: 'idle_fishmarketfixed_OrderSyn', content?: string | Idle.Fishmarketfixed.OrderSyn } };
   /** {@link Idle.Newoutlets.UserTagNotice 闲鱼 > 闲鱼用户身份变更消息} */
   type IdleNewoutletsUserTagNotice = Message & { content?: MessageContent & { topic?: 'idle_newoutlets_UserTagNotice', content?: string | Idle.Newoutlets.UserTagNotice } };
   /** {@link Idle.Recycle.OrderStateSyn 闲鱼回收商消息 > 闲鱼回收业务订单消息} */
@@ -3839,6 +3841,10 @@ declare namespace IncomingMessage {
    */
   type IdleDistribution = IdleDistributionItemChange;
   /**
+   * - {@link IdleFishmarketfixedOrderSyn 闲鱼 > 鱼市一口价买家单订单交易消息变更}
+   */
+  type IdleFishmarketfixed = IdleFishmarketfixedOrderSyn;
+  /**
    * - {@link IdleNewoutletsUserTagNotice 闲鱼 > 闲鱼用户身份变更消息}
    */
   type IdleNewoutlets = IdleNewoutletsUserTagNotice;
@@ -5861,6 +5867,7 @@ declare namespace IncomingMessage {
    * - {@link IdleCro}
    * - {@link IdleCycleshop}
    * - {@link IdleDistribution}
+   * - {@link IdleFishmarketfixed}
    * - {@link IdleNewoutlets}
    * - {@link IdleRecycle}
    * - {@link IdleTopisv}
@@ -5875,6 +5882,7 @@ declare namespace IncomingMessage {
     | IdleCro
     | IdleCycleshop
     | IdleDistribution
+    | IdleFishmarketfixed
     | IdleNewoutlets
     | IdleRecycle
     | IdleTopisv
