@@ -5452,6 +5452,15 @@ declare namespace Taobao.Test {
   }
 }
 
+/** 天猫国际 */
+declare namespace Taobao.Tmg {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2627&docType=9 天猫国际品控质检单开放测试} */
+  interface TradeInspectOrderChangeTest {
+    /** 测试 */
+    tmg_inspect_order_no: string;
+  }
+}
+
 /** 平台消息 */
 declare namespace Taobao.Top {
   /** {@link https://open.taobao.com/tmc.htm?docId=1317&docType=9 取消授权消息通知} */

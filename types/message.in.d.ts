@@ -1888,6 +1888,8 @@ declare namespace IncomingMessage {
   type TaobaoTestHelloWorld = Message & { content?: MessageContent & { topic?: 'taobao_test_HelloWorld', content?: string | Taobao.Test.HelloWorld } };
   /** {@link Taobao.Test.TaoNodeTopic 淘宝 > 物流消息taobao_test_logistics_TaoNodeTopic} */
   type TaobaoTestTaoNodeTopic = Message & { content?: MessageContent & { topic?: 'taobao_test_TaoNodeTopic', content?: string | Taobao.Test.TaoNodeTopic } };
+  /** {@link Taobao.Tmg.TradeInspectOrderChangeTest 天猫国际 > 天猫国际品控质检单开放测试} */
+  type TaobaoTmgTradeInspectOrderChangeTest = Message & { content?: MessageContent & { topic?: 'taobao_tmg_TradeInspectOrderChangeTest', content?: string | Taobao.Tmg.TradeInspectOrderChangeTest } };
   /** {@link Taobao.Top.AuthCancel 平台消息 > 取消授权消息通知} */
   type TaobaoTopAuthCancel = Message & { content?: MessageContent & { topic?: 'taobao_top_AuthCancel', content?: string | Taobao.Top.AuthCancel } };
   /** {@link Taobao.Top.MqfNotify 平台消息 > mqf消息通道} */
@@ -4785,6 +4787,10 @@ declare namespace IncomingMessage {
     | TaobaoTestHelloWorld
     | TaobaoTestTaoNodeTopic;
   /**
+   * - {@link TaobaoTmgTradeInspectOrderChangeTest 天猫国际 > 天猫国际品控质检单开放测试}
+   */
+  type TaobaoTmg = TaobaoTmgTradeInspectOrderChangeTest;
+  /**
    * - {@link TaobaoTopAuthCancel 平台消息 > 取消授权消息通知}
    * - {@link TaobaoTopMqfNotify 平台消息 > mqf消息通道}
    * - {@link TaobaoTopOnsSinianTest 平台消息 > 似年测试ONS}
@@ -6003,6 +6009,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoTbk}
    * - {@link TaobaoTc}
    * - {@link TaobaoTest}
+   * - {@link TaobaoTmg}
    * - {@link TaobaoTop}
    * - {@link TaobaoTopadmin}
    * - {@link TaobaoTopats}
@@ -6114,6 +6121,7 @@ declare namespace IncomingMessage {
     | TaobaoTbk
     | TaobaoTc
     | TaobaoTest
+    | TaobaoTmg
     | TaobaoTop
     | TaobaoTopadmin
     | TaobaoTopats

@@ -1904,6 +1904,8 @@ declare interface TaoTopicsDescriptor {
   taobao_test_HelloWorld(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTestHelloWorld) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTestTaoNodeTopic 淘宝 > 物流消息taobao_test_logistics_TaoNodeTopic} */
   taobao_test_TaoNodeTopic(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTestTaoNodeTopic) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoTmgTradeInspectOrderChangeTest 天猫国际 > 天猫国际品控质检单开放测试} */
+  taobao_tmg_TradeInspectOrderChangeTest(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTmgTradeInspectOrderChangeTest) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTopAuthCancel 平台消息 > 取消授权消息通知} */
   taobao_top_AuthCancel(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTopAuthCancel) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTopMqfNotify 平台消息 > mqf消息通道} */
@@ -2960,6 +2962,8 @@ declare interface TaoTopicsDescriptor {
   taobao_tc(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTc) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTest} */
   taobao_test(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTest) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoTmg} */
+  taobao_tmg(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTmg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTop} */
   taobao_top(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTop) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTopadmin} */
@@ -5071,6 +5075,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_test_HelloWorld', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTestHelloWorld) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTestTaoNodeTopic 淘宝 > 物流消息taobao_test_logistics_TaoNodeTopic} */
   on(topic: 'taobao_test_TaoNodeTopic', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTestTaoNodeTopic) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoTmgTradeInspectOrderChangeTest 天猫国际 > 天猫国际品控质检单开放测试} */
+  on(topic: 'taobao_tmg_TradeInspectOrderChangeTest', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTmgTradeInspectOrderChangeTest) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTopAuthCancel 平台消息 > 取消授权消息通知} */
   on(topic: 'taobao_top_AuthCancel', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTopAuthCancel) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTopMqfNotify 平台消息 > mqf消息通道} */
@@ -6127,6 +6133,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_tc', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTc) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTest} */
   on(topic: 'taobao_test', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTest) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoTmg} */
+  on(topic: 'taobao_tmg', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTmg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTop} */
   on(topic: 'taobao_top', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTop) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTopadmin} */
