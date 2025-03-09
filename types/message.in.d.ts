@@ -1888,6 +1888,8 @@ declare namespace IncomingMessage {
   type TaobaoTestHelloWorld = Message & { content?: MessageContent & { topic?: 'taobao_test_HelloWorld', content?: string | Taobao.Test.HelloWorld } };
   /** {@link Taobao.Test.TaoNodeTopic 淘宝 > 物流消息taobao_test_logistics_TaoNodeTopic} */
   type TaobaoTestTaoNodeTopic = Message & { content?: MessageContent & { topic?: 'taobao_test_TaoNodeTopic', content?: string | Taobao.Test.TaoNodeTopic } };
+  /** {@link Taobao.Tmg.QualityControlInspectOrderNotify 天猫国际 > 天猫国际品控质检服务单通知} */
+  type TaobaoTmgQualityControlInspectOrderNotify = Message & { content?: MessageContent & { topic?: 'taobao_tmg_QualityControlInspectOrderNotify', content?: string | Taobao.Tmg.QualityControlInspectOrderNotify } };
   /** {@link Taobao.Tmg.TradeInspectOrderChangeTest 天猫国际 > 天猫国际品控质检单开放测试} */
   type TaobaoTmgTradeInspectOrderChangeTest = Message & { content?: MessageContent & { topic?: 'taobao_tmg_TradeInspectOrderChangeTest', content?: string | Taobao.Tmg.TradeInspectOrderChangeTest } };
   /** {@link Taobao.Top.AuthCancel 平台消息 > 取消授权消息通知} */
@@ -4787,9 +4789,11 @@ declare namespace IncomingMessage {
     | TaobaoTestHelloWorld
     | TaobaoTestTaoNodeTopic;
   /**
+   * - {@link TaobaoTmgQualityControlInspectOrderNotify 天猫国际 > 天猫国际品控质检服务单通知}
    * - {@link TaobaoTmgTradeInspectOrderChangeTest 天猫国际 > 天猫国际品控质检单开放测试}
    */
-  type TaobaoTmg = TaobaoTmgTradeInspectOrderChangeTest;
+  type TaobaoTmg = TaobaoTmgQualityControlInspectOrderNotify
+    | TaobaoTmgTradeInspectOrderChangeTest;
   /**
    * - {@link TaobaoTopAuthCancel 平台消息 > 取消授权消息通知}
    * - {@link TaobaoTopMqfNotify 平台消息 > mqf消息通道}

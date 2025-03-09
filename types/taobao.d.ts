@@ -5454,6 +5454,14 @@ declare namespace Taobao.Test {
 
 /** 天猫国际 */
 declare namespace Taobao.Tmg {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2631&docType=9 天猫国际品控质检服务单通知} */
+  interface QualityControlInspectOrderNotify {
+    /** 单据此次动作，创建、更新、取消等 */
+    action: string;
+    /** 国际质检服务单单号 */
+    tmg_inspect_order_no: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2627&docType=9 天猫国际品控质检单开放测试} */
   interface TradeInspectOrderChangeTest {
     /** 测试 */
