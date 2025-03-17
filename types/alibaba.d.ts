@@ -249,7 +249,7 @@ declare namespace Alibaba.Alicom {
   }
 }
 
-/** 阿里健康追溯码 */
+/** 阿里健康 */
 declare namespace Alibaba.Alihealth {
   /** {@link https://open.taobao.com/tmc.htm?docId=1977&docType=9 单据处理状态通知} */
   interface BillProcessStatusNotify {
@@ -976,6 +976,16 @@ declare namespace Alibaba.Csr {
     msg_id: string;
     /** 合作方绑定三小时账户时传递的用户标识 */
     user_account_code: string;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2624&docType=9 精准捐需求状态变更} */
+  interface OpenWorkbenchTargetedInstanceStateChange {
+    /** 需求外部唯一id——机构侧唯一标识 */
+    instance_out_unique_id: string;
+    /** 消息唯一标识 instanceOutUniqueId+"_"+时间戳 */
+    msg_key: string;
+    /** 需求状态 */
+    state: string;
   }
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2594&docType=9 3小时积分捐同步活力值到志愿汇} */

@@ -134,7 +134,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 
 ## 支持的TOPICS
 
-<details><summary>共计 85+ 类别，522+ 消息数</summary>
+<details><summary>共计 84+ 类别，521+ 消息数</summary>
 
 | 类别 | 消息数 |
 | --- | --- |
@@ -213,7 +213,6 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | AE-任务平台消息 | 1 |
 | 天猫汽车 | 5 |
 | 阿信消息通知前台类目 | 6 |
-| 阿里健康追溯码 | 1 |
 | 自动驾驶API | 3 |
 | MMC五盘货项目 | 5 |
 | 银泰开放平台消息 | 3 |

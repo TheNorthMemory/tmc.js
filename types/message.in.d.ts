@@ -96,33 +96,33 @@ declare namespace IncomingMessage {
   type AlibabaAliabsTmallSign = Message & { content?: MessageContent & { topic?: 'alibaba_aliabs_TmallSign', content?: string | Alibaba.Aliabs.TmallSign } };
   /** {@link Alibaba.Alicom.FlowGiftSendNotify 阿里通信 > 阿里通信流量统一营销赠品发放通知} */
   type AlibabaAlicomFlowGiftSendNotify = Message & { content?: MessageContent & { topic?: 'alibaba_alicom_FlowGiftSendNotify', content?: string | Alibaba.Alicom.FlowGiftSendNotify } };
-  /** {@link Alibaba.Alihealth.BillProcessStatusNotify 阿里健康追溯码 > 单据处理状态通知} */
+  /** {@link Alibaba.Alihealth.BillProcessStatusNotify 阿里健康 > 单据处理状态通知} */
   type AlibabaAlihealthBillProcessStatusNotify = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_BillProcessStatusNotify', content?: string | Alibaba.Alihealth.BillProcessStatusNotify } };
-  /** {@link Alibaba.Alihealth.DoctorMessage 阿里健康追溯码 > 医生、服务相关消息} */
+  /** {@link Alibaba.Alihealth.DoctorMessage 阿里健康 > 医生、服务相关消息} */
   type AlibabaAlihealthDoctorMessage = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_DoctorMessage', content?: string | Alibaba.Alihealth.DoctorMessage } };
-  /** {@link Alibaba.Alihealth.MvmBizStatusChange 阿里健康追溯码 > 售药机营业、歇业消息} */
+  /** {@link Alibaba.Alihealth.MvmBizStatusChange 阿里健康 > 售药机营业、歇业消息} */
   type AlibabaAlihealthMvmBizStatusChange = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_MvmBizStatusChange', content?: string | Alibaba.Alihealth.MvmBizStatusChange } };
-  /** {@link Alibaba.Alihealth.MvmInventorySwitch 阿里健康追溯码 > 售药机商品库存切换} */
+  /** {@link Alibaba.Alihealth.MvmInventorySwitch 阿里健康 > 售药机商品库存切换} */
   type AlibabaAlihealthMvmInventorySwitch = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_MvmInventorySwitch', content?: string | Alibaba.Alihealth.MvmInventorySwitch } };
-  /** {@link Alibaba.Alihealth.MvmOrderNotify 阿里健康追溯码 > 接单/拒单/取货成功/取消订单消息通知} */
+  /** {@link Alibaba.Alihealth.MvmOrderNotify 阿里健康 > 接单/拒单/取货成功/取消订单消息通知} */
   type AlibabaAlihealthMvmOrderNotify = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_MvmOrderNotify', content?: string | Alibaba.Alihealth.MvmOrderNotify } };
-  /** {@link Alibaba.Alihealth.MvmOrderOfflineSync 阿里健康追溯码 > 售药机线下订单生成通知} */
+  /** {@link Alibaba.Alihealth.MvmOrderOfflineSync 阿里健康 > 售药机线下订单生成通知} */
   type AlibabaAlihealthMvmOrderOfflineSync = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_MvmOrderOfflineSync', content?: string | Alibaba.Alihealth.MvmOrderOfflineSync } };
-  /** {@link Alibaba.Alihealth.MvmShopBindStatusChange 阿里健康追溯码 > 售药机绑定、解绑} */
+  /** {@link Alibaba.Alihealth.MvmShopBindStatusChange 阿里健康 > 售药机绑定、解绑} */
   type AlibabaAlihealthMvmShopBindStatusChange = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_MvmShopBindStatusChange', content?: string | Alibaba.Alihealth.MvmShopBindStatusChange } };
-  /** {@link Alibaba.Alihealth.MvmUpdateInventory 阿里健康追溯码 > 售药机商品上下架} */
+  /** {@link Alibaba.Alihealth.MvmUpdateInventory 阿里健康 > 售药机商品上下架} */
   type AlibabaAlihealthMvmUpdateInventory = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_MvmUpdateInventory', content?: string | Alibaba.Alihealth.MvmUpdateInventory } };
-  /** {@link Alibaba.Alihealth.NrmopOrderStatusChange 阿里健康追溯码 > 中台订单状态变化推送} */
+  /** {@link Alibaba.Alihealth.NrmopOrderStatusChange 阿里健康 > 中台订单状态变化推送} */
   type AlibabaAlihealthNrmopOrderStatusChange = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_NrmopOrderStatusChange', content?: string | Alibaba.Alihealth.NrmopOrderStatusChange } };
-  /** {@link Alibaba.Alihealth.OrderStatusChange 阿里健康追溯码 > 平台通知三方机构"订单状态变更"} */
+  /** {@link Alibaba.Alihealth.OrderStatusChange 阿里健康 > 平台通知三方机构"订单状态变更"} */
   type AlibabaAlihealthOrderStatusChange = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_OrderStatusChange', content?: string | Alibaba.Alihealth.OrderStatusChange } };
-  /** {@link Alibaba.Alihealth.PrescriptionConfirm 阿里健康追溯码 > 处方平台处方核销消息} */
+  /** {@link Alibaba.Alihealth.PrescriptionConfirm 阿里健康 > 处方平台处方核销消息} */
   type AlibabaAlihealthPrescriptionConfirm = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_PrescriptionConfirm', content?: string | Alibaba.Alihealth.PrescriptionConfirm } };
-  /** {@link Alibaba.Alihealth.TradeOrderStatusChange 阿里健康追溯码 > O2O订单状态变更通知} */
+  /** {@link Alibaba.Alihealth.TradeOrderStatusChange 阿里健康 > O2O订单状态变更通知} */
   type AlibabaAlihealthTradeOrderStatusChange = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_TradeOrderStatusChange', content?: string | Alibaba.Alihealth.TradeOrderStatusChange } };
-  /** {@link Alibaba.Alihealth.TradeVaccineSubscribeChange 阿里健康追溯码 > 疫苗交易预约信息变动} */
+  /** {@link Alibaba.Alihealth.TradeVaccineSubscribeChange 阿里健康 > 疫苗交易预约信息变动} */
   type AlibabaAlihealthTradeVaccineSubscribeChange = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_TradeVaccineSubscribeChange', content?: string | Alibaba.Alihealth.TradeVaccineSubscribeChange } };
-  /** {@link Alibaba.Alihealth.VcRegisterCancel 阿里健康追溯码 > 用户取消订阅缺苗登记同步isv} */
+  /** {@link Alibaba.Alihealth.VcRegisterCancel 阿里健康 > 用户取消订阅缺苗登记同步isv} */
   type AlibabaAlihealthVcRegisterCancel = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_VcRegisterCancel', content?: string | Alibaba.Alihealth.VcRegisterCancel } };
   /** {@link Alibaba.Alink.DeviceDataPush 阿里物联 > 设备数据推送} */
   type AlibabaAlinkDeviceDataPush = Message & { content?: MessageContent & { topic?: 'alibaba_alink_DeviceDataPush', content?: string | Alibaba.Alink.DeviceDataPush } };
@@ -184,6 +184,8 @@ declare namespace IncomingMessage {
   type AlibabaCrowdsourcingMaterial = Message & { content?: MessageContent & { topic?: 'alibaba_crowdsourcing_Material', content?: string | Alibaba.Crowdsourcing.Material } };
   /** {@link Alibaba.Csr.DonatePointSync 三小时公益 > 公益三小时积分捐行为同步} */
   type AlibabaCsrDonatePointSync = Message & { content?: MessageContent & { topic?: 'alibaba_csr_DonatePointSync', content?: string | Alibaba.Csr.DonatePointSync } };
+  /** {@link Alibaba.Csr.OpenWorkbenchTargetedInstanceStateChange 三小时公益 > 精准捐需求状态变更} */
+  type AlibabaCsrOpenWorkbenchTargetedInstanceStateChange = Message & { content?: MessageContent & { topic?: 'alibaba_csr_OpenWorkbenchTargetedInstanceStateChange', content?: string | Alibaba.Csr.OpenWorkbenchTargetedInstanceStateChange } };
   /** {@link Alibaba.Csr.ZhiyuanhuiSyncEnergy 三小时公益 > 3小时积分捐同步活力值到志愿汇} */
   type AlibabaCsrZhiyuanhuiSyncEnergy = Message & { content?: MessageContent & { topic?: 'alibaba_csr_ZhiyuanhuiSyncEnergy', content?: string | Alibaba.Csr.ZhiyuanhuiSyncEnergy } };
   /** {@link Alibaba.Decoration.AidesignFinish 阿里楼盘 > AI设计方案状态变更通知} */
@@ -2475,20 +2477,20 @@ declare namespace IncomingMessage {
    */
   type AlibabaAlicom = AlibabaAlicomFlowGiftSendNotify;
   /**
-   * - {@link AlibabaAlihealthBillProcessStatusNotify 阿里健康追溯码 > 单据处理状态通知}
-   * - {@link AlibabaAlihealthDoctorMessage 阿里健康追溯码 > 医生、服务相关消息}
-   * - {@link AlibabaAlihealthMvmBizStatusChange 阿里健康追溯码 > 售药机营业、歇业消息}
-   * - {@link AlibabaAlihealthMvmInventorySwitch 阿里健康追溯码 > 售药机商品库存切换}
-   * - {@link AlibabaAlihealthMvmOrderNotify 阿里健康追溯码 > 接单/拒单/取货成功/取消订单消息通知}
-   * - {@link AlibabaAlihealthMvmOrderOfflineSync 阿里健康追溯码 > 售药机线下订单生成通知}
-   * - {@link AlibabaAlihealthMvmShopBindStatusChange 阿里健康追溯码 > 售药机绑定、解绑}
-   * - {@link AlibabaAlihealthMvmUpdateInventory 阿里健康追溯码 > 售药机商品上下架}
-   * - {@link AlibabaAlihealthNrmopOrderStatusChange 阿里健康追溯码 > 中台订单状态变化推送}
-   * - {@link AlibabaAlihealthOrderStatusChange 阿里健康追溯码 > 平台通知三方机构"订单状态变更"}
-   * - {@link AlibabaAlihealthPrescriptionConfirm 阿里健康追溯码 > 处方平台处方核销消息}
-   * - {@link AlibabaAlihealthTradeOrderStatusChange 阿里健康追溯码 > O2O订单状态变更通知}
-   * - {@link AlibabaAlihealthTradeVaccineSubscribeChange 阿里健康追溯码 > 疫苗交易预约信息变动}
-   * - {@link AlibabaAlihealthVcRegisterCancel 阿里健康追溯码 > 用户取消订阅缺苗登记同步isv}
+   * - {@link AlibabaAlihealthBillProcessStatusNotify 阿里健康 > 单据处理状态通知}
+   * - {@link AlibabaAlihealthDoctorMessage 阿里健康 > 医生、服务相关消息}
+   * - {@link AlibabaAlihealthMvmBizStatusChange 阿里健康 > 售药机营业、歇业消息}
+   * - {@link AlibabaAlihealthMvmInventorySwitch 阿里健康 > 售药机商品库存切换}
+   * - {@link AlibabaAlihealthMvmOrderNotify 阿里健康 > 接单/拒单/取货成功/取消订单消息通知}
+   * - {@link AlibabaAlihealthMvmOrderOfflineSync 阿里健康 > 售药机线下订单生成通知}
+   * - {@link AlibabaAlihealthMvmShopBindStatusChange 阿里健康 > 售药机绑定、解绑}
+   * - {@link AlibabaAlihealthMvmUpdateInventory 阿里健康 > 售药机商品上下架}
+   * - {@link AlibabaAlihealthNrmopOrderStatusChange 阿里健康 > 中台订单状态变化推送}
+   * - {@link AlibabaAlihealthOrderStatusChange 阿里健康 > 平台通知三方机构"订单状态变更"}
+   * - {@link AlibabaAlihealthPrescriptionConfirm 阿里健康 > 处方平台处方核销消息}
+   * - {@link AlibabaAlihealthTradeOrderStatusChange 阿里健康 > O2O订单状态变更通知}
+   * - {@link AlibabaAlihealthTradeVaccineSubscribeChange 阿里健康 > 疫苗交易预约信息变动}
+   * - {@link AlibabaAlihealthVcRegisterCancel 阿里健康 > 用户取消订阅缺苗登记同步isv}
    */
   type AlibabaAlihealth = AlibabaAlihealthBillProcessStatusNotify
     | AlibabaAlihealthDoctorMessage
@@ -2580,9 +2582,11 @@ declare namespace IncomingMessage {
   type AlibabaCrowdsourcing = AlibabaCrowdsourcingMaterial;
   /**
    * - {@link AlibabaCsrDonatePointSync 三小时公益 > 公益三小时积分捐行为同步}
+   * - {@link AlibabaCsrOpenWorkbenchTargetedInstanceStateChange 三小时公益 > 精准捐需求状态变更}
    * - {@link AlibabaCsrZhiyuanhuiSyncEnergy 三小时公益 > 3小时积分捐同步活力值到志愿汇}
    */
   type AlibabaCsr = AlibabaCsrDonatePointSync
+    | AlibabaCsrOpenWorkbenchTargetedInstanceStateChange
     | AlibabaCsrZhiyuanhuiSyncEnergy;
   /**
    * - {@link AlibabaDecorationAidesignFinish 阿里楼盘 > AI设计方案状态变更通知}
