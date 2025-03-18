@@ -978,6 +978,46 @@ declare namespace Alibaba.Csr {
     user_account_code: string;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2625&docType=9 精准捐需求执行记录同步} */
+  interface OpenWorkbenchTargetedInstanceExecProgress {
+    /** 链接数组 */
+    cover: string;
+    /** 内容 image-图片 */
+    cover_type: string;
+    /** 内容 非必填 */
+    desc: string;
+    /** 认领数量 */
+    exec_count: string;
+    /** 具体执行时间 毫秒时间戳 非必填 */
+    exec_date: string;
+    /** 物流信息 */
+    express_info: string;
+    /** 机构侧需求唯一标识 */
+    instance_out_unique_id: string;
+    /** 执行记录唯一ID */
+    progress_id: string;
+    /** 提供方/执行人 */
+    provider: string;
+    /** 执行记录状态 已寄出-executed */
+    state: string;
+    /** 提交时间 毫秒时间戳 非必填 */
+    submit_time: string;
+    /** 标题 非必填 */
+    title: string;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2626&docType=9 精准捐需求反馈记录状态变更} */
+  interface OpenWorkbenchTargetedInstanceFeedbackStateChange {
+    /** 机构侧反馈唯一ID */
+    feedback_out_unique_id: string;
+    /** 需求外部唯一id——机构侧唯一标识 */
+    instance_out_unique_id: string;
+    /** 消息唯一标识 instanceOutUniqueId+"_"+时间戳 */
+    msg_key: string;
+    /** 反馈状态 审核驳回-auditRefuse 已发布-published 已下线/撤回-retract */
+    state: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2624&docType=9 精准捐需求状态变更} */
   interface OpenWorkbenchTargetedInstanceStateChange {
     /** 需求外部唯一id——机构侧唯一标识 */

@@ -200,6 +200,10 @@ declare interface TaoTopicsDescriptor {
   alibaba_crowdsourcing_Material(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCrowdsourcingMaterial) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaCsrDonatePointSync 三小时公益 > 公益三小时积分捐行为同步} */
   alibaba_csr_DonatePointSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCsrDonatePointSync) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaCsrOpenWorkbenchTargetedInstanceExecProgress 三小时公益 > 精准捐需求执行记录同步} */
+  alibaba_csr_OpenWorkbenchTargetedInstanceExecProgress(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCsrOpenWorkbenchTargetedInstanceExecProgress) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaCsrOpenWorkbenchTargetedInstanceFeedbackStateChange 三小时公益 > 精准捐需求反馈记录状态变更} */
+  alibaba_csr_OpenWorkbenchTargetedInstanceFeedbackStateChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCsrOpenWorkbenchTargetedInstanceFeedbackStateChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaCsrOpenWorkbenchTargetedInstanceStateChange 三小时公益 > 精准捐需求状态变更} */
   alibaba_csr_OpenWorkbenchTargetedInstanceStateChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCsrOpenWorkbenchTargetedInstanceStateChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaCsrZhiyuanhuiSyncEnergy 三小时公益 > 3小时积分捐同步活力值到志愿汇} */
@@ -3375,6 +3379,10 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_crowdsourcing_Material', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCrowdsourcingMaterial) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaCsrDonatePointSync 三小时公益 > 公益三小时积分捐行为同步} */
   on(topic: 'alibaba_csr_DonatePointSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCsrDonatePointSync) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaCsrOpenWorkbenchTargetedInstanceExecProgress 三小时公益 > 精准捐需求执行记录同步} */
+  on(topic: 'alibaba_csr_OpenWorkbenchTargetedInstanceExecProgress', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCsrOpenWorkbenchTargetedInstanceExecProgress) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaCsrOpenWorkbenchTargetedInstanceFeedbackStateChange 三小时公益 > 精准捐需求反馈记录状态变更} */
+  on(topic: 'alibaba_csr_OpenWorkbenchTargetedInstanceFeedbackStateChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCsrOpenWorkbenchTargetedInstanceFeedbackStateChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaCsrOpenWorkbenchTargetedInstanceStateChange 三小时公益 > 精准捐需求状态变更} */
   on(topic: 'alibaba_csr_OpenWorkbenchTargetedInstanceStateChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCsrOpenWorkbenchTargetedInstanceStateChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaCsrZhiyuanhuiSyncEnergy 三小时公益 > 3小时积分捐同步活力值到志愿汇} */

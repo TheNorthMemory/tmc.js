@@ -184,6 +184,10 @@ declare namespace IncomingMessage {
   type AlibabaCrowdsourcingMaterial = Message & { content?: MessageContent & { topic?: 'alibaba_crowdsourcing_Material', content?: string | Alibaba.Crowdsourcing.Material } };
   /** {@link Alibaba.Csr.DonatePointSync 三小时公益 > 公益三小时积分捐行为同步} */
   type AlibabaCsrDonatePointSync = Message & { content?: MessageContent & { topic?: 'alibaba_csr_DonatePointSync', content?: string | Alibaba.Csr.DonatePointSync } };
+  /** {@link Alibaba.Csr.OpenWorkbenchTargetedInstanceExecProgress 三小时公益 > 精准捐需求执行记录同步} */
+  type AlibabaCsrOpenWorkbenchTargetedInstanceExecProgress = Message & { content?: MessageContent & { topic?: 'alibaba_csr_OpenWorkbenchTargetedInstanceExecProgress', content?: string | Alibaba.Csr.OpenWorkbenchTargetedInstanceExecProgress } };
+  /** {@link Alibaba.Csr.OpenWorkbenchTargetedInstanceFeedbackStateChange 三小时公益 > 精准捐需求反馈记录状态变更} */
+  type AlibabaCsrOpenWorkbenchTargetedInstanceFeedbackStateChange = Message & { content?: MessageContent & { topic?: 'alibaba_csr_OpenWorkbenchTargetedInstanceFeedbackStateChange', content?: string | Alibaba.Csr.OpenWorkbenchTargetedInstanceFeedbackStateChange } };
   /** {@link Alibaba.Csr.OpenWorkbenchTargetedInstanceStateChange 三小时公益 > 精准捐需求状态变更} */
   type AlibabaCsrOpenWorkbenchTargetedInstanceStateChange = Message & { content?: MessageContent & { topic?: 'alibaba_csr_OpenWorkbenchTargetedInstanceStateChange', content?: string | Alibaba.Csr.OpenWorkbenchTargetedInstanceStateChange } };
   /** {@link Alibaba.Csr.ZhiyuanhuiSyncEnergy 三小时公益 > 3小时积分捐同步活力值到志愿汇} */
@@ -2582,10 +2586,14 @@ declare namespace IncomingMessage {
   type AlibabaCrowdsourcing = AlibabaCrowdsourcingMaterial;
   /**
    * - {@link AlibabaCsrDonatePointSync 三小时公益 > 公益三小时积分捐行为同步}
+   * - {@link AlibabaCsrOpenWorkbenchTargetedInstanceExecProgress 三小时公益 > 精准捐需求执行记录同步}
+   * - {@link AlibabaCsrOpenWorkbenchTargetedInstanceFeedbackStateChange 三小时公益 > 精准捐需求反馈记录状态变更}
    * - {@link AlibabaCsrOpenWorkbenchTargetedInstanceStateChange 三小时公益 > 精准捐需求状态变更}
    * - {@link AlibabaCsrZhiyuanhuiSyncEnergy 三小时公益 > 3小时积分捐同步活力值到志愿汇}
    */
   type AlibabaCsr = AlibabaCsrDonatePointSync
+    | AlibabaCsrOpenWorkbenchTargetedInstanceExecProgress
+    | AlibabaCsrOpenWorkbenchTargetedInstanceFeedbackStateChange
     | AlibabaCsrOpenWorkbenchTargetedInstanceStateChange
     | AlibabaCsrZhiyuanhuiSyncEnergy;
   /**
