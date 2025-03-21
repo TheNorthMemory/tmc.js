@@ -1012,8 +1012,10 @@ declare namespace Alibaba.Csr {
     feedback_out_unique_id: string;
     /** 需求外部唯一id——机构侧唯一标识 */
     instance_out_unique_id: string;
-    /** 消息唯一标识 instanceOutUniqueId+"_"+时间戳 */
+    /** 消息唯一标识 instanceId+"_"+时间戳 */
     msg_key: string;
+    /** 通过/驳回原因 */
+    reason?: string;
     /** 反馈状态 审核驳回-auditRefuse 已发布-published 已下线/撤回-retract */
     state: string;
   }
@@ -1024,6 +1026,8 @@ declare namespace Alibaba.Csr {
     instance_out_unique_id: string;
     /** 消息唯一标识 instanceOutUniqueId+"_"+时间戳 */
     msg_key: string;
+    /** 需求通过/驳回原因 */
+    reason?: string;
     /** 需求状态 */
     state: string;
   }
