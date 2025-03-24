@@ -1168,6 +1168,8 @@ declare namespace IncomingMessage {
   type IdleTopisvRefundNotice = Message & { content?: MessageContent & { topic?: 'idle_topisv_RefundNotice', content?: string | Idle.Topisv.RefundNotice } };
   /** {@link Idle.Topisv.TradeNotice 闲鱼已验货 > 闲鱼开放平台-订单变更消息通知} */
   type IdleTopisvTradeNotice = Message & { content?: MessageContent & { topic?: 'idle_topisv_TradeNotice', content?: string | Idle.Topisv.TradeNotice } };
+  /** {@link Idle.Trade.AddressModify 闲鱼回收商消息 > 买家修改地址通知卖家} */
+  type IdleTradeAddressModify = Message & { content?: MessageContent & { topic?: 'idle_trade_AddressModify', content?: string | Idle.Trade.AddressModify } };
   /** {@link Idle.Tranferpay.OrderChange 闲鱼 > 直接转账交易消息} */
   type IdleTranferpayOrderChange = Message & { content?: MessageContent & { topic?: 'idle_tranferpay_OrderChange', content?: string | Idle.Tranferpay.OrderChange } };
   /** {@link Idle.Twjd.OrderSyn 闲鱼 > 闲鱼图文鉴定业务订单消息} */
@@ -3887,6 +3889,10 @@ declare namespace IncomingMessage {
     | IdleTopisvRefundNotice
     | IdleTopisvTradeNotice;
   /**
+   * - {@link IdleTradeAddressModify 闲鱼回收商消息 > 买家修改地址通知卖家}
+   */
+  type IdleTrade = IdleTradeAddressModify;
+  /**
    * - {@link IdleTranferpayOrderChange 闲鱼 > 直接转账交易消息}
    */
   type IdleTranferpay = IdleTranferpayOrderChange;
@@ -5893,6 +5899,7 @@ declare namespace IncomingMessage {
    * - {@link IdleNewoutlets}
    * - {@link IdleRecycle}
    * - {@link IdleTopisv}
+   * - {@link IdleTrade}
    * - {@link IdleTranferpay}
    * - {@link IdleTwjd}
    */
@@ -5908,6 +5915,7 @@ declare namespace IncomingMessage {
     | IdleNewoutlets
     | IdleRecycle
     | IdleTopisv
+    | IdleTrade
     | IdleTranferpay
     | IdleTwjd;
   /**

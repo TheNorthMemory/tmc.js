@@ -330,6 +330,23 @@ declare namespace Idle.Topisv {
   }
 }
 
+/** 闲鱼回收商消息 */
+declare namespace Idle.Trade {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2632&docType=9 买家修改地址通知卖家} */
+  interface AddressModify {
+    /** 订单ID */
+    biz_order_id: string;
+    /** 通知事件类型：BUYER_APPLY买家申请，SELLER_AGREE卖家同意，SELLER_REFUSE卖家拒绝 */
+    event: string;
+    /** 用户修改的地址 */
+    modify_address?: string;
+    /** 用户原来的地址 */
+    origin_address?: string;
+    /** 卖家Id */
+    seller_id: string;
+  }
+}
+
 /** 闲鱼 */
 declare namespace Idle.Tranferpay {
   /** {@link https://open.taobao.com/tmc.htm?docId=1840&docType=9 直接转账交易消息} */
