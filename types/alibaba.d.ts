@@ -987,21 +987,21 @@ declare namespace Alibaba.Csr {
     /** 内容 非必填 */
     desc: string;
     /** 认领数量 */
-    exec_count: string;
-    /** 具体执行时间 毫秒时间戳 非必填 */
-    exec_date: string;
+    exec_count: number;
     /** 物流信息 */
     express_info: string;
     /** 机构侧需求唯一标识 */
     instance_out_unique_id: string;
     /** 执行记录唯一ID */
-    progress_id: string;
+    progress_id: number;
+    /** 具体执行时间 毫秒时间戳 非必填 */
+    progress_time: number;
     /** 提供方/执行人 */
     provider: string;
     /** 执行记录状态 已寄出-executed */
     state: string;
     /** 提交时间 毫秒时间戳 非必填 */
-    submit_time: string;
+    submit_time: number;
     /** 标题 非必填 */
     title: string;
   }
