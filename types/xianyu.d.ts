@@ -161,8 +161,12 @@ declare namespace Xianyu.Fishmarket {
 declare namespace Xianyu.Hjbt {
   /** {@link https://open.taobao.com/tmc.htm?docId=2600&docType=9 换机补贴打款消息} */
   interface PaymentStatus {
+    /** 业务类型 */
+    biz_type: string;
     /** 成交金额 */
     deal_amount: number;
+    /** 操作类型 */
+    opera_type: string;
     /** 订单ID */
     order_id: string;
     /** 补贴金额 */
