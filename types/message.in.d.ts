@@ -1722,6 +1722,8 @@ declare namespace IncomingMessage {
   type TaobaoPaimaiOrderCreate = Message & { content?: MessageContent & { topic?: 'taobao_paimai_OrderCreate', content?: string | Taobao.Paimai.OrderCreate } };
   /** {@link Taobao.Paimai.OrderPaid 淘宝 > 二手车xpos订单支付完成消息} */
   type TaobaoPaimaiOrderPaid = Message & { content?: MessageContent & { topic?: 'taobao_paimai_OrderPaid', content?: string | Taobao.Paimai.OrderPaid } };
+  /** {@link Taobao.Pc.ItemChange 淘宝企业购 > 商品变更消息} */
+  type TaobaoPcItemChange = Message & { content?: MessageContent & { topic?: 'taobao_pc_ItemChange', content?: string | Taobao.Pc.ItemChange } };
   /** {@link Taobao.Profit.ResultNotify 淘宝 > 权益领取结果通知} */
   type TaobaoProfitResultNotify = Message & { content?: MessageContent & { topic?: 'taobao_profit_ResultNotify', content?: string | Taobao.Profit.ResultNotify } };
   /** {@link Taobao.Punish.Forall 淘宝 > 淘宝处罚消息} */
@@ -4591,6 +4593,10 @@ declare namespace IncomingMessage {
     | TaobaoPaimaiOrderCreate
     | TaobaoPaimaiOrderPaid;
   /**
+   * - {@link TaobaoPcItemChange 淘宝企业购 > 商品变更消息}
+   */
+  type TaobaoPc = TaobaoPcItemChange;
+  /**
    * - {@link TaobaoProfitResultNotify 淘宝 > 权益领取结果通知}
    */
   type TaobaoProfit = TaobaoProfitResultNotify;
@@ -6012,6 +6018,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoOpentrade}
    * - {@link TaobaoOs}
    * - {@link TaobaoPaimai}
+   * - {@link TaobaoPc}
    * - {@link TaobaoProfit}
    * - {@link TaobaoPunish}
    * - {@link TaobaoQianniu}
@@ -6124,6 +6131,7 @@ declare namespace IncomingMessage {
     | TaobaoOpentrade
     | TaobaoOs
     | TaobaoPaimai
+    | TaobaoPc
     | TaobaoProfit
     | TaobaoPunish
     | TaobaoQianniu

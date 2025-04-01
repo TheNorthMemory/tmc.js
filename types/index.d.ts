@@ -1738,6 +1738,8 @@ declare interface TaoTopicsDescriptor {
   taobao_paimai_OrderCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPaimaiOrderCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPaimaiOrderPaid 淘宝 > 二手车xpos订单支付完成消息} */
   taobao_paimai_OrderPaid(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPaimaiOrderPaid) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoPcItemChange 淘宝企业购 > 商品变更消息} */
+  taobao_pc_ItemChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcItemChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoProfitResultNotify 淘宝 > 权益领取结果通知} */
   taobao_profit_ResultNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoProfitResultNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPunishForall 淘宝 > 淘宝处罚消息} */
@@ -2932,6 +2934,8 @@ declare interface TaoTopicsDescriptor {
   taobao_os(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOs) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPaimai} */
   taobao_paimai(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPaimai) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoPc} */
+  taobao_pc(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPc) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoProfit} */
   taobao_profit(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoProfit) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPunish} */
@@ -4921,6 +4925,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_paimai_OrderCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPaimaiOrderCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPaimaiOrderPaid 淘宝 > 二手车xpos订单支付完成消息} */
   on(topic: 'taobao_paimai_OrderPaid', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPaimaiOrderPaid) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoPcItemChange 淘宝企业购 > 商品变更消息} */
+  on(topic: 'taobao_pc_ItemChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcItemChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoProfitResultNotify 淘宝 > 权益领取结果通知} */
   on(topic: 'taobao_profit_ResultNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoProfitResultNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPunishForall 淘宝 > 淘宝处罚消息} */
@@ -6115,6 +6121,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_os', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOs) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPaimai} */
   on(topic: 'taobao_paimai', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPaimai) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoPc} */
+  on(topic: 'taobao_pc', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPc) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoProfit} */
   on(topic: 'taobao_profit', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoProfit) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPunish} */

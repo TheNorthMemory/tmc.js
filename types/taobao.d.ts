@@ -4197,6 +4197,23 @@ declare namespace Taobao.Paimai {
   }
 }
 
+/** 淘宝企业购 */
+declare namespace Taobao.Pc {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2633&docType=9 商品变更消息} */
+  interface ItemChange {
+    /** 变更企业购商品ID */
+    ego_item_id: number;
+    /** 消息ID */
+    msg_id: string;
+    /** 项目ID */
+    project_id: number;
+    /** 变更时间 */
+    time: number;
+    /** 变更类型，ADD：商品新增，DELETE：商品删除，DOWN_SHELF：商品下架，UP_SHELF：商品上架，EDIT：商品信息变更 */
+    type: string;
+  }
+}
+
 /** 淘宝 */
 declare namespace Taobao.Profit {
   /** {@link https://open.taobao.com/tmc.htm?docId=1190&docType=9 权益领取结果通知} */
