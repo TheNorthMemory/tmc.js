@@ -16,6 +16,51 @@ declare namespace Fliggy.Btrip {
 }
 
 /** 飞猪 */
+declare namespace Fliggy.Flight {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2636&docType=9 飞猪机票商家货品优势变更通知} */
+  interface AdvOfferChangeNotify {
+    /** 产品码 */
+    apc_code: string;
+    /** 到达机场 */
+    arr_airport: string;
+    /** 到达城市 */
+    arr_city: string;
+    /** 舱等 0头等 1商务 2经济 */
+    cabin_class: number;
+    /** 是否共享航班 0否 1是 */
+    code_share: string;
+    /** 出发机场 */
+    dep_airport: string;
+    /** 出发城市 */
+    dep_city: string;
+    /** 航班日期 */
+    flight_date: string;
+    /** 货品标识，不含航班日期 */
+    key: string;
+    /** 市场航司 */
+    marketing_airline: string;
+    /** 市场航班号 */
+    marketing_flight_no: string;
+    /** 报价信息 */
+    offer: string;
+    /** 承运航司 */
+    operate_airline: string;
+    /** 承运航班号 */
+    operate_flight_no: string;
+    /** 行程类型 */
+    route_type: number;
+    /** 中转机场 */
+    transit_airport: string;
+    /** 中转城市 */
+    transit_city: string;
+    /** 航程类型 0单程 1往返 */
+    trip_type: number;
+    /** 是否共享出主飞 0否 1是 */
+    use_operate: number;
+  }
+}
+
+/** 飞猪 */
 declare namespace Fliggy.Interact {
   /** {@link https://open.taobao.com/tmc.htm?docId=1932&docType=9 飞猪互动海豚事件产生} */
   interface HaitunEventCreate {

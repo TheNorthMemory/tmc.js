@@ -134,7 +134,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 
 ## 支持的TOPICS
 
-<details><summary>共计 84+ 类别，522+ 消息数</summary>
+<details><summary>共计 84+ 类别，524+ 消息数</summary>
 
 | 类别 | 消息数 |
 | --- | --- |
@@ -166,9 +166,9 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | 阿里物联 | 2 |
 | 全球购跨境物流 | 1 |
 | 零售plus | 8 |
-| 客户运营平台API | 19 |
+| 客户运营平台API | 20 |
 | AE-交易 | 10 |
-| 五道口配送 | 5 |
+| 五道口配送 | 6 |
 | 百川 | 2 |
 | 闲鱼 | 27 |
 | 闲鱼回收商消息 | 8 |

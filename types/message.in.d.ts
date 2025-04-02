@@ -1046,10 +1046,14 @@ declare namespace IncomingMessage {
   type EleEnterprisePushOrderDetail = Message & { content?: MessageContent & { topic?: 'ele_enterprise_PushOrderDetail', content?: string | Ele.Enterprise.PushOrderDetail } };
   /** {@link Eleme.Bankstatement.Get 饿了么 > 饿了么银行流水对接} */
   type ElemeBankstatementGet = Message & { content?: MessageContent & { topic?: 'eleme_bankstatement_Get', content?: string | Eleme.Bankstatement.Get } };
+  /** {@link Eleme.Fulfill.ModifyOrderLabour 五道口配送 > 骑手变更消息通知} */
+  type ElemeFulfillModifyOrderLabour = Message & { content?: MessageContent & { topic?: 'eleme_fulfill_ModifyOrderLabour', content?: string | Eleme.Fulfill.ModifyOrderLabour } };
   /** {@link Eleme.Retail.PosOrderMessage 饿了么 > 饿了么零售智慧菜场订单状态消息} */
   type ElemeRetailPosOrderMessage = Message & { content?: MessageContent & { topic?: 'eleme_retail_PosOrderMessage', content?: string | Eleme.Retail.PosOrderMessage } };
   /** {@link Fliggy.Btrip.HotelDistributionOrderChange 商旅API > 订单状态变化} */
   type FliggyBtripHotelDistributionOrderChange = Message & { content?: MessageContent & { topic?: 'fliggy_btrip_HotelDistributionOrderChange', content?: string | Fliggy.Btrip.HotelDistributionOrderChange } };
+  /** {@link Fliggy.Flight.AdvOfferChangeNotify 飞猪 > 飞猪机票商家货品优势变更通知} */
+  type FliggyFlightAdvOfferChangeNotify = Message & { content?: MessageContent & { topic?: 'fliggy_flight_AdvOfferChangeNotify', content?: string | Fliggy.Flight.AdvOfferChangeNotify } };
   /** {@link Fliggy.Interact.HaitunEventCreate 飞猪 > 飞猪互动海豚事件产生} */
   type FliggyInteractHaitunEventCreate = Message & { content?: MessageContent & { topic?: 'fliggy_interact_HaitunEventCreate', content?: string | Fliggy.Interact.HaitunEventCreate } };
   /** {@link Fliggy.Jipiao.FlightChange 淘宝机票 > 航变消息服务} */
@@ -1818,6 +1822,8 @@ declare namespace IncomingMessage {
   type TaobaoSmartappTableSync = Message & { content?: MessageContent & { topic?: 'taobao_smartapp_TableSync', content?: string | Taobao.Smartapp.TableSync } };
   /** {@link Taobao.Smartapp.WorktableRecord 平台消息 > 智能应用工作表数据操作消息} */
   type TaobaoSmartappWorktableRecord = Message & { content?: MessageContent & { topic?: 'taobao_smartapp_WorktableRecord', content?: string | Taobao.Smartapp.WorktableRecord } };
+  /** {@link Taobao.Smartcall.Receipt 客户运营平台API > 智能外呼回执} */
+  type TaobaoSmartcallReceipt = Message & { content?: MessageContent & { topic?: 'taobao_smartcall_Receipt', content?: string | Taobao.Smartcall.Receipt } };
   /** {@link Taobao.Smartmall.ItemAssigned 淘宝 > 商品已分配消息} */
   type TaobaoSmartmallItemAssigned = Message & { content?: MessageContent & { topic?: 'taobao_smartmall_ItemAssigned', content?: string | Taobao.Smartmall.ItemAssigned } };
   /** {@link Taobao.Smartmall.Logistic 淘宝 > 发货物流通知} */
@@ -3697,6 +3703,10 @@ declare namespace IncomingMessage {
    */
   type ElemeBankstatement = ElemeBankstatementGet;
   /**
+   * - {@link ElemeFulfillModifyOrderLabour 五道口配送 > 骑手变更消息通知}
+   */
+  type ElemeFulfill = ElemeFulfillModifyOrderLabour;
+  /**
    * - {@link ElemeRetailPosOrderMessage 饿了么 > 饿了么零售智慧菜场订单状态消息}
    */
   type ElemeRetail = ElemeRetailPosOrderMessage;
@@ -3704,6 +3714,10 @@ declare namespace IncomingMessage {
    * - {@link FliggyBtripHotelDistributionOrderChange 商旅API > 订单状态变化}
    */
   type FliggyBtrip = FliggyBtripHotelDistributionOrderChange;
+  /**
+   * - {@link FliggyFlightAdvOfferChangeNotify 飞猪 > 飞猪机票商家货品优势变更通知}
+   */
+  type FliggyFlight = FliggyFlightAdvOfferChangeNotify;
   /**
    * - {@link FliggyInteractHaitunEventCreate 飞猪 > 飞猪互动海豚事件产生}
    */
@@ -4716,6 +4730,10 @@ declare namespace IncomingMessage {
     | TaobaoSmartappSendMsg
     | TaobaoSmartappTableSync
     | TaobaoSmartappWorktableRecord;
+  /**
+   * - {@link TaobaoSmartcallReceipt 客户运营平台API > 智能外呼回执}
+   */
+  type TaobaoSmartcall = TaobaoSmartcallReceipt;
   /**
    * - {@link TaobaoSmartmallItemAssigned 淘宝 > 商品已分配消息}
    * - {@link TaobaoSmartmallLogistic 淘宝 > 发货物流通知}
@@ -5826,12 +5844,15 @@ declare namespace IncomingMessage {
   type Ele = EleEnterprise;
   /**
    * - {@link ElemeBankstatement}
+   * - {@link ElemeFulfill}
    * - {@link ElemeRetail}
    */
   type Eleme = ElemeBankstatement
+    | ElemeFulfill
     | ElemeRetail;
   /**
    * - {@link FliggyBtrip}
+   * - {@link FliggyFlight}
    * - {@link FliggyInteract}
    * - {@link FliggyJipiao}
    * - {@link FliggyMember}
@@ -5842,6 +5863,7 @@ declare namespace IncomingMessage {
    * - {@link FliggyXhotel}
    */
   type Fliggy = FliggyBtrip
+    | FliggyFlight
     | FliggyInteract
     | FliggyJipiao
     | FliggyMember
@@ -6032,6 +6054,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoShoptransfer}
    * - {@link TaobaoSinian}
    * - {@link TaobaoSmartapp}
+   * - {@link TaobaoSmartcall}
    * - {@link TaobaoSmartmall}
    * - {@link TaobaoSupp}
    * - {@link TaobaoSurvey}
@@ -6145,6 +6168,7 @@ declare namespace IncomingMessage {
     | TaobaoShoptransfer
     | TaobaoSinian
     | TaobaoSmartapp
+    | TaobaoSmartcall
     | TaobaoSmartmall
     | TaobaoSupp
     | TaobaoSurvey

@@ -59,6 +59,31 @@ declare namespace Eleme.Bankstatement {
   }
 }
 
+/** 五道口配送 */
+declare namespace Eleme.Fulfill {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2634&docType=9 骑手变更消息通知} */
+  interface ModifyOrderLabour {
+    /** 批次id */
+    batch_id: string;
+    /** 变更列表json格式 */
+    change_list: string;
+    /** 骑手ID */
+    deliverer_id: string;
+    /** 名称，脱敏 */
+    deliverer_name: string;
+    /** 电话，脱敏 */
+    deliverer_phone: string;
+    /** 配送站code */
+    delivery_dock_code: string;
+    /** 履约单id */
+    fulfill_order_id: string;
+    /** 外部订单id */
+    out_order_id: string;
+    /** 变更时间 */
+    timestamp: Date | number | string;
+  }
+}
+
 /** 饿了么 */
 declare namespace Eleme.Retail {
   /** {@link https://open.taobao.com/tmc.htm?docId=1783&docType=9 饿了么零售智慧菜场订单状态消息} */

@@ -1062,10 +1062,14 @@ declare interface TaoTopicsDescriptor {
   ele_enterprise_PushOrderDetail(fn: (this: TaoMessageConsumer, message: IncomingMessage.EleEnterprisePushOrderDetail) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.ElemeBankstatementGet 饿了么 > 饿了么银行流水对接} */
   eleme_bankstatement_Get(fn: (this: TaoMessageConsumer, message: IncomingMessage.ElemeBankstatementGet) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.ElemeFulfillModifyOrderLabour 五道口配送 > 骑手变更消息通知} */
+  eleme_fulfill_ModifyOrderLabour(fn: (this: TaoMessageConsumer, message: IncomingMessage.ElemeFulfillModifyOrderLabour) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.ElemeRetailPosOrderMessage 饿了么 > 饿了么零售智慧菜场订单状态消息} */
   eleme_retail_PosOrderMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.ElemeRetailPosOrderMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyBtripHotelDistributionOrderChange 商旅API > 订单状态变化} */
   fliggy_btrip_HotelDistributionOrderChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyBtripHotelDistributionOrderChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FliggyFlightAdvOfferChangeNotify 飞猪 > 飞猪机票商家货品优势变更通知} */
+  fliggy_flight_AdvOfferChangeNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyFlightAdvOfferChangeNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyInteractHaitunEventCreate 飞猪 > 飞猪互动海豚事件产生} */
   fliggy_interact_HaitunEventCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyInteractHaitunEventCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyJipiaoFlightChange 淘宝机票 > 航变消息服务} */
@@ -1834,6 +1838,8 @@ declare interface TaoTopicsDescriptor {
   taobao_smartapp_TableSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartappTableSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSmartappWorktableRecord 平台消息 > 智能应用工作表数据操作消息} */
   taobao_smartapp_WorktableRecord(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartappWorktableRecord) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoSmartcallReceipt 客户运营平台API > 智能外呼回执} */
+  taobao_smartcall_Receipt(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartcallReceipt) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSmartmallItemAssigned 淘宝 > 商品已分配消息} */
   taobao_smartmall_ItemAssigned(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartmallItemAssigned) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSmartmallLogistic 淘宝 > 发货物流通知} */
@@ -2714,10 +2720,14 @@ declare interface TaoTopicsDescriptor {
   ele_enterprise(fn: (this: TaoMessageConsumer, message: IncomingMessage.EleEnterprise) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.ElemeBankstatement} */
   eleme_bankstatement(fn: (this: TaoMessageConsumer, message: IncomingMessage.ElemeBankstatement) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.ElemeFulfill} */
+  eleme_fulfill(fn: (this: TaoMessageConsumer, message: IncomingMessage.ElemeFulfill) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.ElemeRetail} */
   eleme_retail(fn: (this: TaoMessageConsumer, message: IncomingMessage.ElemeRetail) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyBtrip} */
   fliggy_btrip(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyBtrip) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FliggyFlight} */
+  fliggy_flight(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyFlight) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyInteract} */
   fliggy_interact(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyInteract) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyJipiao} */
@@ -2962,6 +2972,8 @@ declare interface TaoTopicsDescriptor {
   taobao_sinian(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSinian) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSmartapp} */
   taobao_smartapp(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartapp) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoSmartcall} */
+  taobao_smartcall(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartcall) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSmartmall} */
   taobao_smartmall(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartmall) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSupp} */
@@ -4249,10 +4261,14 @@ declare interface TaoEventsListener {
   on(topic: 'ele_enterprise_PushOrderDetail', listener: (this: TaoMessageConsumer, message: IncomingMessage.EleEnterprisePushOrderDetail) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.ElemeBankstatementGet 饿了么 > 饿了么银行流水对接} */
   on(topic: 'eleme_bankstatement_Get', listener: (this: TaoMessageConsumer, message: IncomingMessage.ElemeBankstatementGet) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.ElemeFulfillModifyOrderLabour 五道口配送 > 骑手变更消息通知} */
+  on(topic: 'eleme_fulfill_ModifyOrderLabour', listener: (this: TaoMessageConsumer, message: IncomingMessage.ElemeFulfillModifyOrderLabour) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.ElemeRetailPosOrderMessage 饿了么 > 饿了么零售智慧菜场订单状态消息} */
   on(topic: 'eleme_retail_PosOrderMessage', listener: (this: TaoMessageConsumer, message: IncomingMessage.ElemeRetailPosOrderMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyBtripHotelDistributionOrderChange 商旅API > 订单状态变化} */
   on(topic: 'fliggy_btrip_HotelDistributionOrderChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyBtripHotelDistributionOrderChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FliggyFlightAdvOfferChangeNotify 飞猪 > 飞猪机票商家货品优势变更通知} */
+  on(topic: 'fliggy_flight_AdvOfferChangeNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyFlightAdvOfferChangeNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyInteractHaitunEventCreate 飞猪 > 飞猪互动海豚事件产生} */
   on(topic: 'fliggy_interact_HaitunEventCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyInteractHaitunEventCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyJipiaoFlightChange 淘宝机票 > 航变消息服务} */
@@ -5021,6 +5037,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_smartapp_TableSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartappTableSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSmartappWorktableRecord 平台消息 > 智能应用工作表数据操作消息} */
   on(topic: 'taobao_smartapp_WorktableRecord', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartappWorktableRecord) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoSmartcallReceipt 客户运营平台API > 智能外呼回执} */
+  on(topic: 'taobao_smartcall_Receipt', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartcallReceipt) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSmartmallItemAssigned 淘宝 > 商品已分配消息} */
   on(topic: 'taobao_smartmall_ItemAssigned', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartmallItemAssigned) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSmartmallLogistic 淘宝 > 发货物流通知} */
@@ -5901,10 +5919,14 @@ declare interface TaoEventsListener {
   on(topic: 'ele_enterprise', listener: (this: TaoMessageConsumer, message: IncomingMessage.EleEnterprise) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.ElemeBankstatement} */
   on(topic: 'eleme_bankstatement', listener: (this: TaoMessageConsumer, message: IncomingMessage.ElemeBankstatement) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.ElemeFulfill} */
+  on(topic: 'eleme_fulfill', listener: (this: TaoMessageConsumer, message: IncomingMessage.ElemeFulfill) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.ElemeRetail} */
   on(topic: 'eleme_retail', listener: (this: TaoMessageConsumer, message: IncomingMessage.ElemeRetail) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyBtrip} */
   on(topic: 'fliggy_btrip', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyBtrip) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FliggyFlight} */
+  on(topic: 'fliggy_flight', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyFlight) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyInteract} */
   on(topic: 'fliggy_interact', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyInteract) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyJipiao} */
@@ -6149,6 +6171,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_sinian', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSinian) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSmartapp} */
   on(topic: 'taobao_smartapp', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartapp) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoSmartcall} */
+  on(topic: 'taobao_smartcall', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartcall) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSmartmall} */
   on(topic: 'taobao_smartmall', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartmall) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSupp} */

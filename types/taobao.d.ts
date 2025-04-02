@@ -4917,6 +4917,51 @@ declare namespace Taobao.Smartapp {
   }
 }
 
+/** 客户运营平台API */
+declare namespace Taobao.Smartcall {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2635&docType=9 智能外呼回执} */
+  interface Receipt {
+    /** 接通时间 */
+    answer_time?: string;
+    /** appkey */
+    appkey: string;
+    /** 线路通话时长，单位为毫秒 */
+    bill?: number;
+    /** AI通话时长, 单位为秒 */
+    callout_duration?: string;
+    /** 开始拨号时间 */
+    call_begin_time?: string;
+    /** 外呼id */
+    call_id: string;
+    /** 失败原因 */
+    error_msg?: string;
+    /** 线路ID */
+    gateway_id?: string;
+    /** 通话挂断时间 */
+    hangup_time?: string;
+    /** 拦截原因 */
+    intercept_reason?: string;
+    /** oaid, 圈人规则为oaid圈人时透出 */
+    order_id?: string;
+    /** ouid, 圈人规则为ouid圈人时透出 */
+    ouid?: string;
+    /** 外部（ISV）实例ID */
+    out_biz_id: number;
+    /** 商家id */
+    seller_id: number;
+    /** 外呼状态编码 */
+    status_code?: number;
+    /** 外呼状态，如“已接听”“拒接” */
+    status_description?: string;
+    /** 是否成功 */
+    success: boolean;
+    /** 外呼任务id */
+    task_id: number;
+    /** 话术模版id */
+    template_id: number;
+  }
+}
+
 /** 淘宝 */
 declare namespace Taobao.Smartmall {
   /** {@link https://open.taobao.com/tmc.htm?docId=1614&docType=9 商品已分配消息} */
