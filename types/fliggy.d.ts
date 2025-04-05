@@ -19,34 +19,52 @@ declare namespace Fliggy.Btrip {
 declare namespace Fliggy.Flight {
   /** {@link https://open.taobao.com/tmc.htm?docId=2636&docType=9 飞猪机票商家货品优势变更通知} */
   interface AdvOfferChangeNotify {
+    /** 当前优势舱位 */
+    adv_cabin: string;
+    /** 当前优势报价 */
+    adv_price: number;
+    /** 店铺id */
+    agent_id: number;
     /** 产品码 */
     apc_code: string;
     /** 到达机场 */
     arr_airport: string;
     /** 到达城市 */
     arr_city: string;
+    /** 舱位 */
+    cabin: string;
     /** 舱等 0头等 1商务 2经济 */
     cabin_class: number;
+    /** 直连报价的渠道id */
+    channel_id?: number;
     /** 是否共享航班 0否 1是 */
     code_share: string;
     /** 出发机场 */
     dep_airport: string;
     /** 出发城市 */
     dep_city: string;
+    /** 价差 */
+    diff_price: number;
     /** 航班日期 */
     flight_date: string;
+    /** 商家自己的底价 */
+    floor_price: number;
     /** 货品标识，不含航班日期 */
     key: string;
     /** 市场航司 */
     marketing_airline: string;
     /** 市场航班号 */
     marketing_flight_no: string;
-    /** 报价信息 */
-    offer: string;
     /** 承运航司 */
     operate_airline: string;
     /** 承运航班号 */
     operate_flight_no: string;
+    /** 政策代码 */
+    policy_code?: string;
+    /** 政策id */
+    policy_id?: number;
+    /** 商家政策类型，大卖家无政策类型 国内：0普通 1特殊 2规则 */
+    policy_type?: number;
     /** 行程类型 */
     route_type: number;
     /** 中转机场 */
