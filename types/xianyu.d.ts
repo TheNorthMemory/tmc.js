@@ -81,6 +81,21 @@ declare namespace Xianyu.Cco {
 }
 
 /** 闲鱼 */
+declare namespace Xianyu.Coin {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2637&docType=9 闲鱼币交易抵扣变更消息} */
+  interface CoinDeductionChange {
+    /** 商品id */
+    biz_item_id: number;
+    /** 开通标识，1:开通，0关闭 */
+    deduction_flag: string;
+    /** 是否为新版优推抵扣，1: 优推抵扣，0或者null，不是优推抵扣 */
+    deduction_version: string;
+    /** 闲鱼卖家id */
+    seller_id: number;
+  }
+}
+
+/** 闲鱼 */
 declare namespace Xianyu.Ctox {
   /** {@link https://open.taobao.com/tmc.htm?docId=2564&docType=9 闲鱼C2X抽佣退佣消息同步} */
   interface CommissionStateSyn {

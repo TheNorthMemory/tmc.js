@@ -2392,6 +2392,8 @@ declare interface TaoTopicsDescriptor {
   xianyu_car_OrderStatusSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCarOrderStatusSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuCcoComplain 闲鱼 > 闲鱼投诉消息} */
   xianyu_cco_Complain(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCcoComplain) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.XianyuCoinCoinDeductionChange 闲鱼 > 闲鱼币交易抵扣变更消息} */
+  xianyu_coin_CoinDeductionChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCoinCoinDeductionChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuCtoxCommissionStateSyn 闲鱼 > 闲鱼C2X抽佣退佣消息同步} */
   xianyu_ctox_CommissionStateSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCtoxCommissionStateSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuCtoxPayDkChange 闲鱼 > c2x代扣协议变更通知} */
@@ -3132,6 +3134,8 @@ declare interface TaoTopicsDescriptor {
   xianyu_car(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCar) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuCco} */
   xianyu_cco(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCco) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.XianyuCoin} */
+  xianyu_coin(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCoin) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuCtox} */
   xianyu_ctox(fn: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCtox) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuEnvironment} */
@@ -5591,6 +5595,8 @@ declare interface TaoEventsListener {
   on(topic: 'xianyu_car_OrderStatusSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCarOrderStatusSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuCcoComplain 闲鱼 > 闲鱼投诉消息} */
   on(topic: 'xianyu_cco_Complain', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCcoComplain) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.XianyuCoinCoinDeductionChange 闲鱼 > 闲鱼币交易抵扣变更消息} */
+  on(topic: 'xianyu_coin_CoinDeductionChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCoinCoinDeductionChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuCtoxCommissionStateSyn 闲鱼 > 闲鱼C2X抽佣退佣消息同步} */
   on(topic: 'xianyu_ctox_CommissionStateSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCtoxCommissionStateSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuCtoxPayDkChange 闲鱼 > c2x代扣协议变更通知} */
@@ -6331,6 +6337,8 @@ declare interface TaoEventsListener {
   on(topic: 'xianyu_car', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCar) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuCco} */
   on(topic: 'xianyu_cco', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCco) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.XianyuCoin} */
+  on(topic: 'xianyu_coin', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCoin) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuCtox} */
   on(topic: 'xianyu_ctox', listener: (this: TaoMessageConsumer, message: IncomingMessage.XianyuCtox) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.XianyuEnvironment} */

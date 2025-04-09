@@ -2376,6 +2376,8 @@ declare namespace IncomingMessage {
   type XianyuCarOrderStatusSync = Message & { content?: MessageContent & { topic?: 'xianyu_car_OrderStatusSync', content?: string | Xianyu.Car.OrderStatusSync } };
   /** {@link Xianyu.Cco.Complain 闲鱼 > 闲鱼投诉消息} */
   type XianyuCcoComplain = Message & { content?: MessageContent & { topic?: 'xianyu_cco_Complain', content?: string | Xianyu.Cco.Complain } };
+  /** {@link Xianyu.Coin.CoinDeductionChange 闲鱼 > 闲鱼币交易抵扣变更消息} */
+  type XianyuCoinCoinDeductionChange = Message & { content?: MessageContent & { topic?: 'xianyu_coin_CoinDeductionChange', content?: string | Xianyu.Coin.CoinDeductionChange } };
   /** {@link Xianyu.Ctox.CommissionStateSyn 闲鱼 > 闲鱼C2X抽佣退佣消息同步} */
   type XianyuCtoxCommissionStateSyn = Message & { content?: MessageContent & { topic?: 'xianyu_ctox_CommissionStateSyn', content?: string | Xianyu.Ctox.CommissionStateSyn } };
   /** {@link Xianyu.Ctox.PayDkChange 闲鱼 > c2x代扣协议变更通知} */
@@ -5445,6 +5447,10 @@ declare namespace IncomingMessage {
    */
   type XianyuCco = XianyuCcoComplain;
   /**
+   * - {@link XianyuCoinCoinDeductionChange 闲鱼 > 闲鱼币交易抵扣变更消息}
+   */
+  type XianyuCoin = XianyuCoinCoinDeductionChange;
+  /**
    * - {@link XianyuCtoxCommissionStateSyn 闲鱼 > 闲鱼C2X抽佣退佣消息同步}
    * - {@link XianyuCtoxPayDkChange 闲鱼 > c2x代扣协议变更通知}
    * - {@link XianyuCtoxRateStateSyn 闲鱼 > c2x业务订单评价消息同步}
@@ -6303,6 +6309,7 @@ declare namespace IncomingMessage {
    * - {@link XianyuAppraise}
    * - {@link XianyuCar}
    * - {@link XianyuCco}
+   * - {@link XianyuCoin}
    * - {@link XianyuCtox}
    * - {@link XianyuEnvironment}
    * - {@link XianyuFishmarket}
@@ -6321,6 +6328,7 @@ declare namespace IncomingMessage {
     | XianyuAppraise
     | XianyuCar
     | XianyuCco
+    | XianyuCoin
     | XianyuCtox
     | XianyuEnvironment
     | XianyuFishmarket
