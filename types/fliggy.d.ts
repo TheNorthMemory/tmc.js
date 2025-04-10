@@ -15,7 +15,7 @@ declare namespace Fliggy.Btrip {
   }
 }
 
-/** 飞猪 */
+/** 淘宝机票 */
 declare namespace Fliggy.Flight {
   /** {@link https://open.taobao.com/tmc.htm?docId=2636&docType=9 飞猪机票商家货品优势变更通知} */
   interface AdvOfferChangeNotify {

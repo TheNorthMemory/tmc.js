@@ -1068,7 +1068,7 @@ declare interface TaoTopicsDescriptor {
   eleme_retail_PosOrderMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.ElemeRetailPosOrderMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyBtripHotelDistributionOrderChange 商旅API > 订单状态变化} */
   fliggy_btrip_HotelDistributionOrderChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyBtripHotelDistributionOrderChange) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.FliggyFlightAdvOfferChangeNotify 飞猪 > 飞猪机票商家货品优势变更通知} */
+  /** {@link IncomingMessage.FliggyFlightAdvOfferChangeNotify 淘宝机票 > 飞猪机票商家货品优势变更通知} */
   fliggy_flight_AdvOfferChangeNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyFlightAdvOfferChangeNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyInteractHaitunEventCreate 飞猪 > 飞猪互动海豚事件产生} */
   fliggy_interact_HaitunEventCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyInteractHaitunEventCreate) => void): TaoMessageConsumer;
@@ -4271,7 +4271,7 @@ declare interface TaoEventsListener {
   on(topic: 'eleme_retail_PosOrderMessage', listener: (this: TaoMessageConsumer, message: IncomingMessage.ElemeRetailPosOrderMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyBtripHotelDistributionOrderChange 商旅API > 订单状态变化} */
   on(topic: 'fliggy_btrip_HotelDistributionOrderChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyBtripHotelDistributionOrderChange) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.FliggyFlightAdvOfferChangeNotify 飞猪 > 飞猪机票商家货品优势变更通知} */
+  /** {@link IncomingMessage.FliggyFlightAdvOfferChangeNotify 淘宝机票 > 飞猪机票商家货品优势变更通知} */
   on(topic: 'fliggy_flight_AdvOfferChangeNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyFlightAdvOfferChangeNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyInteractHaitunEventCreate 飞猪 > 飞猪互动海豚事件产生} */
   on(topic: 'fliggy_interact_HaitunEventCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyInteractHaitunEventCreate) => void): TaoMessageConsumer;

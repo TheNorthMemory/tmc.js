@@ -134,7 +134,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 
 ## 支持的TOPICS
 
-<details><summary>共计 84+ 类别，524+ 消息数</summary>
+<details><summary>共计 84+ 类别，525+ 消息数</summary>
 
 | 类别 | 消息数 |
 | --- | --- |
@@ -146,7 +146,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | 淘宝火车票 | 6 |
 | 平台消息 | 9 |
 | 交易全链路 | 3 |
-| 淘宝机票 | 15 |
+| 淘宝机票 | 16 |
 | 导购平台 | 21 |
 | 淘宝汽车票 | 4 |
 | 服务市场 | 9 |

@@ -89,9 +89,9 @@ declare namespace Xianyu.Coin {
     /** 开通标识，1:开通，0关闭 */
     deduction_flag: string;
     /** 是否为新版优推抵扣，1: 优推抵扣，0或者null，不是优推抵扣 */
-    deduction_version: string;
+    deduction_version?: string;
     /** 闲鱼卖家id */
-    seller_id: number;
+    seller_id?: number;
   }
 }
 
