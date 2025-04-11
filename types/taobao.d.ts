@@ -7110,6 +7110,8 @@ declare namespace Taobao.Zk {
     industry_name?: string;
     /** 商品id */
     item_id?: string;
+    /** sku图片 */
+    item_sku_pic?: string;
     /** 是否二次鉴别 */
     resale?: boolean;
     /** skuId */
