@@ -498,6 +498,8 @@ declare namespace IncomingMessage {
   type AlibabaPurPoCancelled = Message & { content?: MessageContent & { topic?: 'alibaba_pur_PoCancelled', content?: string | Alibaba.Pur.PoCancelled } };
   /** {@link Alibaba.Pur.PoClosed 信息平台-采购 > PO关闭发送消息} */
   type AlibabaPurPoClosed = Message & { content?: MessageContent & { topic?: 'alibaba_pur_PoClosed', content?: string | Alibaba.Pur.PoClosed } };
+  /** {@link Alibaba.Pur.PoNotify 信息平台-采购 > PO状态变更后发送消息通知} */
+  type AlibabaPurPoNotify = Message & { content?: MessageContent & { topic?: 'alibaba_pur_PoNotify', content?: string | Alibaba.Pur.PoNotify } };
   /** {@link Alibaba.Pur.PrApproved 信息平台-采购 > PR审批完成消息通知} */
   type AlibabaPurPrApproved = Message & { content?: MessageContent & { topic?: 'alibaba_pur_PrApproved', content?: string | Alibaba.Pur.PrApproved } };
   /** {@link Alibaba.Pur.PrDelete 信息平台-采购 > pr删除通知消息} */
@@ -508,6 +510,8 @@ declare namespace IncomingMessage {
   type AlibabaPurPurchaseRequisitionCancel = Message & { content?: MessageContent & { topic?: 'alibaba_pur_PurchaseRequisitionCancel', content?: string | Alibaba.Pur.PurchaseRequisitionCancel } };
   /** {@link Alibaba.Pur.PurchaseRequisitionDelete 信息平台-采购 > PR删除消息通知} */
   type AlibabaPurPurchaseRequisitionDelete = Message & { content?: MessageContent & { topic?: 'alibaba_pur_PurchaseRequisitionDelete', content?: string | Alibaba.Pur.PurchaseRequisitionDelete } };
+  /** {@link Alibaba.Pur.RcvNotify 信息平台-采购 > RT状态变更消息通知} */
+  type AlibabaPurRcvNotify = Message & { content?: MessageContent & { topic?: 'alibaba_pur_RcvNotify', content?: string | Alibaba.Pur.RcvNotify } };
   /** {@link Alibaba.Pur.ResourceOrderCancelNotify 信息平台-采购 > 取消订单结果通知} */
   type AlibabaPurResourceOrderCancelNotify = Message & { content?: MessageContent & { topic?: 'alibaba_pur_ResourceOrderCancelNotify', content?: string | Alibaba.Pur.ResourceOrderCancelNotify } };
   /** {@link Alibaba.Pur.ResourceOrderShipNotify 信息平台-采购 > 发货提醒} */
@@ -2971,11 +2975,13 @@ declare namespace IncomingMessage {
    * - {@link AlibabaPurPoAudited 信息平台-采购 > PO审批完成}
    * - {@link AlibabaPurPoCancelled 信息平台-采购 > PO作废消息发送}
    * - {@link AlibabaPurPoClosed 信息平台-采购 > PO关闭发送消息}
+   * - {@link AlibabaPurPoNotify 信息平台-采购 > PO状态变更后发送消息通知}
    * - {@link AlibabaPurPrApproved 信息平台-采购 > PR审批完成消息通知}
    * - {@link AlibabaPurPrDelete 信息平台-采购 > pr删除通知消息}
    * - {@link AlibabaPurPurchaseRequisition 信息平台-采购 > 创建pr}
    * - {@link AlibabaPurPurchaseRequisitionCancel 信息平台-采购 > PR作废消息通知}
    * - {@link AlibabaPurPurchaseRequisitionDelete 信息平台-采购 > PR删除消息通知}
+   * - {@link AlibabaPurRcvNotify 信息平台-采购 > RT状态变更消息通知}
    * - {@link AlibabaPurResourceOrderCancelNotify 信息平台-采购 > 取消订单结果通知}
    * - {@link AlibabaPurResourceOrderShipNotify 信息平台-采购 > 发货提醒}
    * - {@link AlibabaPurRtAudited 信息平台-采购 > RT审批完成消息通知}
@@ -2989,11 +2995,13 @@ declare namespace IncomingMessage {
     | AlibabaPurPoAudited
     | AlibabaPurPoCancelled
     | AlibabaPurPoClosed
+    | AlibabaPurPoNotify
     | AlibabaPurPrApproved
     | AlibabaPurPrDelete
     | AlibabaPurPurchaseRequisition
     | AlibabaPurPurchaseRequisitionCancel
     | AlibabaPurPurchaseRequisitionDelete
+    | AlibabaPurRcvNotify
     | AlibabaPurResourceOrderCancelNotify
     | AlibabaPurResourceOrderShipNotify
     | AlibabaPurRtAudited

@@ -514,6 +514,8 @@ declare interface TaoTopicsDescriptor {
   alibaba_pur_PoCancelled(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaPurPoCancelled) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaPurPoClosed 信息平台-采购 > PO关闭发送消息} */
   alibaba_pur_PoClosed(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaPurPoClosed) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaPurPoNotify 信息平台-采购 > PO状态变更后发送消息通知} */
+  alibaba_pur_PoNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaPurPoNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaPurPrApproved 信息平台-采购 > PR审批完成消息通知} */
   alibaba_pur_PrApproved(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaPurPrApproved) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaPurPrDelete 信息平台-采购 > pr删除通知消息} */
@@ -524,6 +526,8 @@ declare interface TaoTopicsDescriptor {
   alibaba_pur_PurchaseRequisitionCancel(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaPurPurchaseRequisitionCancel) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaPurPurchaseRequisitionDelete 信息平台-采购 > PR删除消息通知} */
   alibaba_pur_PurchaseRequisitionDelete(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaPurPurchaseRequisitionDelete) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaPurRcvNotify 信息平台-采购 > RT状态变更消息通知} */
+  alibaba_pur_RcvNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaPurRcvNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaPurResourceOrderCancelNotify 信息平台-采购 > 取消订单结果通知} */
   alibaba_pur_ResourceOrderCancelNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaPurResourceOrderCancelNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaPurResourceOrderShipNotify 信息平台-采购 > 发货提醒} */
@@ -3717,6 +3721,8 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_pur_PoCancelled', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaPurPoCancelled) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaPurPoClosed 信息平台-采购 > PO关闭发送消息} */
   on(topic: 'alibaba_pur_PoClosed', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaPurPoClosed) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaPurPoNotify 信息平台-采购 > PO状态变更后发送消息通知} */
+  on(topic: 'alibaba_pur_PoNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaPurPoNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaPurPrApproved 信息平台-采购 > PR审批完成消息通知} */
   on(topic: 'alibaba_pur_PrApproved', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaPurPrApproved) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaPurPrDelete 信息平台-采购 > pr删除通知消息} */
@@ -3727,6 +3733,8 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_pur_PurchaseRequisitionCancel', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaPurPurchaseRequisitionCancel) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaPurPurchaseRequisitionDelete 信息平台-采购 > PR删除消息通知} */
   on(topic: 'alibaba_pur_PurchaseRequisitionDelete', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaPurPurchaseRequisitionDelete) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaPurRcvNotify 信息平台-采购 > RT状态变更消息通知} */
+  on(topic: 'alibaba_pur_RcvNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaPurRcvNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaPurResourceOrderCancelNotify 信息平台-采购 > 取消订单结果通知} */
   on(topic: 'alibaba_pur_ResourceOrderCancelNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaPurResourceOrderCancelNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaPurResourceOrderShipNotify 信息平台-采购 > 发货提醒} */

@@ -3656,6 +3656,18 @@ declare namespace Alibaba.Pur {
     status: string;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2642&docType=9 PO状态变更后发送消息通知} */
+  interface PoNotify {
+    /** PO的来源类型 */
+    biz_type: string;
+    /** PO的ID */
+    po_id: number;
+    /** PO的单号 */
+    po_number: string;
+    /** PO的状态 */
+    status: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2089&docType=9 PR审批完成消息通知} */
   interface PrApproved {
     /** 消息唯一标识sourceType + sourceValue */
@@ -3699,6 +3711,18 @@ declare namespace Alibaba.Pur {
     /** PR单号 */
     pr_number: string;
     /** PR状态 */
+    status: string;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2641&docType=9 RT状态变更消息通知} */
+  interface RcvNotify {
+    /** RT的来源类型 */
+    biz_type: string;
+    /** RT的ID */
+    rcv_id: number;
+    /** RT的单号 */
+    rcv_number: string;
+    /** RT的状态 */
     status: string;
   }
 
