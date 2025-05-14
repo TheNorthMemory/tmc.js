@@ -7170,6 +7170,16 @@ declare namespace Taobao.Zk {
     tp_order_id: string;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2640&docType=9 淘宝真酷-取消鉴别通知} */
+  interface IdentifyCancelNotify {
+    /** 货品鉴别单号 */
+    biz_identify_order_id: string;
+    /** 需求鉴别单id */
+    identify_request_id: string;
+    /** 取消鉴别 */
+    is_cancel: boolean;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2571&docType=9 淘宝真酷需求鉴别单创建消息} */
   interface IdentifyCreate {
     /** 鉴定机构id */
@@ -7190,6 +7200,16 @@ declare namespace Taobao.Zk {
     is_pause: boolean;
     /** 订单号 */
     tp_order_id: string;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2643&docType=9 淘宝真酷-提前鉴别修改图片通知} */
+  interface PreIdentifyModifyPicNotify {
+    /** 货品鉴别单号 */
+    biz_identify_order_id: string;
+    /** 鉴别点 */
+    check_point: string;
+    /** 需求鉴别单id */
+    identify_request_id: string;
   }
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2589&docType=9 真酷鉴定用户退款通知} */

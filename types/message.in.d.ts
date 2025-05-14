@@ -2122,10 +2122,14 @@ declare namespace IncomingMessage {
   type TaobaoZkFirstLogisticsReceivedNotify = Message & { content?: MessageContent & { topic?: 'taobao_zk_FirstLogisticsReceivedNotify', content?: string | Taobao.Zk.FirstLogisticsReceivedNotify } };
   /** {@link Taobao.Zk.FirstLogisticsUpdateNotify 淘宝真酷 > 淘宝真酷-一段运单号修改消息} */
   type TaobaoZkFirstLogisticsUpdateNotify = Message & { content?: MessageContent & { topic?: 'taobao_zk_FirstLogisticsUpdateNotify', content?: string | Taobao.Zk.FirstLogisticsUpdateNotify } };
+  /** {@link Taobao.Zk.IdentifyCancelNotify 淘宝真酷 > 淘宝真酷-取消鉴别通知} */
+  type TaobaoZkIdentifyCancelNotify = Message & { content?: MessageContent & { topic?: 'taobao_zk_IdentifyCancelNotify', content?: string | Taobao.Zk.IdentifyCancelNotify } };
   /** {@link Taobao.Zk.IdentifyCreate 淘宝真酷 > 淘宝真酷需求鉴别单创建消息} */
   type TaobaoZkIdentifyCreate = Message & { content?: MessageContent & { topic?: 'taobao_zk_IdentifyCreate', content?: string | Taobao.Zk.IdentifyCreate } };
   /** {@link Taobao.Zk.PauseNotify 淘宝真酷 > 淘宝真酷鉴别单暂停通知} */
   type TaobaoZkPauseNotify = Message & { content?: MessageContent & { topic?: 'taobao_zk_PauseNotify', content?: string | Taobao.Zk.PauseNotify } };
+  /** {@link Taobao.Zk.PreIdentifyModifyPicNotify 淘宝真酷 > 淘宝真酷-提前鉴别修改图片通知} */
+  type TaobaoZkPreIdentifyModifyPicNotify = Message & { content?: MessageContent & { topic?: 'taobao_zk_PreIdentifyModifyPicNotify', content?: string | Taobao.Zk.PreIdentifyModifyPicNotify } };
   /** {@link Taobao.Zk.RefundNotify 淘宝真酷 > 真酷鉴定用户退款通知} */
   type TaobaoZkRefundNotify = Message & { content?: MessageContent & { topic?: 'taobao_zk_RefundNotify', content?: string | Taobao.Zk.RefundNotify } };
   /** {@link Taobao.Zk.SecondLogisticsGotNotify 淘宝真酷 > 淘宝真酷二段寄出后揽收通知机构} */
@@ -5102,8 +5106,10 @@ declare namespace IncomingMessage {
    * - {@link TaobaoZkFirstLogisticsNotify 淘宝真酷 > 淘宝真酷一段物流发货消息}
    * - {@link TaobaoZkFirstLogisticsReceivedNotify 淘宝真酷 > 一段物流签收通知}
    * - {@link TaobaoZkFirstLogisticsUpdateNotify 淘宝真酷 > 淘宝真酷-一段运单号修改消息}
+   * - {@link TaobaoZkIdentifyCancelNotify 淘宝真酷 > 淘宝真酷-取消鉴别通知}
    * - {@link TaobaoZkIdentifyCreate 淘宝真酷 > 淘宝真酷需求鉴别单创建消息}
    * - {@link TaobaoZkPauseNotify 淘宝真酷 > 淘宝真酷鉴别单暂停通知}
+   * - {@link TaobaoZkPreIdentifyModifyPicNotify 淘宝真酷 > 淘宝真酷-提前鉴别修改图片通知}
    * - {@link TaobaoZkRefundNotify 淘宝真酷 > 真酷鉴定用户退款通知}
    * - {@link TaobaoZkSecondLogisticsGotNotify 淘宝真酷 > 淘宝真酷二段寄出后揽收通知机构}
    * - {@link TaobaoZkSubmitQuote 淘宝真酷 > 真酷供应商提交报价结果通知}
@@ -5113,8 +5119,10 @@ declare namespace IncomingMessage {
     | TaobaoZkFirstLogisticsNotify
     | TaobaoZkFirstLogisticsReceivedNotify
     | TaobaoZkFirstLogisticsUpdateNotify
+    | TaobaoZkIdentifyCancelNotify
     | TaobaoZkIdentifyCreate
     | TaobaoZkPauseNotify
+    | TaobaoZkPreIdentifyModifyPicNotify
     | TaobaoZkRefundNotify
     | TaobaoZkSecondLogisticsGotNotify
     | TaobaoZkSubmitQuote;
