@@ -1082,6 +1082,8 @@ declare namespace IncomingMessage {
   type FliggyXhotelComboCreateResult = Message & { content?: MessageContent & { topic?: 'fliggy_xhotel_ComboCreateResult', content?: string | Fliggy.Xhotel.ComboCreateResult } };
   /** {@link Flyggy.Flight.DomesticDistributionQuotationFull 飞猪 > 飞猪机票国内分销全量报价} */
   type FlyggyFlightDomesticDistributionQuotationFull = Message & { content?: MessageContent & { topic?: 'flyggy_flight_DomesticDistributionQuotationFull', content?: string | Flyggy.Flight.DomesticDistributionQuotationFull } };
+  /** {@link Flyggy.Flight.DomesticDistributionQuotationIncrement 飞猪 > 飞猪机票国内分销增量报价} */
+  type FlyggyFlightDomesticDistributionQuotationIncrement = Message & { content?: MessageContent & { topic?: 'flyggy_flight_DomesticDistributionQuotationIncrement', content?: string | Flyggy.Flight.DomesticDistributionQuotationIncrement } };
   /** {@link Fuwu.Confirm.Fail 服务市场 > 收入确认失败} */
   type FuwuConfirmFail = Message & { content?: MessageContent & { topic?: 'fuwu_confirm_Fail', content?: string | Fuwu.Confirm.Fail } };
   /** {@link Fuwu.Confirm.Success 服务市场 > 收入确认成功} */
@@ -3772,8 +3774,10 @@ declare namespace IncomingMessage {
   type FliggyXhotel = FliggyXhotelComboCreateResult;
   /**
    * - {@link FlyggyFlightDomesticDistributionQuotationFull 飞猪 > 飞猪机票国内分销全量报价}
+   * - {@link FlyggyFlightDomesticDistributionQuotationIncrement 飞猪 > 飞猪机票国内分销增量报价}
    */
-  type FlyggyFlight = FlyggyFlightDomesticDistributionQuotationFull;
+  type FlyggyFlight = FlyggyFlightDomesticDistributionQuotationFull
+    | FlyggyFlightDomesticDistributionQuotationIncrement;
   /**
    * - {@link FuwuConfirmFail 服务市场 > 收入确认失败}
    * - {@link FuwuConfirmSuccess 服务市场 > 收入确认成功}

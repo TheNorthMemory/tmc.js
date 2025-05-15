@@ -1098,6 +1098,8 @@ declare interface TaoTopicsDescriptor {
   fliggy_xhotel_ComboCreateResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyXhotelComboCreateResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FlyggyFlightDomesticDistributionQuotationFull 飞猪 > 飞猪机票国内分销全量报价} */
   flyggy_flight_DomesticDistributionQuotationFull(fn: (this: TaoMessageConsumer, message: IncomingMessage.FlyggyFlightDomesticDistributionQuotationFull) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FlyggyFlightDomesticDistributionQuotationIncrement 飞猪 > 飞猪机票国内分销增量报价} */
+  flyggy_flight_DomesticDistributionQuotationIncrement(fn: (this: TaoMessageConsumer, message: IncomingMessage.FlyggyFlightDomesticDistributionQuotationIncrement) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FuwuConfirmFail 服务市场 > 收入确认失败} */
   fuwu_confirm_Fail(fn: (this: TaoMessageConsumer, message: IncomingMessage.FuwuConfirmFail) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FuwuConfirmSuccess 服务市场 > 收入确认成功} */
@@ -4309,6 +4311,8 @@ declare interface TaoEventsListener {
   on(topic: 'fliggy_xhotel_ComboCreateResult', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyXhotelComboCreateResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FlyggyFlightDomesticDistributionQuotationFull 飞猪 > 飞猪机票国内分销全量报价} */
   on(topic: 'flyggy_flight_DomesticDistributionQuotationFull', listener: (this: TaoMessageConsumer, message: IncomingMessage.FlyggyFlightDomesticDistributionQuotationFull) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FlyggyFlightDomesticDistributionQuotationIncrement 飞猪 > 飞猪机票国内分销增量报价} */
+  on(topic: 'flyggy_flight_DomesticDistributionQuotationIncrement', listener: (this: TaoMessageConsumer, message: IncomingMessage.FlyggyFlightDomesticDistributionQuotationIncrement) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FuwuConfirmFail 服务市场 > 收入确认失败} */
   on(topic: 'fuwu_confirm_Fail', listener: (this: TaoMessageConsumer, message: IncomingMessage.FuwuConfirmFail) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FuwuConfirmSuccess 服务市场 > 收入确认成功} */
