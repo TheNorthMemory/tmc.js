@@ -134,7 +134,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 
 ## 支持的TOPICS
 
-<details><summary>共计 84+ 类别，524+ 消息数</summary>
+<details><summary>共计 84+ 类别，525+ 消息数</summary>
 
 | 类别 | 消息数 |
 | --- | --- |
@@ -196,7 +196,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | TVOS应用审核平台 | 1 |
 | Gifting送礼 | 1 |
 | 五道口商品 | 2 |
-| HOMEAI | 1 |
+| HOMEAI | 2 |
 | HOMEAI消息对接 | 5 |
 | 零售通_公共 | 8 |
 | 酒店标准库基础信息变更消息 | 3 |
