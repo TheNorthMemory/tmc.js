@@ -7094,7 +7094,7 @@ declare namespace Taobao.Zk {
     brand_id?: string;
     /** 品牌名称 */
     brand_name?: string;
-    /** 检测点 */
+    /** 鉴别点 */
     check_point?: string;
     /** 货号 */
     goods_number?: string;
@@ -7112,6 +7112,8 @@ declare namespace Taobao.Zk {
     item_id?: string;
     /** sku图片 */
     item_sku_pic?: string;
+    /** 是否提前鉴别 */
+    pre_identify?: boolean;
     /** 是否二次鉴别 */
     resale?: boolean;
     /** skuId */
