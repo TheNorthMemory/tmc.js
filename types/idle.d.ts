@@ -345,6 +345,16 @@ declare namespace Idle.Trade {
     /** 卖家Id */
     seller_id: string;
   }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2648&docType=9 服务商订单评价消息} */
+  interface TradeReteSuccess {
+    /** 订单ID */
+    biz_order_id: number | bigint;
+    /** 评价内容 */
+    rate_content: string;
+    /** 评价类型: 1: 首评，2: 追评 */
+    rate_type: string;
+  }
 }
 
 /** 闲鱼 */
