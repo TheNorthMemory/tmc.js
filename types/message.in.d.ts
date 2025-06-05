@@ -1804,6 +1804,8 @@ declare namespace IncomingMessage {
   type TaobaoRhinoWarehouseUpdate = Message & { content?: MessageContent & { topic?: 'taobao_rhino_WarehouseUpdate', content?: string | Taobao.Rhino.WarehouseUpdate } };
   /** {@link Taobao.Sec.WlcAlipaySync 淘宝 > 无量尺风控信息同步支付宝} */
   type TaobaoSecWlcAlipaySync = Message & { content?: MessageContent & { topic?: 'taobao_sec_WlcAlipaySync', content?: string | Taobao.Sec.WlcAlipaySync } };
+  /** {@link Taobao.Seed.GeneralDataCommutation 淘宝 > 淘宝种草数据交换} */
+  type TaobaoSeedGeneralDataCommutation = Message & { content?: MessageContent & { topic?: 'taobao_seed_GeneralDataCommutation', content?: string | Taobao.Seed.GeneralDataCommutation } };
   /** {@link Taobao.Shop.Vary 淘宝 > 淘宝店铺变更} */
   type TaobaoShopVary = Message & { content?: MessageContent & { topic?: 'taobao_shop_Vary', content?: string | Taobao.Shop.Vary } };
   /** {@link Taobao.Shoptransfer.UniTrans 淘宝 > 过户结果消息} */
@@ -4719,6 +4721,10 @@ declare namespace IncomingMessage {
    */
   type TaobaoSec = TaobaoSecWlcAlipaySync;
   /**
+   * - {@link TaobaoSeedGeneralDataCommutation 淘宝 > 淘宝种草数据交换}
+   */
+  type TaobaoSeed = TaobaoSeedGeneralDataCommutation;
+  /**
    * - {@link TaobaoShopVary 淘宝 > 淘宝店铺变更}
    */
   type TaobaoShop = TaobaoShopVary;
@@ -6080,6 +6086,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoRefund}
    * - {@link TaobaoRhino}
    * - {@link TaobaoSec}
+   * - {@link TaobaoSeed}
    * - {@link TaobaoShop}
    * - {@link TaobaoShoptransfer}
    * - {@link TaobaoSinian}
@@ -6194,6 +6201,7 @@ declare namespace IncomingMessage {
     | TaobaoRefund
     | TaobaoRhino
     | TaobaoSec
+    | TaobaoSeed
     | TaobaoShop
     | TaobaoShoptransfer
     | TaobaoSinian

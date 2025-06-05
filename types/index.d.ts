@@ -1820,6 +1820,8 @@ declare interface TaoTopicsDescriptor {
   taobao_rhino_WarehouseUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRhinoWarehouseUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSecWlcAlipaySync 淘宝 > 无量尺风控信息同步支付宝} */
   taobao_sec_WlcAlipaySync(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSecWlcAlipaySync) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoSeedGeneralDataCommutation 淘宝 > 淘宝种草数据交换} */
+  taobao_seed_GeneralDataCommutation(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSeedGeneralDataCommutation) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoShopVary 淘宝 > 淘宝店铺变更} */
   taobao_shop_Vary(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShopVary) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoShoptransferUniTrans 淘宝 > 过户结果消息} */
@@ -2978,6 +2980,8 @@ declare interface TaoTopicsDescriptor {
   taobao_rhino(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRhino) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSec} */
   taobao_sec(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSec) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoSeed} */
+  taobao_seed(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSeed) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoShop} */
   taobao_shop(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShop) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoShoptransfer} */
@@ -5035,6 +5039,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_rhino_WarehouseUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRhinoWarehouseUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSecWlcAlipaySync 淘宝 > 无量尺风控信息同步支付宝} */
   on(topic: 'taobao_sec_WlcAlipaySync', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSecWlcAlipaySync) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoSeedGeneralDataCommutation 淘宝 > 淘宝种草数据交换} */
+  on(topic: 'taobao_seed_GeneralDataCommutation', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSeedGeneralDataCommutation) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoShopVary 淘宝 > 淘宝店铺变更} */
   on(topic: 'taobao_shop_Vary', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShopVary) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoShoptransferUniTrans 淘宝 > 过户结果消息} */
@@ -6193,6 +6199,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_rhino', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRhino) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSec} */
   on(topic: 'taobao_sec', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSec) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoSeed} */
+  on(topic: 'taobao_seed', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSeed) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoShop} */
   on(topic: 'taobao_shop', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShop) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoShoptransfer} */
