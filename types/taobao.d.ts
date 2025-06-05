@@ -4209,7 +4209,7 @@ declare namespace Taobao.Pc {
     project_id: number;
     /** 变更时间 */
     time: number;
-    /** 变更类型，ADD：商品新增，DELETE：商品删除，DOWN_SHELF：商品下架，UP_SHELF：商品上架，EDIT：商品信息变更 */
+    /** 变更类型，ADD：商品新增，DELETE：商品删除，DOWN_SHELF：商品下架，UP_SHELF：商品上架，EDIT：商品信息变更，INVENTORY：商品库存变更 */
     type: string;
   }
 }
