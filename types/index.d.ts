@@ -276,6 +276,8 @@ declare interface TaoTopicsDescriptor {
   alibaba_icbulive_CommentNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIcbuliveCommentNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIcbuliveEnterNotice ICBU > 直播观众进场通知} */
   alibaba_icbulive_EnterNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIcbuliveEnterNotice) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaIdleApplyInfoSyn 闲鱼 > 灵活用工报名信息同步} */
+  alibaba_idle_ApplyInfoSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleApplyInfoSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIdleHouseStatusNotify 闲鱼 > 闲鱼房源状态变更通知} */
   alibaba_idle_HouseStatusNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleHouseStatusNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIfpPackageCfcContainer 五道口配送 > 同城履约包裹状态变更消息} */
@@ -3495,6 +3497,8 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_icbulive_CommentNotice', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIcbuliveCommentNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIcbuliveEnterNotice ICBU > 直播观众进场通知} */
   on(topic: 'alibaba_icbulive_EnterNotice', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIcbuliveEnterNotice) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaIdleApplyInfoSyn 闲鱼 > 灵活用工报名信息同步} */
+  on(topic: 'alibaba_idle_ApplyInfoSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleApplyInfoSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIdleHouseStatusNotify 闲鱼 > 闲鱼房源状态变更通知} */
   on(topic: 'alibaba_idle_HouseStatusNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleHouseStatusNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIfpPackageCfcContainer 五道口配送 > 同城履约包裹状态变更消息} */

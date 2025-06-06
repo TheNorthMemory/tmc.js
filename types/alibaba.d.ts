@@ -1522,6 +1522,28 @@ declare namespace Alibaba.Icbulive {
 
 /** 闲鱼 */
 declare namespace Alibaba.Idle {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2653&docType=9 灵活用工报名信息同步} */
+  interface ApplyInfoSyn {
+    /** 年龄 */
+    age: number;
+    /** 报名时间 */
+    apply_time: number;
+    /** 学历 2:高中 3:大专 4:本科 6:硕士 7:博士 */
+    diploma: number;
+    /** 性别 0:男，1:女 */
+    gender: number;
+    /** 报名信息唯一id */
+    id: number;
+    /** 身份 0:学生 1:上班族 2:自由职业 */
+    identity: number;
+    /** 岗位id */
+    item_id: number;
+    /** 应聘者电话号码 */
+    telephone: string;
+    /** 应聘者姓名 */
+    user_name: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2555&docType=9 闲鱼房源状态变更通知} */
   interface HouseStatusNotify {
     /** 房源状态 0：上架，-1：删除，-2：下架 */

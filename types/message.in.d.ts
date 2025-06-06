@@ -260,6 +260,8 @@ declare namespace IncomingMessage {
   type AlibabaIcbuliveCommentNotice = Message & { content?: MessageContent & { topic?: 'alibaba_icbulive_CommentNotice', content?: string | Alibaba.Icbulive.CommentNotice } };
   /** {@link Alibaba.Icbulive.EnterNotice ICBU > 直播观众进场通知} */
   type AlibabaIcbuliveEnterNotice = Message & { content?: MessageContent & { topic?: 'alibaba_icbulive_EnterNotice', content?: string | Alibaba.Icbulive.EnterNotice } };
+  /** {@link Alibaba.Idle.ApplyInfoSyn 闲鱼 > 灵活用工报名信息同步} */
+  type AlibabaIdleApplyInfoSyn = Message & { content?: MessageContent & { topic?: 'alibaba_idle_ApplyInfoSyn', content?: string | Alibaba.Idle.ApplyInfoSyn } };
   /** {@link Alibaba.Idle.HouseStatusNotify 闲鱼 > 闲鱼房源状态变更通知} */
   type AlibabaIdleHouseStatusNotify = Message & { content?: MessageContent & { topic?: 'alibaba_idle_HouseStatusNotify', content?: string | Alibaba.Idle.HouseStatusNotify } };
   /** {@link Alibaba.Ifp.PackageCfcContainer 五道口配送 > 同城履约包裹状态变更消息} */
@@ -2709,9 +2711,11 @@ declare namespace IncomingMessage {
   type AlibabaIcbulive = AlibabaIcbuliveCommentNotice
     | AlibabaIcbuliveEnterNotice;
   /**
+   * - {@link AlibabaIdleApplyInfoSyn 闲鱼 > 灵活用工报名信息同步}
    * - {@link AlibabaIdleHouseStatusNotify 闲鱼 > 闲鱼房源状态变更通知}
    */
-  type AlibabaIdle = AlibabaIdleHouseStatusNotify;
+  type AlibabaIdle = AlibabaIdleApplyInfoSyn
+    | AlibabaIdleHouseStatusNotify;
   /**
    * - {@link AlibabaIfpPackageCfcContainer 五道口配送 > 同城履约包裹状态变更消息}
    */
