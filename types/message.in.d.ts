@@ -1106,7 +1106,7 @@ declare namespace IncomingMessage {
   type GovAuctionPublish = Message & { content?: MessageContent & { topic?: 'gov_auction_Publish', content?: string | Gov.Auction.Publish } };
   /** {@link Gov.Auction.PushVehicleDataToBM 大资产拍卖Top端拍品消息 > 推送机动车数据到斑马} */
   type GovAuctionPushVehicleDataToBM = Message & { content?: MessageContent & { topic?: 'gov_auction_PushVehicleDataToBM', content?: string | Gov.Auction.PushVehicleDataToBM } };
-  /** {@link Gov.Auction.QuanAnAssetsPack 大资产拍卖Top端拍品消息 > 全案资产打包信息} */
+  /** {@link Gov.Auction.QuanAnAssetsPack 大资产拍卖Top端拍品消息 > 打包处置关联资产编号消息} */
   type GovAuctionQuanAnAssetsPack = Message & { content?: MessageContent & { topic?: 'gov_auction_QuanAnAssetsPack', content?: string | Gov.Auction.QuanAnAssetsPack } };
   /** {@link Gov.Auction.VehicleDataPush 大资产拍卖Top端拍品消息 > 斑马-机动车数据推送} */
   type GovAuctionVehicleDataPush = Message & { content?: MessageContent & { topic?: 'gov_auction_VehicleDataPush', content?: string | Gov.Auction.VehicleDataPush } };
@@ -3810,7 +3810,7 @@ declare namespace IncomingMessage {
    * - {@link GovAuctionEndImmediate 大资产拍卖Top端拍品消息 > 标的结束即刻消息}
    * - {@link GovAuctionPublish 大资产拍卖Top端拍品消息 > 大资产标的上架消息}
    * - {@link GovAuctionPushVehicleDataToBM 大资产拍卖Top端拍品消息 > 推送机动车数据到斑马}
-   * - {@link GovAuctionQuanAnAssetsPack 大资产拍卖Top端拍品消息 > 全案资产打包信息}
+   * - {@link GovAuctionQuanAnAssetsPack 大资产拍卖Top端拍品消息 > 打包处置关联资产编号消息}
    * - {@link GovAuctionVehicleDataPush 大资产拍卖Top端拍品消息 > 斑马-机动车数据推送}
    */
   type GovAuction = GovAuctionAuctionOrderPaid

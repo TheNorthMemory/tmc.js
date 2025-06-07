@@ -88,7 +88,7 @@ declare namespace Gov.Auction {
     vin?: string;
   }
 
-  /** {@link https://open.taobao.com/tmc.htm?docId=2396&docType=9 全案资产打包信息} */
+  /** {@link https://open.taobao.com/tmc.htm?docId=2396&docType=9 打包处置关联资产编号消息} */
   interface QuanAnAssetsPack {
     /** 业务消息标识 */
     biz_msg_id: string;
@@ -99,7 +99,11 @@ declare namespace Gov.Auction {
     /** 操作类型：0 新增，1 修改，2 删除 */
     operate_type: number;
     /** 主物品下的所有子物品编号，用,进行分割 */
-    sub_out_biz_id_list_str: string;
+    out_biz_id_list_str?: string;
+    /** 主物品下的所有子物品编号，用:分割不同的案件，用,分割物品 */
+    out_biz_id_map?: string;
+    /** 1表示新的打包方式，没有的情况下，表示老方式 */
+    pack_type?: string;
   }
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2205&docType=9 斑马-机动车数据推送} */

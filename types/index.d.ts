@@ -1122,7 +1122,7 @@ declare interface TaoTopicsDescriptor {
   gov_auction_Publish(fn: (this: TaoMessageConsumer, message: IncomingMessage.GovAuctionPublish) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.GovAuctionPushVehicleDataToBM 大资产拍卖Top端拍品消息 > 推送机动车数据到斑马} */
   gov_auction_PushVehicleDataToBM(fn: (this: TaoMessageConsumer, message: IncomingMessage.GovAuctionPushVehicleDataToBM) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.GovAuctionQuanAnAssetsPack 大资产拍卖Top端拍品消息 > 全案资产打包信息} */
+  /** {@link IncomingMessage.GovAuctionQuanAnAssetsPack 大资产拍卖Top端拍品消息 > 打包处置关联资产编号消息} */
   gov_auction_QuanAnAssetsPack(fn: (this: TaoMessageConsumer, message: IncomingMessage.GovAuctionQuanAnAssetsPack) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.GovAuctionVehicleDataPush 大资产拍卖Top端拍品消息 > 斑马-机动车数据推送} */
   gov_auction_VehicleDataPush(fn: (this: TaoMessageConsumer, message: IncomingMessage.GovAuctionVehicleDataPush) => void): TaoMessageConsumer;
@@ -4343,7 +4343,7 @@ declare interface TaoEventsListener {
   on(topic: 'gov_auction_Publish', listener: (this: TaoMessageConsumer, message: IncomingMessage.GovAuctionPublish) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.GovAuctionPushVehicleDataToBM 大资产拍卖Top端拍品消息 > 推送机动车数据到斑马} */
   on(topic: 'gov_auction_PushVehicleDataToBM', listener: (this: TaoMessageConsumer, message: IncomingMessage.GovAuctionPushVehicleDataToBM) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.GovAuctionQuanAnAssetsPack 大资产拍卖Top端拍品消息 > 全案资产打包信息} */
+  /** {@link IncomingMessage.GovAuctionQuanAnAssetsPack 大资产拍卖Top端拍品消息 > 打包处置关联资产编号消息} */
   on(topic: 'gov_auction_QuanAnAssetsPack', listener: (this: TaoMessageConsumer, message: IncomingMessage.GovAuctionQuanAnAssetsPack) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.GovAuctionVehicleDataPush 大资产拍卖Top端拍品消息 > 斑马-机动车数据推送} */
   on(topic: 'gov_auction_VehicleDataPush', listener: (this: TaoMessageConsumer, message: IncomingMessage.GovAuctionVehicleDataPush) => void): TaoMessageConsumer;
