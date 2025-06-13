@@ -1551,6 +1551,14 @@ declare namespace Alibaba.Idle {
     /** 房源id */
     item_id: number;
   }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2652&docType=9 岗位状态变更通知} */
+  interface JobItemChangeStatusNotify {
+    /** 岗位商品id */
+    item_id: number;
+    /** 变更状态 */
+    status: number;
+  }
 }
 
 /** 五道口配送 */
