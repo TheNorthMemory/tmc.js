@@ -4743,20 +4743,20 @@ declare namespace Taobao.Seed {
   interface GeneralDataCommutation {
     /** 业务类型 */
     biz_type: string;
-    /** 种草数据交换唯一ID */
-    biz_seed_data_commutation_id: string;
     /** 维度类型 */
     dimension_type: string;
     /** 维度值 */
     dimension_value: string;
     /** 拓展字段 */
     ext: string;
-    /** 等待时长 */
-    handing_time: string;
+    /** 种草数据交换消息唯一ID */
+    msg_id: string;
     /** 媒体平台code */
     platform: string;
-    /** 请求的秒级时间 */
-    req_time: Date | number | string;
+    /** 消息发送的秒级时间戳 */
+    send_timestamp_sec: number;
+    /** 等待时长 */
+    waiting_time: string;
   }
 }
 
