@@ -69,6 +69,8 @@ declare namespace Fliggy.Flight {
     route_type: number;
     /** 用户搜索热度等级，从0开始，数字越大，热度越高，4为最高等级 */
     search_heat_level?: number;
+    /** 报价时间 */
+    search_time: number;
     /** 中转机场 */
     transit_airport: string;
     /** 中转城市 */
