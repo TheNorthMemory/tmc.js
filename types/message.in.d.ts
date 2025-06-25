@@ -1348,6 +1348,8 @@ declare namespace IncomingMessage {
   type TaobaoDisputeExchangeSuccess = Message & { content?: MessageContent & { topic?: 'taobao_dispute_ExchangeSuccess', content?: string | Taobao.Dispute.ExchangeSuccess } };
   /** {@link Taobao.Dispute.ExchangeTurnToRefund 淘宝 > 卖家换货转退款} */
   type TaobaoDisputeExchangeTurnToRefund = Message & { content?: MessageContent & { topic?: 'taobao_dispute_ExchangeTurnToRefund', content?: string | Taobao.Dispute.ExchangeTurnToRefund } };
+  /** {@link Taobao.Dispute.PostageRefundSuccess 淘宝 > 退货运费单成功消息} */
+  type TaobaoDisputePostageRefundSuccess = Message & { content?: MessageContent & { topic?: 'taobao_dispute_PostageRefundSuccess', content?: string | Taobao.Dispute.PostageRefundSuccess } };
   /** {@link Taobao.Dispute.RefundCreated 淘宝 > 新退款创建} */
   type TaobaoDisputeRefundCreated = Message & { content?: MessageContent & { topic?: 'taobao_dispute_RefundCreated', content?: string | Taobao.Dispute.RefundCreated } };
   /** {@link Taobao.Dispute.RefundPriceProtect 淘宝 > 价保退款成功} */
@@ -4154,6 +4156,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoDisputeExchangeSellerGoodsConsigned 淘宝 > 换货-卖家寄出商品}
    * - {@link TaobaoDisputeExchangeSuccess 淘宝 > 买家确认收货,换货成功}
    * - {@link TaobaoDisputeExchangeTurnToRefund 淘宝 > 卖家换货转退款}
+   * - {@link TaobaoDisputePostageRefundSuccess 淘宝 > 退货运费单成功消息}
    * - {@link TaobaoDisputeRefundCreated 淘宝 > 新退款创建}
    * - {@link TaobaoDisputeRefundPriceProtect 淘宝 > 价保退款成功}
    * - {@link TaobaoDisputeRefundSuccess 淘宝 > 新退款成功消息}
@@ -4166,6 +4169,7 @@ declare namespace IncomingMessage {
     | TaobaoDisputeExchangeSellerGoodsConsigned
     | TaobaoDisputeExchangeSuccess
     | TaobaoDisputeExchangeTurnToRefund
+    | TaobaoDisputePostageRefundSuccess
     | TaobaoDisputeRefundCreated
     | TaobaoDisputeRefundPriceProtect
     | TaobaoDisputeRefundSuccess

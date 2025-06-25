@@ -1364,6 +1364,8 @@ declare interface TaoTopicsDescriptor {
   taobao_dispute_ExchangeSuccess(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeExchangeSuccess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDisputeExchangeTurnToRefund 淘宝 > 卖家换货转退款} */
   taobao_dispute_ExchangeTurnToRefund(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeExchangeTurnToRefund) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDisputePostageRefundSuccess 淘宝 > 退货运费单成功消息} */
+  taobao_dispute_PostageRefundSuccess(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputePostageRefundSuccess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDisputeRefundCreated 淘宝 > 新退款创建} */
   taobao_dispute_RefundCreated(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeRefundCreated) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDisputeRefundPriceProtect 淘宝 > 价保退款成功} */
@@ -4587,6 +4589,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_dispute_ExchangeSuccess', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeExchangeSuccess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDisputeExchangeTurnToRefund 淘宝 > 卖家换货转退款} */
   on(topic: 'taobao_dispute_ExchangeTurnToRefund', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeExchangeTurnToRefund) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDisputePostageRefundSuccess 淘宝 > 退货运费单成功消息} */
+  on(topic: 'taobao_dispute_PostageRefundSuccess', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputePostageRefundSuccess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDisputeRefundCreated 淘宝 > 新退款创建} */
   on(topic: 'taobao_dispute_RefundCreated', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeRefundCreated) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDisputeRefundPriceProtect 淘宝 > 价保退款成功} */

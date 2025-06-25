@@ -1057,6 +1057,28 @@ declare namespace Taobao.Dispute {
     tid: number | bigint;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2659&docType=9 退货运费单成功消息} */
+  interface PostageRefundSuccess {
+    /** 1/2:退款,3:退货退款,4/6:换货,其他请调api获取详细信息 */
+    biz_claim_type: number;
+    /** 涉及金额 */
+    buyer_refund_fee: number;
+    /** 创建时间 */
+    create: Date | number | string;
+    /** 1:售中, 2:售后 */
+    dispute_type: number;
+    /** 更新时间 */
+    modified: Date | number | string;
+    /** 子订单ID */
+    oid: number | bigint;
+    /** 退款id(Long)或消息id(字符串) */
+    refund_id: number;
+    /** 卖家openUid */
+    seller_open_uid: string;
+    /** 支付单ID */
+    tid: number | bigint;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2451&docType=9 新退款创建} */
   interface RefundCreated {
     /** 1/2:退款,3:退货退款,4/6:换货,其他请调api获取详细信息 */
