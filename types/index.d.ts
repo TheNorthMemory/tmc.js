@@ -1652,8 +1652,14 @@ declare interface TaoTopicsDescriptor {
   taobao_localorder_StatusNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLocalorderStatusNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLogisticsAccept 淘宝物流 > 物流揽收} */
   taobao_logistics_Accept(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLogisticsAccept) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoLogisticsExceptionConfigChange 淘宝物流 > 物流管理-包裹中心-预警配置变更消息} */
+  taobao_logistics_ExceptionConfigChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLogisticsExceptionConfigChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLogisticsLogsticDetailTrace 淘宝物流 > 物流详情跟踪消息} */
   taobao_logistics_LogsticDetailTrace(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLogisticsLogsticDetailTrace) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoLogisticsPackageExceptionCreate 淘宝物流 > 物流管理-包裹中心-异常创建消息} */
+  taobao_logistics_PackageExceptionCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLogisticsPackageExceptionCreate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoLogisticsPackageExceptionOff 淘宝物流 > 物流管理-包裹中心-异常核销消息} */
+  taobao_logistics_PackageExceptionOff(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLogisticsPackageExceptionOff) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLogisticsUnTaobaoLogstic 淘宝物流 > 非淘物流消息} */
   taobao_logistics_UnTaobaoLogstic(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLogisticsUnTaobaoLogstic) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoMiniappArticleContentUnlawful 轻应用 > 小程序文章内容非法} */
@@ -1804,6 +1810,8 @@ declare interface TaoTopicsDescriptor {
   taobao_refund_TaobaoInterApplied(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRefundTaobaoInterApplied) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRefundTaobaoIntervened 淘宝退款 > 淘宝介入退款消息} */
   taobao_refund_TaobaoIntervened(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRefundTaobaoIntervened) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoRetrieveCompleted 淘宝 > 商家挽回完结消息} */
+  taobao_retrieve_Completed(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRetrieveCompleted) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRhinoDeliveryUpdate 智能制造API > 订单发货通知} */
   taobao_rhino_DeliveryUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRhinoDeliveryUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRhinoDeviceStatus 智能制造API > 智能制造-设备状态变更} */
@@ -2982,6 +2990,8 @@ declare interface TaoTopicsDescriptor {
   taobao_recycle(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRecycle) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRefund} */
   taobao_refund(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRefund) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoRetrieve} */
+  taobao_retrieve(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRetrieve) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRhino} */
   taobao_rhino(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRhino) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSec} */
@@ -4877,8 +4887,14 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_localorder_StatusNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLocalorderStatusNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLogisticsAccept 淘宝物流 > 物流揽收} */
   on(topic: 'taobao_logistics_Accept', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLogisticsAccept) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoLogisticsExceptionConfigChange 淘宝物流 > 物流管理-包裹中心-预警配置变更消息} */
+  on(topic: 'taobao_logistics_ExceptionConfigChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLogisticsExceptionConfigChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLogisticsLogsticDetailTrace 淘宝物流 > 物流详情跟踪消息} */
   on(topic: 'taobao_logistics_LogsticDetailTrace', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLogisticsLogsticDetailTrace) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoLogisticsPackageExceptionCreate 淘宝物流 > 物流管理-包裹中心-异常创建消息} */
+  on(topic: 'taobao_logistics_PackageExceptionCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLogisticsPackageExceptionCreate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoLogisticsPackageExceptionOff 淘宝物流 > 物流管理-包裹中心-异常核销消息} */
+  on(topic: 'taobao_logistics_PackageExceptionOff', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLogisticsPackageExceptionOff) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLogisticsUnTaobaoLogstic 淘宝物流 > 非淘物流消息} */
   on(topic: 'taobao_logistics_UnTaobaoLogstic', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLogisticsUnTaobaoLogstic) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoMiniappArticleContentUnlawful 轻应用 > 小程序文章内容非法} */
@@ -5029,6 +5045,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_refund_TaobaoInterApplied', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRefundTaobaoInterApplied) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRefundTaobaoIntervened 淘宝退款 > 淘宝介入退款消息} */
   on(topic: 'taobao_refund_TaobaoIntervened', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRefundTaobaoIntervened) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoRetrieveCompleted 淘宝 > 商家挽回完结消息} */
+  on(topic: 'taobao_retrieve_Completed', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRetrieveCompleted) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRhinoDeliveryUpdate 智能制造API > 订单发货通知} */
   on(topic: 'taobao_rhino_DeliveryUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRhinoDeliveryUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRhinoDeviceStatus 智能制造API > 智能制造-设备状态变更} */
@@ -6207,6 +6225,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_recycle', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRecycle) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRefund} */
   on(topic: 'taobao_refund', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRefund) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoRetrieve} */
+  on(topic: 'taobao_retrieve', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRetrieve) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRhino} */
   on(topic: 'taobao_rhino', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRhino) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSec} */

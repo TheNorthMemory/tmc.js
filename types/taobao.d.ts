@@ -3409,6 +3409,22 @@ declare namespace Taobao.Logistics {
     tid: number | bigint;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2658&docType=9 物流管理-包裹中心-预警配置变更消息} */
+  interface ExceptionConfigChange {
+    /** 修改后，被判断为“揽收后停滞”X前计入“即将超时” */
+    collected_stop_warn_value: string;
+    /** 修改后，延迟发货前X小时计入“即将延迟” */
+    consign_delay_warn_value: string;
+    /** 修改后，被判断为“虚假发货”X前计入“即将虚假发货” */
+    consign_fake_warn_value: string;
+    /** 修改后，被判断为“派签停滞”X前计入“即将超时” */
+    deliverying_stop_warn_value: string;
+    /** 买家id */
+    seller_id: number;
+    /** 修改后，被判断为“运输停滞”X前计入“即将超时 */
+    transporting_stop_warn_value: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=728&docType=9 物流详情跟踪消息} */
   interface LogsticDetailTrace {
     /** 事件名称。类型如下：CREATE:物流订单创建, CONSIGN:卖家发货, GOT:揽收成功, ARRIVAL:进站, DEPARTURE:出站, SIGNED:签收成功, SENT_SCAN:派件扫描, FAILED:签收失败/拒签, LOST:丢失, SENT_CITY:到货城市, TO_EMS:订单转给EMS, OTHER:其他事件/操作 */
@@ -3423,6 +3439,40 @@ declare namespace Taobao.Logistics {
     readonly tid: number | bigint;
     /** 处理时间 */
     time: Date | number | string;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2656&docType=9 物流管理-包裹中心-异常创建消息} */
+  interface PackageExceptionCreate {
+    /** 预计赔付金额 */
+    compensate_amount: string;
+    /** 异常生成时间，时间戳：单位毫秒 */
+    create_time: number;
+    /** 异常维度 */
+    detail_type: string;
+    /** 异常一级类型 */
+    exception_code: string;
+    /** 异常性质 */
+    exception_type: string;
+    /** 异常id */
+    excep_id: string;
+    /** 运单维度异常信息 */
+    mail_details?: string;
+    /** 超时时间 */
+    over_time: string;
+    /** 商家ID */
+    seller_id: string;
+    /** 异常二级类型 */
+    sub_exception_code: string;
+    /** 交易单维度异常信息 */
+    trade_details?: string;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2657&docType=9 物流管理-包裹中心-异常核销消息} */
+  interface PackageExceptionOff {
+    /** 异常id */
+    excep_id: string;
+    /** 商家ID */
+    seller_id: string;
   }
 
   /** {@link https://open.taobao.com/tmc.htm?docId=1188&docType=9 非淘物流消息} */
@@ -4624,6 +4674,35 @@ declare namespace Taobao.Refund {
     seller_nick: string;
     /** 父订单退款交易编号 */
     tid: number | bigint;
+  }
+}
+
+/** 淘宝 */
+declare namespace Taobao.Retrieve {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2661&docType=9 商家挽回完结消息} */
+  interface Completed {
+    /** 平台子订单ID */
+    biz_order_id: number | bigint;
+    /** 挽回结果 */
+    biz_status: number;
+    /** 挽回结果的描述 */
+    biz_status_desc: string;
+    /** 买家选择的方案 */
+    buyer_option_name?: string;
+    /** 买家选择时间 */
+    buyer_select_time?: string;
+    /** 平台主订单ID */
+    main_order_id?: number | bigint;
+    /** 平台退款编号 */
+    redund_id: number | bigint;
+    /** 挽单记录ID */
+    retrieve_record_id: number;
+    /** 策略id */
+    strategy_id?: string;
+    /** 策略名称 */
+    strategy_name?: string;
+    /** 商家主账号ID */
+    user_id: number;
   }
 }
 

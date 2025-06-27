@@ -1636,8 +1636,14 @@ declare namespace IncomingMessage {
   type TaobaoLocalorderStatusNotify = Message & { content?: MessageContent & { topic?: 'taobao_localorder_StatusNotify', content?: string | Taobao.Localorder.StatusNotify } };
   /** {@link Taobao.Logistics.Accept 淘宝物流 > 物流揽收} */
   type TaobaoLogisticsAccept = Message & { content?: MessageContent & { topic?: 'taobao_logistics_Accept', content?: string | Taobao.Logistics.Accept } };
+  /** {@link Taobao.Logistics.ExceptionConfigChange 淘宝物流 > 物流管理-包裹中心-预警配置变更消息} */
+  type TaobaoLogisticsExceptionConfigChange = Message & { content?: MessageContent & { topic?: 'taobao_logistics_ExceptionConfigChange', content?: string | Taobao.Logistics.ExceptionConfigChange } };
   /** {@link Taobao.Logistics.LogsticDetailTrace 淘宝物流 > 物流详情跟踪消息} */
   type TaobaoLogisticsLogsticDetailTrace = Message & { content?: MessageContent & { topic?: 'taobao_logistics_LogsticDetailTrace', content?: string | Taobao.Logistics.LogsticDetailTrace } };
+  /** {@link Taobao.Logistics.PackageExceptionCreate 淘宝物流 > 物流管理-包裹中心-异常创建消息} */
+  type TaobaoLogisticsPackageExceptionCreate = Message & { content?: MessageContent & { topic?: 'taobao_logistics_PackageExceptionCreate', content?: string | Taobao.Logistics.PackageExceptionCreate } };
+  /** {@link Taobao.Logistics.PackageExceptionOff 淘宝物流 > 物流管理-包裹中心-异常核销消息} */
+  type TaobaoLogisticsPackageExceptionOff = Message & { content?: MessageContent & { topic?: 'taobao_logistics_PackageExceptionOff', content?: string | Taobao.Logistics.PackageExceptionOff } };
   /** {@link Taobao.Logistics.UnTaobaoLogstic 淘宝物流 > 非淘物流消息} */
   type TaobaoLogisticsUnTaobaoLogstic = Message & { content?: MessageContent & { topic?: 'taobao_logistics_UnTaobaoLogstic', content?: string | Taobao.Logistics.UnTaobaoLogstic } };
   /** {@link Taobao.Miniapp.ArticleContentUnlawful 轻应用 > 小程序文章内容非法} */
@@ -1788,6 +1794,8 @@ declare namespace IncomingMessage {
   type TaobaoRefundTaobaoInterApplied = Message & { content?: MessageContent & { topic?: 'taobao_refund_TaobaoInterApplied', content?: string | Taobao.Refund.TaobaoInterApplied } };
   /** {@link Taobao.Refund.TaobaoIntervened 淘宝退款 > 淘宝介入退款消息} */
   type TaobaoRefundTaobaoIntervened = Message & { content?: MessageContent & { topic?: 'taobao_refund_TaobaoIntervened', content?: string | Taobao.Refund.TaobaoIntervened } };
+  /** {@link Taobao.Retrieve.Completed 淘宝 > 商家挽回完结消息} */
+  type TaobaoRetrieveCompleted = Message & { content?: MessageContent & { topic?: 'taobao_retrieve_Completed', content?: string | Taobao.Retrieve.Completed } };
   /** {@link Taobao.Rhino.DeliveryUpdate 智能制造API > 订单发货通知} */
   type TaobaoRhinoDeliveryUpdate = Message & { content?: MessageContent & { topic?: 'taobao_rhino_DeliveryUpdate', content?: string | Taobao.Rhino.DeliveryUpdate } };
   /** {@link Taobao.Rhino.DeviceStatus 智能制造API > 智能制造-设备状态变更} */
@@ -4510,11 +4518,17 @@ declare namespace IncomingMessage {
   type TaobaoLocalorder = TaobaoLocalorderStatusNotify;
   /**
    * - {@link TaobaoLogisticsAccept 淘宝物流 > 物流揽收}
+   * - {@link TaobaoLogisticsExceptionConfigChange 淘宝物流 > 物流管理-包裹中心-预警配置变更消息}
    * - {@link TaobaoLogisticsLogsticDetailTrace 淘宝物流 > 物流详情跟踪消息}
+   * - {@link TaobaoLogisticsPackageExceptionCreate 淘宝物流 > 物流管理-包裹中心-异常创建消息}
+   * - {@link TaobaoLogisticsPackageExceptionOff 淘宝物流 > 物流管理-包裹中心-异常核销消息}
    * - {@link TaobaoLogisticsUnTaobaoLogstic 淘宝物流 > 非淘物流消息}
    */
   type TaobaoLogistics = TaobaoLogisticsAccept
+    | TaobaoLogisticsExceptionConfigChange
     | TaobaoLogisticsLogsticDetailTrace
+    | TaobaoLogisticsPackageExceptionCreate
+    | TaobaoLogisticsPackageExceptionOff
     | TaobaoLogisticsUnTaobaoLogstic;
   /**
    * - {@link TaobaoMiniappArticleContentUnlawful 轻应用 > 小程序文章内容非法}
@@ -4706,6 +4720,10 @@ declare namespace IncomingMessage {
     | TaobaoRefundRefundableMarked
     | TaobaoRefundTaobaoInterApplied
     | TaobaoRefundTaobaoIntervened;
+  /**
+   * - {@link TaobaoRetrieveCompleted 淘宝 > 商家挽回完结消息}
+   */
+  type TaobaoRetrieve = TaobaoRetrieveCompleted;
   /**
    * - {@link TaobaoRhinoDeliveryUpdate 智能制造API > 订单发货通知}
    * - {@link TaobaoRhinoDeviceStatus 智能制造API > 智能制造-设备状态变更}
@@ -6096,6 +6114,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoRdcaligenius}
    * - {@link TaobaoRecycle}
    * - {@link TaobaoRefund}
+   * - {@link TaobaoRetrieve}
    * - {@link TaobaoRhino}
    * - {@link TaobaoSec}
    * - {@link TaobaoSeed}
@@ -6211,6 +6230,7 @@ declare namespace IncomingMessage {
     | TaobaoRdcaligenius
     | TaobaoRecycle
     | TaobaoRefund
+    | TaobaoRetrieve
     | TaobaoRhino
     | TaobaoSec
     | TaobaoSeed
