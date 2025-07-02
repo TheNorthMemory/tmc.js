@@ -4681,28 +4681,28 @@ declare namespace Taobao.Refund {
 declare namespace Taobao.Retrieve {
   /** {@link https://open.taobao.com/tmc.htm?docId=2661&docType=9 商家挽回完结消息} */
   interface Completed {
-    /** 平台子订单ID */
-    biz_order_id: number | bigint;
     /** 挽回结果 */
     biz_status: number;
     /** 挽回结果的描述 */
     biz_status_desc: string;
+    /** 买家选择的方案对应的code */
+    buyer_option_code?: string;
     /** 买家选择的方案 */
     buyer_option_name?: string;
     /** 买家选择时间 */
     buyer_select_time?: string;
-    /** 平台主订单ID */
-    main_order_id?: number | bigint;
+    /** 平台子订单ID */
+    oid: number | bigint;
+    /** 挽单记录ID */
+    record_id: number;
     /** 平台退款编号 */
     redund_id: number | bigint;
-    /** 挽单记录ID */
-    retrieve_record_id: number;
     /** 策略id */
     strategy_id?: string;
     /** 策略名称 */
     strategy_name?: string;
-    /** 商家主账号ID */
-    user_id: number;
+    /** 平台主订单ID */
+    tid?: number | bigint;
   }
 }
 
