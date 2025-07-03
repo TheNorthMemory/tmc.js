@@ -4677,7 +4677,7 @@ declare namespace Taobao.Refund {
   }
 }
 
-/** 淘宝 */
+/** 淘宝退款 */
 declare namespace Taobao.Retrieve {
   /** {@link https://open.taobao.com/tmc.htm?docId=2661&docType=9 商家挽回完结消息} */
   interface Completed {

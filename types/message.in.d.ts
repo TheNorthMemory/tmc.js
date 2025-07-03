@@ -1794,7 +1794,7 @@ declare namespace IncomingMessage {
   type TaobaoRefundTaobaoInterApplied = Message & { content?: MessageContent & { topic?: 'taobao_refund_TaobaoInterApplied', content?: string | Taobao.Refund.TaobaoInterApplied } };
   /** {@link Taobao.Refund.TaobaoIntervened 淘宝退款 > 淘宝介入退款消息} */
   type TaobaoRefundTaobaoIntervened = Message & { content?: MessageContent & { topic?: 'taobao_refund_TaobaoIntervened', content?: string | Taobao.Refund.TaobaoIntervened } };
-  /** {@link Taobao.Retrieve.Completed 淘宝 > 商家挽回完结消息} */
+  /** {@link Taobao.Retrieve.Completed 淘宝退款 > 商家挽回完结消息} */
   type TaobaoRetrieveCompleted = Message & { content?: MessageContent & { topic?: 'taobao_retrieve_Completed', content?: string | Taobao.Retrieve.Completed } };
   /** {@link Taobao.Rhino.DeliveryUpdate 智能制造API > 订单发货通知} */
   type TaobaoRhinoDeliveryUpdate = Message & { content?: MessageContent & { topic?: 'taobao_rhino_DeliveryUpdate', content?: string | Taobao.Rhino.DeliveryUpdate } };
@@ -4721,7 +4721,7 @@ declare namespace IncomingMessage {
     | TaobaoRefundTaobaoInterApplied
     | TaobaoRefundTaobaoIntervened;
   /**
-   * - {@link TaobaoRetrieveCompleted 淘宝 > 商家挽回完结消息}
+   * - {@link TaobaoRetrieveCompleted 淘宝退款 > 商家挽回完结消息}
    */
   type TaobaoRetrieve = TaobaoRetrieveCompleted;
   /**
