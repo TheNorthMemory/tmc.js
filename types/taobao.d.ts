@@ -3457,6 +3457,8 @@ declare namespace Taobao.Logistics {
     excep_id: string;
     /** 运单维度异常信息 */
     mail_details?: string;
+    /** 消息主键 */
+    msg_id: string;
     /** 超时时间 */
     over_time: string;
     /** 商家ID */
@@ -3471,6 +3473,8 @@ declare namespace Taobao.Logistics {
   interface PackageExceptionOff {
     /** 异常id */
     excep_id: string;
+    /** 消息主键 */
+    msg_id: string;
     /** 商家ID */
     seller_id: string;
   }
