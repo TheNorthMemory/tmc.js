@@ -1348,6 +1348,12 @@ declare namespace IncomingMessage {
   type TaobaoDisputeExchangeSuccess = Message & { content?: MessageContent & { topic?: 'taobao_dispute_ExchangeSuccess', content?: string | Taobao.Dispute.ExchangeSuccess } };
   /** {@link Taobao.Dispute.ExchangeTurnToRefund 淘宝 > 卖家换货转退款} */
   type TaobaoDisputeExchangeTurnToRefund = Message & { content?: MessageContent & { topic?: 'taobao_dispute_ExchangeTurnToRefund', content?: string | Taobao.Dispute.ExchangeTurnToRefund } };
+  /** {@link Taobao.Dispute.NegotiationAgreed 淘宝 > 退款-买家接受协商申请} */
+  type TaobaoDisputeNegotiationAgreed = Message & { content?: MessageContent & { topic?: 'taobao_dispute_NegotiationAgreed', content?: string | Taobao.Dispute.NegotiationAgreed } };
+  /** {@link Taobao.Dispute.NegotiationApply 淘宝 > 退款-卖家提交协商申请} */
+  type TaobaoDisputeNegotiationApply = Message & { content?: MessageContent & { topic?: 'taobao_dispute_NegotiationApply', content?: string | Taobao.Dispute.NegotiationApply } };
+  /** {@link Taobao.Dispute.NegotiationRefused 淘宝 > 退款-买家拒绝协商申请} */
+  type TaobaoDisputeNegotiationRefused = Message & { content?: MessageContent & { topic?: 'taobao_dispute_NegotiationRefused', content?: string | Taobao.Dispute.NegotiationRefused } };
   /** {@link Taobao.Dispute.PostageRefundSuccess 淘宝 > 退货运费单成功消息} */
   type TaobaoDisputePostageRefundSuccess = Message & { content?: MessageContent & { topic?: 'taobao_dispute_PostageRefundSuccess', content?: string | Taobao.Dispute.PostageRefundSuccess } };
   /** {@link Taobao.Dispute.RefundCreated 淘宝 > 新退款创建} */
@@ -1746,6 +1752,8 @@ declare namespace IncomingMessage {
   type TaobaoPaimaiOrderCreate = Message & { content?: MessageContent & { topic?: 'taobao_paimai_OrderCreate', content?: string | Taobao.Paimai.OrderCreate } };
   /** {@link Taobao.Paimai.OrderPaid 淘宝 > 二手车xpos订单支付完成消息} */
   type TaobaoPaimaiOrderPaid = Message & { content?: MessageContent & { topic?: 'taobao_paimai_OrderPaid', content?: string | Taobao.Paimai.OrderPaid } };
+  /** {@link Taobao.Pc.EgoTradeOrder 淘宝企业购 > PC企业购交易订单消息} */
+  type TaobaoPcEgoTradeOrder = Message & { content?: MessageContent & { topic?: 'taobao_pc_EgoTradeOrder', content?: string | Taobao.Pc.EgoTradeOrder } };
   /** {@link Taobao.Pc.ItemChange 淘宝企业购 > 商品变更消息} */
   type TaobaoPcItemChange = Message & { content?: MessageContent & { topic?: 'taobao_pc_ItemChange', content?: string | Taobao.Pc.ItemChange } };
   /** {@link Taobao.Profit.ResultNotify 淘宝 > 权益领取结果通知} */
@@ -4164,6 +4172,9 @@ declare namespace IncomingMessage {
    * - {@link TaobaoDisputeExchangeSellerGoodsConsigned 淘宝 > 换货-卖家寄出商品}
    * - {@link TaobaoDisputeExchangeSuccess 淘宝 > 买家确认收货,换货成功}
    * - {@link TaobaoDisputeExchangeTurnToRefund 淘宝 > 卖家换货转退款}
+   * - {@link TaobaoDisputeNegotiationAgreed 淘宝 > 退款-买家接受协商申请}
+   * - {@link TaobaoDisputeNegotiationApply 淘宝 > 退款-卖家提交协商申请}
+   * - {@link TaobaoDisputeNegotiationRefused 淘宝 > 退款-买家拒绝协商申请}
    * - {@link TaobaoDisputePostageRefundSuccess 淘宝 > 退货运费单成功消息}
    * - {@link TaobaoDisputeRefundCreated 淘宝 > 新退款创建}
    * - {@link TaobaoDisputeRefundPriceProtect 淘宝 > 价保退款成功}
@@ -4177,6 +4188,9 @@ declare namespace IncomingMessage {
     | TaobaoDisputeExchangeSellerGoodsConsigned
     | TaobaoDisputeExchangeSuccess
     | TaobaoDisputeExchangeTurnToRefund
+    | TaobaoDisputeNegotiationAgreed
+    | TaobaoDisputeNegotiationApply
+    | TaobaoDisputeNegotiationRefused
     | TaobaoDisputePostageRefundSuccess
     | TaobaoDisputeRefundCreated
     | TaobaoDisputeRefundPriceProtect
@@ -4657,9 +4671,11 @@ declare namespace IncomingMessage {
     | TaobaoPaimaiOrderCreate
     | TaobaoPaimaiOrderPaid;
   /**
+   * - {@link TaobaoPcEgoTradeOrder 淘宝企业购 > PC企业购交易订单消息}
    * - {@link TaobaoPcItemChange 淘宝企业购 > 商品变更消息}
    */
-  type TaobaoPc = TaobaoPcItemChange;
+  type TaobaoPc = TaobaoPcEgoTradeOrder
+    | TaobaoPcItemChange;
   /**
    * - {@link TaobaoProfitResultNotify 淘宝 > 权益领取结果通知}
    */

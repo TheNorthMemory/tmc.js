@@ -1364,6 +1364,12 @@ declare interface TaoTopicsDescriptor {
   taobao_dispute_ExchangeSuccess(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeExchangeSuccess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDisputeExchangeTurnToRefund 淘宝 > 卖家换货转退款} */
   taobao_dispute_ExchangeTurnToRefund(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeExchangeTurnToRefund) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDisputeNegotiationAgreed 淘宝 > 退款-买家接受协商申请} */
+  taobao_dispute_NegotiationAgreed(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeNegotiationAgreed) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDisputeNegotiationApply 淘宝 > 退款-卖家提交协商申请} */
+  taobao_dispute_NegotiationApply(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeNegotiationApply) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDisputeNegotiationRefused 淘宝 > 退款-买家拒绝协商申请} */
+  taobao_dispute_NegotiationRefused(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeNegotiationRefused) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDisputePostageRefundSuccess 淘宝 > 退货运费单成功消息} */
   taobao_dispute_PostageRefundSuccess(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputePostageRefundSuccess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDisputeRefundCreated 淘宝 > 新退款创建} */
@@ -1762,6 +1768,8 @@ declare interface TaoTopicsDescriptor {
   taobao_paimai_OrderCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPaimaiOrderCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPaimaiOrderPaid 淘宝 > 二手车xpos订单支付完成消息} */
   taobao_paimai_OrderPaid(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPaimaiOrderPaid) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoPcEgoTradeOrder 淘宝企业购 > PC企业购交易订单消息} */
+  taobao_pc_EgoTradeOrder(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcEgoTradeOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPcItemChange 淘宝企业购 > 商品变更消息} */
   taobao_pc_ItemChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcItemChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoProfitResultNotify 淘宝 > 权益领取结果通知} */
@@ -4599,6 +4607,12 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_dispute_ExchangeSuccess', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeExchangeSuccess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDisputeExchangeTurnToRefund 淘宝 > 卖家换货转退款} */
   on(topic: 'taobao_dispute_ExchangeTurnToRefund', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeExchangeTurnToRefund) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDisputeNegotiationAgreed 淘宝 > 退款-买家接受协商申请} */
+  on(topic: 'taobao_dispute_NegotiationAgreed', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeNegotiationAgreed) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDisputeNegotiationApply 淘宝 > 退款-卖家提交协商申请} */
+  on(topic: 'taobao_dispute_NegotiationApply', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeNegotiationApply) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDisputeNegotiationRefused 淘宝 > 退款-买家拒绝协商申请} */
+  on(topic: 'taobao_dispute_NegotiationRefused', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeNegotiationRefused) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDisputePostageRefundSuccess 淘宝 > 退货运费单成功消息} */
   on(topic: 'taobao_dispute_PostageRefundSuccess', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputePostageRefundSuccess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDisputeRefundCreated 淘宝 > 新退款创建} */
@@ -4997,6 +5011,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_paimai_OrderCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPaimaiOrderCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPaimaiOrderPaid 淘宝 > 二手车xpos订单支付完成消息} */
   on(topic: 'taobao_paimai_OrderPaid', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPaimaiOrderPaid) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoPcEgoTradeOrder 淘宝企业购 > PC企业购交易订单消息} */
+  on(topic: 'taobao_pc_EgoTradeOrder', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcEgoTradeOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPcItemChange 淘宝企业购 > 商品变更消息} */
   on(topic: 'taobao_pc_ItemChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcItemChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoProfitResultNotify 淘宝 > 权益领取结果通知} */

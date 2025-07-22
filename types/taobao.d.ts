@@ -1057,6 +1057,72 @@ declare namespace Taobao.Dispute {
     tid: number | bigint;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2667&docType=9 退款-买家接受协商申请} */
+  interface NegotiationAgreed {
+    /** 1/2:退款,3:退货退款,4/6:换货,其他请调api获取详细信息 */
+    biz_claim_type: number;
+    /** 涉及金额 */
+    buyer_refund_fee: number;
+    /** 创建时间 */
+    create: Date | number | string;
+    /** 1:售中, 2:售后 */
+    dispute_type: number;
+    /** 更新时间 */
+    modified: Date | number | string;
+    /** 子订单ID */
+    oid: number | bigint;
+    /** 退款id(Long)或消息id(字符串) */
+    refund_id: number;
+    /** 卖家openUid */
+    seller_open_uid: string;
+    /** 支付单ID */
+    tid: number | bigint;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2666&docType=9 退款-卖家提交协商申请} */
+  interface NegotiationApply {
+    /** 1/2:退款,3:退货退款,4/6:换货,其他请调api获取详细信息 */
+    biz_claim_type: number;
+    /** 涉及金额 */
+    buyer_refund_fee: number;
+    /** 创建时间 */
+    create: Date | number | string;
+    /** 1:售中, 2:售后 */
+    dispute_type: number;
+    /** 更新时间 */
+    modified: Date | number | string;
+    /** 子订单ID */
+    oid: number | bigint;
+    /** 退款id(Long)或消息id(字符串) */
+    refund_id: number;
+    /** 卖家openUid */
+    seller_open_uid: string;
+    /** 支付单ID */
+    tid: number | bigint;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2668&docType=9 退款-买家拒绝协商申请} */
+  interface NegotiationRefused {
+    /** 1/2:退款,3:退货退款,4/6:换货,其他请调api获取详细信息 */
+    biz_claim_type: number;
+    /** 涉及金额 */
+    buyer_refund_fee: number;
+    /** 创建时间 */
+    create: Date | number | string;
+    /** 1:售中, 2:售后 */
+    dispute_type: number;
+    /** 更新时间 */
+    modified: Date | number | string;
+    /** 子订单ID */
+    oid: number | bigint;
+    /** 退款id(Long)或消息id(字符串) */
+    refund_id: number;
+    /** 卖家openUid */
+    seller_open_uid: string;
+    /** 支付单ID */
+    tid: number | bigint;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2659&docType=9 退货运费单成功消息} */
   interface PostageRefundSuccess {
     /** 1/2:退款,3:退货退款,4/6:换货,其他请调api获取详细信息 */
@@ -4275,6 +4341,28 @@ declare namespace Taobao.Paimai {
 
 /** 淘宝企业购 */
 declare namespace Taobao.Pc {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2670&docType=9 PC企业购交易订单消息} */
+  interface EgoTradeOrder {
+    /** 企业购订单ID */
+    biz_order_id: number | bigint;
+    /** 买家ID */
+    buyer_id: number;
+    /** 项目ID */
+    client_id: string;
+    /** 消息时间 */
+    message_time: number;
+    /** 消息ID */
+    msg_id: string;
+    /** 外部ID */
+    out_biz_id: string;
+    /** 企业购子单ID */
+    sub_biz_order_ids: string;
+    /** 消息主题 */
+    topic: string;
+    /** 消息类型 */
+    type: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2633&docType=9 商品变更消息} */
   interface ItemChange {
     /** 变更企业购商品ID */
