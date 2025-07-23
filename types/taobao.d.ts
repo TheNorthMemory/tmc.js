@@ -4341,6 +4341,28 @@ declare namespace Taobao.Paimai {
 
 /** 淘宝企业购 */
 declare namespace Taobao.Pc {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2671&docType=9 PC企业购逆向订单消息} */
+  interface EgoDisputeOrder {
+    /** 企业购子订单ID */
+    biz_order_id: number | bigint;
+    /** 买家ID */
+    buyer_id: number;
+    /** 项目ID */
+    client_id: string;
+    /** 逆向单ID */
+    dispute_id: number | bigint;
+    /** 消息时间 */
+    message_time: number;
+    /** 消息ID */
+    msg_id: string;
+    /** 外部单号 */
+    out_biz_id: string;
+    /** 消息主题 */
+    topic: string;
+    /** 消息类型 */
+    type: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2670&docType=9 PC企业购交易订单消息} */
   interface EgoTradeOrder {
     /** 企业购订单ID */

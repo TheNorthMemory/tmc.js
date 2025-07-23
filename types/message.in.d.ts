@@ -1752,6 +1752,8 @@ declare namespace IncomingMessage {
   type TaobaoPaimaiOrderCreate = Message & { content?: MessageContent & { topic?: 'taobao_paimai_OrderCreate', content?: string | Taobao.Paimai.OrderCreate } };
   /** {@link Taobao.Paimai.OrderPaid 淘宝 > 二手车xpos订单支付完成消息} */
   type TaobaoPaimaiOrderPaid = Message & { content?: MessageContent & { topic?: 'taobao_paimai_OrderPaid', content?: string | Taobao.Paimai.OrderPaid } };
+  /** {@link Taobao.Pc.EgoDisputeOrder 淘宝企业购 > PC企业购逆向订单消息} */
+  type TaobaoPcEgoDisputeOrder = Message & { content?: MessageContent & { topic?: 'taobao_pc_EgoDisputeOrder', content?: string | Taobao.Pc.EgoDisputeOrder } };
   /** {@link Taobao.Pc.EgoTradeOrder 淘宝企业购 > PC企业购交易订单消息} */
   type TaobaoPcEgoTradeOrder = Message & { content?: MessageContent & { topic?: 'taobao_pc_EgoTradeOrder', content?: string | Taobao.Pc.EgoTradeOrder } };
   /** {@link Taobao.Pc.ItemChange 淘宝企业购 > 商品变更消息} */
@@ -4671,10 +4673,12 @@ declare namespace IncomingMessage {
     | TaobaoPaimaiOrderCreate
     | TaobaoPaimaiOrderPaid;
   /**
+   * - {@link TaobaoPcEgoDisputeOrder 淘宝企业购 > PC企业购逆向订单消息}
    * - {@link TaobaoPcEgoTradeOrder 淘宝企业购 > PC企业购交易订单消息}
    * - {@link TaobaoPcItemChange 淘宝企业购 > 商品变更消息}
    */
-  type TaobaoPc = TaobaoPcEgoTradeOrder
+  type TaobaoPc = TaobaoPcEgoDisputeOrder
+    | TaobaoPcEgoTradeOrder
     | TaobaoPcItemChange;
   /**
    * - {@link TaobaoProfitResultNotify 淘宝 > 权益领取结果通知}
