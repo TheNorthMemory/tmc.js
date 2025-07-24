@@ -1244,6 +1244,8 @@ declare namespace IncomingMessage {
   type TaobaoApsCommentAdd = Message & { content?: MessageContent & { topic?: 'taobao_aps_CommentAdd', content?: string | Taobao.Aps.CommentAdd } };
   /** {@link Taobao.Aps.NewFeedback 平台消息 > 收到舆情} */
   type TaobaoApsNewFeedback = Message & { content?: MessageContent & { topic?: 'taobao_aps_NewFeedback', content?: string | Taobao.Aps.NewFeedback } };
+  /** {@link Taobao.Ascp.QcInspectToErp 淘宝 > 品控验货任务发送三方检验商系统对接} */
+  type TaobaoAscpQcInspectToErp = Message & { content?: MessageContent & { topic?: 'taobao_ascp_QcInspectToErp', content?: string | Taobao.Ascp.QcInspectToErp } };
   /** {@link Taobao.Auction.ApplyEvent 淘宝 > 大资产拍卖报名消息} */
   type TaobaoAuctionApplyEvent = Message & { content?: MessageContent & { topic?: 'taobao_auction_ApplyEvent', content?: string | Taobao.Auction.ApplyEvent } };
   /** {@link Taobao.Auction.BidEvent 淘宝 > 大资产拍卖出价消息} */
@@ -4049,6 +4051,10 @@ declare namespace IncomingMessage {
   type TaobaoAps = TaobaoApsCommentAdd
     | TaobaoApsNewFeedback;
   /**
+   * - {@link TaobaoAscpQcInspectToErp 淘宝 > 品控验货任务发送三方检验商系统对接}
+   */
+  type TaobaoAscp = TaobaoAscpQcInspectToErp;
+  /**
    * - {@link TaobaoAuctionApplyEvent 淘宝 > 大资产拍卖报名消息}
    * - {@link TaobaoAuctionBidEvent 淘宝 > 大资产拍卖出价消息}
    * - {@link TaobaoAuctionQuanAnEvaluatePrice 淘宝 > 拍卖全案评估价变更消息}
@@ -6068,6 +6074,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoAlipic}
    * - {@link TaobaoAlsc}
    * - {@link TaobaoAps}
+   * - {@link TaobaoAscp}
    * - {@link TaobaoAuction}
    * - {@link TaobaoAxin}
    * - {@link TaobaoBaichuan}
@@ -6184,6 +6191,7 @@ declare namespace IncomingMessage {
     | TaobaoAlipic
     | TaobaoAlsc
     | TaobaoAps
+    | TaobaoAscp
     | TaobaoAuction
     | TaobaoAxin
     | TaobaoBaichuan

@@ -1260,6 +1260,8 @@ declare interface TaoTopicsDescriptor {
   taobao_aps_CommentAdd(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoApsCommentAdd) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoApsNewFeedback 平台消息 > 收到舆情} */
   taobao_aps_NewFeedback(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoApsNewFeedback) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoAscpQcInspectToErp 淘宝 > 品控验货任务发送三方检验商系统对接} */
+  taobao_ascp_QcInspectToErp(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAscpQcInspectToErp) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAuctionApplyEvent 淘宝 > 大资产拍卖报名消息} */
   taobao_auction_ApplyEvent(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAuctionApplyEvent) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAuctionBidEvent 淘宝 > 大资产拍卖出价消息} */
@@ -2868,6 +2870,8 @@ declare interface TaoTopicsDescriptor {
   taobao_alsc(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAlsc) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAps} */
   taobao_aps(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAps) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoAscp} */
+  taobao_ascp(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAscp) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAuction} */
   taobao_auction(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAuction) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAxin} */
@@ -4505,6 +4509,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_aps_CommentAdd', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoApsCommentAdd) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoApsNewFeedback 平台消息 > 收到舆情} */
   on(topic: 'taobao_aps_NewFeedback', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoApsNewFeedback) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoAscpQcInspectToErp 淘宝 > 品控验货任务发送三方检验商系统对接} */
+  on(topic: 'taobao_ascp_QcInspectToErp', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAscpQcInspectToErp) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAuctionApplyEvent 淘宝 > 大资产拍卖报名消息} */
   on(topic: 'taobao_auction_ApplyEvent', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAuctionApplyEvent) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAuctionBidEvent 淘宝 > 大资产拍卖出价消息} */
@@ -6113,6 +6119,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_alsc', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAlsc) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAps} */
   on(topic: 'taobao_aps', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAps) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoAscp} */
+  on(topic: 'taobao_ascp', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAscp) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAuction} */
   on(topic: 'taobao_auction', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAuction) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAxin} */

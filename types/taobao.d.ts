@@ -254,6 +254,27 @@ declare namespace Taobao.Aps {
 }
 
 /** 淘宝 */
+declare namespace Taobao.Ascp {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2665&docType=9 品控验货任务发送三方检验商系统对接} */
+  interface QcInspectToErp {
+    /** 业务时间 */
+    bizdate: number;
+    /** 账套 */
+    biz_type: number;
+    /** 检验商编码 */
+    inspect_id: string;
+    /** 品控系统主任务编码 */
+    master_code?: string;
+    /** 品控系统子任务编码 */
+    order_code?: string;
+    /** 品控系统外部单号 */
+    out_order_code: string;
+    /** 任务事件：create（创建）、cancel（取消）、auditFinish（审核完成） */
+    task_event: string;
+  }
+}
+
+/** 淘宝 */
 declare namespace Taobao.Auction {
   /** {@link https://open.taobao.com/tmc.htm?docId=2110&docType=9 大资产拍卖报名消息} */
   interface ApplyEvent {
