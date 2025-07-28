@@ -175,6 +175,19 @@ declare namespace Idle.Distribution {
 }
 
 /** 闲鱼 */
+declare namespace Idle.Fishmarket {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2669&docType=9 一口价转暗拍自动上架消息推送} */
+  interface TenderAutoAuctionMsg {
+    /** 已经暗拍轮次 */
+    auction_count: number;
+    /** 暗拍商品id */
+    item_id: number;
+    /** 消息 id */
+    message_id: number;
+  }
+}
+
+/** 闲鱼 */
 declare namespace Idle.Fishmarketfixed {
   /** {@link https://open.taobao.com/tmc.htm?docId=2623&docType=9 鱼市一口价买家单订单交易消息变更} */
   interface OrderSyn {
