@@ -1772,12 +1772,16 @@ declare interface TaoTopicsDescriptor {
   taobao_paimai_OrderCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPaimaiOrderCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPaimaiOrderPaid 淘宝 > 二手车xpos订单支付完成消息} */
   taobao_paimai_OrderPaid(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPaimaiOrderPaid) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoPcBillsGenerate 淘宝企业购 > PC企业购出账消息通知} */
+  taobao_pc_BillsGenerate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcBillsGenerate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPcEgoDisputeOrder 淘宝企业购 > PC企业购逆向订单消息} */
   taobao_pc_EgoDisputeOrder(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcEgoDisputeOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPcEgoTradeOrder 淘宝企业购 > PC企业购交易订单消息} */
   taobao_pc_EgoTradeOrder(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcEgoTradeOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPcItemChange 淘宝企业购 > 商品变更消息} */
   taobao_pc_ItemChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcItemChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoPcSaleInvoiceResult 淘宝企业购 > PC企业购发票通知消息} */
+  taobao_pc_SaleInvoiceResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcSaleInvoiceResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoProfitResultNotify 淘宝 > 权益领取结果通知} */
   taobao_profit_ResultNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoProfitResultNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPunishForall 淘宝 > 淘宝处罚消息} */
@@ -5025,12 +5029,16 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_paimai_OrderCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPaimaiOrderCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPaimaiOrderPaid 淘宝 > 二手车xpos订单支付完成消息} */
   on(topic: 'taobao_paimai_OrderPaid', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPaimaiOrderPaid) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoPcBillsGenerate 淘宝企业购 > PC企业购出账消息通知} */
+  on(topic: 'taobao_pc_BillsGenerate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcBillsGenerate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPcEgoDisputeOrder 淘宝企业购 > PC企业购逆向订单消息} */
   on(topic: 'taobao_pc_EgoDisputeOrder', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcEgoDisputeOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPcEgoTradeOrder 淘宝企业购 > PC企业购交易订单消息} */
   on(topic: 'taobao_pc_EgoTradeOrder', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcEgoTradeOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPcItemChange 淘宝企业购 > 商品变更消息} */
   on(topic: 'taobao_pc_ItemChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcItemChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoPcSaleInvoiceResult 淘宝企业购 > PC企业购发票通知消息} */
+  on(topic: 'taobao_pc_SaleInvoiceResult', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcSaleInvoiceResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoProfitResultNotify 淘宝 > 权益领取结果通知} */
   on(topic: 'taobao_profit_ResultNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoProfitResultNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPunishForall 淘宝 > 淘宝处罚消息} */

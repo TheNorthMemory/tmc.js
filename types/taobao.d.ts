@@ -4362,6 +4362,38 @@ declare namespace Taobao.Paimai {
 
 /** 淘宝企业购 */
 declare namespace Taobao.Pc {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2672&docType=9 PC企业购出账消息通知} */
+  interface BillsGenerate {
+    /** 结算金额（分） */
+    amount: number;
+    /** 账单汇总周期 */
+    bill_cycle: number;
+    /** 账但汇总周期类型：按月month、按日day */
+    bill_cycle_type: string;
+    /** 账单结束时间 */
+    bill_end_date: Date | number | string;
+    /** 账单号 */
+    bill_no: string;
+    /** 账单开始时间 */
+    bill_start_date: Date | number | string;
+    /** 买家id */
+    buyer_id: number;
+    /** 项目id */
+    client_id: string;
+    /** 消息时间 */
+    message_time: Date | number | string;
+    /** 消息ID */
+    msg_id: string;
+    /** 结算周期 */
+    settle_cycle: number;
+    /** 结算周期类型：按月month、按日day */
+    settle_cycle_type: string;
+    /** 结算截止时间 */
+    settle_end_date: Date | number | string;
+    /** 结算开始日期 */
+    settle_start_date: Date | number | string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2671&docType=9 PC企业购逆向订单消息} */
   interface EgoDisputeOrder {
     /** 企业购子订单ID */
@@ -4418,6 +4450,28 @@ declare namespace Taobao.Pc {
     time: number;
     /** 变更类型，ADD：商品新增，DELETE：商品删除，DOWN_SHELF：商品下架，UP_SHELF：商品上架，EDIT：商品信息变更，INVENTORY：商品库存变更 */
     type: string;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2673&docType=9 PC企业购发票通知消息} */
+  interface SaleInvoiceResult {
+    /** 账单号 */
+    bill_no: string;
+    /** 买家id */
+    buyer_id: number;
+    /** 项目id */
+    client_id: string;
+    /** 失败原因 */
+    error_msg?: string;
+    /** 发票申请号 */
+    invoice_apply_no: string;
+    /** 返回发票号码，如有多张发票，中间英文逗号隔开 */
+    invoice_nos?: string;
+    /** 消息时间 */
+    message_time: Date | number | string;
+    /** 消息ID */
+    msg_id: string;
+    /** 是否成功 */
+    success: boolean;
   }
 }
 
