@@ -4372,6 +4372,8 @@ declare namespace Taobao.Pc {
     bill_cycle_type: string;
     /** 账单结束时间 */
     bill_end_date: Date | number | string;
+    /** 出账时间 */
+    bill_gen_date: Date | number | string;
     /** 账单号 */
     bill_no: string;
     /** 账单开始时间 */
