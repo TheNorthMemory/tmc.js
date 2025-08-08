@@ -4406,6 +4406,8 @@ declare namespace Taobao.Pc {
     client_id: string;
     /** 逆向单ID */
     dispute_id: number | bigint;
+    /** 企业购主单ID, 主子合一时, 与bizOrderId相同 */
+    main_biz_order_id: number | bigint;
     /** 消息时间 */
     message_time: number;
     /** 消息ID */
@@ -4472,6 +4474,8 @@ declare namespace Taobao.Pc {
     message_time: Date | number | string;
     /** 消息ID */
     msg_id: string;
+    /** 外部发票申请号 */
+    outer_biz_no: string;
     /** 是否成功 */
     success: boolean;
   }
