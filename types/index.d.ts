@@ -1992,6 +1992,8 @@ declare interface TaoTopicsDescriptor {
   taobao_trade_FiveApi(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTradeFiveApi) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTradeOpenTradePush 淘宝交易 > 开放交易推进消息} */
   taobao_trade_OpenTradePush(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTradeOpenTradePush) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoTradeOrderSkuChanged 淘宝交易 > 修改子订单SKU成功} */
+  taobao_trade_OrderSkuChanged(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTradeOrderSkuChanged) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTradeSecondApi 淘宝交易 > 第二个测试API} */
   taobao_trade_SecondApi(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTradeSecondApi) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTradeTest 淘宝交易 > 挚涵消息测试} */
@@ -5253,6 +5255,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_trade_FiveApi', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTradeFiveApi) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTradeOpenTradePush 淘宝交易 > 开放交易推进消息} */
   on(topic: 'taobao_trade_OpenTradePush', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTradeOpenTradePush) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoTradeOrderSkuChanged 淘宝交易 > 修改子订单SKU成功} */
+  on(topic: 'taobao_trade_OrderSkuChanged', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTradeOrderSkuChanged) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTradeSecondApi 淘宝交易 > 第二个测试API} */
   on(topic: 'taobao_trade_SecondApi', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTradeSecondApi) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTradeTest 淘宝交易 > 挚涵消息测试} */

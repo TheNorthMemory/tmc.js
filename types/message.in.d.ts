@@ -1976,6 +1976,8 @@ declare namespace IncomingMessage {
   type TaobaoTradeFiveApi = Message & { content?: MessageContent & { topic?: 'taobao_trade_FiveApi', content?: string | Taobao.Trade.FiveApi } };
   /** {@link Taobao.Trade.OpenTradePush 淘宝交易 > 开放交易推进消息} */
   type TaobaoTradeOpenTradePush = Message & { content?: MessageContent & { topic?: 'taobao_trade_OpenTradePush', content?: string | Taobao.Trade.OpenTradePush } };
+  /** {@link Taobao.Trade.OrderSkuChanged 淘宝交易 > 修改子订单SKU成功} */
+  type TaobaoTradeOrderSkuChanged = Message & { content?: MessageContent & { topic?: 'taobao_trade_OrderSkuChanged', content?: string | Taobao.Trade.OrderSkuChanged } };
   /** {@link Taobao.Trade.SecondApi 淘宝交易 > 第二个测试API} */
   type TaobaoTradeSecondApi = Message & { content?: MessageContent & { topic?: 'taobao_trade_SecondApi', content?: string | Taobao.Trade.SecondApi } };
   /** {@link Taobao.Trade.Test 淘宝交易 > 挚涵消息测试} */
@@ -4965,6 +4967,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoTradeDoorInstallsettle 淘宝交易 > 淘宝上门安装服务费用结算}
    * - {@link TaobaoTradeFiveApi 淘宝交易 > 第五个测试API}
    * - {@link TaobaoTradeOpenTradePush 淘宝交易 > 开放交易推进消息}
+   * - {@link TaobaoTradeOrderSkuChanged 淘宝交易 > 修改子订单SKU成功}
    * - {@link TaobaoTradeSecondApi 淘宝交易 > 第二个测试API}
    * - {@link TaobaoTradeTest 淘宝交易 > 挚涵消息测试}
    * - {@link TaobaoTradeTestFour 淘宝交易 > taobao_trade_TestFour}
@@ -4999,6 +5002,7 @@ declare namespace IncomingMessage {
     | TaobaoTradeDoorInstallsettle
     | TaobaoTradeFiveApi
     | TaobaoTradeOpenTradePush
+    | TaobaoTradeOrderSkuChanged
     | TaobaoTradeSecondApi
     | TaobaoTradeTest
     | TaobaoTradeTestFour

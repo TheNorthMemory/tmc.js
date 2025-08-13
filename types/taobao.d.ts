@@ -6019,6 +6019,22 @@ declare namespace Taobao.Trade {
     type: string;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2676&docType=9 修改子订单SKU成功} */
+  interface OrderSkuChanged {
+    /** 由buyer_id加密而来, 可对外开放, 用来替换buyer_nick作为唯一标识 */
+    buyer_open_uid?: string;
+    /** 子订单ID */
+    oid: number | bigint;
+    /** 订单实付金额 */
+    payment?: string;
+    /** 交易状态 */
+    status?: string;
+    /** 主订单ID */
+    tid: string;
+    /** 交易类型 */
+    type: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2348&docType=9 第二个测试API} */
   interface SecondApi {
     /** 消息id */
