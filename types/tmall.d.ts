@@ -421,6 +421,25 @@ declare namespace Tmall.Homedecorationfuwu {
   }
 }
 
+/** 天猫服务 */
+declare namespace Tmall.Homeservice {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2675&docType=9 天猫家享服务物流更新} */
+  interface LogisticsUpdate {
+    /** 动作 */
+    logistics_action: string;
+    /** 包裹数量 */
+    mail_num: string;
+    /** 包裹详情 */
+    package_detail_list: string;
+    /** 主订单id */
+    parent_order_id: string;
+    /** 时间 */
+    update_date: string;
+    /** 工单id列表 */
+    workcard_id_list: string;
+  }
+}
+
 /** 天猫 */
 declare namespace Tmall.Ifpfulfill {
   /** {@link https://open.taobao.com/tmc.htm?docId=1997&docType=9 创建订单结果通知接口} */

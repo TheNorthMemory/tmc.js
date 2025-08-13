@@ -2246,6 +2246,8 @@ declare namespace IncomingMessage {
   type TmallFuwuWorkcardStatusUpdate = Message & { content?: MessageContent & { topic?: 'tmall_fuwu_WorkcardStatusUpdate', content?: string | Tmall.Fuwu.WorkcardStatusUpdate } };
   /** {@link Tmall.Homedecorationfuwu.WorkcardStatusUpdateForSeller 天猫 > 天猫家装服务工单状态推送} */
   type TmallHomedecorationfuwuWorkcardStatusUpdateForSeller = Message & { content?: MessageContent & { topic?: 'tmall_homedecorationfuwu_WorkcardStatusUpdateForSeller', content?: string | Tmall.Homedecorationfuwu.WorkcardStatusUpdateForSeller } };
+  /** {@link Tmall.Homeservice.LogisticsUpdate 天猫服务 > 天猫家享服务物流更新} */
+  type TmallHomeserviceLogisticsUpdate = Message & { content?: MessageContent & { topic?: 'tmall_homeservice_LogisticsUpdate', content?: string | Tmall.Homeservice.LogisticsUpdate } };
   /** {@link Tmall.Ifpfulfill.ResultNotice 天猫 > 创建订单结果通知接口} */
   type TmallIfpfulfillResultNotice = Message & { content?: MessageContent & { topic?: 'tmall_ifpfulfill_ResultNotice', content?: string | Tmall.Ifpfulfill.ResultNotice } };
   /** {@link Tmall.Jst.BusinessInformationSend 天猫 > 商家消息} */
@@ -5299,6 +5301,10 @@ declare namespace IncomingMessage {
    */
   type TmallHomedecorationfuwu = TmallHomedecorationfuwuWorkcardStatusUpdateForSeller;
   /**
+   * - {@link TmallHomeserviceLogisticsUpdate 天猫服务 > 天猫家享服务物流更新}
+   */
+  type TmallHomeservice = TmallHomeserviceLogisticsUpdate;
+  /**
    * - {@link TmallIfpfulfillResultNotice 天猫 > 创建订单结果通知接口}
    */
   type TmallIfpfulfill = TmallIfpfulfillResultNotice;
@@ -6330,6 +6336,7 @@ declare namespace IncomingMessage {
    * - {@link TmallChannel}
    * - {@link TmallFuwu}
    * - {@link TmallHomedecorationfuwu}
+   * - {@link TmallHomeservice}
    * - {@link TmallIfpfulfill}
    * - {@link TmallJst}
    * - {@link TmallMei}
@@ -6362,6 +6369,7 @@ declare namespace IncomingMessage {
     | TmallChannel
     | TmallFuwu
     | TmallHomedecorationfuwu
+    | TmallHomeservice
     | TmallIfpfulfill
     | TmallJst
     | TmallMei
