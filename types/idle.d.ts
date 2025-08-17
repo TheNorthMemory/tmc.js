@@ -282,6 +282,23 @@ declare namespace Idle.Recycle {
   }
 }
 
+/** 闲鱼 */
+declare namespace Idle.Seller {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2677&docType=9 闲鱼鱼小铺运营提效包订购消息} */
+  interface ImprovePackOrder {
+    /** 订单id */
+    order_id: string;
+    /** 支付时间 */
+    pay_time: string;
+    /** 提效包使用截止时间 */
+    use_end_time: string;
+    /** userId */
+    user_id: number;
+    /** 提效包使用开始时间 */
+    use_start_time: string;
+  }
+}
+
 /** 闲鱼已验货 */
 declare namespace Idle.Topisv {
   /** {@link https://open.taobao.com/tmc.htm?docId=2416&docType=9 闲鱼开放平台-服务赔付单变更消息通知} */

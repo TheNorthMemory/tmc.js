@@ -1174,6 +1174,8 @@ declare namespace IncomingMessage {
   type IdleRecycleRefundStatusModify = Message & { content?: MessageContent & { topic?: 'idle_recycle_RefundStatusModify', content?: string | Idle.Recycle.RefundStatusModify } };
   /** {@link Idle.Recycle.StoreSyn 闲鱼回收商消息 > 黄金回收门店信息变更通知} */
   type IdleRecycleStoreSyn = Message & { content?: MessageContent & { topic?: 'idle_recycle_StoreSyn', content?: string | Idle.Recycle.StoreSyn } };
+  /** {@link Idle.Seller.ImprovePackOrder 闲鱼 > 闲鱼鱼小铺运营提效包订购消息} */
+  type IdleSellerImprovePackOrder = Message & { content?: MessageContent & { topic?: 'idle_seller_ImprovePackOrder', content?: string | Idle.Seller.ImprovePackOrder } };
   /** {@link Idle.Topisv.CompensateNotice 闲鱼已验货 > 闲鱼开放平台-服务赔付单变更消息通知} */
   type IdleTopisvCompensateNotice = Message & { content?: MessageContent & { topic?: 'idle_topisv_CompensateNotice', content?: string | Idle.Topisv.CompensateNotice } };
   /** {@link Idle.Topisv.GlobalProductNotice 闲鱼已验货 > 闲鱼开放平台-国际货品变更消息通知} */
@@ -3959,6 +3961,10 @@ declare namespace IncomingMessage {
     | IdleRecycleRefundStatusModify
     | IdleRecycleStoreSyn;
   /**
+   * - {@link IdleSellerImprovePackOrder 闲鱼 > 闲鱼鱼小铺运营提效包订购消息}
+   */
+  type IdleSeller = IdleSellerImprovePackOrder;
+  /**
    * - {@link IdleTopisvCompensateNotice 闲鱼已验货 > 闲鱼开放平台-服务赔付单变更消息通知}
    * - {@link IdleTopisvGlobalProductNotice 闲鱼已验货 > 闲鱼开放平台-国际货品变更消息通知}
    * - {@link IdleTopisvItemNotice 闲鱼已验货 > 闲鱼开放平台-商品变更消息通知}
@@ -6043,6 +6049,7 @@ declare namespace IncomingMessage {
    * - {@link IdleFishmarketfixed}
    * - {@link IdleNewoutlets}
    * - {@link IdleRecycle}
+   * - {@link IdleSeller}
    * - {@link IdleTopisv}
    * - {@link IdleTrade}
    * - {@link IdleTranferpay}
@@ -6060,6 +6067,7 @@ declare namespace IncomingMessage {
     | IdleFishmarketfixed
     | IdleNewoutlets
     | IdleRecycle
+    | IdleSeller
     | IdleTopisv
     | IdleTrade
     | IdleTranferpay
