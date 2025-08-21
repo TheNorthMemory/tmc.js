@@ -4444,6 +4444,8 @@ declare namespace Taobao.Pc {
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2633&docType=9 商品变更消息} */
   interface ItemChange {
+    /** 客户ID */
+    client_id: string;
     /** 变更企业购商品ID */
     ego_item_id: number;
     /** 消息ID */
