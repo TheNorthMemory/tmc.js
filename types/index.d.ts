@@ -1246,6 +1246,8 @@ declare interface TaoTopicsDescriptor {
   taobao_ag_TicketsMsg(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAgTicketsMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAisCommonMessage 淘宝 > 厂商协同统一消息} */
   taobao_ais_CommonMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAisCommonMessage) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoAliautoElectronicVoucherActivationPublish 阿里汽车 > 阿里汽车-电子凭证激活信息推送} */
+  taobao_aliauto_ElectronicVoucherActivationPublish(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAliautoElectronicVoucherActivationPublish) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAlipicWuyatestoutmsg 淘宝 > 异业会员正向消息测试} */
   taobao_alipic_Wuyatestoutmsg(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAlipicWuyatestoutmsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAlscDaodianOrderAfterSaleRefund 淘宝 > 本地生活到店交易逆向售后退款消息通知} */
@@ -2880,6 +2882,8 @@ declare interface TaoTopicsDescriptor {
   taobao_ag(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAis} */
   taobao_ais(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAis) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoAliauto} */
+  taobao_aliauto(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAliauto) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAlipic} */
   taobao_alipic(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAlipic) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAlsc} */
@@ -4513,6 +4517,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_ag_TicketsMsg', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAgTicketsMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAisCommonMessage 淘宝 > 厂商协同统一消息} */
   on(topic: 'taobao_ais_CommonMessage', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAisCommonMessage) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoAliautoElectronicVoucherActivationPublish 阿里汽车 > 阿里汽车-电子凭证激活信息推送} */
+  on(topic: 'taobao_aliauto_ElectronicVoucherActivationPublish', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAliautoElectronicVoucherActivationPublish) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAlipicWuyatestoutmsg 淘宝 > 异业会员正向消息测试} */
   on(topic: 'taobao_alipic_Wuyatestoutmsg', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAlipicWuyatestoutmsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAlscDaodianOrderAfterSaleRefund 淘宝 > 本地生活到店交易逆向售后退款消息通知} */
@@ -6147,6 +6153,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_ag', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAis} */
   on(topic: 'taobao_ais', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAis) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoAliauto} */
+  on(topic: 'taobao_aliauto', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAliauto) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAlipic} */
   on(topic: 'taobao_alipic', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAlipic) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAlsc} */

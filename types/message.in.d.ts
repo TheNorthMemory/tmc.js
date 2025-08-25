@@ -1230,6 +1230,8 @@ declare namespace IncomingMessage {
   type TaobaoAgTicketsMsg = Message & { content?: MessageContent & { topic?: 'taobao_ag_TicketsMsg', content?: string | Taobao.Ag.TicketsMsg } };
   /** {@link Taobao.Ais.CommonMessage 淘宝 > 厂商协同统一消息} */
   type TaobaoAisCommonMessage = Message & { content?: MessageContent & { topic?: 'taobao_ais_CommonMessage', content?: string | Taobao.Ais.CommonMessage } };
+  /** {@link Taobao.Aliauto.ElectronicVoucherActivationPublish 阿里汽车 > 阿里汽车-电子凭证激活信息推送} */
+  type TaobaoAliautoElectronicVoucherActivationPublish = Message & { content?: MessageContent & { topic?: 'taobao_aliauto_ElectronicVoucherActivationPublish', content?: string | Taobao.Aliauto.ElectronicVoucherActivationPublish } };
   /** {@link Taobao.Alipic.Wuyatestoutmsg 淘宝 > 异业会员正向消息测试} */
   type TaobaoAlipicWuyatestoutmsg = Message & { content?: MessageContent & { topic?: 'taobao_alipic_Wuyatestoutmsg', content?: string | Taobao.Alipic.Wuyatestoutmsg } };
   /** {@link Taobao.Alsc.DaodianOrderAfterSaleRefund 淘宝 > 本地生活到店交易逆向售后退款消息通知} */
@@ -4047,6 +4049,10 @@ declare namespace IncomingMessage {
    */
   type TaobaoAis = TaobaoAisCommonMessage;
   /**
+   * - {@link TaobaoAliautoElectronicVoucherActivationPublish 阿里汽车 > 阿里汽车-电子凭证激活信息推送}
+   */
+  type TaobaoAliauto = TaobaoAliautoElectronicVoucherActivationPublish;
+  /**
    * - {@link TaobaoAlipicWuyatestoutmsg 淘宝 > 异业会员正向消息测试}
    */
   type TaobaoAlipic = TaobaoAlipicWuyatestoutmsg;
@@ -6105,6 +6111,7 @@ declare namespace IncomingMessage {
   /**
    * - {@link TaobaoAg}
    * - {@link TaobaoAis}
+   * - {@link TaobaoAliauto}
    * - {@link TaobaoAlipic}
    * - {@link TaobaoAlsc}
    * - {@link TaobaoAps}
@@ -6222,6 +6229,7 @@ declare namespace IncomingMessage {
    */
   type Taobao = TaobaoAg
     | TaobaoAis
+    | TaobaoAliauto
     | TaobaoAlipic
     | TaobaoAlsc
     | TaobaoAps

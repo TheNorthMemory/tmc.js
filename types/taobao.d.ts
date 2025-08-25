@@ -80,6 +80,23 @@ declare namespace Taobao.Ais {
   }
 }
 
+/** 阿里汽车 */
+declare namespace Taobao.Aliauto {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2679&docType=9 阿里汽车-电子凭证激活信息推送} */
+  interface ElectronicVoucherActivationPublish {
+    /** 发动机号 */
+    engine_serial_number: string;
+    /** 子订单号 */
+    sub_tc_order_id: number | bigint;
+    /** 主订单号 */
+    tc_order_id: number | bigint;
+    /** 统一社会信用代码 */
+    unified_social_credit_code: string;
+    /** 车架号 */
+    vin_code: string;
+  }
+}
+
 /** 淘宝 */
 declare namespace Taobao.Alipic {
   /** {@link https://open.taobao.com/tmc.htm?docId=1639&docType=9 异业会员正向消息测试} */
