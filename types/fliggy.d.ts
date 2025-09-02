@@ -226,6 +226,15 @@ declare namespace Fliggy.Ticket {
   }
 }
 
+/** 飞猪 */
+declare namespace Fliggy.Travel {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2678&docType=9 飞猪度假通讯流量包无忧行订单退订申请消息发送} */
+  interface RechargeJtpOrdercancelApply {
+    /** 飞猪订单id */
+    fliggy_order_id: string;
+  }
+}
+
 /** 航旅度假交易 */
 declare namespace Fliggy.Visa {
   /** {@link https://open.taobao.com/tmc.htm?docId=2582&docType=9 签证申请人状态变更消息} */

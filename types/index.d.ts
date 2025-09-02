@@ -1094,6 +1094,8 @@ declare interface TaoTopicsDescriptor {
   fliggy_ticket_OrderStatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTicketOrderStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyTicketVerifyNotify 航旅度假交易 > 域外分销订单码核销消息} */
   fliggy_ticket_VerifyNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTicketVerifyNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FliggyTravelRechargeJtpOrdercancelApply 飞猪 > 飞猪度假通讯流量包无忧行订单退订申请消息发送} */
+  fliggy_travel_RechargeJtpOrdercancelApply(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTravelRechargeJtpOrdercancelApply) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyVisaApplicantStatusChanged 航旅度假交易 > 签证申请人状态变更消息} */
   fliggy_visa_ApplicantStatusChanged(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyVisaApplicantStatusChanged) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyVisaStatusChange 航旅度假交易 > 签证状态变化消息} */
@@ -2796,6 +2798,8 @@ declare interface TaoTopicsDescriptor {
   fliggy_sht(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggySht) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyTicket} */
   fliggy_ticket(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTicket) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FliggyTravel} */
+  fliggy_travel(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTravel) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyVisa} */
   fliggy_visa(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyVisa) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyXhotel} */
@@ -4365,6 +4369,8 @@ declare interface TaoEventsListener {
   on(topic: 'fliggy_ticket_OrderStatusChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTicketOrderStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyTicketVerifyNotify 航旅度假交易 > 域外分销订单码核销消息} */
   on(topic: 'fliggy_ticket_VerifyNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTicketVerifyNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FliggyTravelRechargeJtpOrdercancelApply 飞猪 > 飞猪度假通讯流量包无忧行订单退订申请消息发送} */
+  on(topic: 'fliggy_travel_RechargeJtpOrdercancelApply', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTravelRechargeJtpOrdercancelApply) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyVisaApplicantStatusChanged 航旅度假交易 > 签证申请人状态变更消息} */
   on(topic: 'fliggy_visa_ApplicantStatusChanged', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyVisaApplicantStatusChanged) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyVisaStatusChange 航旅度假交易 > 签证状态变化消息} */
@@ -6067,6 +6073,8 @@ declare interface TaoEventsListener {
   on(topic: 'fliggy_sht', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggySht) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyTicket} */
   on(topic: 'fliggy_ticket', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTicket) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FliggyTravel} */
+  on(topic: 'fliggy_travel', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTravel) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyVisa} */
   on(topic: 'fliggy_visa', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyVisa) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyXhotel} */

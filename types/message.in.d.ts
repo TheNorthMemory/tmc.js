@@ -1078,6 +1078,8 @@ declare namespace IncomingMessage {
   type FliggyTicketOrderStatusChange = Message & { content?: MessageContent & { topic?: 'fliggy_ticket_OrderStatusChange', content?: string | Fliggy.Ticket.OrderStatusChange } };
   /** {@link Fliggy.Ticket.VerifyNotify 航旅度假交易 > 域外分销订单码核销消息} */
   type FliggyTicketVerifyNotify = Message & { content?: MessageContent & { topic?: 'fliggy_ticket_VerifyNotify', content?: string | Fliggy.Ticket.VerifyNotify } };
+  /** {@link Fliggy.Travel.RechargeJtpOrdercancelApply 飞猪 > 飞猪度假通讯流量包无忧行订单退订申请消息发送} */
+  type FliggyTravelRechargeJtpOrdercancelApply = Message & { content?: MessageContent & { topic?: 'fliggy_travel_RechargeJtpOrdercancelApply', content?: string | Fliggy.Travel.RechargeJtpOrdercancelApply } };
   /** {@link Fliggy.Visa.ApplicantStatusChanged 航旅度假交易 > 签证申请人状态变更消息} */
   type FliggyVisaApplicantStatusChanged = Message & { content?: MessageContent & { topic?: 'fliggy_visa_ApplicantStatusChanged', content?: string | Fliggy.Visa.ApplicantStatusChanged } };
   /** {@link Fliggy.Visa.StatusChange 航旅度假交易 > 签证状态变化消息} */
@@ -3811,6 +3813,10 @@ declare namespace IncomingMessage {
     | FliggyTicketOrderStatusChange
     | FliggyTicketVerifyNotify;
   /**
+   * - {@link FliggyTravelRechargeJtpOrdercancelApply 飞猪 > 飞猪度假通讯流量包无忧行订单退订申请消息发送}
+   */
+  type FliggyTravel = FliggyTravelRechargeJtpOrdercancelApply;
+  /**
    * - {@link FliggyVisaApplicantStatusChanged 航旅度假交易 > 签证申请人状态变更消息}
    * - {@link FliggyVisaStatusChange 航旅度假交易 > 签证状态变化消息}
    */
@@ -5987,6 +5993,7 @@ declare namespace IncomingMessage {
    * - {@link FliggyPush}
    * - {@link FliggySht}
    * - {@link FliggyTicket}
+   * - {@link FliggyTravel}
    * - {@link FliggyVisa}
    * - {@link FliggyXhotel}
    */
@@ -5998,6 +6005,7 @@ declare namespace IncomingMessage {
     | FliggyPush
     | FliggySht
     | FliggyTicket
+    | FliggyTravel
     | FliggyVisa
     | FliggyXhotel;
   /**
