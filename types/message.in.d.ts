@@ -1768,6 +1768,8 @@ declare namespace IncomingMessage {
   type TaobaoPcEgoDisputeOrder = Message & { content?: MessageContent & { topic?: 'taobao_pc_EgoDisputeOrder', content?: string | Taobao.Pc.EgoDisputeOrder } };
   /** {@link Taobao.Pc.EgoTradeOrder 淘宝企业购 > PC企业购交易订单消息} */
   type TaobaoPcEgoTradeOrder = Message & { content?: MessageContent & { topic?: 'taobao_pc_EgoTradeOrder', content?: string | Taobao.Pc.EgoTradeOrder } };
+  /** {@link Taobao.Pc.EgoTradePackage 淘宝企业购 > 订单包裹消息} */
+  type TaobaoPcEgoTradePackage = Message & { content?: MessageContent & { topic?: 'taobao_pc_EgoTradePackage', content?: string | Taobao.Pc.EgoTradePackage } };
   /** {@link Taobao.Pc.ItemChange 淘宝企业购 > 商品变更消息} */
   type TaobaoPcItemChange = Message & { content?: MessageContent & { topic?: 'taobao_pc_ItemChange', content?: string | Taobao.Pc.ItemChange } };
   /** {@link Taobao.Pc.SaleInvoiceResult 淘宝企业购 > PC企业购发票通知消息} */
@@ -1844,6 +1846,16 @@ declare namespace IncomingMessage {
   type TaobaoSecWlcAlipaySync = Message & { content?: MessageContent & { topic?: 'taobao_sec_WlcAlipaySync', content?: string | Taobao.Sec.WlcAlipaySync } };
   /** {@link Taobao.Seed.GeneralDataCommutation 淘宝 > 淘宝种草数据交换} */
   type TaobaoSeedGeneralDataCommutation = Message & { content?: MessageContent & { topic?: 'taobao_seed_GeneralDataCommutation', content?: string | Taobao.Seed.GeneralDataCommutation } };
+  /** {@link Taobao.Shangou.TradeBuyerPay 淘宝闪购 > 闪购订单付款成功} */
+  type TaobaoShangouTradeBuyerPay = Message & { content?: MessageContent & { topic?: 'taobao_shangou_TradeBuyerPay', content?: string | Taobao.Shangou.TradeBuyerPay } };
+  /** {@link Taobao.Shangou.TradeClose 淘宝闪购 > 闪购订单关闭} */
+  type TaobaoShangouTradeClose = Message & { content?: MessageContent & { topic?: 'taobao_shangou_TradeClose', content?: string | Taobao.Shangou.TradeClose } };
+  /** {@link Taobao.Shangou.TradeCreate 淘宝闪购 > 闪购订单创建} */
+  type TaobaoShangouTradeCreate = Message & { content?: MessageContent & { topic?: 'taobao_shangou_TradeCreate', content?: string | Taobao.Shangou.TradeCreate } };
+  /** {@link Taobao.Shangou.TradeSellerShip 淘宝闪购 > 闪购订单发货} */
+  type TaobaoShangouTradeSellerShip = Message & { content?: MessageContent & { topic?: 'taobao_shangou_TradeSellerShip', content?: string | Taobao.Shangou.TradeSellerShip } };
+  /** {@link Taobao.Shangou.TradeSuccess 淘宝闪购 > 闪购订单发货} */
+  type TaobaoShangouTradeSuccess = Message & { content?: MessageContent & { topic?: 'taobao_shangou_TradeSuccess', content?: string | Taobao.Shangou.TradeSuccess } };
   /** {@link Taobao.Shop.Vary 淘宝 > 淘宝店铺变更} */
   type TaobaoShopVary = Message & { content?: MessageContent & { topic?: 'taobao_shop_Vary', content?: string | Taobao.Shop.Vary } };
   /** {@link Taobao.Shoptransfer.UniTrans 淘宝 > 过户结果消息} */
@@ -2254,6 +2266,8 @@ declare namespace IncomingMessage {
   type TmallFuwuWorkcardStatusUpdate = Message & { content?: MessageContent & { topic?: 'tmall_fuwu_WorkcardStatusUpdate', content?: string | Tmall.Fuwu.WorkcardStatusUpdate } };
   /** {@link Tmall.Homedecorationfuwu.WorkcardStatusUpdateForSeller 天猫 > 天猫家装服务工单状态推送} */
   type TmallHomedecorationfuwuWorkcardStatusUpdateForSeller = Message & { content?: MessageContent & { topic?: 'tmall_homedecorationfuwu_WorkcardStatusUpdateForSeller', content?: string | Tmall.Homedecorationfuwu.WorkcardStatusUpdateForSeller } };
+  /** {@link Tmall.Homeservice.GroupWorkcardCreate 天猫服务 > 整单视角的出库入库消息} */
+  type TmallHomeserviceGroupWorkcardCreate = Message & { content?: MessageContent & { topic?: 'tmall_homeservice_GroupWorkcardCreate', content?: string | Tmall.Homeservice.GroupWorkcardCreate } };
   /** {@link Tmall.Homeservice.LogisticsUpdate 天猫服务 > 天猫家享服务物流更新} */
   type TmallHomeserviceLogisticsUpdate = Message & { content?: MessageContent & { topic?: 'tmall_homeservice_LogisticsUpdate', content?: string | Tmall.Homeservice.LogisticsUpdate } };
   /** {@link Tmall.Ifpfulfill.ResultNotice 天猫 > 创建订单结果通知接口} */
@@ -4714,12 +4728,14 @@ declare namespace IncomingMessage {
    * - {@link TaobaoPcBillsGenerate 淘宝企业购 > PC企业购出账消息通知}
    * - {@link TaobaoPcEgoDisputeOrder 淘宝企业购 > PC企业购逆向订单消息}
    * - {@link TaobaoPcEgoTradeOrder 淘宝企业购 > PC企业购交易订单消息}
+   * - {@link TaobaoPcEgoTradePackage 淘宝企业购 > 订单包裹消息}
    * - {@link TaobaoPcItemChange 淘宝企业购 > 商品变更消息}
    * - {@link TaobaoPcSaleInvoiceResult 淘宝企业购 > PC企业购发票通知消息}
    */
   type TaobaoPc = TaobaoPcBillsGenerate
     | TaobaoPcEgoDisputeOrder
     | TaobaoPcEgoTradeOrder
+    | TaobaoPcEgoTradePackage
     | TaobaoPcItemChange
     | TaobaoPcSaleInvoiceResult;
   /**
@@ -4816,6 +4832,18 @@ declare namespace IncomingMessage {
    * - {@link TaobaoSeedGeneralDataCommutation 淘宝 > 淘宝种草数据交换}
    */
   type TaobaoSeed = TaobaoSeedGeneralDataCommutation;
+  /**
+   * - {@link TaobaoShangouTradeBuyerPay 淘宝闪购 > 闪购订单付款成功}
+   * - {@link TaobaoShangouTradeClose 淘宝闪购 > 闪购订单关闭}
+   * - {@link TaobaoShangouTradeCreate 淘宝闪购 > 闪购订单创建}
+   * - {@link TaobaoShangouTradeSellerShip 淘宝闪购 > 闪购订单发货}
+   * - {@link TaobaoShangouTradeSuccess 淘宝闪购 > 闪购订单发货}
+   */
+  type TaobaoShangou = TaobaoShangouTradeBuyerPay
+    | TaobaoShangouTradeClose
+    | TaobaoShangouTradeCreate
+    | TaobaoShangouTradeSellerShip
+    | TaobaoShangouTradeSuccess;
   /**
    * - {@link TaobaoShopVary 淘宝 > 淘宝店铺变更}
    */
@@ -5323,9 +5351,11 @@ declare namespace IncomingMessage {
    */
   type TmallHomedecorationfuwu = TmallHomedecorationfuwuWorkcardStatusUpdateForSeller;
   /**
+   * - {@link TmallHomeserviceGroupWorkcardCreate 天猫服务 > 整单视角的出库入库消息}
    * - {@link TmallHomeserviceLogisticsUpdate 天猫服务 > 天猫家享服务物流更新}
    */
-  type TmallHomeservice = TmallHomeserviceLogisticsUpdate;
+  type TmallHomeservice = TmallHomeserviceGroupWorkcardCreate
+    | TmallHomeserviceLogisticsUpdate;
   /**
    * - {@link TmallIfpfulfillResultNotice 天猫 > 创建订单结果通知接口}
    */
@@ -6194,6 +6224,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoRhino}
    * - {@link TaobaoSec}
    * - {@link TaobaoSeed}
+   * - {@link TaobaoShangou}
    * - {@link TaobaoShop}
    * - {@link TaobaoShoptransfer}
    * - {@link TaobaoSinian}
@@ -6312,6 +6343,7 @@ declare namespace IncomingMessage {
     | TaobaoRhino
     | TaobaoSec
     | TaobaoSeed
+    | TaobaoShangou
     | TaobaoShop
     | TaobaoShoptransfer
     | TaobaoSinian

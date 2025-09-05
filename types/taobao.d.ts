@@ -4459,6 +4459,30 @@ declare namespace Taobao.Pc {
     type: string;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2681&docType=9 订单包裹消息} */
+  interface EgoTradePackage {
+    /** 企业购的主订单号 */
+    biz_order_id: string;
+    /** 企业购的企业ID */
+    buyer_id: number;
+    /** 企业购的客户ID */
+    client_id: string;
+    /** 消息产生的时间 */
+    message_time: Date | number | string;
+    /** 消息ID */
+    msg_id: string;
+    /** 包裹单ID */
+    package_id: string;
+    /** 原始信息ID(无实际用途, 仅记录, 忽略) */
+    source_id: string;
+    /** 状态code, CONSIGN(发货), REJECT(拒收), SIGN(签收),ACCEPT(已揽件), TRANSPORT(运输中), DELIVERING(派送中),AGENT_SIGN(待取件),STA_DELIVERING(驿站派送中) */
+    status_code: string;
+    /** 状态描述 */
+    status_desc: string;
+    /** 企业购的子订单号列表 */
+    sub_biz_order_ids: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2633&docType=9 商品变更消息} */
   interface ItemChange {
     /** 客户ID */
@@ -5072,6 +5096,79 @@ declare namespace Taobao.Seed {
     send_timestamp_sec: number;
     /** 等待时长 */
     waiting_time: string;
+  }
+}
+
+/** 淘宝闪购 */
+declare namespace Taobao.Shangou {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2688&docType=9 闪购订单付款成功} */
+  interface TradeBuyerPay {
+    /** 由buyer_id加密, 可对外开放, 用来替换buyer_nick作为唯一标识 */
+    buyer_open_uid: string;
+    /** 子订单ID */
+    oid: number | bigint;
+    /** 订单实付金额 */
+    payment?: string;
+    /** 主订单ID */
+    tid: number | bigint;
+    /** 交易类型,可选值 fixed(一口价) auction(拍卖) guarantee_trade(一口价、拍卖) auto_delivery(自动发货) independent_simple_trade(旺店入门版交易) independent_shop_trade(旺店标准版交易) ec(直冲) cod(货到付款) fenxiao(分销) game_equipment(游戏装备) shopex_trade(ShopEX交易) netcn_trade(万网交易) external_trade(统一外部交易)o2o_offlinetrade（O2O交易）step (万人团)nopaid(无付款订单)pre_auth_type(预授权0元购机交易) */
+    type: string;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2691&docType=9 闪购订单关闭} */
+  interface TradeClose {
+    /** 由buyer_id加密, 可对外开放, 用来替换buyer_nick作为唯一标识 */
+    buyer_open_uid: string;
+    /** 子订单ID */
+    oid: number | bigint;
+    /** 订单实付金额 */
+    payment?: string;
+    /** 主订单ID */
+    tid: number | bigint;
+    /** 交易类型,可选值 fixed(一口价) auction(拍卖) guarantee_trade(一口价、拍卖) auto_delivery(自动发货) independent_simple_trade(旺店入门版交易) independent_shop_trade(旺店标准版交易) ec(直冲) cod(货到付款) fenxiao(分销) game_equipment(游戏装备) shopex_trade(ShopEX交易) netcn_trade(万网交易) external_trade(统一外部交易)o2o_offlinetrade（O2O交易）step (万人团)nopaid(无付款订单)pre_auth_type(预授权0元购机交易) */
+    type: string;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2687&docType=9 闪购订单创建} */
+  interface TradeCreate {
+    /** 由buyer_id加密, 可对外开放, 用来替换buyer_nick作为唯一标识 */
+    buyer_open_uid: string;
+    /** 子订单ID */
+    oid: number | bigint;
+    /** 订单实付金额 */
+    payment?: string;
+    /** 主订单ID */
+    tid: number | bigint;
+    /** 交易类型,可选值 fixed(一口价) auction(拍卖) guarantee_trade(一口价、拍卖) auto_delivery(自动发货) independent_simple_trade(旺店入门版交易) independent_shop_trade(旺店标准版交易) ec(直冲) cod(货到付款) fenxiao(分销) game_equipment(游戏装备) shopex_trade(ShopEX交易) netcn_trade(万网交易) external_trade(统一外部交易)o2o_offlinetrade（O2O交易）step (万人团)nopaid(无付款订单)pre_auth_type(预授权0元购机交易) */
+    type: string;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2689&docType=9 闪购订单发货} */
+  interface TradeSellerShip {
+    /** 由buyer_id加密, 可对外开放, 用来替换buyer_nick作为唯一标识 */
+    buyer_open_uid: string;
+    /** 子订单ID */
+    oid: number | bigint;
+    /** 订单实付金额 */
+    payment?: string;
+    /** 主订单ID */
+    tid: number | bigint;
+    /** 交易类型,可选值 fixed(一口价) auction(拍卖) guarantee_trade(一口价、拍卖) auto_delivery(自动发货) independent_simple_trade(旺店入门版交易) independent_shop_trade(旺店标准版交易) ec(直冲) cod(货到付款) fenxiao(分销) game_equipment(游戏装备) shopex_trade(ShopEX交易) netcn_trade(万网交易) external_trade(统一外部交易)o2o_offlinetrade（O2O交易）step (万人团)nopaid(无付款订单)pre_auth_type(预授权0元购机交易) */
+    type: string;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2690&docType=9 闪购订单发货} */
+  interface TradeSuccess {
+    /** 由buyer_id加密, 可对外开放, 用来替换buyer_nick作为唯一标识 */
+    buyer_open_uid: string;
+    /** 子订单ID */
+    oid: number | bigint;
+    /** 订单实付金额 */
+    payment?: string;
+    /** 主订单ID */
+    tid: number | bigint;
+    /** 交易类型,可选值 fixed(一口价) auction(拍卖) guarantee_trade(一口价、拍卖) auto_delivery(自动发货) independent_simple_trade(旺店入门版交易) independent_shop_trade(旺店标准版交易) ec(直冲) cod(货到付款) fenxiao(分销) game_equipment(游戏装备) shopex_trade(ShopEX交易) netcn_trade(万网交易) external_trade(统一外部交易)o2o_offlinetrade（O2O交易）step (万人团)nopaid(无付款订单)pre_auth_type(预授权0元购机交易) */
+    type: string;
   }
 }
 

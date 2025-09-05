@@ -1784,6 +1784,8 @@ declare interface TaoTopicsDescriptor {
   taobao_pc_EgoDisputeOrder(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcEgoDisputeOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPcEgoTradeOrder 淘宝企业购 > PC企业购交易订单消息} */
   taobao_pc_EgoTradeOrder(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcEgoTradeOrder) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoPcEgoTradePackage 淘宝企业购 > 订单包裹消息} */
+  taobao_pc_EgoTradePackage(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcEgoTradePackage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPcItemChange 淘宝企业购 > 商品变更消息} */
   taobao_pc_ItemChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcItemChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPcSaleInvoiceResult 淘宝企业购 > PC企业购发票通知消息} */
@@ -1860,6 +1862,16 @@ declare interface TaoTopicsDescriptor {
   taobao_sec_WlcAlipaySync(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSecWlcAlipaySync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSeedGeneralDataCommutation 淘宝 > 淘宝种草数据交换} */
   taobao_seed_GeneralDataCommutation(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSeedGeneralDataCommutation) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoShangouTradeBuyerPay 淘宝闪购 > 闪购订单付款成功} */
+  taobao_shangou_TradeBuyerPay(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouTradeBuyerPay) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoShangouTradeClose 淘宝闪购 > 闪购订单关闭} */
+  taobao_shangou_TradeClose(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouTradeClose) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoShangouTradeCreate 淘宝闪购 > 闪购订单创建} */
+  taobao_shangou_TradeCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouTradeCreate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoShangouTradeSellerShip 淘宝闪购 > 闪购订单发货} */
+  taobao_shangou_TradeSellerShip(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouTradeSellerShip) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoShangouTradeSuccess 淘宝闪购 > 闪购订单发货} */
+  taobao_shangou_TradeSuccess(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouTradeSuccess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoShopVary 淘宝 > 淘宝店铺变更} */
   taobao_shop_Vary(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShopVary) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoShoptransferUniTrans 淘宝 > 过户结果消息} */
@@ -2270,6 +2282,8 @@ declare interface TaoTopicsDescriptor {
   tmall_fuwu_WorkcardStatusUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuWorkcardStatusUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallHomedecorationfuwuWorkcardStatusUpdateForSeller 天猫 > 天猫家装服务工单状态推送} */
   tmall_homedecorationfuwu_WorkcardStatusUpdateForSeller(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallHomedecorationfuwuWorkcardStatusUpdateForSeller) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallHomeserviceGroupWorkcardCreate 天猫服务 > 整单视角的出库入库消息} */
+  tmall_homeservice_GroupWorkcardCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallHomeserviceGroupWorkcardCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallHomeserviceLogisticsUpdate 天猫服务 > 天猫家享服务物流更新} */
   tmall_homeservice_LogisticsUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallHomeserviceLogisticsUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallIfpfulfillResultNotice 天猫 > 创建订单结果通知接口} */
@@ -3036,6 +3050,8 @@ declare interface TaoTopicsDescriptor {
   taobao_sec(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSec) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSeed} */
   taobao_seed(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSeed) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoShangou} */
+  taobao_shangou(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangou) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoShop} */
   taobao_shop(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShop) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoShoptransfer} */
@@ -5059,6 +5075,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_pc_EgoDisputeOrder', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcEgoDisputeOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPcEgoTradeOrder 淘宝企业购 > PC企业购交易订单消息} */
   on(topic: 'taobao_pc_EgoTradeOrder', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcEgoTradeOrder) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoPcEgoTradePackage 淘宝企业购 > 订单包裹消息} */
+  on(topic: 'taobao_pc_EgoTradePackage', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcEgoTradePackage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPcItemChange 淘宝企业购 > 商品变更消息} */
   on(topic: 'taobao_pc_ItemChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcItemChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPcSaleInvoiceResult 淘宝企业购 > PC企业购发票通知消息} */
@@ -5135,6 +5153,16 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_sec_WlcAlipaySync', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSecWlcAlipaySync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSeedGeneralDataCommutation 淘宝 > 淘宝种草数据交换} */
   on(topic: 'taobao_seed_GeneralDataCommutation', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSeedGeneralDataCommutation) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoShangouTradeBuyerPay 淘宝闪购 > 闪购订单付款成功} */
+  on(topic: 'taobao_shangou_TradeBuyerPay', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouTradeBuyerPay) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoShangouTradeClose 淘宝闪购 > 闪购订单关闭} */
+  on(topic: 'taobao_shangou_TradeClose', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouTradeClose) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoShangouTradeCreate 淘宝闪购 > 闪购订单创建} */
+  on(topic: 'taobao_shangou_TradeCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouTradeCreate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoShangouTradeSellerShip 淘宝闪购 > 闪购订单发货} */
+  on(topic: 'taobao_shangou_TradeSellerShip', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouTradeSellerShip) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoShangouTradeSuccess 淘宝闪购 > 闪购订单发货} */
+  on(topic: 'taobao_shangou_TradeSuccess', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouTradeSuccess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoShopVary 淘宝 > 淘宝店铺变更} */
   on(topic: 'taobao_shop_Vary', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShopVary) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoShoptransferUniTrans 淘宝 > 过户结果消息} */
@@ -5545,6 +5573,8 @@ declare interface TaoEventsListener {
   on(topic: 'tmall_fuwu_WorkcardStatusUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuWorkcardStatusUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallHomedecorationfuwuWorkcardStatusUpdateForSeller 天猫 > 天猫家装服务工单状态推送} */
   on(topic: 'tmall_homedecorationfuwu_WorkcardStatusUpdateForSeller', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallHomedecorationfuwuWorkcardStatusUpdateForSeller) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallHomeserviceGroupWorkcardCreate 天猫服务 > 整单视角的出库入库消息} */
+  on(topic: 'tmall_homeservice_GroupWorkcardCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallHomeserviceGroupWorkcardCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallHomeserviceLogisticsUpdate 天猫服务 > 天猫家享服务物流更新} */
   on(topic: 'tmall_homeservice_LogisticsUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallHomeserviceLogisticsUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallIfpfulfillResultNotice 天猫 > 创建订单结果通知接口} */
@@ -6311,6 +6341,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_sec', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSec) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSeed} */
   on(topic: 'taobao_seed', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSeed) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoShangou} */
+  on(topic: 'taobao_shangou', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangou) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoShop} */
   on(topic: 'taobao_shop', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShop) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoShoptransfer} */
