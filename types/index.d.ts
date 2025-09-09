@@ -1094,7 +1094,7 @@ declare interface TaoTopicsDescriptor {
   fliggy_ticket_OrderStatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTicketOrderStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyTicketVerifyNotify 航旅度假交易 > 域外分销订单码核销消息} */
   fliggy_ticket_VerifyNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTicketVerifyNotify) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.FliggyTravelRechargeJtpOrdercancelApply 飞猪 > 飞猪度假通讯流量包无忧行订单退订申请消息发送} */
+  /** {@link IncomingMessage.FliggyTravelRechargeJtpOrdercancelApply 航旅度假交易 > 飞猪度假通讯流量包无忧行订单退订申请消息发送} */
   fliggy_travel_RechargeJtpOrdercancelApply(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTravelRechargeJtpOrdercancelApply) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyVisaApplicantStatusChanged 航旅度假交易 > 签证申请人状态变更消息} */
   fliggy_visa_ApplicantStatusChanged(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyVisaApplicantStatusChanged) => void): TaoMessageConsumer;
@@ -1178,6 +1178,10 @@ declare interface TaoTopicsDescriptor {
   idle_cycleshop_SaleOrderNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleCycleshopSaleOrderNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleDistributionItemChange 闲鱼回收商消息 > 分销闲管家消息通道} */
   idle_distribution_ItemChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleDistributionItemChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleFishmarketBuyerOrderStateSyn 闲鱼 > 闲鱼鱼市买家单状态同步} */
+  idle_fishmarket_BuyerOrderStateSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketBuyerOrderStateSyn) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleFishmarketItemAuctionStateSyn 闲鱼 > 闲鱼鱼市商品竞拍消息同步} */
+  idle_fishmarket_ItemAuctionStateSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketItemAuctionStateSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleFishmarketTenderAutoAuctionMsg 闲鱼 > 一口价转暗拍自动上架消息推送} */
   idle_fishmarket_TenderAutoAuctionMsg(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketTenderAutoAuctionMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleFishmarketfixedOrderSyn 闲鱼 > 鱼市一口价买家单订单交易消息变更} */
@@ -1862,6 +1866,12 @@ declare interface TaoTopicsDescriptor {
   taobao_sec_WlcAlipaySync(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSecWlcAlipaySync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSeedGeneralDataCommutation 淘宝 > 淘宝种草数据交换} */
   taobao_seed_GeneralDataCommutation(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSeedGeneralDataCommutation) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoShangouRefundClosed 淘宝闪购 > 闪购退款关闭} */
+  taobao_shangou_RefundClosed(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouRefundClosed) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoShangouRefundCreated 淘宝闪购 > 闪购退款创建} */
+  taobao_shangou_RefundCreated(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouRefundCreated) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoShangouRefundSuccess 淘宝闪购 > 闪购退款成功} */
+  taobao_shangou_RefundSuccess(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouRefundSuccess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoShangouTradeBuyerPay 淘宝闪购 > 闪购订单付款成功} */
   taobao_shangou_TradeBuyerPay(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouTradeBuyerPay) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoShangouTradeClose 淘宝闪购 > 闪购订单关闭} */
@@ -4385,7 +4395,7 @@ declare interface TaoEventsListener {
   on(topic: 'fliggy_ticket_OrderStatusChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTicketOrderStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyTicketVerifyNotify 航旅度假交易 > 域外分销订单码核销消息} */
   on(topic: 'fliggy_ticket_VerifyNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTicketVerifyNotify) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.FliggyTravelRechargeJtpOrdercancelApply 飞猪 > 飞猪度假通讯流量包无忧行订单退订申请消息发送} */
+  /** {@link IncomingMessage.FliggyTravelRechargeJtpOrdercancelApply 航旅度假交易 > 飞猪度假通讯流量包无忧行订单退订申请消息发送} */
   on(topic: 'fliggy_travel_RechargeJtpOrdercancelApply', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTravelRechargeJtpOrdercancelApply) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyVisaApplicantStatusChanged 航旅度假交易 > 签证申请人状态变更消息} */
   on(topic: 'fliggy_visa_ApplicantStatusChanged', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyVisaApplicantStatusChanged) => void): TaoMessageConsumer;
@@ -4469,6 +4479,10 @@ declare interface TaoEventsListener {
   on(topic: 'idle_cycleshop_SaleOrderNotice', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleCycleshopSaleOrderNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleDistributionItemChange 闲鱼回收商消息 > 分销闲管家消息通道} */
   on(topic: 'idle_distribution_ItemChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleDistributionItemChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleFishmarketBuyerOrderStateSyn 闲鱼 > 闲鱼鱼市买家单状态同步} */
+  on(topic: 'idle_fishmarket_BuyerOrderStateSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketBuyerOrderStateSyn) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleFishmarketItemAuctionStateSyn 闲鱼 > 闲鱼鱼市商品竞拍消息同步} */
+  on(topic: 'idle_fishmarket_ItemAuctionStateSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketItemAuctionStateSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleFishmarketTenderAutoAuctionMsg 闲鱼 > 一口价转暗拍自动上架消息推送} */
   on(topic: 'idle_fishmarket_TenderAutoAuctionMsg', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketTenderAutoAuctionMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleFishmarketfixedOrderSyn 闲鱼 > 鱼市一口价买家单订单交易消息变更} */
@@ -5153,6 +5167,12 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_sec_WlcAlipaySync', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSecWlcAlipaySync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSeedGeneralDataCommutation 淘宝 > 淘宝种草数据交换} */
   on(topic: 'taobao_seed_GeneralDataCommutation', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSeedGeneralDataCommutation) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoShangouRefundClosed 淘宝闪购 > 闪购退款关闭} */
+  on(topic: 'taobao_shangou_RefundClosed', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouRefundClosed) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoShangouRefundCreated 淘宝闪购 > 闪购退款创建} */
+  on(topic: 'taobao_shangou_RefundCreated', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouRefundCreated) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoShangouRefundSuccess 淘宝闪购 > 闪购退款成功} */
+  on(topic: 'taobao_shangou_RefundSuccess', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouRefundSuccess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoShangouTradeBuyerPay 淘宝闪购 > 闪购订单付款成功} */
   on(topic: 'taobao_shangou_TradeBuyerPay', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouTradeBuyerPay) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoShangouTradeClose 淘宝闪购 > 闪购订单关闭} */

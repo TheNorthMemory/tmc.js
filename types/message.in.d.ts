@@ -1078,7 +1078,7 @@ declare namespace IncomingMessage {
   type FliggyTicketOrderStatusChange = Message & { content?: MessageContent & { topic?: 'fliggy_ticket_OrderStatusChange', content?: string | Fliggy.Ticket.OrderStatusChange } };
   /** {@link Fliggy.Ticket.VerifyNotify 航旅度假交易 > 域外分销订单码核销消息} */
   type FliggyTicketVerifyNotify = Message & { content?: MessageContent & { topic?: 'fliggy_ticket_VerifyNotify', content?: string | Fliggy.Ticket.VerifyNotify } };
-  /** {@link Fliggy.Travel.RechargeJtpOrdercancelApply 飞猪 > 飞猪度假通讯流量包无忧行订单退订申请消息发送} */
+  /** {@link Fliggy.Travel.RechargeJtpOrdercancelApply 航旅度假交易 > 飞猪度假通讯流量包无忧行订单退订申请消息发送} */
   type FliggyTravelRechargeJtpOrdercancelApply = Message & { content?: MessageContent & { topic?: 'fliggy_travel_RechargeJtpOrdercancelApply', content?: string | Fliggy.Travel.RechargeJtpOrdercancelApply } };
   /** {@link Fliggy.Visa.ApplicantStatusChanged 航旅度假交易 > 签证申请人状态变更消息} */
   type FliggyVisaApplicantStatusChanged = Message & { content?: MessageContent & { topic?: 'fliggy_visa_ApplicantStatusChanged', content?: string | Fliggy.Visa.ApplicantStatusChanged } };
@@ -1162,6 +1162,10 @@ declare namespace IncomingMessage {
   type IdleCycleshopSaleOrderNotice = Message & { content?: MessageContent & { topic?: 'idle_cycleshop_SaleOrderNotice', content?: string | Idle.Cycleshop.SaleOrderNotice } };
   /** {@link Idle.Distribution.ItemChange 闲鱼回收商消息 > 分销闲管家消息通道} */
   type IdleDistributionItemChange = Message & { content?: MessageContent & { topic?: 'idle_distribution_ItemChange', content?: string | Idle.Distribution.ItemChange } };
+  /** {@link Idle.Fishmarket.BuyerOrderStateSyn 闲鱼 > 闲鱼鱼市买家单状态同步} */
+  type IdleFishmarketBuyerOrderStateSyn = Message & { content?: MessageContent & { topic?: 'idle_fishmarket_BuyerOrderStateSyn', content?: string | Idle.Fishmarket.BuyerOrderStateSyn } };
+  /** {@link Idle.Fishmarket.ItemAuctionStateSyn 闲鱼 > 闲鱼鱼市商品竞拍消息同步} */
+  type IdleFishmarketItemAuctionStateSyn = Message & { content?: MessageContent & { topic?: 'idle_fishmarket_ItemAuctionStateSyn', content?: string | Idle.Fishmarket.ItemAuctionStateSyn } };
   /** {@link Idle.Fishmarket.TenderAutoAuctionMsg 闲鱼 > 一口价转暗拍自动上架消息推送} */
   type IdleFishmarketTenderAutoAuctionMsg = Message & { content?: MessageContent & { topic?: 'idle_fishmarket_TenderAutoAuctionMsg', content?: string | Idle.Fishmarket.TenderAutoAuctionMsg } };
   /** {@link Idle.Fishmarketfixed.OrderSyn 闲鱼 > 鱼市一口价买家单订单交易消息变更} */
@@ -1846,6 +1850,12 @@ declare namespace IncomingMessage {
   type TaobaoSecWlcAlipaySync = Message & { content?: MessageContent & { topic?: 'taobao_sec_WlcAlipaySync', content?: string | Taobao.Sec.WlcAlipaySync } };
   /** {@link Taobao.Seed.GeneralDataCommutation 淘宝 > 淘宝种草数据交换} */
   type TaobaoSeedGeneralDataCommutation = Message & { content?: MessageContent & { topic?: 'taobao_seed_GeneralDataCommutation', content?: string | Taobao.Seed.GeneralDataCommutation } };
+  /** {@link Taobao.Shangou.RefundClosed 淘宝闪购 > 闪购退款关闭} */
+  type TaobaoShangouRefundClosed = Message & { content?: MessageContent & { topic?: 'taobao_shangou_RefundClosed', content?: string | Taobao.Shangou.RefundClosed } };
+  /** {@link Taobao.Shangou.RefundCreated 淘宝闪购 > 闪购退款创建} */
+  type TaobaoShangouRefundCreated = Message & { content?: MessageContent & { topic?: 'taobao_shangou_RefundCreated', content?: string | Taobao.Shangou.RefundCreated } };
+  /** {@link Taobao.Shangou.RefundSuccess 淘宝闪购 > 闪购退款成功} */
+  type TaobaoShangouRefundSuccess = Message & { content?: MessageContent & { topic?: 'taobao_shangou_RefundSuccess', content?: string | Taobao.Shangou.RefundSuccess } };
   /** {@link Taobao.Shangou.TradeBuyerPay 淘宝闪购 > 闪购订单付款成功} */
   type TaobaoShangouTradeBuyerPay = Message & { content?: MessageContent & { topic?: 'taobao_shangou_TradeBuyerPay', content?: string | Taobao.Shangou.TradeBuyerPay } };
   /** {@link Taobao.Shangou.TradeClose 淘宝闪购 > 闪购订单关闭} */
@@ -3827,7 +3837,7 @@ declare namespace IncomingMessage {
     | FliggyTicketOrderStatusChange
     | FliggyTicketVerifyNotify;
   /**
-   * - {@link FliggyTravelRechargeJtpOrdercancelApply 飞猪 > 飞猪度假通讯流量包无忧行订单退订申请消息发送}
+   * - {@link FliggyTravelRechargeJtpOrdercancelApply 航旅度假交易 > 飞猪度假通讯流量包无忧行订单退订申请消息发送}
    */
   type FliggyTravel = FliggyTravelRechargeJtpOrdercancelApply;
   /**
@@ -3961,9 +3971,13 @@ declare namespace IncomingMessage {
    */
   type IdleDistribution = IdleDistributionItemChange;
   /**
+   * - {@link IdleFishmarketBuyerOrderStateSyn 闲鱼 > 闲鱼鱼市买家单状态同步}
+   * - {@link IdleFishmarketItemAuctionStateSyn 闲鱼 > 闲鱼鱼市商品竞拍消息同步}
    * - {@link IdleFishmarketTenderAutoAuctionMsg 闲鱼 > 一口价转暗拍自动上架消息推送}
    */
-  type IdleFishmarket = IdleFishmarketTenderAutoAuctionMsg;
+  type IdleFishmarket = IdleFishmarketBuyerOrderStateSyn
+    | IdleFishmarketItemAuctionStateSyn
+    | IdleFishmarketTenderAutoAuctionMsg;
   /**
    * - {@link IdleFishmarketfixedOrderSyn 闲鱼 > 鱼市一口价买家单订单交易消息变更}
    */
@@ -4833,13 +4847,19 @@ declare namespace IncomingMessage {
    */
   type TaobaoSeed = TaobaoSeedGeneralDataCommutation;
   /**
+   * - {@link TaobaoShangouRefundClosed 淘宝闪购 > 闪购退款关闭}
+   * - {@link TaobaoShangouRefundCreated 淘宝闪购 > 闪购退款创建}
+   * - {@link TaobaoShangouRefundSuccess 淘宝闪购 > 闪购退款成功}
    * - {@link TaobaoShangouTradeBuyerPay 淘宝闪购 > 闪购订单付款成功}
    * - {@link TaobaoShangouTradeClose 淘宝闪购 > 闪购订单关闭}
    * - {@link TaobaoShangouTradeCreate 淘宝闪购 > 闪购订单创建}
    * - {@link TaobaoShangouTradeSellerShip 淘宝闪购 > 闪购订单发货}
    * - {@link TaobaoShangouTradeSuccess 淘宝闪购 > 闪购订单发货}
    */
-  type TaobaoShangou = TaobaoShangouTradeBuyerPay
+  type TaobaoShangou = TaobaoShangouRefundClosed
+    | TaobaoShangouRefundCreated
+    | TaobaoShangouRefundSuccess
+    | TaobaoShangouTradeBuyerPay
     | TaobaoShangouTradeClose
     | TaobaoShangouTradeCreate
     | TaobaoShangouTradeSellerShip

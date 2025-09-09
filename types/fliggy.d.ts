@@ -226,7 +226,7 @@ declare namespace Fliggy.Ticket {
   }
 }
 
-/** 飞猪 */
+/** 航旅度假交易 */
 declare namespace Fliggy.Travel {
   /** {@link https://open.taobao.com/tmc.htm?docId=2678&docType=9 飞猪度假通讯流量包无忧行订单退订申请消息发送} */
   interface RechargeJtpOrdercancelApply {

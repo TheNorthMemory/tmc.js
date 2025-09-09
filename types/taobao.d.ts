@@ -5101,14 +5101,78 @@ declare namespace Taobao.Seed {
 
 /** 淘宝闪购 */
 declare namespace Taobao.Shangou {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2695&docType=9 闪购退款关闭} */
+  interface RefundClosed {
+    /** 退款单类型：refund_bill(退款单)，return_bill(退货单),replace_bill(退换货单) */
+    bill_type?: string;
+    /** 买家昵称加密 */
+    buyer_nick?: string;
+    /** 由buyer_id加密, 可对外开放, 用来替换buyer_nick作为唯一标识 */
+    buyer_open_uid: string;
+    /** 子订单ID */
+    oid: number | bigint;
+    /** 申请退款金额 */
+    refund_fee: string;
+    /** 退款单ID */
+    refund_id: number | bigint;
+    /** onsale */
+    refund_phase?: string;
+    /** 主订单ID */
+    tid: number | bigint;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2693&docType=9 闪购退款创建} */
+  interface RefundCreated {
+    /** 退款单类型：refund_bill(退款单)，return_bill(退货单),replace_bill(退换货单) */
+    bill_type?: string;
+    /** 买家昵称加密 */
+    buyer_nick?: string;
+    /** 由buyer_id加密, 可对外开放, 用来替换buyer_nick作为唯一标识 */
+    buyer_open_uid: string;
+    /** 子订单ID */
+    oid: number | bigint;
+    /** 申请退款金额 */
+    refund_fee: string;
+    /** 退款单ID */
+    refund_id: number | bigint;
+    /** onsale */
+    refund_phase?: string;
+    /** 主订单ID */
+    tid: number | bigint;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2694&docType=9 闪购退款成功} */
+  interface RefundSuccess {
+    /** 退款单类型：refund_bill(退款单)，return_bill(退货单),replace_bill(退换货单) */
+    bill_type?: string;
+    /** 买家昵称加密 */
+    buyer_nick?: string;
+    /** 由buyer_id加密, 可对外开放, 用来替换buyer_nick作为唯一标识 */
+    buyer_open_uid: string;
+    /** 子订单ID */
+    oid: number | bigint;
+    /** 申请退款金额 */
+    refund_fee: string;
+    /** 退款单ID */
+    refund_id: number | bigint;
+    /** onsale */
+    refund_phase?: string;
+    /** 主订单ID */
+    tid: number | bigint;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2688&docType=9 闪购订单付款成功} */
   interface TradeBuyerPay {
+    /** 买家昵称加密 */
+    buyer_nick?: string;
     /** 由buyer_id加密, 可对外开放, 用来替换buyer_nick作为唯一标识 */
     buyer_open_uid: string;
     /** 子订单ID */
     oid: number | bigint;
     /** 订单实付金额 */
     payment?: string;
+    /** 交易状态 */
+    status?: string;
     /** 主订单ID */
     tid: number | bigint;
     /** 交易类型,可选值 fixed(一口价) auction(拍卖) guarantee_trade(一口价、拍卖) auto_delivery(自动发货) independent_simple_trade(旺店入门版交易) independent_shop_trade(旺店标准版交易) ec(直冲) cod(货到付款) fenxiao(分销) game_equipment(游戏装备) shopex_trade(ShopEX交易) netcn_trade(万网交易) external_trade(统一外部交易)o2o_offlinetrade（O2O交易）step (万人团)nopaid(无付款订单)pre_auth_type(预授权0元购机交易) */
@@ -5117,12 +5181,16 @@ declare namespace Taobao.Shangou {
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2691&docType=9 闪购订单关闭} */
   interface TradeClose {
+    /** 买家昵称加密 */
+    buyer_nick?: string;
     /** 由buyer_id加密, 可对外开放, 用来替换buyer_nick作为唯一标识 */
     buyer_open_uid: string;
     /** 子订单ID */
     oid: number | bigint;
     /** 订单实付金额 */
     payment?: string;
+    /** 交易状态 */
+    status?: string;
     /** 主订单ID */
     tid: number | bigint;
     /** 交易类型,可选值 fixed(一口价) auction(拍卖) guarantee_trade(一口价、拍卖) auto_delivery(自动发货) independent_simple_trade(旺店入门版交易) independent_shop_trade(旺店标准版交易) ec(直冲) cod(货到付款) fenxiao(分销) game_equipment(游戏装备) shopex_trade(ShopEX交易) netcn_trade(万网交易) external_trade(统一外部交易)o2o_offlinetrade（O2O交易）step (万人团)nopaid(无付款订单)pre_auth_type(预授权0元购机交易) */
@@ -5131,12 +5199,16 @@ declare namespace Taobao.Shangou {
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2687&docType=9 闪购订单创建} */
   interface TradeCreate {
+    /** 买家昵称加密 */
+    buyer_nick?: string;
     /** 由buyer_id加密, 可对外开放, 用来替换buyer_nick作为唯一标识 */
     buyer_open_uid: string;
     /** 子订单ID */
     oid: number | bigint;
     /** 订单实付金额 */
     payment?: string;
+    /** 交易状态 */
+    status?: string;
     /** 主订单ID */
     tid: number | bigint;
     /** 交易类型,可选值 fixed(一口价) auction(拍卖) guarantee_trade(一口价、拍卖) auto_delivery(自动发货) independent_simple_trade(旺店入门版交易) independent_shop_trade(旺店标准版交易) ec(直冲) cod(货到付款) fenxiao(分销) game_equipment(游戏装备) shopex_trade(ShopEX交易) netcn_trade(万网交易) external_trade(统一外部交易)o2o_offlinetrade（O2O交易）step (万人团)nopaid(无付款订单)pre_auth_type(预授权0元购机交易) */
@@ -5145,6 +5217,8 @@ declare namespace Taobao.Shangou {
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2689&docType=9 闪购订单发货} */
   interface TradeSellerShip {
+    /** 买家昵称加密 */
+    buyer_nick: string;
     /** 由buyer_id加密, 可对外开放, 用来替换buyer_nick作为唯一标识 */
     buyer_open_uid: string;
     /** 子订单ID */
@@ -5159,12 +5233,16 @@ declare namespace Taobao.Shangou {
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2690&docType=9 闪购订单发货} */
   interface TradeSuccess {
+    /** 买家昵称加密 */
+    buyer_nick?: string;
     /** 由buyer_id加密, 可对外开放, 用来替换buyer_nick作为唯一标识 */
     buyer_open_uid: string;
     /** 子订单ID */
     oid: number | bigint;
     /** 订单实付金额 */
     payment?: string;
+    /** 交易状态 */
+    status?: string;
     /** 主订单ID */
     tid: number | bigint;
     /** 交易类型,可选值 fixed(一口价) auction(拍卖) guarantee_trade(一口价、拍卖) auto_delivery(自动发货) independent_simple_trade(旺店入门版交易) independent_shop_trade(旺店标准版交易) ec(直冲) cod(货到付款) fenxiao(分销) game_equipment(游戏装备) shopex_trade(ShopEX交易) netcn_trade(万网交易) external_trade(统一外部交易)o2o_offlinetrade（O2O交易）step (万人团)nopaid(无付款订单)pre_auth_type(预授权0元购机交易) */
