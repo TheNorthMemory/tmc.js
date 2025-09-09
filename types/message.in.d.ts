@@ -35,6 +35,7 @@
 /// <reference path="lianfan.d.ts" />
 /// <reference path="lst.d.ts" />
 /// <reference path="niaochao.d.ts" />
+/// <reference path="selected.d.ts" />
 /// <reference path="taobao.d.ts" />
 /// <reference path="taotao.d.ts" />
 /// <reference path="tmall.d.ts" />
@@ -1226,6 +1227,12 @@ declare namespace IncomingMessage {
   type NiaochaoTccompassMaterialCodeUpdate = Message & { content?: MessageContent & { topic?: 'niaochao_tccompass_MaterialCodeUpdate', content?: string | Niaochao.Tccompass.MaterialCodeUpdate } };
   /** {@link Niaochao.Tccompass.WarehouseNetworkChange 五道口配送 > 仓网络变更消息} */
   type NiaochaoTccompassWarehouseNetworkChange = Message & { content?: MessageContent & { topic?: 'niaochao_tccompass_WarehouseNetworkChange', content?: string | Niaochao.Tccompass.WarehouseNetworkChange } };
+  /** {@link Selected.Appraise.RefundVerifySyn 闲鱼已验货 > 严选售中验订单逆向消息-Saas服务商} */
+  type SelectedAppraiseRefundVerifySyn = Message & { content?: MessageContent & { topic?: 'selected_appraise_RefundVerifySyn', content?: string | Selected.Appraise.RefundVerifySyn } };
+  /** {@link Selected.Appraise.VerifySyn 闲鱼已验货 > 严选售中验订单正向消息-Saas服务商} */
+  type SelectedAppraiseVerifySyn = Message & { content?: MessageContent & { topic?: 'selected_appraise_VerifySyn', content?: string | Selected.Appraise.VerifySyn } };
+  /** {@link Selected.Reverify.OrderSyn 闲鱼已验货 > 严选售中验订单消息同步-验货中心} */
+  type SelectedReverifyOrderSyn = Message & { content?: MessageContent & { topic?: 'selected_reverify_OrderSyn', content?: string | Selected.Reverify.OrderSyn } };
   /** {@link Taobao.Ag.RefundBroad AliGenius > AG退款消息广播} */
   type TaobaoAgRefundBroad = Message & { content?: MessageContent & { topic?: 'taobao_ag_RefundBroad', content?: string | Taobao.Ag.RefundBroad } };
   /** {@link Taobao.Ag.RefundSignInfo AliGenius > 商家在AG的签收信息} */
@@ -4069,6 +4076,16 @@ declare namespace IncomingMessage {
     | NiaochaoTccompassMaterialCodeUpdate
     | NiaochaoTccompassWarehouseNetworkChange;
   /**
+   * - {@link SelectedAppraiseRefundVerifySyn 闲鱼已验货 > 严选售中验订单逆向消息-Saas服务商}
+   * - {@link SelectedAppraiseVerifySyn 闲鱼已验货 > 严选售中验订单正向消息-Saas服务商}
+   */
+  type SelectedAppraise = SelectedAppraiseRefundVerifySyn
+    | SelectedAppraiseVerifySyn;
+  /**
+   * - {@link SelectedReverifyOrderSyn 闲鱼已验货 > 严选售中验订单消息同步-验货中心}
+   */
+  type SelectedReverify = SelectedReverifyOrderSyn;
+  /**
    * - {@link TaobaoAgRefundBroad AliGenius > AG退款消息广播}
    * - {@link TaobaoAgRefundSignInfo AliGenius > 商家在AG的签收信息}
    * - {@link TaobaoAgSignInfo AliGenius > AG仓库核验信息}
@@ -6166,6 +6183,12 @@ declare namespace IncomingMessage {
    * - {@link NiaochaoTccompass}
    */
   type Niaochao = NiaochaoTccompass;
+  /**
+   * - {@link SelectedAppraise}
+   * - {@link SelectedReverify}
+   */
+  type Selected = SelectedAppraise
+    | SelectedReverify;
   /**
    * - {@link TaobaoAg}
    * - {@link TaobaoAis}

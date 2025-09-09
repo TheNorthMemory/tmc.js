@@ -1242,6 +1242,12 @@ declare interface TaoTopicsDescriptor {
   niaochao_tccompass_MaterialCodeUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.NiaochaoTccompassMaterialCodeUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.NiaochaoTccompassWarehouseNetworkChange 五道口配送 > 仓网络变更消息} */
   niaochao_tccompass_WarehouseNetworkChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.NiaochaoTccompassWarehouseNetworkChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.SelectedAppraiseRefundVerifySyn 闲鱼已验货 > 严选售中验订单逆向消息-Saas服务商} */
+  selected_appraise_RefundVerifySyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.SelectedAppraiseRefundVerifySyn) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.SelectedAppraiseVerifySyn 闲鱼已验货 > 严选售中验订单正向消息-Saas服务商} */
+  selected_appraise_VerifySyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.SelectedAppraiseVerifySyn) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.SelectedReverifyOrderSyn 闲鱼已验货 > 严选售中验订单消息同步-验货中心} */
+  selected_reverify_OrderSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.SelectedReverifyOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAgRefundBroad AliGenius > AG退款消息广播} */
   taobao_ag_RefundBroad(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAgRefundBroad) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAgRefundSignInfo AliGenius > 商家在AG的签收信息} */
@@ -2906,6 +2912,10 @@ declare interface TaoTopicsDescriptor {
   lst_supplier(fn: (this: TaoMessageConsumer, message: IncomingMessage.LstSupplier) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.NiaochaoTccompass} */
   niaochao_tccompass(fn: (this: TaoMessageConsumer, message: IncomingMessage.NiaochaoTccompass) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.SelectedAppraise} */
+  selected_appraise(fn: (this: TaoMessageConsumer, message: IncomingMessage.SelectedAppraise) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.SelectedReverify} */
+  selected_reverify(fn: (this: TaoMessageConsumer, message: IncomingMessage.SelectedReverify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAg} */
   taobao_ag(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAis} */
@@ -3340,6 +3350,8 @@ declare interface TaoTopicsDescriptor {
   lst(fn: (this: TaoMessageConsumer, message: IncomingMessage.Lst) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Niaochao} */
   niaochao(fn: (this: TaoMessageConsumer, message: IncomingMessage.Niaochao) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Selected} */
+  selected(fn: (this: TaoMessageConsumer, message: IncomingMessage.Selected) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Taobao} */
   taobao(fn: (this: TaoMessageConsumer, message: IncomingMessage.Taobao) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Taotao} */
@@ -4543,6 +4555,12 @@ declare interface TaoEventsListener {
   on(topic: 'niaochao_tccompass_MaterialCodeUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.NiaochaoTccompassMaterialCodeUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.NiaochaoTccompassWarehouseNetworkChange 五道口配送 > 仓网络变更消息} */
   on(topic: 'niaochao_tccompass_WarehouseNetworkChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.NiaochaoTccompassWarehouseNetworkChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.SelectedAppraiseRefundVerifySyn 闲鱼已验货 > 严选售中验订单逆向消息-Saas服务商} */
+  on(topic: 'selected_appraise_RefundVerifySyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.SelectedAppraiseRefundVerifySyn) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.SelectedAppraiseVerifySyn 闲鱼已验货 > 严选售中验订单正向消息-Saas服务商} */
+  on(topic: 'selected_appraise_VerifySyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.SelectedAppraiseVerifySyn) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.SelectedReverifyOrderSyn 闲鱼已验货 > 严选售中验订单消息同步-验货中心} */
+  on(topic: 'selected_reverify_OrderSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.SelectedReverifyOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAgRefundBroad AliGenius > AG退款消息广播} */
   on(topic: 'taobao_ag_RefundBroad', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAgRefundBroad) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAgRefundSignInfo AliGenius > 商家在AG的签收信息} */
@@ -6207,6 +6225,10 @@ declare interface TaoEventsListener {
   on(topic: 'lst_supplier', listener: (this: TaoMessageConsumer, message: IncomingMessage.LstSupplier) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.NiaochaoTccompass} */
   on(topic: 'niaochao_tccompass', listener: (this: TaoMessageConsumer, message: IncomingMessage.NiaochaoTccompass) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.SelectedAppraise} */
+  on(topic: 'selected_appraise', listener: (this: TaoMessageConsumer, message: IncomingMessage.SelectedAppraise) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.SelectedReverify} */
+  on(topic: 'selected_reverify', listener: (this: TaoMessageConsumer, message: IncomingMessage.SelectedReverify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAg} */
   on(topic: 'taobao_ag', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoAg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoAis} */
@@ -6641,6 +6663,8 @@ declare interface TaoEventsListener {
   on(topic: 'lst', listener: (this: TaoMessageConsumer, message: IncomingMessage.Lst) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Niaochao} */
   on(topic: 'niaochao', listener: (this: TaoMessageConsumer, message: IncomingMessage.Niaochao) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Selected} */
+  on(topic: 'selected', listener: (this: TaoMessageConsumer, message: IncomingMessage.Selected) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Taobao} */
   on(topic: 'taobao', listener: (this: TaoMessageConsumer, message: IncomingMessage.Taobao) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Taotao} */
