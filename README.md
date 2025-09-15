@@ -134,12 +134,12 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 
 ## 支持的TOPICS
 
-<details><summary>共计 84+ 类别，535+ 消息数</summary>
+<details><summary>共计 84+ 类别，545+ 消息数</summary>
 
 | 类别 | 消息数 |
 | --- | --- |
-| 淘宝交易 | 25 |
-| 淘宝退款 | 14 |
+| 淘宝交易 | 30 |
+| 淘宝退款 | 17 |
 | 淘宝商品 | 13 |
 | 淘宝分销 | 27 |
 | 淘宝点点 | 12 |
@@ -206,7 +206,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | ICBU-交易 | 1 |
 | IoT售后解决方案 | 1 |
 | OpenMall-API | 5 |
-| 闲鱼已验货 | 7 |
+| 闲鱼已验货 | 9 |
 | 阿里健康三方机构 | 2 |
 | 聚石塔监控告警 | 2 |
 | 大资产拍卖Top端拍品消息 | 2 |

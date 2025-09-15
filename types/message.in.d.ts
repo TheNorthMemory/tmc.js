@@ -1871,7 +1871,7 @@ declare namespace IncomingMessage {
   type TaobaoShangouTradeCreate = Message & { content?: MessageContent & { topic?: 'taobao_shangou_TradeCreate', content?: string | Taobao.Shangou.TradeCreate } };
   /** {@link Taobao.Shangou.TradeSellerShip 淘宝闪购 > 闪购订单发货} */
   type TaobaoShangouTradeSellerShip = Message & { content?: MessageContent & { topic?: 'taobao_shangou_TradeSellerShip', content?: string | Taobao.Shangou.TradeSellerShip } };
-  /** {@link Taobao.Shangou.TradeSuccess 淘宝闪购 > 闪购订单发货} */
+  /** {@link Taobao.Shangou.TradeSuccess 淘宝闪购 > 闪购订单交易成功} */
   type TaobaoShangouTradeSuccess = Message & { content?: MessageContent & { topic?: 'taobao_shangou_TradeSuccess', content?: string | Taobao.Shangou.TradeSuccess } };
   /** {@link Taobao.Shop.Vary 淘宝 > 淘宝店铺变更} */
   type TaobaoShopVary = Message & { content?: MessageContent & { topic?: 'taobao_shop_Vary', content?: string | Taobao.Shop.Vary } };
@@ -4871,7 +4871,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoShangouTradeClose 淘宝闪购 > 闪购订单关闭}
    * - {@link TaobaoShangouTradeCreate 淘宝闪购 > 闪购订单创建}
    * - {@link TaobaoShangouTradeSellerShip 淘宝闪购 > 闪购订单发货}
-   * - {@link TaobaoShangouTradeSuccess 淘宝闪购 > 闪购订单发货}
+   * - {@link TaobaoShangouTradeSuccess 淘宝闪购 > 闪购订单交易成功}
    */
   type TaobaoShangou = TaobaoShangouRefundClosed
     | TaobaoShangouRefundCreated

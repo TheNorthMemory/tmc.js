@@ -1886,7 +1886,7 @@ declare interface TaoTopicsDescriptor {
   taobao_shangou_TradeCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouTradeCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoShangouTradeSellerShip 淘宝闪购 > 闪购订单发货} */
   taobao_shangou_TradeSellerShip(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouTradeSellerShip) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TaobaoShangouTradeSuccess 淘宝闪购 > 闪购订单发货} */
+  /** {@link IncomingMessage.TaobaoShangouTradeSuccess 淘宝闪购 > 闪购订单交易成功} */
   taobao_shangou_TradeSuccess(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouTradeSuccess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoShopVary 淘宝 > 淘宝店铺变更} */
   taobao_shop_Vary(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShopVary) => void): TaoMessageConsumer;
@@ -5199,7 +5199,7 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_shangou_TradeCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouTradeCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoShangouTradeSellerShip 淘宝闪购 > 闪购订单发货} */
   on(topic: 'taobao_shangou_TradeSellerShip', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouTradeSellerShip) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TaobaoShangouTradeSuccess 淘宝闪购 > 闪购订单发货} */
+  /** {@link IncomingMessage.TaobaoShangouTradeSuccess 淘宝闪购 > 闪购订单交易成功} */
   on(topic: 'taobao_shangou_TradeSuccess', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouTradeSuccess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoShopVary 淘宝 > 淘宝店铺变更} */
   on(topic: 'taobao_shop_Vary', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShopVary) => void): TaoMessageConsumer;

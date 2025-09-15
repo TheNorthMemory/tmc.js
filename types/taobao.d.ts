@@ -5231,7 +5231,7 @@ declare namespace Taobao.Shangou {
     type: string;
   }
 
-  /** {@link https://open.taobao.com/tmc.htm?docId=2690&docType=9 闪购订单发货} */
+  /** {@link https://open.taobao.com/tmc.htm?docId=2690&docType=9 闪购订单交易成功} */
   interface TradeSuccess {
     /** 买家昵称加密 */
     buyer_nick?: string;
