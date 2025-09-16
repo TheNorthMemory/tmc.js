@@ -5215,6 +5215,30 @@ declare namespace Taobao.Shangou {
     type: string;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2698&docType=9 闪购订单交易备注变更} */
+  interface TradeMemoModified {
+    /** buyer:更新买家备注,seller:更新卖家备注,other:其他 */
+    action_type: string;
+    /** 买家昵称加密 */
+    buyer_nick?: string;
+    /** 由buyer_id加密, 可对外开放, 用来替换buyer_nick作为唯一标识 */
+    buyer_open_uid: string;
+    /** 子订单ID */
+    oid: number | bigint;
+    /** 订单实付金额 */
+    payment?: string;
+    /** 卖家备注旗帜，0(灰色), 1(红色), 2(黄色), 3(绿色), 4(蓝色), 5(紫色), 6(橙色), 7(浅蓝), 8(浅粉), 9(深绿), 10(桃红) */
+    seller_flag: string;
+    /** 卖家备注内容 */
+    seller_memo: string;
+    /** 交易状态 */
+    status?: string;
+    /** 主订单ID */
+    tid: number | bigint;
+    /** 交易类型,可选值 fixed(一口价) auction(拍卖) guarantee_trade(一口价、拍卖) auto_delivery(自动发货) independent_simple_trade(旺店入门版交易) independent_shop_trade(旺店标准版交易) ec(直冲) cod(货到付款) fenxiao(分销) game_equipment(游戏装备) shopex_trade(ShopEX交易) netcn_trade(万网交易) external_trade(统一外部交易)o2o_offlinetrade（O2O交易）step (万人团)nopaid(无付款订单)pre_auth_type(预授权0元购机交易) */
+    type: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2689&docType=9 闪购订单发货} */
   interface TradeSellerShip {
     /** 买家昵称加密 */
