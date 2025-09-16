@@ -15,6 +15,15 @@ declare namespace Fliggy.Btrip {
   }
 }
 
+/** 飞猪度假 */
+declare namespace Fliggy.Dujia {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2697&docType=9 招商审核通过消息} */
+  interface ApproveSignUp {
+    /** 报名id */
+    sign_up_id: string;
+  }
+}
+
 /** 淘宝机票 */
 declare namespace Fliggy.Flight {
   /** {@link https://open.taobao.com/tmc.htm?docId=2636&docType=9 飞猪机票商家货品优势变更通知} */

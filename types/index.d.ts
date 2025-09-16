@@ -1076,6 +1076,8 @@ declare interface TaoTopicsDescriptor {
   eleme_retail_PosOrderMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.ElemeRetailPosOrderMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyBtripHotelDistributionOrderChange 商旅API > 订单状态变化} */
   fliggy_btrip_HotelDistributionOrderChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyBtripHotelDistributionOrderChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FliggyDujiaApproveSignUp 飞猪度假 > 招商审核通过消息} */
+  fliggy_dujia_ApproveSignUp(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyDujiaApproveSignUp) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyFlightAdvOfferChangeNotify 淘宝机票 > 飞猪机票商家货品优势变更通知} */
   fliggy_flight_AdvOfferChangeNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyFlightAdvOfferChangeNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyInteractHaitunEventCreate 飞猪 > 飞猪互动海豚事件产生} */
@@ -2814,6 +2816,8 @@ declare interface TaoTopicsDescriptor {
   eleme_retail(fn: (this: TaoMessageConsumer, message: IncomingMessage.ElemeRetail) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyBtrip} */
   fliggy_btrip(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyBtrip) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FliggyDujia} */
+  fliggy_dujia(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyDujia) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyFlight} */
   fliggy_flight(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyFlight) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyInteract} */
@@ -4389,6 +4393,8 @@ declare interface TaoEventsListener {
   on(topic: 'eleme_retail_PosOrderMessage', listener: (this: TaoMessageConsumer, message: IncomingMessage.ElemeRetailPosOrderMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyBtripHotelDistributionOrderChange 商旅API > 订单状态变化} */
   on(topic: 'fliggy_btrip_HotelDistributionOrderChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyBtripHotelDistributionOrderChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FliggyDujiaApproveSignUp 飞猪度假 > 招商审核通过消息} */
+  on(topic: 'fliggy_dujia_ApproveSignUp', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyDujiaApproveSignUp) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyFlightAdvOfferChangeNotify 淘宝机票 > 飞猪机票商家货品优势变更通知} */
   on(topic: 'fliggy_flight_AdvOfferChangeNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyFlightAdvOfferChangeNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyInteractHaitunEventCreate 飞猪 > 飞猪互动海豚事件产生} */
@@ -6127,6 +6133,8 @@ declare interface TaoEventsListener {
   on(topic: 'eleme_retail', listener: (this: TaoMessageConsumer, message: IncomingMessage.ElemeRetail) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyBtrip} */
   on(topic: 'fliggy_btrip', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyBtrip) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FliggyDujia} */
+  on(topic: 'fliggy_dujia', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyDujia) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyFlight} */
   on(topic: 'fliggy_flight', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyFlight) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyInteract} */
