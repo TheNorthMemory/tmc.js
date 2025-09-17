@@ -770,7 +770,7 @@ declare namespace Taobao.Cco {
   }
 }
 
-/** 淘宝交易 */
+/** 内容开放 */
 declare namespace Taobao.Content {
   /** {@link https://open.taobao.com/tmc.htm?docId=2474&docType=9 智能混剪发布视频空间审核结果} */
   interface AuditAutocut {
@@ -2315,7 +2315,7 @@ declare namespace Taobao.Homeai {
   }
 }
 
-/** 酒店签约中心消息 */
+/** 飞猪 */
 declare namespace Taobao.Hotel {
   /** {@link https://open.taobao.com/tmc.htm?docId=1368&docType=9 酒店管控中心消息通知} */
   interface ControlMsg {
@@ -2920,7 +2920,7 @@ declare namespace Taobao.Item {
   }
 }
 
-/** 淘宝 */
+/** 货源服务消息 */
 declare namespace Taobao.Itemmarket {
   /** {@link https://open.taobao.com/tmc.htm?docId=2456&docType=9 三方货源分销商货品消息} */
   interface ItemDistributorChange {
@@ -3729,7 +3729,7 @@ declare namespace Taobao.Oc {
   }
 }
 
-/** 淘宝交易 */
+/** 以旧换新-订单域 */
 declare namespace Taobao.Ofn {
   /** {@link https://open.taobao.com/tmc.htm?docId=2482&docType=9 信用代扣状态变更同步} */
   interface CreditPayStatusChange {
@@ -4377,7 +4377,7 @@ declare namespace Taobao.Paimai {
   }
 }
 
-/** 淘宝企业购 */
+/** 采购宝API */
 declare namespace Taobao.Pc {
   /** {@link https://open.taobao.com/tmc.htm?docId=2672&docType=9 PC企业购出账消息通知} */
   interface BillsGenerate {
@@ -5099,7 +5099,7 @@ declare namespace Taobao.Seed {
   }
 }
 
-/** 淘宝闪购 */
+/** 闪购交易 */
 declare namespace Taobao.Shangou {
   /** {@link https://open.taobao.com/tmc.htm?docId=2695&docType=9 闪购退款关闭} */
   interface RefundClosed {

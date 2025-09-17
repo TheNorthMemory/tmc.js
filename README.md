@@ -134,7 +134,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 
 ## 支持的TOPICS
 
-<details><summary>共计 84+ 类别，537+ 消息数</summary>
+<details><summary>共计 101+ 类别，587+ 消息数</summary>
 
 | 类别 | 消息数 |
 | --- | --- |
@@ -160,7 +160,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | OpenIM消息 | 1 |
 | 网上法庭 | 8 |
 | 电子发票 | 21 |
-| 航旅度假交易 | 10 |
+| 航旅度假交易 | 11 |
 | YunOS YoC | 2 |
 | 淘宝直播API | 3 |
 | 阿里物联 | 2 |
@@ -199,6 +199,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | HOMEAI | 2 |
 | HOMEAI消息对接 | 5 |
 | 零售通_公共 | 8 |
+| 大麦麦座开放平台消息 | 2 |
 | 酒店标准库基础信息变更消息 | 3 |
 | 菜鸟发货工作台 | 1 |
 | IOT-智能制造 | 2 |
@@ -217,11 +218,27 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | MMC五盘货项目 | 5 |
 | 银泰开放平台消息 | 3 |
 | 阿里智付 | 1 |
+| ICBU-小满 | 1 |
 | 代发管理 | 2 |
 | 蚂蚁采购 | 1 |
+| 飞猪机票 | 2 |
 | 阿里健康&一树-电商中台对接 | 2 |
 | 阿里健康-疫苗 | 2 |
+| 酒店交易消息API | 1 |
 | 智能应用 | 1 |
+| 内容开放 | 3 |
+| 闲鱼电商Saas | 9 |
+| 货源服务消息 | 2 |
+| 本地生活联盟平台-卡券消息API | 2 |
+| 本地生活联盟平台-卡券包采购单消息API | 2 |
+| 以旧换新-订单域 | 3 |
+| 本地生活联盟平台-霸王餐消息推送API | 2 |
+| 闲鱼循环商店-消息前台 | 2 |
+| 闲鱼房源-前台 | 1 |
+| 绘蛙消息 | 2 |
+| 公益三小时公共 | 1 |
+| 采购宝API | 6 |
+| 闪购交易 | 8 |
 
 </details>
 

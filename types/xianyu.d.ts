@@ -45,7 +45,7 @@ declare namespace Xianyu.Car {
   }
 }
 
-/** 闲鱼 */
+/** 闲鱼电商Saas */
 declare namespace Xianyu.Cco {
   /** {@link https://open.taobao.com/tmc.htm?docId=2621&docType=9 闲鱼投诉消息} */
   interface Complain {
@@ -80,7 +80,7 @@ declare namespace Xianyu.Cco {
   }
 }
 
-/** 闲鱼 */
+/** 闲鱼电商Saas */
 declare namespace Xianyu.Coin {
   /** {@link https://open.taobao.com/tmc.htm?docId=2637&docType=9 闲鱼币交易抵扣变更消息} */
   interface CoinDeductionChange {
@@ -239,7 +239,7 @@ declare namespace Xianyu.Marketrecycle {
   }
 }
 
-/** 闲鱼 */
+/** 闲鱼电商Saas */
 declare namespace Xianyu.Outlet {
   /** {@link https://open.taobao.com/tmc.htm?docId=2605&docType=9 闲鱼奥莱周期拍拍品创建} */
   interface CycleBuyVendueCreate {
@@ -442,7 +442,7 @@ declare namespace Xianyu.Tender {
   }
 }
 
-/** 闲鱼 */
+/** 闲鱼电商Saas */
 declare namespace Xianyu.Yellowbox {
   /** {@link https://open.taobao.com/tmc.htm?docId=2608&docType=9 GPU模版处罚消息通知} */
   interface GpuTemplatePunish {

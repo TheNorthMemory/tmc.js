@@ -964,7 +964,7 @@ declare namespace Alibaba.Crowdsourcing {
   }
 }
 
-/** 三小时公益 */
+/** 公益三小时公共 */
 declare namespace Alibaba.Csr {
   /** {@link https://open.taobao.com/tmc.htm?docId=2596&docType=9 公益三小时积分捐行为同步} */
   interface DonatePointSync {

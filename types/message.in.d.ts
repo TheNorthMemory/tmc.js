@@ -183,15 +183,15 @@ declare namespace IncomingMessage {
   type AlibabaCrmOutboundInfoMessage = Message & { content?: MessageContent & { topic?: 'alibaba_crm_OutboundInfoMessage', content?: string | Alibaba.Crm.OutboundInfoMessage } };
   /** {@link Alibaba.Crowdsourcing.Material - > 素材生成通知} */
   type AlibabaCrowdsourcingMaterial = Message & { content?: MessageContent & { topic?: 'alibaba_crowdsourcing_Material', content?: string | Alibaba.Crowdsourcing.Material } };
-  /** {@link Alibaba.Csr.DonatePointSync 三小时公益 > 公益三小时积分捐行为同步} */
+  /** {@link Alibaba.Csr.DonatePointSync 公益三小时公共 > 公益三小时积分捐行为同步} */
   type AlibabaCsrDonatePointSync = Message & { content?: MessageContent & { topic?: 'alibaba_csr_DonatePointSync', content?: string | Alibaba.Csr.DonatePointSync } };
-  /** {@link Alibaba.Csr.OpenWorkbenchTargetedInstanceExecProgress 三小时公益 > 精准捐需求执行记录同步} */
+  /** {@link Alibaba.Csr.OpenWorkbenchTargetedInstanceExecProgress 公益三小时公共 > 精准捐需求执行记录同步} */
   type AlibabaCsrOpenWorkbenchTargetedInstanceExecProgress = Message & { content?: MessageContent & { topic?: 'alibaba_csr_OpenWorkbenchTargetedInstanceExecProgress', content?: string | Alibaba.Csr.OpenWorkbenchTargetedInstanceExecProgress } };
-  /** {@link Alibaba.Csr.OpenWorkbenchTargetedInstanceFeedbackStateChange 三小时公益 > 精准捐需求反馈记录状态变更} */
+  /** {@link Alibaba.Csr.OpenWorkbenchTargetedInstanceFeedbackStateChange 公益三小时公共 > 精准捐需求反馈记录状态变更} */
   type AlibabaCsrOpenWorkbenchTargetedInstanceFeedbackStateChange = Message & { content?: MessageContent & { topic?: 'alibaba_csr_OpenWorkbenchTargetedInstanceFeedbackStateChange', content?: string | Alibaba.Csr.OpenWorkbenchTargetedInstanceFeedbackStateChange } };
-  /** {@link Alibaba.Csr.OpenWorkbenchTargetedInstanceStateChange 三小时公益 > 精准捐需求状态变更} */
+  /** {@link Alibaba.Csr.OpenWorkbenchTargetedInstanceStateChange 公益三小时公共 > 精准捐需求状态变更} */
   type AlibabaCsrOpenWorkbenchTargetedInstanceStateChange = Message & { content?: MessageContent & { topic?: 'alibaba_csr_OpenWorkbenchTargetedInstanceStateChange', content?: string | Alibaba.Csr.OpenWorkbenchTargetedInstanceStateChange } };
-  /** {@link Alibaba.Csr.ZhiyuanhuiSyncEnergy 三小时公益 > 3小时积分捐同步活力值到志愿汇} */
+  /** {@link Alibaba.Csr.ZhiyuanhuiSyncEnergy 公益三小时公共 > 3小时积分捐同步活力值到志愿汇} */
   type AlibabaCsrZhiyuanhuiSyncEnergy = Message & { content?: MessageContent & { topic?: 'alibaba_csr_ZhiyuanhuiSyncEnergy', content?: string | Alibaba.Csr.ZhiyuanhuiSyncEnergy } };
   /** {@link Alibaba.Decoration.AidesignFinish 阿里楼盘 > AI设计方案状态变更通知} */
   type AlibabaDecorationAidesignFinish = Message & { content?: MessageContent & { topic?: 'alibaba_decoration_AidesignFinish', content?: string | Alibaba.Decoration.AidesignFinish } };
@@ -885,13 +885,13 @@ declare namespace IncomingMessage {
   type AliyunGscProductionReceiptInfoCreate = Message & { content?: MessageContent & { topic?: 'aliyun_gsc_ProductionReceiptInfoCreate', content?: string | Aliyun.Gsc.ProductionReceiptInfoCreate } };
   /** {@link Aliyun.Iot.OrderSync IOT-智能制造 > 天天工厂采购单同步} */
   type AliyunIotOrderSync = Message & { content?: MessageContent & { topic?: 'aliyun_iot_OrderSync', content?: string | Aliyun.Iot.OrderSync } };
-  /** {@link Alsc.Coupon.CouponSync 口碑 > 本地联盟卡券同步消息} */
+  /** {@link Alsc.Coupon.CouponSync 本地生活联盟平台-卡券消息API > 本地联盟卡券同步消息} */
   type AlscCouponCouponSync = Message & { content?: MessageContent & { topic?: 'alsc_coupon_CouponSync', content?: string | Alsc.Coupon.CouponSync } };
-  /** {@link Alsc.Coupon.OrderVoucherStatus 口碑 > 饿了么卡券openapi订单消息} */
+  /** {@link Alsc.Coupon.OrderVoucherStatus 本地生活联盟平台-卡券消息API > 饿了么卡券openapi订单消息} */
   type AlscCouponOrderVoucherStatus = Message & { content?: MessageContent & { topic?: 'alsc_coupon_OrderVoucherStatus', content?: string | Alsc.Coupon.OrderVoucherStatus } };
-  /** {@link Alsc.Couponpackage.PurchaseSync 口碑 > 本地联盟卡券包采购同步消息} */
+  /** {@link Alsc.Couponpackage.PurchaseSync 本地生活联盟平台-卡券包采购单消息API > 本地联盟卡券包采购同步消息} */
   type AlscCouponpackagePurchaseSync = Message & { content?: MessageContent & { topic?: 'alsc_couponpackage_PurchaseSync', content?: string | Alsc.Couponpackage.PurchaseSync } };
-  /** {@link Alsc.Couponpackage.PurchaseTicketSync 口碑 > 本地联盟卡券包采购凭证同步} */
+  /** {@link Alsc.Couponpackage.PurchaseTicketSync 本地生活联盟平台-卡券包采购单消息API > 本地联盟卡券包采购凭证同步} */
   type AlscCouponpackagePurchaseTicketSync = Message & { content?: MessageContent & { topic?: 'alsc_couponpackage_PurchaseTicketSync', content?: string | Alsc.Couponpackage.PurchaseTicketSync } };
   /** {@link Alsc.Daodian.HaitunPromoEventNotify 口碑 > 本地生活到店多渠道投放海豚活动事件通知} */
   type AlscDaodianHaitunPromoEventNotify = Message & { content?: MessageContent & { topic?: 'alsc_daodian_HaitunPromoEventNotify', content?: string | Alsc.Daodian.HaitunPromoEventNotify } };
@@ -905,9 +905,9 @@ declare namespace IncomingMessage {
   type AlscKbbbtOrderVoucherStatus = Message & { content?: MessageContent & { topic?: 'alsc_kbbbt_OrderVoucherStatus', content?: string | Alsc.Kbbbt.OrderVoucherStatus } };
   /** {@link Alsc.Kbbbt.ProductChange 口碑 > 口碑爆爆团商品变更的消息} */
   type AlscKbbbtProductChange = Message & { content?: MessageContent & { topic?: 'alsc_kbbbt_ProductChange', content?: string | Alsc.Kbbbt.ProductChange } };
-  /** {@link Alsc.Reviewbwc.ActivityEnrollSync 口碑 > 本地联盟饿了么评价有礼门店活动消息} */
+  /** {@link Alsc.Reviewbwc.ActivityEnrollSync 本地生活联盟平台-霸王餐消息推送API > 本地联盟饿了么评价有礼门店活动消息} */
   type AlscReviewbwcActivityEnrollSync = Message & { content?: MessageContent & { topic?: 'alsc_reviewbwc_ActivityEnrollSync', content?: string | Alsc.Reviewbwc.ActivityEnrollSync } };
-  /** {@link Alsc.Reviewbwc.SidBindSync 口碑 > 评价有礼渠道用户身份SID绑定通知} */
+  /** {@link Alsc.Reviewbwc.SidBindSync 本地生活联盟平台-霸王餐消息推送API > 评价有礼渠道用户身份SID绑定通知} */
   type AlscReviewbwcSidBindSync = Message & { content?: MessageContent & { topic?: 'alsc_reviewbwc_SidBindSync', content?: string | Alsc.Reviewbwc.SidBindSync } };
   /** {@link Alsc.Risk.PunishSend 口碑 > 本地生活处罚中心处罚下发} */
   type AlscRiskPunishSend = Message & { content?: MessageContent & { topic?: 'alsc_risk_PunishSend', content?: string | Alsc.Risk.PunishSend } };
@@ -1091,9 +1091,9 @@ declare namespace IncomingMessage {
   type FliggyVisaStatusChange = Message & { content?: MessageContent & { topic?: 'fliggy_visa_StatusChange', content?: string | Fliggy.Visa.StatusChange } };
   /** {@link Fliggy.Xhotel.ComboCreateResult 飞猪 > 套餐创建消息回传} */
   type FliggyXhotelComboCreateResult = Message & { content?: MessageContent & { topic?: 'fliggy_xhotel_ComboCreateResult', content?: string | Fliggy.Xhotel.ComboCreateResult } };
-  /** {@link Flyggy.Flight.DomesticDistributionQuotationFull 飞猪 > 飞猪机票国内分销全量报价} */
+  /** {@link Flyggy.Flight.DomesticDistributionQuotationFull 飞猪机票 > 飞猪机票国内分销全量报价} */
   type FlyggyFlightDomesticDistributionQuotationFull = Message & { content?: MessageContent & { topic?: 'flyggy_flight_DomesticDistributionQuotationFull', content?: string | Flyggy.Flight.DomesticDistributionQuotationFull } };
-  /** {@link Flyggy.Flight.DomesticDistributionQuotationIncrement 飞猪 > 飞猪机票国内分销增量报价} */
+  /** {@link Flyggy.Flight.DomesticDistributionQuotationIncrement 飞猪机票 > 飞猪机票国内分销增量报价} */
   type FlyggyFlightDomesticDistributionQuotationIncrement = Message & { content?: MessageContent & { topic?: 'flyggy_flight_DomesticDistributionQuotationIncrement', content?: string | Flyggy.Flight.DomesticDistributionQuotationIncrement } };
   /** {@link Fuwu.Confirm.Fail 服务市场 > 收入确认失败} */
   type FuwuConfirmFail = Message & { content?: MessageContent & { topic?: 'fuwu_confirm_Fail', content?: string | Fuwu.Confirm.Fail } };
@@ -1139,7 +1139,7 @@ declare namespace IncomingMessage {
   type IcbuCrmXMOrderChange = Message & { content?: MessageContent & { topic?: 'icbu_crm_XMOrderChange', content?: string | Icbu.Crm.XMOrderChange } };
   /** {@link Icbu.Member.XmUnBind ICBU > icbu国际站账号解绑小满账号} */
   type IcbuMemberXmUnBind = Message & { content?: MessageContent & { topic?: 'icbu_member_XmUnBind', content?: string | Icbu.Member.XmUnBind } };
-  /** {@link Icbu.Risk.ZeroersMessage ICBU > 天鹿风控事件异步消息结果} */
+  /** {@link Icbu.Risk.ZeroersMessage ICBU-小满 > 天鹿风控事件异步消息结果} */
   type IcbuRiskZeroersMessage = Message & { content?: MessageContent & { topic?: 'icbu_risk_ZeroersMessage', content?: string | Icbu.Risk.ZeroersMessage } };
   /** {@link Icbu.Trade.OrderNotify ICBU-交易 > 国际站订单变更消息} */
   type IcbuTradeOrderNotify = Message & { content?: MessageContent & { topic?: 'icbu_trade_OrderNotify', content?: string | Icbu.Trade.OrderNotify } };
@@ -1159,11 +1159,11 @@ declare namespace IncomingMessage {
   type IdleConsignmentOrderSyn = Message & { content?: MessageContent & { topic?: 'idle_consignment_OrderSyn', content?: string | Idle.Consignment.OrderSyn } };
   /** {@link Idle.Consignmentii.OrderSyn 闲鱼回收商消息 > 闲鱼寄卖V2订单履约状态同步} */
   type IdleConsignmentiiOrderSyn = Message & { content?: MessageContent & { topic?: 'idle_consignmentii_OrderSyn', content?: string | Idle.Consignmentii.OrderSyn } };
-  /** {@link Idle.Cro.PunishMsg 闲鱼 > 闲鱼安全处罚消息} */
+  /** {@link Idle.Cro.PunishMsg 闲鱼电商Saas > 闲鱼安全处罚消息} */
   type IdleCroPunishMsg = Message & { content?: MessageContent & { topic?: 'idle_cro_PunishMsg', content?: string | Idle.Cro.PunishMsg } };
-  /** {@link Idle.Cycleshop.GoodsNotice 闲鱼 > 闲鱼循环商店-货品变更通知} */
+  /** {@link Idle.Cycleshop.GoodsNotice 闲鱼循环商店-消息前台 > 闲鱼循环商店-货品变更通知} */
   type IdleCycleshopGoodsNotice = Message & { content?: MessageContent & { topic?: 'idle_cycleshop_GoodsNotice', content?: string | Idle.Cycleshop.GoodsNotice } };
-  /** {@link Idle.Cycleshop.SaleOrderNotice 闲鱼 > 闲鱼循环商店-销售单变更通知} */
+  /** {@link Idle.Cycleshop.SaleOrderNotice 闲鱼循环商店-消息前台 > 闲鱼循环商店-销售单变更通知} */
   type IdleCycleshopSaleOrderNotice = Message & { content?: MessageContent & { topic?: 'idle_cycleshop_SaleOrderNotice', content?: string | Idle.Cycleshop.SaleOrderNotice } };
   /** {@link Idle.Distribution.ItemChange 闲鱼回收商消息 > 分销闲管家消息通道} */
   type IdleDistributionItemChange = Message & { content?: MessageContent & { topic?: 'idle_distribution_ItemChange', content?: string | Idle.Distribution.ItemChange } };
@@ -1175,7 +1175,7 @@ declare namespace IncomingMessage {
   type IdleFishmarketTenderAutoAuctionMsg = Message & { content?: MessageContent & { topic?: 'idle_fishmarket_TenderAutoAuctionMsg', content?: string | Idle.Fishmarket.TenderAutoAuctionMsg } };
   /** {@link Idle.Fishmarketfixed.OrderSyn 闲鱼 > 鱼市一口价买家单订单交易消息变更} */
   type IdleFishmarketfixedOrderSyn = Message & { content?: MessageContent & { topic?: 'idle_fishmarketfixed_OrderSyn', content?: string | Idle.Fishmarketfixed.OrderSyn } };
-  /** {@link Idle.Newoutlets.UserTagNotice 闲鱼 > 闲鱼用户身份变更消息} */
+  /** {@link Idle.Newoutlets.UserTagNotice 闲鱼电商Saas > 闲鱼用户身份变更消息} */
   type IdleNewoutletsUserTagNotice = Message & { content?: MessageContent & { topic?: 'idle_newoutlets_UserTagNotice', content?: string | Idle.Newoutlets.UserTagNotice } };
   /** {@link Idle.Recycle.OrderStateSyn 闲鱼回收商消息 > 闲鱼回收业务订单消息} */
   type IdleRecycleOrderStateSyn = Message & { content?: MessageContent & { topic?: 'idle_recycle_OrderStateSyn', content?: string | Idle.Recycle.OrderStateSyn } };
@@ -1185,17 +1185,17 @@ declare namespace IncomingMessage {
   type IdleRecycleRefundStatusModify = Message & { content?: MessageContent & { topic?: 'idle_recycle_RefundStatusModify', content?: string | Idle.Recycle.RefundStatusModify } };
   /** {@link Idle.Recycle.StoreSyn 闲鱼回收商消息 > 黄金回收门店信息变更通知} */
   type IdleRecycleStoreSyn = Message & { content?: MessageContent & { topic?: 'idle_recycle_StoreSyn', content?: string | Idle.Recycle.StoreSyn } };
-  /** {@link Idle.Seller.ImprovePackOrder 闲鱼 > 闲鱼鱼小铺运营提效包订购消息} */
+  /** {@link Idle.Seller.ImprovePackOrder 闲鱼电商Saas > 闲鱼鱼小铺运营提效包订购消息} */
   type IdleSellerImprovePackOrder = Message & { content?: MessageContent & { topic?: 'idle_seller_ImprovePackOrder', content?: string | Idle.Seller.ImprovePackOrder } };
-  /** {@link Idle.Topisv.CompensateNotice 闲鱼已验货 > 闲鱼开放平台-服务赔付单变更消息通知} */
+  /** {@link Idle.Topisv.CompensateNotice 闲鱼电商Saas > 闲鱼开放平台-服务赔付单变更消息通知} */
   type IdleTopisvCompensateNotice = Message & { content?: MessageContent & { topic?: 'idle_topisv_CompensateNotice', content?: string | Idle.Topisv.CompensateNotice } };
-  /** {@link Idle.Topisv.GlobalProductNotice 闲鱼已验货 > 闲鱼开放平台-国际货品变更消息通知} */
+  /** {@link Idle.Topisv.GlobalProductNotice 闲鱼电商Saas > 闲鱼开放平台-国际货品变更消息通知} */
   type IdleTopisvGlobalProductNotice = Message & { content?: MessageContent & { topic?: 'idle_topisv_GlobalProductNotice', content?: string | Idle.Topisv.GlobalProductNotice } };
-  /** {@link Idle.Topisv.ItemNotice 闲鱼已验货 > 闲鱼开放平台-商品变更消息通知} */
+  /** {@link Idle.Topisv.ItemNotice 闲鱼电商Saas > 闲鱼开放平台-商品变更消息通知} */
   type IdleTopisvItemNotice = Message & { content?: MessageContent & { topic?: 'idle_topisv_ItemNotice', content?: string | Idle.Topisv.ItemNotice } };
-  /** {@link Idle.Topisv.RefundNotice 闲鱼已验货 > 闲鱼开放平台-订单逆向变更消息通知} */
+  /** {@link Idle.Topisv.RefundNotice 闲鱼电商Saas > 闲鱼开放平台-订单逆向变更消息通知} */
   type IdleTopisvRefundNotice = Message & { content?: MessageContent & { topic?: 'idle_topisv_RefundNotice', content?: string | Idle.Topisv.RefundNotice } };
-  /** {@link Idle.Topisv.TradeNotice 闲鱼已验货 > 闲鱼开放平台-订单变更消息通知} */
+  /** {@link Idle.Topisv.TradeNotice 闲鱼电商Saas > 闲鱼开放平台-订单变更消息通知} */
   type IdleTopisvTradeNotice = Message & { content?: MessageContent & { topic?: 'idle_topisv_TradeNotice', content?: string | Idle.Topisv.TradeNotice } };
   /** {@link Idle.Trade.AddressModify 闲鱼回收商消息 > 买家修改地址通知卖家} */
   type IdleTradeAddressModify = Message & { content?: MessageContent & { topic?: 'idle_trade_AddressModify', content?: string | Idle.Trade.AddressModify } };
@@ -1215,11 +1215,11 @@ declare namespace IncomingMessage {
   type JymOrderBoosterStatusChange = Message & { content?: MessageContent & { topic?: 'jym_order_BoosterStatusChange', content?: string | Jym.Order.BoosterStatusChange } };
   /** {@link Lark.Trade.PosTradeDataTransmit 云智POS > 云智POS离线交易信息同步} */
   type LarkTradePosTradeDataTransmit = Message & { content?: MessageContent & { topic?: 'lark_trade_PosTradeDataTransmit', content?: string | Lark.Trade.PosTradeDataTransmit } };
-  /** {@link Lianfan.Huiwa.ModelStateUpdate 连凡 > 绘蛙模型状态变更消息} */
+  /** {@link Lianfan.Huiwa.ModelStateUpdate 绘蛙消息 > 绘蛙模型状态变更消息} */
   type LianfanHuiwaModelStateUpdate = Message & { content?: MessageContent & { topic?: 'lianfan_huiwa_ModelStateUpdate', content?: string | Lianfan.Huiwa.ModelStateUpdate } };
-  /** {@link Lianfan.Huiwa.RequirementStateUpdate 连凡 > 绘蛙需求状态变更消息} */
+  /** {@link Lianfan.Huiwa.RequirementStateUpdate 绘蛙消息 > 绘蛙需求状态变更消息} */
   type LianfanHuiwaRequirementStateUpdate = Message & { content?: MessageContent & { topic?: 'lianfan_huiwa_RequirementStateUpdate', content?: string | Lianfan.Huiwa.RequirementStateUpdate } };
-  /** {@link Lianfan.Huiwa.TaskStateUpdate 连凡 > 绘蛙生图任务状态变更消息} */
+  /** {@link Lianfan.Huiwa.TaskStateUpdate 绘蛙消息 > 绘蛙生图任务状态变更消息} */
   type LianfanHuiwaTaskStateUpdate = Message & { content?: MessageContent & { topic?: 'lianfan_huiwa_TaskStateUpdate', content?: string | Lianfan.Huiwa.TaskStateUpdate } };
   /** {@link Lst.Supplier.BroadcastFastRefundMessage 零售通_公共 > 零售通广播极速退款消息} */
   type LstSupplierBroadcastFastRefundMessage = Message & { content?: MessageContent & { topic?: 'lst_supplier_BroadcastFastRefundMessage', content?: string | Lst.Supplier.BroadcastFastRefundMessage } };
@@ -1335,15 +1335,15 @@ declare namespace IncomingMessage {
   type TaobaoCcoAlipayCase = Message & { content?: MessageContent & { topic?: 'taobao_cco_AlipayCase', content?: string | Taobao.Cco.AlipayCase } };
   /** {@link Taobao.Cco.GjCase 淘宝 > cco工单创建广交通知} */
   type TaobaoCcoGjCase = Message & { content?: MessageContent & { topic?: 'taobao_cco_GjCase', content?: string | Taobao.Cco.GjCase } };
-  /** {@link Taobao.Content.AuditAutocut 淘宝交易 > 智能混剪发布视频空间审核结果} */
+  /** {@link Taobao.Content.AuditAutocut 内容开放 > 智能混剪发布视频空间审核结果} */
   type TaobaoContentAuditAutocut = Message & { content?: MessageContent & { topic?: 'taobao_content_AuditAutocut', content?: string | Taobao.Content.AuditAutocut } };
-  /** {@link Taobao.Content.AuditMvx 淘宝交易 > 视频工具发布视频空间审核结果} */
+  /** {@link Taobao.Content.AuditMvx 内容开放 > 视频工具发布视频空间审核结果} */
   type TaobaoContentAuditMvx = Message & { content?: MessageContent & { topic?: 'taobao_content_AuditMvx', content?: string | Taobao.Content.AuditMvx } };
-  /** {@link Taobao.Content.OrderAuditChange 淘宝交易 > 短视频模板订单审核状态更新} */
+  /** {@link Taobao.Content.OrderAuditChange 内容开放 > 短视频模板订单审核状态更新} */
   type TaobaoContentOrderAuditChange = Message & { content?: MessageContent & { topic?: 'taobao_content_OrderAuditChange', content?: string | Taobao.Content.OrderAuditChange } };
-  /** {@link Taobao.Content.OrderPaid 淘宝交易 > 内容开放短视频模板支付消息} */
+  /** {@link Taobao.Content.OrderPaid 内容开放 > 内容开放短视频模板支付消息} */
   type TaobaoContentOrderPaid = Message & { content?: MessageContent & { topic?: 'taobao_content_OrderPaid', content?: string | Taobao.Content.OrderPaid } };
-  /** {@link Taobao.Content.TaoSubChanged 淘宝交易 > [淘宝订阅]变更通知} */
+  /** {@link Taobao.Content.TaoSubChanged 内容开放 > [淘宝订阅]变更通知} */
   type TaobaoContentTaoSubChanged = Message & { content?: MessageContent & { topic?: 'taobao_content_TaoSubChanged', content?: string | Taobao.Content.TaoSubChanged } };
   /** {@link Taobao.Daifa.BindChange 代发管理 > 关系绑定更改} */
   type TaobaoDaifaBindChange = Message & { content?: MessageContent & { topic?: 'taobao_daifa_BindChange', content?: string | Taobao.Daifa.BindChange } };
@@ -1519,21 +1519,21 @@ declare namespace IncomingMessage {
   type TaobaoHomeaiModelSkuRelation = Message & { content?: MessageContent & { topic?: 'taobao_homeai_ModelSkuRelation', content?: string | Taobao.Homeai.ModelSkuRelation } };
   /** {@link Taobao.Homeai.RenderRequest HOMEAI消息对接 > HS渲染消息} */
   type TaobaoHomeaiRenderRequest = Message & { content?: MessageContent & { topic?: 'taobao_homeai_RenderRequest', content?: string | Taobao.Homeai.RenderRequest } };
-  /** {@link Taobao.Hotel.ControlMsg 酒店签约中心消息 > 酒店管控中心消息通知} */
+  /** {@link Taobao.Hotel.ControlMsg 飞猪 > 酒店管控中心消息通知} */
   type TaobaoHotelControlMsg = Message & { content?: MessageContent & { topic?: 'taobao_hotel_ControlMsg', content?: string | Taobao.Hotel.ControlMsg } };
-  /** {@link Taobao.Hotel.CreditToPreHotelStatus 酒店签约中心消息 > 信用住转预付酒店签约状态消息} */
+  /** {@link Taobao.Hotel.CreditToPreHotelStatus 飞猪 > 信用住转预付酒店签约状态消息} */
   type TaobaoHotelCreditToPreHotelStatus = Message & { content?: MessageContent & { topic?: 'taobao_hotel_CreditToPreHotelStatus', content?: string | Taobao.Hotel.CreditToPreHotelStatus } };
-  /** {@link Taobao.Hotel.DistributionOrderChange 酒店签约中心消息 > 分销渠道订单变动通知} */
+  /** {@link Taobao.Hotel.DistributionOrderChange 飞猪 > 分销渠道订单变动通知} */
   type TaobaoHotelDistributionOrderChange = Message & { content?: MessageContent & { topic?: 'taobao_hotel_DistributionOrderChange', content?: string | Taobao.Hotel.DistributionOrderChange } };
-  /** {@link Taobao.Hotel.EbkCommonMessage 酒店签约中心消息 > 通用消息提醒} */
+  /** {@link Taobao.Hotel.EbkCommonMessage 飞猪 > 通用消息提醒} */
   type TaobaoHotelEbkCommonMessage = Message & { content?: MessageContent & { topic?: 'taobao_hotel_EbkCommonMessage', content?: string | Taobao.Hotel.EbkCommonMessage } };
-  /** {@link Taobao.Hotel.OrderChange 酒店签约中心消息 > 订单变动通知} */
+  /** {@link Taobao.Hotel.OrderChange 飞猪 > 订单变动通知} */
   type TaobaoHotelOrderChange = Message & { content?: MessageContent & { topic?: 'taobao_hotel_OrderChange', content?: string | Taobao.Hotel.OrderChange } };
-  /** {@link Taobao.Hotel.SearchMonitor 酒店签约中心消息 > 酒店搜索触发商品更新消息} */
+  /** {@link Taobao.Hotel.SearchMonitor 飞猪 > 酒店搜索触发商品更新消息} */
   type TaobaoHotelSearchMonitor = Message & { content?: MessageContent & { topic?: 'taobao_hotel_SearchMonitor', content?: string | Taobao.Hotel.SearchMonitor } };
-  /** {@link Taobao.Hotel.SearchTrigger 酒店签约中心消息 > 热搜酒店消息} */
+  /** {@link Taobao.Hotel.SearchTrigger 飞猪 > 热搜酒店消息} */
   type TaobaoHotelSearchTrigger = Message & { content?: MessageContent & { topic?: 'taobao_hotel_SearchTrigger', content?: string | Taobao.Hotel.SearchTrigger } };
-  /** {@link Taobao.Hotel.SignRollback 酒店签约中心消息 > 飞猪单体酒店签约重置} */
+  /** {@link Taobao.Hotel.SignRollback 飞猪 > 飞猪单体酒店签约重置} */
   type TaobaoHotelSignRollback = Message & { content?: MessageContent & { topic?: 'taobao_hotel_SignRollback', content?: string | Taobao.Hotel.SignRollback } };
   /** {@link Taobao.Idlefish.RentContractClose 淘宝 > 合约关闭通知} */
   type TaobaoIdlefishRentContractClose = Message & { content?: MessageContent & { topic?: 'taobao_idlefish_RentContractClose', content?: string | Taobao.Idlefish.RentContractClose } };
@@ -1585,17 +1585,17 @@ declare namespace IncomingMessage {
   type TaobaoItemItemUpshelf = Message & { content?: MessageContent & { topic?: 'taobao_item_ItemUpshelf', content?: string | Taobao.Item.ItemUpshelf } };
   /** {@link Taobao.Item.ItemZeroStock 淘宝商品 > 商品卖空消息} */
   type TaobaoItemItemZeroStock = Message & { content?: MessageContent & { topic?: 'taobao_item_ItemZeroStock', content?: string | Taobao.Item.ItemZeroStock } };
-  /** {@link Taobao.Itemmarket.ItemDistributorChange 淘宝 > 三方货源分销商货品消息} */
+  /** {@link Taobao.Itemmarket.ItemDistributorChange 货源服务消息 > 三方货源分销商货品消息} */
   type TaobaoItemmarketItemDistributorChange = Message & { content?: MessageContent & { topic?: 'taobao_itemmarket_ItemDistributorChange', content?: string | Taobao.Itemmarket.ItemDistributorChange } };
-  /** {@link Taobao.Itemmarket.ItemRelationChange 淘宝 > 铺货成功推送} */
+  /** {@link Taobao.Itemmarket.ItemRelationChange 货源服务消息 > 铺货成功推送} */
   type TaobaoItemmarketItemRelationChange = Message & { content?: MessageContent & { topic?: 'taobao_itemmarket_ItemRelationChange', content?: string | Taobao.Itemmarket.ItemRelationChange } };
-  /** {@link Taobao.Itemmarket.MaterialChange 淘宝 > 货品素材信息变更} */
+  /** {@link Taobao.Itemmarket.MaterialChange 货源服务消息 > 货品素材信息变更} */
   type TaobaoItemmarketMaterialChange = Message & { content?: MessageContent & { topic?: 'taobao_itemmarket_MaterialChange', content?: string | Taobao.Itemmarket.MaterialChange } };
-  /** {@link Taobao.Itemmarket.PurchaseDistributorChange 淘宝 > 三方货源分销商采购单消息} */
+  /** {@link Taobao.Itemmarket.PurchaseDistributorChange 货源服务消息 > 三方货源分销商采购单消息} */
   type TaobaoItemmarketPurchaseDistributorChange = Message & { content?: MessageContent & { topic?: 'taobao_itemmarket_PurchaseDistributorChange', content?: string | Taobao.Itemmarket.PurchaseDistributorChange } };
-  /** {@link Taobao.Itemmarket.PurchaseOrderChange 淘宝 > 三方货源采购单变更} */
+  /** {@link Taobao.Itemmarket.PurchaseOrderChange 货源服务消息 > 三方货源采购单变更} */
   type TaobaoItemmarketPurchaseOrderChange = Message & { content?: MessageContent & { topic?: 'taobao_itemmarket_PurchaseOrderChange', content?: string | Taobao.Itemmarket.PurchaseOrderChange } };
-  /** {@link Taobao.Itemmarket.VideoCreate 淘宝 > 货品视频创建} */
+  /** {@link Taobao.Itemmarket.VideoCreate 货源服务消息 > 货品视频创建} */
   type TaobaoItemmarketVideoCreate = Message & { content?: MessageContent & { topic?: 'taobao_itemmarket_VideoCreate', content?: string | Taobao.Itemmarket.VideoCreate } };
   /** {@link Taobao.Jaq.AuditResult 淘宝 > 聚安全实人认证审核结果} */
   type TaobaoJaqAuditResult = Message & { content?: MessageContent & { topic?: 'taobao_jaq_AuditResult', content?: string | Taobao.Jaq.AuditResult } };
@@ -1693,13 +1693,13 @@ declare namespace IncomingMessage {
   type TaobaoModifyskuResultNotify = Message & { content?: MessageContent & { topic?: 'taobao_modifysku_ResultNotify', content?: string | Taobao.Modifysku.ResultNotify } };
   /** {@link Taobao.Oc.TradeTagChanged 交易全链路 > oc订单标签变更} */
   type TaobaoOcTradeTagChanged = Message & { content?: MessageContent & { topic?: 'taobao_oc_TradeTagChanged', content?: string | Taobao.Oc.TradeTagChanged } };
-  /** {@link Taobao.Ofn.CreditPayStatusChange 淘宝交易 > 信用代扣状态变更同步} */
+  /** {@link Taobao.Ofn.CreditPayStatusChange 以旧换新-订单域 > 信用代扣状态变更同步} */
   type TaobaoOfnCreditPayStatusChange = Message & { content?: MessageContent & { topic?: 'taobao_ofn_CreditPayStatusChange', content?: string | Taobao.Ofn.CreditPayStatusChange } };
-  /** {@link Taobao.Ofn.NewOrderEventSync 淘宝交易 > 以旧换新新机单事件同步} */
+  /** {@link Taobao.Ofn.NewOrderEventSync 以旧换新-订单域 > 以旧换新新机单事件同步} */
   type TaobaoOfnNewOrderEventSync = Message & { content?: MessageContent & { topic?: 'taobao_ofn_NewOrderEventSync', content?: string | Taobao.Ofn.NewOrderEventSync } };
-  /** {@link Taobao.Ofn.OrderStatusSync 淘宝交易 > 以旧换新回收单状态同步} */
+  /** {@link Taobao.Ofn.OrderStatusSync 以旧换新-订单域 > 以旧换新回收单状态同步} */
   type TaobaoOfnOrderStatusSync = Message & { content?: MessageContent & { topic?: 'taobao_ofn_OrderStatusSync', content?: string | Taobao.Ofn.OrderStatusSync } };
-  /** {@link Taobao.Ofn.RateSync 淘宝交易 > 以旧换新回收单评价消息} */
+  /** {@link Taobao.Ofn.RateSync 以旧换新-订单域 > 以旧换新回收单评价消息} */
   type TaobaoOfnRateSync = Message & { content?: MessageContent & { topic?: 'taobao_ofn_RateSync', content?: string | Taobao.Ofn.RateSync } };
   /** {@link Taobao.Openaccount.DataSync 导购平台 > openaccount数据同步} */
   type TaobaoOpenaccountDataSync = Message & { content?: MessageContent & { topic?: 'taobao_openaccount_DataSync', content?: string | Taobao.Openaccount.DataSync } };
@@ -1777,17 +1777,17 @@ declare namespace IncomingMessage {
   type TaobaoPaimaiOrderCreate = Message & { content?: MessageContent & { topic?: 'taobao_paimai_OrderCreate', content?: string | Taobao.Paimai.OrderCreate } };
   /** {@link Taobao.Paimai.OrderPaid 淘宝 > 二手车xpos订单支付完成消息} */
   type TaobaoPaimaiOrderPaid = Message & { content?: MessageContent & { topic?: 'taobao_paimai_OrderPaid', content?: string | Taobao.Paimai.OrderPaid } };
-  /** {@link Taobao.Pc.BillsGenerate 淘宝企业购 > PC企业购出账消息通知} */
+  /** {@link Taobao.Pc.BillsGenerate 采购宝API > PC企业购出账消息通知} */
   type TaobaoPcBillsGenerate = Message & { content?: MessageContent & { topic?: 'taobao_pc_BillsGenerate', content?: string | Taobao.Pc.BillsGenerate } };
-  /** {@link Taobao.Pc.EgoDisputeOrder 淘宝企业购 > PC企业购逆向订单消息} */
+  /** {@link Taobao.Pc.EgoDisputeOrder 采购宝API > PC企业购逆向订单消息} */
   type TaobaoPcEgoDisputeOrder = Message & { content?: MessageContent & { topic?: 'taobao_pc_EgoDisputeOrder', content?: string | Taobao.Pc.EgoDisputeOrder } };
-  /** {@link Taobao.Pc.EgoTradeOrder 淘宝企业购 > PC企业购交易订单消息} */
+  /** {@link Taobao.Pc.EgoTradeOrder 采购宝API > PC企业购交易订单消息} */
   type TaobaoPcEgoTradeOrder = Message & { content?: MessageContent & { topic?: 'taobao_pc_EgoTradeOrder', content?: string | Taobao.Pc.EgoTradeOrder } };
-  /** {@link Taobao.Pc.EgoTradePackage 淘宝企业购 > 订单包裹消息} */
+  /** {@link Taobao.Pc.EgoTradePackage 采购宝API > 订单包裹消息} */
   type TaobaoPcEgoTradePackage = Message & { content?: MessageContent & { topic?: 'taobao_pc_EgoTradePackage', content?: string | Taobao.Pc.EgoTradePackage } };
-  /** {@link Taobao.Pc.ItemChange 淘宝企业购 > 商品变更消息} */
+  /** {@link Taobao.Pc.ItemChange 采购宝API > 商品变更消息} */
   type TaobaoPcItemChange = Message & { content?: MessageContent & { topic?: 'taobao_pc_ItemChange', content?: string | Taobao.Pc.ItemChange } };
-  /** {@link Taobao.Pc.SaleInvoiceResult 淘宝企业购 > PC企业购发票通知消息} */
+  /** {@link Taobao.Pc.SaleInvoiceResult 采购宝API > PC企业购发票通知消息} */
   type TaobaoPcSaleInvoiceResult = Message & { content?: MessageContent & { topic?: 'taobao_pc_SaleInvoiceResult', content?: string | Taobao.Pc.SaleInvoiceResult } };
   /** {@link Taobao.Profit.ResultNotify 淘宝 > 权益领取结果通知} */
   type TaobaoProfitResultNotify = Message & { content?: MessageContent & { topic?: 'taobao_profit_ResultNotify', content?: string | Taobao.Profit.ResultNotify } };
@@ -1861,23 +1861,23 @@ declare namespace IncomingMessage {
   type TaobaoSecWlcAlipaySync = Message & { content?: MessageContent & { topic?: 'taobao_sec_WlcAlipaySync', content?: string | Taobao.Sec.WlcAlipaySync } };
   /** {@link Taobao.Seed.GeneralDataCommutation 淘宝 > 淘宝种草数据交换} */
   type TaobaoSeedGeneralDataCommutation = Message & { content?: MessageContent & { topic?: 'taobao_seed_GeneralDataCommutation', content?: string | Taobao.Seed.GeneralDataCommutation } };
-  /** {@link Taobao.Shangou.RefundClosed 淘宝闪购 > 闪购退款关闭} */
+  /** {@link Taobao.Shangou.RefundClosed 闪购交易 > 闪购退款关闭} */
   type TaobaoShangouRefundClosed = Message & { content?: MessageContent & { topic?: 'taobao_shangou_RefundClosed', content?: string | Taobao.Shangou.RefundClosed } };
-  /** {@link Taobao.Shangou.RefundCreated 淘宝闪购 > 闪购退款创建} */
+  /** {@link Taobao.Shangou.RefundCreated 闪购交易 > 闪购退款创建} */
   type TaobaoShangouRefundCreated = Message & { content?: MessageContent & { topic?: 'taobao_shangou_RefundCreated', content?: string | Taobao.Shangou.RefundCreated } };
-  /** {@link Taobao.Shangou.RefundSuccess 淘宝闪购 > 闪购退款成功} */
+  /** {@link Taobao.Shangou.RefundSuccess 闪购交易 > 闪购退款成功} */
   type TaobaoShangouRefundSuccess = Message & { content?: MessageContent & { topic?: 'taobao_shangou_RefundSuccess', content?: string | Taobao.Shangou.RefundSuccess } };
-  /** {@link Taobao.Shangou.TradeBuyerPay 淘宝闪购 > 闪购订单付款成功} */
+  /** {@link Taobao.Shangou.TradeBuyerPay 闪购交易 > 闪购订单付款成功} */
   type TaobaoShangouTradeBuyerPay = Message & { content?: MessageContent & { topic?: 'taobao_shangou_TradeBuyerPay', content?: string | Taobao.Shangou.TradeBuyerPay } };
-  /** {@link Taobao.Shangou.TradeClose 淘宝闪购 > 闪购订单关闭} */
+  /** {@link Taobao.Shangou.TradeClose 闪购交易 > 闪购订单关闭} */
   type TaobaoShangouTradeClose = Message & { content?: MessageContent & { topic?: 'taobao_shangou_TradeClose', content?: string | Taobao.Shangou.TradeClose } };
-  /** {@link Taobao.Shangou.TradeCreate 淘宝闪购 > 闪购订单创建} */
+  /** {@link Taobao.Shangou.TradeCreate 闪购交易 > 闪购订单创建} */
   type TaobaoShangouTradeCreate = Message & { content?: MessageContent & { topic?: 'taobao_shangou_TradeCreate', content?: string | Taobao.Shangou.TradeCreate } };
-  /** {@link Taobao.Shangou.TradeMemoModified 淘宝闪购 > 闪购订单交易备注变更} */
+  /** {@link Taobao.Shangou.TradeMemoModified 闪购交易 > 闪购订单交易备注变更} */
   type TaobaoShangouTradeMemoModified = Message & { content?: MessageContent & { topic?: 'taobao_shangou_TradeMemoModified', content?: string | Taobao.Shangou.TradeMemoModified } };
-  /** {@link Taobao.Shangou.TradeSellerShip 淘宝闪购 > 闪购订单发货} */
+  /** {@link Taobao.Shangou.TradeSellerShip 闪购交易 > 闪购订单发货} */
   type TaobaoShangouTradeSellerShip = Message & { content?: MessageContent & { topic?: 'taobao_shangou_TradeSellerShip', content?: string | Taobao.Shangou.TradeSellerShip } };
-  /** {@link Taobao.Shangou.TradeSuccess 淘宝闪购 > 闪购订单交易成功} */
+  /** {@link Taobao.Shangou.TradeSuccess 闪购交易 > 闪购订单交易成功} */
   type TaobaoShangouTradeSuccess = Message & { content?: MessageContent & { topic?: 'taobao_shangou_TradeSuccess', content?: string | Taobao.Shangou.TradeSuccess } };
   /** {@link Taobao.Shop.Vary 淘宝 > 淘宝店铺变更} */
   type TaobaoShopVary = Message & { content?: MessageContent & { topic?: 'taobao_shop_Vary', content?: string | Taobao.Shop.Vary } };
@@ -2459,7 +2459,7 @@ declare namespace IncomingMessage {
   type WdkOpenDataRelation = Message & { content?: MessageContent & { topic?: 'wdk_open_DataRelation', content?: string | Wdk.Open.DataRelation } };
   /** {@link Wdk.Workforce.RequirementPublish 五道口 > 盒马三方用工需求发布} */
   type WdkWorkforceRequirementPublish = Message & { content?: MessageContent & { topic?: 'wdk_workforce_RequirementPublish', content?: string | Wdk.Workforce.RequirementPublish } };
-  /** {@link Xhotel.Distribution.StatusChange 飞猪 > 飞猪酒店订单状态变更消息} */
+  /** {@link Xhotel.Distribution.StatusChange 酒店交易消息API > 飞猪酒店订单状态变更消息} */
   type XhotelDistributionStatusChange = Message & { content?: MessageContent & { topic?: 'xhotel_distribution_StatusChange', content?: string | Xhotel.Distribution.StatusChange } };
   /** {@link Xianyu.Aftersale.OrderSyn 闲鱼 > 闲鱼售后订单状态变更消息} */
   type XianyuAftersaleOrderSyn = Message & { content?: MessageContent & { topic?: 'xianyu_aftersale_OrderSyn', content?: string | Xianyu.Aftersale.OrderSyn } };
@@ -2467,9 +2467,9 @@ declare namespace IncomingMessage {
   type XianyuAppraiseOrderSyn = Message & { content?: MessageContent & { topic?: 'xianyu_appraise_OrderSyn', content?: string | Xianyu.Appraise.OrderSyn } };
   /** {@link Xianyu.Car.OrderStatusSync 闲鱼回收商消息 > 闲鱼二手车寄卖订单状态同步} */
   type XianyuCarOrderStatusSync = Message & { content?: MessageContent & { topic?: 'xianyu_car_OrderStatusSync', content?: string | Xianyu.Car.OrderStatusSync } };
-  /** {@link Xianyu.Cco.Complain 闲鱼 > 闲鱼投诉消息} */
+  /** {@link Xianyu.Cco.Complain 闲鱼电商Saas > 闲鱼投诉消息} */
   type XianyuCcoComplain = Message & { content?: MessageContent & { topic?: 'xianyu_cco_Complain', content?: string | Xianyu.Cco.Complain } };
-  /** {@link Xianyu.Coin.CoinDeductionChange 闲鱼 > 闲鱼币交易抵扣变更消息} */
+  /** {@link Xianyu.Coin.CoinDeductionChange 闲鱼电商Saas > 闲鱼币交易抵扣变更消息} */
   type XianyuCoinCoinDeductionChange = Message & { content?: MessageContent & { topic?: 'xianyu_coin_CoinDeductionChange', content?: string | Xianyu.Coin.CoinDeductionChange } };
   /** {@link Xianyu.Ctox.CommissionStateSyn 闲鱼 > 闲鱼C2X抽佣退佣消息同步} */
   type XianyuCtoxCommissionStateSyn = Message & { content?: MessageContent & { topic?: 'xianyu_ctox_CommissionStateSyn', content?: string | Xianyu.Ctox.CommissionStateSyn } };
@@ -2489,7 +2489,7 @@ declare namespace IncomingMessage {
   type XianyuMarketrecycleOrderStateSyn = Message & { content?: MessageContent & { topic?: 'xianyu_marketrecycle_OrderStateSyn', content?: string | Xianyu.Marketrecycle.OrderStateSyn } };
   /** {@link Xianyu.Marketrecycle.PlanStateSyn 闲鱼 > 闲鱼保卖计划变更消息} */
   type XianyuMarketrecyclePlanStateSyn = Message & { content?: MessageContent & { topic?: 'xianyu_marketrecycle_PlanStateSyn', content?: string | Xianyu.Marketrecycle.PlanStateSyn } };
-  /** {@link Xianyu.Outlet.CycleBuyVendueCreate 闲鱼 > 闲鱼奥莱周期拍拍品创建} */
+  /** {@link Xianyu.Outlet.CycleBuyVendueCreate 闲鱼电商Saas > 闲鱼奥莱周期拍拍品创建} */
   type XianyuOutletCycleBuyVendueCreate = Message & { content?: MessageContent & { topic?: 'xianyu_outlet_CycleBuyVendueCreate', content?: string | Xianyu.Outlet.CycleBuyVendueCreate } };
   /** {@link Xianyu.Recycle.OrderStatusSync 闲鱼 > 订单状态同步给回收商} */
   type XianyuRecycleOrderStatusSync = Message & { content?: MessageContent & { topic?: 'xianyu_recycle_OrderStatusSync', content?: string | Xianyu.Recycle.OrderStatusSync } };
@@ -2503,7 +2503,7 @@ declare namespace IncomingMessage {
   type XianyuTemplateStatusChange = Message & { content?: MessageContent & { topic?: 'xianyu_template_StatusChange', content?: string | Xianyu.Template.StatusChange } };
   /** {@link Xianyu.Tender.OrderSyn 闲鱼 > 省心卖-暗拍项目订单消息} */
   type XianyuTenderOrderSyn = Message & { content?: MessageContent & { topic?: 'xianyu_tender_OrderSyn', content?: string | Xianyu.Tender.OrderSyn } };
-  /** {@link Xianyu.Yellowbox.GpuTemplatePunish 闲鱼 > GPU模版处罚消息通知} */
+  /** {@link Xianyu.Yellowbox.GpuTemplatePunish 闲鱼电商Saas > GPU模版处罚消息通知} */
   type XianyuYellowboxGpuTemplatePunish = Message & { content?: MessageContent & { topic?: 'xianyu_yellowbox_GpuTemplatePunish', content?: string | Xianyu.Yellowbox.GpuTemplatePunish } };
   /** {@link Xianyu.Yushi.TsOffShelf 闲鱼 > 闲鱼商品下架消息} */
   type XianyuYushiTsOffShelf = Message & { content?: MessageContent & { topic?: 'xianyu_yushi_TsOffShelf', content?: string | Xianyu.Yushi.TsOffShelf } };
@@ -2690,11 +2690,11 @@ declare namespace IncomingMessage {
    */
   type AlibabaCrowdsourcing = AlibabaCrowdsourcingMaterial;
   /**
-   * - {@link AlibabaCsrDonatePointSync 三小时公益 > 公益三小时积分捐行为同步}
-   * - {@link AlibabaCsrOpenWorkbenchTargetedInstanceExecProgress 三小时公益 > 精准捐需求执行记录同步}
-   * - {@link AlibabaCsrOpenWorkbenchTargetedInstanceFeedbackStateChange 三小时公益 > 精准捐需求反馈记录状态变更}
-   * - {@link AlibabaCsrOpenWorkbenchTargetedInstanceStateChange 三小时公益 > 精准捐需求状态变更}
-   * - {@link AlibabaCsrZhiyuanhuiSyncEnergy 三小时公益 > 3小时积分捐同步活力值到志愿汇}
+   * - {@link AlibabaCsrDonatePointSync 公益三小时公共 > 公益三小时积分捐行为同步}
+   * - {@link AlibabaCsrOpenWorkbenchTargetedInstanceExecProgress 公益三小时公共 > 精准捐需求执行记录同步}
+   * - {@link AlibabaCsrOpenWorkbenchTargetedInstanceFeedbackStateChange 公益三小时公共 > 精准捐需求反馈记录状态变更}
+   * - {@link AlibabaCsrOpenWorkbenchTargetedInstanceStateChange 公益三小时公共 > 精准捐需求状态变更}
+   * - {@link AlibabaCsrZhiyuanhuiSyncEnergy 公益三小时公共 > 3小时积分捐同步活力值到志愿汇}
    */
   type AlibabaCsr = AlibabaCsrDonatePointSync
     | AlibabaCsrOpenWorkbenchTargetedInstanceExecProgress
@@ -3584,14 +3584,14 @@ declare namespace IncomingMessage {
    */
   type AliyunIot = AliyunIotOrderSync;
   /**
-   * - {@link AlscCouponCouponSync 口碑 > 本地联盟卡券同步消息}
-   * - {@link AlscCouponOrderVoucherStatus 口碑 > 饿了么卡券openapi订单消息}
+   * - {@link AlscCouponCouponSync 本地生活联盟平台-卡券消息API > 本地联盟卡券同步消息}
+   * - {@link AlscCouponOrderVoucherStatus 本地生活联盟平台-卡券消息API > 饿了么卡券openapi订单消息}
    */
   type AlscCoupon = AlscCouponCouponSync
     | AlscCouponOrderVoucherStatus;
   /**
-   * - {@link AlscCouponpackagePurchaseSync 口碑 > 本地联盟卡券包采购同步消息}
-   * - {@link AlscCouponpackagePurchaseTicketSync 口碑 > 本地联盟卡券包采购凭证同步}
+   * - {@link AlscCouponpackagePurchaseSync 本地生活联盟平台-卡券包采购单消息API > 本地联盟卡券包采购同步消息}
+   * - {@link AlscCouponpackagePurchaseTicketSync 本地生活联盟平台-卡券包采购单消息API > 本地联盟卡券包采购凭证同步}
    */
   type AlscCouponpackage = AlscCouponpackagePurchaseSync
     | AlscCouponpackagePurchaseTicketSync;
@@ -3616,8 +3616,8 @@ declare namespace IncomingMessage {
   type AlscKbbbt = AlscKbbbtOrderVoucherStatus
     | AlscKbbbtProductChange;
   /**
-   * - {@link AlscReviewbwcActivityEnrollSync 口碑 > 本地联盟饿了么评价有礼门店活动消息}
-   * - {@link AlscReviewbwcSidBindSync 口碑 > 评价有礼渠道用户身份SID绑定通知}
+   * - {@link AlscReviewbwcActivityEnrollSync 本地生活联盟平台-霸王餐消息推送API > 本地联盟饿了么评价有礼门店活动消息}
+   * - {@link AlscReviewbwcSidBindSync 本地生活联盟平台-霸王餐消息推送API > 评价有礼渠道用户身份SID绑定通知}
    */
   type AlscReviewbwc = AlscReviewbwcActivityEnrollSync
     | AlscReviewbwcSidBindSync;
@@ -3870,8 +3870,8 @@ declare namespace IncomingMessage {
    */
   type FliggyXhotel = FliggyXhotelComboCreateResult;
   /**
-   * - {@link FlyggyFlightDomesticDistributionQuotationFull 飞猪 > 飞猪机票国内分销全量报价}
-   * - {@link FlyggyFlightDomesticDistributionQuotationIncrement 飞猪 > 飞猪机票国内分销增量报价}
+   * - {@link FlyggyFlightDomesticDistributionQuotationFull 飞猪机票 > 飞猪机票国内分销全量报价}
+   * - {@link FlyggyFlightDomesticDistributionQuotationIncrement 飞猪机票 > 飞猪机票国内分销增量报价}
    */
   type FlyggyFlight = FlyggyFlightDomesticDistributionQuotationFull
     | FlyggyFlightDomesticDistributionQuotationIncrement;
@@ -3942,7 +3942,7 @@ declare namespace IncomingMessage {
    */
   type IcbuMember = IcbuMemberXmUnBind;
   /**
-   * - {@link IcbuRiskZeroersMessage ICBU > 天鹿风控事件异步消息结果}
+   * - {@link IcbuRiskZeroersMessage ICBU-小满 > 天鹿风控事件异步消息结果}
    */
   type IcbuRisk = IcbuRiskZeroersMessage;
   /**
@@ -3976,12 +3976,12 @@ declare namespace IncomingMessage {
    */
   type IdleConsignmentii = IdleConsignmentiiOrderSyn;
   /**
-   * - {@link IdleCroPunishMsg 闲鱼 > 闲鱼安全处罚消息}
+   * - {@link IdleCroPunishMsg 闲鱼电商Saas > 闲鱼安全处罚消息}
    */
   type IdleCro = IdleCroPunishMsg;
   /**
-   * - {@link IdleCycleshopGoodsNotice 闲鱼 > 闲鱼循环商店-货品变更通知}
-   * - {@link IdleCycleshopSaleOrderNotice 闲鱼 > 闲鱼循环商店-销售单变更通知}
+   * - {@link IdleCycleshopGoodsNotice 闲鱼循环商店-消息前台 > 闲鱼循环商店-货品变更通知}
+   * - {@link IdleCycleshopSaleOrderNotice 闲鱼循环商店-消息前台 > 闲鱼循环商店-销售单变更通知}
    */
   type IdleCycleshop = IdleCycleshopGoodsNotice
     | IdleCycleshopSaleOrderNotice;
@@ -4002,7 +4002,7 @@ declare namespace IncomingMessage {
    */
   type IdleFishmarketfixed = IdleFishmarketfixedOrderSyn;
   /**
-   * - {@link IdleNewoutletsUserTagNotice 闲鱼 > 闲鱼用户身份变更消息}
+   * - {@link IdleNewoutletsUserTagNotice 闲鱼电商Saas > 闲鱼用户身份变更消息}
    */
   type IdleNewoutlets = IdleNewoutletsUserTagNotice;
   /**
@@ -4016,15 +4016,15 @@ declare namespace IncomingMessage {
     | IdleRecycleRefundStatusModify
     | IdleRecycleStoreSyn;
   /**
-   * - {@link IdleSellerImprovePackOrder 闲鱼 > 闲鱼鱼小铺运营提效包订购消息}
+   * - {@link IdleSellerImprovePackOrder 闲鱼电商Saas > 闲鱼鱼小铺运营提效包订购消息}
    */
   type IdleSeller = IdleSellerImprovePackOrder;
   /**
-   * - {@link IdleTopisvCompensateNotice 闲鱼已验货 > 闲鱼开放平台-服务赔付单变更消息通知}
-   * - {@link IdleTopisvGlobalProductNotice 闲鱼已验货 > 闲鱼开放平台-国际货品变更消息通知}
-   * - {@link IdleTopisvItemNotice 闲鱼已验货 > 闲鱼开放平台-商品变更消息通知}
-   * - {@link IdleTopisvRefundNotice 闲鱼已验货 > 闲鱼开放平台-订单逆向变更消息通知}
-   * - {@link IdleTopisvTradeNotice 闲鱼已验货 > 闲鱼开放平台-订单变更消息通知}
+   * - {@link IdleTopisvCompensateNotice 闲鱼电商Saas > 闲鱼开放平台-服务赔付单变更消息通知}
+   * - {@link IdleTopisvGlobalProductNotice 闲鱼电商Saas > 闲鱼开放平台-国际货品变更消息通知}
+   * - {@link IdleTopisvItemNotice 闲鱼电商Saas > 闲鱼开放平台-商品变更消息通知}
+   * - {@link IdleTopisvRefundNotice 闲鱼电商Saas > 闲鱼开放平台-订单逆向变更消息通知}
+   * - {@link IdleTopisvTradeNotice 闲鱼电商Saas > 闲鱼开放平台-订单变更消息通知}
    */
   type IdleTopisv = IdleTopisvCompensateNotice
     | IdleTopisvGlobalProductNotice
@@ -4066,9 +4066,9 @@ declare namespace IncomingMessage {
    */
   type LarkTrade = LarkTradePosTradeDataTransmit;
   /**
-   * - {@link LianfanHuiwaModelStateUpdate 连凡 > 绘蛙模型状态变更消息}
-   * - {@link LianfanHuiwaRequirementStateUpdate 连凡 > 绘蛙需求状态变更消息}
-   * - {@link LianfanHuiwaTaskStateUpdate 连凡 > 绘蛙生图任务状态变更消息}
+   * - {@link LianfanHuiwaModelStateUpdate 绘蛙消息 > 绘蛙模型状态变更消息}
+   * - {@link LianfanHuiwaRequirementStateUpdate 绘蛙消息 > 绘蛙需求状态变更消息}
+   * - {@link LianfanHuiwaTaskStateUpdate 绘蛙消息 > 绘蛙生图任务状态变更消息}
    */
   type LianfanHuiwa = LianfanHuiwaModelStateUpdate
     | LianfanHuiwaRequirementStateUpdate
@@ -4228,11 +4228,11 @@ declare namespace IncomingMessage {
   type TaobaoCco = TaobaoCcoAlipayCase
     | TaobaoCcoGjCase;
   /**
-   * - {@link TaobaoContentAuditAutocut 淘宝交易 > 智能混剪发布视频空间审核结果}
-   * - {@link TaobaoContentAuditMvx 淘宝交易 > 视频工具发布视频空间审核结果}
-   * - {@link TaobaoContentOrderAuditChange 淘宝交易 > 短视频模板订单审核状态更新}
-   * - {@link TaobaoContentOrderPaid 淘宝交易 > 内容开放短视频模板支付消息}
-   * - {@link TaobaoContentTaoSubChanged 淘宝交易 > [淘宝订阅]变更通知}
+   * - {@link TaobaoContentAuditAutocut 内容开放 > 智能混剪发布视频空间审核结果}
+   * - {@link TaobaoContentAuditMvx 内容开放 > 视频工具发布视频空间审核结果}
+   * - {@link TaobaoContentOrderAuditChange 内容开放 > 短视频模板订单审核状态更新}
+   * - {@link TaobaoContentOrderPaid 内容开放 > 内容开放短视频模板支付消息}
+   * - {@link TaobaoContentTaoSubChanged 内容开放 > [淘宝订阅]变更通知}
    */
   type TaobaoContent = TaobaoContentAuditAutocut
     | TaobaoContentAuditMvx
@@ -4446,14 +4446,14 @@ declare namespace IncomingMessage {
     | TaobaoHomeaiModelSkuRelation
     | TaobaoHomeaiRenderRequest;
   /**
-   * - {@link TaobaoHotelControlMsg 酒店签约中心消息 > 酒店管控中心消息通知}
-   * - {@link TaobaoHotelCreditToPreHotelStatus 酒店签约中心消息 > 信用住转预付酒店签约状态消息}
-   * - {@link TaobaoHotelDistributionOrderChange 酒店签约中心消息 > 分销渠道订单变动通知}
-   * - {@link TaobaoHotelEbkCommonMessage 酒店签约中心消息 > 通用消息提醒}
-   * - {@link TaobaoHotelOrderChange 酒店签约中心消息 > 订单变动通知}
-   * - {@link TaobaoHotelSearchMonitor 酒店签约中心消息 > 酒店搜索触发商品更新消息}
-   * - {@link TaobaoHotelSearchTrigger 酒店签约中心消息 > 热搜酒店消息}
-   * - {@link TaobaoHotelSignRollback 酒店签约中心消息 > 飞猪单体酒店签约重置}
+   * - {@link TaobaoHotelControlMsg 飞猪 > 酒店管控中心消息通知}
+   * - {@link TaobaoHotelCreditToPreHotelStatus 飞猪 > 信用住转预付酒店签约状态消息}
+   * - {@link TaobaoHotelDistributionOrderChange 飞猪 > 分销渠道订单变动通知}
+   * - {@link TaobaoHotelEbkCommonMessage 飞猪 > 通用消息提醒}
+   * - {@link TaobaoHotelOrderChange 飞猪 > 订单变动通知}
+   * - {@link TaobaoHotelSearchMonitor 飞猪 > 酒店搜索触发商品更新消息}
+   * - {@link TaobaoHotelSearchTrigger 飞猪 > 热搜酒店消息}
+   * - {@link TaobaoHotelSignRollback 飞猪 > 飞猪单体酒店签约重置}
    */
   type TaobaoHotel = TaobaoHotelControlMsg
     | TaobaoHotelCreditToPreHotelStatus
@@ -4526,12 +4526,12 @@ declare namespace IncomingMessage {
     | TaobaoItemItemUpshelf
     | TaobaoItemItemZeroStock;
   /**
-   * - {@link TaobaoItemmarketItemDistributorChange 淘宝 > 三方货源分销商货品消息}
-   * - {@link TaobaoItemmarketItemRelationChange 淘宝 > 铺货成功推送}
-   * - {@link TaobaoItemmarketMaterialChange 淘宝 > 货品素材信息变更}
-   * - {@link TaobaoItemmarketPurchaseDistributorChange 淘宝 > 三方货源分销商采购单消息}
-   * - {@link TaobaoItemmarketPurchaseOrderChange 淘宝 > 三方货源采购单变更}
-   * - {@link TaobaoItemmarketVideoCreate 淘宝 > 货品视频创建}
+   * - {@link TaobaoItemmarketItemDistributorChange 货源服务消息 > 三方货源分销商货品消息}
+   * - {@link TaobaoItemmarketItemRelationChange 货源服务消息 > 铺货成功推送}
+   * - {@link TaobaoItemmarketMaterialChange 货源服务消息 > 货品素材信息变更}
+   * - {@link TaobaoItemmarketPurchaseDistributorChange 货源服务消息 > 三方货源分销商采购单消息}
+   * - {@link TaobaoItemmarketPurchaseOrderChange 货源服务消息 > 三方货源采购单变更}
+   * - {@link TaobaoItemmarketVideoCreate 货源服务消息 > 货品视频创建}
    */
   type TaobaoItemmarket = TaobaoItemmarketItemDistributorChange
     | TaobaoItemmarketItemRelationChange
@@ -4668,10 +4668,10 @@ declare namespace IncomingMessage {
    */
   type TaobaoOc = TaobaoOcTradeTagChanged;
   /**
-   * - {@link TaobaoOfnCreditPayStatusChange 淘宝交易 > 信用代扣状态变更同步}
-   * - {@link TaobaoOfnNewOrderEventSync 淘宝交易 > 以旧换新新机单事件同步}
-   * - {@link TaobaoOfnOrderStatusSync 淘宝交易 > 以旧换新回收单状态同步}
-   * - {@link TaobaoOfnRateSync 淘宝交易 > 以旧换新回收单评价消息}
+   * - {@link TaobaoOfnCreditPayStatusChange 以旧换新-订单域 > 信用代扣状态变更同步}
+   * - {@link TaobaoOfnNewOrderEventSync 以旧换新-订单域 > 以旧换新新机单事件同步}
+   * - {@link TaobaoOfnOrderStatusSync 以旧换新-订单域 > 以旧换新回收单状态同步}
+   * - {@link TaobaoOfnRateSync 以旧换新-订单域 > 以旧换新回收单评价消息}
    */
   type TaobaoOfn = TaobaoOfnCreditPayStatusChange
     | TaobaoOfnNewOrderEventSync
@@ -4768,12 +4768,12 @@ declare namespace IncomingMessage {
     | TaobaoPaimaiOrderCreate
     | TaobaoPaimaiOrderPaid;
   /**
-   * - {@link TaobaoPcBillsGenerate 淘宝企业购 > PC企业购出账消息通知}
-   * - {@link TaobaoPcEgoDisputeOrder 淘宝企业购 > PC企业购逆向订单消息}
-   * - {@link TaobaoPcEgoTradeOrder 淘宝企业购 > PC企业购交易订单消息}
-   * - {@link TaobaoPcEgoTradePackage 淘宝企业购 > 订单包裹消息}
-   * - {@link TaobaoPcItemChange 淘宝企业购 > 商品变更消息}
-   * - {@link TaobaoPcSaleInvoiceResult 淘宝企业购 > PC企业购发票通知消息}
+   * - {@link TaobaoPcBillsGenerate 采购宝API > PC企业购出账消息通知}
+   * - {@link TaobaoPcEgoDisputeOrder 采购宝API > PC企业购逆向订单消息}
+   * - {@link TaobaoPcEgoTradeOrder 采购宝API > PC企业购交易订单消息}
+   * - {@link TaobaoPcEgoTradePackage 采购宝API > 订单包裹消息}
+   * - {@link TaobaoPcItemChange 采购宝API > 商品变更消息}
+   * - {@link TaobaoPcSaleInvoiceResult 采购宝API > PC企业购发票通知消息}
    */
   type TaobaoPc = TaobaoPcBillsGenerate
     | TaobaoPcEgoDisputeOrder
@@ -4876,15 +4876,15 @@ declare namespace IncomingMessage {
    */
   type TaobaoSeed = TaobaoSeedGeneralDataCommutation;
   /**
-   * - {@link TaobaoShangouRefundClosed 淘宝闪购 > 闪购退款关闭}
-   * - {@link TaobaoShangouRefundCreated 淘宝闪购 > 闪购退款创建}
-   * - {@link TaobaoShangouRefundSuccess 淘宝闪购 > 闪购退款成功}
-   * - {@link TaobaoShangouTradeBuyerPay 淘宝闪购 > 闪购订单付款成功}
-   * - {@link TaobaoShangouTradeClose 淘宝闪购 > 闪购订单关闭}
-   * - {@link TaobaoShangouTradeCreate 淘宝闪购 > 闪购订单创建}
-   * - {@link TaobaoShangouTradeMemoModified 淘宝闪购 > 闪购订单交易备注变更}
-   * - {@link TaobaoShangouTradeSellerShip 淘宝闪购 > 闪购订单发货}
-   * - {@link TaobaoShangouTradeSuccess 淘宝闪购 > 闪购订单交易成功}
+   * - {@link TaobaoShangouRefundClosed 闪购交易 > 闪购退款关闭}
+   * - {@link TaobaoShangouRefundCreated 闪购交易 > 闪购退款创建}
+   * - {@link TaobaoShangouRefundSuccess 闪购交易 > 闪购退款成功}
+   * - {@link TaobaoShangouTradeBuyerPay 闪购交易 > 闪购订单付款成功}
+   * - {@link TaobaoShangouTradeClose 闪购交易 > 闪购订单关闭}
+   * - {@link TaobaoShangouTradeCreate 闪购交易 > 闪购订单创建}
+   * - {@link TaobaoShangouTradeMemoModified 闪购交易 > 闪购订单交易备注变更}
+   * - {@link TaobaoShangouTradeSellerShip 闪购交易 > 闪购订单发货}
+   * - {@link TaobaoShangouTradeSuccess 闪购交易 > 闪购订单交易成功}
    */
   type TaobaoShangou = TaobaoShangouRefundClosed
     | TaobaoShangouRefundCreated
@@ -5636,7 +5636,7 @@ declare namespace IncomingMessage {
    */
   type WdkWorkforce = WdkWorkforceRequirementPublish;
   /**
-   * - {@link XhotelDistributionStatusChange 飞猪 > 飞猪酒店订单状态变更消息}
+   * - {@link XhotelDistributionStatusChange 酒店交易消息API > 飞猪酒店订单状态变更消息}
    */
   type XhotelDistribution = XhotelDistributionStatusChange;
   /**
@@ -5652,11 +5652,11 @@ declare namespace IncomingMessage {
    */
   type XianyuCar = XianyuCarOrderStatusSync;
   /**
-   * - {@link XianyuCcoComplain 闲鱼 > 闲鱼投诉消息}
+   * - {@link XianyuCcoComplain 闲鱼电商Saas > 闲鱼投诉消息}
    */
   type XianyuCco = XianyuCcoComplain;
   /**
-   * - {@link XianyuCoinCoinDeductionChange 闲鱼 > 闲鱼币交易抵扣变更消息}
+   * - {@link XianyuCoinCoinDeductionChange 闲鱼电商Saas > 闲鱼币交易抵扣变更消息}
    */
   type XianyuCoin = XianyuCoinCoinDeductionChange;
   /**
@@ -5690,7 +5690,7 @@ declare namespace IncomingMessage {
   type XianyuMarketrecycle = XianyuMarketrecycleOrderStateSyn
     | XianyuMarketrecyclePlanStateSyn;
   /**
-   * - {@link XianyuOutletCycleBuyVendueCreate 闲鱼 > 闲鱼奥莱周期拍拍品创建}
+   * - {@link XianyuOutletCycleBuyVendueCreate 闲鱼电商Saas > 闲鱼奥莱周期拍拍品创建}
    */
   type XianyuOutlet = XianyuOutletCycleBuyVendueCreate;
   /**
@@ -5714,7 +5714,7 @@ declare namespace IncomingMessage {
    */
   type XianyuTender = XianyuTenderOrderSyn;
   /**
-   * - {@link XianyuYellowboxGpuTemplatePunish 闲鱼 > GPU模版处罚消息通知}
+   * - {@link XianyuYellowboxGpuTemplatePunish 闲鱼电商Saas > GPU模版处罚消息通知}
    */
   type XianyuYellowbox = XianyuYellowboxGpuTemplatePunish;
   /**

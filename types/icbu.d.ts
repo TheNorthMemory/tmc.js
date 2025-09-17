@@ -126,7 +126,7 @@ declare namespace Icbu.Member {
   }
 }
 
-/** ICBU */
+/** ICBU-小满 */
 declare namespace Icbu.Risk {
   /** {@link https://open.taobao.com/tmc.htm?docId=2525&docType=9 天鹿风控事件异步消息结果} */
   interface ZeroersMessage {

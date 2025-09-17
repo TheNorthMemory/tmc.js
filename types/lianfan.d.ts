@@ -1,4 +1,4 @@
-/** 连凡 */
+/** 绘蛙消息 */
 declare namespace Lianfan.Huiwa {
   /** {@link https://open.taobao.com/tmc.htm?docId=2561&docType=9 绘蛙模型状态变更消息} */
   interface ModelStateUpdate {

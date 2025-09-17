@@ -111,7 +111,7 @@ declare namespace Idle.Consignmentii {
   }
 }
 
-/** 闲鱼 */
+/** 闲鱼电商Saas */
 declare namespace Idle.Cro {
   /** {@link https://open.taobao.com/tmc.htm?docId=2567&docType=9 闲鱼安全处罚消息} */
   interface PunishMsg {
@@ -134,7 +134,7 @@ declare namespace Idle.Cro {
   }
 }
 
-/** 闲鱼 */
+/** 闲鱼循环商店-消息前台 */
 declare namespace Idle.Cycleshop {
   /** {@link https://open.taobao.com/tmc.htm?docId=2499&docType=9 闲鱼循环商店-货品变更通知} */
   interface GoodsNotice {
@@ -226,7 +226,7 @@ declare namespace Idle.Fishmarketfixed {
   }
 }
 
-/** 闲鱼 */
+/** 闲鱼电商Saas */
 declare namespace Idle.Newoutlets {
   /** {@link https://open.taobao.com/tmc.htm?docId=2584&docType=9 闲鱼用户身份变更消息} */
   interface UserTagNotice {
@@ -306,7 +306,7 @@ declare namespace Idle.Recycle {
   }
 }
 
-/** 闲鱼 */
+/** 闲鱼电商Saas */
 declare namespace Idle.Seller {
   /** {@link https://open.taobao.com/tmc.htm?docId=2677&docType=9 闲鱼鱼小铺运营提效包订购消息} */
   interface ImprovePackOrder {
@@ -323,7 +323,7 @@ declare namespace Idle.Seller {
   }
 }
 
-/** 闲鱼已验货 */
+/** 闲鱼电商Saas */
 declare namespace Idle.Topisv {
   /** {@link https://open.taobao.com/tmc.htm?docId=2416&docType=9 闲鱼开放平台-服务赔付单变更消息通知} */
   interface CompensateNotice {
