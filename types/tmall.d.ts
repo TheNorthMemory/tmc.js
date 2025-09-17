@@ -423,7 +423,7 @@ declare namespace Tmall.Homedecorationfuwu {
 
 /** 天猫服务 */
 declare namespace Tmall.Homeservice {
-  /** {@link https://open.taobao.com/tmc.htm?docId=2692&docType=9 整单视角的出库入库消息} */
+  /** {@link https://open.taobao.com/tmc.htm?docId=2692&docType=9 整单视角工单全部创建消息} */
   interface GroupWorkcardCreate {
     /** 场景分组 */
     group: string;

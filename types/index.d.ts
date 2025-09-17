@@ -1098,6 +1098,8 @@ declare interface TaoTopicsDescriptor {
   fliggy_ticket_VerifyNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTicketVerifyNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyTravelRechargeJtpOrdercancelApply 航旅度假交易 > 飞猪度假通讯流量包无忧行订单退订申请消息发送} */
   fliggy_travel_RechargeJtpOrdercancelApply(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTravelRechargeJtpOrdercancelApply) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FliggyTravelRechargeJtpOrdercancelApplyBackUp 航旅度假交易 > 飞猪度假通讯流量包无忧行订单退订申请消息发送（兼容移动老系统）} */
+  fliggy_travel_RechargeJtpOrdercancelApplyBackUp(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTravelRechargeJtpOrdercancelApplyBackUp) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyVisaApplicantStatusChanged 航旅度假交易 > 签证申请人状态变更消息} */
   fliggy_visa_ApplicantStatusChanged(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyVisaApplicantStatusChanged) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyVisaStatusChange 航旅度假交易 > 签证状态变化消息} */
@@ -2302,7 +2304,7 @@ declare interface TaoTopicsDescriptor {
   tmall_fuwu_WorkcardStatusUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuWorkcardStatusUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallHomedecorationfuwuWorkcardStatusUpdateForSeller 天猫 > 天猫家装服务工单状态推送} */
   tmall_homedecorationfuwu_WorkcardStatusUpdateForSeller(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallHomedecorationfuwuWorkcardStatusUpdateForSeller) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TmallHomeserviceGroupWorkcardCreate 天猫服务 > 整单视角的出库入库消息} */
+  /** {@link IncomingMessage.TmallHomeserviceGroupWorkcardCreate 天猫服务 > 整单视角工单全部创建消息} */
   tmall_homeservice_GroupWorkcardCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallHomeserviceGroupWorkcardCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallHomeserviceLogisticsUpdate 天猫服务 > 天猫家享服务物流更新} */
   tmall_homeservice_LogisticsUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallHomeserviceLogisticsUpdate) => void): TaoMessageConsumer;
@@ -4417,6 +4419,8 @@ declare interface TaoEventsListener {
   on(topic: 'fliggy_ticket_VerifyNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTicketVerifyNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyTravelRechargeJtpOrdercancelApply 航旅度假交易 > 飞猪度假通讯流量包无忧行订单退订申请消息发送} */
   on(topic: 'fliggy_travel_RechargeJtpOrdercancelApply', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTravelRechargeJtpOrdercancelApply) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FliggyTravelRechargeJtpOrdercancelApplyBackUp 航旅度假交易 > 飞猪度假通讯流量包无忧行订单退订申请消息发送（兼容移动老系统）} */
+  on(topic: 'fliggy_travel_RechargeJtpOrdercancelApplyBackUp', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTravelRechargeJtpOrdercancelApplyBackUp) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyVisaApplicantStatusChanged 航旅度假交易 > 签证申请人状态变更消息} */
   on(topic: 'fliggy_visa_ApplicantStatusChanged', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyVisaApplicantStatusChanged) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyVisaStatusChange 航旅度假交易 > 签证状态变化消息} */
@@ -5621,7 +5625,7 @@ declare interface TaoEventsListener {
   on(topic: 'tmall_fuwu_WorkcardStatusUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallFuwuWorkcardStatusUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallHomedecorationfuwuWorkcardStatusUpdateForSeller 天猫 > 天猫家装服务工单状态推送} */
   on(topic: 'tmall_homedecorationfuwu_WorkcardStatusUpdateForSeller', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallHomedecorationfuwuWorkcardStatusUpdateForSeller) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TmallHomeserviceGroupWorkcardCreate 天猫服务 > 整单视角的出库入库消息} */
+  /** {@link IncomingMessage.TmallHomeserviceGroupWorkcardCreate 天猫服务 > 整单视角工单全部创建消息} */
   on(topic: 'tmall_homeservice_GroupWorkcardCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallHomeserviceGroupWorkcardCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallHomeserviceLogisticsUpdate 天猫服务 > 天猫家享服务物流更新} */
   on(topic: 'tmall_homeservice_LogisticsUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallHomeserviceLogisticsUpdate) => void): TaoMessageConsumer;

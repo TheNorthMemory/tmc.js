@@ -1083,6 +1083,8 @@ declare namespace IncomingMessage {
   type FliggyTicketVerifyNotify = Message & { content?: MessageContent & { topic?: 'fliggy_ticket_VerifyNotify', content?: string | Fliggy.Ticket.VerifyNotify } };
   /** {@link Fliggy.Travel.RechargeJtpOrdercancelApply 航旅度假交易 > 飞猪度假通讯流量包无忧行订单退订申请消息发送} */
   type FliggyTravelRechargeJtpOrdercancelApply = Message & { content?: MessageContent & { topic?: 'fliggy_travel_RechargeJtpOrdercancelApply', content?: string | Fliggy.Travel.RechargeJtpOrdercancelApply } };
+  /** {@link Fliggy.Travel.RechargeJtpOrdercancelApplyBackUp 航旅度假交易 > 飞猪度假通讯流量包无忧行订单退订申请消息发送（兼容移动老系统）} */
+  type FliggyTravelRechargeJtpOrdercancelApplyBackUp = Message & { content?: MessageContent & { topic?: 'fliggy_travel_RechargeJtpOrdercancelApplyBackUp', content?: string | Fliggy.Travel.RechargeJtpOrdercancelApplyBackUp } };
   /** {@link Fliggy.Visa.ApplicantStatusChanged 航旅度假交易 > 签证申请人状态变更消息} */
   type FliggyVisaApplicantStatusChanged = Message & { content?: MessageContent & { topic?: 'fliggy_visa_ApplicantStatusChanged', content?: string | Fliggy.Visa.ApplicantStatusChanged } };
   /** {@link Fliggy.Visa.StatusChange 航旅度假交易 > 签证状态变化消息} */
@@ -2287,7 +2289,7 @@ declare namespace IncomingMessage {
   type TmallFuwuWorkcardStatusUpdate = Message & { content?: MessageContent & { topic?: 'tmall_fuwu_WorkcardStatusUpdate', content?: string | Tmall.Fuwu.WorkcardStatusUpdate } };
   /** {@link Tmall.Homedecorationfuwu.WorkcardStatusUpdateForSeller 天猫 > 天猫家装服务工单状态推送} */
   type TmallHomedecorationfuwuWorkcardStatusUpdateForSeller = Message & { content?: MessageContent & { topic?: 'tmall_homedecorationfuwu_WorkcardStatusUpdateForSeller', content?: string | Tmall.Homedecorationfuwu.WorkcardStatusUpdateForSeller } };
-  /** {@link Tmall.Homeservice.GroupWorkcardCreate 天猫服务 > 整单视角的出库入库消息} */
+  /** {@link Tmall.Homeservice.GroupWorkcardCreate 天猫服务 > 整单视角工单全部创建消息} */
   type TmallHomeserviceGroupWorkcardCreate = Message & { content?: MessageContent & { topic?: 'tmall_homeservice_GroupWorkcardCreate', content?: string | Tmall.Homeservice.GroupWorkcardCreate } };
   /** {@link Tmall.Homeservice.LogisticsUpdate 天猫服务 > 天猫家享服务物流更新} */
   type TmallHomeserviceLogisticsUpdate = Message & { content?: MessageContent & { topic?: 'tmall_homeservice_LogisticsUpdate', content?: string | Tmall.Homeservice.LogisticsUpdate } };
@@ -3853,8 +3855,10 @@ declare namespace IncomingMessage {
     | FliggyTicketVerifyNotify;
   /**
    * - {@link FliggyTravelRechargeJtpOrdercancelApply 航旅度假交易 > 飞猪度假通讯流量包无忧行订单退订申请消息发送}
+   * - {@link FliggyTravelRechargeJtpOrdercancelApplyBackUp 航旅度假交易 > 飞猪度假通讯流量包无忧行订单退订申请消息发送（兼容移动老系统）}
    */
-  type FliggyTravel = FliggyTravelRechargeJtpOrdercancelApply;
+  type FliggyTravel = FliggyTravelRechargeJtpOrdercancelApply
+    | FliggyTravelRechargeJtpOrdercancelApplyBackUp;
   /**
    * - {@link FliggyVisaApplicantStatusChanged 航旅度假交易 > 签证申请人状态变更消息}
    * - {@link FliggyVisaStatusChange 航旅度假交易 > 签证状态变化消息}
@@ -5398,7 +5402,7 @@ declare namespace IncomingMessage {
    */
   type TmallHomedecorationfuwu = TmallHomedecorationfuwuWorkcardStatusUpdateForSeller;
   /**
-   * - {@link TmallHomeserviceGroupWorkcardCreate 天猫服务 > 整单视角的出库入库消息}
+   * - {@link TmallHomeserviceGroupWorkcardCreate 天猫服务 > 整单视角工单全部创建消息}
    * - {@link TmallHomeserviceLogisticsUpdate 天猫服务 > 天猫家享服务物流更新}
    */
   type TmallHomeservice = TmallHomeserviceGroupWorkcardCreate

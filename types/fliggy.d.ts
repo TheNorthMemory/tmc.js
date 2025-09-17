@@ -246,6 +246,12 @@ declare namespace Fliggy.Travel {
     /** 飞猪订单id */
     fliggy_order_id: string;
   }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2699&docType=9 飞猪度假通讯流量包无忧行订单退订申请消息发送（兼容移动老系统）} */
+  interface RechargeJtpOrdercancelApplyBackUp {
+    /** 飞猪订单id */
+    fliggy_order_id: string;
+  }
 }
 
 /** 航旅度假交易 */
