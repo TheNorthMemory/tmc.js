@@ -19,6 +19,10 @@ declare namespace Fliggy.Btrip {
 declare namespace Fliggy.Dujia {
   /** {@link https://open.taobao.com/tmc.htm?docId=2697&docType=9 招商审核通过消息} */
   interface ApproveSignUp {
+    /** "APPROVED", "审批通过"|"CLEAN_OUT", "已清退"|"CHANNEL_ITEM_ONLINE", "渠道商品上架"|"CHANNEL_ITEM_OFFLINE", "渠道商品下架" */
+    event_type: string;
+    /** 消息id。唯一 */
+    msg_id: string;
     /** 报名id */
     sign_up_id: string;
   }
