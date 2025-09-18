@@ -15,7 +15,7 @@ declare namespace Fliggy.Btrip {
   }
 }
 
-/** 飞猪度假 */
+/** 飞猪商家平台 */
 declare namespace Fliggy.Dujia {
   /** {@link https://open.taobao.com/tmc.htm?docId=2697&docType=9 招商审核通过消息} */
   interface ApproveSignUp {

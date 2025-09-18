@@ -134,7 +134,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 
 ## 支持的TOPICS
 
-<details><summary>共计 101+ 类别，587+ 消息数</summary>
+<details><summary>共计 102+ 类别，589+ 消息数</summary>
 
 | 类别 | 消息数 |
 | --- | --- |
@@ -198,6 +198,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | 五道口商品 | 2 |
 | HOMEAI | 2 |
 | HOMEAI消息对接 | 5 |
+| 飞猪商家平台 | 1 |
 | 零售通_公共 | 8 |
 | 大麦麦座开放平台消息 | 2 |
 | 酒店标准库基础信息变更消息 | 3 |
@@ -238,7 +239,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | 绘蛙消息 | 2 |
 | 公益三小时公共 | 1 |
 | 采购宝API | 6 |
-| 闪购交易 | 8 |
+| 闪购交易 | 9 |
 
 </details>
 

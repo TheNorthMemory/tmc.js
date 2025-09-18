@@ -1061,7 +1061,7 @@ declare namespace IncomingMessage {
   type ElemeRetailPosOrderMessage = Message & { content?: MessageContent & { topic?: 'eleme_retail_PosOrderMessage', content?: string | Eleme.Retail.PosOrderMessage } };
   /** {@link Fliggy.Btrip.HotelDistributionOrderChange 商旅API > 订单状态变化} */
   type FliggyBtripHotelDistributionOrderChange = Message & { content?: MessageContent & { topic?: 'fliggy_btrip_HotelDistributionOrderChange', content?: string | Fliggy.Btrip.HotelDistributionOrderChange } };
-  /** {@link Fliggy.Dujia.ApproveSignUp 飞猪度假 > 招商审核通过消息} */
+  /** {@link Fliggy.Dujia.ApproveSignUp 飞猪商家平台 > 招商审核通过消息} */
   type FliggyDujiaApproveSignUp = Message & { content?: MessageContent & { topic?: 'fliggy_dujia_ApproveSignUp', content?: string | Fliggy.Dujia.ApproveSignUp } };
   /** {@link Fliggy.Flight.AdvOfferChangeNotify 淘宝机票 > 飞猪机票商家货品优势变更通知} */
   type FliggyFlightAdvOfferChangeNotify = Message & { content?: MessageContent & { topic?: 'fliggy_flight_AdvOfferChangeNotify', content?: string | Fliggy.Flight.AdvOfferChangeNotify } };
@@ -3818,7 +3818,7 @@ declare namespace IncomingMessage {
    */
   type FliggyBtrip = FliggyBtripHotelDistributionOrderChange;
   /**
-   * - {@link FliggyDujiaApproveSignUp 飞猪度假 > 招商审核通过消息}
+   * - {@link FliggyDujiaApproveSignUp 飞猪商家平台 > 招商审核通过消息}
    */
   type FliggyDujia = FliggyDujiaApproveSignUp;
   /**
