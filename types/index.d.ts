@@ -1852,6 +1852,8 @@ declare interface TaoTopicsDescriptor {
   taobao_refund_TaobaoIntervened(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRefundTaobaoIntervened) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRetrieveCompleted 淘宝退款 > 商家挽回完结消息} */
   taobao_retrieve_Completed(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRetrieveCompleted) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoRetrieveStarted 淘宝退款 > 开始商家挽回消息} */
+  taobao_retrieve_Started(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRetrieveStarted) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRhinoDeliveryUpdate 智能制造API > 订单发货通知} */
   taobao_rhino_DeliveryUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRhinoDeliveryUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRhinoDeviceStatus 智能制造API > 智能制造-设备状态变更} */
@@ -5173,6 +5175,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_refund_TaobaoIntervened', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRefundTaobaoIntervened) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRetrieveCompleted 淘宝退款 > 商家挽回完结消息} */
   on(topic: 'taobao_retrieve_Completed', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRetrieveCompleted) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoRetrieveStarted 淘宝退款 > 开始商家挽回消息} */
+  on(topic: 'taobao_retrieve_Started', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRetrieveStarted) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRhinoDeliveryUpdate 智能制造API > 订单发货通知} */
   on(topic: 'taobao_rhino_DeliveryUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoRhinoDeliveryUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoRhinoDeviceStatus 智能制造API > 智能制造-设备状态变更} */

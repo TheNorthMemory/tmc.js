@@ -4942,6 +4942,26 @@ declare namespace Taobao.Retrieve {
     /** 平台主订单ID */
     tid?: number | bigint;
   }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2702&docType=9 开始商家挽回消息} */
+  interface Started {
+    /** 挽回结果 */
+    biz_status: number;
+    /** 挽回结果的描述 */
+    biz_status_desc: string;
+    /** 平台子订单ID */
+    oid: number | bigint;
+    /** 挽单记录ID */
+    record_id: number;
+    /** 平台退款编号 */
+    redund_id: number | bigint;
+    /** 策略id */
+    strategy_id?: string;
+    /** 策略名称 */
+    strategy_name?: string;
+    /** 平台主订单ID */
+    tid?: number | bigint;
+  }
 }
 
 /** 智能制造API */

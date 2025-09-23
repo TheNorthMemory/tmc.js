@@ -1837,6 +1837,8 @@ declare namespace IncomingMessage {
   type TaobaoRefundTaobaoIntervened = Message & { content?: MessageContent & { topic?: 'taobao_refund_TaobaoIntervened', content?: string | Taobao.Refund.TaobaoIntervened } };
   /** {@link Taobao.Retrieve.Completed 淘宝退款 > 商家挽回完结消息} */
   type TaobaoRetrieveCompleted = Message & { content?: MessageContent & { topic?: 'taobao_retrieve_Completed', content?: string | Taobao.Retrieve.Completed } };
+  /** {@link Taobao.Retrieve.Started 淘宝退款 > 开始商家挽回消息} */
+  type TaobaoRetrieveStarted = Message & { content?: MessageContent & { topic?: 'taobao_retrieve_Started', content?: string | Taobao.Retrieve.Started } };
   /** {@link Taobao.Rhino.DeliveryUpdate 智能制造API > 订单发货通知} */
   type TaobaoRhinoDeliveryUpdate = Message & { content?: MessageContent & { topic?: 'taobao_rhino_DeliveryUpdate', content?: string | Taobao.Rhino.DeliveryUpdate } };
   /** {@link Taobao.Rhino.DeviceStatus 智能制造API > 智能制造-设备状态变更} */
@@ -4843,8 +4845,10 @@ declare namespace IncomingMessage {
     | TaobaoRefundTaobaoIntervened;
   /**
    * - {@link TaobaoRetrieveCompleted 淘宝退款 > 商家挽回完结消息}
+   * - {@link TaobaoRetrieveStarted 淘宝退款 > 开始商家挽回消息}
    */
-  type TaobaoRetrieve = TaobaoRetrieveCompleted;
+  type TaobaoRetrieve = TaobaoRetrieveCompleted
+    | TaobaoRetrieveStarted;
   /**
    * - {@link TaobaoRhinoDeliveryUpdate 智能制造API > 订单发货通知}
    * - {@link TaobaoRhinoDeviceStatus 智能制造API > 智能制造-设备状态变更}
