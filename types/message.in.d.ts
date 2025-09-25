@@ -631,6 +631,8 @@ declare namespace IncomingMessage {
   type AlibabaYichaoClaimOrder = Message & { content?: MessageContent & { topic?: 'alibaba_yichao_ClaimOrder', content?: string | Alibaba.Yichao.ClaimOrder } };
   /** {@link Alibaba.Yichao.InsuranceUpdate 天猫服务 > 蚁巢保单修改消息} */
   type AlibabaYichaoInsuranceUpdate = Message & { content?: MessageContent & { topic?: 'alibaba_yichao_InsuranceUpdate', content?: string | Alibaba.Yichao.InsuranceUpdate } };
+  /** {@link Alibaba.Yichao.ReportOrder 天猫服务 > 蚁巢报案单更新消息} */
+  type AlibabaYichaoReportOrder = Message & { content?: MessageContent & { topic?: 'alibaba_yichao_ReportOrder', content?: string | Alibaba.Yichao.ReportOrder } };
   /** {@link Alibaba.Yunio.DataTransfer 平台消息 > YunIO数据流转} */
   type AlibabaYunioDataTransfer = Message & { content?: MessageContent & { topic?: 'alibaba_yunio_DataTransfer', content?: string | Alibaba.Yunio.DataTransfer } };
   /** {@link Alicom.Axb.SubsEventSync 阿里通信 > 绑定事件同步} */
@@ -1661,6 +1663,8 @@ declare namespace IncomingMessage {
   type TaobaoLiveStatusChange = Message & { content?: MessageContent & { topic?: 'taobao_live_StatusChange', content?: string | Taobao.Live.StatusChange } };
   /** {@link Taobao.Live.TcpOrder 淘宝直播API > 淘宝直播订单消息} */
   type TaobaoLiveTcpOrder = Message & { content?: MessageContent & { topic?: 'taobao_live_TcpOrder', content?: string | Taobao.Live.TcpOrder } };
+  /** {@link Taobao.Liveaigc.CommentSend 淘宝 > 淘宝数字人评论推送} */
+  type TaobaoLiveaigcCommentSend = Message & { content?: MessageContent & { topic?: 'taobao_liveaigc_CommentSend', content?: string | Taobao.Liveaigc.CommentSend } };
   /** {@link Taobao.Local.OrderPorcess 淘宝 > 通知58订单发生变化} */
   type TaobaoLocalOrderPorcess = Message & { content?: MessageContent & { topic?: 'taobao_local_OrderPorcess', content?: string | Taobao.Local.OrderPorcess } };
   /** {@link Taobao.Localorder.StatusNotify 淘宝 > 通知到家服务商订单状态变化} */
@@ -1863,10 +1867,18 @@ declare namespace IncomingMessage {
   type TaobaoSecWlcAlipaySync = Message & { content?: MessageContent & { topic?: 'taobao_sec_WlcAlipaySync', content?: string | Taobao.Sec.WlcAlipaySync } };
   /** {@link Taobao.Seed.GeneralDataCommutation 淘宝 > 淘宝种草数据交换} */
   type TaobaoSeedGeneralDataCommutation = Message & { content?: MessageContent & { topic?: 'taobao_seed_GeneralDataCommutation', content?: string | Taobao.Seed.GeneralDataCommutation } };
+  /** {@link Taobao.Shangou.RefundBuyerModifyAgreement 闪购交易 > 买家修改退款协议消息} */
+  type TaobaoShangouRefundBuyerModifyAgreement = Message & { content?: MessageContent & { topic?: 'taobao_shangou_RefundBuyerModifyAgreement', content?: string | Taobao.Shangou.RefundBuyerModifyAgreement } };
+  /** {@link Taobao.Shangou.RefundBuyerReturnGoods 闪购交易 > 买家退货给卖家消息} */
+  type TaobaoShangouRefundBuyerReturnGoods = Message & { content?: MessageContent & { topic?: 'taobao_shangou_RefundBuyerReturnGoods', content?: string | Taobao.Shangou.RefundBuyerReturnGoods } };
   /** {@link Taobao.Shangou.RefundClosed 闪购交易 > 闪购退款关闭} */
   type TaobaoShangouRefundClosed = Message & { content?: MessageContent & { topic?: 'taobao_shangou_RefundClosed', content?: string | Taobao.Shangou.RefundClosed } };
   /** {@link Taobao.Shangou.RefundCreated 闪购交易 > 闪购退款创建} */
   type TaobaoShangouRefundCreated = Message & { content?: MessageContent & { topic?: 'taobao_shangou_RefundCreated', content?: string | Taobao.Shangou.RefundCreated } };
+  /** {@link Taobao.Shangou.RefundSellerAgreeAgreement 闪购交易 > 卖家同意退款协议消息} */
+  type TaobaoShangouRefundSellerAgreeAgreement = Message & { content?: MessageContent & { topic?: 'taobao_shangou_RefundSellerAgreeAgreement', content?: string | Taobao.Shangou.RefundSellerAgreeAgreement } };
+  /** {@link Taobao.Shangou.RefundSellerRefuseAgreement 闪购交易 > 卖家拒绝退款协议消息} */
+  type TaobaoShangouRefundSellerRefuseAgreement = Message & { content?: MessageContent & { topic?: 'taobao_shangou_RefundSellerRefuseAgreement', content?: string | Taobao.Shangou.RefundSellerRefuseAgreement } };
   /** {@link Taobao.Shangou.RefundSuccess 闪购交易 > 闪购退款成功} */
   type TaobaoShangouRefundSuccess = Message & { content?: MessageContent & { topic?: 'taobao_shangou_RefundSuccess', content?: string | Taobao.Shangou.RefundSuccess } };
   /** {@link Taobao.Shangou.TradeBuyerPay 闪购交易 > 闪购订单付款成功} */
@@ -3234,9 +3246,11 @@ declare namespace IncomingMessage {
   /**
    * - {@link AlibabaYichaoClaimOrder 天猫服务 > 蚁巢投保理赔消息}
    * - {@link AlibabaYichaoInsuranceUpdate 天猫服务 > 蚁巢保单修改消息}
+   * - {@link AlibabaYichaoReportOrder 天猫服务 > 蚁巢报案单更新消息}
    */
   type AlibabaYichao = AlibabaYichaoClaimOrder
-    | AlibabaYichaoInsuranceUpdate;
+    | AlibabaYichaoInsuranceUpdate
+    | AlibabaYichaoReportOrder;
   /**
    * - {@link AlibabaYunioDataTransfer 平台消息 > YunIO数据流转}
    */
@@ -4622,6 +4636,10 @@ declare namespace IncomingMessage {
     | TaobaoLiveStatusChange
     | TaobaoLiveTcpOrder;
   /**
+   * - {@link TaobaoLiveaigcCommentSend 淘宝 > 淘宝数字人评论推送}
+   */
+  type TaobaoLiveaigc = TaobaoLiveaigcCommentSend;
+  /**
    * - {@link TaobaoLocalOrderPorcess 淘宝 > 通知58订单发生变化}
    */
   type TaobaoLocal = TaobaoLocalOrderPorcess;
@@ -4880,8 +4898,12 @@ declare namespace IncomingMessage {
    */
   type TaobaoSeed = TaobaoSeedGeneralDataCommutation;
   /**
+   * - {@link TaobaoShangouRefundBuyerModifyAgreement 闪购交易 > 买家修改退款协议消息}
+   * - {@link TaobaoShangouRefundBuyerReturnGoods 闪购交易 > 买家退货给卖家消息}
    * - {@link TaobaoShangouRefundClosed 闪购交易 > 闪购退款关闭}
    * - {@link TaobaoShangouRefundCreated 闪购交易 > 闪购退款创建}
+   * - {@link TaobaoShangouRefundSellerAgreeAgreement 闪购交易 > 卖家同意退款协议消息}
+   * - {@link TaobaoShangouRefundSellerRefuseAgreement 闪购交易 > 卖家拒绝退款协议消息}
    * - {@link TaobaoShangouRefundSuccess 闪购交易 > 闪购退款成功}
    * - {@link TaobaoShangouTradeBuyerPay 闪购交易 > 闪购订单付款成功}
    * - {@link TaobaoShangouTradeClose 闪购交易 > 闪购订单关闭}
@@ -4890,8 +4912,12 @@ declare namespace IncomingMessage {
    * - {@link TaobaoShangouTradeSellerShip 闪购交易 > 闪购订单发货}
    * - {@link TaobaoShangouTradeSuccess 闪购交易 > 闪购订单交易成功}
    */
-  type TaobaoShangou = TaobaoShangouRefundClosed
+  type TaobaoShangou = TaobaoShangouRefundBuyerModifyAgreement
+    | TaobaoShangouRefundBuyerReturnGoods
+    | TaobaoShangouRefundClosed
     | TaobaoShangouRefundCreated
+    | TaobaoShangouRefundSellerAgreeAgreement
+    | TaobaoShangouRefundSellerRefuseAgreement
     | TaobaoShangouRefundSuccess
     | TaobaoShangouTradeBuyerPay
     | TaobaoShangouTradeClose
@@ -6259,6 +6285,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoLife}
    * - {@link TaobaoLifeservice}
    * - {@link TaobaoLive}
+   * - {@link TaobaoLiveaigc}
    * - {@link TaobaoLocal}
    * - {@link TaobaoLocalorder}
    * - {@link TaobaoLogistics}
@@ -6378,6 +6405,7 @@ declare namespace IncomingMessage {
     | TaobaoLife
     | TaobaoLifeservice
     | TaobaoLive
+    | TaobaoLiveaigc
     | TaobaoLocal
     | TaobaoLocalorder
     | TaobaoLogistics

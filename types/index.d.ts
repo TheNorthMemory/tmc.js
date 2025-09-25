@@ -646,6 +646,8 @@ declare interface TaoTopicsDescriptor {
   alibaba_yichao_ClaimOrder(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaYichaoClaimOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaYichaoInsuranceUpdate 天猫服务 > 蚁巢保单修改消息} */
   alibaba_yichao_InsuranceUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaYichaoInsuranceUpdate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaYichaoReportOrder 天猫服务 > 蚁巢报案单更新消息} */
+  alibaba_yichao_ReportOrder(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaYichaoReportOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaYunioDataTransfer 平台消息 > YunIO数据流转} */
   alibaba_yunio_DataTransfer(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaYunioDataTransfer) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlicomAxbSubsEventSync 阿里通信 > 绑定事件同步} */
@@ -1676,6 +1678,8 @@ declare interface TaoTopicsDescriptor {
   taobao_live_StatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLiveStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLiveTcpOrder 淘宝直播API > 淘宝直播订单消息} */
   taobao_live_TcpOrder(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLiveTcpOrder) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoLiveaigcCommentSend 淘宝 > 淘宝数字人评论推送} */
+  taobao_liveaigc_CommentSend(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLiveaigcCommentSend) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLocalOrderPorcess 淘宝 > 通知58订单发生变化} */
   taobao_local_OrderPorcess(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLocalOrderPorcess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLocalorderStatusNotify 淘宝 > 通知到家服务商订单状态变化} */
@@ -1878,10 +1882,18 @@ declare interface TaoTopicsDescriptor {
   taobao_sec_WlcAlipaySync(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSecWlcAlipaySync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSeedGeneralDataCommutation 淘宝 > 淘宝种草数据交换} */
   taobao_seed_GeneralDataCommutation(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSeedGeneralDataCommutation) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoShangouRefundBuyerModifyAgreement 闪购交易 > 买家修改退款协议消息} */
+  taobao_shangou_RefundBuyerModifyAgreement(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouRefundBuyerModifyAgreement) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoShangouRefundBuyerReturnGoods 闪购交易 > 买家退货给卖家消息} */
+  taobao_shangou_RefundBuyerReturnGoods(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouRefundBuyerReturnGoods) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoShangouRefundClosed 闪购交易 > 闪购退款关闭} */
   taobao_shangou_RefundClosed(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouRefundClosed) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoShangouRefundCreated 闪购交易 > 闪购退款创建} */
   taobao_shangou_RefundCreated(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouRefundCreated) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoShangouRefundSellerAgreeAgreement 闪购交易 > 卖家同意退款协议消息} */
+  taobao_shangou_RefundSellerAgreeAgreement(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouRefundSellerAgreeAgreement) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoShangouRefundSellerRefuseAgreement 闪购交易 > 卖家拒绝退款协议消息} */
+  taobao_shangou_RefundSellerRefuseAgreement(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouRefundSellerRefuseAgreement) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoShangouRefundSuccess 闪购交易 > 闪购退款成功} */
   taobao_shangou_RefundSuccess(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouRefundSuccess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoShangouTradeBuyerPay 闪购交易 > 闪购订单付款成功} */
@@ -3024,6 +3036,8 @@ declare interface TaoTopicsDescriptor {
   taobao_lifeservice(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLifeservice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLive} */
   taobao_live(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLive) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoLiveaigc} */
+  taobao_liveaigc(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLiveaigc) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLocal} */
   taobao_local(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLocal) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLocalorder} */
@@ -3969,6 +3983,8 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_yichao_ClaimOrder', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaYichaoClaimOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaYichaoInsuranceUpdate 天猫服务 > 蚁巢保单修改消息} */
   on(topic: 'alibaba_yichao_InsuranceUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaYichaoInsuranceUpdate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaYichaoReportOrder 天猫服务 > 蚁巢报案单更新消息} */
+  on(topic: 'alibaba_yichao_ReportOrder', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaYichaoReportOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaYunioDataTransfer 平台消息 > YunIO数据流转} */
   on(topic: 'alibaba_yunio_DataTransfer', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaYunioDataTransfer) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlicomAxbSubsEventSync 阿里通信 > 绑定事件同步} */
@@ -4999,6 +5015,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_live_StatusChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLiveStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLiveTcpOrder 淘宝直播API > 淘宝直播订单消息} */
   on(topic: 'taobao_live_TcpOrder', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLiveTcpOrder) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoLiveaigcCommentSend 淘宝 > 淘宝数字人评论推送} */
+  on(topic: 'taobao_liveaigc_CommentSend', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLiveaigcCommentSend) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLocalOrderPorcess 淘宝 > 通知58订单发生变化} */
   on(topic: 'taobao_local_OrderPorcess', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLocalOrderPorcess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLocalorderStatusNotify 淘宝 > 通知到家服务商订单状态变化} */
@@ -5201,10 +5219,18 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_sec_WlcAlipaySync', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSecWlcAlipaySync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSeedGeneralDataCommutation 淘宝 > 淘宝种草数据交换} */
   on(topic: 'taobao_seed_GeneralDataCommutation', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSeedGeneralDataCommutation) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoShangouRefundBuyerModifyAgreement 闪购交易 > 买家修改退款协议消息} */
+  on(topic: 'taobao_shangou_RefundBuyerModifyAgreement', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouRefundBuyerModifyAgreement) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoShangouRefundBuyerReturnGoods 闪购交易 > 买家退货给卖家消息} */
+  on(topic: 'taobao_shangou_RefundBuyerReturnGoods', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouRefundBuyerReturnGoods) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoShangouRefundClosed 闪购交易 > 闪购退款关闭} */
   on(topic: 'taobao_shangou_RefundClosed', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouRefundClosed) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoShangouRefundCreated 闪购交易 > 闪购退款创建} */
   on(topic: 'taobao_shangou_RefundCreated', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouRefundCreated) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoShangouRefundSellerAgreeAgreement 闪购交易 > 卖家同意退款协议消息} */
+  on(topic: 'taobao_shangou_RefundSellerAgreeAgreement', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouRefundSellerAgreeAgreement) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoShangouRefundSellerRefuseAgreement 闪购交易 > 卖家拒绝退款协议消息} */
+  on(topic: 'taobao_shangou_RefundSellerRefuseAgreement', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouRefundSellerRefuseAgreement) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoShangouRefundSuccess 闪购交易 > 闪购退款成功} */
   on(topic: 'taobao_shangou_RefundSuccess', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShangouRefundSuccess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoShangouTradeBuyerPay 闪购交易 > 闪购订单付款成功} */
@@ -6347,6 +6373,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_lifeservice', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLifeservice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLive} */
   on(topic: 'taobao_live', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLive) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoLiveaigc} */
+  on(topic: 'taobao_liveaigc', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLiveaigc) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLocal} */
   on(topic: 'taobao_local', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLocal) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLocalorder} */

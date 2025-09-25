@@ -3438,6 +3438,21 @@ declare namespace Taobao.Live {
 }
 
 /** 淘宝 */
+declare namespace Taobao.Liveaigc {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2664&docType=9 淘宝数字人评论推送} */
+  interface CommentSend {
+    /** 用户评论 */
+    comment: string;
+    /** 直播ID */
+    live_id: string;
+    /** 消息唯一编码 */
+    unique_code: string;
+    /** 用户ID */
+    user_id: string;
+  }
+}
+
+/** 淘宝 */
 declare namespace Taobao.Local {
   /** {@link https://open.taobao.com/tmc.htm?docId=924&docType=9 通知58订单发生变化} */
   interface OrderPorcess {
@@ -5121,6 +5136,54 @@ declare namespace Taobao.Seed {
 
 /** 闪购交易 */
 declare namespace Taobao.Shangou {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2704&docType=9 买家修改退款协议消息} */
+  interface RefundBuyerModifyAgreement {
+    /** 退款单类型：refund_bill(退款单)，return_bill(退货单),replace_bill(退换货单) */
+    bill_type?: string;
+    /** 买家昵称 */
+    buyer_nick: string;
+    /** 由buyer_id加密, 可对外开放, 用来替换buyer_nick作为唯一标识 */
+    buyer_open_uid: string;
+    /** 修改时间 */
+    modified?: Date | number | string;
+    /** 子订单ID */
+    oid?: number | bigint;
+    /** 退款金额 */
+    refund_fee: string;
+    /** 退款ID */
+    refund_id: number;
+    /** 退款阶段类型:onsale(售中),aftersale(售后)。aftersale消息是本次新加类型。 */
+    refund_phase?: string;
+    /** 卖家昵称 */
+    seller_nick: string;
+    /** 主订单ID */
+    tid: number | bigint;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2703&docType=9 买家退货给卖家消息} */
+  interface RefundBuyerReturnGoods {
+    /** 退款单类型：refund_bill(退款单)，return_bill(退货单),replace_bill(退换货单) */
+    bill_type?: string;
+    /** 买家昵称 */
+    buyer_nick: string;
+    /** 由buyer_id加密, 可对外开放, 用来替换buyer_nick作为唯一标识 */
+    buyer_open_uid: string;
+    /** 修改时间 */
+    modified?: Date | number | string;
+    /** 子订单ID */
+    oid?: number | bigint;
+    /** 退款金额 */
+    refund_fee: string;
+    /** 退款ID */
+    refund_id: number;
+    /** 退款阶段类型:onsale(售中),aftersale(售后)。aftersale消息是本次新加类型。 */
+    refund_phase?: string;
+    /** 卖家昵称 */
+    seller_nick: string;
+    /** 主订单ID */
+    tid: number | bigint;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2695&docType=9 闪购退款关闭} */
   interface RefundClosed {
     /** 退款单类型：refund_bill(退款单)，return_bill(退货单),replace_bill(退换货单) */
@@ -5157,6 +5220,54 @@ declare namespace Taobao.Shangou {
     refund_id: number | bigint;
     /** onsale */
     refund_phase?: string;
+    /** 主订单ID */
+    tid: number | bigint;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2706&docType=9 卖家同意退款协议消息} */
+  interface RefundSellerAgreeAgreement {
+    /** 退款单类型：refund_bill(退款单)，return_bill(退货单),replace_bill(退换货单) */
+    bill_type?: string;
+    /** 买家昵称 */
+    buyer_nick: string;
+    /** 由buyer_id加密, 可对外开放, 用来替换buyer_nick作为唯一标识 */
+    buyer_open_uid: string;
+    /** 修改时间 */
+    modified?: Date | number | string;
+    /** 子订单ID */
+    oid?: number | bigint;
+    /** 退款金额 */
+    refund_fee: string;
+    /** 退款ID */
+    refund_id: number;
+    /** 退款阶段类型:onsale(售中),aftersale(售后)。aftersale消息是本次新加类型。 */
+    refund_phase?: string;
+    /** 卖家昵称 */
+    seller_nick: string;
+    /** 主订单ID */
+    tid: number | bigint;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2705&docType=9 卖家拒绝退款协议消息} */
+  interface RefundSellerRefuseAgreement {
+    /** 退款单类型：refund_bill(退款单)，return_bill(退货单),replace_bill(退换货单) */
+    bill_type?: string;
+    /** 买家昵称 */
+    buyer_nick: string;
+    /** 由buyer_id加密, 可对外开放, 用来替换buyer_nick作为唯一标识 */
+    buyer_open_uid: string;
+    /** 修改时间 */
+    modified?: Date | number | string;
+    /** 子订单ID */
+    oid?: number | bigint;
+    /** 退款金额 */
+    refund_fee: string;
+    /** 退款ID */
+    refund_id: number;
+    /** 退款阶段类型:onsale(售中),aftersale(售后)。aftersale消息是本次新加类型。 */
+    refund_phase?: string;
+    /** 卖家昵称 */
+    seller_nick: string;
     /** 主订单ID */
     tid: number | bigint;
   }

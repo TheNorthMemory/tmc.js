@@ -134,7 +134,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 
 ## 支持的TOPICS
 
-<details><summary>共计 102+ 类别，590+ 消息数</summary>
+<details><summary>共计 102+ 类别，594+ 消息数</summary>
 
 | 类别 | 消息数 |
 | --- | --- |
@@ -239,7 +239,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | 绘蛙消息 | 2 |
 | 公益三小时公共 | 1 |
 | 采购宝API | 6 |
-| 闪购交易 | 9 |
+| 闪购交易 | 13 |
 
 </details>
 

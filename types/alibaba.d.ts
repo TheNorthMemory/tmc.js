@@ -4773,6 +4773,26 @@ declare namespace Alibaba.Yichao {
     /** 蚁巢保单状态 */
     status_code: string;
   }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2696&docType=9 蚁巢报案单更新消息} */
+  interface ReportOrder {
+    /** 保司保单号 */
+    insurance_application_no: string;
+    /** 投保单id */
+    insurance_order_id: string;
+    /** 报案单申请id */
+    reporter_id: string;
+    /** 报案单申请号 */
+    report_apply_no: string;
+    /** 报案失败原因 */
+    report_fail_reason: string;
+    /** 报案单id */
+    report_order_id: string;
+    /** 状态码 */
+    status: string;
+    /** 状态code */
+    status_code: string;
+  }
 }
 
 /** 平台消息 */
