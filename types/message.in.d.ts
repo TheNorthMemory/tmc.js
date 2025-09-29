@@ -1177,6 +1177,8 @@ declare namespace IncomingMessage {
   type IdleFishmarketTenderAutoAuctionMsg = Message & { content?: MessageContent & { topic?: 'idle_fishmarket_TenderAutoAuctionMsg', content?: string | Idle.Fishmarket.TenderAutoAuctionMsg } };
   /** {@link Idle.Fishmarketfixed.OrderSyn 闲鱼 > 鱼市一口价买家单订单交易消息变更} */
   type IdleFishmarketfixedOrderSyn = Message & { content?: MessageContent & { topic?: 'idle_fishmarketfixed_OrderSyn', content?: string | Idle.Fishmarketfixed.OrderSyn } };
+  /** {@link Idle.Luxconsign.OrderNotice 闲鱼 > 闲鱼奢品寄卖-卖家单消息通知} */
+  type IdleLuxconsignOrderNotice = Message & { content?: MessageContent & { topic?: 'idle_luxconsign_OrderNotice', content?: string | Idle.Luxconsign.OrderNotice } };
   /** {@link Idle.Newoutlets.UserTagNotice 闲鱼电商Saas > 闲鱼用户身份变更消息} */
   type IdleNewoutletsUserTagNotice = Message & { content?: MessageContent & { topic?: 'idle_newoutlets_UserTagNotice', content?: string | Idle.Newoutlets.UserTagNotice } };
   /** {@link Idle.Recycle.OrderStateSyn 闲鱼回收商消息 > 闲鱼回收业务订单消息} */
@@ -4018,6 +4020,10 @@ declare namespace IncomingMessage {
    */
   type IdleFishmarketfixed = IdleFishmarketfixedOrderSyn;
   /**
+   * - {@link IdleLuxconsignOrderNotice 闲鱼 > 闲鱼奢品寄卖-卖家单消息通知}
+   */
+  type IdleLuxconsign = IdleLuxconsignOrderNotice;
+  /**
    * - {@link IdleNewoutletsUserTagNotice 闲鱼电商Saas > 闲鱼用户身份变更消息}
    */
   type IdleNewoutlets = IdleNewoutletsUserTagNotice;
@@ -6174,6 +6180,7 @@ declare namespace IncomingMessage {
    * - {@link IdleDistribution}
    * - {@link IdleFishmarket}
    * - {@link IdleFishmarketfixed}
+   * - {@link IdleLuxconsign}
    * - {@link IdleNewoutlets}
    * - {@link IdleRecycle}
    * - {@link IdleSeller}
@@ -6192,6 +6199,7 @@ declare namespace IncomingMessage {
     | IdleDistribution
     | IdleFishmarket
     | IdleFishmarketfixed
+    | IdleLuxconsign
     | IdleNewoutlets
     | IdleRecycle
     | IdleSeller

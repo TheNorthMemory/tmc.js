@@ -1192,6 +1192,8 @@ declare interface TaoTopicsDescriptor {
   idle_fishmarket_TenderAutoAuctionMsg(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketTenderAutoAuctionMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleFishmarketfixedOrderSyn 闲鱼 > 鱼市一口价买家单订单交易消息变更} */
   idle_fishmarketfixed_OrderSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketfixedOrderSyn) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleLuxconsignOrderNotice 闲鱼 > 闲鱼奢品寄卖-卖家单消息通知} */
+  idle_luxconsign_OrderNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleLuxconsignOrderNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleNewoutletsUserTagNotice 闲鱼电商Saas > 闲鱼用户身份变更消息} */
   idle_newoutlets_UserTagNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleNewoutletsUserTagNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleRecycleOrderStateSyn 闲鱼回收商消息 > 闲鱼回收业务订单消息} */
@@ -2904,6 +2906,8 @@ declare interface TaoTopicsDescriptor {
   idle_fishmarket(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarket) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleFishmarketfixed} */
   idle_fishmarketfixed(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketfixed) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleLuxconsign} */
+  idle_luxconsign(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleLuxconsign) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleNewoutlets} */
   idle_newoutlets(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleNewoutlets) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleRecycle} */
@@ -4529,6 +4533,8 @@ declare interface TaoEventsListener {
   on(topic: 'idle_fishmarket_TenderAutoAuctionMsg', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketTenderAutoAuctionMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleFishmarketfixedOrderSyn 闲鱼 > 鱼市一口价买家单订单交易消息变更} */
   on(topic: 'idle_fishmarketfixed_OrderSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketfixedOrderSyn) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleLuxconsignOrderNotice 闲鱼 > 闲鱼奢品寄卖-卖家单消息通知} */
+  on(topic: 'idle_luxconsign_OrderNotice', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleLuxconsignOrderNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleNewoutletsUserTagNotice 闲鱼电商Saas > 闲鱼用户身份变更消息} */
   on(topic: 'idle_newoutlets_UserTagNotice', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleNewoutletsUserTagNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleRecycleOrderStateSyn 闲鱼回收商消息 > 闲鱼回收业务订单消息} */
@@ -6241,6 +6247,8 @@ declare interface TaoEventsListener {
   on(topic: 'idle_fishmarket', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarket) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleFishmarketfixed} */
   on(topic: 'idle_fishmarketfixed', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketfixed) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleLuxconsign} */
+  on(topic: 'idle_luxconsign', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleLuxconsign) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleNewoutlets} */
   on(topic: 'idle_newoutlets', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleNewoutlets) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleRecycle} */

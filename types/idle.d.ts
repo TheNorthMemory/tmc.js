@@ -226,6 +226,25 @@ declare namespace Idle.Fishmarketfixed {
   }
 }
 
+/** 闲鱼 */
+declare namespace Idle.Luxconsign {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2701&docType=9 闲鱼奢品寄卖-卖家单消息通知} */
+  interface OrderNotice {
+    /** 操作event */
+    action_event?: string;
+    /** 卖家单id */
+    biz_order_id: string;
+    /** 操作时间 */
+    event_time: string;
+    /** 订单状态机主状态 */
+    order_status: string;
+    /** 订单状态机子状态 */
+    order_sub_status: string;
+    /** 寄卖卖家id */
+    seller_id: string;
+  }
+}
+
 /** 闲鱼电商Saas */
 declare namespace Idle.Newoutlets {
   /** {@link https://open.taobao.com/tmc.htm?docId=2584&docType=9 闲鱼用户身份变更消息} */
