@@ -1192,7 +1192,7 @@ declare interface TaoTopicsDescriptor {
   idle_fishmarket_TenderAutoAuctionMsg(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketTenderAutoAuctionMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleFishmarketfixedOrderSyn 闲鱼 > 鱼市一口价买家单订单交易消息变更} */
   idle_fishmarketfixed_OrderSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketfixedOrderSyn) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.IdleLuxconsignOrderNotice 闲鱼 > 闲鱼奢品寄卖-卖家单消息通知} */
+  /** {@link IncomingMessage.IdleLuxconsignOrderNotice 闲鱼奢品寄卖 > 闲鱼奢品寄卖-卖家单消息通知} */
   idle_luxconsign_OrderNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleLuxconsignOrderNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleNewoutletsUserTagNotice 闲鱼电商Saas > 闲鱼用户身份变更消息} */
   idle_newoutlets_UserTagNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleNewoutletsUserTagNotice) => void): TaoMessageConsumer;
@@ -2180,6 +2180,8 @@ declare interface TaoTopicsDescriptor {
   taobao_wms_ReserveStockInOrderConfirm(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWmsReserveStockInOrderConfirm) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoWorktableInsertData 淘宝 > 智能应用工作表数据新增} */
   taobao_worktable_InsertData(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWorktableInsertData) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoWtContractOrderMsgSync 淘宝 > 通知运营商合约号卡订单可以下行} */
+  taobao_wt_ContractOrderMsgSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWtContractOrderMsgSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoWtOpenTradeMsg 淘宝 > 礼包交易开放消息同步支付宝话费宝侧} */
   taobao_wt_OpenTradeMsg(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWtOpenTradeMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoWtOpenTradePreauthorizMsg 淘宝 > 存送业务预授权操作结果通知} */
@@ -4533,7 +4535,7 @@ declare interface TaoEventsListener {
   on(topic: 'idle_fishmarket_TenderAutoAuctionMsg', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketTenderAutoAuctionMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleFishmarketfixedOrderSyn 闲鱼 > 鱼市一口价买家单订单交易消息变更} */
   on(topic: 'idle_fishmarketfixed_OrderSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketfixedOrderSyn) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.IdleLuxconsignOrderNotice 闲鱼 > 闲鱼奢品寄卖-卖家单消息通知} */
+  /** {@link IncomingMessage.IdleLuxconsignOrderNotice 闲鱼奢品寄卖 > 闲鱼奢品寄卖-卖家单消息通知} */
   on(topic: 'idle_luxconsign_OrderNotice', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleLuxconsignOrderNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleNewoutletsUserTagNotice 闲鱼电商Saas > 闲鱼用户身份变更消息} */
   on(topic: 'idle_newoutlets_UserTagNotice', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleNewoutletsUserTagNotice) => void): TaoMessageConsumer;
@@ -5521,6 +5523,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_wms_ReserveStockInOrderConfirm', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWmsReserveStockInOrderConfirm) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoWorktableInsertData 淘宝 > 智能应用工作表数据新增} */
   on(topic: 'taobao_worktable_InsertData', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWorktableInsertData) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoWtContractOrderMsgSync 淘宝 > 通知运营商合约号卡订单可以下行} */
+  on(topic: 'taobao_wt_ContractOrderMsgSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWtContractOrderMsgSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoWtOpenTradeMsg 淘宝 > 礼包交易开放消息同步支付宝话费宝侧} */
   on(topic: 'taobao_wt_OpenTradeMsg', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWtOpenTradeMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoWtOpenTradePreauthorizMsg 淘宝 > 存送业务预授权操作结果通知} */

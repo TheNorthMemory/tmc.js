@@ -226,7 +226,7 @@ declare namespace Idle.Fishmarketfixed {
   }
 }
 
-/** 闲鱼 */
+/** 闲鱼奢品寄卖 */
 declare namespace Idle.Luxconsign {
   /** {@link https://open.taobao.com/tmc.htm?docId=2701&docType=9 闲鱼奢品寄卖-卖家单消息通知} */
   interface OrderNotice {

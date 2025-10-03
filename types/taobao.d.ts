@@ -7418,6 +7418,14 @@ declare namespace Taobao.Worktable {
 
 /** 淘宝 */
 declare namespace Taobao.Wt {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2707&docType=9 通知运营商合约号卡订单可以下行} */
+  interface ContractOrderMsgSync {
+    /** 订单id */
+    order_id: string;
+    /** 订单状态code */
+    order_status: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=1176&docType=9 礼包交易开放消息同步支付宝话费宝侧} */
   interface OpenTradeMsg {
     /** 预授权冻结编号 */

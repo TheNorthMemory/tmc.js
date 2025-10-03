@@ -1177,7 +1177,7 @@ declare namespace IncomingMessage {
   type IdleFishmarketTenderAutoAuctionMsg = Message & { content?: MessageContent & { topic?: 'idle_fishmarket_TenderAutoAuctionMsg', content?: string | Idle.Fishmarket.TenderAutoAuctionMsg } };
   /** {@link Idle.Fishmarketfixed.OrderSyn 闲鱼 > 鱼市一口价买家单订单交易消息变更} */
   type IdleFishmarketfixedOrderSyn = Message & { content?: MessageContent & { topic?: 'idle_fishmarketfixed_OrderSyn', content?: string | Idle.Fishmarketfixed.OrderSyn } };
-  /** {@link Idle.Luxconsign.OrderNotice 闲鱼 > 闲鱼奢品寄卖-卖家单消息通知} */
+  /** {@link Idle.Luxconsign.OrderNotice 闲鱼奢品寄卖 > 闲鱼奢品寄卖-卖家单消息通知} */
   type IdleLuxconsignOrderNotice = Message & { content?: MessageContent & { topic?: 'idle_luxconsign_OrderNotice', content?: string | Idle.Luxconsign.OrderNotice } };
   /** {@link Idle.Newoutlets.UserTagNotice 闲鱼电商Saas > 闲鱼用户身份变更消息} */
   type IdleNewoutletsUserTagNotice = Message & { content?: MessageContent & { topic?: 'idle_newoutlets_UserTagNotice', content?: string | Idle.Newoutlets.UserTagNotice } };
@@ -2165,6 +2165,8 @@ declare namespace IncomingMessage {
   type TaobaoWmsReserveStockInOrderConfirm = Message & { content?: MessageContent & { topic?: 'taobao_wms_ReserveStockInOrderConfirm', content?: string | Taobao.Wms.ReserveStockInOrderConfirm } };
   /** {@link Taobao.Worktable.InsertData 淘宝 > 智能应用工作表数据新增} */
   type TaobaoWorktableInsertData = Message & { content?: MessageContent & { topic?: 'taobao_worktable_InsertData', content?: string | Taobao.Worktable.InsertData } };
+  /** {@link Taobao.Wt.ContractOrderMsgSync 淘宝 > 通知运营商合约号卡订单可以下行} */
+  type TaobaoWtContractOrderMsgSync = Message & { content?: MessageContent & { topic?: 'taobao_wt_ContractOrderMsgSync', content?: string | Taobao.Wt.ContractOrderMsgSync } };
   /** {@link Taobao.Wt.OpenTradeMsg 淘宝 > 礼包交易开放消息同步支付宝话费宝侧} */
   type TaobaoWtOpenTradeMsg = Message & { content?: MessageContent & { topic?: 'taobao_wt_OpenTradeMsg', content?: string | Taobao.Wt.OpenTradeMsg } };
   /** {@link Taobao.Wt.OpenTradePreauthorizMsg 淘宝 > 存送业务预授权操作结果通知} */
@@ -4020,7 +4022,7 @@ declare namespace IncomingMessage {
    */
   type IdleFishmarketfixed = IdleFishmarketfixedOrderSyn;
   /**
-   * - {@link IdleLuxconsignOrderNotice 闲鱼 > 闲鱼奢品寄卖-卖家单消息通知}
+   * - {@link IdleLuxconsignOrderNotice 闲鱼奢品寄卖 > 闲鱼奢品寄卖-卖家单消息通知}
    */
   type IdleLuxconsign = IdleLuxconsignOrderNotice;
   /**
@@ -5268,12 +5270,14 @@ declare namespace IncomingMessage {
    */
   type TaobaoWorktable = TaobaoWorktableInsertData;
   /**
+   * - {@link TaobaoWtContractOrderMsgSync 淘宝 > 通知运营商合约号卡订单可以下行}
    * - {@link TaobaoWtOpenTradeMsg 淘宝 > 礼包交易开放消息同步支付宝话费宝侧}
    * - {@link TaobaoWtOpenTradePreauthorizMsg 淘宝 > 存送业务预授权操作结果通知}
    * - {@link TaobaoWtOpenTradeTaskMsg 淘宝 > 开放交易任务完成消息}
    * - {@link TaobaoWtVerifyInform 淘宝 > 阿里通信实人认证主动通知运营商}
    */
-  type TaobaoWt = TaobaoWtOpenTradeMsg
+  type TaobaoWt = TaobaoWtContractOrderMsgSync
+    | TaobaoWtOpenTradeMsg
     | TaobaoWtOpenTradePreauthorizMsg
     | TaobaoWtOpenTradeTaskMsg
     | TaobaoWtVerifyInform;
