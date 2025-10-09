@@ -3441,6 +3441,8 @@ declare namespace Taobao.Live {
 declare namespace Taobao.Liveaigc {
   /** {@link https://open.taobao.com/tmc.htm?docId=2664&docType=9 淘宝数字人评论推送} */
   interface CommentSend {
+    /** 主播ID */
+    anchor_id: string;
     /** 用户评论 */
     comment: string;
     /** 直播ID */
@@ -3449,6 +3451,8 @@ declare namespace Taobao.Liveaigc {
     unique_code: string;
     /** 用户ID */
     user_id: string;
+    /** 用户昵称 */
+    user_nick: string;
   }
 }
 
