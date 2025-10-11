@@ -3437,7 +3437,7 @@ declare namespace Taobao.Live {
   }
 }
 
-/** 淘宝 */
+/** 淘宝直播API */
 declare namespace Taobao.Liveaigc {
   /** {@link https://open.taobao.com/tmc.htm?docId=2664&docType=9 淘宝数字人评论推送} */
   interface CommentSend {

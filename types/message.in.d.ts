@@ -1665,7 +1665,7 @@ declare namespace IncomingMessage {
   type TaobaoLiveStatusChange = Message & { content?: MessageContent & { topic?: 'taobao_live_StatusChange', content?: string | Taobao.Live.StatusChange } };
   /** {@link Taobao.Live.TcpOrder 淘宝直播API > 淘宝直播订单消息} */
   type TaobaoLiveTcpOrder = Message & { content?: MessageContent & { topic?: 'taobao_live_TcpOrder', content?: string | Taobao.Live.TcpOrder } };
-  /** {@link Taobao.Liveaigc.CommentSend 淘宝 > 淘宝数字人评论推送} */
+  /** {@link Taobao.Liveaigc.CommentSend 淘宝直播API > 淘宝数字人评论推送} */
   type TaobaoLiveaigcCommentSend = Message & { content?: MessageContent & { topic?: 'taobao_liveaigc_CommentSend', content?: string | Taobao.Liveaigc.CommentSend } };
   /** {@link Taobao.Local.OrderPorcess 淘宝 > 通知58订单发生变化} */
   type TaobaoLocalOrderPorcess = Message & { content?: MessageContent & { topic?: 'taobao_local_OrderPorcess', content?: string | Taobao.Local.OrderPorcess } };
@@ -4644,7 +4644,7 @@ declare namespace IncomingMessage {
     | TaobaoLiveStatusChange
     | TaobaoLiveTcpOrder;
   /**
-   * - {@link TaobaoLiveaigcCommentSend 淘宝 > 淘宝数字人评论推送}
+   * - {@link TaobaoLiveaigcCommentSend 淘宝直播API > 淘宝数字人评论推送}
    */
   type TaobaoLiveaigc = TaobaoLiveaigcCommentSend;
   /**

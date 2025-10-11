@@ -1680,7 +1680,7 @@ declare interface TaoTopicsDescriptor {
   taobao_live_StatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLiveStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLiveTcpOrder 淘宝直播API > 淘宝直播订单消息} */
   taobao_live_TcpOrder(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLiveTcpOrder) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TaobaoLiveaigcCommentSend 淘宝 > 淘宝数字人评论推送} */
+  /** {@link IncomingMessage.TaobaoLiveaigcCommentSend 淘宝直播API > 淘宝数字人评论推送} */
   taobao_liveaigc_CommentSend(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLiveaigcCommentSend) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLocalOrderPorcess 淘宝 > 通知58订单发生变化} */
   taobao_local_OrderPorcess(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLocalOrderPorcess) => void): TaoMessageConsumer;
@@ -5023,7 +5023,7 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_live_StatusChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLiveStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLiveTcpOrder 淘宝直播API > 淘宝直播订单消息} */
   on(topic: 'taobao_live_TcpOrder', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLiveTcpOrder) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TaobaoLiveaigcCommentSend 淘宝 > 淘宝数字人评论推送} */
+  /** {@link IncomingMessage.TaobaoLiveaigcCommentSend 淘宝直播API > 淘宝数字人评论推送} */
   on(topic: 'taobao_liveaigc_CommentSend', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLiveaigcCommentSend) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLocalOrderPorcess 淘宝 > 通知58订单发生变化} */
   on(topic: 'taobao_local_OrderPorcess', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLocalOrderPorcess) => void): TaoMessageConsumer;

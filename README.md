@@ -134,7 +134,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 
 ## 支持的TOPICS
 
-<details><summary>共计 103+ 类别，596+ 消息数</summary>
+<details><summary>共计 103+ 类别，597+ 消息数</summary>
 
 | 类别 | 消息数 |
 | --- | --- |
@@ -162,7 +162,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | 电子发票 | 21 |
 | 航旅度假交易 | 11 |
 | YunOS YoC | 2 |
-| 淘宝直播API | 3 |
+| 淘宝直播API | 4 |
 | 阿里物联 | 2 |
 | 全球购跨境物流 | 1 |
 | 零售plus | 8 |
