@@ -4541,6 +4541,44 @@ declare namespace Taobao.Pc {
     /** 是否成功 */
     success: boolean;
   }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2708&docType=9 PC企业购结算流程事件消息} */
+  interface SettleProcessEventMsg {
+    /** 订单号 */
+    biz_order_no: string;
+    /** 业务时间 */
+    biz_time: number;
+    /** 业务类型 */
+    biz_type: string;
+    /** 买家id 必有值 */
+    buyer_id: number;
+    /** 项目id 必有值 */
+    client_id: string;
+    /** 事件 */
+    event: string;
+    /** 事件触发-账单单号 */
+    event_trigger_bill_order_no: string;
+    /** 事件触发-资金操作单号 */
+    event_trigger_fund_order_no: string;
+    /** 事件触发-结算单号 */
+    event_trigger_settle_order_no: string;
+    /** 消息时间 必有值 */
+    message_time: Date | number | string;
+    /** 消息ID */
+    msg_id: string;
+    /** 订单维度 */
+    order_type: string;
+    /** 外部订单号 必有值 */
+    out_order_id: string;
+    /** 主订单号 必有值 */
+    parent_biz_order_no: string;
+    /** 淘宝主订单id */
+    parent_tp_order_id: number;
+    /** 结算单号 */
+    settle_order_no: string;
+    /** 淘宝订单id */
+    tp_order_id: number;
+  }
 }
 
 /** 淘宝 */

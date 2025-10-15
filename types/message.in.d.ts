@@ -1795,6 +1795,8 @@ declare namespace IncomingMessage {
   type TaobaoPcItemChange = Message & { content?: MessageContent & { topic?: 'taobao_pc_ItemChange', content?: string | Taobao.Pc.ItemChange } };
   /** {@link Taobao.Pc.SaleInvoiceResult 采购宝API > PC企业购发票通知消息} */
   type TaobaoPcSaleInvoiceResult = Message & { content?: MessageContent & { topic?: 'taobao_pc_SaleInvoiceResult', content?: string | Taobao.Pc.SaleInvoiceResult } };
+  /** {@link Taobao.Pc.SettleProcessEventMsg 采购宝API > PC企业购结算流程事件消息} */
+  type TaobaoPcSettleProcessEventMsg = Message & { content?: MessageContent & { topic?: 'taobao_pc_SettleProcessEventMsg', content?: string | Taobao.Pc.SettleProcessEventMsg } };
   /** {@link Taobao.Profit.ResultNotify 淘宝 > 权益领取结果通知} */
   type TaobaoProfitResultNotify = Message & { content?: MessageContent & { topic?: 'taobao_profit_ResultNotify', content?: string | Taobao.Profit.ResultNotify } };
   /** {@link Taobao.Punish.Forall 淘宝 > 淘宝处罚消息} */
@@ -4802,13 +4804,15 @@ declare namespace IncomingMessage {
    * - {@link TaobaoPcEgoTradePackage 采购宝API > 订单包裹消息}
    * - {@link TaobaoPcItemChange 采购宝API > 商品变更消息}
    * - {@link TaobaoPcSaleInvoiceResult 采购宝API > PC企业购发票通知消息}
+   * - {@link TaobaoPcSettleProcessEventMsg 采购宝API > PC企业购结算流程事件消息}
    */
   type TaobaoPc = TaobaoPcBillsGenerate
     | TaobaoPcEgoDisputeOrder
     | TaobaoPcEgoTradeOrder
     | TaobaoPcEgoTradePackage
     | TaobaoPcItemChange
-    | TaobaoPcSaleInvoiceResult;
+    | TaobaoPcSaleInvoiceResult
+    | TaobaoPcSettleProcessEventMsg;
   /**
    * - {@link TaobaoProfitResultNotify 淘宝 > 权益领取结果通知}
    */

@@ -1810,6 +1810,8 @@ declare interface TaoTopicsDescriptor {
   taobao_pc_ItemChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcItemChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPcSaleInvoiceResult 采购宝API > PC企业购发票通知消息} */
   taobao_pc_SaleInvoiceResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcSaleInvoiceResult) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoPcSettleProcessEventMsg 采购宝API > PC企业购结算流程事件消息} */
+  taobao_pc_SettleProcessEventMsg(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcSettleProcessEventMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoProfitResultNotify 淘宝 > 权益领取结果通知} */
   taobao_profit_ResultNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoProfitResultNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPunishForall 淘宝 > 淘宝处罚消息} */
@@ -5153,6 +5155,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_pc_ItemChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcItemChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPcSaleInvoiceResult 采购宝API > PC企业购发票通知消息} */
   on(topic: 'taobao_pc_SaleInvoiceResult', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcSaleInvoiceResult) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoPcSettleProcessEventMsg 采购宝API > PC企业购结算流程事件消息} */
+  on(topic: 'taobao_pc_SettleProcessEventMsg', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcSettleProcessEventMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoProfitResultNotify 淘宝 > 权益领取结果通知} */
   on(topic: 'taobao_profit_ResultNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoProfitResultNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPunishForall 淘宝 > 淘宝处罚消息} */
