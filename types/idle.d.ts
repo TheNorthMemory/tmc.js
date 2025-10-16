@@ -178,14 +178,16 @@ declare namespace Idle.Distribution {
 declare namespace Idle.Fishmarket {
   /** {@link https://open.taobao.com/tmc.htm?docId=2683&docType=9 闲鱼鱼市买家单状态同步} */
   interface BuyerOrderStateSyn {
-    /** 订单号 */
-    biz_order_id: string;
     /** 商品id */
     item_id?: string;
+    /** 订单号 */
+    order_id: string;
     /** 订单状态 */
     order_status: string;
     /** 订单类型，1-竞价买家单 */
     order_type: string;
+    /** 订单子状态 */
+    sub_order_status: string;
     /** 拍场实例id */
     vendue_item_id?: string;
   }
@@ -194,10 +196,12 @@ declare namespace Idle.Fishmarket {
   interface ItemAuctionStateSyn {
     /** 鱼市商品id */
     item_id: string;
-    /** 状态，150-未开始，350-已结束 */
-    status: string;
     /** 竞拍实例id */
     vendue_item_id: string;
+    /** 拍卖状态，枚举：250-竞拍中、350-已结束 */
+    vendue_status: string;
+    /** 拍卖类型，3-实时竞拍 */
+    vendue_type: string;
   }
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2669&docType=9 一口价转暗拍自动上架消息推送} */
