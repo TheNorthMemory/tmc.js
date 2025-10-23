@@ -1240,6 +1240,8 @@ declare interface TaoTopicsDescriptor {
   lianfan_huiwa_RequirementStateUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.LianfanHuiwaRequirementStateUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LianfanHuiwaTaskStateUpdate 绘蛙消息 > 绘蛙生图任务状态变更消息} */
   lianfan_huiwa_TaskStateUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.LianfanHuiwaTaskStateUpdate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.LingyangQuickserviceMessageCreate 瓴羊 > 瓴羊卡片消息投递} */
+  lingyang_quickservice_MessageCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.LingyangQuickserviceMessageCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LstSupplierBroadcastFastRefundMessage 零售通_公共 > 零售通广播极速退款消息} */
   lst_supplier_BroadcastFastRefundMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.LstSupplierBroadcastFastRefundMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LstSupplierFastRefundMessageCreate 零售通_公共 > 品牌商极速退款消息创建} */
@@ -2938,6 +2940,8 @@ declare interface TaoTopicsDescriptor {
   lark_trade(fn: (this: TaoMessageConsumer, message: IncomingMessage.LarkTrade) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LianfanHuiwa} */
   lianfan_huiwa(fn: (this: TaoMessageConsumer, message: IncomingMessage.LianfanHuiwa) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.LingyangQuickservice} */
+  lingyang_quickservice(fn: (this: TaoMessageConsumer, message: IncomingMessage.LingyangQuickservice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LstSupplier} */
   lst_supplier(fn: (this: TaoMessageConsumer, message: IncomingMessage.LstSupplier) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.NiaochaoTccompass} */
@@ -3378,6 +3382,8 @@ declare interface TaoTopicsDescriptor {
   lark(fn: (this: TaoMessageConsumer, message: IncomingMessage.Lark) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Lianfan} */
   lianfan(fn: (this: TaoMessageConsumer, message: IncomingMessage.Lianfan) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Lingyang} */
+  lingyang(fn: (this: TaoMessageConsumer, message: IncomingMessage.Lingyang) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Lst} */
   lst(fn: (this: TaoMessageConsumer, message: IncomingMessage.Lst) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Niaochao} */
@@ -4585,6 +4591,8 @@ declare interface TaoEventsListener {
   on(topic: 'lianfan_huiwa_RequirementStateUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.LianfanHuiwaRequirementStateUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LianfanHuiwaTaskStateUpdate 绘蛙消息 > 绘蛙生图任务状态变更消息} */
   on(topic: 'lianfan_huiwa_TaskStateUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.LianfanHuiwaTaskStateUpdate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.LingyangQuickserviceMessageCreate 瓴羊 > 瓴羊卡片消息投递} */
+  on(topic: 'lingyang_quickservice_MessageCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.LingyangQuickserviceMessageCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LstSupplierBroadcastFastRefundMessage 零售通_公共 > 零售通广播极速退款消息} */
   on(topic: 'lst_supplier_BroadcastFastRefundMessage', listener: (this: TaoMessageConsumer, message: IncomingMessage.LstSupplierBroadcastFastRefundMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LstSupplierFastRefundMessageCreate 零售通_公共 > 品牌商极速退款消息创建} */
@@ -6283,6 +6291,8 @@ declare interface TaoEventsListener {
   on(topic: 'lark_trade', listener: (this: TaoMessageConsumer, message: IncomingMessage.LarkTrade) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LianfanHuiwa} */
   on(topic: 'lianfan_huiwa', listener: (this: TaoMessageConsumer, message: IncomingMessage.LianfanHuiwa) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.LingyangQuickservice} */
+  on(topic: 'lingyang_quickservice', listener: (this: TaoMessageConsumer, message: IncomingMessage.LingyangQuickservice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LstSupplier} */
   on(topic: 'lst_supplier', listener: (this: TaoMessageConsumer, message: IncomingMessage.LstSupplier) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.NiaochaoTccompass} */
@@ -6723,6 +6733,8 @@ declare interface TaoEventsListener {
   on(topic: 'lark', listener: (this: TaoMessageConsumer, message: IncomingMessage.Lark) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Lianfan} */
   on(topic: 'lianfan', listener: (this: TaoMessageConsumer, message: IncomingMessage.Lianfan) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Lingyang} */
+  on(topic: 'lingyang', listener: (this: TaoMessageConsumer, message: IncomingMessage.Lingyang) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Lst} */
   on(topic: 'lst', listener: (this: TaoMessageConsumer, message: IncomingMessage.Lst) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Niaochao} */

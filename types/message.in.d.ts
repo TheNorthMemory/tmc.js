@@ -33,6 +33,7 @@
 /// <reference path="jym.d.ts" />
 /// <reference path="lark.d.ts" />
 /// <reference path="lianfan.d.ts" />
+/// <reference path="lingyang.d.ts" />
 /// <reference path="lst.d.ts" />
 /// <reference path="niaochao.d.ts" />
 /// <reference path="selected.d.ts" />
@@ -1225,6 +1226,8 @@ declare namespace IncomingMessage {
   type LianfanHuiwaRequirementStateUpdate = Message & { content?: MessageContent & { topic?: 'lianfan_huiwa_RequirementStateUpdate', content?: string | Lianfan.Huiwa.RequirementStateUpdate } };
   /** {@link Lianfan.Huiwa.TaskStateUpdate 绘蛙消息 > 绘蛙生图任务状态变更消息} */
   type LianfanHuiwaTaskStateUpdate = Message & { content?: MessageContent & { topic?: 'lianfan_huiwa_TaskStateUpdate', content?: string | Lianfan.Huiwa.TaskStateUpdate } };
+  /** {@link Lingyang.Quickservice.MessageCreate 瓴羊 > 瓴羊卡片消息投递} */
+  type LingyangQuickserviceMessageCreate = Message & { content?: MessageContent & { topic?: 'lingyang_quickservice_MessageCreate', content?: string | Lingyang.Quickservice.MessageCreate } };
   /** {@link Lst.Supplier.BroadcastFastRefundMessage 零售通_公共 > 零售通广播极速退款消息} */
   type LstSupplierBroadcastFastRefundMessage = Message & { content?: MessageContent & { topic?: 'lst_supplier_BroadcastFastRefundMessage', content?: string | Lst.Supplier.BroadcastFastRefundMessage } };
   /** {@link Lst.Supplier.FastRefundMessageCreate 零售通_公共 > 品牌商极速退款消息创建} */
@@ -4100,6 +4103,10 @@ declare namespace IncomingMessage {
     | LianfanHuiwaRequirementStateUpdate
     | LianfanHuiwaTaskStateUpdate;
   /**
+   * - {@link LingyangQuickserviceMessageCreate 瓴羊 > 瓴羊卡片消息投递}
+   */
+  type LingyangQuickservice = LingyangQuickserviceMessageCreate;
+  /**
    * - {@link LstSupplierBroadcastFastRefundMessage 零售通_公共 > 零售通广播极速退款消息}
    * - {@link LstSupplierFastRefundMessageCreate 零售通_公共 > 品牌商极速退款消息创建}
    */
@@ -6237,6 +6244,10 @@ declare namespace IncomingMessage {
    * - {@link LianfanHuiwa}
    */
   type Lianfan = LianfanHuiwa;
+  /**
+   * - {@link LingyangQuickservice}
+   */
+  type Lingyang = LingyangQuickservice;
   /**
    * - {@link LstSupplier}
    */
