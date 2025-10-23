@@ -10,6 +10,12 @@ declare namespace Lianfan.Huiwa {
     model_type: number;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2710&docType=9 项目交付消息} */
+  interface ProjectDelivery {
+    /** 项目id */
+    project_id: number;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2613&docType=9 绘蛙需求状态变更消息} */
   interface RequirementStateUpdate {
     /** 外部用户ID */

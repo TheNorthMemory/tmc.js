@@ -1236,6 +1236,8 @@ declare interface TaoTopicsDescriptor {
   lark_trade_PosTradeDataTransmit(fn: (this: TaoMessageConsumer, message: IncomingMessage.LarkTradePosTradeDataTransmit) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LianfanHuiwaModelStateUpdate 绘蛙消息 > 绘蛙模型状态变更消息} */
   lianfan_huiwa_ModelStateUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.LianfanHuiwaModelStateUpdate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.LianfanHuiwaProjectDelivery 绘蛙消息 > 项目交付消息} */
+  lianfan_huiwa_ProjectDelivery(fn: (this: TaoMessageConsumer, message: IncomingMessage.LianfanHuiwaProjectDelivery) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LianfanHuiwaRequirementStateUpdate 绘蛙消息 > 绘蛙需求状态变更消息} */
   lianfan_huiwa_RequirementStateUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.LianfanHuiwaRequirementStateUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LianfanHuiwaTaskStateUpdate 绘蛙消息 > 绘蛙生图任务状态变更消息} */
@@ -4587,6 +4589,8 @@ declare interface TaoEventsListener {
   on(topic: 'lark_trade_PosTradeDataTransmit', listener: (this: TaoMessageConsumer, message: IncomingMessage.LarkTradePosTradeDataTransmit) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LianfanHuiwaModelStateUpdate 绘蛙消息 > 绘蛙模型状态变更消息} */
   on(topic: 'lianfan_huiwa_ModelStateUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.LianfanHuiwaModelStateUpdate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.LianfanHuiwaProjectDelivery 绘蛙消息 > 项目交付消息} */
+  on(topic: 'lianfan_huiwa_ProjectDelivery', listener: (this: TaoMessageConsumer, message: IncomingMessage.LianfanHuiwaProjectDelivery) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LianfanHuiwaRequirementStateUpdate 绘蛙消息 > 绘蛙需求状态变更消息} */
   on(topic: 'lianfan_huiwa_RequirementStateUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.LianfanHuiwaRequirementStateUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.LianfanHuiwaTaskStateUpdate 绘蛙消息 > 绘蛙生图任务状态变更消息} */
