@@ -68,6 +68,19 @@ declare namespace Taobao.Ag {
 }
 
 /** 淘宝 */
+declare namespace Taobao.Agent {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2711&docType=9 工作流开放异步执行结果通知} */
+  interface WorkflowAsyncResult {
+    /** 工作流执行结果 */
+    result: string;
+    /** 工作流标识 */
+    workflow_code: string;
+    /** 工作流执行实例id */
+    workflow_instance_id: string;
+  }
+}
+
+/** 淘宝 */
 declare namespace Taobao.Ais {
   /** {@link https://open.taobao.com/tmc.htm?docId=1398&docType=9 厂商协同统一消息} */
   interface CommonMessage {

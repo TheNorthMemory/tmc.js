@@ -1254,6 +1254,8 @@ declare namespace IncomingMessage {
   type TaobaoAgSignInfo = Message & { content?: MessageContent & { topic?: 'taobao_ag_SignInfo', content?: string | Taobao.Ag.SignInfo } };
   /** {@link Taobao.Ag.TicketsMsg AliGenius > 商家工单消息} */
   type TaobaoAgTicketsMsg = Message & { content?: MessageContent & { topic?: 'taobao_ag_TicketsMsg', content?: string | Taobao.Ag.TicketsMsg } };
+  /** {@link Taobao.Agent.WorkflowAsyncResult 淘宝 > 工作流开放异步执行结果通知} */
+  type TaobaoAgentWorkflowAsyncResult = Message & { content?: MessageContent & { topic?: 'taobao_agent_WorkflowAsyncResult', content?: string | Taobao.Agent.WorkflowAsyncResult } };
   /** {@link Taobao.Ais.CommonMessage 淘宝 > 厂商协同统一消息} */
   type TaobaoAisCommonMessage = Message & { content?: MessageContent & { topic?: 'taobao_ais_CommonMessage', content?: string | Taobao.Ais.CommonMessage } };
   /** {@link Taobao.Aliauto.ElectronicVoucherActivationPublish 阿里汽车 > 阿里汽车-电子凭证激活信息推送} */
@@ -4145,6 +4147,10 @@ declare namespace IncomingMessage {
     | TaobaoAgSignInfo
     | TaobaoAgTicketsMsg;
   /**
+   * - {@link TaobaoAgentWorkflowAsyncResult 淘宝 > 工作流开放异步执行结果通知}
+   */
+  type TaobaoAgent = TaobaoAgentWorkflowAsyncResult;
+  /**
    * - {@link TaobaoAisCommonMessage 淘宝 > 厂商协同统一消息}
    */
   type TaobaoAis = TaobaoAisCommonMessage;
@@ -6268,6 +6274,7 @@ declare namespace IncomingMessage {
     | SelectedReverify;
   /**
    * - {@link TaobaoAg}
+   * - {@link TaobaoAgent}
    * - {@link TaobaoAis}
    * - {@link TaobaoAliauto}
    * - {@link TaobaoAlipic}
@@ -6388,6 +6395,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoZk}
    */
   type Taobao = TaobaoAg
+    | TaobaoAgent
     | TaobaoAis
     | TaobaoAliauto
     | TaobaoAlipic
