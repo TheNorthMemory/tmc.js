@@ -1559,6 +1559,14 @@ declare namespace Alibaba.Idle {
     /** 变更状态 */
     status: number;
   }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2712&docType=9 闲鱼KA商家询单消息通知} */
+  interface LocalMessageNotify {
+    /** 消息内容 */
+    content: string;
+    /** 消息唯一id */
+    content_id: string;
+  }
 }
 
 /** 五道口配送 */

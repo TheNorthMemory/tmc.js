@@ -268,6 +268,8 @@ declare namespace IncomingMessage {
   type AlibabaIdleHouseStatusNotify = Message & { content?: MessageContent & { topic?: 'alibaba_idle_HouseStatusNotify', content?: string | Alibaba.Idle.HouseStatusNotify } };
   /** {@link Alibaba.Idle.JobItemChangeStatusNotify 闲鱼 > 岗位状态变更通知} */
   type AlibabaIdleJobItemChangeStatusNotify = Message & { content?: MessageContent & { topic?: 'alibaba_idle_JobItemChangeStatusNotify', content?: string | Alibaba.Idle.JobItemChangeStatusNotify } };
+  /** {@link Alibaba.Idle.LocalMessageNotify 闲鱼 > 闲鱼KA商家询单消息通知} */
+  type AlibabaIdleLocalMessageNotify = Message & { content?: MessageContent & { topic?: 'alibaba_idle_LocalMessageNotify', content?: string | Alibaba.Idle.LocalMessageNotify } };
   /** {@link Alibaba.Ifp.PackageCfcContainer 五道口配送 > 同城履约包裹状态变更消息} */
   type AlibabaIfpPackageCfcContainer = Message & { content?: MessageContent & { topic?: 'alibaba_ifp_PackageCfcContainer', content?: string | Alibaba.Ifp.PackageCfcContainer } };
   /** {@link Alibaba.Infop.GoodsChange 采购系统 > 采购系统商品消息变更消息} */
@@ -2818,10 +2820,12 @@ declare namespace IncomingMessage {
    * - {@link AlibabaIdleApplyInfoSyn 闲鱼 > 灵活用工报名信息同步}
    * - {@link AlibabaIdleHouseStatusNotify 闲鱼 > 闲鱼房源状态变更通知}
    * - {@link AlibabaIdleJobItemChangeStatusNotify 闲鱼 > 岗位状态变更通知}
+   * - {@link AlibabaIdleLocalMessageNotify 闲鱼 > 闲鱼KA商家询单消息通知}
    */
   type AlibabaIdle = AlibabaIdleApplyInfoSyn
     | AlibabaIdleHouseStatusNotify
-    | AlibabaIdleJobItemChangeStatusNotify;
+    | AlibabaIdleJobItemChangeStatusNotify
+    | AlibabaIdleLocalMessageNotify;
   /**
    * - {@link AlibabaIfpPackageCfcContainer 五道口配送 > 同城履约包裹状态变更消息}
    */

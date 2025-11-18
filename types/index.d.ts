@@ -282,6 +282,8 @@ declare interface TaoTopicsDescriptor {
   alibaba_idle_HouseStatusNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleHouseStatusNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIdleJobItemChangeStatusNotify 闲鱼 > 岗位状态变更通知} */
   alibaba_idle_JobItemChangeStatusNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleJobItemChangeStatusNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaIdleLocalMessageNotify 闲鱼 > 闲鱼KA商家询单消息通知} */
+  alibaba_idle_LocalMessageNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleLocalMessageNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIfpPackageCfcContainer 五道口配送 > 同城履约包裹状态变更消息} */
   alibaba_ifp_PackageCfcContainer(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIfpPackageCfcContainer) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInfopGoodsChange 采购系统 > 采购系统商品消息变更消息} */
@@ -3639,6 +3641,8 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_idle_HouseStatusNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleHouseStatusNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIdleJobItemChangeStatusNotify 闲鱼 > 岗位状态变更通知} */
   on(topic: 'alibaba_idle_JobItemChangeStatusNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleJobItemChangeStatusNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaIdleLocalMessageNotify 闲鱼 > 闲鱼KA商家询单消息通知} */
+  on(topic: 'alibaba_idle_LocalMessageNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleLocalMessageNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIfpPackageCfcContainer 五道口配送 > 同城履约包裹状态变更消息} */
   on(topic: 'alibaba_ifp_PackageCfcContainer', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIfpPackageCfcContainer) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaInfopGoodsChange 采购系统 > 采购系统商品消息变更消息} */
