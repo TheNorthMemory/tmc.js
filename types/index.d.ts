@@ -2336,6 +2336,8 @@ declare interface TaoTopicsDescriptor {
   tmall_homeservice_GroupWorkcardCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallHomeserviceGroupWorkcardCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallHomeserviceLogisticsUpdate 天猫服务 > 天猫家享服务物流更新} */
   tmall_homeservice_LogisticsUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallHomeserviceLogisticsUpdate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallHomeserviceTradeRefund 天猫服务 > 交易逆向消息} */
+  tmall_homeservice_TradeRefund(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallHomeserviceTradeRefund) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallIfpfulfillResultNotice 天猫 > 创建订单结果通知接口} */
   tmall_ifpfulfill_ResultNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallIfpfulfillResultNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallJstBusinessInformationSend 天猫 > 商家消息} */
@@ -5695,6 +5697,8 @@ declare interface TaoEventsListener {
   on(topic: 'tmall_homeservice_GroupWorkcardCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallHomeserviceGroupWorkcardCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallHomeserviceLogisticsUpdate 天猫服务 > 天猫家享服务物流更新} */
   on(topic: 'tmall_homeservice_LogisticsUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallHomeserviceLogisticsUpdate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallHomeserviceTradeRefund 天猫服务 > 交易逆向消息} */
+  on(topic: 'tmall_homeservice_TradeRefund', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallHomeserviceTradeRefund) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallIfpfulfillResultNotice 天猫 > 创建订单结果通知接口} */
   on(topic: 'tmall_ifpfulfill_ResultNotice', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallIfpfulfillResultNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallJstBusinessInformationSend 天猫 > 商家消息} */

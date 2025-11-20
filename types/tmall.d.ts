@@ -448,6 +448,28 @@ declare namespace Tmall.Homeservice {
     /** 工单id列表 */
     workcard_id_list: string;
   }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2715&docType=9 交易逆向消息} */
+  interface TradeRefund {
+    /** 实物子订单 */
+    order_id: string;
+    /** 主订单id */
+    parent_order_id: string;
+    /** 退款金额/份数类型 */
+    refund_amount_type: string;
+    /** 退款状态 */
+    refund_status: number;
+    /** 退款状态描述 */
+    refund_status_desc: string;
+    /** 退款类型 */
+    refund_type: string;
+    /** 退款类型描述 */
+    refund_type_desc: string;
+    /** 工单id列表 */
+    update_date: Date | number | string;
+    /** 工单id列表 */
+    work_card_ids: string;
+  }
 }
 
 /** 天猫 */
