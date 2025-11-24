@@ -192,6 +192,8 @@ declare interface TaoTopicsDescriptor {
   alibaba_ascpchannelmanagermentmsg_OrderDeliver(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAscpchannelmanagermentmsgOrderDeliver) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaCfoAccountFlowNotify TMI付款及银行支行主数据 > 账号流水通知消息} */
   alibaba_cfo_AccountFlowNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCfoAccountFlowNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaCfoReturnInfo TMI付款及银行支行主数据 > 退票相关消息} */
+  alibaba_cfo_ReturnInfo(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCfoReturnInfo) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaCouponOpenCouponDraw 券开放消息权限包 > 用户领取券消息通知} */
   alibaba_coupon_OpenCouponDraw(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCouponOpenCouponDraw) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaCrmOutboundInfoMessage ICBU-CRM智能机器人外呼沟通 > 外呼名单消息发送} */
@@ -3553,6 +3555,8 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_ascpchannelmanagermentmsg_OrderDeliver', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAscpchannelmanagermentmsgOrderDeliver) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaCfoAccountFlowNotify TMI付款及银行支行主数据 > 账号流水通知消息} */
   on(topic: 'alibaba_cfo_AccountFlowNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCfoAccountFlowNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaCfoReturnInfo TMI付款及银行支行主数据 > 退票相关消息} */
+  on(topic: 'alibaba_cfo_ReturnInfo', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCfoReturnInfo) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaCouponOpenCouponDraw 券开放消息权限包 > 用户领取券消息通知} */
   on(topic: 'alibaba_coupon_OpenCouponDraw', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaCouponOpenCouponDraw) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaCrmOutboundInfoMessage ICBU-CRM智能机器人外呼沟通 > 外呼名单消息发送} */

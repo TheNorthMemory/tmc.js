@@ -907,6 +907,16 @@ declare namespace Alibaba.Cfo {
     /** 唯一编码 */
     unique_no: string;
   }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2713&docType=9 退票相关消息} */
+  interface ReturnInfo {
+    /** 发票编码 */
+    invoice_code: string;
+    /** 发票号 */
+    invoice_no: string;
+    /** 请求单号 */
+    request_no: string;
+  }
 }
 
 /** 券开放消息权限包 */

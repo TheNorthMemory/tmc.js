@@ -178,6 +178,8 @@ declare namespace IncomingMessage {
   type AlibabaAscpchannelmanagermentmsgOrderDeliver = Message & { content?: MessageContent & { topic?: 'alibaba_ascpchannelmanagermentmsg_OrderDeliver', content?: string | Alibaba.Ascpchannelmanagermentmsg.OrderDeliver } };
   /** {@link Alibaba.Cfo.AccountFlowNotify TMI付款及银行支行主数据 > 账号流水通知消息} */
   type AlibabaCfoAccountFlowNotify = Message & { content?: MessageContent & { topic?: 'alibaba_cfo_AccountFlowNotify', content?: string | Alibaba.Cfo.AccountFlowNotify } };
+  /** {@link Alibaba.Cfo.ReturnInfo TMI付款及银行支行主数据 > 退票相关消息} */
+  type AlibabaCfoReturnInfo = Message & { content?: MessageContent & { topic?: 'alibaba_cfo_ReturnInfo', content?: string | Alibaba.Cfo.ReturnInfo } };
   /** {@link Alibaba.Coupon.OpenCouponDraw 券开放消息权限包 > 用户领取券消息通知} */
   type AlibabaCouponOpenCouponDraw = Message & { content?: MessageContent & { topic?: 'alibaba_coupon_OpenCouponDraw', content?: string | Alibaba.Coupon.OpenCouponDraw } };
   /** {@link Alibaba.Crm.OutboundInfoMessage ICBU-CRM智能机器人外呼沟通 > 外呼名单消息发送} */
@@ -2706,8 +2708,10 @@ declare namespace IncomingMessage {
     | AlibabaAscpchannelmanagermentmsgOrderDeliver;
   /**
    * - {@link AlibabaCfoAccountFlowNotify TMI付款及银行支行主数据 > 账号流水通知消息}
+   * - {@link AlibabaCfoReturnInfo TMI付款及银行支行主数据 > 退票相关消息}
    */
-  type AlibabaCfo = AlibabaCfoAccountFlowNotify;
+  type AlibabaCfo = AlibabaCfoAccountFlowNotify
+    | AlibabaCfoReturnInfo;
   /**
    * - {@link AlibabaCouponOpenCouponDraw 券开放消息权限包 > 用户领取券消息通知}
    */
