@@ -1246,6 +1246,160 @@ declare namespace Taobao.Dispute {
     tid: number | bigint;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2717&docType=9 补寄-买家已申请补寄} */
+  interface ReshippingBuyerApply {
+    /** 1/2:退款,3:退货退款,4/6:换货，10:补寄 */
+    biz_claim_type: number;
+    /** 涉及金额 */
+    buyer_refund_fee: number;
+    /** 创建时间 */
+    create: Date | number | string;
+    /** 1:售中, 2:售后 */
+    dispute_type: number;
+    /** 更新时间 */
+    modified: Date | number | string;
+    /** 子订单ID */
+    oid: string;
+    /** 退款单ID */
+    refund_id: string;
+    /** 卖家openUid */
+    seller_open_uid: string;
+    /** 支付单ID/主订单ID */
+    tid: string;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2721&docType=9 补寄-买家关闭补寄申请} */
+  interface ReshippingBuyerClose {
+    /** 1/2:退款,3:退货退款,4/6:换货，10:补寄 */
+    biz_claim_type: number;
+    /** 涉及金额 */
+    buyer_refund_fee: number;
+    /** 创建时间 */
+    create: Date | number | string;
+    /** 1:售中, 2:售后 */
+    dispute_type: number;
+    /** 更新时间 */
+    modified: Date | number | string;
+    /** 子订单ID */
+    oid: string;
+    /** 退款单ID */
+    refund_id: string;
+    /** 卖家openUid */
+    seller_open_uid: string;
+    /** 支付单ID/主订单ID */
+    tid: string;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2722&docType=9 补寄-买家确认收货} */
+  interface ReshippingBuyerConfirm {
+    /** 1/2:退款,3:退货退款,4/6:换货，10:补寄 */
+    biz_claim_type: number;
+    /** 涉及金额 */
+    buyer_refund_fee: number;
+    /** 创建时间 */
+    create: Date | number | string;
+    /** 1:售中, 2:售后 */
+    dispute_type: number;
+    /** 更新时间 */
+    modified: Date | number | string;
+    /** 子订单ID */
+    oid: string;
+    /** 退款单ID */
+    refund_id: string;
+    /** 卖家openUid */
+    seller_open_uid: string;
+    /** 支付单ID/主订单ID */
+    tid: string;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2720&docType=9 补寄-买家修改补寄申请} */
+  interface ReshippingBuyerModify {
+    /** 1/2:退款,3:退货退款,4/6:换货，10:补寄 */
+    biz_claim_type: number;
+    /** 涉及金额 */
+    buyer_refund_fee: number;
+    /** 创建时间 */
+    create: Date | number | string;
+    /** 1:售中, 2:售后 */
+    dispute_type: number;
+    /** 更新时间 */
+    modified: Date | number | string;
+    /** 子订单ID */
+    oid: string;
+    /** 退款单ID */
+    refund_id: string;
+    /** 卖家openUid */
+    seller_open_uid: string;
+    /** 支付单ID/主订单ID */
+    tid: string;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2723&docType=9 补寄-卖家同意补寄申请} */
+  interface ReshippingSellerAccept {
+    /** 1/2:退款,3:退货退款,4/6:换货，10:补寄 */
+    biz_claim_type: number;
+    /** 涉及金额 */
+    buyer_refund_fee: number;
+    /** 创建时间 */
+    create: Date | number | string;
+    /** 1:售中, 2:售后 */
+    dispute_type: number;
+    /** 更新时间 */
+    modified: Date | number | string;
+    /** 子订单ID */
+    oid: string;
+    /** 退款单ID */
+    refund_id: string;
+    /** 卖家openUid */
+    seller_open_uid: string;
+    /** 支付单ID/主订单ID */
+    tid: string;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2719&docType=9 补寄-商家寄出补寄商品} */
+  interface ReshippingSellerConsignGoods {
+    /** 1/2:退款,3:退货退款,4/6:换货，10:补寄 */
+    biz_claim_type: number;
+    /** 涉及金额 */
+    buyer_refund_fee: number;
+    /** 创建时间 */
+    create: Date | number | string;
+    /** 1:售中, 2:售后 */
+    dispute_type: number;
+    /** 更新时间 */
+    modified: Date | number | string;
+    /** 子订单ID */
+    oid: string;
+    /** 退款单ID */
+    refund_id: string;
+    /** 卖家openUid */
+    seller_open_uid: string;
+    /** 支付单ID/主订单ID */
+    tid: string;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2718&docType=9 补寄-商家拒绝申请} */
+  interface ReshippingSellerRefused {
+    /** 1/2:退款,3:退货退款,4/6:换货，10:补寄 */
+    biz_claim_type: number;
+    /** 涉及金额 */
+    buyer_refund_fee: number;
+    /** 创建时间 */
+    create: Date | number | string;
+    /** 1:售中, 2:售后 */
+    dispute_type: number;
+    /** 更新时间 */
+    modified: Date | number | string;
+    /** 子订单ID */
+    oid: string;
+    /** 退款单ID */
+    refund_id: string;
+    /** 卖家openUid */
+    seller_open_uid: string;
+    /** 支付单ID/主订单ID */
+    tid: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2532&docType=9 申请小二介入} */
   interface TaobaoInterApplied {
     /** 1/2:退款,3:退货退款,4/6:换货,其他请调api获取详细信息 */
@@ -7979,6 +8133,20 @@ declare namespace Taobao.Zk {
     identify_logistics_id: string;
     /** 订单id */
     tp_order_id: string;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2716&docType=9 平台鉴别商家新增/修改二次免鉴申请消息通知isv} */
+  interface StoreIdentifyRequestResaleNotify {
+    /** 业务货品鉴别单号 */
+    biz_identify_order_id: string;
+    /** ResaleRequestCreate：新增；ResaleRequestEdit：编辑 */
+    event_type: string;
+    /** 货品鉴别单号 */
+    identify_order_id: string;
+    /** 需求鉴别单id */
+    identify_request_id: string;
+    /** 操作时间 */
+    time: string;
   }
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2593&docType=9 真酷供应商提交报价结果通知} */

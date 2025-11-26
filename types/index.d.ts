@@ -1416,6 +1416,20 @@ declare interface TaoTopicsDescriptor {
   taobao_dispute_RefundPriceProtect(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeRefundPriceProtect) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDisputeRefundSuccess 淘宝 > 新退款成功消息} */
   taobao_dispute_RefundSuccess(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeRefundSuccess) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDisputeReshippingBuyerApply 淘宝 > 补寄-买家已申请补寄} */
+  taobao_dispute_ReshippingBuyerApply(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeReshippingBuyerApply) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDisputeReshippingBuyerClose 淘宝 > 补寄-买家关闭补寄申请} */
+  taobao_dispute_ReshippingBuyerClose(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeReshippingBuyerClose) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDisputeReshippingBuyerConfirm 淘宝 > 补寄-买家确认收货} */
+  taobao_dispute_ReshippingBuyerConfirm(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeReshippingBuyerConfirm) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDisputeReshippingBuyerModify 淘宝 > 补寄-买家修改补寄申请} */
+  taobao_dispute_ReshippingBuyerModify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeReshippingBuyerModify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDisputeReshippingSellerAccept 淘宝 > 补寄-卖家同意补寄申请} */
+  taobao_dispute_ReshippingSellerAccept(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeReshippingSellerAccept) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDisputeReshippingSellerConsignGoods 淘宝 > 补寄-商家寄出补寄商品} */
+  taobao_dispute_ReshippingSellerConsignGoods(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeReshippingSellerConsignGoods) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDisputeReshippingSellerRefused 淘宝 > 补寄-商家拒绝申请} */
+  taobao_dispute_ReshippingSellerRefused(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeReshippingSellerRefused) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDisputeTaobaoInterApplied 淘宝 > 申请小二介入} */
   taobao_dispute_TaobaoInterApplied(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeTaobaoInterApplied) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDpaasAuthTokenCreate DPAAS > dpaas三方服务token} */
@@ -2260,6 +2274,8 @@ declare interface TaoTopicsDescriptor {
   taobao_zk_RefundNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkRefundNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoZkSecondLogisticsGotNotify 淘宝真酷 > 淘宝真酷二段寄出后揽收通知机构} */
   taobao_zk_SecondLogisticsGotNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkSecondLogisticsGotNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoZkStoreIdentifyRequestResaleNotify 淘宝真酷 > 平台鉴别商家新增/修改二次免鉴申请消息通知isv} */
+  taobao_zk_StoreIdentifyRequestResaleNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkStoreIdentifyRequestResaleNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoZkSubmitQuote 淘宝真酷 > 真酷供应商提交报价结果通知} */
   taobao_zk_SubmitQuote(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkSubmitQuote) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaotaoFilmThirdPartyRefundPush 淘宝 > 退款消息同步} */
@@ -4779,6 +4795,20 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_dispute_RefundPriceProtect', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeRefundPriceProtect) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDisputeRefundSuccess 淘宝 > 新退款成功消息} */
   on(topic: 'taobao_dispute_RefundSuccess', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeRefundSuccess) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDisputeReshippingBuyerApply 淘宝 > 补寄-买家已申请补寄} */
+  on(topic: 'taobao_dispute_ReshippingBuyerApply', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeReshippingBuyerApply) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDisputeReshippingBuyerClose 淘宝 > 补寄-买家关闭补寄申请} */
+  on(topic: 'taobao_dispute_ReshippingBuyerClose', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeReshippingBuyerClose) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDisputeReshippingBuyerConfirm 淘宝 > 补寄-买家确认收货} */
+  on(topic: 'taobao_dispute_ReshippingBuyerConfirm', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeReshippingBuyerConfirm) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDisputeReshippingBuyerModify 淘宝 > 补寄-买家修改补寄申请} */
+  on(topic: 'taobao_dispute_ReshippingBuyerModify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeReshippingBuyerModify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDisputeReshippingSellerAccept 淘宝 > 补寄-卖家同意补寄申请} */
+  on(topic: 'taobao_dispute_ReshippingSellerAccept', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeReshippingSellerAccept) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDisputeReshippingSellerConsignGoods 淘宝 > 补寄-商家寄出补寄商品} */
+  on(topic: 'taobao_dispute_ReshippingSellerConsignGoods', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeReshippingSellerConsignGoods) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDisputeReshippingSellerRefused 淘宝 > 补寄-商家拒绝申请} */
+  on(topic: 'taobao_dispute_ReshippingSellerRefused', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeReshippingSellerRefused) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDisputeTaobaoInterApplied 淘宝 > 申请小二介入} */
   on(topic: 'taobao_dispute_TaobaoInterApplied', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeTaobaoInterApplied) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDpaasAuthTokenCreate DPAAS > dpaas三方服务token} */
@@ -5623,6 +5653,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_zk_RefundNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkRefundNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoZkSecondLogisticsGotNotify 淘宝真酷 > 淘宝真酷二段寄出后揽收通知机构} */
   on(topic: 'taobao_zk_SecondLogisticsGotNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkSecondLogisticsGotNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoZkStoreIdentifyRequestResaleNotify 淘宝真酷 > 平台鉴别商家新增/修改二次免鉴申请消息通知isv} */
+  on(topic: 'taobao_zk_StoreIdentifyRequestResaleNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkStoreIdentifyRequestResaleNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoZkSubmitQuote 淘宝真酷 > 真酷供应商提交报价结果通知} */
   on(topic: 'taobao_zk_SubmitQuote', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoZkSubmitQuote) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaotaoFilmThirdPartyRefundPush 淘宝 > 退款消息同步} */

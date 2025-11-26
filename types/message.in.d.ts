@@ -1402,6 +1402,20 @@ declare namespace IncomingMessage {
   type TaobaoDisputeRefundPriceProtect = Message & { content?: MessageContent & { topic?: 'taobao_dispute_RefundPriceProtect', content?: string | Taobao.Dispute.RefundPriceProtect } };
   /** {@link Taobao.Dispute.RefundSuccess 淘宝 > 新退款成功消息} */
   type TaobaoDisputeRefundSuccess = Message & { content?: MessageContent & { topic?: 'taobao_dispute_RefundSuccess', content?: string | Taobao.Dispute.RefundSuccess } };
+  /** {@link Taobao.Dispute.ReshippingBuyerApply 淘宝 > 补寄-买家已申请补寄} */
+  type TaobaoDisputeReshippingBuyerApply = Message & { content?: MessageContent & { topic?: 'taobao_dispute_ReshippingBuyerApply', content?: string | Taobao.Dispute.ReshippingBuyerApply } };
+  /** {@link Taobao.Dispute.ReshippingBuyerClose 淘宝 > 补寄-买家关闭补寄申请} */
+  type TaobaoDisputeReshippingBuyerClose = Message & { content?: MessageContent & { topic?: 'taobao_dispute_ReshippingBuyerClose', content?: string | Taobao.Dispute.ReshippingBuyerClose } };
+  /** {@link Taobao.Dispute.ReshippingBuyerConfirm 淘宝 > 补寄-买家确认收货} */
+  type TaobaoDisputeReshippingBuyerConfirm = Message & { content?: MessageContent & { topic?: 'taobao_dispute_ReshippingBuyerConfirm', content?: string | Taobao.Dispute.ReshippingBuyerConfirm } };
+  /** {@link Taobao.Dispute.ReshippingBuyerModify 淘宝 > 补寄-买家修改补寄申请} */
+  type TaobaoDisputeReshippingBuyerModify = Message & { content?: MessageContent & { topic?: 'taobao_dispute_ReshippingBuyerModify', content?: string | Taobao.Dispute.ReshippingBuyerModify } };
+  /** {@link Taobao.Dispute.ReshippingSellerAccept 淘宝 > 补寄-卖家同意补寄申请} */
+  type TaobaoDisputeReshippingSellerAccept = Message & { content?: MessageContent & { topic?: 'taobao_dispute_ReshippingSellerAccept', content?: string | Taobao.Dispute.ReshippingSellerAccept } };
+  /** {@link Taobao.Dispute.ReshippingSellerConsignGoods 淘宝 > 补寄-商家寄出补寄商品} */
+  type TaobaoDisputeReshippingSellerConsignGoods = Message & { content?: MessageContent & { topic?: 'taobao_dispute_ReshippingSellerConsignGoods', content?: string | Taobao.Dispute.ReshippingSellerConsignGoods } };
+  /** {@link Taobao.Dispute.ReshippingSellerRefused 淘宝 > 补寄-商家拒绝申请} */
+  type TaobaoDisputeReshippingSellerRefused = Message & { content?: MessageContent & { topic?: 'taobao_dispute_ReshippingSellerRefused', content?: string | Taobao.Dispute.ReshippingSellerRefused } };
   /** {@link Taobao.Dispute.TaobaoInterApplied 淘宝 > 申请小二介入} */
   type TaobaoDisputeTaobaoInterApplied = Message & { content?: MessageContent & { topic?: 'taobao_dispute_TaobaoInterApplied', content?: string | Taobao.Dispute.TaobaoInterApplied } };
   /** {@link Taobao.Dpaas.AuthTokenCreate DPAAS > dpaas三方服务token} */
@@ -2246,6 +2260,8 @@ declare namespace IncomingMessage {
   type TaobaoZkRefundNotify = Message & { content?: MessageContent & { topic?: 'taobao_zk_RefundNotify', content?: string | Taobao.Zk.RefundNotify } };
   /** {@link Taobao.Zk.SecondLogisticsGotNotify 淘宝真酷 > 淘宝真酷二段寄出后揽收通知机构} */
   type TaobaoZkSecondLogisticsGotNotify = Message & { content?: MessageContent & { topic?: 'taobao_zk_SecondLogisticsGotNotify', content?: string | Taobao.Zk.SecondLogisticsGotNotify } };
+  /** {@link Taobao.Zk.StoreIdentifyRequestResaleNotify 淘宝真酷 > 平台鉴别商家新增/修改二次免鉴申请消息通知isv} */
+  type TaobaoZkStoreIdentifyRequestResaleNotify = Message & { content?: MessageContent & { topic?: 'taobao_zk_StoreIdentifyRequestResaleNotify', content?: string | Taobao.Zk.StoreIdentifyRequestResaleNotify } };
   /** {@link Taobao.Zk.SubmitQuote 淘宝真酷 > 真酷供应商提交报价结果通知} */
   type TaobaoZkSubmitQuote = Message & { content?: MessageContent & { topic?: 'taobao_zk_SubmitQuote', content?: string | Taobao.Zk.SubmitQuote } };
   /** {@link Taotao.Film.ThirdPartyRefundPush 淘宝 > 退款消息同步} */
@@ -4329,6 +4345,13 @@ declare namespace IncomingMessage {
    * - {@link TaobaoDisputeRefundCreated 淘宝 > 新退款创建}
    * - {@link TaobaoDisputeRefundPriceProtect 淘宝 > 价保退款成功}
    * - {@link TaobaoDisputeRefundSuccess 淘宝 > 新退款成功消息}
+   * - {@link TaobaoDisputeReshippingBuyerApply 淘宝 > 补寄-买家已申请补寄}
+   * - {@link TaobaoDisputeReshippingBuyerClose 淘宝 > 补寄-买家关闭补寄申请}
+   * - {@link TaobaoDisputeReshippingBuyerConfirm 淘宝 > 补寄-买家确认收货}
+   * - {@link TaobaoDisputeReshippingBuyerModify 淘宝 > 补寄-买家修改补寄申请}
+   * - {@link TaobaoDisputeReshippingSellerAccept 淘宝 > 补寄-卖家同意补寄申请}
+   * - {@link TaobaoDisputeReshippingSellerConsignGoods 淘宝 > 补寄-商家寄出补寄商品}
+   * - {@link TaobaoDisputeReshippingSellerRefused 淘宝 > 补寄-商家拒绝申请}
    * - {@link TaobaoDisputeTaobaoInterApplied 淘宝 > 申请小二介入}
    */
   type TaobaoDispute = TaobaoDisputeExchangeAgree
@@ -4345,6 +4368,13 @@ declare namespace IncomingMessage {
     | TaobaoDisputeRefundCreated
     | TaobaoDisputeRefundPriceProtect
     | TaobaoDisputeRefundSuccess
+    | TaobaoDisputeReshippingBuyerApply
+    | TaobaoDisputeReshippingBuyerClose
+    | TaobaoDisputeReshippingBuyerConfirm
+    | TaobaoDisputeReshippingBuyerModify
+    | TaobaoDisputeReshippingSellerAccept
+    | TaobaoDisputeReshippingSellerConsignGoods
+    | TaobaoDisputeReshippingSellerRefused
     | TaobaoDisputeTaobaoInterApplied;
   /**
    * - {@link TaobaoDpaasAuthTokenCreate DPAAS > dpaas三方服务token}
@@ -5370,6 +5400,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoZkPreIdentifyModifyPicNotify 淘宝真酷 > 淘宝真酷-提前鉴别修改图片通知}
    * - {@link TaobaoZkRefundNotify 淘宝真酷 > 真酷鉴定用户退款通知}
    * - {@link TaobaoZkSecondLogisticsGotNotify 淘宝真酷 > 淘宝真酷二段寄出后揽收通知机构}
+   * - {@link TaobaoZkStoreIdentifyRequestResaleNotify 淘宝真酷 > 平台鉴别商家新增/修改二次免鉴申请消息通知isv}
    * - {@link TaobaoZkSubmitQuote 淘宝真酷 > 真酷供应商提交报价结果通知}
    */
   type TaobaoZk = TaobaoZkCloudIdentifyCreateNotify
@@ -5383,6 +5414,7 @@ declare namespace IncomingMessage {
     | TaobaoZkPreIdentifyModifyPicNotify
     | TaobaoZkRefundNotify
     | TaobaoZkSecondLogisticsGotNotify
+    | TaobaoZkStoreIdentifyRequestResaleNotify
     | TaobaoZkSubmitQuote;
   /**
    * - {@link TaotaoFilmThirdPartyRefundPush 淘宝 > 退款消息同步}
