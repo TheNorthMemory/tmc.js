@@ -1730,6 +1730,8 @@ declare namespace IncomingMessage {
   type TaobaoOfnNewOrderEventSync = Message & { content?: MessageContent & { topic?: 'taobao_ofn_NewOrderEventSync', content?: string | Taobao.Ofn.NewOrderEventSync } };
   /** {@link Taobao.Ofn.OrderStatusSync 以旧换新-订单域 > 以旧换新回收单状态同步} */
   type TaobaoOfnOrderStatusSync = Message & { content?: MessageContent & { topic?: 'taobao_ofn_OrderStatusSync', content?: string | Taobao.Ofn.OrderStatusSync } };
+  /** {@link Taobao.Ofn.QaAmountConfirm 以旧换新-订单域 > 以旧换新质检价格通知} */
+  type TaobaoOfnQaAmountConfirm = Message & { content?: MessageContent & { topic?: 'taobao_ofn_QaAmountConfirm', content?: string | Taobao.Ofn.QaAmountConfirm } };
   /** {@link Taobao.Ofn.RateSync 以旧换新-订单域 > 以旧换新回收单评价消息} */
   type TaobaoOfnRateSync = Message & { content?: MessageContent & { topic?: 'taobao_ofn_RateSync', content?: string | Taobao.Ofn.RateSync } };
   /** {@link Taobao.Openaccount.DataSync 导购平台 > openaccount数据同步} */
@@ -4758,11 +4760,13 @@ declare namespace IncomingMessage {
    * - {@link TaobaoOfnCreditPayStatusChange 以旧换新-订单域 > 信用代扣状态变更同步}
    * - {@link TaobaoOfnNewOrderEventSync 以旧换新-订单域 > 以旧换新新机单事件同步}
    * - {@link TaobaoOfnOrderStatusSync 以旧换新-订单域 > 以旧换新回收单状态同步}
+   * - {@link TaobaoOfnQaAmountConfirm 以旧换新-订单域 > 以旧换新质检价格通知}
    * - {@link TaobaoOfnRateSync 以旧换新-订单域 > 以旧换新回收单评价消息}
    */
   type TaobaoOfn = TaobaoOfnCreditPayStatusChange
     | TaobaoOfnNewOrderEventSync
     | TaobaoOfnOrderStatusSync
+    | TaobaoOfnQaAmountConfirm
     | TaobaoOfnRateSync;
   /**
    * - {@link TaobaoOpenaccountDataSync 导购平台 > openaccount数据同步}

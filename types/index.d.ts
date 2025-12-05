@@ -1744,6 +1744,8 @@ declare interface TaoTopicsDescriptor {
   taobao_ofn_NewOrderEventSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnNewOrderEventSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOfnOrderStatusSync 以旧换新-订单域 > 以旧换新回收单状态同步} */
   taobao_ofn_OrderStatusSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnOrderStatusSync) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOfnQaAmountConfirm 以旧换新-订单域 > 以旧换新质检价格通知} */
+  taobao_ofn_QaAmountConfirm(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnQaAmountConfirm) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOfnRateSync 以旧换新-订单域 > 以旧换新回收单评价消息} */
   taobao_ofn_RateSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnRateSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpenaccountDataSync 导购平台 > openaccount数据同步} */
@@ -5123,6 +5125,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_ofn_NewOrderEventSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnNewOrderEventSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOfnOrderStatusSync 以旧换新-订单域 > 以旧换新回收单状态同步} */
   on(topic: 'taobao_ofn_OrderStatusSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnOrderStatusSync) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOfnQaAmountConfirm 以旧换新-订单域 > 以旧换新质检价格通知} */
+  on(topic: 'taobao_ofn_QaAmountConfirm', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnQaAmountConfirm) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOfnRateSync 以旧换新-订单域 > 以旧换新回收单评价消息} */
   on(topic: 'taobao_ofn_RateSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnRateSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpenaccountDataSync 导购平台 > openaccount数据同步} */

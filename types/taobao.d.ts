@@ -3971,6 +3971,16 @@ declare namespace Taobao.Ofn {
     supplier_id?: string;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2726&docType=9 以旧换新质检价格通知} */
+  interface QaAmountConfirm {
+    /** 平台质检金额，单位分 */
+    platform_report_price: number;
+    /** 回收单 ID */
+    recycle_order_id: number;
+    /** 质检报告版本号 */
+    version: number;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2572&docType=9 以旧换新回收单评价消息} */
   interface RateSync {
     /** 回收单 ID */
