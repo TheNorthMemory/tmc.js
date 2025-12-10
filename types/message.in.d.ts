@@ -892,9 +892,9 @@ declare namespace IncomingMessage {
   type AliyunGscProductionReceiptInfoCreate = Message & { content?: MessageContent & { topic?: 'aliyun_gsc_ProductionReceiptInfoCreate', content?: string | Aliyun.Gsc.ProductionReceiptInfoCreate } };
   /** {@link Aliyun.Iot.OrderSync IOT-智能制造 > 天天工厂采购单同步} */
   type AliyunIotOrderSync = Message & { content?: MessageContent & { topic?: 'aliyun_iot_OrderSync', content?: string | Aliyun.Iot.OrderSync } };
-  /** {@link Alsc.Coupon.CouponSync 本地生活联盟平台-卡券消息API > 本地联盟卡券同步消息} */
+  /** {@link Alsc.Coupon.CouponSync 本地生活联盟平台-卡券消息API > 淘宝闪购联盟卡券同步消息} */
   type AlscCouponCouponSync = Message & { content?: MessageContent & { topic?: 'alsc_coupon_CouponSync', content?: string | Alsc.Coupon.CouponSync } };
-  /** {@link Alsc.Coupon.OrderVoucherStatus 本地生活联盟平台-卡券消息API > 饿了么卡券openapi订单消息} */
+  /** {@link Alsc.Coupon.OrderVoucherStatus 本地生活联盟平台-卡券消息API > 淘宝闪购卡券openapi订单消息} */
   type AlscCouponOrderVoucherStatus = Message & { content?: MessageContent & { topic?: 'alsc_coupon_OrderVoucherStatus', content?: string | Alsc.Coupon.OrderVoucherStatus } };
   /** {@link Alsc.Couponpackage.PurchaseSync 本地生活联盟平台-卡券包采购单消息API > 本地联盟卡券包采购同步消息} */
   type AlscCouponpackagePurchaseSync = Message & { content?: MessageContent & { topic?: 'alsc_couponpackage_PurchaseSync', content?: string | Alsc.Couponpackage.PurchaseSync } };
@@ -3641,8 +3641,8 @@ declare namespace IncomingMessage {
    */
   type AliyunIot = AliyunIotOrderSync;
   /**
-   * - {@link AlscCouponCouponSync 本地生活联盟平台-卡券消息API > 本地联盟卡券同步消息}
-   * - {@link AlscCouponOrderVoucherStatus 本地生活联盟平台-卡券消息API > 饿了么卡券openapi订单消息}
+   * - {@link AlscCouponCouponSync 本地生活联盟平台-卡券消息API > 淘宝闪购联盟卡券同步消息}
+   * - {@link AlscCouponOrderVoucherStatus 本地生活联盟平台-卡券消息API > 淘宝闪购卡券openapi订单消息}
    */
   type AlscCoupon = AlscCouponCouponSync
     | AlscCouponOrderVoucherStatus;

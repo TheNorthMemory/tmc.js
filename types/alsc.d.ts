@@ -1,6 +1,6 @@
 /** 本地生活联盟平台-卡券消息API */
 declare namespace Alsc.Coupon {
-  /** {@link https://open.taobao.com/tmc.htm?docId=2459&docType=9 本地联盟卡券同步消息} */
+  /** {@link https://open.taobao.com/tmc.htm?docId=2459&docType=9 淘宝闪购联盟卡券同步消息} */
   interface CouponSync {
     /** 扩展信息 */
     ext_info?: string;
@@ -12,7 +12,7 @@ declare namespace Alsc.Coupon {
     type: string;
   }
 
-  /** {@link https://open.taobao.com/tmc.htm?docId=2460&docType=9 饿了么卡券openapi订单消息} */
+  /** {@link https://open.taobao.com/tmc.htm?docId=2460&docType=9 淘宝闪购卡券openapi订单消息} */
   interface OrderVoucherStatus {
     /** 订单号 */
     biz_order_id: string;
