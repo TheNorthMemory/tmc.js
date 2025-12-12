@@ -47,7 +47,7 @@ declare namespace Alsc.Coupon {
 
 /** 本地生活联盟平台-卡券包采购单消息API */
 declare namespace Alsc.Couponpackage {
-  /** {@link https://open.taobao.com/tmc.htm?docId=2471&docType=9 本地联盟卡券包采购同步消息} */
+  /** {@link https://open.taobao.com/tmc.htm?docId=2471&docType=9 淘宝闪购联盟卡券包采购同步消息} */
   interface PurchaseSync {
     /** 扩展信息 */
     ext_info: string;
@@ -59,7 +59,7 @@ declare namespace Alsc.Couponpackage {
     type: string;
   }
 
-  /** {@link https://open.taobao.com/tmc.htm?docId=2472&docType=9 本地联盟卡券包采购凭证同步} */
+  /** {@link https://open.taobao.com/tmc.htm?docId=2472&docType=9 淘宝闪购联盟卡券包采购凭证同步} */
   interface PurchaseTicketSync {
     /** 扩展字段 */
     ext_info: string;
@@ -228,7 +228,7 @@ declare namespace Alsc.Kbbbt {
 
 /** 本地生活联盟平台-霸王餐消息推送API */
 declare namespace Alsc.Reviewbwc {
-  /** {@link https://open.taobao.com/tmc.htm?docId=2486&docType=9 本地联盟饿了么评价有礼门店活动消息} */
+  /** {@link https://open.taobao.com/tmc.htm?docId=2486&docType=9 淘宝闪购评价有礼门店活动消息} */
   interface ActivityEnrollSync {
     /** 活动ID */
     activity_id: string;

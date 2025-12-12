@@ -896,9 +896,9 @@ declare namespace IncomingMessage {
   type AlscCouponCouponSync = Message & { content?: MessageContent & { topic?: 'alsc_coupon_CouponSync', content?: string | Alsc.Coupon.CouponSync } };
   /** {@link Alsc.Coupon.OrderVoucherStatus 本地生活联盟平台-卡券消息API > 淘宝闪购卡券openapi订单消息} */
   type AlscCouponOrderVoucherStatus = Message & { content?: MessageContent & { topic?: 'alsc_coupon_OrderVoucherStatus', content?: string | Alsc.Coupon.OrderVoucherStatus } };
-  /** {@link Alsc.Couponpackage.PurchaseSync 本地生活联盟平台-卡券包采购单消息API > 本地联盟卡券包采购同步消息} */
+  /** {@link Alsc.Couponpackage.PurchaseSync 本地生活联盟平台-卡券包采购单消息API > 淘宝闪购联盟卡券包采购同步消息} */
   type AlscCouponpackagePurchaseSync = Message & { content?: MessageContent & { topic?: 'alsc_couponpackage_PurchaseSync', content?: string | Alsc.Couponpackage.PurchaseSync } };
-  /** {@link Alsc.Couponpackage.PurchaseTicketSync 本地生活联盟平台-卡券包采购单消息API > 本地联盟卡券包采购凭证同步} */
+  /** {@link Alsc.Couponpackage.PurchaseTicketSync 本地生活联盟平台-卡券包采购单消息API > 淘宝闪购联盟卡券包采购凭证同步} */
   type AlscCouponpackagePurchaseTicketSync = Message & { content?: MessageContent & { topic?: 'alsc_couponpackage_PurchaseTicketSync', content?: string | Alsc.Couponpackage.PurchaseTicketSync } };
   /** {@link Alsc.Daodian.HaitunPromoEventNotify 口碑 > 本地生活到店多渠道投放海豚活动事件通知} */
   type AlscDaodianHaitunPromoEventNotify = Message & { content?: MessageContent & { topic?: 'alsc_daodian_HaitunPromoEventNotify', content?: string | Alsc.Daodian.HaitunPromoEventNotify } };
@@ -912,7 +912,7 @@ declare namespace IncomingMessage {
   type AlscKbbbtOrderVoucherStatus = Message & { content?: MessageContent & { topic?: 'alsc_kbbbt_OrderVoucherStatus', content?: string | Alsc.Kbbbt.OrderVoucherStatus } };
   /** {@link Alsc.Kbbbt.ProductChange 口碑 > 口碑爆爆团商品变更的消息} */
   type AlscKbbbtProductChange = Message & { content?: MessageContent & { topic?: 'alsc_kbbbt_ProductChange', content?: string | Alsc.Kbbbt.ProductChange } };
-  /** {@link Alsc.Reviewbwc.ActivityEnrollSync 本地生活联盟平台-霸王餐消息推送API > 本地联盟饿了么评价有礼门店活动消息} */
+  /** {@link Alsc.Reviewbwc.ActivityEnrollSync 本地生活联盟平台-霸王餐消息推送API > 淘宝闪购评价有礼门店活动消息} */
   type AlscReviewbwcActivityEnrollSync = Message & { content?: MessageContent & { topic?: 'alsc_reviewbwc_ActivityEnrollSync', content?: string | Alsc.Reviewbwc.ActivityEnrollSync } };
   /** {@link Alsc.Reviewbwc.SidBindSync 本地生活联盟平台-霸王餐消息推送API > 评价有礼渠道用户身份SID绑定通知} */
   type AlscReviewbwcSidBindSync = Message & { content?: MessageContent & { topic?: 'alsc_reviewbwc_SidBindSync', content?: string | Alsc.Reviewbwc.SidBindSync } };
@@ -3647,8 +3647,8 @@ declare namespace IncomingMessage {
   type AlscCoupon = AlscCouponCouponSync
     | AlscCouponOrderVoucherStatus;
   /**
-   * - {@link AlscCouponpackagePurchaseSync 本地生活联盟平台-卡券包采购单消息API > 本地联盟卡券包采购同步消息}
-   * - {@link AlscCouponpackagePurchaseTicketSync 本地生活联盟平台-卡券包采购单消息API > 本地联盟卡券包采购凭证同步}
+   * - {@link AlscCouponpackagePurchaseSync 本地生活联盟平台-卡券包采购单消息API > 淘宝闪购联盟卡券包采购同步消息}
+   * - {@link AlscCouponpackagePurchaseTicketSync 本地生活联盟平台-卡券包采购单消息API > 淘宝闪购联盟卡券包采购凭证同步}
    */
   type AlscCouponpackage = AlscCouponpackagePurchaseSync
     | AlscCouponpackagePurchaseTicketSync;
@@ -3673,7 +3673,7 @@ declare namespace IncomingMessage {
   type AlscKbbbt = AlscKbbbtOrderVoucherStatus
     | AlscKbbbtProductChange;
   /**
-   * - {@link AlscReviewbwcActivityEnrollSync 本地生活联盟平台-霸王餐消息推送API > 本地联盟饿了么评价有礼门店活动消息}
+   * - {@link AlscReviewbwcActivityEnrollSync 本地生活联盟平台-霸王餐消息推送API > 淘宝闪购评价有礼门店活动消息}
    * - {@link AlscReviewbwcSidBindSync 本地生活联盟平台-霸王餐消息推送API > 评价有礼渠道用户身份SID绑定通知}
    */
   type AlscReviewbwc = AlscReviewbwcActivityEnrollSync
