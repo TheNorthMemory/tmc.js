@@ -892,13 +892,13 @@ declare namespace IncomingMessage {
   type AliyunGscProductionReceiptInfoCreate = Message & { content?: MessageContent & { topic?: 'aliyun_gsc_ProductionReceiptInfoCreate', content?: string | Aliyun.Gsc.ProductionReceiptInfoCreate } };
   /** {@link Aliyun.Iot.OrderSync IOT-智能制造 > 天天工厂采购单同步} */
   type AliyunIotOrderSync = Message & { content?: MessageContent & { topic?: 'aliyun_iot_OrderSync', content?: string | Aliyun.Iot.OrderSync } };
-  /** {@link Alsc.Coupon.CouponSync 本地生活联盟平台-卡券消息API > 淘宝闪购联盟卡券同步消息} */
+  /** {@link Alsc.Coupon.CouponSync 淘宝闪购联盟-卡券消息API > 淘宝闪购联盟卡券同步消息} */
   type AlscCouponCouponSync = Message & { content?: MessageContent & { topic?: 'alsc_coupon_CouponSync', content?: string | Alsc.Coupon.CouponSync } };
-  /** {@link Alsc.Coupon.OrderVoucherStatus 本地生活联盟平台-卡券消息API > 淘宝闪购卡券openapi订单消息} */
+  /** {@link Alsc.Coupon.OrderVoucherStatus 淘宝闪购联盟-卡券消息API > 淘宝闪购卡券openapi订单消息} */
   type AlscCouponOrderVoucherStatus = Message & { content?: MessageContent & { topic?: 'alsc_coupon_OrderVoucherStatus', content?: string | Alsc.Coupon.OrderVoucherStatus } };
-  /** {@link Alsc.Couponpackage.PurchaseSync 本地生活联盟平台-卡券包采购单消息API > 淘宝闪购联盟卡券包采购同步消息} */
+  /** {@link Alsc.Couponpackage.PurchaseSync 淘宝闪购联盟-卡券包采购单消息API > 淘宝闪购联盟卡券包采购同步消息} */
   type AlscCouponpackagePurchaseSync = Message & { content?: MessageContent & { topic?: 'alsc_couponpackage_PurchaseSync', content?: string | Alsc.Couponpackage.PurchaseSync } };
-  /** {@link Alsc.Couponpackage.PurchaseTicketSync 本地生活联盟平台-卡券包采购单消息API > 淘宝闪购联盟卡券包采购凭证同步} */
+  /** {@link Alsc.Couponpackage.PurchaseTicketSync 淘宝闪购联盟-卡券包采购单消息API > 淘宝闪购联盟卡券包采购凭证同步} */
   type AlscCouponpackagePurchaseTicketSync = Message & { content?: MessageContent & { topic?: 'alsc_couponpackage_PurchaseTicketSync', content?: string | Alsc.Couponpackage.PurchaseTicketSync } };
   /** {@link Alsc.Daodian.HaitunPromoEventNotify 口碑 > 本地生活到店多渠道投放海豚活动事件通知} */
   type AlscDaodianHaitunPromoEventNotify = Message & { content?: MessageContent & { topic?: 'alsc_daodian_HaitunPromoEventNotify', content?: string | Alsc.Daodian.HaitunPromoEventNotify } };
@@ -912,9 +912,9 @@ declare namespace IncomingMessage {
   type AlscKbbbtOrderVoucherStatus = Message & { content?: MessageContent & { topic?: 'alsc_kbbbt_OrderVoucherStatus', content?: string | Alsc.Kbbbt.OrderVoucherStatus } };
   /** {@link Alsc.Kbbbt.ProductChange 口碑 > 口碑爆爆团商品变更的消息} */
   type AlscKbbbtProductChange = Message & { content?: MessageContent & { topic?: 'alsc_kbbbt_ProductChange', content?: string | Alsc.Kbbbt.ProductChange } };
-  /** {@link Alsc.Reviewbwc.ActivityEnrollSync 本地生活联盟平台-霸王餐消息推送API > 淘宝闪购评价有礼门店活动消息} */
+  /** {@link Alsc.Reviewbwc.ActivityEnrollSync 淘宝闪购联盟-霸王餐消息推送API > 淘宝闪购评价有礼门店活动消息} */
   type AlscReviewbwcActivityEnrollSync = Message & { content?: MessageContent & { topic?: 'alsc_reviewbwc_ActivityEnrollSync', content?: string | Alsc.Reviewbwc.ActivityEnrollSync } };
-  /** {@link Alsc.Reviewbwc.SidBindSync 本地生活联盟平台-霸王餐消息推送API > 评价有礼渠道用户身份SID绑定通知} */
+  /** {@link Alsc.Reviewbwc.SidBindSync 淘宝闪购联盟-霸王餐消息推送API > 评价有礼渠道用户身份SID绑定通知} */
   type AlscReviewbwcSidBindSync = Message & { content?: MessageContent & { topic?: 'alsc_reviewbwc_SidBindSync', content?: string | Alsc.Reviewbwc.SidBindSync } };
   /** {@link Alsc.Risk.PunishSend 口碑 > 本地生活处罚中心处罚下发} */
   type AlscRiskPunishSend = Message & { content?: MessageContent & { topic?: 'alsc_risk_PunishSend', content?: string | Alsc.Risk.PunishSend } };
@@ -2382,6 +2382,8 @@ declare namespace IncomingMessage {
   type TmallNrtTcpsDeliveryStatus = Message & { content?: MessageContent & { topic?: 'tmall_nrt_TcpsDeliveryStatus', content?: string | Tmall.Nrt.TcpsDeliveryStatus } };
   /** {@link Tmall.Oic.InventoryInbound 天猫 > 天猫货品入库消息} */
   type TmallOicInventoryInbound = Message & { content?: MessageContent & { topic?: 'tmall_oic_InventoryInbound', content?: string | Tmall.Oic.InventoryInbound } };
+  /** {@link Tmall.Omni.StoreAdd 全渠道API > 新零售门店审核通过消息} */
+  type TmallOmniStoreAdd = Message & { content?: MessageContent & { topic?: 'tmall_omni_StoreAdd', content?: string | Tmall.Omni.StoreAdd } };
   /** {@link Tmall.Omnichannel.DiscountedPriceChange 聚石塔 > 商品优惠价格变更} */
   type TmallOmnichannelDiscountedPriceChange = Message & { content?: MessageContent & { topic?: 'tmall_omnichannel_DiscountedPriceChange', content?: string | Tmall.Omnichannel.DiscountedPriceChange } };
   /** {@link Tmall.Omnichannel.InventoryChange 聚石塔 > 商品库存变化} */
@@ -3641,14 +3643,14 @@ declare namespace IncomingMessage {
    */
   type AliyunIot = AliyunIotOrderSync;
   /**
-   * - {@link AlscCouponCouponSync 本地生活联盟平台-卡券消息API > 淘宝闪购联盟卡券同步消息}
-   * - {@link AlscCouponOrderVoucherStatus 本地生活联盟平台-卡券消息API > 淘宝闪购卡券openapi订单消息}
+   * - {@link AlscCouponCouponSync 淘宝闪购联盟-卡券消息API > 淘宝闪购联盟卡券同步消息}
+   * - {@link AlscCouponOrderVoucherStatus 淘宝闪购联盟-卡券消息API > 淘宝闪购卡券openapi订单消息}
    */
   type AlscCoupon = AlscCouponCouponSync
     | AlscCouponOrderVoucherStatus;
   /**
-   * - {@link AlscCouponpackagePurchaseSync 本地生活联盟平台-卡券包采购单消息API > 淘宝闪购联盟卡券包采购同步消息}
-   * - {@link AlscCouponpackagePurchaseTicketSync 本地生活联盟平台-卡券包采购单消息API > 淘宝闪购联盟卡券包采购凭证同步}
+   * - {@link AlscCouponpackagePurchaseSync 淘宝闪购联盟-卡券包采购单消息API > 淘宝闪购联盟卡券包采购同步消息}
+   * - {@link AlscCouponpackagePurchaseTicketSync 淘宝闪购联盟-卡券包采购单消息API > 淘宝闪购联盟卡券包采购凭证同步}
    */
   type AlscCouponpackage = AlscCouponpackagePurchaseSync
     | AlscCouponpackagePurchaseTicketSync;
@@ -3673,8 +3675,8 @@ declare namespace IncomingMessage {
   type AlscKbbbt = AlscKbbbtOrderVoucherStatus
     | AlscKbbbtProductChange;
   /**
-   * - {@link AlscReviewbwcActivityEnrollSync 本地生活联盟平台-霸王餐消息推送API > 淘宝闪购评价有礼门店活动消息}
-   * - {@link AlscReviewbwcSidBindSync 本地生活联盟平台-霸王餐消息推送API > 评价有礼渠道用户身份SID绑定通知}
+   * - {@link AlscReviewbwcActivityEnrollSync 淘宝闪购联盟-霸王餐消息推送API > 淘宝闪购评价有礼门店活动消息}
+   * - {@link AlscReviewbwcSidBindSync 淘宝闪购联盟-霸王餐消息推送API > 评价有礼渠道用户身份SID绑定通知}
    */
   type AlscReviewbwc = AlscReviewbwcActivityEnrollSync
     | AlscReviewbwcSidBindSync;
@@ -5569,6 +5571,10 @@ declare namespace IncomingMessage {
    */
   type TmallOic = TmallOicInventoryInbound;
   /**
+   * - {@link TmallOmniStoreAdd 全渠道API > 新零售门店审核通过消息}
+   */
+  type TmallOmni = TmallOmniStoreAdd;
+  /**
    * - {@link TmallOmnichannelDiscountedPriceChange 聚石塔 > 商品优惠价格变更}
    * - {@link TmallOmnichannelInventoryChange 聚石塔 > 商品库存变化}
    * - {@link TmallOmnichannelInventoryZero 聚石塔 > 商品库存归零}
@@ -6582,6 +6588,7 @@ declare namespace IncomingMessage {
    * - {@link TmallMultshop}
    * - {@link TmallNrt}
    * - {@link TmallOic}
+   * - {@link TmallOmni}
    * - {@link TmallOmnichannel}
    * - {@link TmallOnehour}
    * - {@link TmallPosfee}
@@ -6615,6 +6622,7 @@ declare namespace IncomingMessage {
     | TmallMultshop
     | TmallNrt
     | TmallOic
+    | TmallOmni
     | TmallOmnichannel
     | TmallOnehour
     | TmallPosfee

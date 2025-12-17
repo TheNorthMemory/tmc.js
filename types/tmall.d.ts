@@ -775,6 +775,23 @@ declare namespace Tmall.Oic {
   }
 }
 
+/** 全渠道API */
+declare namespace Tmall.Omni {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2727&docType=9 新零售门店审核通过消息} */
+  interface StoreAdd {
+    /** 外部编码 */
+    biz_outer_id?: string;
+    /** 创建时间 */
+    gmt_create?: Date | number | string;
+    /** 门店名 */
+    name?: string;
+    /** 门店id */
+    store_id: number;
+    /** 分店名 */
+    subname?: string;
+  }
+}
+
 /** 聚石塔 */
 declare namespace Tmall.Omnichannel {
   /** {@link https://open.taobao.com/tmc.htm?docId=826&docType=9 商品优惠价格变更} */

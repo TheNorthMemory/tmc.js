@@ -906,13 +906,13 @@ declare interface TaoTopicsDescriptor {
   aliyun_gsc_ProductionReceiptInfoCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.AliyunGscProductionReceiptInfoCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AliyunIotOrderSync IOT-智能制造 > 天天工厂采购单同步} */
   aliyun_iot_OrderSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.AliyunIotOrderSync) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlscCouponCouponSync 本地生活联盟平台-卡券消息API > 淘宝闪购联盟卡券同步消息} */
+  /** {@link IncomingMessage.AlscCouponCouponSync 淘宝闪购联盟-卡券消息API > 淘宝闪购联盟卡券同步消息} */
   alsc_coupon_CouponSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlscCouponCouponSync) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlscCouponOrderVoucherStatus 本地生活联盟平台-卡券消息API > 淘宝闪购卡券openapi订单消息} */
+  /** {@link IncomingMessage.AlscCouponOrderVoucherStatus 淘宝闪购联盟-卡券消息API > 淘宝闪购卡券openapi订单消息} */
   alsc_coupon_OrderVoucherStatus(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlscCouponOrderVoucherStatus) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlscCouponpackagePurchaseSync 本地生活联盟平台-卡券包采购单消息API > 淘宝闪购联盟卡券包采购同步消息} */
+  /** {@link IncomingMessage.AlscCouponpackagePurchaseSync 淘宝闪购联盟-卡券包采购单消息API > 淘宝闪购联盟卡券包采购同步消息} */
   alsc_couponpackage_PurchaseSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlscCouponpackagePurchaseSync) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlscCouponpackagePurchaseTicketSync 本地生活联盟平台-卡券包采购单消息API > 淘宝闪购联盟卡券包采购凭证同步} */
+  /** {@link IncomingMessage.AlscCouponpackagePurchaseTicketSync 淘宝闪购联盟-卡券包采购单消息API > 淘宝闪购联盟卡券包采购凭证同步} */
   alsc_couponpackage_PurchaseTicketSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlscCouponpackagePurchaseTicketSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlscDaodianHaitunPromoEventNotify 口碑 > 本地生活到店多渠道投放海豚活动事件通知} */
   alsc_daodian_HaitunPromoEventNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlscDaodianHaitunPromoEventNotify) => void): TaoMessageConsumer;
@@ -926,9 +926,9 @@ declare interface TaoTopicsDescriptor {
   alsc_kbbbt_OrderVoucherStatus(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlscKbbbtOrderVoucherStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlscKbbbtProductChange 口碑 > 口碑爆爆团商品变更的消息} */
   alsc_kbbbt_ProductChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlscKbbbtProductChange) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlscReviewbwcActivityEnrollSync 本地生活联盟平台-霸王餐消息推送API > 淘宝闪购评价有礼门店活动消息} */
+  /** {@link IncomingMessage.AlscReviewbwcActivityEnrollSync 淘宝闪购联盟-霸王餐消息推送API > 淘宝闪购评价有礼门店活动消息} */
   alsc_reviewbwc_ActivityEnrollSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlscReviewbwcActivityEnrollSync) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlscReviewbwcSidBindSync 本地生活联盟平台-霸王餐消息推送API > 评价有礼渠道用户身份SID绑定通知} */
+  /** {@link IncomingMessage.AlscReviewbwcSidBindSync 淘宝闪购联盟-霸王餐消息推送API > 评价有礼渠道用户身份SID绑定通知} */
   alsc_reviewbwc_SidBindSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlscReviewbwcSidBindSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlscRiskPunishSend 口碑 > 本地生活处罚中心处罚下发} */
   alsc_risk_PunishSend(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlscRiskPunishSend) => void): TaoMessageConsumer;
@@ -2396,6 +2396,8 @@ declare interface TaoTopicsDescriptor {
   tmall_nrt_TcpsDeliveryStatus(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallNrtTcpsDeliveryStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallOicInventoryInbound 天猫 > 天猫货品入库消息} */
   tmall_oic_InventoryInbound(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallOicInventoryInbound) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallOmniStoreAdd 全渠道API > 新零售门店审核通过消息} */
+  tmall_omni_StoreAdd(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallOmniStoreAdd) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallOmnichannelDiscountedPriceChange 聚石塔 > 商品优惠价格变更} */
   tmall_omnichannel_DiscountedPriceChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallOmnichannelDiscountedPriceChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallOmnichannelInventoryChange 聚石塔 > 商品库存变化} */
@@ -3250,6 +3252,8 @@ declare interface TaoTopicsDescriptor {
   tmall_nrt(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallNrt) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallOic} */
   tmall_oic(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallOic) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallOmni} */
+  tmall_omni(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallOmni) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallOmnichannel} */
   tmall_omnichannel(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallOmnichannel) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallOnehour} */
@@ -4287,13 +4291,13 @@ declare interface TaoEventsListener {
   on(topic: 'aliyun_gsc_ProductionReceiptInfoCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.AliyunGscProductionReceiptInfoCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AliyunIotOrderSync IOT-智能制造 > 天天工厂采购单同步} */
   on(topic: 'aliyun_iot_OrderSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.AliyunIotOrderSync) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlscCouponCouponSync 本地生活联盟平台-卡券消息API > 淘宝闪购联盟卡券同步消息} */
+  /** {@link IncomingMessage.AlscCouponCouponSync 淘宝闪购联盟-卡券消息API > 淘宝闪购联盟卡券同步消息} */
   on(topic: 'alsc_coupon_CouponSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlscCouponCouponSync) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlscCouponOrderVoucherStatus 本地生活联盟平台-卡券消息API > 淘宝闪购卡券openapi订单消息} */
+  /** {@link IncomingMessage.AlscCouponOrderVoucherStatus 淘宝闪购联盟-卡券消息API > 淘宝闪购卡券openapi订单消息} */
   on(topic: 'alsc_coupon_OrderVoucherStatus', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlscCouponOrderVoucherStatus) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlscCouponpackagePurchaseSync 本地生活联盟平台-卡券包采购单消息API > 淘宝闪购联盟卡券包采购同步消息} */
+  /** {@link IncomingMessage.AlscCouponpackagePurchaseSync 淘宝闪购联盟-卡券包采购单消息API > 淘宝闪购联盟卡券包采购同步消息} */
   on(topic: 'alsc_couponpackage_PurchaseSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlscCouponpackagePurchaseSync) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlscCouponpackagePurchaseTicketSync 本地生活联盟平台-卡券包采购单消息API > 淘宝闪购联盟卡券包采购凭证同步} */
+  /** {@link IncomingMessage.AlscCouponpackagePurchaseTicketSync 淘宝闪购联盟-卡券包采购单消息API > 淘宝闪购联盟卡券包采购凭证同步} */
   on(topic: 'alsc_couponpackage_PurchaseTicketSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlscCouponpackagePurchaseTicketSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlscDaodianHaitunPromoEventNotify 口碑 > 本地生活到店多渠道投放海豚活动事件通知} */
   on(topic: 'alsc_daodian_HaitunPromoEventNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlscDaodianHaitunPromoEventNotify) => void): TaoMessageConsumer;
@@ -4307,9 +4311,9 @@ declare interface TaoEventsListener {
   on(topic: 'alsc_kbbbt_OrderVoucherStatus', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlscKbbbtOrderVoucherStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlscKbbbtProductChange 口碑 > 口碑爆爆团商品变更的消息} */
   on(topic: 'alsc_kbbbt_ProductChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlscKbbbtProductChange) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlscReviewbwcActivityEnrollSync 本地生活联盟平台-霸王餐消息推送API > 淘宝闪购评价有礼门店活动消息} */
+  /** {@link IncomingMessage.AlscReviewbwcActivityEnrollSync 淘宝闪购联盟-霸王餐消息推送API > 淘宝闪购评价有礼门店活动消息} */
   on(topic: 'alsc_reviewbwc_ActivityEnrollSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlscReviewbwcActivityEnrollSync) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlscReviewbwcSidBindSync 本地生活联盟平台-霸王餐消息推送API > 评价有礼渠道用户身份SID绑定通知} */
+  /** {@link IncomingMessage.AlscReviewbwcSidBindSync 淘宝闪购联盟-霸王餐消息推送API > 评价有礼渠道用户身份SID绑定通知} */
   on(topic: 'alsc_reviewbwc_SidBindSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlscReviewbwcSidBindSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlscRiskPunishSend 口碑 > 本地生活处罚中心处罚下发} */
   on(topic: 'alsc_risk_PunishSend', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlscRiskPunishSend) => void): TaoMessageConsumer;
@@ -5777,6 +5781,8 @@ declare interface TaoEventsListener {
   on(topic: 'tmall_nrt_TcpsDeliveryStatus', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallNrtTcpsDeliveryStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallOicInventoryInbound 天猫 > 天猫货品入库消息} */
   on(topic: 'tmall_oic_InventoryInbound', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallOicInventoryInbound) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallOmniStoreAdd 全渠道API > 新零售门店审核通过消息} */
+  on(topic: 'tmall_omni_StoreAdd', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallOmniStoreAdd) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallOmnichannelDiscountedPriceChange 聚石塔 > 商品优惠价格变更} */
   on(topic: 'tmall_omnichannel_DiscountedPriceChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallOmnichannelDiscountedPriceChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallOmnichannelInventoryChange 聚石塔 > 商品库存变化} */
@@ -6631,6 +6637,8 @@ declare interface TaoEventsListener {
   on(topic: 'tmall_nrt', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallNrt) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallOic} */
   on(topic: 'tmall_oic', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallOic) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallOmni} */
+  on(topic: 'tmall_omni', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallOmni) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallOmnichannel} */
   on(topic: 'tmall_omnichannel', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallOmnichannel) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallOnehour} */

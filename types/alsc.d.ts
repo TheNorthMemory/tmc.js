@@ -1,4 +1,4 @@
-/** 本地生活联盟平台-卡券消息API */
+/** 淘宝闪购联盟-卡券消息API */
 declare namespace Alsc.Coupon {
   /** {@link https://open.taobao.com/tmc.htm?docId=2459&docType=9 淘宝闪购联盟卡券同步消息} */
   interface CouponSync {
@@ -45,7 +45,7 @@ declare namespace Alsc.Coupon {
   }
 }
 
-/** 本地生活联盟平台-卡券包采购单消息API */
+/** 淘宝闪购联盟-卡券包采购单消息API */
 declare namespace Alsc.Couponpackage {
   /** {@link https://open.taobao.com/tmc.htm?docId=2471&docType=9 淘宝闪购联盟卡券包采购同步消息} */
   interface PurchaseSync {
@@ -226,7 +226,7 @@ declare namespace Alsc.Kbbbt {
   }
 }
 
-/** 本地生活联盟平台-霸王餐消息推送API */
+/** 淘宝闪购联盟-霸王餐消息推送API */
 declare namespace Alsc.Reviewbwc {
   /** {@link https://open.taobao.com/tmc.htm?docId=2486&docType=9 淘宝闪购评价有礼门店活动消息} */
   interface ActivityEnrollSync {

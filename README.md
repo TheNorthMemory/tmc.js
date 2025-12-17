@@ -134,7 +134,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 
 ## 支持的TOPICS
 
-<details><summary>共计 103+ 类别，607+ 消息数</summary>
+<details><summary>共计 104+ 类别，608+ 消息数</summary>
 
 | 类别 | 消息数 |
 | --- | --- |
@@ -230,10 +230,10 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | 内容开放 | 3 |
 | 闲鱼电商Saas | 10 |
 | 货源服务消息 | 2 |
-| 本地生活联盟平台-卡券消息API | 2 |
-| 本地生活联盟平台-卡券包采购单消息API | 2 |
+| 淘宝闪购联盟-卡券消息API | 2 |
+| 淘宝闪购联盟-卡券包采购单消息API | 2 |
 | 以旧换新-订单域 | 4 |
-| 本地生活联盟平台-霸王餐消息推送API | 2 |
+| 淘宝闪购联盟-霸王餐消息推送API | 2 |
 | 闲鱼循环商店-消息前台 | 2 |
 | 闲鱼房源-前台 | 1 |
 | 绘蛙消息 | 3 |
@@ -241,6 +241,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | 采购宝API | 7 |
 | 闪购交易 | 13 |
 | 闲鱼奢品寄卖 | 1 |
+| 全渠道API | 1 |
 
 </details>
 
