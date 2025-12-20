@@ -8,6 +8,8 @@ declare namespace Lianfan.Huiwa {
     model_status: number;
     /** 模型类型 */
     model_type: number;
+    /** 扩展字段 */
+    pass_through: string;
   }
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2710&docType=9 项目交付消息} */
