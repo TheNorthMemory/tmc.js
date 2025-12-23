@@ -427,12 +427,8 @@ declare namespace Idle.Trade {
   interface TradeReteSuccess {
     /** 订单ID */
     biz_order_id: number | bigint;
-    /** 评价结果：1好评 0默认 */
-    rate: number;
     /** 评论者交易角色 1：评论者是卖家 0：评论者是买家 */
     rater_type: number;
-    /** 评价内容 */
-    rate_content: string;
     /** 评价id */
     rate_id: number;
     /** 评价类型: 1: 首评，2: 追评 */
