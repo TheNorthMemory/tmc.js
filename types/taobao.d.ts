@@ -2710,8 +2710,24 @@ declare namespace Taobao.Ihome {
   }
 }
 
-/** 淘宝 */
+/** 销售库存 */
 declare namespace Taobao.Inventory {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2728&docType=9 低库存预警消息} */
+  interface LowQuantityWarning {
+    /** 业务唯一键，目前是时间戳 */
+    biz: string;
+    /** 商品id */
+    item_id: number;
+    /** 商品id对应的名称 */
+    item_name: string;
+    /** skuId，可能是0 */
+    sku_id?: number;
+    /** 仓库编码 */
+    warehouse_code?: string;
+    /** 10 */
+    warning_quantity: number;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=813&docType=9 天猫国际共享库存订单push} */
   interface ShareInventory {
     /** 订单付款时间 */
@@ -5308,6 +5324,31 @@ declare namespace Taobao.Rhino {
     status: string;
     /** 租户ID */
     tenant_id: string;
+  }
+}
+
+/** 淘宝 */
+declare namespace Taobao.Robot {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2729&docType=9 机器人辅助状态变更消息通知} */
+  interface UserSubscribeResult {
+    /** 机器人appKey */
+    assist_robot_app_key: string;
+    /** 机器人名称 */
+    assist_robot_name: string;
+    /** 机器人租户id */
+    assist_robot_tenant_id: number;
+    /** 消费者帐号openId */
+    buyer_open_id: string;
+    /** 修改摘要说明 */
+    modified_robot_user_subscribe_summary?: string;
+    /** 修改类型 */
+    modified_robot_user_subscribe_type: string;
+    /** 消息唯一标识(便于联合排查) */
+    msg_id: string;
+    /** 店铺商家帐号openId */
+    seller_open_id: string;
+    /** 辅助状态 */
+    status: number;
   }
 }
 

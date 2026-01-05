@@ -134,7 +134,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 
 ## 支持的TOPICS
 
-<details><summary>共计 104+ 类别，608+ 消息数</summary>
+<details><summary>共计 105+ 类别，609+ 消息数</summary>
 
 | 类别 | 消息数 |
 | --- | --- |
@@ -242,6 +242,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | 闪购交易 | 13 |
 | 闲鱼奢品寄卖 | 1 |
 | 全渠道API | 1 |
+| 销售库存 | 1 |
 
 </details>
 

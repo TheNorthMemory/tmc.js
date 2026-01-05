@@ -1576,7 +1576,9 @@ declare namespace IncomingMessage {
   type TaobaoIfashionOrderCreate = Message & { content?: MessageContent & { topic?: 'taobao_ifashion_OrderCreate', content?: string | Taobao.Ifashion.OrderCreate } };
   /** {@link Taobao.Ihome.AigcTaskChange 淘宝 > aigc任务状态变更} */
   type TaobaoIhomeAigcTaskChange = Message & { content?: MessageContent & { topic?: 'taobao_ihome_AigcTaskChange', content?: string | Taobao.Ihome.AigcTaskChange } };
-  /** {@link Taobao.Inventory.ShareInventory 淘宝 > 天猫国际共享库存订单push} */
+  /** {@link Taobao.Inventory.LowQuantityWarning 销售库存 > 低库存预警消息} */
+  type TaobaoInventoryLowQuantityWarning = Message & { content?: MessageContent & { topic?: 'taobao_inventory_LowQuantityWarning', content?: string | Taobao.Inventory.LowQuantityWarning } };
+  /** {@link Taobao.Inventory.ShareInventory 销售库存 > 天猫国际共享库存订单push} */
   type TaobaoInventoryShareInventory = Message & { content?: MessageContent & { topic?: 'taobao_inventory_ShareInventory', content?: string | Taobao.Inventory.ShareInventory } };
   /** {@link Taobao.Istore.GiftingMsg Gifting送礼 > istoreGifing消息} */
   type TaobaoIstoreGiftingMsg = Message & { content?: MessageContent & { topic?: 'taobao_istore_GiftingMsg', content?: string | Taobao.Istore.GiftingMsg } };
@@ -1894,6 +1896,8 @@ declare namespace IncomingMessage {
   type TaobaoRhinoQcResultUpdate = Message & { content?: MessageContent & { topic?: 'taobao_rhino_QcResultUpdate', content?: string | Taobao.Rhino.QcResultUpdate } };
   /** {@link Taobao.Rhino.WarehouseUpdate 智能制造API > 订单入库通知} */
   type TaobaoRhinoWarehouseUpdate = Message & { content?: MessageContent & { topic?: 'taobao_rhino_WarehouseUpdate', content?: string | Taobao.Rhino.WarehouseUpdate } };
+  /** {@link Taobao.Robot.UserSubscribeResult 淘宝 > 机器人辅助状态变更消息通知} */
+  type TaobaoRobotUserSubscribeResult = Message & { content?: MessageContent & { topic?: 'taobao_robot_UserSubscribeResult', content?: string | Taobao.Robot.UserSubscribeResult } };
   /** {@link Taobao.Sec.WlcAlipaySync 淘宝 > 无量尺风控信息同步支付宝} */
   type TaobaoSecWlcAlipaySync = Message & { content?: MessageContent & { topic?: 'taobao_sec_WlcAlipaySync', content?: string | Taobao.Sec.WlcAlipaySync } };
   /** {@link Taobao.Seed.GeneralDataCommutation 淘宝 > 淘宝种草数据交换} */
@@ -4569,9 +4573,11 @@ declare namespace IncomingMessage {
    */
   type TaobaoIhome = TaobaoIhomeAigcTaskChange;
   /**
-   * - {@link TaobaoInventoryShareInventory 淘宝 > 天猫国际共享库存订单push}
+   * - {@link TaobaoInventoryLowQuantityWarning 销售库存 > 低库存预警消息}
+   * - {@link TaobaoInventoryShareInventory 销售库存 > 天猫国际共享库存订单push}
    */
-  type TaobaoInventory = TaobaoInventoryShareInventory;
+  type TaobaoInventory = TaobaoInventoryLowQuantityWarning
+    | TaobaoInventoryShareInventory;
   /**
    * - {@link TaobaoIstoreGiftingMsg Gifting送礼 > istoreGifing消息}
    */
@@ -4964,6 +4970,10 @@ declare namespace IncomingMessage {
     | TaobaoRhinoPurchaseOrderCreate
     | TaobaoRhinoQcResultUpdate
     | TaobaoRhinoWarehouseUpdate;
+  /**
+   * - {@link TaobaoRobotUserSubscribeResult 淘宝 > 机器人辅助状态变更消息通知}
+   */
+  type TaobaoRobot = TaobaoRobotUserSubscribeResult;
   /**
    * - {@link TaobaoSecWlcAlipaySync 淘宝 > 无量尺风控信息同步支付宝}
    */
@@ -6404,6 +6414,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoRefund}
    * - {@link TaobaoRetrieve}
    * - {@link TaobaoRhino}
+   * - {@link TaobaoRobot}
    * - {@link TaobaoSec}
    * - {@link TaobaoSeed}
    * - {@link TaobaoShangou}
@@ -6525,6 +6536,7 @@ declare namespace IncomingMessage {
     | TaobaoRefund
     | TaobaoRetrieve
     | TaobaoRhino
+    | TaobaoRobot
     | TaobaoSec
     | TaobaoSeed
     | TaobaoShangou
