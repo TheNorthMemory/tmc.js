@@ -1210,6 +1210,8 @@ declare interface TaoTopicsDescriptor {
   idle_recycle_StoreSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleRecycleStoreSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleSellerImprovePackOrder 闲鱼电商Saas > 闲鱼鱼小铺运营提效包订购消息} */
   idle_seller_ImprovePackOrder(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleSellerImprovePackOrder) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleSellerProShopStatus 闲鱼电商Saas > 鱼小铺专业号身份变更状态} */
+  idle_seller_ProShopStatus(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleSellerProShopStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleTopisvCompensateNotice 闲鱼电商Saas > 闲鱼开放平台-服务赔付单变更消息通知} */
   idle_topisv_CompensateNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleTopisvCompensateNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleTopisvGlobalProductNotice 闲鱼电商Saas > 闲鱼开放平台-国际货品变更消息通知} */
@@ -4601,6 +4603,8 @@ declare interface TaoEventsListener {
   on(topic: 'idle_recycle_StoreSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleRecycleStoreSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleSellerImprovePackOrder 闲鱼电商Saas > 闲鱼鱼小铺运营提效包订购消息} */
   on(topic: 'idle_seller_ImprovePackOrder', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleSellerImprovePackOrder) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleSellerProShopStatus 闲鱼电商Saas > 鱼小铺专业号身份变更状态} */
+  on(topic: 'idle_seller_ProShopStatus', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleSellerProShopStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleTopisvCompensateNotice 闲鱼电商Saas > 闲鱼开放平台-服务赔付单变更消息通知} */
   on(topic: 'idle_topisv_CompensateNotice', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleTopisvCompensateNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleTopisvGlobalProductNotice 闲鱼电商Saas > 闲鱼开放平台-国际货品变更消息通知} */

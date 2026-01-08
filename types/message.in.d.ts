@@ -1196,6 +1196,8 @@ declare namespace IncomingMessage {
   type IdleRecycleStoreSyn = Message & { content?: MessageContent & { topic?: 'idle_recycle_StoreSyn', content?: string | Idle.Recycle.StoreSyn } };
   /** {@link Idle.Seller.ImprovePackOrder 闲鱼电商Saas > 闲鱼鱼小铺运营提效包订购消息} */
   type IdleSellerImprovePackOrder = Message & { content?: MessageContent & { topic?: 'idle_seller_ImprovePackOrder', content?: string | Idle.Seller.ImprovePackOrder } };
+  /** {@link Idle.Seller.ProShopStatus 闲鱼电商Saas > 鱼小铺专业号身份变更状态} */
+  type IdleSellerProShopStatus = Message & { content?: MessageContent & { topic?: 'idle_seller_ProShopStatus', content?: string | Idle.Seller.ProShopStatus } };
   /** {@link Idle.Topisv.CompensateNotice 闲鱼电商Saas > 闲鱼开放平台-服务赔付单变更消息通知} */
   type IdleTopisvCompensateNotice = Message & { content?: MessageContent & { topic?: 'idle_topisv_CompensateNotice', content?: string | Idle.Topisv.CompensateNotice } };
   /** {@link Idle.Topisv.GlobalProductNotice 闲鱼电商Saas > 闲鱼开放平台-国际货品变更消息通知} */
@@ -4084,8 +4086,10 @@ declare namespace IncomingMessage {
     | IdleRecycleStoreSyn;
   /**
    * - {@link IdleSellerImprovePackOrder 闲鱼电商Saas > 闲鱼鱼小铺运营提效包订购消息}
+   * - {@link IdleSellerProShopStatus 闲鱼电商Saas > 鱼小铺专业号身份变更状态}
    */
-  type IdleSeller = IdleSellerImprovePackOrder;
+  type IdleSeller = IdleSellerImprovePackOrder
+    | IdleSellerProShopStatus;
   /**
    * - {@link IdleTopisvCompensateNotice 闲鱼电商Saas > 闲鱼开放平台-服务赔付单变更消息通知}
    * - {@link IdleTopisvGlobalProductNotice 闲鱼电商Saas > 闲鱼开放平台-国际货品变更消息通知}

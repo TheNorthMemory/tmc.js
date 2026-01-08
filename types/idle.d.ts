@@ -344,6 +344,20 @@ declare namespace Idle.Seller {
     /** 提效包使用开始时间 */
     use_start_time: string;
   }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2731&docType=9 鱼小铺专业号身份变更状态} */
+  interface ProShopStatus {
+    /** 专业号退出时间 */
+    pro_shop_quit_time?: string;
+    /** 专业号对应状态，1-待生效 2-已生效 3-已退出 */
+    pro_shop_status: number;
+    /** 专业号升级时间 */
+    pro_shop_upgrade_time?: string;
+    /** 专业号生效时间 */
+    pro_shop_valid_time?: string;
+    /** 用户id */
+    user_id: number;
+  }
 }
 
 /** 闲鱼电商Saas */
