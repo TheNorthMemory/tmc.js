@@ -1196,7 +1196,7 @@ declare namespace IncomingMessage {
   type IdleRecycleStoreSyn = Message & { content?: MessageContent & { topic?: 'idle_recycle_StoreSyn', content?: string | Idle.Recycle.StoreSyn } };
   /** {@link Idle.Seller.ImprovePackOrder 闲鱼电商Saas > 闲鱼鱼小铺运营提效包订购消息} */
   type IdleSellerImprovePackOrder = Message & { content?: MessageContent & { topic?: 'idle_seller_ImprovePackOrder', content?: string | Idle.Seller.ImprovePackOrder } };
-  /** {@link Idle.Seller.ProShopStatus 闲鱼电商Saas > 鱼小铺专业号身份变更状态} */
+  /** {@link Idle.Seller.ProShopStatus 闲鱼电商Saas > 闲鱼鱼小铺专业号身份变更状态} */
   type IdleSellerProShopStatus = Message & { content?: MessageContent & { topic?: 'idle_seller_ProShopStatus', content?: string | Idle.Seller.ProShopStatus } };
   /** {@link Idle.Topisv.CompensateNotice 闲鱼电商Saas > 闲鱼开放平台-服务赔付单变更消息通知} */
   type IdleTopisvCompensateNotice = Message & { content?: MessageContent & { topic?: 'idle_topisv_CompensateNotice', content?: string | Idle.Topisv.CompensateNotice } };
@@ -1824,6 +1824,8 @@ declare namespace IncomingMessage {
   type TaobaoPcEgoTradePackage = Message & { content?: MessageContent & { topic?: 'taobao_pc_EgoTradePackage', content?: string | Taobao.Pc.EgoTradePackage } };
   /** {@link Taobao.Pc.ItemChange 采购宝API > 商品变更消息} */
   type TaobaoPcItemChange = Message & { content?: MessageContent & { topic?: 'taobao_pc_ItemChange', content?: string | Taobao.Pc.ItemChange } };
+  /** {@link Taobao.Pc.ItemSkuChange 采购宝API > SKU变更消息} */
+  type TaobaoPcItemSkuChange = Message & { content?: MessageContent & { topic?: 'taobao_pc_ItemSkuChange', content?: string | Taobao.Pc.ItemSkuChange } };
   /** {@link Taobao.Pc.SaleInvoiceResult 采购宝API > PC企业购发票通知消息} */
   type TaobaoPcSaleInvoiceResult = Message & { content?: MessageContent & { topic?: 'taobao_pc_SaleInvoiceResult', content?: string | Taobao.Pc.SaleInvoiceResult } };
   /** {@link Taobao.Pc.SettleProcessEventMsg 采购宝API > PC企业购结算流程事件消息} */
@@ -4086,7 +4088,7 @@ declare namespace IncomingMessage {
     | IdleRecycleStoreSyn;
   /**
    * - {@link IdleSellerImprovePackOrder 闲鱼电商Saas > 闲鱼鱼小铺运营提效包订购消息}
-   * - {@link IdleSellerProShopStatus 闲鱼电商Saas > 鱼小铺专业号身份变更状态}
+   * - {@link IdleSellerProShopStatus 闲鱼电商Saas > 闲鱼鱼小铺专业号身份变更状态}
    */
   type IdleSeller = IdleSellerImprovePackOrder
     | IdleSellerProShopStatus;
@@ -4876,6 +4878,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoPcEgoTradeOrder 采购宝API > PC企业购交易订单消息}
    * - {@link TaobaoPcEgoTradePackage 采购宝API > 订单包裹消息}
    * - {@link TaobaoPcItemChange 采购宝API > 商品变更消息}
+   * - {@link TaobaoPcItemSkuChange 采购宝API > SKU变更消息}
    * - {@link TaobaoPcSaleInvoiceResult 采购宝API > PC企业购发票通知消息}
    * - {@link TaobaoPcSettleProcessEventMsg 采购宝API > PC企业购结算流程事件消息}
    */
@@ -4884,6 +4887,7 @@ declare namespace IncomingMessage {
     | TaobaoPcEgoTradeOrder
     | TaobaoPcEgoTradePackage
     | TaobaoPcItemChange
+    | TaobaoPcItemSkuChange
     | TaobaoPcSaleInvoiceResult
     | TaobaoPcSettleProcessEventMsg;
   /**

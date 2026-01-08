@@ -345,7 +345,7 @@ declare namespace Idle.Seller {
     use_start_time: string;
   }
 
-  /** {@link https://open.taobao.com/tmc.htm?docId=2731&docType=9 鱼小铺专业号身份变更状态} */
+  /** {@link https://open.taobao.com/tmc.htm?docId=2731&docType=9 闲鱼鱼小铺专业号身份变更状态} */
   interface ProShopStatus {
     /** 专业号退出时间 */
     pro_shop_quit_time?: string;

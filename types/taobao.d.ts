@@ -4711,6 +4711,22 @@ declare namespace Taobao.Pc {
     type: string;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2732&docType=9 SKU变更消息} */
+  interface ItemSkuChange {
+    /** 客户ID */
+    client_id: string;
+    /** 企业购商品ID */
+    ego_item_id: string;
+    /** 企业购商品SKU ID */
+    ego_sku_id: string;
+    /** 消息ID */
+    msg_id: string;
+    /** 变更时间，时间戳 */
+    time: string;
+    /** 变更类型，ADD：SKU新增，DELETE：SKU删除，DOWN_SHELF：SKU下架，UP_SHELF：SKU上架，EDIT：SKU信息变更，INVENTORY：SKU库存变更（注意该消息只有当库存从无到有，或从有到无才会发送） */
+    type: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2673&docType=9 PC企业购发票通知消息} */
   interface SaleInvoiceResult {
     /** 账单号 */
