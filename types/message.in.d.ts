@@ -1396,6 +1396,8 @@ declare namespace IncomingMessage {
   type TaobaoDisputeNegotiationApply = Message & { content?: MessageContent & { topic?: 'taobao_dispute_NegotiationApply', content?: string | Taobao.Dispute.NegotiationApply } };
   /** {@link Taobao.Dispute.NegotiationRefused 淘宝 > 退款-买家拒绝协商申请} */
   type TaobaoDisputeNegotiationRefused = Message & { content?: MessageContent & { topic?: 'taobao_dispute_NegotiationRefused', content?: string | Taobao.Dispute.NegotiationRefused } };
+  /** {@link Taobao.Dispute.PostageRefundApplied 淘宝 > 发起退运费申请} */
+  type TaobaoDisputePostageRefundApplied = Message & { content?: MessageContent & { topic?: 'taobao_dispute_PostageRefundApplied', content?: string | Taobao.Dispute.PostageRefundApplied } };
   /** {@link Taobao.Dispute.PostageRefundSuccess 淘宝 > 退货运费单成功消息} */
   type TaobaoDisputePostageRefundSuccess = Message & { content?: MessageContent & { topic?: 'taobao_dispute_PostageRefundSuccess', content?: string | Taobao.Dispute.PostageRefundSuccess } };
   /** {@link Taobao.Dispute.RefundCreated 淘宝 > 新退款创建} */
@@ -4355,6 +4357,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoDisputeNegotiationAgreed 淘宝 > 退款-买家接受协商申请}
    * - {@link TaobaoDisputeNegotiationApply 淘宝 > 退款-卖家提交协商申请}
    * - {@link TaobaoDisputeNegotiationRefused 淘宝 > 退款-买家拒绝协商申请}
+   * - {@link TaobaoDisputePostageRefundApplied 淘宝 > 发起退运费申请}
    * - {@link TaobaoDisputePostageRefundSuccess 淘宝 > 退货运费单成功消息}
    * - {@link TaobaoDisputeRefundCreated 淘宝 > 新退款创建}
    * - {@link TaobaoDisputeRefundPriceProtect 淘宝 > 价保退款成功}
@@ -4378,6 +4381,7 @@ declare namespace IncomingMessage {
     | TaobaoDisputeNegotiationAgreed
     | TaobaoDisputeNegotiationApply
     | TaobaoDisputeNegotiationRefused
+    | TaobaoDisputePostageRefundApplied
     | TaobaoDisputePostageRefundSuccess
     | TaobaoDisputeRefundCreated
     | TaobaoDisputeRefundPriceProtect

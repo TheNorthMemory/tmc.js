@@ -1410,6 +1410,8 @@ declare interface TaoTopicsDescriptor {
   taobao_dispute_NegotiationApply(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeNegotiationApply) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDisputeNegotiationRefused 淘宝 > 退款-买家拒绝协商申请} */
   taobao_dispute_NegotiationRefused(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeNegotiationRefused) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDisputePostageRefundApplied 淘宝 > 发起退运费申请} */
+  taobao_dispute_PostageRefundApplied(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputePostageRefundApplied) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDisputePostageRefundSuccess 淘宝 > 退货运费单成功消息} */
   taobao_dispute_PostageRefundSuccess(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputePostageRefundSuccess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDisputeRefundCreated 淘宝 > 新退款创建} */
@@ -4805,6 +4807,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_dispute_NegotiationApply', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeNegotiationApply) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDisputeNegotiationRefused 淘宝 > 退款-买家拒绝协商申请} */
   on(topic: 'taobao_dispute_NegotiationRefused', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputeNegotiationRefused) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoDisputePostageRefundApplied 淘宝 > 发起退运费申请} */
+  on(topic: 'taobao_dispute_PostageRefundApplied', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputePostageRefundApplied) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDisputePostageRefundSuccess 淘宝 > 退货运费单成功消息} */
   on(topic: 'taobao_dispute_PostageRefundSuccess', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoDisputePostageRefundSuccess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDisputeRefundCreated 淘宝 > 新退款创建} */
