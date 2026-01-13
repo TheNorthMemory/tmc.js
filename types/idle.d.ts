@@ -175,6 +175,19 @@ declare namespace Idle.Distribution {
 }
 
 /** 闲鱼 */
+declare namespace Idle.Eticket {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2730&docType=9 闲鱼卡券电子凭证订单消息} */
+  interface Ordermsg {
+    /** 订单id */
+    biz_order_id: string;
+    /** expire_refund：过期自动退，unuse_refund:未使用退款 */
+    msg_type: string;
+    /** 逆向单id */
+    refund_id: string;
+  }
+}
+
+/** 闲鱼 */
 declare namespace Idle.Fishmarket {
   /** {@link https://open.taobao.com/tmc.htm?docId=2683&docType=9 闲鱼鱼市买家单状态同步} */
   interface BuyerOrderStateSyn {

@@ -1188,6 +1188,8 @@ declare interface TaoTopicsDescriptor {
   idle_cycleshop_SaleOrderNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleCycleshopSaleOrderNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleDistributionItemChange 闲鱼回收商消息 > 分销闲管家消息通道} */
   idle_distribution_ItemChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleDistributionItemChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleEticketOrdermsg 闲鱼 > 闲鱼卡券电子凭证订单消息} */
+  idle_eticket_Ordermsg(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleEticketOrdermsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleFishmarketBuyerOrderStateSyn 闲鱼 > 闲鱼鱼市买家单状态同步} */
   idle_fishmarket_BuyerOrderStateSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketBuyerOrderStateSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleFishmarketItemAuctionStateSyn 闲鱼 > 闲鱼鱼市商品竞拍消息同步} */
@@ -2948,6 +2950,8 @@ declare interface TaoTopicsDescriptor {
   idle_cycleshop(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleCycleshop) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleDistribution} */
   idle_distribution(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleDistribution) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleEticket} */
+  idle_eticket(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleEticket) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleFishmarket} */
   idle_fishmarket(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarket) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleFishmarketfixed} */
@@ -4585,6 +4589,8 @@ declare interface TaoEventsListener {
   on(topic: 'idle_cycleshop_SaleOrderNotice', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleCycleshopSaleOrderNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleDistributionItemChange 闲鱼回收商消息 > 分销闲管家消息通道} */
   on(topic: 'idle_distribution_ItemChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleDistributionItemChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleEticketOrdermsg 闲鱼 > 闲鱼卡券电子凭证订单消息} */
+  on(topic: 'idle_eticket_Ordermsg', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleEticketOrdermsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleFishmarketBuyerOrderStateSyn 闲鱼 > 闲鱼鱼市买家单状态同步} */
   on(topic: 'idle_fishmarket_BuyerOrderStateSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketBuyerOrderStateSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleFishmarketItemAuctionStateSyn 闲鱼 > 闲鱼鱼市商品竞拍消息同步} */
@@ -6345,6 +6351,8 @@ declare interface TaoEventsListener {
   on(topic: 'idle_cycleshop', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleCycleshop) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleDistribution} */
   on(topic: 'idle_distribution', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleDistribution) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleEticket} */
+  on(topic: 'idle_eticket', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleEticket) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleFishmarket} */
   on(topic: 'idle_fishmarket', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarket) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleFishmarketfixed} */

@@ -1174,6 +1174,8 @@ declare namespace IncomingMessage {
   type IdleCycleshopSaleOrderNotice = Message & { content?: MessageContent & { topic?: 'idle_cycleshop_SaleOrderNotice', content?: string | Idle.Cycleshop.SaleOrderNotice } };
   /** {@link Idle.Distribution.ItemChange 闲鱼回收商消息 > 分销闲管家消息通道} */
   type IdleDistributionItemChange = Message & { content?: MessageContent & { topic?: 'idle_distribution_ItemChange', content?: string | Idle.Distribution.ItemChange } };
+  /** {@link Idle.Eticket.Ordermsg 闲鱼 > 闲鱼卡券电子凭证订单消息} */
+  type IdleEticketOrdermsg = Message & { content?: MessageContent & { topic?: 'idle_eticket_Ordermsg', content?: string | Idle.Eticket.Ordermsg } };
   /** {@link Idle.Fishmarket.BuyerOrderStateSyn 闲鱼 > 闲鱼鱼市买家单状态同步} */
   type IdleFishmarketBuyerOrderStateSyn = Message & { content?: MessageContent & { topic?: 'idle_fishmarket_BuyerOrderStateSyn', content?: string | Idle.Fishmarket.BuyerOrderStateSyn } };
   /** {@link Idle.Fishmarket.ItemAuctionStateSyn 闲鱼 > 闲鱼鱼市商品竞拍消息同步} */
@@ -4059,6 +4061,10 @@ declare namespace IncomingMessage {
    */
   type IdleDistribution = IdleDistributionItemChange;
   /**
+   * - {@link IdleEticketOrdermsg 闲鱼 > 闲鱼卡券电子凭证订单消息}
+   */
+  type IdleEticket = IdleEticketOrdermsg;
+  /**
    * - {@link IdleFishmarketBuyerOrderStateSyn 闲鱼 > 闲鱼鱼市买家单状态同步}
    * - {@link IdleFishmarketItemAuctionStateSyn 闲鱼 > 闲鱼鱼市商品竞拍消息同步}
    * - {@link IdleFishmarketTenderAutoAuctionMsg 闲鱼 > 一口价转暗拍自动上架消息推送}
@@ -6279,6 +6285,7 @@ declare namespace IncomingMessage {
    * - {@link IdleCro}
    * - {@link IdleCycleshop}
    * - {@link IdleDistribution}
+   * - {@link IdleEticket}
    * - {@link IdleFishmarket}
    * - {@link IdleFishmarketfixed}
    * - {@link IdleLuxconsign}
@@ -6298,6 +6305,7 @@ declare namespace IncomingMessage {
     | IdleCro
     | IdleCycleshop
     | IdleDistribution
+    | IdleEticket
     | IdleFishmarket
     | IdleFishmarketfixed
     | IdleLuxconsign
