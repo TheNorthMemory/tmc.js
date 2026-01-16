@@ -67,8 +67,34 @@ declare namespace Taobao.Ag {
   }
 }
 
-/** 淘宝 */
+/** 内容开放 */
 declare namespace Taobao.Agent {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2736&docType=9 tao agent执行结果通知} */
+  interface AgentRes {
+    /** agent_code */
+    agent_code: string;
+    /** token情况 */
+    agent_usage?: string;
+    /** agent结果 */
+    content: string;
+    /** conversation_id */
+    conversation_id?: string;
+    /** 消费者发往商家 */
+    is_c2b?: string;
+    /** message_id */
+    message_id: string;
+    /** 接受者openUid */
+    receiver_open_uid: string;
+    /** 耗时ms */
+    rt?: string;
+    /** 商家openUid */
+    seller_open_uid: string;
+    /** 发送者openUid */
+    sender_open_uid: string;
+    /** 发起时间 */
+    time: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2711&docType=9 工作流开放异步执行结果通知} */
   interface WorkflowAsyncResult {
     /** 工作流执行结果 */
@@ -2729,6 +2755,17 @@ declare namespace Taobao.Ihome {
     task_id: number;
     /** 用户平台 */
     user_platform: string;
+  }
+}
+
+/** 淘宝 */
+declare namespace Taobao.Industry {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2734&docType=9 淘宝行业ww服饰商品变更消息推送} */
+  interface WWClothItemMsgNotify {
+    /** 商品ID */
+    encode_item_id: string;
+    /** 商品上下架消息类型 */
+    msg_event_type: string;
   }
 }
 

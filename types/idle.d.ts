@@ -174,7 +174,7 @@ declare namespace Idle.Distribution {
   }
 }
 
-/** 闲鱼 */
+/** 闲鱼电商Saas */
 declare namespace Idle.Eticket {
   /** {@link https://open.taobao.com/tmc.htm?docId=2730&docType=9 闲鱼卡券电子凭证订单消息} */
   interface Ordermsg {

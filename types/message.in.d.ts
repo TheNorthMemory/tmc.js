@@ -1174,7 +1174,7 @@ declare namespace IncomingMessage {
   type IdleCycleshopSaleOrderNotice = Message & { content?: MessageContent & { topic?: 'idle_cycleshop_SaleOrderNotice', content?: string | Idle.Cycleshop.SaleOrderNotice } };
   /** {@link Idle.Distribution.ItemChange 闲鱼回收商消息 > 分销闲管家消息通道} */
   type IdleDistributionItemChange = Message & { content?: MessageContent & { topic?: 'idle_distribution_ItemChange', content?: string | Idle.Distribution.ItemChange } };
-  /** {@link Idle.Eticket.Ordermsg 闲鱼 > 闲鱼卡券电子凭证订单消息} */
+  /** {@link Idle.Eticket.Ordermsg 闲鱼电商Saas > 闲鱼卡券电子凭证订单消息} */
   type IdleEticketOrdermsg = Message & { content?: MessageContent & { topic?: 'idle_eticket_Ordermsg', content?: string | Idle.Eticket.Ordermsg } };
   /** {@link Idle.Fishmarket.BuyerOrderStateSyn 闲鱼 > 闲鱼鱼市买家单状态同步} */
   type IdleFishmarketBuyerOrderStateSyn = Message & { content?: MessageContent & { topic?: 'idle_fishmarket_BuyerOrderStateSyn', content?: string | Idle.Fishmarket.BuyerOrderStateSyn } };
@@ -1262,7 +1262,9 @@ declare namespace IncomingMessage {
   type TaobaoAgSignInfo = Message & { content?: MessageContent & { topic?: 'taobao_ag_SignInfo', content?: string | Taobao.Ag.SignInfo } };
   /** {@link Taobao.Ag.TicketsMsg AliGenius > 商家工单消息} */
   type TaobaoAgTicketsMsg = Message & { content?: MessageContent & { topic?: 'taobao_ag_TicketsMsg', content?: string | Taobao.Ag.TicketsMsg } };
-  /** {@link Taobao.Agent.WorkflowAsyncResult 淘宝 > 工作流开放异步执行结果通知} */
+  /** {@link Taobao.Agent.AgentRes 内容开放 > tao agent执行结果通知} */
+  type TaobaoAgentAgentRes = Message & { content?: MessageContent & { topic?: 'taobao_agent_AgentRes', content?: string | Taobao.Agent.AgentRes } };
+  /** {@link Taobao.Agent.WorkflowAsyncResult 内容开放 > 工作流开放异步执行结果通知} */
   type TaobaoAgentWorkflowAsyncResult = Message & { content?: MessageContent & { topic?: 'taobao_agent_WorkflowAsyncResult', content?: string | Taobao.Agent.WorkflowAsyncResult } };
   /** {@link Taobao.Ais.CommonMessage 淘宝 > 厂商协同统一消息} */
   type TaobaoAisCommonMessage = Message & { content?: MessageContent & { topic?: 'taobao_ais_CommonMessage', content?: string | Taobao.Ais.CommonMessage } };
@@ -1582,6 +1584,8 @@ declare namespace IncomingMessage {
   type TaobaoIfashionOrderCreate = Message & { content?: MessageContent & { topic?: 'taobao_ifashion_OrderCreate', content?: string | Taobao.Ifashion.OrderCreate } };
   /** {@link Taobao.Ihome.AigcTaskChange 淘宝 > aigc任务状态变更} */
   type TaobaoIhomeAigcTaskChange = Message & { content?: MessageContent & { topic?: 'taobao_ihome_AigcTaskChange', content?: string | Taobao.Ihome.AigcTaskChange } };
+  /** {@link Taobao.Industry.WWClothItemMsgNotify 淘宝 > 淘宝行业ww服饰商品变更消息推送} */
+  type TaobaoIndustryWWClothItemMsgNotify = Message & { content?: MessageContent & { topic?: 'taobao_industry_WWClothItemMsgNotify', content?: string | Taobao.Industry.WWClothItemMsgNotify } };
   /** {@link Taobao.Inventory.LowQuantityWarning 销售库存 > 低库存预警消息} */
   type TaobaoInventoryLowQuantityWarning = Message & { content?: MessageContent & { topic?: 'taobao_inventory_LowQuantityWarning', content?: string | Taobao.Inventory.LowQuantityWarning } };
   /** {@link Taobao.Inventory.ShareInventory 销售库存 > 天猫国际共享库存订单push} */
@@ -4061,7 +4065,7 @@ declare namespace IncomingMessage {
    */
   type IdleDistribution = IdleDistributionItemChange;
   /**
-   * - {@link IdleEticketOrdermsg 闲鱼 > 闲鱼卡券电子凭证订单消息}
+   * - {@link IdleEticketOrdermsg 闲鱼电商Saas > 闲鱼卡券电子凭证订单消息}
    */
   type IdleEticket = IdleEticketOrdermsg;
   /**
@@ -4195,9 +4199,11 @@ declare namespace IncomingMessage {
     | TaobaoAgSignInfo
     | TaobaoAgTicketsMsg;
   /**
-   * - {@link TaobaoAgentWorkflowAsyncResult 淘宝 > 工作流开放异步执行结果通知}
+   * - {@link TaobaoAgentAgentRes 内容开放 > tao agent执行结果通知}
+   * - {@link TaobaoAgentWorkflowAsyncResult 内容开放 > 工作流开放异步执行结果通知}
    */
-  type TaobaoAgent = TaobaoAgentWorkflowAsyncResult;
+  type TaobaoAgent = TaobaoAgentAgentRes
+    | TaobaoAgentWorkflowAsyncResult;
   /**
    * - {@link TaobaoAisCommonMessage 淘宝 > 厂商协同统一消息}
    */
@@ -4588,6 +4594,10 @@ declare namespace IncomingMessage {
    * - {@link TaobaoIhomeAigcTaskChange 淘宝 > aigc任务状态变更}
    */
   type TaobaoIhome = TaobaoIhomeAigcTaskChange;
+  /**
+   * - {@link TaobaoIndustryWWClothItemMsgNotify 淘宝 > 淘宝行业ww服饰商品变更消息推送}
+   */
+  type TaobaoIndustry = TaobaoIndustryWWClothItemMsgNotify;
   /**
    * - {@link TaobaoInventoryLowQuantityWarning 销售库存 > 低库存预警消息}
    * - {@link TaobaoInventoryShareInventory 销售库存 > 天猫国际共享库存订单push}
@@ -6395,6 +6405,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoIdlefish}
    * - {@link TaobaoIfashion}
    * - {@link TaobaoIhome}
+   * - {@link TaobaoIndustry}
    * - {@link TaobaoInventory}
    * - {@link TaobaoIstore}
    * - {@link TaobaoItem}
@@ -6517,6 +6528,7 @@ declare namespace IncomingMessage {
     | TaobaoIdlefish
     | TaobaoIfashion
     | TaobaoIhome
+    | TaobaoIndustry
     | TaobaoInventory
     | TaobaoIstore
     | TaobaoItem
