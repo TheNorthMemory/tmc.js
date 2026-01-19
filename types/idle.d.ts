@@ -184,6 +184,8 @@ declare namespace Idle.Eticket {
     msg_type: string;
     /** 逆向单id */
     refund_id: string;
+    /** 卖家id */
+    seller_id: string;
   }
 }
 
