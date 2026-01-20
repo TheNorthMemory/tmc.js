@@ -284,6 +284,10 @@ declare interface TaoTopicsDescriptor {
   alibaba_idle_HouseStatusNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleHouseStatusNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIdleJobItemChangeStatusNotify 闲鱼 > 岗位状态变更通知} */
   alibaba_idle_JobItemChangeStatusNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleJobItemChangeStatusNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaIdleLocalIMBindStatusSyn 闲鱼 > 闲鱼同城ka商家im绑定状态同步} */
+  alibaba_idle_LocalIMBindStatusSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleLocalIMBindStatusSyn) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaIdleLocalLeadConfirmSyn 闲鱼 > 闲鱼留资卡确认消息同步} */
+  alibaba_idle_LocalLeadConfirmSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleLocalLeadConfirmSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIdleLocalMessageNotify 闲鱼 > 闲鱼KA商家询单消息通知} */
   alibaba_idle_LocalMessageNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleLocalMessageNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIfpPackageCfcContainer 五道口配送 > 同城履约包裹状态变更消息} */
@@ -3691,6 +3695,10 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_idle_HouseStatusNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleHouseStatusNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIdleJobItemChangeStatusNotify 闲鱼 > 岗位状态变更通知} */
   on(topic: 'alibaba_idle_JobItemChangeStatusNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleJobItemChangeStatusNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaIdleLocalIMBindStatusSyn 闲鱼 > 闲鱼同城ka商家im绑定状态同步} */
+  on(topic: 'alibaba_idle_LocalIMBindStatusSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleLocalIMBindStatusSyn) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaIdleLocalLeadConfirmSyn 闲鱼 > 闲鱼留资卡确认消息同步} */
+  on(topic: 'alibaba_idle_LocalLeadConfirmSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleLocalLeadConfirmSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIdleLocalMessageNotify 闲鱼 > 闲鱼KA商家询单消息通知} */
   on(topic: 'alibaba_idle_LocalMessageNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleLocalMessageNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIfpPackageCfcContainer 五道口配送 > 同城履约包裹状态变更消息} */

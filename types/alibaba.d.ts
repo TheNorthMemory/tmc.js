@@ -1570,6 +1570,26 @@ declare namespace Alibaba.Idle {
     status: number;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2738&docType=9 闲鱼同城ka商家im绑定状态同步} */
+  interface LocalIMBindStatusSyn {
+    /** 行业 */
+    biz_type: number;
+    /** 加密卖家会员名 */
+    encrypt_member_name: string;
+    /** 变更状态 0：服务商绑定，-1:解绑，1：授权 */
+    status: number;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2737&docType=9 闲鱼留资卡确认消息同步} */
+  interface LocalLeadConfirmSyn {
+    /** 加密买家id */
+    encry_buyer_id: string;
+    /** 加密会话id */
+    encry_session_id: string;
+    /** 加密电话号码 */
+    encry_tel: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2712&docType=9 闲鱼KA商家询单消息通知} */
   interface LocalMessageNotify {
     /** 消息内容 */

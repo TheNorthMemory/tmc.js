@@ -270,6 +270,10 @@ declare namespace IncomingMessage {
   type AlibabaIdleHouseStatusNotify = Message & { content?: MessageContent & { topic?: 'alibaba_idle_HouseStatusNotify', content?: string | Alibaba.Idle.HouseStatusNotify } };
   /** {@link Alibaba.Idle.JobItemChangeStatusNotify 闲鱼 > 岗位状态变更通知} */
   type AlibabaIdleJobItemChangeStatusNotify = Message & { content?: MessageContent & { topic?: 'alibaba_idle_JobItemChangeStatusNotify', content?: string | Alibaba.Idle.JobItemChangeStatusNotify } };
+  /** {@link Alibaba.Idle.LocalIMBindStatusSyn 闲鱼 > 闲鱼同城ka商家im绑定状态同步} */
+  type AlibabaIdleLocalIMBindStatusSyn = Message & { content?: MessageContent & { topic?: 'alibaba_idle_LocalIMBindStatusSyn', content?: string | Alibaba.Idle.LocalIMBindStatusSyn } };
+  /** {@link Alibaba.Idle.LocalLeadConfirmSyn 闲鱼 > 闲鱼留资卡确认消息同步} */
+  type AlibabaIdleLocalLeadConfirmSyn = Message & { content?: MessageContent & { topic?: 'alibaba_idle_LocalLeadConfirmSyn', content?: string | Alibaba.Idle.LocalLeadConfirmSyn } };
   /** {@link Alibaba.Idle.LocalMessageNotify 闲鱼 > 闲鱼KA商家询单消息通知} */
   type AlibabaIdleLocalMessageNotify = Message & { content?: MessageContent & { topic?: 'alibaba_idle_LocalMessageNotify', content?: string | Alibaba.Idle.LocalMessageNotify } };
   /** {@link Alibaba.Ifp.PackageCfcContainer 五道口配送 > 同城履约包裹状态变更消息} */
@@ -2862,11 +2866,15 @@ declare namespace IncomingMessage {
    * - {@link AlibabaIdleApplyInfoSyn 闲鱼 > 灵活用工报名信息同步}
    * - {@link AlibabaIdleHouseStatusNotify 闲鱼 > 闲鱼房源状态变更通知}
    * - {@link AlibabaIdleJobItemChangeStatusNotify 闲鱼 > 岗位状态变更通知}
+   * - {@link AlibabaIdleLocalIMBindStatusSyn 闲鱼 > 闲鱼同城ka商家im绑定状态同步}
+   * - {@link AlibabaIdleLocalLeadConfirmSyn 闲鱼 > 闲鱼留资卡确认消息同步}
    * - {@link AlibabaIdleLocalMessageNotify 闲鱼 > 闲鱼KA商家询单消息通知}
    */
   type AlibabaIdle = AlibabaIdleApplyInfoSyn
     | AlibabaIdleHouseStatusNotify
     | AlibabaIdleJobItemChangeStatusNotify
+    | AlibabaIdleLocalIMBindStatusSyn
+    | AlibabaIdleLocalLeadConfirmSyn
     | AlibabaIdleLocalMessageNotify;
   /**
    * - {@link AlibabaIfpPackageCfcContainer 五道口配送 > 同城履约包裹状态变更消息}
