@@ -4772,6 +4772,8 @@ declare namespace Taobao.Pc {
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2732&docType=9 SKU变更消息} */
   interface ItemSkuChange {
+    /** 变更的字段列表 */
+    change_fields?: string;
     /** 客户ID */
     client_id: string;
     /** 企业购商品ID */
