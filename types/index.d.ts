@@ -1192,6 +1192,8 @@ declare interface TaoTopicsDescriptor {
   idle_cycleshop_SaleOrderNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleCycleshopSaleOrderNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleDistributionItemChange 闲鱼回收商消息 > 分销闲管家消息通道} */
   idle_distribution_ItemChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleDistributionItemChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleEticketItemExpire 闲鱼电商Saas > 闲鱼囤囤券商品到有效期通知消息} */
+  idle_eticket_ItemExpire(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleEticketItemExpire) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleEticketOrdermsg 闲鱼电商Saas > 闲鱼卡券电子凭证订单消息} */
   idle_eticket_Ordermsg(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleEticketOrdermsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleFishmarketBuyerOrderStateSyn 闲鱼 > 闲鱼鱼市买家单状态同步} */
@@ -2040,6 +2042,8 @@ declare interface TaoTopicsDescriptor {
   taobao_taotv_VideoPublish(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTaotvVideoPublish) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTbkContentMsgGet 淘宝 > 媒体内容消息接收API} */
   taobao_tbk_ContentMsgGet(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTbkContentMsgGet) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoTbkIntelligentRecommendationReply 淘宝 > 智能导购推荐回复} */
+  taobao_tbk_IntelligentRecommendationReply(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTbkIntelligentRecommendationReply) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTbkItemMaterialPush 淘宝 > 淘宝联盟官方单品物料推送} */
   taobao_tbk_ItemMaterialPush(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTbkItemMaterialPush) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTbkJINGCAITOUTIAOTljReport 淘宝 > 淘礼金实时报表} */
@@ -4603,6 +4607,8 @@ declare interface TaoEventsListener {
   on(topic: 'idle_cycleshop_SaleOrderNotice', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleCycleshopSaleOrderNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleDistributionItemChange 闲鱼回收商消息 > 分销闲管家消息通道} */
   on(topic: 'idle_distribution_ItemChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleDistributionItemChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleEticketItemExpire 闲鱼电商Saas > 闲鱼囤囤券商品到有效期通知消息} */
+  on(topic: 'idle_eticket_ItemExpire', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleEticketItemExpire) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleEticketOrdermsg 闲鱼电商Saas > 闲鱼卡券电子凭证订单消息} */
   on(topic: 'idle_eticket_Ordermsg', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleEticketOrdermsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleFishmarketBuyerOrderStateSyn 闲鱼 > 闲鱼鱼市买家单状态同步} */
@@ -5451,6 +5457,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_taotv_VideoPublish', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTaotvVideoPublish) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTbkContentMsgGet 淘宝 > 媒体内容消息接收API} */
   on(topic: 'taobao_tbk_ContentMsgGet', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTbkContentMsgGet) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoTbkIntelligentRecommendationReply 淘宝 > 智能导购推荐回复} */
+  on(topic: 'taobao_tbk_IntelligentRecommendationReply', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTbkIntelligentRecommendationReply) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTbkItemMaterialPush 淘宝 > 淘宝联盟官方单品物料推送} */
   on(topic: 'taobao_tbk_ItemMaterialPush', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTbkItemMaterialPush) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTbkJINGCAITOUTIAOTljReport 淘宝 > 淘礼金实时报表} */

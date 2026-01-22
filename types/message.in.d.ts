@@ -1178,6 +1178,8 @@ declare namespace IncomingMessage {
   type IdleCycleshopSaleOrderNotice = Message & { content?: MessageContent & { topic?: 'idle_cycleshop_SaleOrderNotice', content?: string | Idle.Cycleshop.SaleOrderNotice } };
   /** {@link Idle.Distribution.ItemChange 闲鱼回收商消息 > 分销闲管家消息通道} */
   type IdleDistributionItemChange = Message & { content?: MessageContent & { topic?: 'idle_distribution_ItemChange', content?: string | Idle.Distribution.ItemChange } };
+  /** {@link Idle.Eticket.ItemExpire 闲鱼电商Saas > 闲鱼囤囤券商品到有效期通知消息} */
+  type IdleEticketItemExpire = Message & { content?: MessageContent & { topic?: 'idle_eticket_ItemExpire', content?: string | Idle.Eticket.ItemExpire } };
   /** {@link Idle.Eticket.Ordermsg 闲鱼电商Saas > 闲鱼卡券电子凭证订单消息} */
   type IdleEticketOrdermsg = Message & { content?: MessageContent & { topic?: 'idle_eticket_Ordermsg', content?: string | Idle.Eticket.Ordermsg } };
   /** {@link Idle.Fishmarket.BuyerOrderStateSyn 闲鱼 > 闲鱼鱼市买家单状态同步} */
@@ -2026,6 +2028,8 @@ declare namespace IncomingMessage {
   type TaobaoTaotvVideoPublish = Message & { content?: MessageContent & { topic?: 'taobao_taotv_VideoPublish', content?: string | Taobao.Taotv.VideoPublish } };
   /** {@link Taobao.Tbk.ContentMsgGet 淘宝 > 媒体内容消息接收API} */
   type TaobaoTbkContentMsgGet = Message & { content?: MessageContent & { topic?: 'taobao_tbk_ContentMsgGet', content?: string | Taobao.Tbk.ContentMsgGet } };
+  /** {@link Taobao.Tbk.IntelligentRecommendationReply 淘宝 > 智能导购推荐回复} */
+  type TaobaoTbkIntelligentRecommendationReply = Message & { content?: MessageContent & { topic?: 'taobao_tbk_IntelligentRecommendationReply', content?: string | Taobao.Tbk.IntelligentRecommendationReply } };
   /** {@link Taobao.Tbk.ItemMaterialPush 淘宝 > 淘宝联盟官方单品物料推送} */
   type TaobaoTbkItemMaterialPush = Message & { content?: MessageContent & { topic?: 'taobao_tbk_ItemMaterialPush', content?: string | Taobao.Tbk.ItemMaterialPush } };
   /** {@link Taobao.Tbk.JINGCAITOUTIAOTljReport 淘宝 > 淘礼金实时报表} */
@@ -4073,9 +4077,11 @@ declare namespace IncomingMessage {
    */
   type IdleDistribution = IdleDistributionItemChange;
   /**
+   * - {@link IdleEticketItemExpire 闲鱼电商Saas > 闲鱼囤囤券商品到有效期通知消息}
    * - {@link IdleEticketOrdermsg 闲鱼电商Saas > 闲鱼卡券电子凭证订单消息}
    */
-  type IdleEticket = IdleEticketOrdermsg;
+  type IdleEticket = IdleEticketItemExpire
+    | IdleEticketOrdermsg;
   /**
    * - {@link IdleFishmarketBuyerOrderStateSyn 闲鱼 > 闲鱼鱼市买家单状态同步}
    * - {@link IdleFishmarketItemAuctionStateSyn 闲鱼 > 闲鱼鱼市商品竞拍消息同步}
@@ -5148,6 +5154,7 @@ declare namespace IncomingMessage {
     | TaobaoTaotvVideoPublish;
   /**
    * - {@link TaobaoTbkContentMsgGet 淘宝 > 媒体内容消息接收API}
+   * - {@link TaobaoTbkIntelligentRecommendationReply 淘宝 > 智能导购推荐回复}
    * - {@link TaobaoTbkItemMaterialPush 淘宝 > 淘宝联盟官方单品物料推送}
    * - {@link TaobaoTbkJINGCAITOUTIAOTljReport 淘宝 > 淘礼金实时报表}
    * - {@link TaobaoTbkJUXIAOXITljReport 淘宝 > 淘礼金实时报表}
@@ -5156,6 +5163,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoTbkYOUSHITljReport 淘宝 > 淘礼金报表API}
    */
   type TaobaoTbk = TaobaoTbkContentMsgGet
+    | TaobaoTbkIntelligentRecommendationReply
     | TaobaoTbkItemMaterialPush
     | TaobaoTbkJINGCAITOUTIAOTljReport
     | TaobaoTbkJUXIAOXITljReport

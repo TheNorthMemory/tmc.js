@@ -176,6 +176,14 @@ declare namespace Idle.Distribution {
 
 /** 闲鱼电商Saas */
 declare namespace Idle.Eticket {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2741&docType=9 闲鱼囤囤券商品到有效期通知消息} */
+  interface ItemExpire {
+    /** 商品id */
+    item_id: string;
+    /** 商品归属的卖家id */
+    seller_id: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2730&docType=9 闲鱼卡券电子凭证订单消息} */
   interface Ordermsg {
     /** 订单id */

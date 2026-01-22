@@ -4756,6 +4756,8 @@ declare namespace Taobao.Pc {
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2633&docType=9 商品变更消息} */
   interface ItemChange {
+    /** 变更的字段列表 */
+    change_fields?: string;
     /** 客户ID */
     client_id: string;
     /** 变更企业购商品ID */
@@ -6328,6 +6330,14 @@ declare namespace Taobao.Tbk {
     status: number;
     /** 消息发送的时间，以毫秒为单位 */
     timestamp: number;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2740&docType=9 智能导购推荐回复} */
+  interface IntelligentRecommendationReply {
+    /** 商品ID，A-B形式，最多10个，本次1个 */
+    data: string;
+    /** 消息唯一标识ID */
+    query_id: string;
   }
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2170&docType=9 淘宝联盟官方单品物料推送} */
