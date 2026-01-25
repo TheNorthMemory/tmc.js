@@ -2042,7 +2042,7 @@ declare interface TaoTopicsDescriptor {
   taobao_taotv_VideoPublish(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTaotvVideoPublish) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTbkContentMsgGet 淘宝 > 媒体内容消息接收API} */
   taobao_tbk_ContentMsgGet(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTbkContentMsgGet) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TaobaoTbkIntelligentRecommendationReply 淘宝 > 智能导购推荐回复} */
+  /** {@link IncomingMessage.TaobaoTbkIntelligentRecommendationReply 淘宝 > 淘宝客-公用-导购智能推荐回复} */
   taobao_tbk_IntelligentRecommendationReply(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTbkIntelligentRecommendationReply) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTbkItemMaterialPush 淘宝 > 淘宝联盟官方单品物料推送} */
   taobao_tbk_ItemMaterialPush(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTbkItemMaterialPush) => void): TaoMessageConsumer;
@@ -5457,7 +5457,7 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_taotv_VideoPublish', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTaotvVideoPublish) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTbkContentMsgGet 淘宝 > 媒体内容消息接收API} */
   on(topic: 'taobao_tbk_ContentMsgGet', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTbkContentMsgGet) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TaobaoTbkIntelligentRecommendationReply 淘宝 > 智能导购推荐回复} */
+  /** {@link IncomingMessage.TaobaoTbkIntelligentRecommendationReply 淘宝 > 淘宝客-公用-导购智能推荐回复} */
   on(topic: 'taobao_tbk_IntelligentRecommendationReply', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTbkIntelligentRecommendationReply) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTbkItemMaterialPush 淘宝 > 淘宝联盟官方单品物料推送} */
   on(topic: 'taobao_tbk_ItemMaterialPush', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTbkItemMaterialPush) => void): TaoMessageConsumer;

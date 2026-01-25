@@ -2028,7 +2028,7 @@ declare namespace IncomingMessage {
   type TaobaoTaotvVideoPublish = Message & { content?: MessageContent & { topic?: 'taobao_taotv_VideoPublish', content?: string | Taobao.Taotv.VideoPublish } };
   /** {@link Taobao.Tbk.ContentMsgGet 淘宝 > 媒体内容消息接收API} */
   type TaobaoTbkContentMsgGet = Message & { content?: MessageContent & { topic?: 'taobao_tbk_ContentMsgGet', content?: string | Taobao.Tbk.ContentMsgGet } };
-  /** {@link Taobao.Tbk.IntelligentRecommendationReply 淘宝 > 智能导购推荐回复} */
+  /** {@link Taobao.Tbk.IntelligentRecommendationReply 淘宝 > 淘宝客-公用-导购智能推荐回复} */
   type TaobaoTbkIntelligentRecommendationReply = Message & { content?: MessageContent & { topic?: 'taobao_tbk_IntelligentRecommendationReply', content?: string | Taobao.Tbk.IntelligentRecommendationReply } };
   /** {@link Taobao.Tbk.ItemMaterialPush 淘宝 > 淘宝联盟官方单品物料推送} */
   type TaobaoTbkItemMaterialPush = Message & { content?: MessageContent & { topic?: 'taobao_tbk_ItemMaterialPush', content?: string | Taobao.Tbk.ItemMaterialPush } };
@@ -5154,7 +5154,7 @@ declare namespace IncomingMessage {
     | TaobaoTaotvVideoPublish;
   /**
    * - {@link TaobaoTbkContentMsgGet 淘宝 > 媒体内容消息接收API}
-   * - {@link TaobaoTbkIntelligentRecommendationReply 淘宝 > 智能导购推荐回复}
+   * - {@link TaobaoTbkIntelligentRecommendationReply 淘宝 > 淘宝客-公用-导购智能推荐回复}
    * - {@link TaobaoTbkItemMaterialPush 淘宝 > 淘宝联盟官方单品物料推送}
    * - {@link TaobaoTbkJINGCAITOUTIAOTljReport 淘宝 > 淘礼金实时报表}
    * - {@link TaobaoTbkJUXIAOXITljReport 淘宝 > 淘礼金实时报表}

@@ -6332,12 +6332,14 @@ declare namespace Taobao.Tbk {
     timestamp: number;
   }
 
-  /** {@link https://open.taobao.com/tmc.htm?docId=2740&docType=9 智能导购推荐回复} */
+  /** {@link https://open.taobao.com/tmc.htm?docId=2740&docType=9 淘宝客-公用-导购智能推荐回复} */
   interface IntelligentRecommendationReply {
     /** 商品ID，A-B形式，最多10个，本次1个 */
     data: string;
     /** 消息唯一标识ID */
     query_id: string;
+    /** 场景 0-不可处理 1可处理 */
+    scene: number;
   }
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2170&docType=9 淘宝联盟官方单品物料推送} */
