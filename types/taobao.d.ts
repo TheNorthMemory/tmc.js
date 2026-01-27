@@ -4008,6 +4008,16 @@ declare namespace Taobao.Ofn {
     supplier_id: string;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2746&docType=9 消费者补贴追差付款完成通知} */
+  interface DifferenceRefundPay {
+    /** 追差付款金额（单位 分） */
+    pay_amount: string;
+    /** 追差付款完成时间（毫秒时间戳） */
+    pay_time: string;
+    /** 回收单 ID */
+    recycle_order_id: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2483&docType=9 以旧换新新机单事件同步} */
   interface NewOrderEventSync {
     /** 事件类型，SHIPPED（已发货），PAID（已支付） */

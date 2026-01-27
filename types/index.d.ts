@@ -1758,6 +1758,8 @@ declare interface TaoTopicsDescriptor {
   taobao_oc_TradeTagChanged(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOcTradeTagChanged) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOfnCreditPayStatusChange 以旧换新-订单域 > 信用代扣状态变更同步} */
   taobao_ofn_CreditPayStatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnCreditPayStatusChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOfnDifferenceRefundPay 以旧换新-订单域 > 消费者补贴追差付款完成通知} */
+  taobao_ofn_DifferenceRefundPay(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnDifferenceRefundPay) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOfnNewOrderEventSync 以旧换新-订单域 > 以旧换新新机单事件同步} */
   taobao_ofn_NewOrderEventSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnNewOrderEventSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOfnOrderStatusSync 以旧换新-订单域 > 以旧换新回收单状态同步} */
@@ -5173,6 +5175,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_oc_TradeTagChanged', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOcTradeTagChanged) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOfnCreditPayStatusChange 以旧换新-订单域 > 信用代扣状态变更同步} */
   on(topic: 'taobao_ofn_CreditPayStatusChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnCreditPayStatusChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOfnDifferenceRefundPay 以旧换新-订单域 > 消费者补贴追差付款完成通知} */
+  on(topic: 'taobao_ofn_DifferenceRefundPay', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnDifferenceRefundPay) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOfnNewOrderEventSync 以旧换新-订单域 > 以旧换新新机单事件同步} */
   on(topic: 'taobao_ofn_NewOrderEventSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnNewOrderEventSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOfnOrderStatusSync 以旧换新-订单域 > 以旧换新回收单状态同步} */
