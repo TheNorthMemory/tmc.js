@@ -1604,6 +1604,8 @@ declare interface TaoTopicsDescriptor {
   taobao_ifashion_OrderCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoIfashionOrderCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoIhomeAigcTaskChange 淘宝 > aigc任务状态变更} */
   taobao_ihome_AigcTaskChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoIhomeAigcTaskChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoIndustryPetDoc 淘宝 > 宠物档案新增或变更通知} */
+  taobao_industry_PetDoc(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoIndustryPetDoc) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoIndustryWWClothItemMsgNotify 淘宝 > 淘宝行业ww服饰商品变更消息推送} */
   taobao_industry_WWClothItemMsgNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoIndustryWWClothItemMsgNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoInventoryLowQuantityWarning 销售库存 > 低库存预警消息} */
@@ -5021,6 +5023,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_ifashion_OrderCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoIfashionOrderCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoIhomeAigcTaskChange 淘宝 > aigc任务状态变更} */
   on(topic: 'taobao_ihome_AigcTaskChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoIhomeAigcTaskChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoIndustryPetDoc 淘宝 > 宠物档案新增或变更通知} */
+  on(topic: 'taobao_industry_PetDoc', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoIndustryPetDoc) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoIndustryWWClothItemMsgNotify 淘宝 > 淘宝行业ww服饰商品变更消息推送} */
   on(topic: 'taobao_industry_WWClothItemMsgNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoIndustryWWClothItemMsgNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoInventoryLowQuantityWarning 销售库存 > 低库存预警消息} */

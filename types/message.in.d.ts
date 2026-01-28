@@ -1590,6 +1590,8 @@ declare namespace IncomingMessage {
   type TaobaoIfashionOrderCreate = Message & { content?: MessageContent & { topic?: 'taobao_ifashion_OrderCreate', content?: string | Taobao.Ifashion.OrderCreate } };
   /** {@link Taobao.Ihome.AigcTaskChange 淘宝 > aigc任务状态变更} */
   type TaobaoIhomeAigcTaskChange = Message & { content?: MessageContent & { topic?: 'taobao_ihome_AigcTaskChange', content?: string | Taobao.Ihome.AigcTaskChange } };
+  /** {@link Taobao.Industry.PetDoc 淘宝 > 宠物档案新增或变更通知} */
+  type TaobaoIndustryPetDoc = Message & { content?: MessageContent & { topic?: 'taobao_industry_PetDoc', content?: string | Taobao.Industry.PetDoc } };
   /** {@link Taobao.Industry.WWClothItemMsgNotify 淘宝 > 淘宝行业ww服饰商品变更消息推送} */
   type TaobaoIndustryWWClothItemMsgNotify = Message & { content?: MessageContent & { topic?: 'taobao_industry_WWClothItemMsgNotify', content?: string | Taobao.Industry.WWClothItemMsgNotify } };
   /** {@link Taobao.Inventory.LowQuantityWarning 销售库存 > 低库存预警消息} */
@@ -4611,9 +4613,11 @@ declare namespace IncomingMessage {
    */
   type TaobaoIhome = TaobaoIhomeAigcTaskChange;
   /**
+   * - {@link TaobaoIndustryPetDoc 淘宝 > 宠物档案新增或变更通知}
    * - {@link TaobaoIndustryWWClothItemMsgNotify 淘宝 > 淘宝行业ww服饰商品变更消息推送}
    */
-  type TaobaoIndustry = TaobaoIndustryWWClothItemMsgNotify;
+  type TaobaoIndustry = TaobaoIndustryPetDoc
+    | TaobaoIndustryWWClothItemMsgNotify;
   /**
    * - {@link TaobaoInventoryLowQuantityWarning 销售库存 > 低库存预警消息}
    * - {@link TaobaoInventoryShareInventory 销售库存 > 天猫国际共享库存订单push}

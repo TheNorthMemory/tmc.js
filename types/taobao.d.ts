@@ -2760,6 +2760,18 @@ declare namespace Taobao.Ihome {
 
 /** 淘宝 */
 declare namespace Taobao.Industry {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2747&docType=9 宠物档案新增或变更通知} */
+  interface PetDoc {
+    /** 宠物档案id */
+    id: string;
+    /** 消息ID */
+    msg_id: string;
+    /** 变更类型，ADD：新增，DELETE：删除，EDIT：更新 */
+    type: string;
+    /** 用户id（已转换open uid） */
+    user_id: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2734&docType=9 淘宝行业ww服饰商品变更消息推送} */
   interface WWClothItemMsgNotify {
     /** 商品ID */
