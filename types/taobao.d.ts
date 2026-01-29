@@ -811,6 +811,16 @@ declare namespace Taobao.Cco {
 
 /** 淘宝 */
 declare namespace Taobao.Cloth {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2743&docType=9 淘宝服饰平台仓履约单消息} */
+  interface FulfillmentMsg {
+    /** 事件类型：创建CREATE/取消CANCEL/修改地址UPDATE_ADDRESS/物流拦截DLV_INTERCEPT */
+    event_type: string;
+    /** 履约单单号 */
+    fulfillment_main_order_no: string;
+    /** 消息ID */
+    msg_id: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2742&docType=9 淘宝服饰平台仓入库单消息} */
   interface InboundMsg {
     /** 事件类型：包裹已签收入库中INBOUND_PENDING */

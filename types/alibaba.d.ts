@@ -1582,12 +1582,22 @@ declare namespace Alibaba.Idle {
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2737&docType=9 闲鱼留资卡确认消息同步} */
   interface LocalLeadConfirmSyn {
+    /** 加密买家展示昵称 */
+    encry_buyer_display_nick: string;
     /** 加密买家id */
     encry_buyer_id: string;
+    /** 加密商品id */
+    encry_item_id: string;
+    /** 加密卖家id */
+    encry_seller_id: string;
+    /** 加密卖家会员名 */
+    encry_seller_member_name: string;
     /** 加密会话id */
     encry_session_id: string;
     /** 加密电话号码 */
     encry_tel: string;
+    /** 时间戳 */
+    time_stamp: number;
   }
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2712&docType=9 闲鱼KA商家询单消息通知} */

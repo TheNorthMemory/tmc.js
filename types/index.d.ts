@@ -1376,6 +1376,8 @@ declare interface TaoTopicsDescriptor {
   taobao_cco_AlipayCase(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoCcoAlipayCase) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoCcoGjCase 淘宝 > cco工单创建广交通知} */
   taobao_cco_GjCase(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoCcoGjCase) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoClothFulfillmentMsg 淘宝 > 淘宝服饰平台仓履约单消息} */
+  taobao_cloth_FulfillmentMsg(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoClothFulfillmentMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoClothInboundMsg 淘宝 > 淘宝服饰平台仓入库单消息} */
   taobao_cloth_InboundMsg(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoClothInboundMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoContentAuditAutocut 内容开放 > 智能混剪发布视频空间审核结果} */
@@ -4799,6 +4801,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_cco_AlipayCase', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoCcoAlipayCase) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoCcoGjCase 淘宝 > cco工单创建广交通知} */
   on(topic: 'taobao_cco_GjCase', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoCcoGjCase) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoClothFulfillmentMsg 淘宝 > 淘宝服饰平台仓履约单消息} */
+  on(topic: 'taobao_cloth_FulfillmentMsg', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoClothFulfillmentMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoClothInboundMsg 淘宝 > 淘宝服饰平台仓入库单消息} */
   on(topic: 'taobao_cloth_InboundMsg', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoClothInboundMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoContentAuditAutocut 内容开放 > 智能混剪发布视频空间审核结果} */
