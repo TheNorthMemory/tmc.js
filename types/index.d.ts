@@ -1376,6 +1376,8 @@ declare interface TaoTopicsDescriptor {
   taobao_cco_AlipayCase(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoCcoAlipayCase) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoCcoGjCase 淘宝 > cco工单创建广交通知} */
   taobao_cco_GjCase(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoCcoGjCase) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoClothInboundMsg 淘宝 > 淘宝服饰平台仓入库单消息} */
+  taobao_cloth_InboundMsg(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoClothInboundMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoContentAuditAutocut 内容开放 > 智能混剪发布视频空间审核结果} */
   taobao_content_AuditAutocut(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoContentAuditAutocut) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoContentAuditMvx 内容开放 > 视频工具发布视频空间审核结果} */
@@ -3044,6 +3046,8 @@ declare interface TaoTopicsDescriptor {
   taobao_carlease(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoCarlease) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoCco} */
   taobao_cco(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoCco) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoCloth} */
+  taobao_cloth(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoCloth) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoContent} */
   taobao_content(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoContent) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDaifa} */
@@ -4795,6 +4799,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_cco_AlipayCase', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoCcoAlipayCase) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoCcoGjCase 淘宝 > cco工单创建广交通知} */
   on(topic: 'taobao_cco_GjCase', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoCcoGjCase) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoClothInboundMsg 淘宝 > 淘宝服饰平台仓入库单消息} */
+  on(topic: 'taobao_cloth_InboundMsg', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoClothInboundMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoContentAuditAutocut 内容开放 > 智能混剪发布视频空间审核结果} */
   on(topic: 'taobao_content_AuditAutocut', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoContentAuditAutocut) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoContentAuditMvx 内容开放 > 视频工具发布视频空间审核结果} */
@@ -6463,6 +6469,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_carlease', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoCarlease) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoCco} */
   on(topic: 'taobao_cco', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoCco) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoCloth} */
+  on(topic: 'taobao_cloth', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoCloth) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoContent} */
   on(topic: 'taobao_content', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoContent) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoDaifa} */

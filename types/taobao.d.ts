@@ -809,6 +809,19 @@ declare namespace Taobao.Cco {
   }
 }
 
+/** 淘宝 */
+declare namespace Taobao.Cloth {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2742&docType=9 淘宝服饰平台仓入库单消息} */
+  interface InboundMsg {
+    /** 事件类型：包裹已签收入库中INBOUND_PENDING */
+    event_type: string;
+    /** 入库单单号 */
+    inbound_main_order_no: string;
+    /** 消息ID */
+    msg_id: string;
+  }
+}
+
 /** 内容开放 */
 declare namespace Taobao.Content {
   /** {@link https://open.taobao.com/tmc.htm?docId=2474&docType=9 智能混剪发布视频空间审核结果} */

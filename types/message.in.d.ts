@@ -1362,6 +1362,8 @@ declare namespace IncomingMessage {
   type TaobaoCcoAlipayCase = Message & { content?: MessageContent & { topic?: 'taobao_cco_AlipayCase', content?: string | Taobao.Cco.AlipayCase } };
   /** {@link Taobao.Cco.GjCase 淘宝 > cco工单创建广交通知} */
   type TaobaoCcoGjCase = Message & { content?: MessageContent & { topic?: 'taobao_cco_GjCase', content?: string | Taobao.Cco.GjCase } };
+  /** {@link Taobao.Cloth.InboundMsg 淘宝 > 淘宝服饰平台仓入库单消息} */
+  type TaobaoClothInboundMsg = Message & { content?: MessageContent & { topic?: 'taobao_cloth_InboundMsg', content?: string | Taobao.Cloth.InboundMsg } };
   /** {@link Taobao.Content.AuditAutocut 内容开放 > 智能混剪发布视频空间审核结果} */
   type TaobaoContentAuditAutocut = Message & { content?: MessageContent & { topic?: 'taobao_content_AuditAutocut', content?: string | Taobao.Content.AuditAutocut } };
   /** {@link Taobao.Content.AuditMvx 内容开放 > 视频工具发布视频空间审核结果} */
@@ -4343,6 +4345,10 @@ declare namespace IncomingMessage {
   type TaobaoCco = TaobaoCcoAlipayCase
     | TaobaoCcoGjCase;
   /**
+   * - {@link TaobaoClothInboundMsg 淘宝 > 淘宝服饰平台仓入库单消息}
+   */
+  type TaobaoCloth = TaobaoClothInboundMsg;
+  /**
    * - {@link TaobaoContentAuditAutocut 内容开放 > 智能混剪发布视频空间审核结果}
    * - {@link TaobaoContentAuditMvx 内容开放 > 视频工具发布视频空间审核结果}
    * - {@link TaobaoContentOrderAuditChange 内容开放 > 短视频模板订单审核状态更新}
@@ -6408,6 +6414,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoBus}
    * - {@link TaobaoCarlease}
    * - {@link TaobaoCco}
+   * - {@link TaobaoCloth}
    * - {@link TaobaoContent}
    * - {@link TaobaoDaifa}
    * - {@link TaobaoDatapush}
@@ -6531,6 +6538,7 @@ declare namespace IncomingMessage {
     | TaobaoBus
     | TaobaoCarlease
     | TaobaoCco
+    | TaobaoCloth
     | TaobaoContent
     | TaobaoDaifa
     | TaobaoDatapush
