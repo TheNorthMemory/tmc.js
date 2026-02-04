@@ -2785,11 +2785,11 @@ declare namespace Taobao.Ihome {
 declare namespace Taobao.Industry {
   /** {@link https://open.taobao.com/tmc.htm?docId=2747&docType=9 宠物档案新增或变更通知} */
   interface PetDoc {
-    /** 宠物档案id */
+    /** 宠物档案id（多个id以英文逗号分隔） */
     id: string;
     /** 消息ID */
     msg_id: string;
-    /** 变更类型，ADD：新增，DELETE：删除，EDIT：更新 */
+    /** 变更类型，AUTH：授权，CANCEL_AUTH：取消授权，EDIT：更新 */
     type: string;
     /** 用户id（已转换open uid） */
     user_id: string;
