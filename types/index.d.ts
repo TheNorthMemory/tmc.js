@@ -1196,6 +1196,8 @@ declare interface TaoTopicsDescriptor {
   idle_eticket_ItemExpire(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleEticketItemExpire) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleEticketOrdermsg 闲鱼电商Saas > 闲鱼卡券电子凭证订单消息} */
   idle_eticket_Ordermsg(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleEticketOrdermsg) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleFishmarketAfterSalePerform 闲鱼 > 闲鱼鱼市售后状态推进通知服务商} */
+  idle_fishmarket_AfterSalePerform(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketAfterSalePerform) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleFishmarketBuyerOrderStateSyn 闲鱼 > 闲鱼鱼市买家单状态同步} */
   idle_fishmarket_BuyerOrderStateSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketBuyerOrderStateSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleFishmarketItemAuctionStateSyn 闲鱼 > 闲鱼鱼市商品竞拍消息同步} */
@@ -4621,6 +4623,8 @@ declare interface TaoEventsListener {
   on(topic: 'idle_eticket_ItemExpire', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleEticketItemExpire) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleEticketOrdermsg 闲鱼电商Saas > 闲鱼卡券电子凭证订单消息} */
   on(topic: 'idle_eticket_Ordermsg', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleEticketOrdermsg) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleFishmarketAfterSalePerform 闲鱼 > 闲鱼鱼市售后状态推进通知服务商} */
+  on(topic: 'idle_fishmarket_AfterSalePerform', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketAfterSalePerform) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleFishmarketBuyerOrderStateSyn 闲鱼 > 闲鱼鱼市买家单状态同步} */
   on(topic: 'idle_fishmarket_BuyerOrderStateSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketBuyerOrderStateSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleFishmarketItemAuctionStateSyn 闲鱼 > 闲鱼鱼市商品竞拍消息同步} */

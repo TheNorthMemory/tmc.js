@@ -199,6 +199,22 @@ declare namespace Idle.Eticket {
 
 /** 闲鱼 */
 declare namespace Idle.Fishmarket {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2748&docType=9 闲鱼鱼市售后状态推进通知服务商} */
+  interface AfterSalePerform {
+    /** 售后单id */
+    after_sale_id: string;
+    /** 售后类型 */
+    after_sale_type: string;
+    /** 推进后状态 */
+    after_status: string;
+    /** 推进前状态 */
+    before_status: string;
+    /** 买家单号 */
+    buyer_order_id: string;
+    /** 业务玩法类型 */
+    sale_type: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2683&docType=9 闲鱼鱼市买家单状态同步} */
   interface BuyerOrderStateSyn {
     /** 商品id */
