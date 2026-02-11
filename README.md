@@ -3,7 +3,6 @@
 Event driven and chained Taobao Message Channel(TMC) for NodeJS
 
 [![release](https://img.shields.io/npm/v/tmc.js)](https://github.com/TheNorthMemory/tmc.js/releases)
-[![advisor](https://snyk.io/advisor/npm-package/tmc.js/badge.svg)](https://snyk.io/advisor/npm-package/tmc.js)
 [![types](https://img.shields.io/badge/types-included-blue)](https://www.npmjs.com/package/tmc.js)
 [![requirement](https://img.shields.io/node/v/tmc.js)](https://www.npmjs.com/package/tmc.js)
 [![downloads](https://img.shields.io/npm/dm/tmc.js)](https://www.npmjs.com/package/tmc.js)
