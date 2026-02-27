@@ -449,6 +449,32 @@ declare namespace Tmall.Homeservice {
     workcard_id_list: string;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2749&docType=9 线下服务收费单消息} */
+  interface OnsiteServiceOrder {
+    /** 实际金额（分） */
+    actual_price: string;
+    /** 备注 */
+    memo?: string;
+    /** 订单id */
+    order_id: string;
+    /** 购买信息 */
+    order_line: string;
+    /** 订单原价（分） */
+    origin_price: string;
+    /** 支付时间 */
+    pay_time?: string;
+    /** 优惠金额（分） */
+    promotion_price?: string;
+    /** 状态 */
+    status: number;
+    /** 发起人id */
+    trigger_id?: string;
+    /** 发起时间 */
+    trigger_time?: string;
+    /** 工单id */
+    workcard_id?: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2715&docType=9 交易逆向消息} */
   interface TradeRefund {
     /** 实物子订单 */

@@ -2376,6 +2376,8 @@ declare namespace IncomingMessage {
   type TmallHomeserviceGroupWorkcardCreate = Message & { content?: MessageContent & { topic?: 'tmall_homeservice_GroupWorkcardCreate', content?: string | Tmall.Homeservice.GroupWorkcardCreate } };
   /** {@link Tmall.Homeservice.LogisticsUpdate 天猫服务 > 天猫家享服务物流更新} */
   type TmallHomeserviceLogisticsUpdate = Message & { content?: MessageContent & { topic?: 'tmall_homeservice_LogisticsUpdate', content?: string | Tmall.Homeservice.LogisticsUpdate } };
+  /** {@link Tmall.Homeservice.OnsiteServiceOrder 天猫服务 > 线下服务收费单消息} */
+  type TmallHomeserviceOnsiteServiceOrder = Message & { content?: MessageContent & { topic?: 'tmall_homeservice_OnsiteServiceOrder', content?: string | Tmall.Homeservice.OnsiteServiceOrder } };
   /** {@link Tmall.Homeservice.TradeRefund 天猫服务 > 交易逆向消息} */
   type TmallHomeserviceTradeRefund = Message & { content?: MessageContent & { topic?: 'tmall_homeservice_TradeRefund', content?: string | Tmall.Homeservice.TradeRefund } };
   /** {@link Tmall.Ifpfulfill.ResultNotice 天猫 > 创建订单结果通知接口} */
@@ -5589,10 +5591,12 @@ declare namespace IncomingMessage {
   /**
    * - {@link TmallHomeserviceGroupWorkcardCreate 天猫服务 > 整单视角工单全部创建消息}
    * - {@link TmallHomeserviceLogisticsUpdate 天猫服务 > 天猫家享服务物流更新}
+   * - {@link TmallHomeserviceOnsiteServiceOrder 天猫服务 > 线下服务收费单消息}
    * - {@link TmallHomeserviceTradeRefund 天猫服务 > 交易逆向消息}
    */
   type TmallHomeservice = TmallHomeserviceGroupWorkcardCreate
     | TmallHomeserviceLogisticsUpdate
+    | TmallHomeserviceOnsiteServiceOrder
     | TmallHomeserviceTradeRefund;
   /**
    * - {@link TmallIfpfulfillResultNotice 天猫 > 创建订单结果通知接口}

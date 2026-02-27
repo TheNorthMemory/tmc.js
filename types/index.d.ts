@@ -2390,6 +2390,8 @@ declare interface TaoTopicsDescriptor {
   tmall_homeservice_GroupWorkcardCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallHomeserviceGroupWorkcardCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallHomeserviceLogisticsUpdate 天猫服务 > 天猫家享服务物流更新} */
   tmall_homeservice_LogisticsUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallHomeserviceLogisticsUpdate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallHomeserviceOnsiteServiceOrder 天猫服务 > 线下服务收费单消息} */
+  tmall_homeservice_OnsiteServiceOrder(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallHomeserviceOnsiteServiceOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallHomeserviceTradeRefund 天猫服务 > 交易逆向消息} */
   tmall_homeservice_TradeRefund(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallHomeserviceTradeRefund) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallIfpfulfillResultNotice 天猫 > 创建订单结果通知接口} */
@@ -5817,6 +5819,8 @@ declare interface TaoEventsListener {
   on(topic: 'tmall_homeservice_GroupWorkcardCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallHomeserviceGroupWorkcardCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallHomeserviceLogisticsUpdate 天猫服务 > 天猫家享服务物流更新} */
   on(topic: 'tmall_homeservice_LogisticsUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallHomeserviceLogisticsUpdate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallHomeserviceOnsiteServiceOrder 天猫服务 > 线下服务收费单消息} */
+  on(topic: 'tmall_homeservice_OnsiteServiceOrder', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallHomeserviceOnsiteServiceOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallHomeserviceTradeRefund 天猫服务 > 交易逆向消息} */
   on(topic: 'tmall_homeservice_TradeRefund', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallHomeserviceTradeRefund) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallIfpfulfillResultNotice 天猫 > 创建订单结果通知接口} */
