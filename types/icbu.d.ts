@@ -111,6 +111,16 @@ declare namespace Icbu.Crm {
     /** 付款金额 */
     amout: string;
   }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2751&docType=9 crm客户事件同步小满消息} */
+  interface XiaomanEventNotify {
+    /** 阿里客户id标识 */
+    ali_cgs: string;
+    /** 上下文参数 */
+    context?: string;
+    /** 事件编码 */
+    event_code: string;
+  }
 }
 
 /** ICBU */

@@ -1148,6 +1148,8 @@ declare namespace IncomingMessage {
   type IcbuCrmGgsXMOrderChange = Message & { content?: MessageContent & { topic?: 'icbu_crm_GgsXMOrderChange', content?: string | Icbu.Crm.GgsXMOrderChange } };
   /** {@link Icbu.Crm.XMOrderChange ICBU > ICBU CRM小满订单状态变更通知} */
   type IcbuCrmXMOrderChange = Message & { content?: MessageContent & { topic?: 'icbu_crm_XMOrderChange', content?: string | Icbu.Crm.XMOrderChange } };
+  /** {@link Icbu.Crm.XiaomanEventNotify ICBU > crm客户事件同步小满消息} */
+  type IcbuCrmXiaomanEventNotify = Message & { content?: MessageContent & { topic?: 'icbu_crm_XiaomanEventNotify', content?: string | Icbu.Crm.XiaomanEventNotify } };
   /** {@link Icbu.Member.XmUnBind ICBU > icbu国际站账号解绑小满账号} */
   type IcbuMemberXmUnBind = Message & { content?: MessageContent & { topic?: 'icbu_member_XmUnBind', content?: string | Icbu.Member.XmUnBind } };
   /** {@link Icbu.Risk.ZeroersMessage ICBU-小满 > 天鹿风控事件异步消息结果} */
@@ -4033,9 +4035,11 @@ declare namespace IncomingMessage {
   /**
    * - {@link IcbuCrmGgsXMOrderChange ICBU > ICBU CRM小满订单状态变更通知（GGS港台）}
    * - {@link IcbuCrmXMOrderChange ICBU > ICBU CRM小满订单状态变更通知}
+   * - {@link IcbuCrmXiaomanEventNotify ICBU > crm客户事件同步小满消息}
    */
   type IcbuCrm = IcbuCrmGgsXMOrderChange
-    | IcbuCrmXMOrderChange;
+    | IcbuCrmXMOrderChange
+    | IcbuCrmXiaomanEventNotify;
   /**
    * - {@link IcbuMemberXmUnBind ICBU > icbu国际站账号解绑小满账号}
    */
