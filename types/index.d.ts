@@ -1116,6 +1116,8 @@ declare interface TaoTopicsDescriptor {
   fliggy_visa_StatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyVisaStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyXhotelComboCreateResult 飞猪 > 套餐创建消息回传} */
   fliggy_xhotel_ComboCreateResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyXhotelComboCreateResult) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FliggyXhotelComboSaleOrderFirstToTaiMu 飞猪 > 太目订单消息} */
+  fliggy_xhotel_ComboSaleOrderFirstToTaiMu(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyXhotelComboSaleOrderFirstToTaiMu) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FlyggyFlightDomesticDistributionQuotationFull 飞猪机票 > 飞猪机票国内分销全量报价} */
   flyggy_flight_DomesticDistributionQuotationFull(fn: (this: TaoMessageConsumer, message: IncomingMessage.FlyggyFlightDomesticDistributionQuotationFull) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FlyggyFlightDomesticDistributionQuotationIncrement 飞猪机票 > 飞猪机票国内分销增量报价} */
@@ -4547,6 +4549,8 @@ declare interface TaoEventsListener {
   on(topic: 'fliggy_visa_StatusChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyVisaStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyXhotelComboCreateResult 飞猪 > 套餐创建消息回传} */
   on(topic: 'fliggy_xhotel_ComboCreateResult', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyXhotelComboCreateResult) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FliggyXhotelComboSaleOrderFirstToTaiMu 飞猪 > 太目订单消息} */
+  on(topic: 'fliggy_xhotel_ComboSaleOrderFirstToTaiMu', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyXhotelComboSaleOrderFirstToTaiMu) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FlyggyFlightDomesticDistributionQuotationFull 飞猪机票 > 飞猪机票国内分销全量报价} */
   on(topic: 'flyggy_flight_DomesticDistributionQuotationFull', listener: (this: TaoMessageConsumer, message: IncomingMessage.FlyggyFlightDomesticDistributionQuotationFull) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FlyggyFlightDomesticDistributionQuotationIncrement 飞猪机票 > 飞猪机票国内分销增量报价} */

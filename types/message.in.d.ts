@@ -1102,6 +1102,8 @@ declare namespace IncomingMessage {
   type FliggyVisaStatusChange = Message & { content?: MessageContent & { topic?: 'fliggy_visa_StatusChange', content?: string | Fliggy.Visa.StatusChange } };
   /** {@link Fliggy.Xhotel.ComboCreateResult 飞猪 > 套餐创建消息回传} */
   type FliggyXhotelComboCreateResult = Message & { content?: MessageContent & { topic?: 'fliggy_xhotel_ComboCreateResult', content?: string | Fliggy.Xhotel.ComboCreateResult } };
+  /** {@link Fliggy.Xhotel.ComboSaleOrderFirstToTaiMu 飞猪 > 太目订单消息} */
+  type FliggyXhotelComboSaleOrderFirstToTaiMu = Message & { content?: MessageContent & { topic?: 'fliggy_xhotel_ComboSaleOrderFirstToTaiMu', content?: string | Fliggy.Xhotel.ComboSaleOrderFirstToTaiMu } };
   /** {@link Flyggy.Flight.DomesticDistributionQuotationFull 飞猪机票 > 飞猪机票国内分销全量报价} */
   type FlyggyFlightDomesticDistributionQuotationFull = Message & { content?: MessageContent & { topic?: 'flyggy_flight_DomesticDistributionQuotationFull', content?: string | Flyggy.Flight.DomesticDistributionQuotationFull } };
   /** {@link Flyggy.Flight.DomesticDistributionQuotationIncrement 飞猪机票 > 飞猪机票国内分销增量报价} */
@@ -3968,8 +3970,10 @@ declare namespace IncomingMessage {
     | FliggyVisaStatusChange;
   /**
    * - {@link FliggyXhotelComboCreateResult 飞猪 > 套餐创建消息回传}
+   * - {@link FliggyXhotelComboSaleOrderFirstToTaiMu 飞猪 > 太目订单消息}
    */
-  type FliggyXhotel = FliggyXhotelComboCreateResult;
+  type FliggyXhotel = FliggyXhotelComboCreateResult
+    | FliggyXhotelComboSaleOrderFirstToTaiMu;
   /**
    * - {@link FlyggyFlightDomesticDistributionQuotationFull 飞猪机票 > 飞猪机票国内分销全量报价}
    * - {@link FlyggyFlightDomesticDistributionQuotationIncrement 飞猪机票 > 飞猪机票国内分销增量报价}

@@ -294,4 +294,36 @@ declare namespace Fliggy.Xhotel {
     /** itemid */
     item_id: number;
   }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2752&docType=9 太目订单消息} */
+  interface ComboSaleOrderFirstToTaiMu {
+    /** 订单实付金额 */
+    actual_amount?: string;
+    /** 订单填写的联系人 */
+    contact_name?: string;
+    /** 订单填写的联系人电话号码 */
+    contact_phone?: string;
+    /** 金额 */
+    order_amount?: string;
+    /** tporderId */
+    order_id: string;
+    /** 订单状态: PAY-支付成功, REFUND-退款订单 */
+    order_status: string;
+    /** 下单时间 格式：yyyy-MM-dd HH:mm:ss */
+    order_time?: string;
+    /** 平台标识：飞猪/视频号 */
+    platform_flag?: string;
+    /** 商品id */
+    product_id?: string;
+    /** 购买数量 */
+    quantity?: number;
+    /** 订单退款金额 */
+    refund_amount?: string;
+    /** 退款原因描述 */
+    refund_reason_desc?: string;
+    /** 退款时间 格式：yyyy-MM-dd HH:mm:ss */
+    refund_time?: string;
+    /** 订单备注，用户下单时的留言备注 */
+    remark?: string;
+  }
 }
