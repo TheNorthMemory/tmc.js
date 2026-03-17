@@ -32,6 +32,25 @@ declare namespace Xianyu.Appraise {
   }
 }
 
+/** 闲鱼 */
+declare namespace Xianyu.Bid {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2753&docType=9 闲鱼奢品竞拍消息同步服务商} */
+  interface StatusChange {
+    /** 买家单id */
+    buyer_order_id?: number;
+    /** 结拍时间 */
+    end_time: Date | number | string;
+    /** 商品id */
+    item_id: number;
+    /** 卖家id */
+    seller_id: number;
+    /** 卖家单号 */
+    seller_order_id: string;
+    /** 拍品有效状态 */
+    status: number;
+  }
+}
+
 /** 闲鱼回收商消息 */
 declare namespace Xianyu.Car {
   /** {@link https://open.taobao.com/tmc.htm?docId=2296&docType=9 闲鱼二手车寄卖订单状态同步} */
