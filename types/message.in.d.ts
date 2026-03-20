@@ -2558,7 +2558,7 @@ declare namespace IncomingMessage {
   type XianyuAftersaleOrderSyn = Message & { content?: MessageContent & { topic?: 'xianyu_aftersale_OrderSyn', content?: string | Xianyu.Aftersale.OrderSyn } };
   /** {@link Xianyu.Appraise.OrderSyn 闲鱼 > 验货担保订单状态同步回收商} */
   type XianyuAppraiseOrderSyn = Message & { content?: MessageContent & { topic?: 'xianyu_appraise_OrderSyn', content?: string | Xianyu.Appraise.OrderSyn } };
-  /** {@link Xianyu.Bid.StatusChange 闲鱼 > 闲鱼奢品竞拍消息同步服务商} */
+  /** {@link Xianyu.Bid.StatusChange 闲鱼奢品寄卖 > 闲鱼奢品竞拍消息同步服务商} */
   type XianyuBidStatusChange = Message & { content?: MessageContent & { topic?: 'xianyu_bid_StatusChange', content?: string | Xianyu.Bid.StatusChange } };
   /** {@link Xianyu.Car.OrderStatusSync 闲鱼回收商消息 > 闲鱼二手车寄卖订单状态同步} */
   type XianyuCarOrderStatusSync = Message & { content?: MessageContent & { topic?: 'xianyu_car_OrderStatusSync', content?: string | Xianyu.Car.OrderStatusSync } };
@@ -5853,7 +5853,7 @@ declare namespace IncomingMessage {
    */
   type XianyuAppraise = XianyuAppraiseOrderSyn;
   /**
-   * - {@link XianyuBidStatusChange 闲鱼 > 闲鱼奢品竞拍消息同步服务商}
+   * - {@link XianyuBidStatusChange 闲鱼奢品寄卖 > 闲鱼奢品竞拍消息同步服务商}
    */
   type XianyuBid = XianyuBidStatusChange;
   /**

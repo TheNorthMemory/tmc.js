@@ -133,7 +133,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 
 ## 支持的TOPICS
 
-<details><summary>共计 105+ 类别，619+ 消息数</summary>
+<details><summary>共计 105+ 类别，620+ 消息数</summary>
 
 | 类别 | 消息数 |
 | --- | --- |
@@ -239,7 +239,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | 公益三小时公共 | 1 |
 | 采购宝API | 8 |
 | 闪购交易 | 13 |
-| 闲鱼奢品寄卖 | 1 |
+| 闲鱼奢品寄卖 | 2 |
 | 全渠道API | 1 |
 | 销售库存 | 1 |
 

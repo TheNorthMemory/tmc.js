@@ -32,7 +32,7 @@ declare namespace Xianyu.Appraise {
   }
 }
 
-/** 闲鱼 */
+/** 闲鱼奢品寄卖 */
 declare namespace Xianyu.Bid {
   /** {@link https://open.taobao.com/tmc.htm?docId=2753&docType=9 闲鱼奢品竞拍消息同步服务商} */
   interface StatusChange {
