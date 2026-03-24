@@ -112,33 +112,33 @@ declare interface TaoTopicsDescriptor {
   alibaba_aliabs_TmallSign(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAliabsTmallSign) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAlicomFlowGiftSendNotify 阿里通信 > 阿里通信流量统一营销赠品发放通知} */
   alibaba_alicom_FlowGiftSendNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlicomFlowGiftSendNotify) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlibabaAlihealthBillProcessStatusNotify 阿里健康 > 单据处理状态通知} */
+  /** {@link IncomingMessage.AlibabaAlihealthBillProcessStatusNotify 阿里健康追溯码 > 单据处理状态通知} */
   alibaba_alihealth_BillProcessStatusNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthBillProcessStatusNotify) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlibabaAlihealthDoctorMessage 阿里健康 > 医生、服务相关消息} */
+  /** {@link IncomingMessage.AlibabaAlihealthDoctorMessage 阿里健康追溯码 > 医生、服务相关消息} */
   alibaba_alihealth_DoctorMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthDoctorMessage) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlibabaAlihealthMvmBizStatusChange 阿里健康 > 售药机营业、歇业消息} */
+  /** {@link IncomingMessage.AlibabaAlihealthMvmBizStatusChange 阿里健康追溯码 > 售药机营业、歇业消息} */
   alibaba_alihealth_MvmBizStatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthMvmBizStatusChange) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlibabaAlihealthMvmInventorySwitch 阿里健康 > 售药机商品库存切换} */
+  /** {@link IncomingMessage.AlibabaAlihealthMvmInventorySwitch 阿里健康追溯码 > 售药机商品库存切换} */
   alibaba_alihealth_MvmInventorySwitch(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthMvmInventorySwitch) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlibabaAlihealthMvmOrderNotify 阿里健康 > 接单/拒单/取货成功/取消订单消息通知} */
+  /** {@link IncomingMessage.AlibabaAlihealthMvmOrderNotify 阿里健康追溯码 > 接单/拒单/取货成功/取消订单消息通知} */
   alibaba_alihealth_MvmOrderNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthMvmOrderNotify) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlibabaAlihealthMvmOrderOfflineSync 阿里健康 > 售药机线下订单生成通知} */
+  /** {@link IncomingMessage.AlibabaAlihealthMvmOrderOfflineSync 阿里健康追溯码 > 售药机线下订单生成通知} */
   alibaba_alihealth_MvmOrderOfflineSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthMvmOrderOfflineSync) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlibabaAlihealthMvmShopBindStatusChange 阿里健康 > 售药机绑定、解绑} */
+  /** {@link IncomingMessage.AlibabaAlihealthMvmShopBindStatusChange 阿里健康追溯码 > 售药机绑定、解绑} */
   alibaba_alihealth_MvmShopBindStatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthMvmShopBindStatusChange) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlibabaAlihealthMvmUpdateInventory 阿里健康 > 售药机商品上下架} */
+  /** {@link IncomingMessage.AlibabaAlihealthMvmUpdateInventory 阿里健康追溯码 > 售药机商品上下架} */
   alibaba_alihealth_MvmUpdateInventory(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthMvmUpdateInventory) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlibabaAlihealthNrmopOrderStatusChange 阿里健康 > 中台订单状态变化推送} */
+  /** {@link IncomingMessage.AlibabaAlihealthNrmopOrderStatusChange 阿里健康追溯码 > 中台订单状态变化推送} */
   alibaba_alihealth_NrmopOrderStatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthNrmopOrderStatusChange) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlibabaAlihealthOrderStatusChange 阿里健康 > 平台通知三方机构"订单状态变更"} */
+  /** {@link IncomingMessage.AlibabaAlihealthOrderStatusChange 阿里健康追溯码 > 平台通知三方机构"订单状态变更"} */
   alibaba_alihealth_OrderStatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthOrderStatusChange) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlibabaAlihealthPrescriptionConfirm 阿里健康 > 处方平台处方核销消息} */
+  /** {@link IncomingMessage.AlibabaAlihealthPrescriptionConfirm 阿里健康追溯码 > 处方平台处方核销消息} */
   alibaba_alihealth_PrescriptionConfirm(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthPrescriptionConfirm) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlibabaAlihealthTradeOrderStatusChange 阿里健康 > O2O订单状态变更通知} */
+  /** {@link IncomingMessage.AlibabaAlihealthTradeOrderStatusChange 阿里健康追溯码 > O2O订单状态变更通知} */
   alibaba_alihealth_TradeOrderStatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthTradeOrderStatusChange) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlibabaAlihealthTradeVaccineSubscribeChange 阿里健康 > 疫苗交易预约信息变动} */
+  /** {@link IncomingMessage.AlibabaAlihealthTradeVaccineSubscribeChange 阿里健康追溯码 > 疫苗交易预约信息变动} */
   alibaba_alihealth_TradeVaccineSubscribeChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthTradeVaccineSubscribeChange) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlibabaAlihealthVcRegisterCancel 阿里健康 > 用户取消订阅缺苗登记同步isv} */
+  /** {@link IncomingMessage.AlibabaAlihealthVcRegisterCancel 阿里健康追溯码 > 用户取消订阅缺苗登记同步isv} */
   alibaba_alihealth_VcRegisterCancel(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthVcRegisterCancel) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAlinkDeviceDataPush 阿里物联 > 设备数据推送} */
   alibaba_alink_DeviceDataPush(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlinkDeviceDataPush) => void): TaoMessageConsumer;
@@ -718,6 +718,8 @@ declare interface TaoTopicsDescriptor {
   alihealth_hb_PushPatientCardToHis(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlihealthHbPushPatientCardToHis) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlihealthHbPushPrescriptionToYh 阿里健康 > 处方推送给银海} */
   alihealth_hb_PushPrescriptionToYh(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlihealthHbPushPrescriptionToYh) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlihealthMsfxBillCoreProcessStatus 阿里健康追溯码 > 码上放心_单据处理状态消息} */
+  alihealth_msfx_BillCoreProcessStatus(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlihealthMsfxBillCoreProcessStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlihealthTestTmcCreate 阿里健康 > 阿里健康测试消息} */
   alihealth_test_TmcCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlihealthTestTmcCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlihealthYsOrderMemConsume 阿里健康&一树-电商中台对接 > 订单支付成功推送} */
@@ -1130,6 +1132,8 @@ declare interface TaoTopicsDescriptor {
   gaode_caiji_EccTaskAuditStatusNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.GaodeCaijiEccTaskAuditStatusNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.GenieGscOrderStatusUpdate 天猫精灵供应链 > 单据状态同步} */
   genie_gsc_OrderStatusUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.GenieGscOrderStatusUpdate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.GenieGscSopStoreOrderDelivery 天猫精灵供应链 > 线下门店订单发货消息} */
+  genie_gsc_SopStoreOrderDelivery(fn: (this: TaoMessageConsumer, message: IncomingMessage.GenieGscSopStoreOrderDelivery) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.GlobalVirtualMerchantSendCode 国际虚拟业务 > 国际虚拟业务对接码商} */
   global_virtual_MerchantSendCode(fn: (this: TaoMessageConsumer, message: IncomingMessage.GlobalVirtualMerchantSendCode) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.GovAuctionAuctionOrderPaid 大资产拍卖Top端拍品消息 > 订单支付消息} */
@@ -1980,6 +1984,8 @@ declare interface TaoTopicsDescriptor {
   taobao_shoptransfer_UniTrans(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShoptransferUniTrans) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSinianTest 淘宝 > 似年测试消息服务} */
   taobao_sinian_Test(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSinianTest) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoSmartCallbackForAgent 淘宝 > 智能应用回调消息} */
+  taobao_smart_CallbackForAgent(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartCallbackForAgent) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSmartappAppSubChange 平台消息 > 用户订阅变更消息} */
   taobao_smartapp_AppSubChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartappAppSubChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSmartappDataSync 平台消息 > 智能应用服务登记数据变更消息} */
@@ -2786,6 +2792,8 @@ declare interface TaoTopicsDescriptor {
   alihealth_cep(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlihealthCep) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlihealthHb} */
   alihealth_hb(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlihealthHb) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlihealthMsfx} */
+  alihealth_msfx(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlihealthMsfx) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlihealthTest} */
   alihealth_test(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlihealthTest) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlihealthYs} */
@@ -3196,6 +3204,8 @@ declare interface TaoTopicsDescriptor {
   taobao_shoptransfer(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShoptransfer) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSinian} */
   taobao_sinian(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSinian) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoSmart} */
+  taobao_smart(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmart) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSmartapp} */
   taobao_smartapp(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartapp) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSmartcall} */
@@ -3549,33 +3559,33 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_aliabs_TmallSign', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAliabsTmallSign) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAlicomFlowGiftSendNotify 阿里通信 > 阿里通信流量统一营销赠品发放通知} */
   on(topic: 'alibaba_alicom_FlowGiftSendNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlicomFlowGiftSendNotify) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlibabaAlihealthBillProcessStatusNotify 阿里健康 > 单据处理状态通知} */
+  /** {@link IncomingMessage.AlibabaAlihealthBillProcessStatusNotify 阿里健康追溯码 > 单据处理状态通知} */
   on(topic: 'alibaba_alihealth_BillProcessStatusNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthBillProcessStatusNotify) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlibabaAlihealthDoctorMessage 阿里健康 > 医生、服务相关消息} */
+  /** {@link IncomingMessage.AlibabaAlihealthDoctorMessage 阿里健康追溯码 > 医生、服务相关消息} */
   on(topic: 'alibaba_alihealth_DoctorMessage', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthDoctorMessage) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlibabaAlihealthMvmBizStatusChange 阿里健康 > 售药机营业、歇业消息} */
+  /** {@link IncomingMessage.AlibabaAlihealthMvmBizStatusChange 阿里健康追溯码 > 售药机营业、歇业消息} */
   on(topic: 'alibaba_alihealth_MvmBizStatusChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthMvmBizStatusChange) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlibabaAlihealthMvmInventorySwitch 阿里健康 > 售药机商品库存切换} */
+  /** {@link IncomingMessage.AlibabaAlihealthMvmInventorySwitch 阿里健康追溯码 > 售药机商品库存切换} */
   on(topic: 'alibaba_alihealth_MvmInventorySwitch', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthMvmInventorySwitch) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlibabaAlihealthMvmOrderNotify 阿里健康 > 接单/拒单/取货成功/取消订单消息通知} */
+  /** {@link IncomingMessage.AlibabaAlihealthMvmOrderNotify 阿里健康追溯码 > 接单/拒单/取货成功/取消订单消息通知} */
   on(topic: 'alibaba_alihealth_MvmOrderNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthMvmOrderNotify) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlibabaAlihealthMvmOrderOfflineSync 阿里健康 > 售药机线下订单生成通知} */
+  /** {@link IncomingMessage.AlibabaAlihealthMvmOrderOfflineSync 阿里健康追溯码 > 售药机线下订单生成通知} */
   on(topic: 'alibaba_alihealth_MvmOrderOfflineSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthMvmOrderOfflineSync) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlibabaAlihealthMvmShopBindStatusChange 阿里健康 > 售药机绑定、解绑} */
+  /** {@link IncomingMessage.AlibabaAlihealthMvmShopBindStatusChange 阿里健康追溯码 > 售药机绑定、解绑} */
   on(topic: 'alibaba_alihealth_MvmShopBindStatusChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthMvmShopBindStatusChange) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlibabaAlihealthMvmUpdateInventory 阿里健康 > 售药机商品上下架} */
+  /** {@link IncomingMessage.AlibabaAlihealthMvmUpdateInventory 阿里健康追溯码 > 售药机商品上下架} */
   on(topic: 'alibaba_alihealth_MvmUpdateInventory', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthMvmUpdateInventory) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlibabaAlihealthNrmopOrderStatusChange 阿里健康 > 中台订单状态变化推送} */
+  /** {@link IncomingMessage.AlibabaAlihealthNrmopOrderStatusChange 阿里健康追溯码 > 中台订单状态变化推送} */
   on(topic: 'alibaba_alihealth_NrmopOrderStatusChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthNrmopOrderStatusChange) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlibabaAlihealthOrderStatusChange 阿里健康 > 平台通知三方机构"订单状态变更"} */
+  /** {@link IncomingMessage.AlibabaAlihealthOrderStatusChange 阿里健康追溯码 > 平台通知三方机构"订单状态变更"} */
   on(topic: 'alibaba_alihealth_OrderStatusChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthOrderStatusChange) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlibabaAlihealthPrescriptionConfirm 阿里健康 > 处方平台处方核销消息} */
+  /** {@link IncomingMessage.AlibabaAlihealthPrescriptionConfirm 阿里健康追溯码 > 处方平台处方核销消息} */
   on(topic: 'alibaba_alihealth_PrescriptionConfirm', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthPrescriptionConfirm) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlibabaAlihealthTradeOrderStatusChange 阿里健康 > O2O订单状态变更通知} */
+  /** {@link IncomingMessage.AlibabaAlihealthTradeOrderStatusChange 阿里健康追溯码 > O2O订单状态变更通知} */
   on(topic: 'alibaba_alihealth_TradeOrderStatusChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthTradeOrderStatusChange) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlibabaAlihealthTradeVaccineSubscribeChange 阿里健康 > 疫苗交易预约信息变动} */
+  /** {@link IncomingMessage.AlibabaAlihealthTradeVaccineSubscribeChange 阿里健康追溯码 > 疫苗交易预约信息变动} */
   on(topic: 'alibaba_alihealth_TradeVaccineSubscribeChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthTradeVaccineSubscribeChange) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.AlibabaAlihealthVcRegisterCancel 阿里健康 > 用户取消订阅缺苗登记同步isv} */
+  /** {@link IncomingMessage.AlibabaAlihealthVcRegisterCancel 阿里健康追溯码 > 用户取消订阅缺苗登记同步isv} */
   on(topic: 'alibaba_alihealth_VcRegisterCancel', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlihealthVcRegisterCancel) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaAlinkDeviceDataPush 阿里物联 > 设备数据推送} */
   on(topic: 'alibaba_alink_DeviceDataPush', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaAlinkDeviceDataPush) => void): TaoMessageConsumer;
@@ -4155,6 +4165,8 @@ declare interface TaoEventsListener {
   on(topic: 'alihealth_hb_PushPatientCardToHis', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlihealthHbPushPatientCardToHis) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlihealthHbPushPrescriptionToYh 阿里健康 > 处方推送给银海} */
   on(topic: 'alihealth_hb_PushPrescriptionToYh', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlihealthHbPushPrescriptionToYh) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlihealthMsfxBillCoreProcessStatus 阿里健康追溯码 > 码上放心_单据处理状态消息} */
+  on(topic: 'alihealth_msfx_BillCoreProcessStatus', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlihealthMsfxBillCoreProcessStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlihealthTestTmcCreate 阿里健康 > 阿里健康测试消息} */
   on(topic: 'alihealth_test_TmcCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlihealthTestTmcCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlihealthYsOrderMemConsume 阿里健康&一树-电商中台对接 > 订单支付成功推送} */
@@ -4567,6 +4579,8 @@ declare interface TaoEventsListener {
   on(topic: 'gaode_caiji_EccTaskAuditStatusNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.GaodeCaijiEccTaskAuditStatusNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.GenieGscOrderStatusUpdate 天猫精灵供应链 > 单据状态同步} */
   on(topic: 'genie_gsc_OrderStatusUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.GenieGscOrderStatusUpdate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.GenieGscSopStoreOrderDelivery 天猫精灵供应链 > 线下门店订单发货消息} */
+  on(topic: 'genie_gsc_SopStoreOrderDelivery', listener: (this: TaoMessageConsumer, message: IncomingMessage.GenieGscSopStoreOrderDelivery) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.GlobalVirtualMerchantSendCode 国际虚拟业务 > 国际虚拟业务对接码商} */
   on(topic: 'global_virtual_MerchantSendCode', listener: (this: TaoMessageConsumer, message: IncomingMessage.GlobalVirtualMerchantSendCode) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.GovAuctionAuctionOrderPaid 大资产拍卖Top端拍品消息 > 订单支付消息} */
@@ -5417,6 +5431,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_shoptransfer_UniTrans', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShoptransferUniTrans) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSinianTest 淘宝 > 似年测试消息服务} */
   on(topic: 'taobao_sinian_Test', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSinianTest) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoSmartCallbackForAgent 淘宝 > 智能应用回调消息} */
+  on(topic: 'taobao_smart_CallbackForAgent', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartCallbackForAgent) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSmartappAppSubChange 平台消息 > 用户订阅变更消息} */
   on(topic: 'taobao_smartapp_AppSubChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartappAppSubChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSmartappDataSync 平台消息 > 智能应用服务登记数据变更消息} */
@@ -6223,6 +6239,8 @@ declare interface TaoEventsListener {
   on(topic: 'alihealth_cep', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlihealthCep) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlihealthHb} */
   on(topic: 'alihealth_hb', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlihealthHb) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlihealthMsfx} */
+  on(topic: 'alihealth_msfx', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlihealthMsfx) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlihealthTest} */
   on(topic: 'alihealth_test', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlihealthTest) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlihealthYs} */
@@ -6633,6 +6651,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_shoptransfer', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoShoptransfer) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSinian} */
   on(topic: 'taobao_sinian', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSinian) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoSmart} */
+  on(topic: 'taobao_smart', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmart) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSmartapp} */
   on(topic: 'taobao_smartapp', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoSmartapp) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoSmartcall} */

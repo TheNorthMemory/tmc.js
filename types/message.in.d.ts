@@ -98,33 +98,33 @@ declare namespace IncomingMessage {
   type AlibabaAliabsTmallSign = Message & { content?: MessageContent & { topic?: 'alibaba_aliabs_TmallSign', content?: string | Alibaba.Aliabs.TmallSign } };
   /** {@link Alibaba.Alicom.FlowGiftSendNotify 阿里通信 > 阿里通信流量统一营销赠品发放通知} */
   type AlibabaAlicomFlowGiftSendNotify = Message & { content?: MessageContent & { topic?: 'alibaba_alicom_FlowGiftSendNotify', content?: string | Alibaba.Alicom.FlowGiftSendNotify } };
-  /** {@link Alibaba.Alihealth.BillProcessStatusNotify 阿里健康 > 单据处理状态通知} */
+  /** {@link Alibaba.Alihealth.BillProcessStatusNotify 阿里健康追溯码 > 单据处理状态通知} */
   type AlibabaAlihealthBillProcessStatusNotify = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_BillProcessStatusNotify', content?: string | Alibaba.Alihealth.BillProcessStatusNotify } };
-  /** {@link Alibaba.Alihealth.DoctorMessage 阿里健康 > 医生、服务相关消息} */
+  /** {@link Alibaba.Alihealth.DoctorMessage 阿里健康追溯码 > 医生、服务相关消息} */
   type AlibabaAlihealthDoctorMessage = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_DoctorMessage', content?: string | Alibaba.Alihealth.DoctorMessage } };
-  /** {@link Alibaba.Alihealth.MvmBizStatusChange 阿里健康 > 售药机营业、歇业消息} */
+  /** {@link Alibaba.Alihealth.MvmBizStatusChange 阿里健康追溯码 > 售药机营业、歇业消息} */
   type AlibabaAlihealthMvmBizStatusChange = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_MvmBizStatusChange', content?: string | Alibaba.Alihealth.MvmBizStatusChange } };
-  /** {@link Alibaba.Alihealth.MvmInventorySwitch 阿里健康 > 售药机商品库存切换} */
+  /** {@link Alibaba.Alihealth.MvmInventorySwitch 阿里健康追溯码 > 售药机商品库存切换} */
   type AlibabaAlihealthMvmInventorySwitch = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_MvmInventorySwitch', content?: string | Alibaba.Alihealth.MvmInventorySwitch } };
-  /** {@link Alibaba.Alihealth.MvmOrderNotify 阿里健康 > 接单/拒单/取货成功/取消订单消息通知} */
+  /** {@link Alibaba.Alihealth.MvmOrderNotify 阿里健康追溯码 > 接单/拒单/取货成功/取消订单消息通知} */
   type AlibabaAlihealthMvmOrderNotify = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_MvmOrderNotify', content?: string | Alibaba.Alihealth.MvmOrderNotify } };
-  /** {@link Alibaba.Alihealth.MvmOrderOfflineSync 阿里健康 > 售药机线下订单生成通知} */
+  /** {@link Alibaba.Alihealth.MvmOrderOfflineSync 阿里健康追溯码 > 售药机线下订单生成通知} */
   type AlibabaAlihealthMvmOrderOfflineSync = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_MvmOrderOfflineSync', content?: string | Alibaba.Alihealth.MvmOrderOfflineSync } };
-  /** {@link Alibaba.Alihealth.MvmShopBindStatusChange 阿里健康 > 售药机绑定、解绑} */
+  /** {@link Alibaba.Alihealth.MvmShopBindStatusChange 阿里健康追溯码 > 售药机绑定、解绑} */
   type AlibabaAlihealthMvmShopBindStatusChange = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_MvmShopBindStatusChange', content?: string | Alibaba.Alihealth.MvmShopBindStatusChange } };
-  /** {@link Alibaba.Alihealth.MvmUpdateInventory 阿里健康 > 售药机商品上下架} */
+  /** {@link Alibaba.Alihealth.MvmUpdateInventory 阿里健康追溯码 > 售药机商品上下架} */
   type AlibabaAlihealthMvmUpdateInventory = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_MvmUpdateInventory', content?: string | Alibaba.Alihealth.MvmUpdateInventory } };
-  /** {@link Alibaba.Alihealth.NrmopOrderStatusChange 阿里健康 > 中台订单状态变化推送} */
+  /** {@link Alibaba.Alihealth.NrmopOrderStatusChange 阿里健康追溯码 > 中台订单状态变化推送} */
   type AlibabaAlihealthNrmopOrderStatusChange = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_NrmopOrderStatusChange', content?: string | Alibaba.Alihealth.NrmopOrderStatusChange } };
-  /** {@link Alibaba.Alihealth.OrderStatusChange 阿里健康 > 平台通知三方机构"订单状态变更"} */
+  /** {@link Alibaba.Alihealth.OrderStatusChange 阿里健康追溯码 > 平台通知三方机构"订单状态变更"} */
   type AlibabaAlihealthOrderStatusChange = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_OrderStatusChange', content?: string | Alibaba.Alihealth.OrderStatusChange } };
-  /** {@link Alibaba.Alihealth.PrescriptionConfirm 阿里健康 > 处方平台处方核销消息} */
+  /** {@link Alibaba.Alihealth.PrescriptionConfirm 阿里健康追溯码 > 处方平台处方核销消息} */
   type AlibabaAlihealthPrescriptionConfirm = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_PrescriptionConfirm', content?: string | Alibaba.Alihealth.PrescriptionConfirm } };
-  /** {@link Alibaba.Alihealth.TradeOrderStatusChange 阿里健康 > O2O订单状态变更通知} */
+  /** {@link Alibaba.Alihealth.TradeOrderStatusChange 阿里健康追溯码 > O2O订单状态变更通知} */
   type AlibabaAlihealthTradeOrderStatusChange = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_TradeOrderStatusChange', content?: string | Alibaba.Alihealth.TradeOrderStatusChange } };
-  /** {@link Alibaba.Alihealth.TradeVaccineSubscribeChange 阿里健康 > 疫苗交易预约信息变动} */
+  /** {@link Alibaba.Alihealth.TradeVaccineSubscribeChange 阿里健康追溯码 > 疫苗交易预约信息变动} */
   type AlibabaAlihealthTradeVaccineSubscribeChange = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_TradeVaccineSubscribeChange', content?: string | Alibaba.Alihealth.TradeVaccineSubscribeChange } };
-  /** {@link Alibaba.Alihealth.VcRegisterCancel 阿里健康 > 用户取消订阅缺苗登记同步isv} */
+  /** {@link Alibaba.Alihealth.VcRegisterCancel 阿里健康追溯码 > 用户取消订阅缺苗登记同步isv} */
   type AlibabaAlihealthVcRegisterCancel = Message & { content?: MessageContent & { topic?: 'alibaba_alihealth_VcRegisterCancel', content?: string | Alibaba.Alihealth.VcRegisterCancel } };
   /** {@link Alibaba.Alink.DeviceDataPush 阿里物联 > 设备数据推送} */
   type AlibabaAlinkDeviceDataPush = Message & { content?: MessageContent & { topic?: 'alibaba_alink_DeviceDataPush', content?: string | Alibaba.Alink.DeviceDataPush } };
@@ -704,6 +704,8 @@ declare namespace IncomingMessage {
   type AlihealthHbPushPatientCardToHis = Message & { content?: MessageContent & { topic?: 'alihealth_hb_PushPatientCardToHis', content?: string | Alihealth.Hb.PushPatientCardToHis } };
   /** {@link Alihealth.Hb.PushPrescriptionToYh 阿里健康 > 处方推送给银海} */
   type AlihealthHbPushPrescriptionToYh = Message & { content?: MessageContent & { topic?: 'alihealth_hb_PushPrescriptionToYh', content?: string | Alihealth.Hb.PushPrescriptionToYh } };
+  /** {@link Alihealth.Msfx.BillCoreProcessStatus 阿里健康追溯码 > 码上放心_单据处理状态消息} */
+  type AlihealthMsfxBillCoreProcessStatus = Message & { content?: MessageContent & { topic?: 'alihealth_msfx_BillCoreProcessStatus', content?: string | Alihealth.Msfx.BillCoreProcessStatus } };
   /** {@link Alihealth.Test.TmcCreate 阿里健康 > 阿里健康测试消息} */
   type AlihealthTestTmcCreate = Message & { content?: MessageContent & { topic?: 'alihealth_test_TmcCreate', content?: string | Alihealth.Test.TmcCreate } };
   /** {@link Alihealth.Ys.OrderMemConsume 阿里健康&一树-电商中台对接 > 订单支付成功推送} */
@@ -1116,6 +1118,8 @@ declare namespace IncomingMessage {
   type GaodeCaijiEccTaskAuditStatusNotify = Message & { content?: MessageContent & { topic?: 'gaode_caiji_EccTaskAuditStatusNotify', content?: string | Gaode.Caiji.EccTaskAuditStatusNotify } };
   /** {@link Genie.Gsc.OrderStatusUpdate 天猫精灵供应链 > 单据状态同步} */
   type GenieGscOrderStatusUpdate = Message & { content?: MessageContent & { topic?: 'genie_gsc_OrderStatusUpdate', content?: string | Genie.Gsc.OrderStatusUpdate } };
+  /** {@link Genie.Gsc.SopStoreOrderDelivery 天猫精灵供应链 > 线下门店订单发货消息} */
+  type GenieGscSopStoreOrderDelivery = Message & { content?: MessageContent & { topic?: 'genie_gsc_SopStoreOrderDelivery', content?: string | Genie.Gsc.SopStoreOrderDelivery } };
   /** {@link Global.Virtual.MerchantSendCode 国际虚拟业务 > 国际虚拟业务对接码商} */
   type GlobalVirtualMerchantSendCode = Message & { content?: MessageContent & { topic?: 'global_virtual_MerchantSendCode', content?: string | Global.Virtual.MerchantSendCode } };
   /** {@link Gov.Auction.AuctionOrderPaid 大资产拍卖Top端拍品消息 > 订单支付消息} */
@@ -1966,6 +1970,8 @@ declare namespace IncomingMessage {
   type TaobaoShoptransferUniTrans = Message & { content?: MessageContent & { topic?: 'taobao_shoptransfer_UniTrans', content?: string | Taobao.Shoptransfer.UniTrans } };
   /** {@link Taobao.Sinian.Test 淘宝 > 似年测试消息服务} */
   type TaobaoSinianTest = Message & { content?: MessageContent & { topic?: 'taobao_sinian_Test', content?: string | Taobao.Sinian.Test } };
+  /** {@link Taobao.Smart.CallbackForAgent 淘宝 > 智能应用回调消息} */
+  type TaobaoSmartCallbackForAgent = Message & { content?: MessageContent & { topic?: 'taobao_smart_CallbackForAgent', content?: string | Taobao.Smart.CallbackForAgent } };
   /** {@link Taobao.Smartapp.AppSubChange 平台消息 > 用户订阅变更消息} */
   type TaobaoSmartappAppSubChange = Message & { content?: MessageContent & { topic?: 'taobao_smartapp_AppSubChange', content?: string | Taobao.Smartapp.AppSubChange } };
   /** {@link Taobao.Smartapp.DataSync 平台消息 > 智能应用服务登记数据变更消息} */
@@ -2681,20 +2687,20 @@ declare namespace IncomingMessage {
    */
   type AlibabaAlicom = AlibabaAlicomFlowGiftSendNotify;
   /**
-   * - {@link AlibabaAlihealthBillProcessStatusNotify 阿里健康 > 单据处理状态通知}
-   * - {@link AlibabaAlihealthDoctorMessage 阿里健康 > 医生、服务相关消息}
-   * - {@link AlibabaAlihealthMvmBizStatusChange 阿里健康 > 售药机营业、歇业消息}
-   * - {@link AlibabaAlihealthMvmInventorySwitch 阿里健康 > 售药机商品库存切换}
-   * - {@link AlibabaAlihealthMvmOrderNotify 阿里健康 > 接单/拒单/取货成功/取消订单消息通知}
-   * - {@link AlibabaAlihealthMvmOrderOfflineSync 阿里健康 > 售药机线下订单生成通知}
-   * - {@link AlibabaAlihealthMvmShopBindStatusChange 阿里健康 > 售药机绑定、解绑}
-   * - {@link AlibabaAlihealthMvmUpdateInventory 阿里健康 > 售药机商品上下架}
-   * - {@link AlibabaAlihealthNrmopOrderStatusChange 阿里健康 > 中台订单状态变化推送}
-   * - {@link AlibabaAlihealthOrderStatusChange 阿里健康 > 平台通知三方机构"订单状态变更"}
-   * - {@link AlibabaAlihealthPrescriptionConfirm 阿里健康 > 处方平台处方核销消息}
-   * - {@link AlibabaAlihealthTradeOrderStatusChange 阿里健康 > O2O订单状态变更通知}
-   * - {@link AlibabaAlihealthTradeVaccineSubscribeChange 阿里健康 > 疫苗交易预约信息变动}
-   * - {@link AlibabaAlihealthVcRegisterCancel 阿里健康 > 用户取消订阅缺苗登记同步isv}
+   * - {@link AlibabaAlihealthBillProcessStatusNotify 阿里健康追溯码 > 单据处理状态通知}
+   * - {@link AlibabaAlihealthDoctorMessage 阿里健康追溯码 > 医生、服务相关消息}
+   * - {@link AlibabaAlihealthMvmBizStatusChange 阿里健康追溯码 > 售药机营业、歇业消息}
+   * - {@link AlibabaAlihealthMvmInventorySwitch 阿里健康追溯码 > 售药机商品库存切换}
+   * - {@link AlibabaAlihealthMvmOrderNotify 阿里健康追溯码 > 接单/拒单/取货成功/取消订单消息通知}
+   * - {@link AlibabaAlihealthMvmOrderOfflineSync 阿里健康追溯码 > 售药机线下订单生成通知}
+   * - {@link AlibabaAlihealthMvmShopBindStatusChange 阿里健康追溯码 > 售药机绑定、解绑}
+   * - {@link AlibabaAlihealthMvmUpdateInventory 阿里健康追溯码 > 售药机商品上下架}
+   * - {@link AlibabaAlihealthNrmopOrderStatusChange 阿里健康追溯码 > 中台订单状态变化推送}
+   * - {@link AlibabaAlihealthOrderStatusChange 阿里健康追溯码 > 平台通知三方机构"订单状态变更"}
+   * - {@link AlibabaAlihealthPrescriptionConfirm 阿里健康追溯码 > 处方平台处方核销消息}
+   * - {@link AlibabaAlihealthTradeOrderStatusChange 阿里健康追溯码 > O2O订单状态变更通知}
+   * - {@link AlibabaAlihealthTradeVaccineSubscribeChange 阿里健康追溯码 > 疫苗交易预约信息变动}
+   * - {@link AlibabaAlihealthVcRegisterCancel 阿里健康追溯码 > 用户取消订阅缺苗登记同步isv}
    */
   type AlibabaAlihealth = AlibabaAlihealthBillProcessStatusNotify
     | AlibabaAlihealthDoctorMessage
@@ -3427,6 +3433,10 @@ declare namespace IncomingMessage {
   type AlihealthHb = AlihealthHbPushPatientCardToHis
     | AlihealthHbPushPrescriptionToYh;
   /**
+   * - {@link AlihealthMsfxBillCoreProcessStatus 阿里健康追溯码 > 码上放心_单据处理状态消息}
+   */
+  type AlihealthMsfx = AlihealthMsfxBillCoreProcessStatus;
+  /**
    * - {@link AlihealthTestTmcCreate 阿里健康 > 阿里健康测试消息}
    */
   type AlihealthTest = AlihealthTestTmcCreate;
@@ -3994,8 +4004,10 @@ declare namespace IncomingMessage {
   type GaodeCaiji = GaodeCaijiEccTaskAuditStatusNotify;
   /**
    * - {@link GenieGscOrderStatusUpdate 天猫精灵供应链 > 单据状态同步}
+   * - {@link GenieGscSopStoreOrderDelivery 天猫精灵供应链 > 线下门店订单发货消息}
    */
-  type GenieGsc = GenieGscOrderStatusUpdate;
+  type GenieGsc = GenieGscOrderStatusUpdate
+    | GenieGscSopStoreOrderDelivery;
   /**
    * - {@link GlobalVirtualMerchantSendCode 国际虚拟业务 > 国际虚拟业务对接码商}
    */
@@ -5099,6 +5111,10 @@ declare namespace IncomingMessage {
    */
   type TaobaoSinian = TaobaoSinianTest;
   /**
+   * - {@link TaobaoSmartCallbackForAgent 淘宝 > 智能应用回调消息}
+   */
+  type TaobaoSmart = TaobaoSmartCallbackForAgent;
+  /**
    * - {@link TaobaoSmartappAppSubChange 平台消息 > 用户订阅变更消息}
    * - {@link TaobaoSmartappDataSync 平台消息 > 智能应用服务登记数据变更消息}
    * - {@link TaobaoSmartappDiagnosticMetrics 平台消息 > 智能应用开放生意参谋诊断指标}
@@ -6117,11 +6133,13 @@ declare namespace IncomingMessage {
   /**
    * - {@link AlihealthCep}
    * - {@link AlihealthHb}
+   * - {@link AlihealthMsfx}
    * - {@link AlihealthTest}
    * - {@link AlihealthYs}
    */
   type Alihealth = AlihealthCep
     | AlihealthHb
+    | AlihealthMsfx
     | AlihealthTest
     | AlihealthYs;
   /**
@@ -6509,6 +6527,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoShop}
    * - {@link TaobaoShoptransfer}
    * - {@link TaobaoSinian}
+   * - {@link TaobaoSmart}
    * - {@link TaobaoSmartapp}
    * - {@link TaobaoSmartcall}
    * - {@link TaobaoSmartmall}
@@ -6633,6 +6652,7 @@ declare namespace IncomingMessage {
     | TaobaoShop
     | TaobaoShoptransfer
     | TaobaoSinian
+    | TaobaoSmart
     | TaobaoSmartapp
     | TaobaoSmartcall
     | TaobaoSmartmall

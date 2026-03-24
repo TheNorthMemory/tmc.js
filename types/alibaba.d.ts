@@ -249,7 +249,7 @@ declare namespace Alibaba.Alicom {
   }
 }
 
-/** 阿里健康 */
+/** 阿里健康追溯码 */
 declare namespace Alibaba.Alihealth {
   /** {@link https://open.taobao.com/tmc.htm?docId=1977&docType=9 单据处理状态通知} */
   interface BillProcessStatusNotify {

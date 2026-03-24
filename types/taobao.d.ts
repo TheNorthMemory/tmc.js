@@ -5832,6 +5832,19 @@ declare namespace Taobao.Sinian {
   }
 }
 
+/** 淘宝 */
+declare namespace Taobao.Smart {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2758&docType=9 智能应用回调消息} */
+  interface CallbackForAgent {
+    /** 业务code */
+    biz_code: string;
+    /** 消息ID */
+    message_id: string;
+    /** 业务参数 */
+    param?: string;
+  }
+}
+
 /** 平台消息 */
 declare namespace Taobao.Smartapp {
   /** {@link https://open.taobao.com/tmc.htm?docId=2371&docType=9 用户订阅变更消息} */

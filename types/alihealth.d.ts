@@ -36,6 +36,33 @@ declare namespace Alihealth.Hb {
   }
 }
 
+/** 阿里健康追溯码 */
+declare namespace Alihealth.Msfx {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2757&docType=9 码上放心_单据处理状态消息} */
+  interface BillCoreProcessStatus {
+    /** 单据号 */
+    bill_code: string;
+    /** 单据时间 */
+    bill_time: string;
+    /** 单据类型 */
+    bill_type: string;
+    /** 单据上传流水号 */
+    bill_upload_finish_list_id: string;
+    /** 单据上传人 */
+    ic_code: string;
+    /** 单据处理时间 */
+    process_date: string;
+    /** 处理信息,处理失败或者部分成功时展示 */
+    process_info?: string;
+    /** 单据上传企业refEntId */
+    ref_user_id: string;
+    /** 处理状态 0，处理中 1, 上传成功 3, 处理成功 4, 处理失败 */
+    result_type: string;
+    /** 当处理成功时,51代表全部成功,52代表部分成功 */
+    sub_process_flag?: string;
+  }
+}
+
 /** 阿里健康 */
 declare namespace Alihealth.Test {
   /** {@link https://open.taobao.com/tmc.htm?docId=1148&docType=9 阿里健康测试消息} */

@@ -19,4 +19,14 @@ declare namespace Genie.Gsc {
     /** 供应商名称 */
     vendor_name?: string;
   }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2759&docType=9 线下门店订单发货消息} */
+  interface SopStoreOrderDelivery {
+    /** 发货单号 */
+    delivery_order_code: string;
+    /** 发货行信息 */
+    order_lines: string;
+    /** 包裹信息 */
+    packages: string;
+  }
 }
