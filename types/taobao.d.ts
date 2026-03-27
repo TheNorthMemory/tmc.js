@@ -6502,6 +6502,21 @@ declare namespace Taobao.Tbk {
 }
 
 /** 淘宝 */
+declare namespace Taobao.Tblive {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2760&docType=9 淘宝直播分销佣金单变更消息} */
+  interface OuterCommissionOrderChange {
+    /** 子订单ID */
+    biz_order_id: number;
+    /** 消息唯一ID */
+    msg_id: string;
+    /** 操作时间，YYYY-MM-DD hh:mm:ss格式 */
+    op_time: string;
+    /** 操作类型：2-订单支付；3-订单确认收货；4-售中退款；5-售后退款 */
+    op_type: number;
+  }
+}
+
+/** 淘宝 */
 declare namespace Taobao.Tc {
   /** {@link https://open.taobao.com/tmc.htm?docId=2364&docType=9 物资库存变动} */
   interface MaterialStock {

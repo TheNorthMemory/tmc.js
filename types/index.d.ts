@@ -2076,6 +2076,8 @@ declare interface TaoTopicsDescriptor {
   taobao_tbk_PubOrderDispatch(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTbkPubOrderDispatch) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTbkYOUSHITljReport 淘宝 > 淘礼金报表API} */
   taobao_tbk_YOUSHITljReport(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTbkYOUSHITljReport) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoTbliveOuterCommissionOrderChange 淘宝 > 淘宝直播分销佣金单变更消息} */
+  taobao_tblive_OuterCommissionOrderChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTbliveOuterCommissionOrderChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTcMaterialStock 淘宝 > 物资库存变动} */
   taobao_tc_MaterialStock(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTcMaterialStock) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTestChengfeiDirect 淘宝 > taobao_test_ChengfeiDirect} */
@@ -3222,6 +3224,8 @@ declare interface TaoTopicsDescriptor {
   taobao_taotv(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTaotv) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTbk} */
   taobao_tbk(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTbk) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoTblive} */
+  taobao_tblive(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTblive) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTc} */
   taobao_tc(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTc) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTest} */
@@ -5523,6 +5527,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_tbk_PubOrderDispatch', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTbkPubOrderDispatch) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTbkYOUSHITljReport 淘宝 > 淘礼金报表API} */
   on(topic: 'taobao_tbk_YOUSHITljReport', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTbkYOUSHITljReport) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoTbliveOuterCommissionOrderChange 淘宝 > 淘宝直播分销佣金单变更消息} */
+  on(topic: 'taobao_tblive_OuterCommissionOrderChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTbliveOuterCommissionOrderChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTcMaterialStock 淘宝 > 物资库存变动} */
   on(topic: 'taobao_tc_MaterialStock', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTcMaterialStock) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTestChengfeiDirect 淘宝 > taobao_test_ChengfeiDirect} */
@@ -6669,6 +6675,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_taotv', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTaotv) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTbk} */
   on(topic: 'taobao_tbk', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTbk) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoTblive} */
+  on(topic: 'taobao_tblive', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTblive) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTc} */
   on(topic: 'taobao_tc', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTc) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTest} */

@@ -2062,6 +2062,8 @@ declare namespace IncomingMessage {
   type TaobaoTbkPubOrderDispatch = Message & { content?: MessageContent & { topic?: 'taobao_tbk_PubOrderDispatch', content?: string | Taobao.Tbk.PubOrderDispatch } };
   /** {@link Taobao.Tbk.YOUSHITljReport 淘宝 > 淘礼金报表API} */
   type TaobaoTbkYOUSHITljReport = Message & { content?: MessageContent & { topic?: 'taobao_tbk_YOUSHITljReport', content?: string | Taobao.Tbk.YOUSHITljReport } };
+  /** {@link Taobao.Tblive.OuterCommissionOrderChange 淘宝 > 淘宝直播分销佣金单变更消息} */
+  type TaobaoTbliveOuterCommissionOrderChange = Message & { content?: MessageContent & { topic?: 'taobao_tblive_OuterCommissionOrderChange', content?: string | Taobao.Tblive.OuterCommissionOrderChange } };
   /** {@link Taobao.Tc.MaterialStock 淘宝 > 物资库存变动} */
   type TaobaoTcMaterialStock = Message & { content?: MessageContent & { topic?: 'taobao_tc_MaterialStock', content?: string | Taobao.Tc.MaterialStock } };
   /** {@link Taobao.Test.ChengfeiDirect 淘宝 > taobao_test_ChengfeiDirect} */
@@ -5221,6 +5223,10 @@ declare namespace IncomingMessage {
     | TaobaoTbkPubOrderDispatch
     | TaobaoTbkYOUSHITljReport;
   /**
+   * - {@link TaobaoTbliveOuterCommissionOrderChange 淘宝 > 淘宝直播分销佣金单变更消息}
+   */
+  type TaobaoTblive = TaobaoTbliveOuterCommissionOrderChange;
+  /**
    * - {@link TaobaoTcMaterialStock 淘宝 > 物资库存变动}
    */
   type TaobaoTc = TaobaoTcMaterialStock;
@@ -6536,6 +6542,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoTae}
    * - {@link TaobaoTaotv}
    * - {@link TaobaoTbk}
+   * - {@link TaobaoTblive}
    * - {@link TaobaoTc}
    * - {@link TaobaoTest}
    * - {@link TaobaoTmg}
@@ -6661,6 +6668,7 @@ declare namespace IncomingMessage {
     | TaobaoTae
     | TaobaoTaotv
     | TaobaoTbk
+    | TaobaoTblive
     | TaobaoTc
     | TaobaoTest
     | TaobaoTmg
