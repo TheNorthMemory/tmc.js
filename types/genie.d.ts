@@ -29,4 +29,14 @@ declare namespace Genie.Gsc {
     /** 包裹信息 */
     packages: string;
   }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2765&docType=9 线下门店订单发货SN信息回传} */
+  interface SopStoreOrderSnReport {
+    /** 发货单号 */
+    delivery_order_code: string;
+    /** 发货订单行号和SN对应关系 */
+    items: string;
+    /** 发货的订单行信息 */
+    order_lines: string;
+  }
 }

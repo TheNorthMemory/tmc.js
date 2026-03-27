@@ -1134,6 +1134,8 @@ declare interface TaoTopicsDescriptor {
   genie_gsc_OrderStatusUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.GenieGscOrderStatusUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.GenieGscSopStoreOrderDelivery 天猫精灵供应链 > 线下门店订单发货消息} */
   genie_gsc_SopStoreOrderDelivery(fn: (this: TaoMessageConsumer, message: IncomingMessage.GenieGscSopStoreOrderDelivery) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.GenieGscSopStoreOrderSnReport 天猫精灵供应链 > 线下门店订单发货SN信息回传} */
+  genie_gsc_SopStoreOrderSnReport(fn: (this: TaoMessageConsumer, message: IncomingMessage.GenieGscSopStoreOrderSnReport) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.GlobalVirtualMerchantSendCode 国际虚拟业务 > 国际虚拟业务对接码商} */
   global_virtual_MerchantSendCode(fn: (this: TaoMessageConsumer, message: IncomingMessage.GlobalVirtualMerchantSendCode) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.GovAuctionAuctionOrderPaid 大资产拍卖Top端拍品消息 > 订单支付消息} */
@@ -4585,6 +4587,8 @@ declare interface TaoEventsListener {
   on(topic: 'genie_gsc_OrderStatusUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.GenieGscOrderStatusUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.GenieGscSopStoreOrderDelivery 天猫精灵供应链 > 线下门店订单发货消息} */
   on(topic: 'genie_gsc_SopStoreOrderDelivery', listener: (this: TaoMessageConsumer, message: IncomingMessage.GenieGscSopStoreOrderDelivery) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.GenieGscSopStoreOrderSnReport 天猫精灵供应链 > 线下门店订单发货SN信息回传} */
+  on(topic: 'genie_gsc_SopStoreOrderSnReport', listener: (this: TaoMessageConsumer, message: IncomingMessage.GenieGscSopStoreOrderSnReport) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.GlobalVirtualMerchantSendCode 国际虚拟业务 > 国际虚拟业务对接码商} */
   on(topic: 'global_virtual_MerchantSendCode', listener: (this: TaoMessageConsumer, message: IncomingMessage.GlobalVirtualMerchantSendCode) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.GovAuctionAuctionOrderPaid 大资产拍卖Top端拍品消息 > 订单支付消息} */

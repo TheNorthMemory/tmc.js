@@ -1120,6 +1120,8 @@ declare namespace IncomingMessage {
   type GenieGscOrderStatusUpdate = Message & { content?: MessageContent & { topic?: 'genie_gsc_OrderStatusUpdate', content?: string | Genie.Gsc.OrderStatusUpdate } };
   /** {@link Genie.Gsc.SopStoreOrderDelivery 天猫精灵供应链 > 线下门店订单发货消息} */
   type GenieGscSopStoreOrderDelivery = Message & { content?: MessageContent & { topic?: 'genie_gsc_SopStoreOrderDelivery', content?: string | Genie.Gsc.SopStoreOrderDelivery } };
+  /** {@link Genie.Gsc.SopStoreOrderSnReport 天猫精灵供应链 > 线下门店订单发货SN信息回传} */
+  type GenieGscSopStoreOrderSnReport = Message & { content?: MessageContent & { topic?: 'genie_gsc_SopStoreOrderSnReport', content?: string | Genie.Gsc.SopStoreOrderSnReport } };
   /** {@link Global.Virtual.MerchantSendCode 国际虚拟业务 > 国际虚拟业务对接码商} */
   type GlobalVirtualMerchantSendCode = Message & { content?: MessageContent & { topic?: 'global_virtual_MerchantSendCode', content?: string | Global.Virtual.MerchantSendCode } };
   /** {@link Gov.Auction.AuctionOrderPaid 大资产拍卖Top端拍品消息 > 订单支付消息} */
@@ -4007,9 +4009,11 @@ declare namespace IncomingMessage {
   /**
    * - {@link GenieGscOrderStatusUpdate 天猫精灵供应链 > 单据状态同步}
    * - {@link GenieGscSopStoreOrderDelivery 天猫精灵供应链 > 线下门店订单发货消息}
+   * - {@link GenieGscSopStoreOrderSnReport 天猫精灵供应链 > 线下门店订单发货SN信息回传}
    */
   type GenieGsc = GenieGscOrderStatusUpdate
-    | GenieGscSopStoreOrderDelivery;
+    | GenieGscSopStoreOrderDelivery
+    | GenieGscSopStoreOrderSnReport;
   /**
    * - {@link GlobalVirtualMerchantSendCode 国际虚拟业务 > 国际虚拟业务对接码商}
    */
