@@ -179,6 +179,28 @@ declare namespace Fliggy.Push {
 
 /** 飞猪 */
 declare namespace Fliggy.Sht {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2754&docType=9 飞猪四海通联合权益订阅相关消息} */
+  interface JointRightPayMsg {
+    /** 联合权益信息 */
+    content: string;
+    /** 消息唯一ID */
+    msg_id: string;
+    /** 订单状态 */
+    msg_type: string;
+    /** 淘宝订单ID */
+    order_id: string;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2761&docType=9 飞猪四海通外部登录回调} */
+  interface LoginCallBack {
+    /** 扩展信息 */
+    ext_info?: string;
+    /** 登录时间戳 */
+    login_time: string;
+    /** 外部渠道用户id */
+    out_user_id?: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2517&docType=9 飞猪四海通订单消息} */
   interface OrderMsg {
     /** 订单信息 */

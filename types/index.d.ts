@@ -1100,6 +1100,10 @@ declare interface TaoTopicsDescriptor {
   fliggy_member_LevelChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyMemberLevelChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyPushHaitunEventCreate 飞猪 > 飞猪多端投放体系海豚事件产生} */
   fliggy_push_HaitunEventCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyPushHaitunEventCreate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FliggyShtJointRightPayMsg 飞猪 > 飞猪四海通联合权益订阅相关消息} */
+  fliggy_sht_JointRightPayMsg(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyShtJointRightPayMsg) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FliggyShtLoginCallBack 飞猪 > 飞猪四海通外部登录回调} */
+  fliggy_sht_LoginCallBack(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyShtLoginCallBack) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyShtOrderMsg 飞猪 > 飞猪四海通订单消息} */
   fliggy_sht_OrderMsg(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyShtOrderMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyTicketOrderRefund 航旅度假交易 > 域外分销订单退款消息} */
@@ -4553,6 +4557,10 @@ declare interface TaoEventsListener {
   on(topic: 'fliggy_member_LevelChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyMemberLevelChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyPushHaitunEventCreate 飞猪 > 飞猪多端投放体系海豚事件产生} */
   on(topic: 'fliggy_push_HaitunEventCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyPushHaitunEventCreate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FliggyShtJointRightPayMsg 飞猪 > 飞猪四海通联合权益订阅相关消息} */
+  on(topic: 'fliggy_sht_JointRightPayMsg', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyShtJointRightPayMsg) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FliggyShtLoginCallBack 飞猪 > 飞猪四海通外部登录回调} */
+  on(topic: 'fliggy_sht_LoginCallBack', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyShtLoginCallBack) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyShtOrderMsg 飞猪 > 飞猪四海通订单消息} */
   on(topic: 'fliggy_sht_OrderMsg', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyShtOrderMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyTicketOrderRefund 航旅度假交易 > 域外分销订单退款消息} */

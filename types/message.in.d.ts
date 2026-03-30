@@ -1086,6 +1086,10 @@ declare namespace IncomingMessage {
   type FliggyMemberLevelChange = Message & { content?: MessageContent & { topic?: 'fliggy_member_LevelChange', content?: string | Fliggy.Member.LevelChange } };
   /** {@link Fliggy.Push.HaitunEventCreate 飞猪 > 飞猪多端投放体系海豚事件产生} */
   type FliggyPushHaitunEventCreate = Message & { content?: MessageContent & { topic?: 'fliggy_push_HaitunEventCreate', content?: string | Fliggy.Push.HaitunEventCreate } };
+  /** {@link Fliggy.Sht.JointRightPayMsg 飞猪 > 飞猪四海通联合权益订阅相关消息} */
+  type FliggyShtJointRightPayMsg = Message & { content?: MessageContent & { topic?: 'fliggy_sht_JointRightPayMsg', content?: string | Fliggy.Sht.JointRightPayMsg } };
+  /** {@link Fliggy.Sht.LoginCallBack 飞猪 > 飞猪四海通外部登录回调} */
+  type FliggyShtLoginCallBack = Message & { content?: MessageContent & { topic?: 'fliggy_sht_LoginCallBack', content?: string | Fliggy.Sht.LoginCallBack } };
   /** {@link Fliggy.Sht.OrderMsg 飞猪 > 飞猪四海通订单消息} */
   type FliggyShtOrderMsg = Message & { content?: MessageContent & { topic?: 'fliggy_sht_OrderMsg', content?: string | Fliggy.Sht.OrderMsg } };
   /** {@link Fliggy.Ticket.OrderRefund 航旅度假交易 > 域外分销订单退款消息} */
@@ -3961,9 +3965,13 @@ declare namespace IncomingMessage {
    */
   type FliggyPush = FliggyPushHaitunEventCreate;
   /**
+   * - {@link FliggyShtJointRightPayMsg 飞猪 > 飞猪四海通联合权益订阅相关消息}
+   * - {@link FliggyShtLoginCallBack 飞猪 > 飞猪四海通外部登录回调}
    * - {@link FliggyShtOrderMsg 飞猪 > 飞猪四海通订单消息}
    */
-  type FliggySht = FliggyShtOrderMsg;
+  type FliggySht = FliggyShtJointRightPayMsg
+    | FliggyShtLoginCallBack
+    | FliggyShtOrderMsg;
   /**
    * - {@link FliggyTicketOrderRefund 航旅度假交易 > 域外分销订单退款消息}
    * - {@link FliggyTicketOrderStatusChange 航旅度假交易 > 域外分销订单状态变更消息}
