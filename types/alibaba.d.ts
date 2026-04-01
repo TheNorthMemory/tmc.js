@@ -1562,6 +1562,48 @@ declare namespace Alibaba.Idle {
     item_id: number;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2762&docType=9 同城三方服务商品状态变更} */
+  interface ISVItemChange {
+    /** 商品id */
+    item_id: number;
+    /** 状态 */
+    item_status: number;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2763&docType=9 同城三方服务正向订单消息} */
+  interface ISVOrderChange {
+    /** 订单id */
+    biz_order_id: number;
+    /** 加密会员名 */
+    encry_seller_member_name: string;
+    /** 商品id */
+    item_id: number;
+    /** 订单状态 */
+    order_status: number;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2756&docType=9 三方服务服务商关联关系变更消息} */
+  interface ISVRelationChange {
+    /** 加密会员名 */
+    encry_seller_member_name: string;
+    /** 操作人 */
+    operator: string;
+    /** 状态 */
+    status: number;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2764&docType=9 同城三方服务逆向订单} */
+  interface ISVReverseOrderChange {
+    /** 订单id */
+    biz_order_id: number;
+    /** 加密会员名 */
+    encry_seller_member_name: string;
+    /** 商品id */
+    item_id: number;
+    /** 订单状态 */
+    order_status: number;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2652&docType=9 岗位状态变更通知} */
   interface JobItemChangeStatusNotify {
     /** 岗位商品id */

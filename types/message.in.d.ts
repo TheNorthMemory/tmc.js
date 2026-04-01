@@ -268,6 +268,14 @@ declare namespace IncomingMessage {
   type AlibabaIdleApplyInfoSyn = Message & { content?: MessageContent & { topic?: 'alibaba_idle_ApplyInfoSyn', content?: string | Alibaba.Idle.ApplyInfoSyn } };
   /** {@link Alibaba.Idle.HouseStatusNotify 闲鱼 > 闲鱼房源状态变更通知} */
   type AlibabaIdleHouseStatusNotify = Message & { content?: MessageContent & { topic?: 'alibaba_idle_HouseStatusNotify', content?: string | Alibaba.Idle.HouseStatusNotify } };
+  /** {@link Alibaba.Idle.ISVItemChange 闲鱼 > 同城三方服务商品状态变更} */
+  type AlibabaIdleISVItemChange = Message & { content?: MessageContent & { topic?: 'alibaba_idle_ISVItemChange', content?: string | Alibaba.Idle.ISVItemChange } };
+  /** {@link Alibaba.Idle.ISVOrderChange 闲鱼 > 同城三方服务正向订单消息} */
+  type AlibabaIdleISVOrderChange = Message & { content?: MessageContent & { topic?: 'alibaba_idle_ISVOrderChange', content?: string | Alibaba.Idle.ISVOrderChange } };
+  /** {@link Alibaba.Idle.ISVRelationChange 闲鱼 > 三方服务服务商关联关系变更消息} */
+  type AlibabaIdleISVRelationChange = Message & { content?: MessageContent & { topic?: 'alibaba_idle_ISVRelationChange', content?: string | Alibaba.Idle.ISVRelationChange } };
+  /** {@link Alibaba.Idle.ISVReverseOrderChange 闲鱼 > 同城三方服务逆向订单} */
+  type AlibabaIdleISVReverseOrderChange = Message & { content?: MessageContent & { topic?: 'alibaba_idle_ISVReverseOrderChange', content?: string | Alibaba.Idle.ISVReverseOrderChange } };
   /** {@link Alibaba.Idle.JobItemChangeStatusNotify 闲鱼 > 岗位状态变更通知} */
   type AlibabaIdleJobItemChangeStatusNotify = Message & { content?: MessageContent & { topic?: 'alibaba_idle_JobItemChangeStatusNotify', content?: string | Alibaba.Idle.JobItemChangeStatusNotify } };
   /** {@link Alibaba.Idle.LocalIMBindStatusSyn 闲鱼 > 闲鱼同城ka商家im绑定状态同步} */
@@ -2901,6 +2909,10 @@ declare namespace IncomingMessage {
   /**
    * - {@link AlibabaIdleApplyInfoSyn 闲鱼 > 灵活用工报名信息同步}
    * - {@link AlibabaIdleHouseStatusNotify 闲鱼 > 闲鱼房源状态变更通知}
+   * - {@link AlibabaIdleISVItemChange 闲鱼 > 同城三方服务商品状态变更}
+   * - {@link AlibabaIdleISVOrderChange 闲鱼 > 同城三方服务正向订单消息}
+   * - {@link AlibabaIdleISVRelationChange 闲鱼 > 三方服务服务商关联关系变更消息}
+   * - {@link AlibabaIdleISVReverseOrderChange 闲鱼 > 同城三方服务逆向订单}
    * - {@link AlibabaIdleJobItemChangeStatusNotify 闲鱼 > 岗位状态变更通知}
    * - {@link AlibabaIdleLocalIMBindStatusSyn 闲鱼 > 闲鱼同城ka商家im绑定状态同步}
    * - {@link AlibabaIdleLocalLeadConfirmSyn 闲鱼 > 闲鱼留资卡确认消息同步}
@@ -2908,6 +2920,10 @@ declare namespace IncomingMessage {
    */
   type AlibabaIdle = AlibabaIdleApplyInfoSyn
     | AlibabaIdleHouseStatusNotify
+    | AlibabaIdleISVItemChange
+    | AlibabaIdleISVOrderChange
+    | AlibabaIdleISVRelationChange
+    | AlibabaIdleISVReverseOrderChange
     | AlibabaIdleJobItemChangeStatusNotify
     | AlibabaIdleLocalIMBindStatusSyn
     | AlibabaIdleLocalLeadConfirmSyn

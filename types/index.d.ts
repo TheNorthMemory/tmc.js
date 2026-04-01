@@ -282,6 +282,14 @@ declare interface TaoTopicsDescriptor {
   alibaba_idle_ApplyInfoSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleApplyInfoSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIdleHouseStatusNotify 闲鱼 > 闲鱼房源状态变更通知} */
   alibaba_idle_HouseStatusNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleHouseStatusNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaIdleISVItemChange 闲鱼 > 同城三方服务商品状态变更} */
+  alibaba_idle_ISVItemChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleISVItemChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaIdleISVOrderChange 闲鱼 > 同城三方服务正向订单消息} */
+  alibaba_idle_ISVOrderChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleISVOrderChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaIdleISVRelationChange 闲鱼 > 三方服务服务商关联关系变更消息} */
+  alibaba_idle_ISVRelationChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleISVRelationChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaIdleISVReverseOrderChange 闲鱼 > 同城三方服务逆向订单} */
+  alibaba_idle_ISVReverseOrderChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleISVReverseOrderChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIdleJobItemChangeStatusNotify 闲鱼 > 岗位状态变更通知} */
   alibaba_idle_JobItemChangeStatusNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleJobItemChangeStatusNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIdleLocalIMBindStatusSyn 闲鱼 > 闲鱼同城ka商家im绑定状态同步} */
@@ -3739,6 +3747,14 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_idle_ApplyInfoSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleApplyInfoSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIdleHouseStatusNotify 闲鱼 > 闲鱼房源状态变更通知} */
   on(topic: 'alibaba_idle_HouseStatusNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleHouseStatusNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaIdleISVItemChange 闲鱼 > 同城三方服务商品状态变更} */
+  on(topic: 'alibaba_idle_ISVItemChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleISVItemChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaIdleISVOrderChange 闲鱼 > 同城三方服务正向订单消息} */
+  on(topic: 'alibaba_idle_ISVOrderChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleISVOrderChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaIdleISVRelationChange 闲鱼 > 三方服务服务商关联关系变更消息} */
+  on(topic: 'alibaba_idle_ISVRelationChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleISVRelationChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaIdleISVReverseOrderChange 闲鱼 > 同城三方服务逆向订单} */
+  on(topic: 'alibaba_idle_ISVReverseOrderChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleISVReverseOrderChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIdleJobItemChangeStatusNotify 闲鱼 > 岗位状态变更通知} */
   on(topic: 'alibaba_idle_JobItemChangeStatusNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleJobItemChangeStatusNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIdleLocalIMBindStatusSyn 闲鱼 > 闲鱼同城ka商家im绑定状态同步} */
