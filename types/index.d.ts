@@ -1786,17 +1786,19 @@ declare interface TaoTopicsDescriptor {
   taobao_modifysku_ResultNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoModifyskuResultNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOcTradeTagChanged 交易全链路 > oc订单标签变更} */
   taobao_oc_TradeTagChanged(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOcTradeTagChanged) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TaobaoOfnCreditPayStatusChange 以旧换新-订单域 > 信用代扣状态变更同步} */
+  /** {@link IncomingMessage.TaobaoOfnBindWaybillResult 服务市场 > 以旧换新顺丰直连绑定结果通知} */
+  taobao_ofn_BindWaybillResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnBindWaybillResult) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOfnCreditPayStatusChange 服务市场 > 信用代扣状态变更同步} */
   taobao_ofn_CreditPayStatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnCreditPayStatusChange) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TaobaoOfnDifferenceRefundPay 以旧换新-订单域 > 消费者补贴追差付款完成通知} */
+  /** {@link IncomingMessage.TaobaoOfnDifferenceRefundPay 服务市场 > 消费者补贴追差付款完成通知} */
   taobao_ofn_DifferenceRefundPay(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnDifferenceRefundPay) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TaobaoOfnNewOrderEventSync 以旧换新-订单域 > 以旧换新新机单事件同步} */
+  /** {@link IncomingMessage.TaobaoOfnNewOrderEventSync 服务市场 > 以旧换新新机单事件同步} */
   taobao_ofn_NewOrderEventSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnNewOrderEventSync) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TaobaoOfnOrderStatusSync 以旧换新-订单域 > 以旧换新回收单状态同步} */
+  /** {@link IncomingMessage.TaobaoOfnOrderStatusSync 服务市场 > 以旧换新回收单状态同步} */
   taobao_ofn_OrderStatusSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnOrderStatusSync) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TaobaoOfnQaAmountConfirm 以旧换新-订单域 > 以旧换新质检价格通知} */
+  /** {@link IncomingMessage.TaobaoOfnQaAmountConfirm 服务市场 > 以旧换新质检价格通知} */
   taobao_ofn_QaAmountConfirm(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnQaAmountConfirm) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TaobaoOfnRateSync 以旧换新-订单域 > 以旧换新回收单评价消息} */
+  /** {@link IncomingMessage.TaobaoOfnRateSync 服务市场 > 以旧换新回收单评价消息} */
   taobao_ofn_RateSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnRateSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpenaccountDataSync 导购平台 > openaccount数据同步} */
   taobao_openaccount_DataSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpenaccountDataSync) => void): TaoMessageConsumer;
@@ -5251,17 +5253,19 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_modifysku_ResultNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoModifyskuResultNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOcTradeTagChanged 交易全链路 > oc订单标签变更} */
   on(topic: 'taobao_oc_TradeTagChanged', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOcTradeTagChanged) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TaobaoOfnCreditPayStatusChange 以旧换新-订单域 > 信用代扣状态变更同步} */
+  /** {@link IncomingMessage.TaobaoOfnBindWaybillResult 服务市场 > 以旧换新顺丰直连绑定结果通知} */
+  on(topic: 'taobao_ofn_BindWaybillResult', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnBindWaybillResult) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoOfnCreditPayStatusChange 服务市场 > 信用代扣状态变更同步} */
   on(topic: 'taobao_ofn_CreditPayStatusChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnCreditPayStatusChange) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TaobaoOfnDifferenceRefundPay 以旧换新-订单域 > 消费者补贴追差付款完成通知} */
+  /** {@link IncomingMessage.TaobaoOfnDifferenceRefundPay 服务市场 > 消费者补贴追差付款完成通知} */
   on(topic: 'taobao_ofn_DifferenceRefundPay', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnDifferenceRefundPay) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TaobaoOfnNewOrderEventSync 以旧换新-订单域 > 以旧换新新机单事件同步} */
+  /** {@link IncomingMessage.TaobaoOfnNewOrderEventSync 服务市场 > 以旧换新新机单事件同步} */
   on(topic: 'taobao_ofn_NewOrderEventSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnNewOrderEventSync) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TaobaoOfnOrderStatusSync 以旧换新-订单域 > 以旧换新回收单状态同步} */
+  /** {@link IncomingMessage.TaobaoOfnOrderStatusSync 服务市场 > 以旧换新回收单状态同步} */
   on(topic: 'taobao_ofn_OrderStatusSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnOrderStatusSync) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TaobaoOfnQaAmountConfirm 以旧换新-订单域 > 以旧换新质检价格通知} */
+  /** {@link IncomingMessage.TaobaoOfnQaAmountConfirm 服务市场 > 以旧换新质检价格通知} */
   on(topic: 'taobao_ofn_QaAmountConfirm', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnQaAmountConfirm) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TaobaoOfnRateSync 以旧换新-订单域 > 以旧换新回收单评价消息} */
+  /** {@link IncomingMessage.TaobaoOfnRateSync 服务市场 > 以旧换新回收单评价消息} */
   on(topic: 'taobao_ofn_RateSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOfnRateSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoOpenaccountDataSync 导购平台 > openaccount数据同步} */
   on(topic: 'taobao_openaccount_DataSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoOpenaccountDataSync) => void): TaoMessageConsumer;

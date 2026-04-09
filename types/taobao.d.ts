@@ -4025,8 +4025,22 @@ declare namespace Taobao.Oc {
   }
 }
 
-/** 以旧换新-订单域 */
+/** 服务市场 */
 declare namespace Taobao.Ofn {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2767&docType=9 以旧换新顺丰直连绑定结果通知} */
+  interface BindWaybillResult {
+    /** 绑定结果，SUCCESS-成功，FAILED-失败 */
+    bind_status: string;
+    /** 绑定失败信息 */
+    error_msg: string;
+    /** 新机单物流单 */
+    new_waybill_no: string;
+    /** 回收单号 */
+    old_order_id: string;
+    /** 回收单物流单 */
+    old_waybill_no: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2482&docType=9 信用代扣状态变更同步} */
   interface CreditPayStatusChange {
     /** 支付宝流水号 */

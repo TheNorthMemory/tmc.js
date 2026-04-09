@@ -1772,17 +1772,19 @@ declare namespace IncomingMessage {
   type TaobaoModifyskuResultNotify = Message & { content?: MessageContent & { topic?: 'taobao_modifysku_ResultNotify', content?: string | Taobao.Modifysku.ResultNotify } };
   /** {@link Taobao.Oc.TradeTagChanged 交易全链路 > oc订单标签变更} */
   type TaobaoOcTradeTagChanged = Message & { content?: MessageContent & { topic?: 'taobao_oc_TradeTagChanged', content?: string | Taobao.Oc.TradeTagChanged } };
-  /** {@link Taobao.Ofn.CreditPayStatusChange 以旧换新-订单域 > 信用代扣状态变更同步} */
+  /** {@link Taobao.Ofn.BindWaybillResult 服务市场 > 以旧换新顺丰直连绑定结果通知} */
+  type TaobaoOfnBindWaybillResult = Message & { content?: MessageContent & { topic?: 'taobao_ofn_BindWaybillResult', content?: string | Taobao.Ofn.BindWaybillResult } };
+  /** {@link Taobao.Ofn.CreditPayStatusChange 服务市场 > 信用代扣状态变更同步} */
   type TaobaoOfnCreditPayStatusChange = Message & { content?: MessageContent & { topic?: 'taobao_ofn_CreditPayStatusChange', content?: string | Taobao.Ofn.CreditPayStatusChange } };
-  /** {@link Taobao.Ofn.DifferenceRefundPay 以旧换新-订单域 > 消费者补贴追差付款完成通知} */
+  /** {@link Taobao.Ofn.DifferenceRefundPay 服务市场 > 消费者补贴追差付款完成通知} */
   type TaobaoOfnDifferenceRefundPay = Message & { content?: MessageContent & { topic?: 'taobao_ofn_DifferenceRefundPay', content?: string | Taobao.Ofn.DifferenceRefundPay } };
-  /** {@link Taobao.Ofn.NewOrderEventSync 以旧换新-订单域 > 以旧换新新机单事件同步} */
+  /** {@link Taobao.Ofn.NewOrderEventSync 服务市场 > 以旧换新新机单事件同步} */
   type TaobaoOfnNewOrderEventSync = Message & { content?: MessageContent & { topic?: 'taobao_ofn_NewOrderEventSync', content?: string | Taobao.Ofn.NewOrderEventSync } };
-  /** {@link Taobao.Ofn.OrderStatusSync 以旧换新-订单域 > 以旧换新回收单状态同步} */
+  /** {@link Taobao.Ofn.OrderStatusSync 服务市场 > 以旧换新回收单状态同步} */
   type TaobaoOfnOrderStatusSync = Message & { content?: MessageContent & { topic?: 'taobao_ofn_OrderStatusSync', content?: string | Taobao.Ofn.OrderStatusSync } };
-  /** {@link Taobao.Ofn.QaAmountConfirm 以旧换新-订单域 > 以旧换新质检价格通知} */
+  /** {@link Taobao.Ofn.QaAmountConfirm 服务市场 > 以旧换新质检价格通知} */
   type TaobaoOfnQaAmountConfirm = Message & { content?: MessageContent & { topic?: 'taobao_ofn_QaAmountConfirm', content?: string | Taobao.Ofn.QaAmountConfirm } };
-  /** {@link Taobao.Ofn.RateSync 以旧换新-订单域 > 以旧换新回收单评价消息} */
+  /** {@link Taobao.Ofn.RateSync 服务市场 > 以旧换新回收单评价消息} */
   type TaobaoOfnRateSync = Message & { content?: MessageContent & { topic?: 'taobao_ofn_RateSync', content?: string | Taobao.Ofn.RateSync } };
   /** {@link Taobao.Openaccount.DataSync 导购平台 > openaccount数据同步} */
   type TaobaoOpenaccountDataSync = Message & { content?: MessageContent & { topic?: 'taobao_openaccount_DataSync', content?: string | Taobao.Openaccount.DataSync } };
@@ -4879,14 +4881,16 @@ declare namespace IncomingMessage {
    */
   type TaobaoOc = TaobaoOcTradeTagChanged;
   /**
-   * - {@link TaobaoOfnCreditPayStatusChange 以旧换新-订单域 > 信用代扣状态变更同步}
-   * - {@link TaobaoOfnDifferenceRefundPay 以旧换新-订单域 > 消费者补贴追差付款完成通知}
-   * - {@link TaobaoOfnNewOrderEventSync 以旧换新-订单域 > 以旧换新新机单事件同步}
-   * - {@link TaobaoOfnOrderStatusSync 以旧换新-订单域 > 以旧换新回收单状态同步}
-   * - {@link TaobaoOfnQaAmountConfirm 以旧换新-订单域 > 以旧换新质检价格通知}
-   * - {@link TaobaoOfnRateSync 以旧换新-订单域 > 以旧换新回收单评价消息}
+   * - {@link TaobaoOfnBindWaybillResult 服务市场 > 以旧换新顺丰直连绑定结果通知}
+   * - {@link TaobaoOfnCreditPayStatusChange 服务市场 > 信用代扣状态变更同步}
+   * - {@link TaobaoOfnDifferenceRefundPay 服务市场 > 消费者补贴追差付款完成通知}
+   * - {@link TaobaoOfnNewOrderEventSync 服务市场 > 以旧换新新机单事件同步}
+   * - {@link TaobaoOfnOrderStatusSync 服务市场 > 以旧换新回收单状态同步}
+   * - {@link TaobaoOfnQaAmountConfirm 服务市场 > 以旧换新质检价格通知}
+   * - {@link TaobaoOfnRateSync 服务市场 > 以旧换新回收单评价消息}
    */
-  type TaobaoOfn = TaobaoOfnCreditPayStatusChange
+  type TaobaoOfn = TaobaoOfnBindWaybillResult
+    | TaobaoOfnCreditPayStatusChange
     | TaobaoOfnDifferenceRefundPay
     | TaobaoOfnNewOrderEventSync
     | TaobaoOfnOrderStatusSync
