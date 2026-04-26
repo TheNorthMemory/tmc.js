@@ -6410,7 +6410,7 @@ declare namespace Taobao.Tbk {
     data: string;
     /** 消息唯一标识ID */
     query_id: string;
-    /** 场景 0-不可处理 1可处理 */
+    /** 场景 1-精确找到商品 2-不可处理 3-无商品，需请求用户更明确诉求 4-有商品返回且待多轮交互（携带商品 + 追问话术） */
     scene: number;
   }
 
