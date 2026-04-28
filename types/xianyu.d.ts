@@ -112,6 +112,30 @@ declare namespace Xianyu.Coin {
     /** 闲鱼卖家id */
     seller_id?: number;
   }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2768&docType=9 闲鱼币全店抵扣变更消息} */
+  interface StoreDeductionEvent {
+    /** 渠道标识 */
+    channel?: string;
+    /** 当前抵扣比例 */
+    deduction_ratio?: number;
+    /** 事件类型 * OPEN - 用户开启全店抵扣 * UPDATE - 用户修改抵扣比例 * CLOSE - 用户关闭全店抵扣 * OPEN_COMPLETED - 开启完毕（所有商品处理完成） * UPDATE_COMPLETED - 编辑完毕（所有商品处理完成） * CLOSE_COMPLETED - 关闭完成（所有商品处理完成） */
+    event_type: string;
+    /** 失败商品数量（COMPLETED 事件时有值） */
+    fail_item_count?: number;
+    /** 旧比例（仅 UPDATE/UPDATE_COMPLETED 时有值） */
+    old_ratio?: number;
+    /** 操作批次ID */
+    operation_id?: string;
+    /** 闲鱼卖家id */
+    seller_id: number;
+    /** 成功商品数量（COMPLETED 事件时有值） */
+    success_item_count?: number;
+    /** 事件时间戳 */
+    timestamp: number;
+    /** 总商品数量（COMPLETED 事件时有值） */
+    total_item_count?: number;
+  }
 }
 
 /** 闲鱼 */

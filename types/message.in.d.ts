@@ -1214,6 +1214,8 @@ declare namespace IncomingMessage {
   type IdleFishmarketTenderAutoAuctionMsg = Message & { content?: MessageContent & { topic?: 'idle_fishmarket_TenderAutoAuctionMsg', content?: string | Idle.Fishmarket.TenderAutoAuctionMsg } };
   /** {@link Idle.Fishmarketfixed.OrderSyn 闲鱼 > 鱼市一口价买家单订单交易消息变更} */
   type IdleFishmarketfixedOrderSyn = Message & { content?: MessageContent & { topic?: 'idle_fishmarketfixed_OrderSyn', content?: string | Idle.Fishmarketfixed.OrderSyn } };
+  /** {@link Idle.Gameboost.OrderStateSync 闲鱼 > 交易消息同步} */
+  type IdleGameboostOrderStateSync = Message & { content?: MessageContent & { topic?: 'idle_gameboost_OrderStateSync', content?: string | Idle.Gameboost.OrderStateSync } };
   /** {@link Idle.Luxconsign.OrderNotice 闲鱼奢品寄卖 > 闲鱼奢品寄卖-卖家单消息通知} */
   type IdleLuxconsignOrderNotice = Message & { content?: MessageContent & { topic?: 'idle_luxconsign_OrderNotice', content?: string | Idle.Luxconsign.OrderNotice } };
   /** {@link Idle.Newoutlets.UserTagNotice 闲鱼电商Saas > 闲鱼用户身份变更消息} */
@@ -2590,6 +2592,8 @@ declare namespace IncomingMessage {
   type XianyuCcoComplain = Message & { content?: MessageContent & { topic?: 'xianyu_cco_Complain', content?: string | Xianyu.Cco.Complain } };
   /** {@link Xianyu.Coin.CoinDeductionChange 闲鱼电商Saas > 闲鱼币交易抵扣变更消息} */
   type XianyuCoinCoinDeductionChange = Message & { content?: MessageContent & { topic?: 'xianyu_coin_CoinDeductionChange', content?: string | Xianyu.Coin.CoinDeductionChange } };
+  /** {@link Xianyu.Coin.StoreDeductionEvent 闲鱼电商Saas > 闲鱼币全店抵扣变更消息} */
+  type XianyuCoinStoreDeductionEvent = Message & { content?: MessageContent & { topic?: 'xianyu_coin_StoreDeductionEvent', content?: string | Xianyu.Coin.StoreDeductionEvent } };
   /** {@link Xianyu.Ctox.CommissionStateSyn 闲鱼 > 闲鱼C2X抽佣退佣消息同步} */
   type XianyuCtoxCommissionStateSyn = Message & { content?: MessageContent & { topic?: 'xianyu_ctox_CommissionStateSyn', content?: string | Xianyu.Ctox.CommissionStateSyn } };
   /** {@link Xianyu.Ctox.PayDkChange 闲鱼 > c2x代扣协议变更通知} */
@@ -4162,6 +4166,10 @@ declare namespace IncomingMessage {
    * - {@link IdleFishmarketfixedOrderSyn 闲鱼 > 鱼市一口价买家单订单交易消息变更}
    */
   type IdleFishmarketfixed = IdleFishmarketfixedOrderSyn;
+  /**
+   * - {@link IdleGameboostOrderStateSync 闲鱼 > 交易消息同步}
+   */
+  type IdleGameboost = IdleGameboostOrderStateSync;
   /**
    * - {@link IdleLuxconsignOrderNotice 闲鱼奢品寄卖 > 闲鱼奢品寄卖-卖家单消息通知}
    */
@@ -5920,8 +5928,10 @@ declare namespace IncomingMessage {
   type XianyuCco = XianyuCcoComplain;
   /**
    * - {@link XianyuCoinCoinDeductionChange 闲鱼电商Saas > 闲鱼币交易抵扣变更消息}
+   * - {@link XianyuCoinStoreDeductionEvent 闲鱼电商Saas > 闲鱼币全店抵扣变更消息}
    */
-  type XianyuCoin = XianyuCoinCoinDeductionChange;
+  type XianyuCoin = XianyuCoinCoinDeductionChange
+    | XianyuCoinStoreDeductionEvent;
   /**
    * - {@link XianyuCtoxCommissionStateSyn 闲鱼 > 闲鱼C2X抽佣退佣消息同步}
    * - {@link XianyuCtoxPayDkChange 闲鱼 > c2x代扣协议变更通知}
@@ -6410,6 +6420,7 @@ declare namespace IncomingMessage {
    * - {@link IdleEticket}
    * - {@link IdleFishmarket}
    * - {@link IdleFishmarketfixed}
+   * - {@link IdleGameboost}
    * - {@link IdleLuxconsign}
    * - {@link IdleNewoutlets}
    * - {@link IdleRecycle}
@@ -6430,6 +6441,7 @@ declare namespace IncomingMessage {
     | IdleEticket
     | IdleFishmarket
     | IdleFishmarketfixed
+    | IdleGameboost
     | IdleLuxconsign
     | IdleNewoutlets
     | IdleRecycle
