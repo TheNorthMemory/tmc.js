@@ -1678,6 +1678,8 @@ declare interface TaoTopicsDescriptor {
   taobao_item_ItemUpshelf(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItemItemUpshelf) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoItemItemZeroStock 淘宝商品 > 商品卖空消息} */
   taobao_item_ItemZeroStock(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItemItemZeroStock) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoItemReserveCardIdentify 淘宝商品 > 预约号卡补录} */
+  taobao_item_ReserveCardIdentify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItemReserveCardIdentify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoItemmarketItemDistributorChange 货源服务消息 > 三方货源分销商货品消息} */
   taobao_itemmarket_ItemDistributorChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItemmarketItemDistributorChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoItemmarketItemRelationChange 货源服务消息 > 铺货成功推送} */
@@ -5151,6 +5153,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_item_ItemUpshelf', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItemItemUpshelf) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoItemItemZeroStock 淘宝商品 > 商品卖空消息} */
   on(topic: 'taobao_item_ItemZeroStock', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItemItemZeroStock) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoItemReserveCardIdentify 淘宝商品 > 预约号卡补录} */
+  on(topic: 'taobao_item_ReserveCardIdentify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItemReserveCardIdentify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoItemmarketItemDistributorChange 货源服务消息 > 三方货源分销商货品消息} */
   on(topic: 'taobao_itemmarket_ItemDistributorChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoItemmarketItemDistributorChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoItemmarketItemRelationChange 货源服务消息 > 铺货成功推送} */

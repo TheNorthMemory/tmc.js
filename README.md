@@ -133,7 +133,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 
 ## 支持的TOPICS
 
-<details><summary>共计 106+ 类别，625+ 消息数</summary>
+<details><summary>共计 106+ 类别，626+ 消息数</summary>
 
 | 类别 | 消息数 |
 | --- | --- |
@@ -153,7 +153,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | 天猫美妆 | 2 |
 | 聚石塔 | 9 |
 | 淘宝物流 | 4 |
-| 阿里通信 | 20 |
+| 阿里通信 | 21 |
 | 天猫魔盒 | 2 |
 | 营销平台 | 1 |
 | OpenIM消息 | 1 |

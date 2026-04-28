@@ -3195,6 +3195,12 @@ declare namespace Taobao.Item {
     /** 商品状态 */
     status?: string;
   }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2769&docType=9 预约号卡补录} */
+  interface ReserveCardIdentify {
+    /** 淘宝订单id */
+    tb_order_id: string;
+  }
 }
 
 /** 货源服务消息 */

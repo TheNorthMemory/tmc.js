@@ -1664,6 +1664,8 @@ declare namespace IncomingMessage {
   type TaobaoItemItemUpshelf = Message & { content?: MessageContent & { topic?: 'taobao_item_ItemUpshelf', content?: string | Taobao.Item.ItemUpshelf } };
   /** {@link Taobao.Item.ItemZeroStock 淘宝商品 > 商品卖空消息} */
   type TaobaoItemItemZeroStock = Message & { content?: MessageContent & { topic?: 'taobao_item_ItemZeroStock', content?: string | Taobao.Item.ItemZeroStock } };
+  /** {@link Taobao.Item.ReserveCardIdentify 淘宝商品 > 预约号卡补录} */
+  type TaobaoItemReserveCardIdentify = Message & { content?: MessageContent & { topic?: 'taobao_item_ReserveCardIdentify', content?: string | Taobao.Item.ReserveCardIdentify } };
   /** {@link Taobao.Itemmarket.ItemDistributorChange 货源服务消息 > 三方货源分销商货品消息} */
   type TaobaoItemmarketItemDistributorChange = Message & { content?: MessageContent & { topic?: 'taobao_itemmarket_ItemDistributorChange', content?: string | Taobao.Itemmarket.ItemDistributorChange } };
   /** {@link Taobao.Itemmarket.ItemRelationChange 货源服务消息 > 铺货成功推送} */
@@ -4724,6 +4726,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoItemItemUpdate 淘宝商品 > 商品更新消息}
    * - {@link TaobaoItemItemUpshelf 淘宝商品 > 商品上架消息}
    * - {@link TaobaoItemItemZeroStock 淘宝商品 > 商品卖空消息}
+   * - {@link TaobaoItemReserveCardIdentify 淘宝商品 > 预约号卡补录}
    */
   type TaobaoItem = TaobaoItemAuditResultNotify
     | TaobaoItemDistributeItemEdit
@@ -4741,7 +4744,8 @@ declare namespace IncomingMessage {
     | TaobaoItemItemStockChangedOut
     | TaobaoItemItemUpdate
     | TaobaoItemItemUpshelf
-    | TaobaoItemItemZeroStock;
+    | TaobaoItemItemZeroStock
+    | TaobaoItemReserveCardIdentify;
   /**
    * - {@link TaobaoItemmarketItemDistributorChange 货源服务消息 > 三方货源分销商货品消息}
    * - {@link TaobaoItemmarketItemRelationChange 货源服务消息 > 铺货成功推送}
