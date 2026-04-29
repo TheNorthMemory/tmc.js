@@ -274,25 +274,25 @@ declare namespace Idle.Gameboost {
   /** {@link https://open.taobao.com/tmc.htm?docId=2770&docType=9 交易消息同步} */
   interface OrderStateSync {
     /** 申请ID */
-    apply_id: number;
+    apply_id?: number;
     /** 赔偿单状态 */
-    compensate_status: string;
+    compensate_status?: string;
     /** 延期单状态 */
-    delay_status: string;
+    delay_status?: string;
     /** 事件时间 */
-    event_time: Date | number | string;
+    event_time: string;
     /** 事件类型 */
     event_type: string;
     /** 额外信息 */
-    extra_info: string;
+    extra_info?: string;
     /** 订单ID */
     order_id: number;
     /** 订单状态 */
     order_status: string;
     /** 退款单ID */
-    refund_id: number;
+    refund_id?: number;
     /** 退款单状态 */
-    refund_status: string;
+    refund_status?: string;
   }
 }
 
