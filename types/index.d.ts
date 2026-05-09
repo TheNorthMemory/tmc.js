@@ -952,6 +952,8 @@ declare interface TaoTopicsDescriptor {
   alsc_salescrm_LeadsActionNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlscSalescrmLeadsActionNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlscSalescrmOpportunityActionNotify 口碑 > alsc销售商机变更通知} */
   alsc_salescrm_OpportunityActionNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlscSalescrmOpportunityActionNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlscShanpinOrderMessage 口碑 > 闪拼订单消息流} */
+  alsc_shanpin_OrderMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlscShanpinOrderMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AscpInsdustryCancelInquiry 天猫服务 > 送货入户并安装取消询价接口} */
   ascp_insdustry_CancelInquiry(fn: (this: TaoMessageConsumer, message: IncomingMessage.AscpInsdustryCancelInquiry) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AscpInstantsonlineLogisticsStatusCallback 同城配送 > 同城配送在线下单物流状态回告} */
@@ -2908,6 +2910,8 @@ declare interface TaoTopicsDescriptor {
   alsc_salesadaptor(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlscSalesadaptor) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlscSalescrm} */
   alsc_salescrm(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlscSalescrm) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlscShanpin} */
+  alsc_shanpin(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlscShanpin) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AscpInsdustry} */
   ascp_insdustry(fn: (this: TaoMessageConsumer, message: IncomingMessage.AscpInsdustry) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AscpInstantsonline} */
@@ -4427,6 +4431,8 @@ declare interface TaoEventsListener {
   on(topic: 'alsc_salescrm_LeadsActionNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlscSalescrmLeadsActionNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlscSalescrmOpportunityActionNotify 口碑 > alsc销售商机变更通知} */
   on(topic: 'alsc_salescrm_OpportunityActionNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlscSalescrmOpportunityActionNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlscShanpinOrderMessage 口碑 > 闪拼订单消息流} */
+  on(topic: 'alsc_shanpin_OrderMessage', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlscShanpinOrderMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AscpInsdustryCancelInquiry 天猫服务 > 送货入户并安装取消询价接口} */
   on(topic: 'ascp_insdustry_CancelInquiry', listener: (this: TaoMessageConsumer, message: IncomingMessage.AscpInsdustryCancelInquiry) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AscpInstantsonlineLogisticsStatusCallback 同城配送 > 同城配送在线下单物流状态回告} */
@@ -6383,6 +6389,8 @@ declare interface TaoEventsListener {
   on(topic: 'alsc_salesadaptor', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlscSalesadaptor) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlscSalescrm} */
   on(topic: 'alsc_salescrm', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlscSalescrm) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlscShanpin} */
+  on(topic: 'alsc_shanpin', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlscShanpin) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AscpInsdustry} */
   on(topic: 'ascp_insdustry', listener: (this: TaoMessageConsumer, message: IncomingMessage.AscpInsdustry) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AscpInstantsonline} */

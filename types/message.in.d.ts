@@ -938,6 +938,8 @@ declare namespace IncomingMessage {
   type AlscSalescrmLeadsActionNotify = Message & { content?: MessageContent & { topic?: 'alsc_salescrm_LeadsActionNotify', content?: string | Alsc.Salescrm.LeadsActionNotify } };
   /** {@link Alsc.Salescrm.OpportunityActionNotify 口碑 > alsc销售商机变更通知} */
   type AlscSalescrmOpportunityActionNotify = Message & { content?: MessageContent & { topic?: 'alsc_salescrm_OpportunityActionNotify', content?: string | Alsc.Salescrm.OpportunityActionNotify } };
+  /** {@link Alsc.Shanpin.OrderMessage 口碑 > 闪拼订单消息流} */
+  type AlscShanpinOrderMessage = Message & { content?: MessageContent & { topic?: 'alsc_shanpin_OrderMessage', content?: string | Alsc.Shanpin.OrderMessage } };
   /** {@link Ascp.Insdustry.CancelInquiry 天猫服务 > 送货入户并安装取消询价接口} */
   type AscpInsdustryCancelInquiry = Message & { content?: MessageContent & { topic?: 'ascp_insdustry_CancelInquiry', content?: string | Ascp.Insdustry.CancelInquiry } };
   /** {@link Ascp.Instantsonline.LogisticsStatusCallback 同城配送 > 同城配送在线下单物流状态回告} */
@@ -3783,6 +3785,10 @@ declare namespace IncomingMessage {
   type AlscSalescrm = AlscSalescrmLeadsActionNotify
     | AlscSalescrmOpportunityActionNotify;
   /**
+   * - {@link AlscShanpinOrderMessage 口碑 > 闪拼订单消息流}
+   */
+  type AlscShanpin = AlscShanpinOrderMessage;
+  /**
    * - {@link AscpInsdustryCancelInquiry 天猫服务 > 送货入户并安装取消询价接口}
    */
   type AscpInsdustry = AscpInsdustryCancelInquiry;
@@ -6285,6 +6291,7 @@ declare namespace IncomingMessage {
    * - {@link AlscRisk}
    * - {@link AlscSalesadaptor}
    * - {@link AlscSalescrm}
+   * - {@link AlscShanpin}
    */
   type Alsc = AlscCoupon
     | AlscCouponpackage
@@ -6295,7 +6302,8 @@ declare namespace IncomingMessage {
     | AlscReviewbwc
     | AlscRisk
     | AlscSalesadaptor
-    | AlscSalescrm;
+    | AlscSalescrm
+    | AlscShanpin;
   /**
    * - {@link AscpInsdustry}
    * - {@link AscpInstantsonline}

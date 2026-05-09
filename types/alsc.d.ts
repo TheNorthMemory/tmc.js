@@ -337,3 +337,36 @@ declare namespace Alsc.Salescrm {
     version: string;
   }
 }
+
+/** 口碑 */
+declare namespace Alsc.Shanpin {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2771&docType=9 闪拼订单消息流} */
+  interface OrderMessage {
+    /** 收货人 */
+    consignee: string;
+    /** 收货人联系方式 */
+    consignee_phone: string;
+    /** 配送地点信息 */
+    delivery_address: string;
+    /** 团名称 */
+    group_name: string;
+    /** 订单ID */
+    order_id: string;
+    /** 订单商品明细，包含商品名称 规格 数量 价格 以及商品退款金额 */
+    order_items: string;
+    /** 订单状态。正向: ORDERED(已下单), PAID(已支付), DELIVERED(已发货), RECEIVED(已收货)；逆向: REFUNDING(退款中), AFTER_SALE_REFUND(售后退款) */
+    order_status: string;
+    /** 下单时间 */
+    order_time: string;
+    /** 支付金额 */
+    pay_amount: string;
+    /** 付款时间 */
+    pay_time: string;
+    /** 实际退款金额,单位分 */
+    real_refund_mount: string;
+    /** 退款金额,单位分 */
+    refund_amount: string;
+    /** 订单序号 */
+    serial_no: string;
+  }
+}
