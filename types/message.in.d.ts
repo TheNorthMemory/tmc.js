@@ -1108,6 +1108,8 @@ declare namespace IncomingMessage {
   type FliggyTicketOrderStatusChange = Message & { content?: MessageContent & { topic?: 'fliggy_ticket_OrderStatusChange', content?: string | Fliggy.Ticket.OrderStatusChange } };
   /** {@link Fliggy.Ticket.VerifyNotify 航旅度假交易 > 域外分销订单码核销消息} */
   type FliggyTicketVerifyNotify = Message & { content?: MessageContent & { topic?: 'fliggy_ticket_VerifyNotify', content?: string | Fliggy.Ticket.VerifyNotify } };
+  /** {@link Fliggy.Travel.EsimRefundNotify 航旅度假交易 > eSIM退款消息} */
+  type FliggyTravelEsimRefundNotify = Message & { content?: MessageContent & { topic?: 'fliggy_travel_EsimRefundNotify', content?: string | Fliggy.Travel.EsimRefundNotify } };
   /** {@link Fliggy.Travel.RechargeJtpOrdercancelApply 航旅度假交易 > 飞猪度假通讯流量包无忧行订单退订申请消息发送} */
   type FliggyTravelRechargeJtpOrdercancelApply = Message & { content?: MessageContent & { topic?: 'fliggy_travel_RechargeJtpOrdercancelApply', content?: string | Fliggy.Travel.RechargeJtpOrdercancelApply } };
   /** {@link Fliggy.Travel.RechargeJtpOrdercancelApplyBackUp 航旅度假交易 > 飞猪度假通讯流量包无忧行订单退订申请消息发送（兼容移动老系统）} */
@@ -4011,10 +4013,12 @@ declare namespace IncomingMessage {
     | FliggyTicketOrderStatusChange
     | FliggyTicketVerifyNotify;
   /**
+   * - {@link FliggyTravelEsimRefundNotify 航旅度假交易 > eSIM退款消息}
    * - {@link FliggyTravelRechargeJtpOrdercancelApply 航旅度假交易 > 飞猪度假通讯流量包无忧行订单退订申请消息发送}
    * - {@link FliggyTravelRechargeJtpOrdercancelApplyBackUp 航旅度假交易 > 飞猪度假通讯流量包无忧行订单退订申请消息发送（兼容移动老系统）}
    */
-  type FliggyTravel = FliggyTravelRechargeJtpOrdercancelApply
+  type FliggyTravel = FliggyTravelEsimRefundNotify
+    | FliggyTravelRechargeJtpOrdercancelApply
     | FliggyTravelRechargeJtpOrdercancelApplyBackUp;
   /**
    * - {@link FliggyVisaApplicantStatusChanged 航旅度假交易 > 签证申请人状态变更消息}

@@ -133,7 +133,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 
 ## 支持的TOPICS
 
-<details><summary>共计 106+ 类别，627+ 消息数</summary>
+<details><summary>共计 106+ 类别，628+ 消息数</summary>
 
 | 类别 | 消息数 |
 | --- | --- |
@@ -159,7 +159,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | OpenIM消息 | 1 |
 | 网上法庭 | 8 |
 | 电子发票 | 21 |
-| 航旅度假交易 | 11 |
+| 航旅度假交易 | 12 |
 | YunOS YoC | 2 |
 | 淘宝直播API | 4 |
 | 阿里物联 | 2 |

@@ -1122,6 +1122,8 @@ declare interface TaoTopicsDescriptor {
   fliggy_ticket_OrderStatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTicketOrderStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyTicketVerifyNotify 航旅度假交易 > 域外分销订单码核销消息} */
   fliggy_ticket_VerifyNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTicketVerifyNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FliggyTravelEsimRefundNotify 航旅度假交易 > eSIM退款消息} */
+  fliggy_travel_EsimRefundNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTravelEsimRefundNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyTravelRechargeJtpOrdercancelApply 航旅度假交易 > 飞猪度假通讯流量包无忧行订单退订申请消息发送} */
   fliggy_travel_RechargeJtpOrdercancelApply(fn: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTravelRechargeJtpOrdercancelApply) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyTravelRechargeJtpOrdercancelApplyBackUp 航旅度假交易 > 飞猪度假通讯流量包无忧行订单退订申请消息发送（兼容移动老系统）} */
@@ -4601,6 +4603,8 @@ declare interface TaoEventsListener {
   on(topic: 'fliggy_ticket_OrderStatusChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTicketOrderStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyTicketVerifyNotify 航旅度假交易 > 域外分销订单码核销消息} */
   on(topic: 'fliggy_ticket_VerifyNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTicketVerifyNotify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.FliggyTravelEsimRefundNotify 航旅度假交易 > eSIM退款消息} */
+  on(topic: 'fliggy_travel_EsimRefundNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTravelEsimRefundNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyTravelRechargeJtpOrdercancelApply 航旅度假交易 > 飞猪度假通讯流量包无忧行订单退订申请消息发送} */
   on(topic: 'fliggy_travel_RechargeJtpOrdercancelApply', listener: (this: TaoMessageConsumer, message: IncomingMessage.FliggyTravelRechargeJtpOrdercancelApply) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.FliggyTravelRechargeJtpOrdercancelApplyBackUp 航旅度假交易 > 飞猪度假通讯流量包无忧行订单退订申请消息发送（兼容移动老系统）} */

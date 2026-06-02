@@ -263,6 +263,18 @@ declare namespace Fliggy.Ticket {
 
 /** 航旅度假交易 */
 declare namespace Fliggy.Travel {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2773&docType=9 eSIM退款消息} */
+  interface EsimRefundNotify {
+    /** 违约单id */
+    dispute_id: string;
+    /** 飞猪订单id */
+    fliggy_order_id: string;
+    /** 是否部分退款 */
+    partial_refund: boolean;
+    /** 退款金额 */
+    refund_amount?: number;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2678&docType=9 飞猪度假通讯流量包无忧行订单退订申请消息发送} */
   interface RechargeJtpOrdercancelApply {
     /** 飞猪订单id */
