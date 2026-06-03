@@ -228,6 +228,8 @@ declare namespace IncomingMessage {
   type AlibabaEinvoiceTaxDeviceOrder = Message & { content?: MessageContent & { topic?: 'alibaba_einvoice_TaxDeviceOrder', content?: string | Alibaba.Einvoice.TaxDeviceOrder } };
   /** {@link Alibaba.Esl.SendMsgAliyun ESL > 给阿里云发送消息} */
   type AlibabaEslSendMsgAliyun = Message & { content?: MessageContent & { topic?: 'alibaba_esl_SendMsgAliyun', content?: string | Alibaba.Esl.SendMsgAliyun } };
+  /** {@link Alibaba.Fliggy.LeaseOrderStatusChange 飞猪租赁 > 飞猪租赁订单状态变更消息} */
+  type AlibabaFliggyLeaseOrderStatusChange = Message & { content?: MessageContent & { topic?: 'alibaba_fliggy_LeaseOrderStatusChange', content?: string | Alibaba.Fliggy.LeaseOrderStatusChange } };
   /** {@link Alibaba.Fuwu.OrderPaid 1688服务市场 > 订单支付消息} */
   type AlibabaFuwuOrderPaid = Message & { content?: MessageContent & { topic?: 'alibaba_fuwu_OrderPaid', content?: string | Alibaba.Fuwu.OrderPaid } };
   /** {@link Alibaba.Fuwu.TradeAction 1688服务市场 > 外贸服务市场订单变更消息} */
@@ -2870,6 +2872,10 @@ declare namespace IncomingMessage {
    * - {@link AlibabaEslSendMsgAliyun ESL > 给阿里云发送消息}
    */
   type AlibabaEsl = AlibabaEslSendMsgAliyun;
+  /**
+   * - {@link AlibabaFliggyLeaseOrderStatusChange 飞猪租赁 > 飞猪租赁订单状态变更消息}
+   */
+  type AlibabaFliggy = AlibabaFliggyLeaseOrderStatusChange;
   /**
    * - {@link AlibabaFuwuOrderPaid 1688服务市场 > 订单支付消息}
    * - {@link AlibabaFuwuTradeAction 1688服务市场 > 外贸服务市场订单变更消息}
@@ -6057,6 +6063,7 @@ declare namespace IncomingMessage {
    * - {@link AlibabaDecoration}
    * - {@link AlibabaEinvoice}
    * - {@link AlibabaEsl}
+   * - {@link AlibabaFliggy}
    * - {@link AlibabaFuwu}
    * - {@link AlibabaHappyfinance}
    * - {@link AlibabaHappytrip}
@@ -6124,6 +6131,7 @@ declare namespace IncomingMessage {
     | AlibabaDecoration
     | AlibabaEinvoice
     | AlibabaEsl
+    | AlibabaFliggy
     | AlibabaFuwu
     | AlibabaHappyfinance
     | AlibabaHappytrip

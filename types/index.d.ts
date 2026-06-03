@@ -242,6 +242,8 @@ declare interface TaoTopicsDescriptor {
   alibaba_einvoice_TaxDeviceOrder(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaEinvoiceTaxDeviceOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaEslSendMsgAliyun ESL > 给阿里云发送消息} */
   alibaba_esl_SendMsgAliyun(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaEslSendMsgAliyun) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaFliggyLeaseOrderStatusChange 飞猪租赁 > 飞猪租赁订单状态变更消息} */
+  alibaba_fliggy_LeaseOrderStatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaFliggyLeaseOrderStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaFuwuOrderPaid 1688服务市场 > 订单支付消息} */
   alibaba_fuwu_OrderPaid(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaFuwuOrderPaid) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaFuwuTradeAction 1688服务市场 > 外贸服务市场订单变更消息} */
@@ -2706,6 +2708,8 @@ declare interface TaoTopicsDescriptor {
   alibaba_einvoice(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaEinvoice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaEsl} */
   alibaba_esl(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaEsl) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaFliggy} */
+  alibaba_fliggy(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaFliggy) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaFuwu} */
   alibaba_fuwu(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaFuwu) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaHappyfinance} */
@@ -3723,6 +3727,8 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_einvoice_TaxDeviceOrder', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaEinvoiceTaxDeviceOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaEslSendMsgAliyun ESL > 给阿里云发送消息} */
   on(topic: 'alibaba_esl_SendMsgAliyun', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaEslSendMsgAliyun) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaFliggyLeaseOrderStatusChange 飞猪租赁 > 飞猪租赁订单状态变更消息} */
+  on(topic: 'alibaba_fliggy_LeaseOrderStatusChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaFliggyLeaseOrderStatusChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaFuwuOrderPaid 1688服务市场 > 订单支付消息} */
   on(topic: 'alibaba_fuwu_OrderPaid', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaFuwuOrderPaid) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaFuwuTradeAction 1688服务市场 > 外贸服务市场订单变更消息} */
@@ -6187,6 +6193,8 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_einvoice', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaEinvoice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaEsl} */
   on(topic: 'alibaba_esl', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaEsl) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaFliggy} */
+  on(topic: 'alibaba_fliggy', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaFliggy) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaFuwu} */
   on(topic: 'alibaba_fuwu', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaFuwu) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaHappyfinance} */
