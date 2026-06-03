@@ -4037,6 +4037,8 @@ declare namespace Taobao.Ofn {
   interface BindWaybillResult {
     /** 绑定结果，SUCCESS-成功，FAILED-失败 */
     bind_status: string;
+    /** 第几次绑定 */
+    bind_version: number;
     /** 绑定失败信息 */
     error_msg: string;
     /** 新机单物流单 */
