@@ -1212,12 +1212,18 @@ declare namespace IncomingMessage {
   type IdleEticketOrdermsg = Message & { content?: MessageContent & { topic?: 'idle_eticket_Ordermsg', content?: string | Idle.Eticket.Ordermsg } };
   /** {@link Idle.Fishmarket.AfterSalePerform 闲鱼 > 闲鱼鱼市售后状态推进通知服务商} */
   type IdleFishmarketAfterSalePerform = Message & { content?: MessageContent & { topic?: 'idle_fishmarket_AfterSalePerform', content?: string | Idle.Fishmarket.AfterSalePerform } };
+  /** {@link Idle.Fishmarket.BuyerBidNotify 闲鱼 > 闲鱼鱼市拍卖实例存在出价通知卖家消息} */
+  type IdleFishmarketBuyerBidNotify = Message & { content?: MessageContent & { topic?: 'idle_fishmarket_BuyerBidNotify', content?: string | Idle.Fishmarket.BuyerBidNotify } };
   /** {@link Idle.Fishmarket.BuyerOrderStateSyn 闲鱼 > 闲鱼鱼市买家单状态同步} */
   type IdleFishmarketBuyerOrderStateSyn = Message & { content?: MessageContent & { topic?: 'idle_fishmarket_BuyerOrderStateSyn', content?: string | Idle.Fishmarket.BuyerOrderStateSyn } };
   /** {@link Idle.Fishmarket.ItemAuctionStateSyn 闲鱼 > 闲鱼鱼市商品竞拍消息同步} */
   type IdleFishmarketItemAuctionStateSyn = Message & { content?: MessageContent & { topic?: 'idle_fishmarket_ItemAuctionStateSyn', content?: string | Idle.Fishmarket.ItemAuctionStateSyn } };
+  /** {@link Idle.Fishmarket.ItemStateSyn 闲鱼 > 闲鱼鱼市商品状态同步} */
+  type IdleFishmarketItemStateSyn = Message & { content?: MessageContent & { topic?: 'idle_fishmarket_ItemStateSyn', content?: string | Idle.Fishmarket.ItemStateSyn } };
   /** {@link Idle.Fishmarket.TenderAutoAuctionMsg 闲鱼 > 一口价转暗拍自动上架消息推送} */
   type IdleFishmarketTenderAutoAuctionMsg = Message & { content?: MessageContent & { topic?: 'idle_fishmarket_TenderAutoAuctionMsg', content?: string | Idle.Fishmarket.TenderAutoAuctionMsg } };
+  /** {@link Idle.Fishmarket.VendueStateSyn 闲鱼 > 闲鱼鱼市拍卖实例状态消息同步} */
+  type IdleFishmarketVendueStateSyn = Message & { content?: MessageContent & { topic?: 'idle_fishmarket_VendueStateSyn', content?: string | Idle.Fishmarket.VendueStateSyn } };
   /** {@link Idle.Fishmarketfixed.OrderSyn 闲鱼 > 鱼市一口价买家单订单交易消息变更} */
   type IdleFishmarketfixedOrderSyn = Message & { content?: MessageContent & { topic?: 'idle_fishmarketfixed_OrderSyn', content?: string | Idle.Fishmarketfixed.OrderSyn } };
   /** {@link Idle.Gameboost.OrderStateSync 闲鱼 > 交易消息同步} */
@@ -4172,14 +4178,20 @@ declare namespace IncomingMessage {
     | IdleEticketOrdermsg;
   /**
    * - {@link IdleFishmarketAfterSalePerform 闲鱼 > 闲鱼鱼市售后状态推进通知服务商}
+   * - {@link IdleFishmarketBuyerBidNotify 闲鱼 > 闲鱼鱼市拍卖实例存在出价通知卖家消息}
    * - {@link IdleFishmarketBuyerOrderStateSyn 闲鱼 > 闲鱼鱼市买家单状态同步}
    * - {@link IdleFishmarketItemAuctionStateSyn 闲鱼 > 闲鱼鱼市商品竞拍消息同步}
+   * - {@link IdleFishmarketItemStateSyn 闲鱼 > 闲鱼鱼市商品状态同步}
    * - {@link IdleFishmarketTenderAutoAuctionMsg 闲鱼 > 一口价转暗拍自动上架消息推送}
+   * - {@link IdleFishmarketVendueStateSyn 闲鱼 > 闲鱼鱼市拍卖实例状态消息同步}
    */
   type IdleFishmarket = IdleFishmarketAfterSalePerform
+    | IdleFishmarketBuyerBidNotify
     | IdleFishmarketBuyerOrderStateSyn
     | IdleFishmarketItemAuctionStateSyn
-    | IdleFishmarketTenderAutoAuctionMsg;
+    | IdleFishmarketItemStateSyn
+    | IdleFishmarketTenderAutoAuctionMsg
+    | IdleFishmarketVendueStateSyn;
   /**
    * - {@link IdleFishmarketfixedOrderSyn 闲鱼 > 鱼市一口价买家单订单交易消息变更}
    */

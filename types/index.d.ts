@@ -1226,12 +1226,18 @@ declare interface TaoTopicsDescriptor {
   idle_eticket_Ordermsg(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleEticketOrdermsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleFishmarketAfterSalePerform 闲鱼 > 闲鱼鱼市售后状态推进通知服务商} */
   idle_fishmarket_AfterSalePerform(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketAfterSalePerform) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleFishmarketBuyerBidNotify 闲鱼 > 闲鱼鱼市拍卖实例存在出价通知卖家消息} */
+  idle_fishmarket_BuyerBidNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketBuyerBidNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleFishmarketBuyerOrderStateSyn 闲鱼 > 闲鱼鱼市买家单状态同步} */
   idle_fishmarket_BuyerOrderStateSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketBuyerOrderStateSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleFishmarketItemAuctionStateSyn 闲鱼 > 闲鱼鱼市商品竞拍消息同步} */
   idle_fishmarket_ItemAuctionStateSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketItemAuctionStateSyn) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleFishmarketItemStateSyn 闲鱼 > 闲鱼鱼市商品状态同步} */
+  idle_fishmarket_ItemStateSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketItemStateSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleFishmarketTenderAutoAuctionMsg 闲鱼 > 一口价转暗拍自动上架消息推送} */
   idle_fishmarket_TenderAutoAuctionMsg(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketTenderAutoAuctionMsg) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleFishmarketVendueStateSyn 闲鱼 > 闲鱼鱼市拍卖实例状态消息同步} */
+  idle_fishmarket_VendueStateSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketVendueStateSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleFishmarketfixedOrderSyn 闲鱼 > 鱼市一口价买家单订单交易消息变更} */
   idle_fishmarketfixed_OrderSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketfixedOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleGameboostOrderStateSync 闲鱼 > 交易消息同步} */
@@ -4711,12 +4717,18 @@ declare interface TaoEventsListener {
   on(topic: 'idle_eticket_Ordermsg', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleEticketOrdermsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleFishmarketAfterSalePerform 闲鱼 > 闲鱼鱼市售后状态推进通知服务商} */
   on(topic: 'idle_fishmarket_AfterSalePerform', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketAfterSalePerform) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleFishmarketBuyerBidNotify 闲鱼 > 闲鱼鱼市拍卖实例存在出价通知卖家消息} */
+  on(topic: 'idle_fishmarket_BuyerBidNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketBuyerBidNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleFishmarketBuyerOrderStateSyn 闲鱼 > 闲鱼鱼市买家单状态同步} */
   on(topic: 'idle_fishmarket_BuyerOrderStateSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketBuyerOrderStateSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleFishmarketItemAuctionStateSyn 闲鱼 > 闲鱼鱼市商品竞拍消息同步} */
   on(topic: 'idle_fishmarket_ItemAuctionStateSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketItemAuctionStateSyn) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleFishmarketItemStateSyn 闲鱼 > 闲鱼鱼市商品状态同步} */
+  on(topic: 'idle_fishmarket_ItemStateSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketItemStateSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleFishmarketTenderAutoAuctionMsg 闲鱼 > 一口价转暗拍自动上架消息推送} */
   on(topic: 'idle_fishmarket_TenderAutoAuctionMsg', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketTenderAutoAuctionMsg) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleFishmarketVendueStateSyn 闲鱼 > 闲鱼鱼市拍卖实例状态消息同步} */
+  on(topic: 'idle_fishmarket_VendueStateSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketVendueStateSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleFishmarketfixedOrderSyn 闲鱼 > 鱼市一口价买家单订单交易消息变更} */
   on(topic: 'idle_fishmarketfixed_OrderSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketfixedOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleGameboostOrderStateSync 闲鱼 > 交易消息同步} */

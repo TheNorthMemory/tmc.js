@@ -215,6 +215,16 @@ declare namespace Idle.Fishmarket {
     sale_type: string;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2776&docType=9 闲鱼鱼市拍卖实例存在出价通知卖家消息} */
+  interface BuyerBidNotify {
+    /** 鱼市商品id */
+    item_id: string;
+    /** 鱼市拍卖实例id */
+    vendue_item_id: string;
+    /** 拍卖类型 */
+    vendue_type: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2683&docType=9 闲鱼鱼市买家单状态同步} */
   interface BuyerOrderStateSyn {
     /** 商品id */
@@ -243,6 +253,14 @@ declare namespace Idle.Fishmarket {
     vendue_type: string;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2774&docType=9 闲鱼鱼市商品状态同步} */
+  interface ItemStateSyn {
+    /** 鱼市商品id */
+    item_id: string;
+    /** 鱼市商品状态 */
+    status: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2669&docType=9 一口价转暗拍自动上架消息推送} */
   interface TenderAutoAuctionMsg {
     /** 已经暗拍轮次 */
@@ -251,6 +269,18 @@ declare namespace Idle.Fishmarket {
     item_id: number;
     /** 消息 id */
     message_id: number;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2775&docType=9 闲鱼鱼市拍卖实例状态消息同步} */
+  interface VendueStateSyn {
+    /** 鱼市商品id */
+    item_id: string;
+    /** 鱼市拍卖实例id */
+    vendue_item_id: string;
+    /** 拍卖实例状态 */
+    vendue_item_status: string;
+    /** 拍卖类型 */
+    vendue_type: string;
   }
 }
 
