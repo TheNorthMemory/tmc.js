@@ -4077,6 +4077,8 @@ declare namespace Taobao.Ofn {
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2483&docType=9 以旧换新新机单事件同步} */
   interface NewOrderEventSync {
+    /** 事件对应数据内容 */
+    event_data: string;
     /** 事件类型，SHIPPED（已发货），PAID（已支付） */
     event_type: string;
     /** 新机单 ID */
