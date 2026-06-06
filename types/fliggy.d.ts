@@ -265,8 +265,6 @@ declare namespace Fliggy.Ticket {
 declare namespace Fliggy.Travel {
   /** {@link https://open.taobao.com/tmc.htm?docId=2773&docType=9 eSIM退款消息} */
   interface EsimRefundNotify {
-    /** 违约单id */
-    dispute_id: string;
     /** 飞猪订单id */
     fliggy_order_id: string;
     /** 是否部分退款 */
