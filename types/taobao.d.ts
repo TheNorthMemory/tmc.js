@@ -2804,7 +2804,7 @@ declare namespace Taobao.Industry {
   }
 }
 
-/** 销售库存 */
+/** 淘宝 */
 declare namespace Taobao.Inventory {
   /** {@link https://open.taobao.com/tmc.htm?docId=2728&docType=9 低库存预警消息} */
   interface LowQuantityWarning {

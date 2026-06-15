@@ -16,6 +16,7 @@
 /// <reference path="ascp.d.ts" />
 /// <reference path="banma.d.ts" />
 /// <reference path="cainiao.d.ts" />
+/// <reference path="campus.d.ts" />
 /// <reference path="damai.d.ts" />
 /// <reference path="ele.d.ts" />
 /// <reference path="eleme.d.ts" />
@@ -1034,6 +1035,8 @@ declare namespace IncomingMessage {
   type CainiaoWaybillTrackTicketStatus = Message & { content?: MessageContent & { topic?: 'cainiao_waybill_TrackTicketStatus', content?: string | Cainiao.Waybill.TrackTicketStatus } };
   /** {@link Cainiao.Yima.SmsRecordPush 菜鸟 > 短信记录推送} */
   type CainiaoYimaSmsRecordPush = Message & { content?: MessageContent & { topic?: 'cainiao_yima_SmsRecordPush', content?: string | Cainiao.Yima.SmsRecordPush } };
+  /** {@link Campus.Official.OrderPaid 天猫 > 校园官旗订单_买家已支付} */
+  type CampusOfficialOrderPaid = Message & { content?: MessageContent & { topic?: 'campus_official_OrderPaid', content?: string | Campus.Official.OrderPaid } };
   /** {@link Damai.Distribution.MatchSeat 大麦第三方票务供应商接入 > 履约补选座位成功通知三方} */
   type DamaiDistributionMatchSeat = Message & { content?: MessageContent & { topic?: 'damai_distribution_MatchSeat', content?: string | Damai.Distribution.MatchSeat } };
   /** {@link Damai.Distribution.PerformCancel 大麦第三方票务供应商接入 > 场次取消消息推送} */
@@ -1636,9 +1639,9 @@ declare namespace IncomingMessage {
   type TaobaoIndustryPetDoc = Message & { content?: MessageContent & { topic?: 'taobao_industry_PetDoc', content?: string | Taobao.Industry.PetDoc } };
   /** {@link Taobao.Industry.WWClothItemMsgNotify 淘宝 > 淘宝行业ww服饰商品变更消息推送} */
   type TaobaoIndustryWWClothItemMsgNotify = Message & { content?: MessageContent & { topic?: 'taobao_industry_WWClothItemMsgNotify', content?: string | Taobao.Industry.WWClothItemMsgNotify } };
-  /** {@link Taobao.Inventory.LowQuantityWarning 销售库存 > 低库存预警消息} */
+  /** {@link Taobao.Inventory.LowQuantityWarning 淘宝 > 低库存预警消息} */
   type TaobaoInventoryLowQuantityWarning = Message & { content?: MessageContent & { topic?: 'taobao_inventory_LowQuantityWarning', content?: string | Taobao.Inventory.LowQuantityWarning } };
-  /** {@link Taobao.Inventory.ShareInventory 销售库存 > 天猫国际共享库存订单push} */
+  /** {@link Taobao.Inventory.ShareInventory 淘宝 > 天猫国际共享库存订单push} */
   type TaobaoInventoryShareInventory = Message & { content?: MessageContent & { topic?: 'taobao_inventory_ShareInventory', content?: string | Taobao.Inventory.ShareInventory } };
   /** {@link Taobao.Istore.GiftingMsg Gifting送礼 > istoreGifing消息} */
   type TaobaoIstoreGiftingMsg = Message & { content?: MessageContent & { topic?: 'taobao_istore_GiftingMsg', content?: string | Taobao.Istore.GiftingMsg } };
@@ -3915,6 +3918,10 @@ declare namespace IncomingMessage {
    */
   type CainiaoYima = CainiaoYimaSmsRecordPush;
   /**
+   * - {@link CampusOfficialOrderPaid 天猫 > 校园官旗订单_买家已支付}
+   */
+  type CampusOfficial = CampusOfficialOrderPaid;
+  /**
    * - {@link DamaiDistributionMatchSeat 大麦第三方票务供应商接入 > 履约补选座位成功通知三方}
    * - {@link DamaiDistributionPerformCancel 大麦第三方票务供应商接入 > 场次取消消息推送}
    * - {@link DamaiDistributionPerformStatus 大麦第三方票务供应商接入 > 场次状态变更推送}
@@ -4727,8 +4734,8 @@ declare namespace IncomingMessage {
   type TaobaoIndustry = TaobaoIndustryPetDoc
     | TaobaoIndustryWWClothItemMsgNotify;
   /**
-   * - {@link TaobaoInventoryLowQuantityWarning 销售库存 > 低库存预警消息}
-   * - {@link TaobaoInventoryShareInventory 销售库存 > 天猫国际共享库存订单push}
+   * - {@link TaobaoInventoryLowQuantityWarning 淘宝 > 低库存预警消息}
+   * - {@link TaobaoInventoryShareInventory 淘宝 > 天猫国际共享库存订单push}
    */
   type TaobaoInventory = TaobaoInventoryLowQuantityWarning
     | TaobaoInventoryShareInventory;
@@ -6354,6 +6361,10 @@ declare namespace IncomingMessage {
     | CainiaoScf
     | CainiaoWaybill
     | CainiaoYima;
+  /**
+   * - {@link CampusOfficial}
+   */
+  type Campus = CampusOfficial;
   /**
    * - {@link DamaiDistribution}
    * - {@link DamaiMev}

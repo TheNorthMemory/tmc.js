@@ -1048,6 +1048,8 @@ declare interface TaoTopicsDescriptor {
   cainiao_waybill_TrackTicketStatus(fn: (this: TaoMessageConsumer, message: IncomingMessage.CainiaoWaybillTrackTicketStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.CainiaoYimaSmsRecordPush 菜鸟 > 短信记录推送} */
   cainiao_yima_SmsRecordPush(fn: (this: TaoMessageConsumer, message: IncomingMessage.CainiaoYimaSmsRecordPush) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.CampusOfficialOrderPaid 天猫 > 校园官旗订单_买家已支付} */
+  campus_official_OrderPaid(fn: (this: TaoMessageConsumer, message: IncomingMessage.CampusOfficialOrderPaid) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionMatchSeat 大麦第三方票务供应商接入 > 履约补选座位成功通知三方} */
   damai_distribution_MatchSeat(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionMatchSeat) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionPerformCancel 大麦第三方票务供应商接入 > 场次取消消息推送} */
@@ -1650,9 +1652,9 @@ declare interface TaoTopicsDescriptor {
   taobao_industry_PetDoc(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoIndustryPetDoc) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoIndustryWWClothItemMsgNotify 淘宝 > 淘宝行业ww服饰商品变更消息推送} */
   taobao_industry_WWClothItemMsgNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoIndustryWWClothItemMsgNotify) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TaobaoInventoryLowQuantityWarning 销售库存 > 低库存预警消息} */
+  /** {@link IncomingMessage.TaobaoInventoryLowQuantityWarning 淘宝 > 低库存预警消息} */
   taobao_inventory_LowQuantityWarning(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoInventoryLowQuantityWarning) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TaobaoInventoryShareInventory 销售库存 > 天猫国际共享库存订单push} */
+  /** {@link IncomingMessage.TaobaoInventoryShareInventory 淘宝 > 天猫国际共享库存订单push} */
   taobao_inventory_ShareInventory(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoInventoryShareInventory) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoIstoreGiftingMsg Gifting送礼 > istoreGifing消息} */
   taobao_istore_GiftingMsg(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoIstoreGiftingMsg) => void): TaoMessageConsumer;
@@ -2944,6 +2946,8 @@ declare interface TaoTopicsDescriptor {
   cainiao_waybill(fn: (this: TaoMessageConsumer, message: IncomingMessage.CainiaoWaybill) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.CainiaoYima} */
   cainiao_yima(fn: (this: TaoMessageConsumer, message: IncomingMessage.CainiaoYima) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.CampusOfficial} */
+  campus_official(fn: (this: TaoMessageConsumer, message: IncomingMessage.CampusOfficial) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistribution} */
   damai_distribution(fn: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistribution) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiMev} */
@@ -3488,6 +3492,8 @@ declare interface TaoTopicsDescriptor {
   banma(fn: (this: TaoMessageConsumer, message: IncomingMessage.Banma) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Cainiao} */
   cainiao(fn: (this: TaoMessageConsumer, message: IncomingMessage.Cainiao) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Campus} */
+  campus(fn: (this: TaoMessageConsumer, message: IncomingMessage.Campus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Damai} */
   damai(fn: (this: TaoMessageConsumer, message: IncomingMessage.Damai) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Ele} */
@@ -4539,6 +4545,8 @@ declare interface TaoEventsListener {
   on(topic: 'cainiao_waybill_TrackTicketStatus', listener: (this: TaoMessageConsumer, message: IncomingMessage.CainiaoWaybillTrackTicketStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.CainiaoYimaSmsRecordPush 菜鸟 > 短信记录推送} */
   on(topic: 'cainiao_yima_SmsRecordPush', listener: (this: TaoMessageConsumer, message: IncomingMessage.CainiaoYimaSmsRecordPush) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.CampusOfficialOrderPaid 天猫 > 校园官旗订单_买家已支付} */
+  on(topic: 'campus_official_OrderPaid', listener: (this: TaoMessageConsumer, message: IncomingMessage.CampusOfficialOrderPaid) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionMatchSeat 大麦第三方票务供应商接入 > 履约补选座位成功通知三方} */
   on(topic: 'damai_distribution_MatchSeat', listener: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistributionMatchSeat) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistributionPerformCancel 大麦第三方票务供应商接入 > 场次取消消息推送} */
@@ -5141,9 +5149,9 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_industry_PetDoc', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoIndustryPetDoc) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoIndustryWWClothItemMsgNotify 淘宝 > 淘宝行业ww服饰商品变更消息推送} */
   on(topic: 'taobao_industry_WWClothItemMsgNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoIndustryWWClothItemMsgNotify) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TaobaoInventoryLowQuantityWarning 销售库存 > 低库存预警消息} */
+  /** {@link IncomingMessage.TaobaoInventoryLowQuantityWarning 淘宝 > 低库存预警消息} */
   on(topic: 'taobao_inventory_LowQuantityWarning', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoInventoryLowQuantityWarning) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.TaobaoInventoryShareInventory 销售库存 > 天猫国际共享库存订单push} */
+  /** {@link IncomingMessage.TaobaoInventoryShareInventory 淘宝 > 天猫国际共享库存订单push} */
   on(topic: 'taobao_inventory_ShareInventory', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoInventoryShareInventory) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoIstoreGiftingMsg Gifting送礼 > istoreGifing消息} */
   on(topic: 'taobao_istore_GiftingMsg', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoIstoreGiftingMsg) => void): TaoMessageConsumer;
@@ -6435,6 +6443,8 @@ declare interface TaoEventsListener {
   on(topic: 'cainiao_waybill', listener: (this: TaoMessageConsumer, message: IncomingMessage.CainiaoWaybill) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.CainiaoYima} */
   on(topic: 'cainiao_yima', listener: (this: TaoMessageConsumer, message: IncomingMessage.CainiaoYima) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.CampusOfficial} */
+  on(topic: 'campus_official', listener: (this: TaoMessageConsumer, message: IncomingMessage.CampusOfficial) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiDistribution} */
   on(topic: 'damai_distribution', listener: (this: TaoMessageConsumer, message: IncomingMessage.DamaiDistribution) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.DamaiMev} */
@@ -6979,6 +6989,8 @@ declare interface TaoEventsListener {
   on(topic: 'banma', listener: (this: TaoMessageConsumer, message: IncomingMessage.Banma) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Cainiao} */
   on(topic: 'cainiao', listener: (this: TaoMessageConsumer, message: IncomingMessage.Cainiao) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.Campus} */
+  on(topic: 'campus', listener: (this: TaoMessageConsumer, message: IncomingMessage.Campus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Damai} */
   on(topic: 'damai', listener: (this: TaoMessageConsumer, message: IncomingMessage.Damai) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.Ele} */
