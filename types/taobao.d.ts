@@ -4117,10 +4117,16 @@ declare namespace Taobao.Ofn {
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2726&docType=9 以旧换新质检价格通知} */
   interface QaAmountConfirm {
+    /** AI质检失败明细 */
+    ai_check_fail_details: string;
+    /** AI质检结果 */
+    ai_check_pass: boolean;
     /** 平台质检金额，单位分 */
     platform_report_price: number;
     /** 回收单 ID */
     recycle_order_id: number;
+    /** 是否上传报告成功 */
+    report_success: string;
     /** 质检报告版本号 */
     version: number;
   }
