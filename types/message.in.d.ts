@@ -1173,6 +1173,8 @@ declare namespace IncomingMessage {
   type IcbuAlicrmOfflineDataChanged = Message & { content?: MessageContent & { topic?: 'icbu_alicrm_OfflineDataChanged', content?: string | Icbu.Alicrm.OfflineDataChanged } };
   /** {@link Icbu.Chat.MessageTipForXiaoMan ICBU > ICBU沟通消息推送给小满提醒} */
   type IcbuChatMessageTipForXiaoMan = Message & { content?: MessageContent & { topic?: 'icbu_chat_MessageTipForXiaoMan', content?: string | Icbu.Chat.MessageTipForXiaoMan } };
+  /** {@link Icbu.Crm.AwbService ICBU > AWB服务数据同步小满} */
+  type IcbuCrmAwbService = Message & { content?: MessageContent & { topic?: 'icbu_crm_AwbService', content?: string | Icbu.Crm.AwbService } };
   /** {@link Icbu.Crm.GgsXMOrderChange ICBU > ICBU CRM小满订单状态变更通知（GGS港台）} */
   type IcbuCrmGgsXMOrderChange = Message & { content?: MessageContent & { topic?: 'icbu_crm_GgsXMOrderChange', content?: string | Icbu.Crm.GgsXMOrderChange } };
   /** {@link Icbu.Crm.XMOrderChange ICBU > ICBU CRM小满订单状态变更通知} */
@@ -4118,11 +4120,13 @@ declare namespace IncomingMessage {
    */
   type IcbuChat = IcbuChatMessageTipForXiaoMan;
   /**
+   * - {@link IcbuCrmAwbService ICBU > AWB服务数据同步小满}
    * - {@link IcbuCrmGgsXMOrderChange ICBU > ICBU CRM小满订单状态变更通知（GGS港台）}
    * - {@link IcbuCrmXMOrderChange ICBU > ICBU CRM小满订单状态变更通知}
    * - {@link IcbuCrmXiaomanEventNotify ICBU > crm客户事件同步小满消息}
    */
-  type IcbuCrm = IcbuCrmGgsXMOrderChange
+  type IcbuCrm = IcbuCrmAwbService
+    | IcbuCrmGgsXMOrderChange
     | IcbuCrmXMOrderChange
     | IcbuCrmXiaomanEventNotify;
   /**

@@ -84,6 +84,30 @@ declare namespace Icbu.Chat {
 
 /** ICBU */
 declare namespace Icbu.Crm {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2780&docType=9 AWB服务数据同步小满} */
+  interface AwbService {
+    /** 确认 */
+    ack: string;
+    /** 订单到款时交互数据 */
+    action: string;
+    /** gid */
+    ali_cgs: string;
+    /** 公司名 */
+    ali_company_name: string;
+    /** 先富下单时间 */
+    ali_create_time?: string;
+    /** 先富订单头 */
+    ali_order_no: string;
+    /** 订单实收价 */
+    amount?: string;
+    /** 订单行信息 */
+    order_product_list: string;
+    /** 订单原价 */
+    original_amount?: string;
+    /** 先富录单通道 */
+    promotion_id?: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2576&docType=9 ICBU CRM小满订单状态变更通知（GGS港台）} */
   interface GgsXMOrderChange {
     /** 2支付订单 3取消订单 */
