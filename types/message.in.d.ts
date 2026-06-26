@@ -1171,6 +1171,8 @@ declare namespace IncomingMessage {
   type IcbuAlicrmNoteModified = Message & { content?: MessageContent & { topic?: 'icbu_alicrm_NoteModified', content?: string | Icbu.Alicrm.NoteModified } };
   /** {@link Icbu.Alicrm.OfflineDataChanged ICBU > 客户通离线数据变更同步} */
   type IcbuAlicrmOfflineDataChanged = Message & { content?: MessageContent & { topic?: 'icbu_alicrm_OfflineDataChanged', content?: string | Icbu.Alicrm.OfflineDataChanged } };
+  /** {@link Icbu.Awb.AwbService ICBU > AWB操作数据同步到小满进行服务} */
+  type IcbuAwbAwbService = Message & { content?: MessageContent & { topic?: 'icbu_awb_AwbService', content?: string | Icbu.Awb.AwbService } };
   /** {@link Icbu.Chat.MessageTipForXiaoMan ICBU > ICBU沟通消息推送给小满提醒} */
   type IcbuChatMessageTipForXiaoMan = Message & { content?: MessageContent & { topic?: 'icbu_chat_MessageTipForXiaoMan', content?: string | Icbu.Chat.MessageTipForXiaoMan } };
   /** {@link Icbu.Crm.AwbService ICBU > AWB服务数据同步小满} */
@@ -4116,6 +4118,10 @@ declare namespace IncomingMessage {
     | IcbuAlicrmNoteModified
     | IcbuAlicrmOfflineDataChanged;
   /**
+   * - {@link IcbuAwbAwbService ICBU > AWB操作数据同步到小满进行服务}
+   */
+  type IcbuAwb = IcbuAwbAwbService;
+  /**
    * - {@link IcbuChatMessageTipForXiaoMan ICBU > ICBU沟通消息推送给小满提醒}
    */
   type IcbuChat = IcbuChatMessageTipForXiaoMan;
@@ -6447,6 +6453,7 @@ declare namespace IncomingMessage {
     | GovRadarclue;
   /**
    * - {@link IcbuAlicrm}
+   * - {@link IcbuAwb}
    * - {@link IcbuChat}
    * - {@link IcbuCrm}
    * - {@link IcbuMember}
@@ -6454,6 +6461,7 @@ declare namespace IncomingMessage {
    * - {@link IcbuTrade}
    */
   type Icbu = IcbuAlicrm
+    | IcbuAwb
     | IcbuChat
     | IcbuCrm
     | IcbuMember

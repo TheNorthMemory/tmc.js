@@ -52,6 +52,31 @@ declare namespace Icbu.Alicrm {
 }
 
 /** ICBU */
+declare namespace Icbu.Awb {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2782&docType=9 AWB操作数据同步到小满进行服务} */
+  interface AwbService {
+    /** accio的userid */
+    accio_ali_id: string;
+    /** 国际站aliid */
+    alibaba_ali_id?: string;
+    /** action */
+    current_action: string;
+    /** 事件时间 */
+    event_time: string;
+    /** gid */
+    global_id?: string;
+    /** 是否授权 */
+    has_authorized_alibaba_account: boolean;
+    /** 订阅planid */
+    plan_id?: string;
+    /** accio的teamid */
+    team_id: string;
+    /** 团队数量 */
+    team_member: number;
+  }
+}
+
+/** ICBU */
 declare namespace Icbu.Chat {
   /** {@link https://open.taobao.com/tmc.htm?docId=1813&docType=9 ICBU沟通消息推送给小满提醒} */
   interface MessageTipForXiaoMan {

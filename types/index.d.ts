@@ -1184,6 +1184,8 @@ declare interface TaoTopicsDescriptor {
   icbu_alicrm_NoteModified(fn: (this: TaoMessageConsumer, message: IncomingMessage.IcbuAlicrmNoteModified) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IcbuAlicrmOfflineDataChanged ICBU > 客户通离线数据变更同步} */
   icbu_alicrm_OfflineDataChanged(fn: (this: TaoMessageConsumer, message: IncomingMessage.IcbuAlicrmOfflineDataChanged) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IcbuAwbAwbService ICBU > AWB操作数据同步到小满进行服务} */
+  icbu_awb_AwbService(fn: (this: TaoMessageConsumer, message: IncomingMessage.IcbuAwbAwbService) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IcbuChatMessageTipForXiaoMan ICBU > ICBU沟通消息推送给小满提醒} */
   icbu_chat_MessageTipForXiaoMan(fn: (this: TaoMessageConsumer, message: IncomingMessage.IcbuChatMessageTipForXiaoMan) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IcbuCrmAwbService ICBU > AWB服务数据同步小满} */
@@ -3008,6 +3010,8 @@ declare interface TaoTopicsDescriptor {
   gov_radarclue(fn: (this: TaoMessageConsumer, message: IncomingMessage.GovRadarclue) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IcbuAlicrm} */
   icbu_alicrm(fn: (this: TaoMessageConsumer, message: IncomingMessage.IcbuAlicrm) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IcbuAwb} */
+  icbu_awb(fn: (this: TaoMessageConsumer, message: IncomingMessage.IcbuAwb) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IcbuChat} */
   icbu_chat(fn: (this: TaoMessageConsumer, message: IncomingMessage.IcbuChat) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IcbuCrm} */
@@ -4683,6 +4687,8 @@ declare interface TaoEventsListener {
   on(topic: 'icbu_alicrm_NoteModified', listener: (this: TaoMessageConsumer, message: IncomingMessage.IcbuAlicrmNoteModified) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IcbuAlicrmOfflineDataChanged ICBU > 客户通离线数据变更同步} */
   on(topic: 'icbu_alicrm_OfflineDataChanged', listener: (this: TaoMessageConsumer, message: IncomingMessage.IcbuAlicrmOfflineDataChanged) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IcbuAwbAwbService ICBU > AWB操作数据同步到小满进行服务} */
+  on(topic: 'icbu_awb_AwbService', listener: (this: TaoMessageConsumer, message: IncomingMessage.IcbuAwbAwbService) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IcbuChatMessageTipForXiaoMan ICBU > ICBU沟通消息推送给小满提醒} */
   on(topic: 'icbu_chat_MessageTipForXiaoMan', listener: (this: TaoMessageConsumer, message: IncomingMessage.IcbuChatMessageTipForXiaoMan) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IcbuCrmAwbService ICBU > AWB服务数据同步小满} */
@@ -6507,6 +6513,8 @@ declare interface TaoEventsListener {
   on(topic: 'gov_radarclue', listener: (this: TaoMessageConsumer, message: IncomingMessage.GovRadarclue) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IcbuAlicrm} */
   on(topic: 'icbu_alicrm', listener: (this: TaoMessageConsumer, message: IncomingMessage.IcbuAlicrm) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IcbuAwb} */
+  on(topic: 'icbu_awb', listener: (this: TaoMessageConsumer, message: IncomingMessage.IcbuAwb) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IcbuChat} */
   on(topic: 'icbu_chat', listener: (this: TaoMessageConsumer, message: IncomingMessage.IcbuChat) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IcbuCrm} */
