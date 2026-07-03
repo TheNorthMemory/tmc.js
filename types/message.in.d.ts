@@ -1897,6 +1897,8 @@ declare namespace IncomingMessage {
   type TaobaoPcItemChange = Message & { content?: MessageContent & { topic?: 'taobao_pc_ItemChange', content?: string | Taobao.Pc.ItemChange } };
   /** {@link Taobao.Pc.ItemSkuChange 采购宝API > SKU变更消息} */
   type TaobaoPcItemSkuChange = Message & { content?: MessageContent & { topic?: 'taobao_pc_ItemSkuChange', content?: string | Taobao.Pc.ItemSkuChange } };
+  /** {@link Taobao.Pc.PayResultMsg 采购宝API > 企业购支付结果消息通知} */
+  type TaobaoPcPayResultMsg = Message & { content?: MessageContent & { topic?: 'taobao_pc_PayResultMsg', content?: string | Taobao.Pc.PayResultMsg } };
   /** {@link Taobao.Pc.SaleInvoiceResult 采购宝API > PC企业购发票通知消息} */
   type TaobaoPcSaleInvoiceResult = Message & { content?: MessageContent & { topic?: 'taobao_pc_SaleInvoiceResult', content?: string | Taobao.Pc.SaleInvoiceResult } };
   /** {@link Taobao.Pc.SettleProcessEventMsg 采购宝API > PC企业购结算流程事件消息} */
@@ -5050,6 +5052,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoPcEgoTradePackage 采购宝API > 订单包裹消息}
    * - {@link TaobaoPcItemChange 采购宝API > 商品变更消息}
    * - {@link TaobaoPcItemSkuChange 采购宝API > SKU变更消息}
+   * - {@link TaobaoPcPayResultMsg 采购宝API > 企业购支付结果消息通知}
    * - {@link TaobaoPcSaleInvoiceResult 采购宝API > PC企业购发票通知消息}
    * - {@link TaobaoPcSettleProcessEventMsg 采购宝API > PC企业购结算流程事件消息}
    */
@@ -5059,6 +5062,7 @@ declare namespace IncomingMessage {
     | TaobaoPcEgoTradePackage
     | TaobaoPcItemChange
     | TaobaoPcItemSkuChange
+    | TaobaoPcPayResultMsg
     | TaobaoPcSaleInvoiceResult
     | TaobaoPcSettleProcessEventMsg;
   /**

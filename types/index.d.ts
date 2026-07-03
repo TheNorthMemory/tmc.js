@@ -1910,6 +1910,8 @@ declare interface TaoTopicsDescriptor {
   taobao_pc_ItemChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcItemChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPcItemSkuChange 采购宝API > SKU变更消息} */
   taobao_pc_ItemSkuChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcItemSkuChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoPcPayResultMsg 采购宝API > 企业购支付结果消息通知} */
+  taobao_pc_PayResultMsg(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcPayResultMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPcSaleInvoiceResult 采购宝API > PC企业购发票通知消息} */
   taobao_pc_SaleInvoiceResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcSaleInvoiceResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPcSettleProcessEventMsg 采购宝API > PC企业购结算流程事件消息} */
@@ -5413,6 +5415,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_pc_ItemChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcItemChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPcItemSkuChange 采购宝API > SKU变更消息} */
   on(topic: 'taobao_pc_ItemSkuChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcItemSkuChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoPcPayResultMsg 采购宝API > 企业购支付结果消息通知} */
+  on(topic: 'taobao_pc_PayResultMsg', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcPayResultMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPcSaleInvoiceResult 采购宝API > PC企业购发票通知消息} */
   on(topic: 'taobao_pc_SaleInvoiceResult', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcSaleInvoiceResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPcSettleProcessEventMsg 采购宝API > PC企业购结算流程事件消息} */

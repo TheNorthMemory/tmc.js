@@ -4865,6 +4865,58 @@ declare namespace Taobao.Pc {
     type: string;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2784&docType=9 企业购支付结果消息通知} */
+  interface PayResultMsg {
+    /** 应用ID */
+    app_id: string;
+    /** 授权应用ID */
+    auth_app_id: string;
+    /** 买家open_id */
+    buyer_open_id: string;
+    /** 买家实付金额（元） */
+    buyer_pay_amount: string;
+    /** 编码格式 */
+    charset: string;
+    /** 支付资金渠道（JSON字符串） */
+    fund_bill_list: string;
+    /** 交易创建时间 */
+    gmt_create: Date | number | string;
+    /** 交易付款时间 */
+    gmt_payment: Date | number | string;
+    /** 开票金额（元） */
+    invoice_amount: string;
+    /** 商户应用ID */
+    merchant_app_id: string;
+    /** 消息ID */
+    msg_id: string;
+    /** 通知ID */
+    notify_id: string;
+    /** 通知时间 */
+    notify_time: Date | number | string;
+    /** 通知类型 */
+    notify_type: string;
+    /** 商户订单号 */
+    out_trade_no: string;
+    /** 回传参数（egoOrderId） */
+    passback_params: string;
+    /** 积分金额（元） */
+    point_amount: string;
+    /** 实收金额（元） */
+    receipt_amount: string;
+    /** 卖家支付宝用户号 */
+    seller_id: string;
+    /** 订单标题 */
+    subject: string;
+    /** 订单金额（元） */
+    total_amount: string;
+    /** 支付宝交易号 */
+    trade_no: string;
+    /** 交易状态：TRADE_SUCCESS / TRADE_CLOSED / WAIT_BUYER_PAY */
+    trade_status: string;
+    /** 接口版本 */
+    version: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2673&docType=9 PC企业购发票通知消息} */
   interface SaleInvoiceResult {
     /** 账单号 */
