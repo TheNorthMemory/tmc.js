@@ -2281,6 +2281,10 @@ declare namespace IncomingMessage {
   type TaobaoWmsReserveStockInOrderConfirm = Message & { content?: MessageContent & { topic?: 'taobao_wms_ReserveStockInOrderConfirm', content?: string | Taobao.Wms.ReserveStockInOrderConfirm } };
   /** {@link Taobao.Worktable.InsertData 淘宝 > 智能应用工作表数据新增} */
   type TaobaoWorktableInsertData = Message & { content?: MessageContent & { topic?: 'taobao_worktable_InsertData', content?: string | Taobao.Worktable.InsertData } };
+  /** {@link Taobao.Wt.ContractOrderMsgCancel 淘宝 > 猫补合约取消通知消息} */
+  type TaobaoWtContractOrderMsgCancel = Message & { content?: MessageContent & { topic?: 'taobao_wt_ContractOrderMsgCancel', content?: string | Taobao.Wt.ContractOrderMsgCancel } };
+  /** {@link Taobao.Wt.ContractOrderMsgSerialSync 淘宝 > 猫补合约串码同步成功通知} */
+  type TaobaoWtContractOrderMsgSerialSync = Message & { content?: MessageContent & { topic?: 'taobao_wt_ContractOrderMsgSerialSync', content?: string | Taobao.Wt.ContractOrderMsgSerialSync } };
   /** {@link Taobao.Wt.ContractOrderMsgSync 淘宝 > 通知运营商合约号卡订单可以下行} */
   type TaobaoWtContractOrderMsgSync = Message & { content?: MessageContent & { topic?: 'taobao_wt_ContractOrderMsgSync', content?: string | Taobao.Wt.ContractOrderMsgSync } };
   /** {@link Taobao.Wt.OpenTradeMsg 淘宝 > 礼包交易开放消息同步支付宝话费宝侧} */
@@ -5540,13 +5544,17 @@ declare namespace IncomingMessage {
    */
   type TaobaoWorktable = TaobaoWorktableInsertData;
   /**
+   * - {@link TaobaoWtContractOrderMsgCancel 淘宝 > 猫补合约取消通知消息}
+   * - {@link TaobaoWtContractOrderMsgSerialSync 淘宝 > 猫补合约串码同步成功通知}
    * - {@link TaobaoWtContractOrderMsgSync 淘宝 > 通知运营商合约号卡订单可以下行}
    * - {@link TaobaoWtOpenTradeMsg 淘宝 > 礼包交易开放消息同步支付宝话费宝侧}
    * - {@link TaobaoWtOpenTradePreauthorizMsg 淘宝 > 存送业务预授权操作结果通知}
    * - {@link TaobaoWtOpenTradeTaskMsg 淘宝 > 开放交易任务完成消息}
    * - {@link TaobaoWtVerifyInform 淘宝 > 阿里通信实人认证主动通知运营商}
    */
-  type TaobaoWt = TaobaoWtContractOrderMsgSync
+  type TaobaoWt = TaobaoWtContractOrderMsgCancel
+    | TaobaoWtContractOrderMsgSerialSync
+    | TaobaoWtContractOrderMsgSync
     | TaobaoWtOpenTradeMsg
     | TaobaoWtOpenTradePreauthorizMsg
     | TaobaoWtOpenTradeTaskMsg

@@ -7922,6 +7922,22 @@ declare namespace Taobao.Worktable {
 
 /** 淘宝 */
 declare namespace Taobao.Wt {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2786&docType=9 猫补合约取消通知消息} */
+  interface ContractOrderMsgCancel {
+    /** 订单id */
+    order_id: string;
+    /** 订单状态code */
+    order_status: string;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2785&docType=9 猫补合约串码同步成功通知} */
+  interface ContractOrderMsgSerialSync {
+    /** 订单id */
+    order_id: string;
+    /** 订单状态code */
+    order_status: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2707&docType=9 通知运营商合约号卡订单可以下行} */
   interface ContractOrderMsgSync {
     /** 订单id */

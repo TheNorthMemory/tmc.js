@@ -2294,6 +2294,10 @@ declare interface TaoTopicsDescriptor {
   taobao_wms_ReserveStockInOrderConfirm(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWmsReserveStockInOrderConfirm) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoWorktableInsertData 淘宝 > 智能应用工作表数据新增} */
   taobao_worktable_InsertData(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWorktableInsertData) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoWtContractOrderMsgCancel 淘宝 > 猫补合约取消通知消息} */
+  taobao_wt_ContractOrderMsgCancel(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWtContractOrderMsgCancel) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoWtContractOrderMsgSerialSync 淘宝 > 猫补合约串码同步成功通知} */
+  taobao_wt_ContractOrderMsgSerialSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWtContractOrderMsgSerialSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoWtContractOrderMsgSync 淘宝 > 通知运营商合约号卡订单可以下行} */
   taobao_wt_ContractOrderMsgSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWtContractOrderMsgSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoWtOpenTradeMsg 淘宝 > 礼包交易开放消息同步支付宝话费宝侧} */
@@ -5799,6 +5803,10 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_wms_ReserveStockInOrderConfirm', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWmsReserveStockInOrderConfirm) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoWorktableInsertData 淘宝 > 智能应用工作表数据新增} */
   on(topic: 'taobao_worktable_InsertData', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWorktableInsertData) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoWtContractOrderMsgCancel 淘宝 > 猫补合约取消通知消息} */
+  on(topic: 'taobao_wt_ContractOrderMsgCancel', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWtContractOrderMsgCancel) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoWtContractOrderMsgSerialSync 淘宝 > 猫补合约串码同步成功通知} */
+  on(topic: 'taobao_wt_ContractOrderMsgSerialSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWtContractOrderMsgSerialSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoWtContractOrderMsgSync 淘宝 > 通知运营商合约号卡订单可以下行} */
   on(topic: 'taobao_wt_ContractOrderMsgSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoWtContractOrderMsgSync) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoWtOpenTradeMsg 淘宝 > 礼包交易开放消息同步支付宝话费宝侧} */
