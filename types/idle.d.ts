@@ -441,6 +441,16 @@ declare namespace Idle.Seller {
     use_start_time: string;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2783&docType=9 无忧卖活动商品ai生成商品标描} */
+  interface JishiAiGenerateItemDesc {
+    /** AI生成的商品描述 */
+    item_desc: string;
+    /** 商品id */
+    item_id: string;
+    /** AI生成的商品标题 */
+    item_title: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2731&docType=9 闲鱼鱼小铺专业号身份变更状态} */
   interface ProShopStatus {
     /** 专业号退出时间 */
