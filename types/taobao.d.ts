@@ -830,6 +830,30 @@ declare namespace Taobao.Cloth {
     /** 消息ID */
     msg_id: string;
   }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2788&docType=9 淘宝服饰平台仓退仓单消息_正式数据} */
+  interface ReturnWarehouseMsg {
+    /** 退仓执行批次号 */
+    batch_no: string;
+    /** 事件类型：创建/发仓通知CREATE，取消/拦截通知CANCEL */
+    event_type: string;
+    /** 消息ID，当前格式为退仓单号_eventType，用于消息幂等 */
+    msg_id: string;
+    /** 退仓单号 */
+    return_order_no: string;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2787&docType=9 淘宝服饰平台仓退仓单消息_测试数据} */
+  interface ReturnWarehouseMsgTest {
+    /** 退仓执行批次号 */
+    batch_no: string;
+    /** 事件类型：创建/发仓通知CREATE，取消/拦截通知CANCEL */
+    event_type: string;
+    /** 消息ID，当前格式为退仓单号_eventType，用于消息幂等 */
+    msg_id: string;
+    /** 退仓单号 */
+    return_order_no: string;
+  }
 }
 
 /** 内容开放 */

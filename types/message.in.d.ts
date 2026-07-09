@@ -1413,6 +1413,10 @@ declare namespace IncomingMessage {
   type TaobaoClothFulfillmentMsg = Message & { content?: MessageContent & { topic?: 'taobao_cloth_FulfillmentMsg', content?: string | Taobao.Cloth.FulfillmentMsg } };
   /** {@link Taobao.Cloth.InboundMsg 淘宝 > 淘宝服饰平台仓入库单消息} */
   type TaobaoClothInboundMsg = Message & { content?: MessageContent & { topic?: 'taobao_cloth_InboundMsg', content?: string | Taobao.Cloth.InboundMsg } };
+  /** {@link Taobao.Cloth.ReturnWarehouseMsg 淘宝 > 淘宝服饰平台仓退仓单消息_正式数据} */
+  type TaobaoClothReturnWarehouseMsg = Message & { content?: MessageContent & { topic?: 'taobao_cloth_ReturnWarehouseMsg', content?: string | Taobao.Cloth.ReturnWarehouseMsg } };
+  /** {@link Taobao.Cloth.ReturnWarehouseMsgTest 淘宝 > 淘宝服饰平台仓退仓单消息_测试数据} */
+  type TaobaoClothReturnWarehouseMsgTest = Message & { content?: MessageContent & { topic?: 'taobao_cloth_ReturnWarehouseMsgTest', content?: string | Taobao.Cloth.ReturnWarehouseMsgTest } };
   /** {@link Taobao.Content.AuditAutocut 内容开放 > 智能混剪发布视频空间审核结果} */
   type TaobaoContentAuditAutocut = Message & { content?: MessageContent & { topic?: 'taobao_content_AuditAutocut', content?: string | Taobao.Content.AuditAutocut } };
   /** {@link Taobao.Content.AuditMvx 内容开放 > 视频工具发布视频空间审核结果} */
@@ -4474,9 +4478,13 @@ declare namespace IncomingMessage {
   /**
    * - {@link TaobaoClothFulfillmentMsg 淘宝 > 淘宝服饰平台仓履约单消息}
    * - {@link TaobaoClothInboundMsg 淘宝 > 淘宝服饰平台仓入库单消息}
+   * - {@link TaobaoClothReturnWarehouseMsg 淘宝 > 淘宝服饰平台仓退仓单消息_正式数据}
+   * - {@link TaobaoClothReturnWarehouseMsgTest 淘宝 > 淘宝服饰平台仓退仓单消息_测试数据}
    */
   type TaobaoCloth = TaobaoClothFulfillmentMsg
-    | TaobaoClothInboundMsg;
+    | TaobaoClothInboundMsg
+    | TaobaoClothReturnWarehouseMsg
+    | TaobaoClothReturnWarehouseMsgTest;
   /**
    * - {@link TaobaoContentAuditAutocut 内容开放 > 智能混剪发布视频空间审核结果}
    * - {@link TaobaoContentAuditMvx 内容开放 > 视频工具发布视频空间审核结果}
