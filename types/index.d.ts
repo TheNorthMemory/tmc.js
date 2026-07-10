@@ -1426,6 +1426,8 @@ declare interface TaoTopicsDescriptor {
   taobao_cloth_FulfillmentMsg(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoClothFulfillmentMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoClothInboundMsg 淘宝 > 淘宝服饰平台仓入库单消息} */
   taobao_cloth_InboundMsg(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoClothInboundMsg) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoClothReturnSampleMsgTest 淘宝 > 退样单状态下发消息} */
+  taobao_cloth_ReturnSampleMsgTest(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoClothReturnSampleMsgTest) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoClothReturnWarehouseMsg 淘宝 > 淘宝服饰平台仓退仓单消息_正式数据} */
   taobao_cloth_ReturnWarehouseMsg(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoClothReturnWarehouseMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoClothReturnWarehouseMsgTest 淘宝 > 淘宝服饰平台仓退仓单消息_测试数据} */
@@ -4941,6 +4943,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_cloth_FulfillmentMsg', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoClothFulfillmentMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoClothInboundMsg 淘宝 > 淘宝服饰平台仓入库单消息} */
   on(topic: 'taobao_cloth_InboundMsg', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoClothInboundMsg) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoClothReturnSampleMsgTest 淘宝 > 退样单状态下发消息} */
+  on(topic: 'taobao_cloth_ReturnSampleMsgTest', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoClothReturnSampleMsgTest) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoClothReturnWarehouseMsg 淘宝 > 淘宝服饰平台仓退仓单消息_正式数据} */
   on(topic: 'taobao_cloth_ReturnWarehouseMsg', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoClothReturnWarehouseMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoClothReturnWarehouseMsgTest 淘宝 > 淘宝服饰平台仓退仓单消息_测试数据} */

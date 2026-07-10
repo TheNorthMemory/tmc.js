@@ -1413,6 +1413,8 @@ declare namespace IncomingMessage {
   type TaobaoClothFulfillmentMsg = Message & { content?: MessageContent & { topic?: 'taobao_cloth_FulfillmentMsg', content?: string | Taobao.Cloth.FulfillmentMsg } };
   /** {@link Taobao.Cloth.InboundMsg 淘宝 > 淘宝服饰平台仓入库单消息} */
   type TaobaoClothInboundMsg = Message & { content?: MessageContent & { topic?: 'taobao_cloth_InboundMsg', content?: string | Taobao.Cloth.InboundMsg } };
+  /** {@link Taobao.Cloth.ReturnSampleMsgTest 淘宝 > 退样单状态下发消息} */
+  type TaobaoClothReturnSampleMsgTest = Message & { content?: MessageContent & { topic?: 'taobao_cloth_ReturnSampleMsgTest', content?: string | Taobao.Cloth.ReturnSampleMsgTest } };
   /** {@link Taobao.Cloth.ReturnWarehouseMsg 淘宝 > 淘宝服饰平台仓退仓单消息_正式数据} */
   type TaobaoClothReturnWarehouseMsg = Message & { content?: MessageContent & { topic?: 'taobao_cloth_ReturnWarehouseMsg', content?: string | Taobao.Cloth.ReturnWarehouseMsg } };
   /** {@link Taobao.Cloth.ReturnWarehouseMsgTest 淘宝 > 淘宝服饰平台仓退仓单消息_测试数据} */
@@ -4478,11 +4480,13 @@ declare namespace IncomingMessage {
   /**
    * - {@link TaobaoClothFulfillmentMsg 淘宝 > 淘宝服饰平台仓履约单消息}
    * - {@link TaobaoClothInboundMsg 淘宝 > 淘宝服饰平台仓入库单消息}
+   * - {@link TaobaoClothReturnSampleMsgTest 淘宝 > 退样单状态下发消息}
    * - {@link TaobaoClothReturnWarehouseMsg 淘宝 > 淘宝服饰平台仓退仓单消息_正式数据}
    * - {@link TaobaoClothReturnWarehouseMsgTest 淘宝 > 淘宝服饰平台仓退仓单消息_测试数据}
    */
   type TaobaoCloth = TaobaoClothFulfillmentMsg
     | TaobaoClothInboundMsg
+    | TaobaoClothReturnSampleMsgTest
     | TaobaoClothReturnWarehouseMsg
     | TaobaoClothReturnWarehouseMsgTest;
   /**
