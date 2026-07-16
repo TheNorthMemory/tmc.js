@@ -2246,6 +2246,8 @@ declare namespace Taobao.Fuwu {
   interface FundsChange {
     /** 资金类型 */
     funds_type?: string;
+    /** 消息类型 */
+    message_type?: string;
     /** 新机单ID */
     new_order_id?: string;
     /** 回收单ID */
