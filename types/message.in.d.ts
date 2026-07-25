@@ -1265,6 +1265,8 @@ declare namespace IncomingMessage {
   type IdleTopisvTradeNotice = Message & { content?: MessageContent & { topic?: 'idle_topisv_TradeNotice', content?: string | Idle.Topisv.TradeNotice } };
   /** {@link Idle.Trade.AddressModify 闲鱼回收商消息 > 买家修改地址通知卖家} */
   type IdleTradeAddressModify = Message & { content?: MessageContent & { topic?: 'idle_trade_AddressModify', content?: string | Idle.Trade.AddressModify } };
+  /** {@link Idle.Trade.AddressModifyResult 闲鱼回收商消息 > 卖家同意地址修改后地址及隐私号更新成功消息} */
+  type IdleTradeAddressModifyResult = Message & { content?: MessageContent & { topic?: 'idle_trade_AddressModifyResult', content?: string | Idle.Trade.AddressModifyResult } };
   /** {@link Idle.Trade.TradeReteSuccess 闲鱼回收商消息 > 服务商订单评价消息} */
   type IdleTradeTradeReteSuccess = Message & { content?: MessageContent & { topic?: 'idle_trade_TradeReteSuccess', content?: string | Idle.Trade.TradeReteSuccess } };
   /** {@link Idle.Tranferpay.OrderChange 闲鱼 > 直接转账交易消息} */
@@ -4273,9 +4275,11 @@ declare namespace IncomingMessage {
     | IdleTopisvTradeNotice;
   /**
    * - {@link IdleTradeAddressModify 闲鱼回收商消息 > 买家修改地址通知卖家}
+   * - {@link IdleTradeAddressModifyResult 闲鱼回收商消息 > 卖家同意地址修改后地址及隐私号更新成功消息}
    * - {@link IdleTradeTradeReteSuccess 闲鱼回收商消息 > 服务商订单评价消息}
    */
   type IdleTrade = IdleTradeAddressModify
+    | IdleTradeAddressModifyResult
     | IdleTradeTradeReteSuccess;
   /**
    * - {@link IdleTranferpayOrderChange 闲鱼 > 直接转账交易消息}

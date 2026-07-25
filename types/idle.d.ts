@@ -543,6 +543,16 @@ declare namespace Idle.Trade {
     seller_id: string;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2792&docType=9 卖家同意地址修改后地址及隐私号更新成功消息} */
+  interface AddressModifyResult {
+    /** 订单 ID */
+    biz_order_id: string;
+    /** 修改后收货地址信息 */
+    modify_address_info: string;
+    /** 卖家 ID */
+    seller_id: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2648&docType=9 服务商订单评价消息} */
   interface TradeReteSuccess {
     /** 订单ID */

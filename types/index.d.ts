@@ -1278,6 +1278,8 @@ declare interface TaoTopicsDescriptor {
   idle_topisv_TradeNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleTopisvTradeNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleTradeAddressModify 闲鱼回收商消息 > 买家修改地址通知卖家} */
   idle_trade_AddressModify(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleTradeAddressModify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleTradeAddressModifyResult 闲鱼回收商消息 > 卖家同意地址修改后地址及隐私号更新成功消息} */
+  idle_trade_AddressModifyResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleTradeAddressModifyResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleTradeTradeReteSuccess 闲鱼回收商消息 > 服务商订单评价消息} */
   idle_trade_TradeReteSuccess(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleTradeTradeReteSuccess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleTranferpayOrderChange 闲鱼 > 直接转账交易消息} */
@@ -4797,6 +4799,8 @@ declare interface TaoEventsListener {
   on(topic: 'idle_topisv_TradeNotice', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleTopisvTradeNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleTradeAddressModify 闲鱼回收商消息 > 买家修改地址通知卖家} */
   on(topic: 'idle_trade_AddressModify', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleTradeAddressModify) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleTradeAddressModifyResult 闲鱼回收商消息 > 卖家同意地址修改后地址及隐私号更新成功消息} */
+  on(topic: 'idle_trade_AddressModifyResult', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleTradeAddressModifyResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleTradeTradeReteSuccess 闲鱼回收商消息 > 服务商订单评价消息} */
   on(topic: 'idle_trade_TradeReteSuccess', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleTradeTradeReteSuccess) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleTranferpayOrderChange 闲鱼 > 直接转账交易消息} */
