@@ -4855,6 +4855,8 @@ declare namespace Taobao.Pc {
     buyer_id: number;
     /** 企业购的客户ID */
     client_id: string;
+    /** 发货方式：0-COD 1-在线下单 2-自己联系 3-不需要物流 4-限时物流 5-物流宝 102自配送 */
+    logis_type: number;
     /** 消息产生的时间 */
     message_time: Date | number | string;
     /** 消息ID */
