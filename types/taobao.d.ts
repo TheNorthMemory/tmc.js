@@ -3936,6 +3936,33 @@ declare namespace Taobao.Logistics {
   }
 }
 
+/** 淘特 */
+declare namespace Taobao.Ltao {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2796&docType=9 淘特分销商品通知} */
+  interface DistributorItemChange {
+    /** 内容json, 加密后的itemId */
+    content: string;
+    /** 消息id */
+    message_id: string;
+    /** 子类型 */
+    sub_type: string;
+    /** 触发源 */
+    trigger: string;
+    /** 类型 */
+    type: string;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2794&docType=9 淘特交易消息} */
+  interface TradeMsg {
+    /** 子订单id */
+    biz_order_id: string;
+    /** 主键 */
+    biz_unique_id: string;
+    /** 消息类型 */
+    message_type: string;
+  }
+}
+
 /** 轻应用 */
 declare namespace Taobao.Miniapp {
   /** {@link https://open.taobao.com/tmc.htm?docId=2307&docType=9 小程序文章内容非法} */

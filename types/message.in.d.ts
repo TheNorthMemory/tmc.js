@@ -1239,6 +1239,8 @@ declare namespace IncomingMessage {
   type IdleLuxconsignOrderNotice = Message & { content?: MessageContent & { topic?: 'idle_luxconsign_OrderNotice', content?: string | Idle.Luxconsign.OrderNotice } };
   /** {@link Idle.Newoutlets.UserTagNotice 闲鱼电商Saas > 闲鱼用户身份变更消息} */
   type IdleNewoutletsUserTagNotice = Message & { content?: MessageContent & { topic?: 'idle_newoutlets_UserTagNotice', content?: string | Idle.Newoutlets.UserTagNotice } };
+  /** {@link Idle.Recycle.AfterSalePerform 闲鱼回收商消息 > 闲鱼回收售后对外消息} */
+  type IdleRecycleAfterSalePerform = Message & { content?: MessageContent & { topic?: 'idle_recycle_AfterSalePerform', content?: string | Idle.Recycle.AfterSalePerform } };
   /** {@link Idle.Recycle.OrderStateSyn 闲鱼回收商消息 > 闲鱼回收业务订单消息} */
   type IdleRecycleOrderStateSyn = Message & { content?: MessageContent & { topic?: 'idle_recycle_OrderStateSyn', content?: string | Idle.Recycle.OrderStateSyn } };
   /** {@link Idle.Recycle.OrderSyn 闲鱼回收商消息 > 回收订单交易消息} */
@@ -1791,6 +1793,10 @@ declare namespace IncomingMessage {
   type TaobaoLogisticsPackageExceptionOff = Message & { content?: MessageContent & { topic?: 'taobao_logistics_PackageExceptionOff', content?: string | Taobao.Logistics.PackageExceptionOff } };
   /** {@link Taobao.Logistics.UnTaobaoLogstic 淘宝物流 > 非淘物流消息} */
   type TaobaoLogisticsUnTaobaoLogstic = Message & { content?: MessageContent & { topic?: 'taobao_logistics_UnTaobaoLogstic', content?: string | Taobao.Logistics.UnTaobaoLogstic } };
+  /** {@link Taobao.Ltao.DistributorItemChange 淘特 > 淘特分销商品通知} */
+  type TaobaoLtaoDistributorItemChange = Message & { content?: MessageContent & { topic?: 'taobao_ltao_DistributorItemChange', content?: string | Taobao.Ltao.DistributorItemChange } };
+  /** {@link Taobao.Ltao.TradeMsg 淘特 > 淘特交易消息} */
+  type TaobaoLtaoTradeMsg = Message & { content?: MessageContent & { topic?: 'taobao_ltao_TradeMsg', content?: string | Taobao.Ltao.TradeMsg } };
   /** {@link Taobao.Miniapp.ArticleContentUnlawful 轻应用 > 小程序文章内容非法} */
   type TaobaoMiniappArticleContentUnlawful = Message & { content?: MessageContent & { topic?: 'taobao_miniapp_ArticleContentUnlawful', content?: string | Taobao.Miniapp.ArticleContentUnlawful } };
   /** {@link Taobao.Miniapp.ItemMsg 轻应用 > 轻交易商品状态同步消息} */
@@ -4244,12 +4250,14 @@ declare namespace IncomingMessage {
    */
   type IdleNewoutlets = IdleNewoutletsUserTagNotice;
   /**
+   * - {@link IdleRecycleAfterSalePerform 闲鱼回收商消息 > 闲鱼回收售后对外消息}
    * - {@link IdleRecycleOrderStateSyn 闲鱼回收商消息 > 闲鱼回收业务订单消息}
    * - {@link IdleRecycleOrderSyn 闲鱼回收商消息 > 回收订单交易消息}
    * - {@link IdleRecycleRefundStatusModify 闲鱼回收商消息 > 退款消息}
    * - {@link IdleRecycleStoreSyn 闲鱼回收商消息 > 黄金回收门店信息变更通知}
    */
-  type IdleRecycle = IdleRecycleOrderStateSyn
+  type IdleRecycle = IdleRecycleAfterSalePerform
+    | IdleRecycleOrderStateSyn
     | IdleRecycleOrderSyn
     | IdleRecycleRefundStatusModify
     | IdleRecycleStoreSyn;
@@ -4941,6 +4949,12 @@ declare namespace IncomingMessage {
     | TaobaoLogisticsPackageExceptionCreate
     | TaobaoLogisticsPackageExceptionOff
     | TaobaoLogisticsUnTaobaoLogstic;
+  /**
+   * - {@link TaobaoLtaoDistributorItemChange 淘特 > 淘特分销商品通知}
+   * - {@link TaobaoLtaoTradeMsg 淘特 > 淘特交易消息}
+   */
+  type TaobaoLtao = TaobaoLtaoDistributorItemChange
+    | TaobaoLtaoTradeMsg;
   /**
    * - {@link TaobaoMiniappArticleContentUnlawful 轻应用 > 小程序文章内容非法}
    * - {@link TaobaoMiniappItemMsg 轻应用 > 轻交易商品状态同步消息}
@@ -6642,6 +6656,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoLocal}
    * - {@link TaobaoLocalorder}
    * - {@link TaobaoLogistics}
+   * - {@link TaobaoLtao}
    * - {@link TaobaoMiniapp}
    * - {@link TaobaoModifyaddress}
    * - {@link TaobaoModifyorder}
@@ -6768,6 +6783,7 @@ declare namespace IncomingMessage {
     | TaobaoLocal
     | TaobaoLocalorder
     | TaobaoLogistics
+    | TaobaoLtao
     | TaobaoMiniapp
     | TaobaoModifyaddress
     | TaobaoModifyorder

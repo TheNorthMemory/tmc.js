@@ -366,6 +366,26 @@ declare namespace Idle.Newoutlets {
 
 /** 闲鱼回收商消息 */
 declare namespace Idle.Recycle {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2795&docType=9 闲鱼回收售后对外消息} */
+  interface AfterSalePerform {
+    /** 售后单id */
+    after_sale_id: string;
+    /** 业务玩法类型 */
+    after_sale_scene: string;
+    /** 售后类型 */
+    after_sale_type: string;
+    /** 推进后状态 */
+    after_status: string;
+    /** 推进前状态 */
+    before_status: string;
+    /** 买家id */
+    buyer_id: string;
+    /** 触发事件 */
+    event_id: string;
+    /** 买家单号 */
+    main_order_id: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2385&docType=9 闲鱼回收业务订单消息} */
   interface OrderStateSyn {
     /** 订单id */

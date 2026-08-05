@@ -1252,6 +1252,8 @@ declare interface TaoTopicsDescriptor {
   idle_luxconsign_OrderNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleLuxconsignOrderNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleNewoutletsUserTagNotice 闲鱼电商Saas > 闲鱼用户身份变更消息} */
   idle_newoutlets_UserTagNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleNewoutletsUserTagNotice) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleRecycleAfterSalePerform 闲鱼回收商消息 > 闲鱼回收售后对外消息} */
+  idle_recycle_AfterSalePerform(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleRecycleAfterSalePerform) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleRecycleOrderStateSyn 闲鱼回收商消息 > 闲鱼回收业务订单消息} */
   idle_recycle_OrderStateSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleRecycleOrderStateSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleRecycleOrderSyn 闲鱼回收商消息 > 回收订单交易消息} */
@@ -1804,6 +1806,10 @@ declare interface TaoTopicsDescriptor {
   taobao_logistics_PackageExceptionOff(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLogisticsPackageExceptionOff) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLogisticsUnTaobaoLogstic 淘宝物流 > 非淘物流消息} */
   taobao_logistics_UnTaobaoLogstic(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLogisticsUnTaobaoLogstic) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoLtaoDistributorItemChange 淘特 > 淘特分销商品通知} */
+  taobao_ltao_DistributorItemChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLtaoDistributorItemChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoLtaoTradeMsg 淘特 > 淘特交易消息} */
+  taobao_ltao_TradeMsg(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLtaoTradeMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoMiniappArticleContentUnlawful 轻应用 > 小程序文章内容非法} */
   taobao_miniapp_ArticleContentUnlawful(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoMiniappArticleContentUnlawful) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoMiniappItemMsg 轻应用 > 轻交易商品状态同步消息} */
@@ -3214,6 +3220,8 @@ declare interface TaoTopicsDescriptor {
   taobao_localorder(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLocalorder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLogistics} */
   taobao_logistics(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLogistics) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoLtao} */
+  taobao_ltao(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLtao) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoMiniapp} */
   taobao_miniapp(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoMiniapp) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoModifyaddress} */
@@ -4773,6 +4781,8 @@ declare interface TaoEventsListener {
   on(topic: 'idle_luxconsign_OrderNotice', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleLuxconsignOrderNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleNewoutletsUserTagNotice 闲鱼电商Saas > 闲鱼用户身份变更消息} */
   on(topic: 'idle_newoutlets_UserTagNotice', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleNewoutletsUserTagNotice) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleRecycleAfterSalePerform 闲鱼回收商消息 > 闲鱼回收售后对外消息} */
+  on(topic: 'idle_recycle_AfterSalePerform', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleRecycleAfterSalePerform) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleRecycleOrderStateSyn 闲鱼回收商消息 > 闲鱼回收业务订单消息} */
   on(topic: 'idle_recycle_OrderStateSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleRecycleOrderStateSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleRecycleOrderSyn 闲鱼回收商消息 > 回收订单交易消息} */
@@ -5325,6 +5335,10 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_logistics_PackageExceptionOff', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLogisticsPackageExceptionOff) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLogisticsUnTaobaoLogstic 淘宝物流 > 非淘物流消息} */
   on(topic: 'taobao_logistics_UnTaobaoLogstic', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLogisticsUnTaobaoLogstic) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoLtaoDistributorItemChange 淘特 > 淘特分销商品通知} */
+  on(topic: 'taobao_ltao_DistributorItemChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLtaoDistributorItemChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoLtaoTradeMsg 淘特 > 淘特交易消息} */
+  on(topic: 'taobao_ltao_TradeMsg', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLtaoTradeMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoMiniappArticleContentUnlawful 轻应用 > 小程序文章内容非法} */
   on(topic: 'taobao_miniapp_ArticleContentUnlawful', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoMiniappArticleContentUnlawful) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoMiniappItemMsg 轻应用 > 轻交易商品状态同步消息} */
@@ -6735,6 +6749,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_localorder', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLocalorder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLogistics} */
   on(topic: 'taobao_logistics', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLogistics) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoLtao} */
+  on(topic: 'taobao_ltao', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLtao) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoMiniapp} */
   on(topic: 'taobao_miniapp', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoMiniapp) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoModifyaddress} */
