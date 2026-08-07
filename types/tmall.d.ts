@@ -433,6 +433,14 @@ declare namespace Tmall.Homeservice {
     workcard_id_list: string;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2798&docType=9 家享服务询价单变更通知} */
+  interface InquiryOrderUpdate {
+    /** CREATED - 询价单已创建 / FINISHED - 已完结 */
+    action: string;
+    /** 询价单ID */
+    inquiry_order_id: number;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2675&docType=9 天猫家享服务物流更新} */
   interface LogisticsUpdate {
     /** 动作 */

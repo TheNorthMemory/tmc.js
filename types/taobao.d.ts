@@ -807,6 +807,22 @@ declare namespace Taobao.Cco {
     /** 此次同步的唯一标识，用于问题排查，无业务语义 */
     instance_id?: string;
   }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2799&docType=9 淘天客运PBC承诺履约工单消息事件} */
+  interface PbcPromisedTicketMessage {
+    /** 工单任务编号 */
+    case_id: string;
+    /** 工单类型 */
+    case_type: string;
+    /** 工单创建时间 */
+    gmt_create: string;
+    /** 主订单编号 */
+    main_order_id: string;
+    /** 业务请求ID */
+    request_id: string;
+    /** 工单阶段 */
+    stage: string;
+  }
 }
 
 /** 淘宝 */

@@ -1426,6 +1426,8 @@ declare interface TaoTopicsDescriptor {
   taobao_cco_AlipayCase(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoCcoAlipayCase) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoCcoGjCase 淘宝 > cco工单创建广交通知} */
   taobao_cco_GjCase(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoCcoGjCase) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoCcoPbcPromisedTicketMessage 淘宝 > 淘天客运PBC承诺履约工单消息事件} */
+  taobao_cco_PbcPromisedTicketMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoCcoPbcPromisedTicketMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoClothFulfillmentMsg 淘宝 > 淘宝服饰平台仓履约单消息} */
   taobao_cloth_FulfillmentMsg(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoClothFulfillmentMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoClothInboundMsg 淘宝 > 淘宝服饰平台仓入库单消息} */
@@ -2462,6 +2464,8 @@ declare interface TaoTopicsDescriptor {
   tmall_homedecorationfuwu_WorkcardStatusUpdateForSeller(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallHomedecorationfuwuWorkcardStatusUpdateForSeller) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallHomeserviceGroupWorkcardCreate 天猫服务 > 整单视角工单全部创建消息} */
   tmall_homeservice_GroupWorkcardCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallHomeserviceGroupWorkcardCreate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallHomeserviceInquiryOrderUpdate 天猫服务 > 家享服务询价单变更通知} */
+  tmall_homeservice_InquiryOrderUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallHomeserviceInquiryOrderUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallHomeserviceLogisticsUpdate 天猫服务 > 天猫家享服务物流更新} */
   tmall_homeservice_LogisticsUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TmallHomeserviceLogisticsUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallHomeserviceOnsiteServiceOrder 天猫服务 > 线下服务收费单消息} */
@@ -4955,6 +4959,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_cco_AlipayCase', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoCcoAlipayCase) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoCcoGjCase 淘宝 > cco工单创建广交通知} */
   on(topic: 'taobao_cco_GjCase', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoCcoGjCase) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoCcoPbcPromisedTicketMessage 淘宝 > 淘天客运PBC承诺履约工单消息事件} */
+  on(topic: 'taobao_cco_PbcPromisedTicketMessage', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoCcoPbcPromisedTicketMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoClothFulfillmentMsg 淘宝 > 淘宝服饰平台仓履约单消息} */
   on(topic: 'taobao_cloth_FulfillmentMsg', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoClothFulfillmentMsg) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoClothInboundMsg 淘宝 > 淘宝服饰平台仓入库单消息} */
@@ -5991,6 +5997,8 @@ declare interface TaoEventsListener {
   on(topic: 'tmall_homedecorationfuwu_WorkcardStatusUpdateForSeller', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallHomedecorationfuwuWorkcardStatusUpdateForSeller) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallHomeserviceGroupWorkcardCreate 天猫服务 > 整单视角工单全部创建消息} */
   on(topic: 'tmall_homeservice_GroupWorkcardCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallHomeserviceGroupWorkcardCreate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TmallHomeserviceInquiryOrderUpdate 天猫服务 > 家享服务询价单变更通知} */
+  on(topic: 'tmall_homeservice_InquiryOrderUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallHomeserviceInquiryOrderUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallHomeserviceLogisticsUpdate 天猫服务 > 天猫家享服务物流更新} */
   on(topic: 'tmall_homeservice_LogisticsUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TmallHomeserviceLogisticsUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TmallHomeserviceOnsiteServiceOrder 天猫服务 > 线下服务收费单消息} */

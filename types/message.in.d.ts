@@ -1413,6 +1413,8 @@ declare namespace IncomingMessage {
   type TaobaoCcoAlipayCase = Message & { content?: MessageContent & { topic?: 'taobao_cco_AlipayCase', content?: string | Taobao.Cco.AlipayCase } };
   /** {@link Taobao.Cco.GjCase 淘宝 > cco工单创建广交通知} */
   type TaobaoCcoGjCase = Message & { content?: MessageContent & { topic?: 'taobao_cco_GjCase', content?: string | Taobao.Cco.GjCase } };
+  /** {@link Taobao.Cco.PbcPromisedTicketMessage 淘宝 > 淘天客运PBC承诺履约工单消息事件} */
+  type TaobaoCcoPbcPromisedTicketMessage = Message & { content?: MessageContent & { topic?: 'taobao_cco_PbcPromisedTicketMessage', content?: string | Taobao.Cco.PbcPromisedTicketMessage } };
   /** {@link Taobao.Cloth.FulfillmentMsg 淘宝 > 淘宝服饰平台仓履约单消息} */
   type TaobaoClothFulfillmentMsg = Message & { content?: MessageContent & { topic?: 'taobao_cloth_FulfillmentMsg', content?: string | Taobao.Cloth.FulfillmentMsg } };
   /** {@link Taobao.Cloth.InboundMsg 淘宝 > 淘宝服饰平台仓入库单消息} */
@@ -2449,6 +2451,8 @@ declare namespace IncomingMessage {
   type TmallHomedecorationfuwuWorkcardStatusUpdateForSeller = Message & { content?: MessageContent & { topic?: 'tmall_homedecorationfuwu_WorkcardStatusUpdateForSeller', content?: string | Tmall.Homedecorationfuwu.WorkcardStatusUpdateForSeller } };
   /** {@link Tmall.Homeservice.GroupWorkcardCreate 天猫服务 > 整单视角工单全部创建消息} */
   type TmallHomeserviceGroupWorkcardCreate = Message & { content?: MessageContent & { topic?: 'tmall_homeservice_GroupWorkcardCreate', content?: string | Tmall.Homeservice.GroupWorkcardCreate } };
+  /** {@link Tmall.Homeservice.InquiryOrderUpdate 天猫服务 > 家享服务询价单变更通知} */
+  type TmallHomeserviceInquiryOrderUpdate = Message & { content?: MessageContent & { topic?: 'tmall_homeservice_InquiryOrderUpdate', content?: string | Tmall.Homeservice.InquiryOrderUpdate } };
   /** {@link Tmall.Homeservice.LogisticsUpdate 天猫服务 > 天猫家享服务物流更新} */
   type TmallHomeserviceLogisticsUpdate = Message & { content?: MessageContent & { topic?: 'tmall_homeservice_LogisticsUpdate', content?: string | Tmall.Homeservice.LogisticsUpdate } };
   /** {@link Tmall.Homeservice.OnsiteServiceOrder 天猫服务 > 线下服务收费单消息} */
@@ -4488,9 +4492,11 @@ declare namespace IncomingMessage {
   /**
    * - {@link TaobaoCcoAlipayCase 淘宝 > CCO工单通知支付宝}
    * - {@link TaobaoCcoGjCase 淘宝 > cco工单创建广交通知}
+   * - {@link TaobaoCcoPbcPromisedTicketMessage 淘宝 > 淘天客运PBC承诺履约工单消息事件}
    */
   type TaobaoCco = TaobaoCcoAlipayCase
-    | TaobaoCcoGjCase;
+    | TaobaoCcoGjCase
+    | TaobaoCcoPbcPromisedTicketMessage;
   /**
    * - {@link TaobaoClothFulfillmentMsg 淘宝 > 淘宝服饰平台仓履约单消息}
    * - {@link TaobaoClothInboundMsg 淘宝 > 淘宝服饰平台仓入库单消息}
@@ -5761,11 +5767,13 @@ declare namespace IncomingMessage {
   type TmallHomedecorationfuwu = TmallHomedecorationfuwuWorkcardStatusUpdateForSeller;
   /**
    * - {@link TmallHomeserviceGroupWorkcardCreate 天猫服务 > 整单视角工单全部创建消息}
+   * - {@link TmallHomeserviceInquiryOrderUpdate 天猫服务 > 家享服务询价单变更通知}
    * - {@link TmallHomeserviceLogisticsUpdate 天猫服务 > 天猫家享服务物流更新}
    * - {@link TmallHomeserviceOnsiteServiceOrder 天猫服务 > 线下服务收费单消息}
    * - {@link TmallHomeserviceTradeRefund 天猫服务 > 交易逆向消息}
    */
   type TmallHomeservice = TmallHomeserviceGroupWorkcardCreate
+    | TmallHomeserviceInquiryOrderUpdate
     | TmallHomeserviceLogisticsUpdate
     | TmallHomeserviceOnsiteServiceOrder
     | TmallHomeserviceTradeRefund;
