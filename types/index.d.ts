@@ -1806,6 +1806,8 @@ declare interface TaoTopicsDescriptor {
   taobao_logistics_PackageExceptionCreate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLogisticsPackageExceptionCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLogisticsPackageExceptionOff 淘宝物流 > 物流管理-包裹中心-异常核销消息} */
   taobao_logistics_PackageExceptionOff(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLogisticsPackageExceptionOff) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoLogisticsPackageExceptionUpdate 淘宝物流 > 异常更新消息} */
+  taobao_logistics_PackageExceptionUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLogisticsPackageExceptionUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLogisticsUnTaobaoLogstic 淘宝物流 > 非淘物流消息} */
   taobao_logistics_UnTaobaoLogstic(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLogisticsUnTaobaoLogstic) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLtaoDistributorItemChange 淘特 > 淘特分销商品通知} */
@@ -5339,6 +5341,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_logistics_PackageExceptionCreate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLogisticsPackageExceptionCreate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLogisticsPackageExceptionOff 淘宝物流 > 物流管理-包裹中心-异常核销消息} */
   on(topic: 'taobao_logistics_PackageExceptionOff', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLogisticsPackageExceptionOff) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoLogisticsPackageExceptionUpdate 淘宝物流 > 异常更新消息} */
+  on(topic: 'taobao_logistics_PackageExceptionUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLogisticsPackageExceptionUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLogisticsUnTaobaoLogstic 淘宝物流 > 非淘物流消息} */
   on(topic: 'taobao_logistics_UnTaobaoLogstic', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoLogisticsUnTaobaoLogstic) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoLtaoDistributorItemChange 淘特 > 淘特分销商品通知} */

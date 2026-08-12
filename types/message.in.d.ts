@@ -1793,6 +1793,8 @@ declare namespace IncomingMessage {
   type TaobaoLogisticsPackageExceptionCreate = Message & { content?: MessageContent & { topic?: 'taobao_logistics_PackageExceptionCreate', content?: string | Taobao.Logistics.PackageExceptionCreate } };
   /** {@link Taobao.Logistics.PackageExceptionOff 淘宝物流 > 物流管理-包裹中心-异常核销消息} */
   type TaobaoLogisticsPackageExceptionOff = Message & { content?: MessageContent & { topic?: 'taobao_logistics_PackageExceptionOff', content?: string | Taobao.Logistics.PackageExceptionOff } };
+  /** {@link Taobao.Logistics.PackageExceptionUpdate 淘宝物流 > 异常更新消息} */
+  type TaobaoLogisticsPackageExceptionUpdate = Message & { content?: MessageContent & { topic?: 'taobao_logistics_PackageExceptionUpdate', content?: string | Taobao.Logistics.PackageExceptionUpdate } };
   /** {@link Taobao.Logistics.UnTaobaoLogstic 淘宝物流 > 非淘物流消息} */
   type TaobaoLogisticsUnTaobaoLogstic = Message & { content?: MessageContent & { topic?: 'taobao_logistics_UnTaobaoLogstic', content?: string | Taobao.Logistics.UnTaobaoLogstic } };
   /** {@link Taobao.Ltao.DistributorItemChange 淘特 > 淘特分销商品通知} */
@@ -4947,6 +4949,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoLogisticsLogsticDetailTrace 淘宝物流 > 物流详情跟踪消息}
    * - {@link TaobaoLogisticsPackageExceptionCreate 淘宝物流 > 物流管理-包裹中心-异常创建消息}
    * - {@link TaobaoLogisticsPackageExceptionOff 淘宝物流 > 物流管理-包裹中心-异常核销消息}
+   * - {@link TaobaoLogisticsPackageExceptionUpdate 淘宝物流 > 异常更新消息}
    * - {@link TaobaoLogisticsUnTaobaoLogstic 淘宝物流 > 非淘物流消息}
    */
   type TaobaoLogistics = TaobaoLogisticsAccept
@@ -4954,6 +4957,7 @@ declare namespace IncomingMessage {
     | TaobaoLogisticsLogsticDetailTrace
     | TaobaoLogisticsPackageExceptionCreate
     | TaobaoLogisticsPackageExceptionOff
+    | TaobaoLogisticsPackageExceptionUpdate
     | TaobaoLogisticsUnTaobaoLogstic;
   /**
    * - {@link TaobaoLtaoDistributorItemChange 淘特 > 淘特分销商品通知}

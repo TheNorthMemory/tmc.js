@@ -3943,6 +3943,38 @@ declare namespace Taobao.Logistics {
     seller_id: string;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2791&docType=9 异常更新消息} */
+  interface PackageExceptionUpdate {
+    /** 预计赔付金额 */
+    compensate_amount: string;
+    /** 异常生成时间，时间戳：单位毫秒 */
+    create_time: number;
+    /** 异常维度 */
+    detail_type: string;
+    /** 异常一级类型 */
+    exception_code: string;
+    /** 异常性质 */
+    exception_type: string;
+    /** 异常id */
+    excep_id: string;
+    /** 运单维度异常信息 */
+    mail_details?: string;
+    /** 消息主键 */
+    msg_id: string;
+    /** 超时时间 */
+    over_time: string;
+    /** 商家ID */
+    seller_id: string;
+    /** 异常二级类型 */
+    sub_exception_code: string;
+    /** 交易单维度异常信息 */
+    trade_details?: string;
+    /** 异常更新时间，时间戳：单位毫秒 */
+    update_time: number;
+    /** 更新类型 */
+    update_type: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=1188&docType=9 非淘物流消息} */
   interface UnTaobaoLogstic {
     /** 消息内容JSON */
