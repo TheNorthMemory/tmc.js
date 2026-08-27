@@ -35,6 +35,7 @@
 /// <reference path="lark.d.ts" />
 /// <reference path="lianfan.d.ts" />
 /// <reference path="lingyang.d.ts" />
+/// <reference path="logistics.d.ts" />
 /// <reference path="lst.d.ts" />
 /// <reference path="niaochao.d.ts" />
 /// <reference path="selected.d.ts" />
@@ -1295,6 +1296,8 @@ declare namespace IncomingMessage {
   type LianfanHuiwaTaskStateUpdate = Message & { content?: MessageContent & { topic?: 'lianfan_huiwa_TaskStateUpdate', content?: string | Lianfan.Huiwa.TaskStateUpdate } };
   /** {@link Lingyang.Quickservice.MessageCreate 瓴羊 > 瓴羊卡片消息投递} */
   type LingyangQuickserviceMessageCreate = Message & { content?: MessageContent & { topic?: 'lingyang_quickservice_MessageCreate', content?: string | Lingyang.Quickservice.MessageCreate } };
+  /** {@link Logistics.Idlefish.SeekFinish 闲鱼电商Saas > 闲鱼寄件分单完成通知} */
+  type LogisticsIdlefishSeekFinish = Message & { content?: MessageContent & { topic?: 'logistics_idlefish_SeekFinish', content?: string | Logistics.Idlefish.SeekFinish } };
   /** {@link Lst.Supplier.BroadcastFastRefundMessage 零售通_公共 > 零售通广播极速退款消息} */
   type LstSupplierBroadcastFastRefundMessage = Message & { content?: MessageContent & { topic?: 'lst_supplier_BroadcastFastRefundMessage', content?: string | Lst.Supplier.BroadcastFastRefundMessage } };
   /** {@link Lst.Supplier.FastRefundMessageCreate 零售通_公共 > 品牌商极速退款消息创建} */
@@ -2015,6 +2018,8 @@ declare namespace IncomingMessage {
   type TaobaoShangouRefundSellerRefuseAgreement = Message & { content?: MessageContent & { topic?: 'taobao_shangou_RefundSellerRefuseAgreement', content?: string | Taobao.Shangou.RefundSellerRefuseAgreement } };
   /** {@link Taobao.Shangou.RefundSuccess 闪购交易 > 闪购退款成功} */
   type TaobaoShangouRefundSuccess = Message & { content?: MessageContent & { topic?: 'taobao_shangou_RefundSuccess', content?: string | Taobao.Shangou.RefundSuccess } };
+  /** {@link Taobao.Shangou.StoreItemSync 闪购交易 > 淘宝闪购门店品发布消息} */
+  type TaobaoShangouStoreItemSync = Message & { content?: MessageContent & { topic?: 'taobao_shangou_StoreItemSync', content?: string | Taobao.Shangou.StoreItemSync } };
   /** {@link Taobao.Shangou.TradeBuyerPay 闪购交易 > 闪购订单付款成功} */
   type TaobaoShangouTradeBuyerPay = Message & { content?: MessageContent & { topic?: 'taobao_shangou_TradeBuyerPay', content?: string | Taobao.Shangou.TradeBuyerPay } };
   /** {@link Taobao.Shangou.TradeClose 闪购交易 > 闪购订单关闭} */
@@ -4338,6 +4343,10 @@ declare namespace IncomingMessage {
    */
   type LingyangQuickservice = LingyangQuickserviceMessageCreate;
   /**
+   * - {@link LogisticsIdlefishSeekFinish 闲鱼电商Saas > 闲鱼寄件分单完成通知}
+   */
+  type LogisticsIdlefish = LogisticsIdlefishSeekFinish;
+  /**
    * - {@link LstSupplierBroadcastFastRefundMessage 零售通_公共 > 零售通广播极速退款消息}
    * - {@link LstSupplierFastRefundMessageCreate 零售通_公共 > 品牌商极速退款消息创建}
    */
@@ -5225,6 +5234,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoShangouRefundSellerAgreeAgreement 闪购交易 > 卖家同意退款协议消息}
    * - {@link TaobaoShangouRefundSellerRefuseAgreement 闪购交易 > 卖家拒绝退款协议消息}
    * - {@link TaobaoShangouRefundSuccess 闪购交易 > 闪购退款成功}
+   * - {@link TaobaoShangouStoreItemSync 闪购交易 > 淘宝闪购门店品发布消息}
    * - {@link TaobaoShangouTradeBuyerPay 闪购交易 > 闪购订单付款成功}
    * - {@link TaobaoShangouTradeClose 闪购交易 > 闪购订单关闭}
    * - {@link TaobaoShangouTradeCreate 闪购交易 > 闪购订单创建}
@@ -5239,6 +5249,7 @@ declare namespace IncomingMessage {
     | TaobaoShangouRefundSellerAgreeAgreement
     | TaobaoShangouRefundSellerRefuseAgreement
     | TaobaoShangouRefundSuccess
+    | TaobaoShangouStoreItemSync
     | TaobaoShangouTradeBuyerPay
     | TaobaoShangouTradeClose
     | TaobaoShangouTradeCreate
@@ -6597,6 +6608,10 @@ declare namespace IncomingMessage {
    * - {@link LingyangQuickservice}
    */
   type Lingyang = LingyangQuickservice;
+  /**
+   * - {@link LogisticsIdlefish}
+   */
+  type Logistics = LogisticsIdlefish;
   /**
    * - {@link LstSupplier}
    */

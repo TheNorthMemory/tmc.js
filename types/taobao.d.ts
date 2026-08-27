@@ -814,6 +814,8 @@ declare namespace Taobao.Cco {
     case_id: string;
     /** 工单类型 */
     case_type: string;
+    /** 完结时间 */
+    finish_time?: string;
     /** 工单创建时间 */
     gmt_create: string;
     /** 主订单编号 */
@@ -5875,6 +5877,18 @@ declare namespace Taobao.Shangou {
     refund_phase?: string;
     /** 主订单ID */
     tid: number | bigint;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2801&docType=9 淘宝闪购门店品发布消息} */
+  interface StoreItemSync {
+    /** 淘宝商品id */
+    item_id: string;
+    /** 消息id */
+    msg_id: string;
+    /** 闪购门店id */
+    shop_id: string;
+    /** 闪购门店编码 */
+    store_id: string;
   }
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2688&docType=9 闪购订单付款成功} */

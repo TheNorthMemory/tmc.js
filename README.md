@@ -133,13 +133,13 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 
 ## 支持的TOPICS
 
-<details><summary>共计 106+ 类别，636+ 消息数</summary>
+<details><summary>共计 106+ 类别，639+ 消息数</summary>
 
 | 类别 | 消息数 |
 | --- | --- |
 | 淘宝交易 | 28 |
 | 淘宝退款 | 15 |
-| 淘宝商品 | 13 |
+| 淘宝商品 | 14 |
 | 淘宝分销 | 27 |
 | 淘宝点点 | 12 |
 | 淘宝火车票 | 6 |
@@ -169,7 +169,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | AE-交易 | 10 |
 | 五道口配送 | 6 |
 | 百川 | 2 |
-| 闲鱼 | 35 |
+| 闲鱼 | 36 |
 | 闲鱼回收商消息 | 8 |
 | 零售通POS开放平台消息 | 4 |
 | DPAAS | 6 |
@@ -228,7 +228,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | 酒店交易消息API | 2 |
 | 智能应用 | 1 |
 | 内容开放 | 4 |
-| 闲鱼电商Saas | 17 |
+| 闲鱼电商Saas | 18 |
 | 货源服务消息 | 2 |
 | 淘宝闪购联盟-卡券消息API | 2 |
 | 淘宝闪购联盟-卡券包采购单消息API | 2 |
