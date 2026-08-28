@@ -326,6 +326,21 @@ declare namespace Idle.Gameboost {
   }
 }
 
+/** 闲鱼 */
+declare namespace Idle.Jishi {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2802&docType=9 无忧卖商品活动变更消息} */
+  interface ActivityItemEvent {
+    /** 事件类型 */
+    event: string;
+    /** 扩展字段，值为 JSON 序列化后的字符串（不是 JSON 对象）；activityEnd 使用 finishReason 表示活动结束原因，priceChange 使用 operation 表示调价类型。无扩展内容时可不传，或传字符串 "{}"。 */
+    extra: string;
+    /** 商品id */
+    item_id: string;
+    /** 卖家id */
+    seller_id: string;
+  }
+}
+
 /** 闲鱼奢品寄卖 */
 declare namespace Idle.Luxconsign {
   /** {@link https://open.taobao.com/tmc.htm?docId=2701&docType=9 闲鱼奢品寄卖-卖家单消息通知} */

@@ -1236,6 +1236,8 @@ declare namespace IncomingMessage {
   type IdleFishmarketfixedOrderSyn = Message & { content?: MessageContent & { topic?: 'idle_fishmarketfixed_OrderSyn', content?: string | Idle.Fishmarketfixed.OrderSyn } };
   /** {@link Idle.Gameboost.OrderStateSync 闲鱼 > 交易消息同步} */
   type IdleGameboostOrderStateSync = Message & { content?: MessageContent & { topic?: 'idle_gameboost_OrderStateSync', content?: string | Idle.Gameboost.OrderStateSync } };
+  /** {@link Idle.Jishi.ActivityItemEvent 闲鱼 > 无忧卖商品活动变更消息} */
+  type IdleJishiActivityItemEvent = Message & { content?: MessageContent & { topic?: 'idle_jishi_ActivityItemEvent', content?: string | Idle.Jishi.ActivityItemEvent } };
   /** {@link Idle.Luxconsign.OrderNotice 闲鱼奢品寄卖 > 闲鱼奢品寄卖-卖家单消息通知} */
   type IdleLuxconsignOrderNotice = Message & { content?: MessageContent & { topic?: 'idle_luxconsign_OrderNotice', content?: string | Idle.Luxconsign.OrderNotice } };
   /** {@link Idle.Newoutlets.UserTagNotice 闲鱼电商Saas > 闲鱼用户身份变更消息} */
@@ -4253,6 +4255,10 @@ declare namespace IncomingMessage {
    */
   type IdleGameboost = IdleGameboostOrderStateSync;
   /**
+   * - {@link IdleJishiActivityItemEvent 闲鱼 > 无忧卖商品活动变更消息}
+   */
+  type IdleJishi = IdleJishiActivityItemEvent;
+  /**
    * - {@link IdleLuxconsignOrderNotice 闲鱼奢品寄卖 > 闲鱼奢品寄卖-卖家单消息通知}
    */
   type IdleLuxconsign = IdleLuxconsignOrderNotice;
@@ -6553,6 +6559,7 @@ declare namespace IncomingMessage {
    * - {@link IdleFishmarket}
    * - {@link IdleFishmarketfixed}
    * - {@link IdleGameboost}
+   * - {@link IdleJishi}
    * - {@link IdleLuxconsign}
    * - {@link IdleNewoutlets}
    * - {@link IdleRecycle}
@@ -6574,6 +6581,7 @@ declare namespace IncomingMessage {
     | IdleFishmarket
     | IdleFishmarketfixed
     | IdleGameboost
+    | IdleJishi
     | IdleLuxconsign
     | IdleNewoutlets
     | IdleRecycle
