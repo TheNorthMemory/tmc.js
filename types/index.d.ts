@@ -1248,7 +1248,7 @@ declare interface TaoTopicsDescriptor {
   idle_fishmarketfixed_OrderSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketfixedOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleGameboostOrderStateSync 闲鱼 > 交易消息同步} */
   idle_gameboost_OrderStateSync(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleGameboostOrderStateSync) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.IdleJishiActivityItemEvent 闲鱼 > 无忧卖商品活动变更消息} */
+  /** {@link IncomingMessage.IdleJishiActivityItemEvent 闲鱼电商Saas > 无忧卖商品活动变更消息} */
   idle_jishi_ActivityItemEvent(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleJishiActivityItemEvent) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleLuxconsignOrderNotice 闲鱼奢品寄卖 > 闲鱼奢品寄卖-卖家单消息通知} */
   idle_luxconsign_OrderNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleLuxconsignOrderNotice) => void): TaoMessageConsumer;
@@ -4795,7 +4795,7 @@ declare interface TaoEventsListener {
   on(topic: 'idle_fishmarketfixed_OrderSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleFishmarketfixedOrderSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleGameboostOrderStateSync 闲鱼 > 交易消息同步} */
   on(topic: 'idle_gameboost_OrderStateSync', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleGameboostOrderStateSync) => void): TaoMessageConsumer;
-  /** {@link IncomingMessage.IdleJishiActivityItemEvent 闲鱼 > 无忧卖商品活动变更消息} */
+  /** {@link IncomingMessage.IdleJishiActivityItemEvent 闲鱼电商Saas > 无忧卖商品活动变更消息} */
   on(topic: 'idle_jishi_ActivityItemEvent', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleJishiActivityItemEvent) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleLuxconsignOrderNotice 闲鱼奢品寄卖 > 闲鱼奢品寄卖-卖家单消息通知} */
   on(topic: 'idle_luxconsign_OrderNotice', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleLuxconsignOrderNotice) => void): TaoMessageConsumer;

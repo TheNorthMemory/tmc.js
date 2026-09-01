@@ -326,7 +326,7 @@ declare namespace Idle.Gameboost {
   }
 }
 
-/** 闲鱼 */
+/** 闲鱼电商Saas */
 declare namespace Idle.Jishi {
   /** {@link https://open.taobao.com/tmc.htm?docId=2802&docType=9 无忧卖商品活动变更消息} */
   interface ActivityItemEvent {
