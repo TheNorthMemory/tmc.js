@@ -1418,7 +1418,7 @@ declare namespace IncomingMessage {
   type TaobaoCcoAlipayCase = Message & { content?: MessageContent & { topic?: 'taobao_cco_AlipayCase', content?: string | Taobao.Cco.AlipayCase } };
   /** {@link Taobao.Cco.GjCase 淘宝 > cco工单创建广交通知} */
   type TaobaoCcoGjCase = Message & { content?: MessageContent & { topic?: 'taobao_cco_GjCase', content?: string | Taobao.Cco.GjCase } };
-  /** {@link Taobao.Cco.PbcPromisedTicketMessage 淘宝 > 淘天客运PBC承诺履约工单消息事件} */
+  /** {@link Taobao.Cco.PbcPromisedTicketMessage 淘宝 > 淘天客运平台售后任务工单消息事件} */
   type TaobaoCcoPbcPromisedTicketMessage = Message & { content?: MessageContent & { topic?: 'taobao_cco_PbcPromisedTicketMessage', content?: string | Taobao.Cco.PbcPromisedTicketMessage } };
   /** {@link Taobao.Cloth.FulfillmentMsg 淘宝 > 淘宝服饰平台仓履约单消息} */
   type TaobaoClothFulfillmentMsg = Message & { content?: MessageContent & { topic?: 'taobao_cloth_FulfillmentMsg', content?: string | Taobao.Cloth.FulfillmentMsg } };
@@ -1930,6 +1930,8 @@ declare namespace IncomingMessage {
   type TaobaoPcSaleInvoiceResult = Message & { content?: MessageContent & { topic?: 'taobao_pc_SaleInvoiceResult', content?: string | Taobao.Pc.SaleInvoiceResult } };
   /** {@link Taobao.Pc.SettleProcessEventMsg 采购宝API > PC企业购结算流程事件消息} */
   type TaobaoPcSettleProcessEventMsg = Message & { content?: MessageContent & { topic?: 'taobao_pc_SettleProcessEventMsg', content?: string | Taobao.Pc.SettleProcessEventMsg } };
+  /** {@link Taobao.Pc.SkuApply 采购宝API > 商品SKU报名消息} */
+  type TaobaoPcSkuApply = Message & { content?: MessageContent & { topic?: 'taobao_pc_SkuApply', content?: string | Taobao.Pc.SkuApply } };
   /** {@link Taobao.Profit.ResultNotify 淘宝 > 权益领取结果通知} */
   type TaobaoProfitResultNotify = Message & { content?: MessageContent & { topic?: 'taobao_profit_ResultNotify', content?: string | Taobao.Profit.ResultNotify } };
   /** {@link Taobao.Punish.Forall 淘宝 > 淘宝处罚消息} */
@@ -4509,7 +4511,7 @@ declare namespace IncomingMessage {
   /**
    * - {@link TaobaoCcoAlipayCase 淘宝 > CCO工单通知支付宝}
    * - {@link TaobaoCcoGjCase 淘宝 > cco工单创建广交通知}
-   * - {@link TaobaoCcoPbcPromisedTicketMessage 淘宝 > 淘天客运PBC承诺履约工单消息事件}
+   * - {@link TaobaoCcoPbcPromisedTicketMessage 淘宝 > 淘天客运平台售后任务工单消息事件}
    */
   type TaobaoCco = TaobaoCcoAlipayCase
     | TaobaoCcoGjCase
@@ -5122,6 +5124,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoPcPayResultMsg 采购宝API > 企业购支付结果消息通知}
    * - {@link TaobaoPcSaleInvoiceResult 采购宝API > PC企业购发票通知消息}
    * - {@link TaobaoPcSettleProcessEventMsg 采购宝API > PC企业购结算流程事件消息}
+   * - {@link TaobaoPcSkuApply 采购宝API > 商品SKU报名消息}
    */
   type TaobaoPc = TaobaoPcBillsGenerate
     | TaobaoPcEgoDisputeOrder
@@ -5131,7 +5134,8 @@ declare namespace IncomingMessage {
     | TaobaoPcItemSkuChange
     | TaobaoPcPayResultMsg
     | TaobaoPcSaleInvoiceResult
-    | TaobaoPcSettleProcessEventMsg;
+    | TaobaoPcSettleProcessEventMsg
+    | TaobaoPcSkuApply;
   /**
    * - {@link TaobaoProfitResultNotify 淘宝 > 权益领取结果通知}
    */

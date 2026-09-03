@@ -808,7 +808,7 @@ declare namespace Taobao.Cco {
     instance_id?: string;
   }
 
-  /** {@link https://open.taobao.com/tmc.htm?docId=2799&docType=9 淘天客运PBC承诺履约工单消息事件} */
+  /** {@link https://open.taobao.com/tmc.htm?docId=2799&docType=9 淘天客运平台售后任务工单消息事件} */
   interface PbcPromisedTicketMessage {
     /** 工单任务编号 */
     case_id: string;
@@ -5098,6 +5098,22 @@ declare namespace Taobao.Pc {
     settle_order_no: string;
     /** 淘宝订单id */
     tp_order_id: number;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2803&docType=9 商品SKU报名消息} */
+  interface SkuApply {
+    /** 报名状态（已报名/报名驳回） */
+    apply_status: string;
+    /** 变更时间 */
+    change_time: string;
+    /** 商品ID */
+    item_id: string;
+    /** 消息ID */
+    msg_id: string;
+    /** 报名驳回原因 */
+    reject_reason: string;
+    /** SKUID */
+    sku_id: string;
   }
 }
 
