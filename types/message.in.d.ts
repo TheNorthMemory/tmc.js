@@ -2134,6 +2134,8 @@ declare namespace IncomingMessage {
   type TaobaoTbkPubOrderDispatch = Message & { content?: MessageContent & { topic?: 'taobao_tbk_PubOrderDispatch', content?: string | Taobao.Tbk.PubOrderDispatch } };
   /** {@link Taobao.Tbk.YOUSHITljReport 淘宝 > 淘礼金报表API} */
   type TaobaoTbkYOUSHITljReport = Message & { content?: MessageContent & { topic?: 'taobao_tbk_YOUSHITljReport', content?: string | Taobao.Tbk.YOUSHITljReport } };
+  /** {@link Taobao.Tbkcx.OrderMessage 淘宝 > 触享渠道淘宝客订单} */
+  type TaobaoTbkcxOrderMessage = Message & { content?: MessageContent & { topic?: 'taobao_tbkcx_OrderMessage', content?: string | Taobao.Tbkcx.OrderMessage } };
   /** {@link Taobao.Tblive.OuterCommissionOrderChange 淘宝 > 淘宝直播分销佣金单变更消息} */
   type TaobaoTbliveOuterCommissionOrderChange = Message & { content?: MessageContent & { topic?: 'taobao_tblive_OuterCommissionOrderChange', content?: string | Taobao.Tblive.OuterCommissionOrderChange } };
   /** {@link Taobao.Tc.MaterialStock 淘宝 > 物资库存变动} */
@@ -5389,6 +5391,10 @@ declare namespace IncomingMessage {
     | TaobaoTbkPubOrderDispatch
     | TaobaoTbkYOUSHITljReport;
   /**
+   * - {@link TaobaoTbkcxOrderMessage 淘宝 > 触享渠道淘宝客订单}
+   */
+  type TaobaoTbkcx = TaobaoTbkcxOrderMessage;
+  /**
    * - {@link TaobaoTbliveOuterCommissionOrderChange 淘宝 > 淘宝直播分销佣金单变更消息}
    */
   type TaobaoTblive = TaobaoTbliveOuterCommissionOrderChange;
@@ -6735,6 +6741,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoTae}
    * - {@link TaobaoTaotv}
    * - {@link TaobaoTbk}
+   * - {@link TaobaoTbkcx}
    * - {@link TaobaoTblive}
    * - {@link TaobaoTc}
    * - {@link TaobaoTest}
@@ -6862,6 +6869,7 @@ declare namespace IncomingMessage {
     | TaobaoTae
     | TaobaoTaotv
     | TaobaoTbk
+    | TaobaoTbkcx
     | TaobaoTblive
     | TaobaoTc
     | TaobaoTest

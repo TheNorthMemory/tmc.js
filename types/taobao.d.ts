@@ -6733,6 +6733,17 @@ declare namespace Taobao.Tbk {
 }
 
 /** 淘宝 */
+declare namespace Taobao.Tbkcx {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2807&docType=9 触享渠道淘宝客订单} */
+  interface OrderMessage {
+    /** 具体订单信息 */
+    order_info: string;
+    /** 鹰眼id用于排查问题 */
+    trace_id: string;
+  }
+}
+
+/** 淘宝 */
 declare namespace Taobao.Tblive {
   /** {@link https://open.taobao.com/tmc.htm?docId=2760&docType=9 淘宝直播分销佣金单变更消息} */
   interface OuterCommissionOrderChange {
