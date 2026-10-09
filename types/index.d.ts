@@ -2148,6 +2148,8 @@ declare interface TaoTopicsDescriptor {
   taobao_tbk_YOUSHITljReport(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTbkYOUSHITljReport) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTbkcxOrderMessage 淘宝 > 触享渠道淘宝客订单} */
   taobao_tbkcx_OrderMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTbkcxOrderMessage) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoTbkcxRefundMessage 淘宝 > 触享渠道淘宝客逆向维权单} */
+  taobao_tbkcx_RefundMessage(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTbkcxRefundMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTbliveOuterCommissionOrderChange 淘宝 > 淘宝直播分销佣金单变更消息} */
   taobao_tblive_OuterCommissionOrderChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTbliveOuterCommissionOrderChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTcMaterialStock 淘宝 > 物资库存变动} */
@@ -5701,6 +5703,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_tbk_YOUSHITljReport', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTbkYOUSHITljReport) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTbkcxOrderMessage 淘宝 > 触享渠道淘宝客订单} */
   on(topic: 'taobao_tbkcx_OrderMessage', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTbkcxOrderMessage) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoTbkcxRefundMessage 淘宝 > 触享渠道淘宝客逆向维权单} */
+  on(topic: 'taobao_tbkcx_RefundMessage', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTbkcxRefundMessage) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTbliveOuterCommissionOrderChange 淘宝 > 淘宝直播分销佣金单变更消息} */
   on(topic: 'taobao_tblive_OuterCommissionOrderChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoTbliveOuterCommissionOrderChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoTcMaterialStock 淘宝 > 物资库存变动} */

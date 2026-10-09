@@ -2136,6 +2136,8 @@ declare namespace IncomingMessage {
   type TaobaoTbkYOUSHITljReport = Message & { content?: MessageContent & { topic?: 'taobao_tbk_YOUSHITljReport', content?: string | Taobao.Tbk.YOUSHITljReport } };
   /** {@link Taobao.Tbkcx.OrderMessage 淘宝 > 触享渠道淘宝客订单} */
   type TaobaoTbkcxOrderMessage = Message & { content?: MessageContent & { topic?: 'taobao_tbkcx_OrderMessage', content?: string | Taobao.Tbkcx.OrderMessage } };
+  /** {@link Taobao.Tbkcx.RefundMessage 淘宝 > 触享渠道淘宝客逆向维权单} */
+  type TaobaoTbkcxRefundMessage = Message & { content?: MessageContent & { topic?: 'taobao_tbkcx_RefundMessage', content?: string | Taobao.Tbkcx.RefundMessage } };
   /** {@link Taobao.Tblive.OuterCommissionOrderChange 淘宝 > 淘宝直播分销佣金单变更消息} */
   type TaobaoTbliveOuterCommissionOrderChange = Message & { content?: MessageContent & { topic?: 'taobao_tblive_OuterCommissionOrderChange', content?: string | Taobao.Tblive.OuterCommissionOrderChange } };
   /** {@link Taobao.Tc.MaterialStock 淘宝 > 物资库存变动} */
@@ -5392,8 +5394,10 @@ declare namespace IncomingMessage {
     | TaobaoTbkYOUSHITljReport;
   /**
    * - {@link TaobaoTbkcxOrderMessage 淘宝 > 触享渠道淘宝客订单}
+   * - {@link TaobaoTbkcxRefundMessage 淘宝 > 触享渠道淘宝客逆向维权单}
    */
-  type TaobaoTbkcx = TaobaoTbkcxOrderMessage;
+  type TaobaoTbkcx = TaobaoTbkcxOrderMessage
+    | TaobaoTbkcxRefundMessage;
   /**
    * - {@link TaobaoTbliveOuterCommissionOrderChange 淘宝 > 淘宝直播分销佣金单变更消息}
    */

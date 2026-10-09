@@ -6741,6 +6741,14 @@ declare namespace Taobao.Tbkcx {
     /** 鹰眼id用于排查问题 */
     trace_id: string;
   }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2808&docType=9 触享渠道淘宝客逆向维权单} */
+  interface RefundMessage {
+    /** 具体维权信息 */
+    refund_info: string;
+    /** 鹰眼id用于排查问题 */
+    trace_id: string;
+  }
 }
 
 /** 淘宝 */
