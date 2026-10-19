@@ -133,7 +133,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 
 ## 支持的TOPICS
 
-<details><summary>共计 107+ 类别，641+ 消息数</summary>
+<details><summary>共计 106+ 类别，639+ 消息数</summary>
 
 | 类别 | 消息数 |
 | --- | --- |
@@ -227,7 +227,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | 阿里健康-疫苗 | 2 |
 | 酒店交易消息API | 2 |
 | 智能应用 | 1 |
-| 内容开放 | 4 |
+| 内容开放 | 3 |
 | 闲鱼电商Saas | 19 |
 | 货源服务消息 | 2 |
 | 淘宝闪购联盟-卡券消息API | 2 |
@@ -243,7 +243,6 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | 闲鱼奢品寄卖 | 2 |
 | 全渠道API | 1 |
 | 飞猪租赁 | 1 |
-| CCO_PBC工单 | 1 |
 
 </details>
 
