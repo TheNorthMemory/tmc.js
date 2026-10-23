@@ -268,6 +268,8 @@ declare namespace IncomingMessage {
   type AlibabaIcbuliveCommentNotice = Message & { content?: MessageContent & { topic?: 'alibaba_icbulive_CommentNotice', content?: string | Alibaba.Icbulive.CommentNotice } };
   /** {@link Alibaba.Icbulive.EnterNotice ICBU > 直播观众进场通知} */
   type AlibabaIcbuliveEnterNotice = Message & { content?: MessageContent & { topic?: 'alibaba_icbulive_EnterNotice', content?: string | Alibaba.Icbulive.EnterNotice } };
+  /** {@link Alibaba.Idle.AccountRecoveryEventNotify 闲鱼 > 账号找回保障及V1存量赔款状态通知} */
+  type AlibabaIdleAccountRecoveryEventNotify = Message & { content?: MessageContent & { topic?: 'alibaba_idle_AccountRecoveryEventNotify', content?: string | Alibaba.Idle.AccountRecoveryEventNotify } };
   /** {@link Alibaba.Idle.ApplyInfoSyn 闲鱼 > 灵活用工报名信息同步} */
   type AlibabaIdleApplyInfoSyn = Message & { content?: MessageContent & { topic?: 'alibaba_idle_ApplyInfoSyn', content?: string | Alibaba.Idle.ApplyInfoSyn } };
   /** {@link Alibaba.Idle.HouseStatusNotify 闲鱼 > 闲鱼房源状态变更通知} */
@@ -1916,6 +1918,8 @@ declare namespace IncomingMessage {
   type TaobaoPcBillsGenerate = Message & { content?: MessageContent & { topic?: 'taobao_pc_BillsGenerate', content?: string | Taobao.Pc.BillsGenerate } };
   /** {@link Taobao.Pc.EgoDisputeOrder 采购宝API > PC企业购逆向订单消息} */
   type TaobaoPcEgoDisputeOrder = Message & { content?: MessageContent & { topic?: 'taobao_pc_EgoDisputeOrder', content?: string | Taobao.Pc.EgoDisputeOrder } };
+  /** {@link Taobao.Pc.EgoTradeIsvRegisterResult 采购宝API > 企业购ISV自主注册审核结果回传} */
+  type TaobaoPcEgoTradeIsvRegisterResult = Message & { content?: MessageContent & { topic?: 'taobao_pc_EgoTradeIsvRegisterResult', content?: string | Taobao.Pc.EgoTradeIsvRegisterResult } };
   /** {@link Taobao.Pc.EgoTradeOrder 采购宝API > PC企业购交易订单消息} */
   type TaobaoPcEgoTradeOrder = Message & { content?: MessageContent & { topic?: 'taobao_pc_EgoTradeOrder', content?: string | Taobao.Pc.EgoTradeOrder } };
   /** {@link Taobao.Pc.EgoTradePackage 采购宝API > 订单包裹消息} */
@@ -2981,6 +2985,7 @@ declare namespace IncomingMessage {
   type AlibabaIcbulive = AlibabaIcbuliveCommentNotice
     | AlibabaIcbuliveEnterNotice;
   /**
+   * - {@link AlibabaIdleAccountRecoveryEventNotify 闲鱼 > 账号找回保障及V1存量赔款状态通知}
    * - {@link AlibabaIdleApplyInfoSyn 闲鱼 > 灵活用工报名信息同步}
    * - {@link AlibabaIdleHouseStatusNotify 闲鱼 > 闲鱼房源状态变更通知}
    * - {@link AlibabaIdleISVItemChange 闲鱼 > 同城三方服务商品状态变更}
@@ -2992,7 +2997,8 @@ declare namespace IncomingMessage {
    * - {@link AlibabaIdleLocalLeadConfirmSyn 闲鱼 > 闲鱼留资卡确认消息同步}
    * - {@link AlibabaIdleLocalMessageNotify 闲鱼 > 闲鱼KA商家询单消息通知}
    */
-  type AlibabaIdle = AlibabaIdleApplyInfoSyn
+  type AlibabaIdle = AlibabaIdleAccountRecoveryEventNotify
+    | AlibabaIdleApplyInfoSyn
     | AlibabaIdleHouseStatusNotify
     | AlibabaIdleISVItemChange
     | AlibabaIdleISVOrderChange
@@ -5121,6 +5127,7 @@ declare namespace IncomingMessage {
   /**
    * - {@link TaobaoPcBillsGenerate 采购宝API > PC企业购出账消息通知}
    * - {@link TaobaoPcEgoDisputeOrder 采购宝API > PC企业购逆向订单消息}
+   * - {@link TaobaoPcEgoTradeIsvRegisterResult 采购宝API > 企业购ISV自主注册审核结果回传}
    * - {@link TaobaoPcEgoTradeOrder 采购宝API > PC企业购交易订单消息}
    * - {@link TaobaoPcEgoTradePackage 采购宝API > 订单包裹消息}
    * - {@link TaobaoPcItemChange 采购宝API > 商品变更消息}
@@ -5132,6 +5139,7 @@ declare namespace IncomingMessage {
    */
   type TaobaoPc = TaobaoPcBillsGenerate
     | TaobaoPcEgoDisputeOrder
+    | TaobaoPcEgoTradeIsvRegisterResult
     | TaobaoPcEgoTradeOrder
     | TaobaoPcEgoTradePackage
     | TaobaoPcItemChange

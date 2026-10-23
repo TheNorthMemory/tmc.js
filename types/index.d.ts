@@ -280,6 +280,8 @@ declare interface TaoTopicsDescriptor {
   alibaba_icbulive_CommentNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIcbuliveCommentNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIcbuliveEnterNotice ICBU > 直播观众进场通知} */
   alibaba_icbulive_EnterNotice(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIcbuliveEnterNotice) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaIdleAccountRecoveryEventNotify 闲鱼 > 账号找回保障及V1存量赔款状态通知} */
+  alibaba_idle_AccountRecoveryEventNotify(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleAccountRecoveryEventNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIdleApplyInfoSyn 闲鱼 > 灵活用工报名信息同步} */
   alibaba_idle_ApplyInfoSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleApplyInfoSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIdleHouseStatusNotify 闲鱼 > 闲鱼房源状态变更通知} */
@@ -1928,6 +1930,8 @@ declare interface TaoTopicsDescriptor {
   taobao_pc_BillsGenerate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcBillsGenerate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPcEgoDisputeOrder 采购宝API > PC企业购逆向订单消息} */
   taobao_pc_EgoDisputeOrder(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcEgoDisputeOrder) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoPcEgoTradeIsvRegisterResult 采购宝API > 企业购ISV自主注册审核结果回传} */
+  taobao_pc_EgoTradeIsvRegisterResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcEgoTradeIsvRegisterResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPcEgoTradeOrder 采购宝API > PC企业购交易订单消息} */
   taobao_pc_EgoTradeOrder(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcEgoTradeOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPcEgoTradePackage 采购宝API > 订单包裹消息} */
@@ -3835,6 +3839,8 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_icbulive_CommentNotice', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIcbuliveCommentNotice) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIcbuliveEnterNotice ICBU > 直播观众进场通知} */
   on(topic: 'alibaba_icbulive_EnterNotice', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIcbuliveEnterNotice) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaIdleAccountRecoveryEventNotify 闲鱼 > 账号找回保障及V1存量赔款状态通知} */
+  on(topic: 'alibaba_idle_AccountRecoveryEventNotify', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleAccountRecoveryEventNotify) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIdleApplyInfoSyn 闲鱼 > 灵活用工报名信息同步} */
   on(topic: 'alibaba_idle_ApplyInfoSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaIdleApplyInfoSyn) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaIdleHouseStatusNotify 闲鱼 > 闲鱼房源状态变更通知} */
@@ -5483,6 +5489,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_pc_BillsGenerate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcBillsGenerate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPcEgoDisputeOrder 采购宝API > PC企业购逆向订单消息} */
   on(topic: 'taobao_pc_EgoDisputeOrder', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcEgoDisputeOrder) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoPcEgoTradeIsvRegisterResult 采购宝API > 企业购ISV自主注册审核结果回传} */
+  on(topic: 'taobao_pc_EgoTradeIsvRegisterResult', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcEgoTradeIsvRegisterResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPcEgoTradeOrder 采购宝API > PC企业购交易订单消息} */
   on(topic: 'taobao_pc_EgoTradeOrder', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcEgoTradeOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPcEgoTradePackage 采购宝API > 订单包裹消息} */

@@ -1543,6 +1543,16 @@ declare namespace Alibaba.Icbulive {
 
 /** 闲鱼 */
 declare namespace Alibaba.Idle {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2814&docType=9 账号找回保障及V1存量赔款状态通知} */
+  interface AccountRecoveryEventNotify {
+    /** 原消息体。前四种保障事件为原JSON密文，继续使用原加密方式；settle_success/settle_fail为原JSON字符串：orderId String，xyCompensateId/outRequestId/payTime/amount Long，金额单位分，时间毫秒；不扩充业务字段。 */
+    body: string;
+    /** 原业务键。保障创建/支付/确收/关闭使用服务子单号；结算成功/失败使用原案件outRequestId。消费者按msgKey+tag幂等。 */
+    msg_key: string;
+    /** 事件类型：compensate_create_done、compensate_paid_done、compensate_confirm_done、compensate_close、settle_success、settle_fail；仅迁移原有事件。 */
+    tag: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2653&docType=9 灵活用工报名信息同步} */
   interface ApplyInfoSyn {
     /** 年龄 */
