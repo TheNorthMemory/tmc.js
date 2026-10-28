@@ -68,6 +68,8 @@ declare interface TaoTopicsDescriptor {
   ae_logistics_TrackingNoUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.AeLogisticsTrackingNoUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AliFinDybClaimResult 阿里金融 > 阿里场景金融大延保理赔结果通知给服务商} */
   ali_fin_DybClaimResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.AliFinDybClaimResult) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AliFinDybWorkcardUpdate 阿里金融 > 场景金融大延保产品自建工单履约系统工单状态变化消息} */
+  ali_fin_DybWorkcardUpdate(fn: (this: TaoMessageConsumer, message: IncomingMessage.AliFinDybWorkcardUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AliInfodeptCaseFilingInfo 网上法庭 > 网上法庭数据交换消息} */
   ali_infodept_CaseFilingInfo(fn: (this: TaoMessageConsumer, message: IncomingMessage.AliInfodeptCaseFilingInfo) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AliInfodeptPreserveEvidence 网上法庭 > 证件保全通知} */
@@ -3627,6 +3629,8 @@ declare interface TaoEventsListener {
   on(topic: 'ae_logistics_TrackingNoUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.AeLogisticsTrackingNoUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AliFinDybClaimResult 阿里金融 > 阿里场景金融大延保理赔结果通知给服务商} */
   on(topic: 'ali_fin_DybClaimResult', listener: (this: TaoMessageConsumer, message: IncomingMessage.AliFinDybClaimResult) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AliFinDybWorkcardUpdate 阿里金融 > 场景金融大延保产品自建工单履约系统工单状态变化消息} */
+  on(topic: 'ali_fin_DybWorkcardUpdate', listener: (this: TaoMessageConsumer, message: IncomingMessage.AliFinDybWorkcardUpdate) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AliInfodeptCaseFilingInfo 网上法庭 > 网上法庭数据交换消息} */
   on(topic: 'ali_infodept_CaseFilingInfo', listener: (this: TaoMessageConsumer, message: IncomingMessage.AliInfodeptCaseFilingInfo) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AliInfodeptPreserveEvidence 网上法庭 > 证件保全通知} */

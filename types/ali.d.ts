@@ -11,6 +11,22 @@ declare namespace Ali.Fin {
     /** 退回原因 */
     reason?: string;
   }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2813&docType=9 场景金融大延保产品自建工单履约系统工单状态变化消息} */
+  interface DybWorkcardUpdate {
+    /** 创单时间 */
+    create_time: string;
+    /** 产品code */
+    product_code: string;
+    /** 场金报案单号 */
+    report_no: string;
+    /** serviceCode */
+    service_code: string;
+    /** 履约工单状态 */
+    status: string;
+    /** 工单编号（业务唯一幂等号） */
+    workcard_no: string;
+  }
 }
 
 /** 网上法庭 */

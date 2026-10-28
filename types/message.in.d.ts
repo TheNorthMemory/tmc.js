@@ -56,6 +56,8 @@ declare namespace IncomingMessage {
   type AeLogisticsTrackingNoUpdate = Message & { content?: MessageContent & { topic?: 'ae_logistics_TrackingNoUpdate', content?: string | Ae.Logistics.TrackingNoUpdate } };
   /** {@link Ali.Fin.DybClaimResult 阿里金融 > 阿里场景金融大延保理赔结果通知给服务商} */
   type AliFinDybClaimResult = Message & { content?: MessageContent & { topic?: 'ali_fin_DybClaimResult', content?: string | Ali.Fin.DybClaimResult } };
+  /** {@link Ali.Fin.DybWorkcardUpdate 阿里金融 > 场景金融大延保产品自建工单履约系统工单状态变化消息} */
+  type AliFinDybWorkcardUpdate = Message & { content?: MessageContent & { topic?: 'ali_fin_DybWorkcardUpdate', content?: string | Ali.Fin.DybWorkcardUpdate } };
   /** {@link Ali.Infodept.CaseFilingInfo 网上法庭 > 网上法庭数据交换消息} */
   type AliInfodeptCaseFilingInfo = Message & { content?: MessageContent & { topic?: 'ali_infodept_CaseFilingInfo', content?: string | Ali.Infodept.CaseFilingInfo } };
   /** {@link Ali.Infodept.PreserveEvidence 网上法庭 > 证件保全通知} */
@@ -2714,8 +2716,10 @@ declare namespace IncomingMessage {
   type AeLogistics = AeLogisticsTrackingNoUpdate;
   /**
    * - {@link AliFinDybClaimResult 阿里金融 > 阿里场景金融大延保理赔结果通知给服务商}
+   * - {@link AliFinDybWorkcardUpdate 阿里金融 > 场景金融大延保产品自建工单履约系统工单状态变化消息}
    */
-  type AliFin = AliFinDybClaimResult;
+  type AliFin = AliFinDybClaimResult
+    | AliFinDybWorkcardUpdate;
   /**
    * - {@link AliInfodeptCaseFilingInfo 网上法庭 > 网上法庭数据交换消息}
    * - {@link AliInfodeptPreserveEvidence 网上法庭 > 证件保全通知}
