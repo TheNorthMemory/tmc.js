@@ -4904,21 +4904,13 @@ declare namespace Taobao.Pc {
 
   /** {@link https://open.taobao.com/tmc.htm?docId=2811&docType=9 企业购ISV自主注册审核结果回传} */
   interface EgoTradeIsvRegisterResult {
-    /** 加密项目ID（认证通过时回传，交易链路使用） */
-    client_id: string;
-    /** 统一社会信用代码（对账用） */
-    credit_code: string;
-    /** 企业全称（对账用） */
-    enterprise_name: string;
     /** 消息ID（幂等键：同一终态重复推送时取值稳定，按此去重） */
     msg_id: string;
-    /** 项目名称（认证通过时回传） */
-    project_name: string;
     /** 驳回原因（认证驳回时回传；异常场景一并写清原因） */
     reject_reason: string;
     /** 注册结果：APPROVED（已认证）/REJECTED（认证驳回） */
     result: string;
-    /** 查询凭据userId（注册建号产出的用户ID） */
+    /** 查询凭据userId */
     user_id: number;
   }
 
