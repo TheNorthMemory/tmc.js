@@ -234,6 +234,10 @@ declare namespace IncomingMessage {
   type AlibabaEslSendMsgAliyun = Message & { content?: MessageContent & { topic?: 'alibaba_esl_SendMsgAliyun', content?: string | Alibaba.Esl.SendMsgAliyun } };
   /** {@link Alibaba.Fliggy.LeaseOrderStatusChange 飞猪租赁 > 飞猪租赁订单状态变更消息} */
   type AlibabaFliggyLeaseOrderStatusChange = Message & { content?: MessageContent & { topic?: 'alibaba_fliggy_LeaseOrderStatusChange', content?: string | Alibaba.Fliggy.LeaseOrderStatusChange } };
+  /** {@link Alibaba.Fliggy.LeasePaymentResult 飞猪租赁 > 租赁支付结果消息} */
+  type AlibabaFliggyLeasePaymentResult = Message & { content?: MessageContent & { topic?: 'alibaba_fliggy_LeasePaymentResult', content?: string | Alibaba.Fliggy.LeasePaymentResult } };
+  /** {@link Alibaba.Fliggy.LeaseSellerTransferResult 飞猪租赁 > 卖家打款结果消息} */
+  type AlibabaFliggyLeaseSellerTransferResult = Message & { content?: MessageContent & { topic?: 'alibaba_fliggy_LeaseSellerTransferResult', content?: string | Alibaba.Fliggy.LeaseSellerTransferResult } };
   /** {@link Alibaba.Fuwu.OrderPaid 1688服务市场 > 订单支付消息} */
   type AlibabaFuwuOrderPaid = Message & { content?: MessageContent & { topic?: 'alibaba_fuwu_OrderPaid', content?: string | Alibaba.Fuwu.OrderPaid } };
   /** {@link Alibaba.Fuwu.TradeAction 1688服务市场 > 外贸服务市场订单变更消息} */
@@ -2938,8 +2942,12 @@ declare namespace IncomingMessage {
   type AlibabaEsl = AlibabaEslSendMsgAliyun;
   /**
    * - {@link AlibabaFliggyLeaseOrderStatusChange 飞猪租赁 > 飞猪租赁订单状态变更消息}
+   * - {@link AlibabaFliggyLeasePaymentResult 飞猪租赁 > 租赁支付结果消息}
+   * - {@link AlibabaFliggyLeaseSellerTransferResult 飞猪租赁 > 卖家打款结果消息}
    */
-  type AlibabaFliggy = AlibabaFliggyLeaseOrderStatusChange;
+  type AlibabaFliggy = AlibabaFliggyLeaseOrderStatusChange
+    | AlibabaFliggyLeasePaymentResult
+    | AlibabaFliggyLeaseSellerTransferResult;
   /**
    * - {@link AlibabaFuwuOrderPaid 1688服务市场 > 订单支付消息}
    * - {@link AlibabaFuwuTradeAction 1688服务市场 > 外贸服务市场订单变更消息}

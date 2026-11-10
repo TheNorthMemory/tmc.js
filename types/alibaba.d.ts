@@ -1279,6 +1279,62 @@ declare namespace Alibaba.Fliggy {
     /** PENDING_USER_AUTH:待用户认证 CREDIT_REVIEWING:信用审核中 PENDING_PAYMENT:待支付 PREPARING:备货中 SHIPPED:已发货 RENTING:租用中 PENDING_RETURN:待归还 RETURNING:归还中 PENDING_QUALITY_INSPECTION:待质检 RETURN_PENDING_DEDUCT:已归还待扣款 RETURN_SUCCESS:归还成功 CLOSED:租赁关闭 */
     status: string;
   }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2815&docType=9 租赁支付结果消息} */
+  interface LeasePaymentResult {
+    /** 金额（单位：分） */
+    amount: string;
+    /** 账期 */
+    bill_period?: number;
+    /** 扣款类型：RENT租金/DEPOSIT押金/VAS增值服务费/PENALTY违约金/COMPENSATION赔付金/OVERDUE逾期租金/BUYOUT买断金 */
+    disburse_type: string;
+    /** 消息事件唯一标识，扣款单 tpOrderId */
+    event_id: string;
+    /** 事件类型：PAYMENT_RESULT 支付结果 */
+    event_type: string;
+    /** 失败原因；SUCCESS 时为 null */
+    fail_reason?: string;
+    /** 失败类型：RETRYABLE 可重试 / TERMINAL 终态；SUCCESS 时为 null */
+    failure_type?: string;
+    /** 费项：RENT 租金/DEPOSIT 押金/VAS 增值服务/ORDER_OVERDUE_PENALTY 订单级逾期违约金/BILL_OVERDUE_PENALTY 账期违约金/QUALITY_DAMAGE 质损/OVERDUE_RENT 逾期租金 */
+    fee_item: string;
+    /** 订单id */
+    order_id: string;
+    /** 支付方式：AUTO_DEDUCT 支付宝代扣 / ACTIVE_PAY 主动支付 / DEPOSIT_OFFSET 押金抵扣 */
+    pay_method?: string;
+    /** 结果：SUCCESS / FAILED */
+    result: string;
+    /** 交易流水号 */
+    transaction_id?: string;
+  }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2816&docType=9 卖家打款结果消息} */
+  interface LeaseSellerTransferResult {
+    /** 金额（单位：分） */
+    amount: string;
+    /** 账期 */
+    bill_period?: number;
+    /** 扣款类型：RENT租金/DEPOSIT押金/VAS增值服务费/PENALTY违约金/COMPENSATION赔付金/OVERDUE逾期租金/BUYOUT买断金 */
+    disburse_type: string;
+    /** 消息事件唯一标识，扣款单 tpOrderId */
+    event_id: string;
+    /** 事件类型：SELLER_TRANSFER_RESULT 卖家打款结果 */
+    event_type: string;
+    /** 失败原因；SUCCESS 时为 null */
+    fail_reason?: string;
+    /** 失败类型：RETRYABLE 可重试 / TERMINAL 终态；SUCCESS 时为 null */
+    failure_type?: string;
+    /** 费项：RENT 租金/DEPOSIT 押金/VAS 增值服务/ORDER_OVERDUE_PENALTY 订单级逾期违约金/BILL_OVERDUE_PENALTY 账期违约金/QUALITY_DAMAGE 质损/OVERDUE_RENT 逾期租金 */
+    fee_item: string;
+    /** 订单id */
+    order_id: string;
+    /** 支付方式：AUTO_DEDUCT 支付宝代扣 / ACTIVE_PAY 主动支付 / DEPOSIT_OFFSET 押金抵扣 */
+    pay_method?: string;
+    /** 结果：SUCCESS / FAILED */
+    result: string;
+    /** 交易流水号 */
+    transaction_id?: string;
+  }
 }
 
 /** 1688服务市场 */

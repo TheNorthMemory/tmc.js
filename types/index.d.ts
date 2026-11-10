@@ -246,6 +246,10 @@ declare interface TaoTopicsDescriptor {
   alibaba_esl_SendMsgAliyun(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaEslSendMsgAliyun) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaFliggyLeaseOrderStatusChange 飞猪租赁 > 飞猪租赁订单状态变更消息} */
   alibaba_fliggy_LeaseOrderStatusChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaFliggyLeaseOrderStatusChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaFliggyLeasePaymentResult 飞猪租赁 > 租赁支付结果消息} */
+  alibaba_fliggy_LeasePaymentResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaFliggyLeasePaymentResult) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaFliggyLeaseSellerTransferResult 飞猪租赁 > 卖家打款结果消息} */
+  alibaba_fliggy_LeaseSellerTransferResult(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaFliggyLeaseSellerTransferResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaFuwuOrderPaid 1688服务市场 > 订单支付消息} */
   alibaba_fuwu_OrderPaid(fn: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaFuwuOrderPaid) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaFuwuTradeAction 1688服务市场 > 外贸服务市场订单变更消息} */
@@ -3807,6 +3811,10 @@ declare interface TaoEventsListener {
   on(topic: 'alibaba_esl_SendMsgAliyun', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaEslSendMsgAliyun) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaFliggyLeaseOrderStatusChange 飞猪租赁 > 飞猪租赁订单状态变更消息} */
   on(topic: 'alibaba_fliggy_LeaseOrderStatusChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaFliggyLeaseOrderStatusChange) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaFliggyLeasePaymentResult 飞猪租赁 > 租赁支付结果消息} */
+  on(topic: 'alibaba_fliggy_LeasePaymentResult', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaFliggyLeasePaymentResult) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.AlibabaFliggyLeaseSellerTransferResult 飞猪租赁 > 卖家打款结果消息} */
+  on(topic: 'alibaba_fliggy_LeaseSellerTransferResult', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaFliggyLeaseSellerTransferResult) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaFuwuOrderPaid 1688服务市场 > 订单支付消息} */
   on(topic: 'alibaba_fuwu_OrderPaid', listener: (this: TaoMessageConsumer, message: IncomingMessage.AlibabaFuwuOrderPaid) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.AlibabaFuwuTradeAction 1688服务市场 > 外贸服务市场订单变更消息} */
