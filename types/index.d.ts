@@ -1298,6 +1298,8 @@ declare interface TaoTopicsDescriptor {
   idle_tranferpay_OrderChange(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleTranferpayOrderChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleTwjdOrderSyn 闲鱼 > 闲鱼图文鉴定业务订单消息} */
   idle_twjd_OrderSyn(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleTwjdOrderSyn) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleVirtualSaleTimeConfigEvent 闲鱼电商Saas > 虚拟商品可售时间配置变更消息} */
+  idle_virtual_SaleTimeConfigEvent(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleVirtualSaleTimeConfigEvent) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IntimeDatacenterOrderStatus 银泰 > 状态同步} */
   intime_datacenter_OrderStatus(fn: (this: TaoMessageConsumer, message: IncomingMessage.IntimeDatacenterOrderStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IntimeScOrderCreateUpdate 银泰 > 服务单创建和更新} */
@@ -1934,6 +1936,8 @@ declare interface TaoTopicsDescriptor {
   taobao_paimai_OrderPaid(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPaimaiOrderPaid) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPcBillsGenerate 采购宝API > PC企业购出账消息通知} */
   taobao_pc_BillsGenerate(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcBillsGenerate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoPcCustomerAuditApply 采购宝API > 客户审核上下架申请消息} */
+  taobao_pc_CustomerAuditApply(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcCustomerAuditApply) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPcEgoDisputeOrder 采购宝API > PC企业购逆向订单消息} */
   taobao_pc_EgoDisputeOrder(fn: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcEgoDisputeOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPcEgoTradeIsvRegisterResult 采购宝API > 企业购ISV自主注册审核结果回传} */
@@ -3116,6 +3120,8 @@ declare interface TaoTopicsDescriptor {
   idle_tranferpay(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleTranferpay) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleTwjd} */
   idle_twjd(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleTwjd) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleVirtual} */
+  idle_virtual(fn: (this: TaoMessageConsumer, message: IncomingMessage.IdleVirtual) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IntimeDatacenter} */
   intime_datacenter(fn: (this: TaoMessageConsumer, message: IncomingMessage.IntimeDatacenter) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IntimeSc} */
@@ -4863,6 +4869,8 @@ declare interface TaoEventsListener {
   on(topic: 'idle_tranferpay_OrderChange', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleTranferpayOrderChange) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleTwjdOrderSyn 闲鱼 > 闲鱼图文鉴定业务订单消息} */
   on(topic: 'idle_twjd_OrderSyn', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleTwjdOrderSyn) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleVirtualSaleTimeConfigEvent 闲鱼电商Saas > 虚拟商品可售时间配置变更消息} */
+  on(topic: 'idle_virtual_SaleTimeConfigEvent', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleVirtualSaleTimeConfigEvent) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IntimeDatacenterOrderStatus 银泰 > 状态同步} */
   on(topic: 'intime_datacenter_OrderStatus', listener: (this: TaoMessageConsumer, message: IncomingMessage.IntimeDatacenterOrderStatus) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IntimeScOrderCreateUpdate 银泰 > 服务单创建和更新} */
@@ -5499,6 +5507,8 @@ declare interface TaoEventsListener {
   on(topic: 'taobao_paimai_OrderPaid', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPaimaiOrderPaid) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPcBillsGenerate 采购宝API > PC企业购出账消息通知} */
   on(topic: 'taobao_pc_BillsGenerate', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcBillsGenerate) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.TaobaoPcCustomerAuditApply 采购宝API > 客户审核上下架申请消息} */
+  on(topic: 'taobao_pc_CustomerAuditApply', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcCustomerAuditApply) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPcEgoDisputeOrder 采购宝API > PC企业购逆向订单消息} */
   on(topic: 'taobao_pc_EgoDisputeOrder', listener: (this: TaoMessageConsumer, message: IncomingMessage.TaobaoPcEgoDisputeOrder) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.TaobaoPcEgoTradeIsvRegisterResult 采购宝API > 企业购ISV自主注册审核结果回传} */
@@ -6681,6 +6691,8 @@ declare interface TaoEventsListener {
   on(topic: 'idle_tranferpay', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleTranferpay) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IdleTwjd} */
   on(topic: 'idle_twjd', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleTwjd) => void): TaoMessageConsumer;
+  /** {@link IncomingMessage.IdleVirtual} */
+  on(topic: 'idle_virtual', listener: (this: TaoMessageConsumer, message: IncomingMessage.IdleVirtual) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IntimeDatacenter} */
   on(topic: 'intime_datacenter', listener: (this: TaoMessageConsumer, message: IncomingMessage.IntimeDatacenter) => void): TaoMessageConsumer;
   /** {@link IncomingMessage.IntimeSc} */

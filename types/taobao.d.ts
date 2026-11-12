@@ -4878,6 +4878,22 @@ declare namespace Taobao.Pc {
     settle_start_date: Date | number | string;
   }
 
+  /** {@link https://open.taobao.com/tmc.htm?docId=2820&docType=9 客户审核上下架申请消息} */
+  interface CustomerAuditApply {
+    /** 客户ID */
+    client_id: string;
+    /** 企业购商品ID */
+    ego_item_id: string;
+    /** 企业购商品SKU ID */
+    ego_sku_id: string;
+    /** 消息ID */
+    msg_id: string;
+    /** 申请时间，时间戳 */
+    time: string;
+    /** 申请类型，UP_SHELF：申请上架，DOWN_SHELF：申请下架 */
+    type: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=2671&docType=9 PC企业购逆向订单消息} */
   interface EgoDisputeOrder {
     /** 企业购子订单ID */

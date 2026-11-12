@@ -634,3 +634,24 @@ declare namespace Idle.Twjd {
     sub_status: string;
   }
 }
+
+/** 闲鱼电商Saas */
+declare namespace Idle.Virtual {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2819&docType=9 虚拟商品可售时间配置变更消息} */
+  interface SaleTimeConfigEvent {
+    /** 仅save必填，delete不携带。本次成功写入的完整配置JSON字符串，固定结构：closingReminderMinutes为0至60整数分钟，默认10；weeklySchedules为星期时段组数组，每组含daysOfWeek（1至7整数数组，周一至周日）和timeSlots数组，每段仅含startTime、endTime（HH:mm，结束可为24:00），时区Asia/Shanghai。最大4096字节，禁止额外字段；新增字段须走平台变更流程。 */
+    config?: string;
+    /** 操作类型，固定枚举：save表示配置保存成功，delete表示配置删除成功。 */
+    event: string;
+    /** 本次成功配置操作的事件唯一标识，同一事件重试保持不变，服务商据此去重。 */
+    event_id: string;
+    /** 发生可售时间配置变更的商品ID，正整数，仅通知该商品所属商家已绑定且获准接入的服务商。 */
+    item_id: number;
+    /** 商品写入确认成功后的事件生成时间，Unix毫秒时间戳，仅用于排查，不作为单调版本或消息排序依据。 */
+    occurred_at: number;
+    /** 消息协议版本，当前固定为1；协议字段发生变化时通过平台变更流程发布新版本。 */
+    schema_version: number;
+    /** 闲鱼卖家ID，64位正整数；save/delete均在消息顶层携带。来源为已校验的商品所属商家身份，与服务商授权绑定路由使用的商家一致；不放入config，原三个业务API请求不增加sellerId。 */
+    seller_id: number;
+  }
+}

@@ -1286,6 +1286,8 @@ declare namespace IncomingMessage {
   type IdleTranferpayOrderChange = Message & { content?: MessageContent & { topic?: 'idle_tranferpay_OrderChange', content?: string | Idle.Tranferpay.OrderChange } };
   /** {@link Idle.Twjd.OrderSyn 闲鱼 > 闲鱼图文鉴定业务订单消息} */
   type IdleTwjdOrderSyn = Message & { content?: MessageContent & { topic?: 'idle_twjd_OrderSyn', content?: string | Idle.Twjd.OrderSyn } };
+  /** {@link Idle.Virtual.SaleTimeConfigEvent 闲鱼电商Saas > 虚拟商品可售时间配置变更消息} */
+  type IdleVirtualSaleTimeConfigEvent = Message & { content?: MessageContent & { topic?: 'idle_virtual_SaleTimeConfigEvent', content?: string | Idle.Virtual.SaleTimeConfigEvent } };
   /** {@link Intime.Datacenter.OrderStatus 银泰 > 状态同步} */
   type IntimeDatacenterOrderStatus = Message & { content?: MessageContent & { topic?: 'intime_datacenter_OrderStatus', content?: string | Intime.Datacenter.OrderStatus } };
   /** {@link Intime.Sc.OrderCreateUpdate 银泰 > 服务单创建和更新} */
@@ -1922,6 +1924,8 @@ declare namespace IncomingMessage {
   type TaobaoPaimaiOrderPaid = Message & { content?: MessageContent & { topic?: 'taobao_paimai_OrderPaid', content?: string | Taobao.Paimai.OrderPaid } };
   /** {@link Taobao.Pc.BillsGenerate 采购宝API > PC企业购出账消息通知} */
   type TaobaoPcBillsGenerate = Message & { content?: MessageContent & { topic?: 'taobao_pc_BillsGenerate', content?: string | Taobao.Pc.BillsGenerate } };
+  /** {@link Taobao.Pc.CustomerAuditApply 采购宝API > 客户审核上下架申请消息} */
+  type TaobaoPcCustomerAuditApply = Message & { content?: MessageContent & { topic?: 'taobao_pc_CustomerAuditApply', content?: string | Taobao.Pc.CustomerAuditApply } };
   /** {@link Taobao.Pc.EgoDisputeOrder 采购宝API > PC企业购逆向订单消息} */
   type TaobaoPcEgoDisputeOrder = Message & { content?: MessageContent & { topic?: 'taobao_pc_EgoDisputeOrder', content?: string | Taobao.Pc.EgoDisputeOrder } };
   /** {@link Taobao.Pc.EgoTradeIsvRegisterResult 采购宝API > 企业购ISV自主注册审核结果回传} */
@@ -4339,6 +4343,10 @@ declare namespace IncomingMessage {
    */
   type IdleTwjd = IdleTwjdOrderSyn;
   /**
+   * - {@link IdleVirtualSaleTimeConfigEvent 闲鱼电商Saas > 虚拟商品可售时间配置变更消息}
+   */
+  type IdleVirtual = IdleVirtualSaleTimeConfigEvent;
+  /**
    * - {@link IntimeDatacenterOrderStatus 银泰 > 状态同步}
    */
   type IntimeDatacenter = IntimeDatacenterOrderStatus;
@@ -5138,6 +5146,7 @@ declare namespace IncomingMessage {
     | TaobaoPaimaiOrderPaid;
   /**
    * - {@link TaobaoPcBillsGenerate 采购宝API > PC企业购出账消息通知}
+   * - {@link TaobaoPcCustomerAuditApply 采购宝API > 客户审核上下架申请消息}
    * - {@link TaobaoPcEgoDisputeOrder 采购宝API > PC企业购逆向订单消息}
    * - {@link TaobaoPcEgoTradeIsvRegisterResult 采购宝API > 企业购ISV自主注册审核结果回传}
    * - {@link TaobaoPcEgoTradeOrder 采购宝API > PC企业购交易订单消息}
@@ -5150,6 +5159,7 @@ declare namespace IncomingMessage {
    * - {@link TaobaoPcSkuApply 采购宝API > 商品SKU报名消息}
    */
   type TaobaoPc = TaobaoPcBillsGenerate
+    | TaobaoPcCustomerAuditApply
     | TaobaoPcEgoDisputeOrder
     | TaobaoPcEgoTradeIsvRegisterResult
     | TaobaoPcEgoTradeOrder
@@ -6602,6 +6612,7 @@ declare namespace IncomingMessage {
    * - {@link IdleTrade}
    * - {@link IdleTranferpay}
    * - {@link IdleTwjd}
+   * - {@link IdleVirtual}
    */
   type Idle = IdleAgreement
     | IdleAppraiseisv
@@ -6623,7 +6634,8 @@ declare namespace IncomingMessage {
     | IdleTopisv
     | IdleTrade
     | IdleTranferpay
-    | IdleTwjd;
+    | IdleTwjd
+    | IdleVirtual;
   /**
    * - {@link IntimeDatacenter}
    * - {@link IntimeSc}
