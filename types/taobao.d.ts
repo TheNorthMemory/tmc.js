@@ -331,6 +331,21 @@ declare namespace Taobao.Ascp {
 }
 
 /** 淘宝 */
+declare namespace Taobao.Assistant {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2822&docType=9 商家麦小探数据对接} */
+  interface PmsOperateEvent {
+    /** 消息唯一id */
+    id: string;
+    /** 系统商酒店id */
+    outer_hid: string;
+    /** JSON类型消息，和type有关 */
+    payload: string;
+    /** 改价类型，消息体根据type类型不懂有所不同 */
+    type: string;
+  }
+}
+
+/** 淘宝 */
 declare namespace Taobao.Auction {
   /** {@link https://open.taobao.com/tmc.htm?docId=2110&docType=9 大资产拍卖报名消息} */
   interface ApplyEvent {
