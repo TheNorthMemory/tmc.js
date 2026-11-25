@@ -133,7 +133,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 
 ## 支持的TOPICS
 
-<details><summary>共计 106+ 类别，644+ 消息数</summary>
+<details><summary>共计 106+ 类别，646+ 消息数</summary>
 
 | 类别 | 消息数 |
 | --- | --- |
@@ -228,7 +228,7 @@ new Tmc('your_app_key', 'your_app_secret', { autoReplyConfirmation: false })
 | 酒店交易消息API | 2 |
 | 智能应用 | 1 |
 | 内容开放 | 3 |
-| 闲鱼电商Saas | 20 |
+| 闲鱼电商Saas | 22 |
 | 货源服务消息 | 2 |
 | 淘宝闪购联盟-卡券消息API | 2 |
 | 淘宝闪购联盟-卡券包采购单消息API | 2 |

@@ -19,8 +19,18 @@ declare namespace Idle.Agreement {
   }
 }
 
-/** 闲鱼已验货 */
+/** 闲鱼电商Saas */
 declare namespace Idle.Appraiseisv {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2821&docType=9 芝麻免押分期单消息} */
+  interface InstallmentOrderSync {
+    /** 主订单 */
+    biz_order_id: string;
+    /** 分期单 */
+    installment_order_id: string;
+    /** 分期单状态 */
+    installment_order_status: string;
+  }
+
   /** {@link https://open.taobao.com/tmc.htm?docId=1927&docType=9 已验货商品消息} */
   interface ItemSyn {
     /** 商品id */
@@ -323,6 +333,21 @@ declare namespace Idle.Gameboost {
     refund_id?: number;
     /** 退款单状态 */
     refund_status?: string;
+  }
+}
+
+/** 闲鱼电商Saas */
+declare namespace Idle.Gameopen {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2823&docType=9 闲鱼游戏开放订单同步} */
+  interface OrderSync {
+    /** 闲鱼商品 ID */
+    item_id: string;
+    /** 商品主订单号 */
+    order_id: string;
+    /** 订单状态，1 表示已下单待付款 */
+    order_status: number;
+    /** 交易产品业务标识 */
+    x_global_biz_code: string;
   }
 }
 

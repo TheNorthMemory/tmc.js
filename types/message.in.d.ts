@@ -1200,11 +1200,13 @@ declare namespace IncomingMessage {
   type IcbuTradeOrderNotify = Message & { content?: MessageContent & { topic?: 'icbu_trade_OrderNotify', content?: string | Icbu.Trade.OrderNotify } };
   /** {@link Idle.Agreement.StatusChange 闲鱼 > 闲鱼代扣消息通知} */
   type IdleAgreementStatusChange = Message & { content?: MessageContent & { topic?: 'idle_agreement_StatusChange', content?: string | Idle.Agreement.StatusChange } };
-  /** {@link Idle.Appraiseisv.ItemSyn 闲鱼已验货 > 已验货商品消息} */
+  /** {@link Idle.Appraiseisv.InstallmentOrderSync 闲鱼电商Saas > 芝麻免押分期单消息} */
+  type IdleAppraiseisvInstallmentOrderSync = Message & { content?: MessageContent & { topic?: 'idle_appraiseisv_InstallmentOrderSync', content?: string | Idle.Appraiseisv.InstallmentOrderSync } };
+  /** {@link Idle.Appraiseisv.ItemSyn 闲鱼电商Saas > 已验货商品消息} */
   type IdleAppraiseisvItemSyn = Message & { content?: MessageContent & { topic?: 'idle_appraiseisv_ItemSyn', content?: string | Idle.Appraiseisv.ItemSyn } };
-  /** {@link Idle.Appraiseisv.OrderSyn 闲鱼已验货 > 闲鱼已验货交易事件} */
+  /** {@link Idle.Appraiseisv.OrderSyn 闲鱼电商Saas > 闲鱼已验货交易事件} */
   type IdleAppraiseisvOrderSyn = Message & { content?: MessageContent & { topic?: 'idle_appraiseisv_OrderSyn', content?: string | Idle.Appraiseisv.OrderSyn } };
-  /** {@link Idle.Appraiseisv.RefundSyn 闲鱼已验货 > 闲鱼已验货退货/退款事件} */
+  /** {@link Idle.Appraiseisv.RefundSyn 闲鱼电商Saas > 闲鱼已验货退货/退款事件} */
   type IdleAppraiseisvRefundSyn = Message & { content?: MessageContent & { topic?: 'idle_appraiseisv_RefundSyn', content?: string | Idle.Appraiseisv.RefundSyn } };
   /** {@link Idle.Autotrade.OrderStateSync 闲鱼 > 闲鱼AutoTrade订单状态变更消息} */
   type IdleAutotradeOrderStateSync = Message & { content?: MessageContent & { topic?: 'idle_autotrade_OrderStateSync', content?: string | Idle.Autotrade.OrderStateSync } };
@@ -1244,6 +1246,8 @@ declare namespace IncomingMessage {
   type IdleFishmarketfixedOrderSyn = Message & { content?: MessageContent & { topic?: 'idle_fishmarketfixed_OrderSyn', content?: string | Idle.Fishmarketfixed.OrderSyn } };
   /** {@link Idle.Gameboost.OrderStateSync 闲鱼 > 交易消息同步} */
   type IdleGameboostOrderStateSync = Message & { content?: MessageContent & { topic?: 'idle_gameboost_OrderStateSync', content?: string | Idle.Gameboost.OrderStateSync } };
+  /** {@link Idle.Gameopen.OrderSync 闲鱼电商Saas > 闲鱼游戏开放订单同步} */
+  type IdleGameopenOrderSync = Message & { content?: MessageContent & { topic?: 'idle_gameopen_OrderSync', content?: string | Idle.Gameopen.OrderSync } };
   /** {@link Idle.Jishi.ActivityItemEvent 闲鱼电商Saas > 无忧卖商品活动变更消息} */
   type IdleJishiActivityItemEvent = Message & { content?: MessageContent & { topic?: 'idle_jishi_ActivityItemEvent', content?: string | Idle.Jishi.ActivityItemEvent } };
   /** {@link Idle.Luxconsign.OrderNotice 闲鱼奢品寄卖 > 闲鱼奢品寄卖-卖家单消息通知} */
@@ -2156,6 +2160,8 @@ declare namespace IncomingMessage {
   type TaobaoTbkcxRefundMessage = Message & { content?: MessageContent & { topic?: 'taobao_tbkcx_RefundMessage', content?: string | Taobao.Tbkcx.RefundMessage } };
   /** {@link Taobao.Tblive.OuterCommissionOrderChange 淘宝 > 淘宝直播分销佣金单变更消息} */
   type TaobaoTbliveOuterCommissionOrderChange = Message & { content?: MessageContent & { topic?: 'taobao_tblive_OuterCommissionOrderChange', content?: string | Taobao.Tblive.OuterCommissionOrderChange } };
+  /** {@link Taobao.Tblive.OuterRecommendPlanChange 淘宝 > 淘宝直播分销服务商单品定向计划变更消息} */
+  type TaobaoTbliveOuterRecommendPlanChange = Message & { content?: MessageContent & { topic?: 'taobao_tblive_OuterRecommendPlanChange', content?: string | Taobao.Tblive.OuterRecommendPlanChange } };
   /** {@link Taobao.Tc.MaterialStock 淘宝 > 物资库存变动} */
   type TaobaoTcMaterialStock = Message & { content?: MessageContent & { topic?: 'taobao_tc_MaterialStock', content?: string | Taobao.Tc.MaterialStock } };
   /** {@link Taobao.Test.ChengfeiDirect 淘宝 > taobao_test_ChengfeiDirect} */
@@ -4219,11 +4225,13 @@ declare namespace IncomingMessage {
    */
   type IdleAgreement = IdleAgreementStatusChange;
   /**
-   * - {@link IdleAppraiseisvItemSyn 闲鱼已验货 > 已验货商品消息}
-   * - {@link IdleAppraiseisvOrderSyn 闲鱼已验货 > 闲鱼已验货交易事件}
-   * - {@link IdleAppraiseisvRefundSyn 闲鱼已验货 > 闲鱼已验货退货/退款事件}
+   * - {@link IdleAppraiseisvInstallmentOrderSync 闲鱼电商Saas > 芝麻免押分期单消息}
+   * - {@link IdleAppraiseisvItemSyn 闲鱼电商Saas > 已验货商品消息}
+   * - {@link IdleAppraiseisvOrderSyn 闲鱼电商Saas > 闲鱼已验货交易事件}
+   * - {@link IdleAppraiseisvRefundSyn 闲鱼电商Saas > 闲鱼已验货退货/退款事件}
    */
-  type IdleAppraiseisv = IdleAppraiseisvItemSyn
+  type IdleAppraiseisv = IdleAppraiseisvInstallmentOrderSync
+    | IdleAppraiseisvItemSyn
     | IdleAppraiseisvOrderSyn
     | IdleAppraiseisvRefundSyn;
   /**
@@ -4284,6 +4292,10 @@ declare namespace IncomingMessage {
    * - {@link IdleGameboostOrderStateSync 闲鱼 > 交易消息同步}
    */
   type IdleGameboost = IdleGameboostOrderStateSync;
+  /**
+   * - {@link IdleGameopenOrderSync 闲鱼电商Saas > 闲鱼游戏开放订单同步}
+   */
+  type IdleGameopen = IdleGameopenOrderSync;
   /**
    * - {@link IdleJishiActivityItemEvent 闲鱼电商Saas > 无忧卖商品活动变更消息}
    */
@@ -5436,8 +5448,10 @@ declare namespace IncomingMessage {
     | TaobaoTbkcxRefundMessage;
   /**
    * - {@link TaobaoTbliveOuterCommissionOrderChange 淘宝 > 淘宝直播分销佣金单变更消息}
+   * - {@link TaobaoTbliveOuterRecommendPlanChange 淘宝 > 淘宝直播分销服务商单品定向计划变更消息}
    */
-  type TaobaoTblive = TaobaoTbliveOuterCommissionOrderChange;
+  type TaobaoTblive = TaobaoTbliveOuterCommissionOrderChange
+    | TaobaoTbliveOuterRecommendPlanChange;
   /**
    * - {@link TaobaoTcMaterialStock 淘宝 > 物资库存变动}
    */
@@ -6609,6 +6623,7 @@ declare namespace IncomingMessage {
    * - {@link IdleFishmarket}
    * - {@link IdleFishmarketfixed}
    * - {@link IdleGameboost}
+   * - {@link IdleGameopen}
    * - {@link IdleJishi}
    * - {@link IdleLuxconsign}
    * - {@link IdleNewoutlets}
@@ -6632,6 +6647,7 @@ declare namespace IncomingMessage {
     | IdleFishmarket
     | IdleFishmarketfixed
     | IdleGameboost
+    | IdleGameopen
     | IdleJishi
     | IdleLuxconsign
     | IdleNewoutlets

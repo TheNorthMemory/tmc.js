@@ -6807,6 +6807,44 @@ declare namespace Taobao.Tblive {
     /** 操作类型：2-订单支付；3-订单确认收货；4-售中退款；5-售后退款 */
     op_type: number;
   }
+
+  /** {@link https://open.taobao.com/tmc.htm?docId=2824&docType=9 淘宝直播分销服务商单品定向计划变更消息} */
+  interface OuterRecommendPlanChange {
+    /** 店播直播客佣金率，单位为万分比，500表示5%；达播、缺失或离线结算时不输出 */
+    alter_ratio?: number;
+    /** 主播名称，仅达播计划有值时输出 */
+    anchor_name?: string;
+    /** 计划生效结束时间，yyyy-MM-dd HH:mm:ss格式 */
+    end_time: string;
+    /** 终止状态：1-终止待确认；2-同意终止；3-拒绝终止；4-撤回终止；无值时不输出 */
+    interrupt_status?: number;
+    /** 商品ID */
+    item_id: number;
+    /** 商品名称；无值时不输出 */
+    item_title?: string;
+    /** 预计开播时间，yyyy-MM-dd HH:mm:ss格式；无值时不输出 */
+    live_start_time?: string;
+    /** 消息唯一ID，同一事件重试保持不变，接收方据此去重 */
+    msg_id: string;
+    /** 操作通知时间，yyyy-MM-dd HH:mm:ss格式 */
+    op_time: string;
+    /** 操作类型：CREATE-创建；ACCEPT-接受计划；ENABLE-生效；UPDATE-修改；REJECT-拒绝计划；CANCEL-取消计划；EXPIRE-到期；CONFIRM_TIMEOUT-确认超时；REQUEST_STOP-发起终止；CANCEL_STOP-撤回终止；AGREE_STOP-同意终止；REJECT_STOP-拒绝终止；FORCE_STOP-强制停止 */
+    op_type: string;
+    /** 计划ID */
+    plan_id: number;
+    /** 计划类型：4-达播单品定向计划；5-店播单品定向计划 */
+    plan_type: number;
+    /** 达播分成佣金率或店播团长佣金率，单位为万分比，1250表示12.5%；缺失或离线结算时不输出 */
+    ratio?: number;
+    /** 商家名称，仅店播计划有值时输出 */
+    seller_name?: string;
+    /** 接收通知的服务商ID */
+    servant_id: number;
+    /** 计划生效开始时间，yyyy-MM-dd HH:mm:ss格式 */
+    start_time: string;
+    /** 计划状态：1-待服务商确认；2-已取消；3-已生效；4-服务商已拒绝；5-确认超时；6-已结束；7-待生效 */
+    status: number;
+  }
 }
 
 /** 淘宝 */
