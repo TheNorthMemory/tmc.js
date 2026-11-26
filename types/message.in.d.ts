@@ -1244,6 +1244,8 @@ declare namespace IncomingMessage {
   type IdleFishmarketVendueStateSyn = Message & { content?: MessageContent & { topic?: 'idle_fishmarket_VendueStateSyn', content?: string | Idle.Fishmarket.VendueStateSyn } };
   /** {@link Idle.Fishmarketfixed.OrderSyn 闲鱼 > 鱼市一口价买家单订单交易消息变更} */
   type IdleFishmarketfixedOrderSyn = Message & { content?: MessageContent & { topic?: 'idle_fishmarketfixed_OrderSyn', content?: string | Idle.Fishmarketfixed.OrderSyn } };
+  /** {@link Idle.Game.AccountInspectionInfoSync 闲鱼 > 个人验号商品信息同步} */
+  type IdleGameAccountInspectionInfoSync = Message & { content?: MessageContent & { topic?: 'idle_game_AccountInspectionInfoSync', content?: string | Idle.Game.AccountInspectionInfoSync } };
   /** {@link Idle.Gameboost.OrderStateSync 闲鱼 > 交易消息同步} */
   type IdleGameboostOrderStateSync = Message & { content?: MessageContent & { topic?: 'idle_gameboost_OrderStateSync', content?: string | Idle.Gameboost.OrderStateSync } };
   /** {@link Idle.Gameopen.OrderSync 闲鱼电商Saas > 闲鱼游戏开放订单同步} */
@@ -4289,6 +4291,10 @@ declare namespace IncomingMessage {
    */
   type IdleFishmarketfixed = IdleFishmarketfixedOrderSyn;
   /**
+   * - {@link IdleGameAccountInspectionInfoSync 闲鱼 > 个人验号商品信息同步}
+   */
+  type IdleGame = IdleGameAccountInspectionInfoSync;
+  /**
    * - {@link IdleGameboostOrderStateSync 闲鱼 > 交易消息同步}
    */
   type IdleGameboost = IdleGameboostOrderStateSync;
@@ -6622,6 +6628,7 @@ declare namespace IncomingMessage {
    * - {@link IdleEticket}
    * - {@link IdleFishmarket}
    * - {@link IdleFishmarketfixed}
+   * - {@link IdleGame}
    * - {@link IdleGameboost}
    * - {@link IdleGameopen}
    * - {@link IdleJishi}
@@ -6646,6 +6653,7 @@ declare namespace IncomingMessage {
     | IdleEticket
     | IdleFishmarket
     | IdleFishmarketfixed
+    | IdleGame
     | IdleGameboost
     | IdleGameopen
     | IdleJishi

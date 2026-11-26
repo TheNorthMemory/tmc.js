@@ -310,6 +310,21 @@ declare namespace Idle.Fishmarketfixed {
 }
 
 /** 闲鱼 */
+declare namespace Idle.Game {
+  /** {@link https://open.taobao.com/tmc.htm?docId=2825&docType=9 个人验号商品信息同步} */
+  interface AccountInspectionInfoSync {
+    /** 实例信息主体 */
+    data: string;
+    /** 实例信息id */
+    id: string;
+    /** 实例最后变更时间，Unix 毫秒时间戳。 */
+    sync_time: number;
+    /** 消息类型，取值 ITEM_SNAPSHOT。 */
+    type: string;
+  }
+}
+
+/** 闲鱼 */
 declare namespace Idle.Gameboost {
   /** {@link https://open.taobao.com/tmc.htm?docId=2770&docType=9 交易消息同步} */
   interface OrderStateSync {
